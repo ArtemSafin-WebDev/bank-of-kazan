@@ -644,6 +644,7 @@ button.swiper-pagination-bullet {
   --max-container-width: 148.8rem;
   --content-padding: 40px;
   --primary-color: #94C22B;
+  --secondary-color: #531A62;
   --dark-text-color: #000000;
   --light-text-color: #8A8A8A;
   --helvetica: 'HelveticaNeueCyr', sans-serif; }
@@ -1272,6 +1273,189 @@ img.lazyload:not([src]) {
       line-height: 1.2;
       padding: 1rem 1.3rem; } }
 
+.page-header {
+  position: absolute;
+  top: 5rem;
+  left: 0;
+  width: 100%;
+  z-index: 200;
+  color: white; }
+
+.page-header__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.page-header__burger-btn {
+  display: none;
+  margin-right: auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  .page-header__burger-btn > span {
+    width: 2rem;
+    height: 0.2rem;
+    background-color: #fff;
+    margin-bottom: 0.5rem; }
+    .page-header__burger-btn > span:last-child {
+      margin-bottom: 0; }
+  @media only screen and (max-width: 767px) {
+    .page-header__burger-btn {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; } }
+
+.page-header__selects {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .page-header__selects > *:last-child {
+    margin-right: 0; }
+  @media only screen and (max-width: 767px) {
+    .page-header__selects {
+      display: none; } }
+
+.page-header__about-bank,
+.page-header__city {
+  margin-right: 4rem;
+  position: relative; }
+  .page-header__about-bank:hover .page-header__about-bank-dropdown,
+  .page-header__about-bank:hover .page-header__city-dropdown,
+  .page-header__city:hover .page-header__about-bank-dropdown,
+  .page-header__city:hover .page-header__city-dropdown {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: all .3s;
+    transition: all .3s; }
+
+.page-header__about-bank-text,
+.page-header__city-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: default; }
+  .page-header__about-bank-text svg,
+  .page-header__city-text svg {
+    width: 1.4rem;
+    height: 1.4rem;
+    fill: rgba(255, 255, 255, 0.6);
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    margin-right: 1.5rem; }
+
+.page-header__about-bank-dropdown,
+.page-header__city-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding-top: 1rem;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity .2s, visibility 0s linear .2s;
+  transition: opacity .2s, visibility 0s linear .2s;
+  z-index: 50; }
+
+.page-header__about-bank-dropdown-inner,
+.page-header__city-dropdown-inner {
+  border-radius: .4rem;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  color: white;
+  padding: 1.5rem 1.5rem; }
+
+.page-header__about-bank-dropdown-link,
+.page-header__city-dropdown-link {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  white-space: nowrap;
+  display: block;
+  -webkit-transition: color .2s;
+  transition: color .2s; }
+  .page-header__about-bank-dropdown-link:last-child,
+  .page-header__city-dropdown-link:last-child {
+    margin-bottom: 0; }
+  .page-header__about-bank-dropdown-link:link, .page-header__about-bank-dropdown-link:visited,
+  .page-header__city-dropdown-link:link,
+  .page-header__city-dropdown-link:visited {
+    color: rgba(255, 255, 255, 0.6); }
+  .page-header__about-bank-dropdown-link:hover,
+  .page-header__city-dropdown-link:hover {
+    color: white; }
+
+.page-header__phone-link {
+  font-weight: 500;
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-right: 3.5rem;
+  -webkit-transition: color .2s;
+  transition: color .2s; }
+  .page-header__phone-link:link, .page-header__phone-link:visited {
+    color: white; }
+  .no-touch .page-header__phone-link:hover,
+  .touch .page-header__phone-link:active {
+    color: var(--primary-color); }
+  @media only screen and (max-width: 767px) {
+    .page-header__phone-link {
+      font-size: 1.4rem;
+      margin: 1.8rem; } }
+
+.page-header__offices-link,
+.page-header__online-bank-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1.5rem 1.8rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.2;
+  margin-right: 1.7rem; }
+  .page-header__offices-link svg,
+  .page-header__online-bank-link svg {
+    width: 1.5rem;
+    height: 2rem;
+    fill: rgba(255, 255, 255, 0.5);
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    margin-right: 1.4rem; }
+  .page-header__offices-link:link, .page-header__offices-link:visited,
+  .page-header__online-bank-link:link,
+  .page-header__online-bank-link:visited {
+    color: white; }
+  @media only screen and (max-width: 767px) {
+    .page-header__offices-link,
+    .page-header__online-bank-link {
+      font-size: 1rem;
+      padding: .7rem .8rem;
+      border-radius: .4rem;
+      margin-right: 0; } }
+
+.page-header__online-bank-link {
+  margin-right: 0; }
+
+@media only screen and (max-width: 767px) {
+  .page-header__offices-link {
+    display: none; } }
+
 .rating {
   padding: 6.5rem; }
   @media only screen and (max-width: 767px) {
@@ -1350,6 +1534,137 @@ img.lazyload:not([src]) {
   .touch .rating__form-submit:active {
     color: black; }
 
+.news {
+  padding: 6.2rem 0;
+  background-color: var(--secondary-color);
+  color: white; }
+  @media only screen and (max-width: 767px) {
+    .news {
+      padding-top: 2.2rem;
+      padding-bottom: 3.6rem; } }
+
+.news__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start; }
+  @media only screen and (max-width: 767px) {
+    .news__row {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: initial;
+          -ms-flex-align: initial;
+              align-items: initial; } }
+
+.news__heading {
+  font-weight: 500;
+  font-size: 3.6rem;
+  line-height: 1.2;
+  margin-right: 9.6rem;
+  color: #90619c; }
+  @media only screen and (max-width: 767px) {
+    .news__heading {
+      font-size: 2rem;
+      line-height: 1.2;
+      margin: 0;
+      margin-bottom: 1.8rem; } }
+
+.news__content {
+  width: 50%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1; }
+  @media only screen and (max-width: 767px) {
+    .news__content {
+      width: 100%;
+      -webkit-box-flex: 0;
+          -ms-flex-positive: 0;
+              flex-grow: 0; } }
+
+.news__list {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  @media only screen and (max-width: 767px) {
+    .news__list {
+      width: auto;
+      margin: -2rem calc(-1 * var(--content-padding));
+      padding: 2rem var(--content-padding);
+      -webkit-overflow-scrolling: touch;
+      overflow-y: auto; } }
+
+.news__list-item {
+  width: 33.33%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  @media only screen and (max-width: 767px) {
+    .news__list-item {
+      width: 24rem;
+      -ms-flex-negative: 0;
+          flex-shrink: 0; } }
+
+.news__card {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding-left: 2rem;
+  padding-right: 4rem;
+  border-left: 0.3rem solid #7b398c;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  .news__card:link, .news__card:visited {
+    color: white; }
+  @media only screen and (max-width: 767px) {
+    .news__card {
+      padding-left: 2rem;
+      padding-right: 2rem; } }
+
+.news__card-title {
+  font-weight: 500;
+  font-size: 2.2rem;
+  line-height: 1.2;
+  margin-bottom: 2rem; }
+  @media only screen and (max-width: 767px) {
+    .news__card-title {
+      font-size: 1.5rem;
+      margin-bottom: 1.4rem; } }
+
+.news__card-date {
+  margin-top: auto;
+  background: #7b398c;
+  border-radius: 0.4rem;
+  padding: .5rem 1rem;
+  color: white;
+  font-size: 1.4rem;
+  text-align: center;
+  line-height: 1.2;
+  -ms-flex-item-align: start;
+      align-self: flex-start; }
+  @media only screen and (max-width: 767px) {
+    .news__card-date {
+      font-size: 1.1rem;
+      padding: .6rem .8rem; } }
+
+.navigation {
+  background-color: var(--secondary-color);
+  color: white;
+  height: 40rem; }
+
 .currency {
   padding: 8.4rem; }
 
@@ -1380,6 +1695,9 @@ img.lazyload:not([src]) {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column; }
+
+.currency__converter {
+  padding: 5rem; }
 
 .callback {
   background-color: #f5f5f5;
