@@ -1,0 +1,12 @@
+{% set title = "Банк Казани - Главная страница" %}
+{% set activePage = "Home"  %}
+{% extends "layout.html" %}
+{% block content %}
+    {% include "blocks/navigation-block.html" %}
+    {% include "blocks/calculator-block.html" %}
+    {% include "blocks/news-block.html" %}
+    {% include "blocks/products-block.html" %}
+    {% include "blocks/currency-block.html" %}
+    {% include "blocks/callback-block.html" %}
+    {% include "blocks/rating-block.html" %}
+{% endblock %}

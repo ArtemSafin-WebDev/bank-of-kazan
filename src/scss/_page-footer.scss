@@ -1,0 +1,429 @@
+.page-footer {
+    background-color: #fff;
+    color: var(--dark-text-color);
+
+    padding-bottom: 7.8rem;
+
+    @include breakpoint(mobile) {
+        padding-bottom: 9rem;
+        padding-top: 2.2rem;
+    }
+}
+
+.page-footer__top-links-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+    border-bottom: 1px solid #d0d0d0;
+    margin-bottom: 4.5rem;
+    border-top: 4px solid var(--primary-color);
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
+}
+
+.page-footer__top-links-list-item {
+    margin-right: 4rem;
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.page-footer__top-link {
+    font-weight: 500;
+    font-size: 2.2rem;
+    line-height: 1.2;
+    transition: color 0.2s;
+    user-select: none;
+    &:link,
+    &:visited {
+        color: inherit;
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        color: var(--primary-color);
+    }
+}
+
+.page-footer__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -3rem -4rem;
+    @include breakpoint(mobile) {
+        margin: -1.5rem;
+        @supports (display: contents) and (display: grid) {
+            margin: 0;
+            display: grid;
+            grid-template-areas: 'firstnav secondnav' 'info info' 'contacts contacts' 'license license' 'vision vision' 'madeby madeby';
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            grid-gap: 3rem;
+        }
+    }
+}
+
+.page-footer__col {
+    width: 33.33%;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 4rem;
+    @include breakpoint(mobile) {
+        width: 50%;
+        padding: 1.5rem;
+
+        @supports (display: contents) and (display: grid) {
+            padding: 0;
+            width: 100% !important;
+        }
+    }
+
+    &--nav-1 {
+        @include breakpoint(mobile) {
+            grid-area: firstnav;
+           
+        }
+    }
+    &--nav-2 {
+        @include breakpoint(mobile) {
+            grid-area: secondnav;
+        }
+    }
+
+    &--large {
+        width: 66.66%;
+        @include breakpoint(mobile) {
+            width: 100%;
+        }
+    }
+
+    &--contacts {
+        @include breakpoint(mobile) {
+            width: 100%;
+            grid-area: contacts;
+           
+        }
+    }
+
+    &--low-vision {
+        @include breakpoint(mobile) {
+            width: 100%;
+            grid-area: vision;
+            @supports (display: contents) and (display: grid) {
+                display: contents;
+            }
+        }
+    }
+
+    &--info {
+        @include breakpoint(mobile) {
+            order: 1;
+            @supports (display: contents) and (display: grid) {
+                display: contents;
+            }
+        }
+    }
+}
+
+.page-footer__nav-heading {
+    font-size: 2.2rem;
+    font-weight: 500;
+    font-size: 2.2rem;
+    line-height: 1.2;
+    margin-bottom: 2.5rem;
+    @include breakpoint(mobile) {
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 1.2;
+        margin-bottom: 1.8rem;
+    }
+}
+
+
+
+.page-footer__nav-menu-list-item {
+    margin-bottom: 1.5rem;
+    @include breakpoint(mobile) {
+        margin-bottom: 1.2rem;
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.page-footer__nav-menu-link {
+    color: var(--light-text-color);
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 1.2;
+    transition: color 0.2s;
+    display: block;
+    &:link,
+    &:visited {
+        color: var(--light-text-color);
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        color: black;
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 1rem;
+        line-height: 1;
+        &:link,
+        &:visited {
+            color: #8a8a8a;
+        }
+    }
+}
+
+.page-footer__contacts {
+    @include breakpoint(mobile) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+
+.page-footer__contacts-phone {
+    font-weight: 500;
+    font-size: 3.2rem;
+    line-height: 1.2;
+    margin-bottom: 3.5rem;
+    display: inline-flex;
+    transition: color 0.2s;
+    &:link,
+    &:visited {
+        color: inherit;
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        color: var(--primary-color);
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 2rem;
+        line-height: 1.2;
+        margin: 0;
+    }
+}
+
+.page-footer__social-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 4.5rem;
+
+    @include breakpoint(mobile) {
+        margin: 0;
+        padding-right: 1.5rem;
+    }
+}
+
+.page-footer__social-list-item {
+    margin-right: 3.5rem;
+    @include breakpoint(mobile) {
+        margin-right: 2rem;
+    }
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.page-footer__social-link {
+    svg {
+        display: block;
+        flex-shrink: 0;
+        fill: var(--primary-color);
+        width: 2.2rem;
+        height: 2.2rem;
+        transition: fill 0.2s;
+        @include breakpoint(mobile) {
+            width: 1.7rem;
+            height: 1.7rem;
+        }
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        svg {
+            fill: black;
+        }
+    }
+}
+
+.page-footer__offices-link {
+    font-weight: 500;
+    font-size: 2.2rem;
+    line-height: 120%;
+    transition: color 0.2s;
+    &:link,
+    &:visited {
+        color: inherit;
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        color: var(--primary-color);
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 1.2rem;
+        line-height: 1.2;
+        margin-top: 1rem;
+    }
+}
+
+.page-footer__legal-info {
+    font-size: 1.6rem;
+    line-height: 120%;
+    color: #a5a5a5;
+    margin-bottom: 2.7rem;
+    display: block;
+    &:link,
+    &:visited {
+        color: #a5a5a5;
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 1rem;
+        line-height: 1.2;
+        margin: 0;
+        margin-bottom: 1.5rem;
+        grid-area: info;
+        @supports (display: contents) and (display: grid) {
+            margin: 0;
+        }
+    }
+}
+
+.page-footer__info {
+    @supports (display: contents) and (display: grid) {
+        display: contents;
+    }
+}
+
+.page-footer__info-row {
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+
+
+    @include breakpoint(mobile) {
+        @supports (display: contents) and (display: grid) {
+            display: contents;
+        }
+    }
+}
+
+.page-footer__info-license {
+    font-size: 1.6rem;
+    line-height: 120%;
+    margin-right: 4rem;
+    color: #a5a5a5;
+    &:link,
+    &:visited {
+        color: #a5a5a5;
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 1rem;
+        line-height: 1.2;
+        margin: 0;
+        margin-bottom: 2rem;
+        grid-area: license;
+        &:link,
+        &:visited {
+            color: #a5a5a5;
+        }
+
+        @supports (display: contents) and (display: grid) {
+            margin: 0;
+            
+        }
+    }
+}
+
+.page-footer__made-by {
+    display: inline-flex;
+    align-items: baseline;
+    color: #a5a5a5;
+    font-size: 1.6rem;
+    line-height: 120%;
+    &:link,
+    &:visited {
+        color: #a5a5a5;
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 1rem;
+        line-height: 1.2;
+        grid-area: madeby;
+        @supports (display: contents) and (display: grid) {
+            display: flex;
+            justify-content: flex-end;
+            
+        }
+    }
+}
+
+.page-footer__made-by-logo {
+    width: 8.8rem;
+    height: auto;
+    position: relative;
+    bottom: -0.85rem;
+    margin-left: 1.6rem;
+
+    @include breakpoint(mobile) {
+        width: 8rem;
+        margin-left: 0.8rem;
+        bottom: -0.8rem;
+    }
+}
+
+.page-footer__low-vision-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 1.7rem 1.9rem;
+    color: white;
+    font-weight: 500;
+    font-size: 2.4rem;
+    line-height: 1.2;
+    border-radius: 0.8rem;
+    background-color: black;
+    transition: background-color 0.2s;
+    white-space: nowrap;
+    user-select: none;
+    &:link,
+    &:visited {
+        color: white;
+    }
+
+    svg {
+        width: 2.6rem;
+        height: 2.2rem;
+        fill: white;
+        margin-right: 1.8rem;
+        flex-shrink: 0;
+        @include breakpoint(mobile) {
+            width: 1.7rem;
+            height: 1.4rem;
+            margin-right: 1.2rem;
+        }
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        background-color: var(--primary-color);
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 1.2rem;
+        line-height: 1.2;
+        padding: 1rem 1.3rem;
+    }
+}

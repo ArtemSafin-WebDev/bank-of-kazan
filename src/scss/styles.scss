@@ -1,0 +1,18 @@
+@import 'vendor';
+@import 'mixins';
+@import 'fontface';
+@import 'global';
+@import 'layout';
+@import 'text';
+@import 'page-footer';
+
+// Blocks styles
+
+@import 'blocks/rating-block';
+@import 'blocks/products-block';
+@import 'blocks/news-block';
+@import 'blocks/navigation-block';
+@import 'blocks/currency-block';
+@import 'blocks/callback-block';
+@import 'blocks/calculator-block';
+

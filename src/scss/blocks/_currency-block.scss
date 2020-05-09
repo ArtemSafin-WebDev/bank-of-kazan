@@ -1,0 +1,25 @@
+.currency {
+    padding: 8.4rem;
+}
+
+
+.currency__row {
+    display: flex;
+
+}
+
+
+.currency__left-col {
+    width: 50%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.currency__right-col {
+    width: 33.6rem;
+    flex-shrink: 0;
+    margin-left: 5rem;
+    flex-direction: column;
+}
