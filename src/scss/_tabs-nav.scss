@@ -1,0 +1,28 @@
+.tabs-nav {
+    display: flex;
+    align-items: center;
+}
+
+
+.tabs-nav__link {
+    font-weight: 500;
+    font-size: 2.4rem;
+    line-height: 1.2;
+    padding: .8rem  1.6rem;
+    border-radius: 1rem;
+    transition: background-color .2s, color .2s;
+    white-space: nowrap;
+    flex-shrink: 0;
+    margin-right: 2rem;
+    &:link,
+    &:visited {
+        color: inherit;
+    }
+
+
+    &.active,
+    &:hover {
+        background: #ECF3DC;
+        color: var(--primary-color);
+    }
+}

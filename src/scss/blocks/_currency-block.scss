@@ -2,12 +2,9 @@
     padding: 8.4rem;
 }
 
-
 .currency__row {
     display: flex;
-
 }
-
 
 .currency__left-col {
     width: 50%;
@@ -16,7 +13,6 @@
     flex-direction: column;
 }
 
-
 .currency__right-col {
     width: 33.6rem;
     flex-shrink: 0;
@@ -24,7 +20,209 @@
     flex-direction: column;
 }
 
-
 .currency__converter {
     padding: 5rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 1rem;
+    
+}
+
+.currency__converter-row {
+    display: flex;
+    margin-bottom: 5.8rem;
+}
+
+.currency__converter-top-heading {
+    font-weight: 500;
+    font-size: 3.6rem;
+    line-height: 1.2;
+}
+
+.currency__converter-top-city {
+    color: var(--secondary-color);
+    // border-bottom: 1px dotted currentColor;
+    position: relative;
+
+    transition: color 0.2s;
+
+    &::after,
+    &::before {
+        content: '';
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-size: 0.4rem;
+        background-repeat: repeat-x;
+        background-image: linear-gradient(to right, var(--primary-color) 0%, var(--primary-color) 50%, rgba(white, 0) 50%, rgba(white, 0) 100%);
+        position: absolute;
+        height: 2px;
+        z-index: 20;
+    }
+
+    &::before {
+        background-image: linear-gradient(to right, var(--secondary-color) 0%, var(--secondary-color) 50%, rgba(white, 0) 50%, rgba(white, 0) 100%);
+    }
+
+    &::after {
+        opacity: 0;
+        transition: opacity 0.2s;
+    }
+    &:link,
+    &:visited {
+        color: var(--secondary-color);
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        color: var(--primary-color);
+        &::after {
+            opacity: 1;
+        }
+    }
+}
+
+.currency__converter-nav {
+    margin-left: auto;
+}
+
+.currency__card {
+    display: flex;
+}
+
+.currency__card-all-rates {
+    display: flex;
+    align-items: baseline;
+    margin-top: 2rem;
+}
+
+.currency__card-all-rates-remark {
+    font-size: 1.5rem;
+    line-height: 130%;
+    color: #c6c6c6;
+    margin-right: 3rem;
+}
+
+.currency__card-all-rates-link {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    line-height: 130%;
+    transition: color 0.2s;
+    &:link,
+    &:visited {
+        color: var(--secondary-color);
+    }
+
+    &:hover {
+        color: var(--primary-color);
+    }
+}
+
+.currency__card-rates-table-wrapper {
+    table {
+        border-collapse: collapse;
+
+        thead {
+            th {
+                padding-bottom: 3rem;
+                font-weight: 500;
+                font-size: 1.6rem;
+                line-height: 120%;
+                color: #c6c6c6;
+                text-align: left;
+                vertical-align: middle;
+                .hidden {
+                    @include visuallyHidden();
+                }
+            }
+        }
+
+        tbody {
+            td {
+                font-weight: 500;
+                font-size: 2.2rem;
+                line-height: 120%;
+                padding-bottom: 2rem;
+                padding-right: 4.8rem;
+                vertical-align: middle;
+                text-align: left;
+                .currency-name {
+                    color: #c6c6c6;
+                    padding-right: 3rem;
+                }
+
+                .rate {
+                    display: inline-flex;
+                    align-items: center;
+
+                    svg {
+                        width: 1rem;
+                        height: 1.4rem;
+                        fill: var(--primary-color);
+                        margin-left: 1rem;
+                        flex-shrink: 0;
+                        transition: fill 0.2s;
+                    }
+
+                    &.down {
+                        svg {
+                            transform: scaleY(-1);
+                            fill: #bf0a0a;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.currency__card-calculate {
+    margin-left: auto;
+    width: 39rem;
+    margin-right: 7rem;
+}
+
+.currency__card-calculate-description {
+    margin-bottom: 2.2rem;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 120%;
+    color: #c6c6c6;
+}
+
+
+.currency__card-calculate-widget-range-wrapper {
+    width: 50%;
+    flex-grow: 1;
+}
+
+
+.currency__card-calculate-widget-item {
+    display: flex;
+   
+    position: relative;
+
+    &--top {
+        z-index: 20;
+        margin-bottom: 0.6rem;
+    }
+}
+
+
+.currency__card-calculate-divider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.6rem;
+    svg {
+        width: 1.4rem;
+        height: 0.8rem;
+        fill: #DCDCDC;
+    }
+}
+
+.currency__card-calculate-widget-select-wrapper {
+    min-width: 11rem;
+
+    flex-shrink: 0;
 }
