@@ -5,6 +5,7 @@ import phoneMask from './phoneMask';
 import tabs from './tabs';
 import customSelects from './customSelects';
 import rangeSliders from './rangeSliders';
+import productsSlider from './productsSlider';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -14,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
     tabs();
     customSelects();
     rangeSliders();
+    productsSlider();
 });
 
 window.addEventListener('load', function() {
