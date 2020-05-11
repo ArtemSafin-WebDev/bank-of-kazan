@@ -146,6 +146,342 @@
                         <div class="navigation__wrapper"></div>
                     </div>
                 </section>
+                <section class="calculator js-tabs">
+                    <div class="container">
+                        <div class="calculator__nav">
+                            <div class="tabs-nav">
+                                <a href="#" class="tabs-nav__link js-tabs-nav active">
+                                    Рассчитать кредит
+                                </a>
+                                <a href="#" class="tabs-nav__link js-tabs-nav">
+                                    Рассчитать вклад
+                                </a>
+                                <a href="#" class="tabs-nav__link js-tabs-nav">
+                                    Заявка на карту
+                                </a>
+                            </div>
+                        </div>
+                        <div class="calculator__tabs">
+                            <div class="tab-items">
+                                <div class="tab-items__item js-tabs-item active">
+                                    <div class="calculator__row">
+                                        <div class="calculator__left-column">
+                                            <form method="POST" action="/" class="calculator__converter">
+                                                <div class="calculator__converter-left-col">
+                                                    <div class="calculator__converter-amount-row">
+                                                        <div class="calculator__converter-amount-text">
+                                                            Сумма кредита, рубли
+                                                        </div>
+                                                        <div class="calculator__converter-amount-range">
+                                                            <div class="range-slider js-range-slider">
+                                                                <input type="range" name="first-currency-amount" step="100" min="90000" max="1500000" class="range-slider__input" value="6500" />
+                                                                <div class="range-slider__element-wrapper">
+                                                                    <div class="range-slider__amount">12 000</div>
+                                                                    <div class="range-slider__element"></div>
+                                                                </div>
+                                                                <div class="range-slider__min-max">
+                                                                    <div class="range-slider__min">
+                                                                        90 000
+                                                                    </div>
+                                                                    <div class="range-slider__max">
+                                                                        2 000 000
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="calculator__converter-amount-row">
+                                                        <div class="calculator__converter-amount-text">
+                                                            Срок кредита
+                                                        </div>
+                                                        <div class="calculator__converter-amount-range">
+                                                            <div class="range-slider js-range-slider">
+                                                                <input type="range" name="first-currency-amount" step="100" min="0" max="60000" class="range-slider__input" value="6500" />
+                                                                <div class="range-slider__element-wrapper">
+                                                                    <div class="range-slider__amount">12 000</div>
+                                                                    <div class="range-slider__element"></div>
+                                                                </div>
+                                                                <div class="range-slider__min-max">
+                                                                    <div class="range-slider__min">
+                                                                        1 год 1 месяц
+                                                                    </div>
+                                                                    <div class="range-slider__max">
+                                                                        5 лет
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <p class="calculator__converter-remark">
+                                                        Расчет платежа приведен с учетом финансовой защиты. Не является офертой.
+                                                    </p>
+                                                </div>
+                                                <div class="calculator__converter-right-col">
+                                                    <div class="calculator__converter-sum-row">
+                                                        <div class="calculator__converter-total">
+                                                            <div class="calculator__converter-total-item">
+                                                                <div class="calculator__converter-total-amount">
+                                                                    35 351 ₽
+                                                                </div>
+                                                                <div class="calculator__converter-total-description">
+                                                                    Ежемесячный платеж
+                                                                </div>
+                                                            </div>
+                                                            <div class="calculator__converter-total-item">
+                                                                <div class="calculator__converter-total-amount">
+                                                                    8.99%
+                                                                </div>
+                                                                <div class="calculator__converter-total-description">
+                                                                    Ставка по кредиту
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="calculator__converter-btns">
+                                                            <a href="#" class="calculator__converter-apply-btn"
+                                                                >оформить
+
+                                                                <svg width="9" height="14" aria-hidden="true" class="icon-arrow-right">
+                                                                    <use xlink:href="#arrow-right" />
+                                                                </svg>
+                                                            </a>
+                                                            <a href="#" class="calculator__converter-details-btn">Подробнее</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="calculator__right-column">
+                                            <div class="calculator__documents">
+                                                <p class="calculator__documents-text">
+                                                    Расчет платежа приведен с учетом финансовой защиты. Не является офертой.
+                                                </p>
+                                                <a href="#" class="calculator__documents-link">
+                                                    Все кредиты
+                                                </a>
+                                                <a href="#" class="calculator__documents-link">
+                                                    Требуемые документы
+                                                </a>
+                                                <a href="#" class="calculator__documents-link">
+                                                    Другое
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-items__item js-tabs-item active">
+                                    <div class="calculator__row">
+                                        <div class="calculator__left-column">
+                                            <form method="POST" action="/" class="calculator__converter">
+                                                <div class="calculator__converter-left-col">
+                                                    <div class="calculator__converter-amount-row">
+                                                        <div class="calculator__converter-amount-text">
+                                                            Сумма кредита, рубли
+                                                        </div>
+                                                        <div class="calculator__converter-amount-range">
+                                                            <div class="range-slider js-range-slider">
+                                                                <input type="range" name="first-currency-amount" step="100" min="90000" max="1500000" class="range-slider__input" value="6500" />
+                                                                <div class="range-slider__element-wrapper">
+                                                                    <div class="range-slider__amount">12 000</div>
+                                                                    <div class="range-slider__element"></div>
+                                                                </div>
+                                                                <div class="range-slider__min-max">
+                                                                    <div class="range-slider__min">
+                                                                        90 000
+                                                                    </div>
+                                                                    <div class="range-slider__max">
+                                                                        2 000 000
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="calculator__converter-amount-row">
+                                                        <div class="calculator__converter-amount-text">
+                                                            Срок кредита
+                                                        </div>
+                                                        <div class="calculator__converter-amount-range">
+                                                            <div class="range-slider js-range-slider">
+                                                                <input type="range" name="first-currency-amount" step="100" min="0" max="60000" class="range-slider__input" value="6500" />
+                                                                <div class="range-slider__element-wrapper">
+                                                                    <div class="range-slider__amount">12 000</div>
+                                                                    <div class="range-slider__element"></div>
+                                                                </div>
+                                                                <div class="range-slider__min-max">
+                                                                    <div class="range-slider__min">
+                                                                        1 год 1 месяц
+                                                                    </div>
+                                                                    <div class="range-slider__max">
+                                                                        5 лет
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <p class="calculator__converter-remark">
+                                                        Расчет платежа приведен с учетом финансовой защиты. Не является офертой.
+                                                    </p>
+                                                </div>
+                                                <div class="calculator__converter-right-col">
+                                                    <div class="calculator__converter-sum-row">
+                                                        <div class="calculator__converter-total">
+                                                            <div class="calculator__converter-total-item">
+                                                                <div class="calculator__converter-total-amount">
+                                                                    35 351 ₽
+                                                                </div>
+                                                                <div class="calculator__converter-total-description">
+                                                                    Ежемесячный платеж
+                                                                </div>
+                                                            </div>
+                                                            <div class="calculator__converter-total-item">
+                                                                <div class="calculator__converter-total-amount">
+                                                                    8.99%
+                                                                </div>
+                                                                <div class="calculator__converter-total-description">
+                                                                    Ставка по кредиту
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="calculator__converter-btns">
+                                                            <a href="#" class="calculator__converter-apply-btn"
+                                                                >оформить
+
+                                                                <svg width="9" height="14" aria-hidden="true" class="icon-arrow-right">
+                                                                    <use xlink:href="#arrow-right" />
+                                                                </svg>
+                                                            </a>
+                                                            <a href="#" class="calculator__converter-details-btn">Подробнее</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="calculator__right-column">
+                                            <div class="calculator__documents">
+                                                <p class="calculator__documents-text">
+                                                    Расчет платежа приведен с учетом финансовой защиты. Не является офертой.
+                                                </p>
+                                                <a href="#" class="calculator__documents-link">
+                                                    Все кредиты
+                                                </a>
+                                                <a href="#" class="calculator__documents-link">
+                                                    Требуемые документы
+                                                </a>
+                                                <a href="#" class="calculator__documents-link">
+                                                    Другое
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-items__item js-tabs-item active">
+                                    <div class="calculator__row">
+                                        <div class="calculator__left-column">
+                                            <form method="POST" action="/" class="calculator__converter">
+                                                <div class="calculator__converter-left-col">
+                                                    <div class="calculator__converter-amount-row">
+                                                        <div class="calculator__converter-amount-text">
+                                                            Сумма кредита, рубли
+                                                        </div>
+                                                        <div class="calculator__converter-amount-range">
+                                                            <div class="range-slider js-range-slider">
+                                                                <input type="range" name="first-currency-amount" step="100" min="90000" max="1500000" class="range-slider__input" value="6500" />
+                                                                <div class="range-slider__element-wrapper">
+                                                                    <div class="range-slider__amount">12 000</div>
+                                                                    <div class="range-slider__element"></div>
+                                                                </div>
+                                                                <div class="range-slider__min-max">
+                                                                    <div class="range-slider__min">
+                                                                        90 000
+                                                                    </div>
+                                                                    <div class="range-slider__max">
+                                                                        2 000 000
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="calculator__converter-amount-row">
+                                                        <div class="calculator__converter-amount-text">
+                                                            Срок кредита
+                                                        </div>
+                                                        <div class="calculator__converter-amount-range">
+                                                            <div class="range-slider js-range-slider">
+                                                                <input type="range" name="first-currency-amount" step="100" min="0" max="60000" class="range-slider__input" value="6500" />
+                                                                <div class="range-slider__element-wrapper">
+                                                                    <div class="range-slider__amount">12 000</div>
+                                                                    <div class="range-slider__element"></div>
+                                                                </div>
+                                                                <div class="range-slider__min-max">
+                                                                    <div class="range-slider__min">
+                                                                        1 год 1 месяц
+                                                                    </div>
+                                                                    <div class="range-slider__max">
+                                                                        5 лет
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <p class="calculator__converter-remark">
+                                                        Расчет платежа приведен с учетом финансовой защиты. Не является офертой.
+                                                    </p>
+                                                </div>
+                                                <div class="calculator__converter-right-col">
+                                                    <div class="calculator__converter-sum-row">
+                                                        <div class="calculator__converter-total">
+                                                            <div class="calculator__converter-total-item">
+                                                                <div class="calculator__converter-total-amount">
+                                                                    35 351 ₽
+                                                                </div>
+                                                                <div class="calculator__converter-total-description">
+                                                                    Ежемесячный платеж
+                                                                </div>
+                                                            </div>
+                                                            <div class="calculator__converter-total-item">
+                                                                <div class="calculator__converter-total-amount">
+                                                                    8.99%
+                                                                </div>
+                                                                <div class="calculator__converter-total-description">
+                                                                    Ставка по кредиту
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="calculator__converter-btns">
+                                                            <a href="#" class="calculator__converter-apply-btn"
+                                                                >оформить
+
+                                                                <svg width="9" height="14" aria-hidden="true" class="icon-arrow-right">
+                                                                    <use xlink:href="#arrow-right" />
+                                                                </svg>
+                                                            </a>
+                                                            <a href="#" class="calculator__converter-details-btn">Подробнее</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="calculator__right-column">
+                                            <div class="calculator__documents">
+                                                <p class="calculator__documents-text">
+                                                    Расчет платежа приведен с учетом финансовой защиты. Не является офертой.
+                                                </p>
+                                                <a href="#" class="calculator__documents-link">
+                                                    Все кредиты
+                                                </a>
+                                                <a href="#" class="calculator__documents-link">
+                                                    Требуемые документы
+                                                </a>
+                                                <a href="#" class="calculator__documents-link">
+                                                    Другое
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
                 <section class="news">
                     <div class="container">

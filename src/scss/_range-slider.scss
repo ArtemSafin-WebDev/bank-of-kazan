@@ -82,3 +82,13 @@
 .range-slider__input {
     @include visuallyHidden();
 }
+
+.range-slider__min-max {
+    display: flex;
+    align-items: baseline;
+    margin-top: 1.2rem;
+    justify-content: space-between;
+    font-size: 1rem;
+    color: #BABABA;
+    line-height: 130%;
+}

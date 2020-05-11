@@ -72,9 +72,15 @@
     border-left: 0.3rem solid #7b398c;
     display: flex;
     flex-direction: column;
+    transition: border-color .2s;
     &:link,
     &:visited {
         color: white;
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        border-color: var(--primary-color);
     }
 
 
