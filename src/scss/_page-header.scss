@@ -3,7 +3,7 @@
     top: 5rem;
     left: 0;
     width: 100%;
-    z-index: 200;
+    z-index: 600;
     color: white;
 }
 
@@ -163,7 +163,7 @@
     font-size: 1.6rem;
     line-height: 1.2;
     margin-right: 1.7rem;
-    transition: border-color .2s;
+    transition: border-color .2s, background-color .2s;
     svg {
         width: 1.5rem;
         height: 2rem;
@@ -181,10 +181,7 @@
 
     .no-touch &:hover,
     .touch &:active {
-        border-color: white;
-        svg {
-            fill: white;
-        }
+       background-color: rgba(white, .2);
     }
 
 

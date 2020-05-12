@@ -6,6 +6,7 @@ import tabs from './tabs';
 import customSelects from './customSelects';
 import rangeSliders from './rangeSliders';
 import productsSlider from './productsSlider';
+import navigation from './navigation';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -16,6 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
     customSelects();
     rangeSliders();
     productsSlider();
+    navigation();
 });
 
 window.addEventListener('load', function() {

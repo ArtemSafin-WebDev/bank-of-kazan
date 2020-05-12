@@ -1,8 +1,330 @@
 .navigation {
     background-color: var(--secondary-color);
     color: white;
+    min-height: 98.8rem;
+    position: relative;
+    z-index: 1;
+}
+
+.navigation__logo-bar {
+    padding: 4rem 0;
+    margin-top: 6rem;
+    display: flex;
+    align-items: center;
+    border-bottom: 0.6rem solid white;
+}
+
+.navigation__logo {
+    margin-right: auto;
+}
+
+.navigation__logo-image {
+    display: block;
+    width: 24.5rem;
+    height: auto;
+}
+
+.navigation__bg-layers {
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.navigation__bg-layer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease .2s, visibility 0s linear 0.4s;
+    z-index: 10;
+    &.active {
+        opacity: 1;
+        visibility: visible;
+        transition: opacity .2s, visibility .2s;
+        z-index: 20;
+    }
+}
+
+.navigation__bg-slider {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    .swiper-container {
+        height: 100%;
+    }
+
+    .swiper-wrapper {
+        height: 100%;
+    }
+
+    .swiper-slide {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.navigation__bg-slider-card {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.navigation__bg-slider-card-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    @include objectFitCover();
+}
+
+.navigation__universal-toggle {
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid rgba(white, 0.4);
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.navigation__universal-toggle-select-category {
+    display: flex;
+    align-items: center;
+}
+
+.navigation__universal-toggle-search-form {
+    position: absolute;
+    left: 0;
+    top: 5rem;
+}
+
+.navigation__universal-toggle-select-category,
+.navigation__universal-toggle-search-form {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s, visibility 0s linear 0.2s;
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+        transition: all 0.2s;
+    }
+}
+
+.navigation__universal-toggle-search-form-input {
+    padding-right: 5rem;
+    font-weight: 500;
+    font-size: 5.4rem;
+    color: white;
+    width: 100%;
+
+    @include placeholder {
+        color: rgba(white, 0.4);
+    }
+}
+
+.navigation__universal-toggle-select-category-link {
+    color: rgba(white, 0.4);
+    font-weight: 500;
+    font-size: 5.4rem;
+    line-height: 120%;
+    margin-right: 6rem;
+    transition: color 0.2s;
+    &:link,
+    &:visited {
+        color: rgba(white, 0.4);
+    }
+
+    &.active {
+        color: white;
+    }
+}
+
+.navigation__universal-toggle-search {
+    margin-left: auto;
+    flex-shrink: 0;
+    svg {
+        width: 3.4rem;
+        height: 3.4rem;
+        fill: white;
+        display: block;
+    }
+}
+
+.navigation__content {
+    position: relative;
+    margin-top: 7rem;
+}
+
+.navigation__content-row {
+    display: flex;
+    margin: -1.8rem;
+}
+
+.navigation__content-left-col,
+.navigation__content-right-col {
+    padding: 1.8rem;
+}
+
+.navigation__content-left-col {
+    width: 33.33%;
+    display: flex;
+    flex-direction: column;
+}
+
+.navigation__content-right-col {
+    width: 66.66%;
+    display: flex;
+    flex-direction: column;
+}
+
+.navigation__content-layer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    min-height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s, visibility 0s linear 0.2s;
+    z-index: 1;
+
+    &.active {
+        z-index: 20;
+        opacity: 1;
+        visibility: visible;
+        z-index: 20;
+    }
+}
 
 
-    height: 40rem;
+.navigation__main-menu-layers {
+    position: relative;
+}
 
+
+.navigation__main-menu-layer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: transform .3s, opacity .3s, visibility 0s linear .3s;
+    z-index: 10;
+    transform: translateZ(0) translateX(4rem);
+    &.active {
+        position: relative;
+        opacity: 1;
+        visibility: visible;
+        z-index: 20;
+        transition: opacity .3s, transform .3s, visibility .3s;
+        transform: translateZ(0) translateX(0);
+    }
+}
+
+.navigation__main-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.navigation__main-menu-link {
+    font-weight: 500;
+    font-size: 2.9rem;
+    line-height: 122%;
+    margin-bottom: 1.5rem;
+    align-self: flex-start;
+    color: white;
+    &:last-child {
+        margin-bottom: 0;
+    }
+    &:link,
+    &:visited {
+        color: white;
+    }
+}
+
+.navigation__content-inner-slider {
+    position: relative;
+}
+
+.navigation__content-inner-slider-arrow {
+    position: absolute;
+    top: 16rem;
+    transform: translateY(-50%);
+    z-index: 100;
+    svg {
+        width: 2.8rem;
+        height: 4.6rem;
+        fill: rgba(white, 0.5);
+        transition: fill 0.2s;
+        display: block;
+    }
+
+    &--prev {
+        left: 0;
+    }
+
+    &--next {
+        right: 0;
+    }
+
+    &.swiper-button-disabled {
+        cursor: default;
+    }
+
+    &:not(.swiper-button-disabled):hover {
+        svg {
+            fill: white;
+        }
+    }
+}
+
+
+
+.navigation__content-inner-slider-card {
+    padding: 0 8rem;
+    transition: transform .5s;
+    transform: translateZ(0) translateX(8rem);
+
+    .swiper-slide-active & {
+        transform: translateZ(0) translateX(0);
+        transition: transform .6s ease-out;
+    }
+}
+
+.navigation__content-inner-slider-card-title {
+    font-weight: 500;
+    font-size: 3.8rem;
+    line-height: 120%;
+    margin-bottom: 1.5rem;
+}
+
+.navigation__content-inner-slider-card-percent {
+    font-weight: bold;
+    font-size: 20rem;
+    line-height: 120%;
+    margin-bottom: 1.5rem;
+    position: relative;
+    left: -.1em;
+}
+
+.navigation__content-inner-slider-card-text {
+    font-size: 2rem;
+    line-height: 130%;
+
+    p {
+        margin-bottom: 1.5rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
 }
