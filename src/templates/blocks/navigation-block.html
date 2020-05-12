@@ -47,6 +47,7 @@
             </div>
         </div>
     </div>
+    <div class="navigation__backplate"></div>
     <div class="container">
         <div class="navigation__wrapper">
             <div class="navigation__logo-bar">
@@ -63,6 +64,11 @@
             <form action="/" method="GET" class="navigation__universal-toggle-search-form">
                 <input type="search" name="q" class="navigation__universal-toggle-search-form-input" placeholder="Что ищете?" />
             </form>
+            <button class="navigation__universal-search-close">
+                <svg width="34" height="34" aria-hidden="true" class="icon-cross">
+                    <use xlink:href="#cross" />
+                </svg>
+            </button>
             <button class="navigation__universal-toggle-search">
                 <svg width="34" height="34" aria-hidden="true" class="icon-search">
                     <use xlink:href="#search" />
@@ -70,125 +76,634 @@
             </button>
         </div>
         <div class="navigation__content">
-            <div class="navigation__content-layer active">
-                <div class="navigation__content-row">
-                    <div class="navigation__content-left-col">
-                        <div class="navigation__main-menu-layers">
-                            <div class="navigation__main-menu-layer active">
-                                <div class="navigation__main-menu">
-                                    <a href="#" class="navigation__main-menu-link">
-                                        Кредиты
-                                    </a>
-                                    <a href="#" class="navigation__main-menu-link">
-                                        Вклады
-                                    </a>
-                                    <a href="#" class="navigation__main-menu-link">
-                                        Пластиковые карты
-                                    </a>
-                                    <a href="#" class="navigation__main-menu-link">
-                                        Онлайн страхование
-                                    </a>
-                                    <a href="#" class="navigation__main-menu-link">
-                                        Платежи и переводы
-                                    </a>
-                                    <a href="#" class="navigation__main-menu-link">
-                                        Брокерское обслуживание
-                                    </a>
-                                    <a href="#" class="navigation__main-menu-link">
-                                        Реализация залогового имущества
-                                    </a>
-                                    <a href="#" class="navigation__main-menu-link">
-                                        Расчетно-кассовое обслуживание
-                                    </a>
-                                </div>
+            <div class="navigation__content-row">
+                <div class="navigation__content-left-col">
+                    <div class="navigation__main-menu-layers">
+                        <div class="navigation__main-menu-layer active">
+                            <div class="navigation__main-menu">
+                                <a href="#" class="navigation__main-menu-link">
+                                    Кредиты
+                                </a>
+                                <a href="#" class="navigation__main-menu-link">
+                                    Вклады
+                                </a>
+                                <a href="#" class="navigation__main-menu-link">
+                                    Пластиковые карты
+                                </a>
+                                <a href="#" class="navigation__main-menu-link">
+                                    Онлайн страхование
+                                </a>
+                                <a href="#" class="navigation__main-menu-link">
+                                    Платежи и переводы
+                                </a>
+                                <a href="#" class="navigation__main-menu-link">
+                                    Брокерское обслуживание
+                                </a>
+                                <a href="#" class="navigation__main-menu-link">
+                                    Реализация залогового имущества
+                                </a>
+                                <a href="#" class="navigation__main-menu-link">
+                                    Расчетно-кассовое обслуживание
+                                </a>
                             </div>
-                            <div class="navigation__main-menu-layer">
-                                <div class="navigation__main-menu">
-                                    <a href="#" class="navigation__main-menu-link">
-                                        Рассчетно-кассовое обслуживание
-                                    </a>
-                                    <a href="#" class="navigation__main-menu-link">
-                                        Кредиты
-                                    </a>
-                                    <a href="#" class="navigation__main-menu-link">
-                                        Депозиты бизнесу
-                                    </a>
-                                    <a href="#" class="navigation__main-menu-link">
-                                        Банковские гарантии
-                                    </a>
-                                    <a href="#" class="navigation__main-menu-link">
-                                        Пластиковые карты
-                                    </a>
-                                    <a href="#" class="navigation__main-menu-link">
-                                        Онлайн сервис
-                                    </a>
-                                </div>
+                        </div>
+                        <div class="navigation__main-menu-layer">
+                            <div class="navigation__main-menu">
+                                <a href="#" class="navigation__main-menu-link">
+                                    Рассчетно-кассовое обслуживание
+                                </a>
+                                <a href="#" class="navigation__main-menu-link">
+                                    Кредиты
+                                </a>
+                                <a href="#" class="navigation__main-menu-link">
+                                    Депозиты бизнесу
+                                </a>
+                                <a href="#" class="navigation__main-menu-link">
+                                    Банковские гарантии
+                                </a>
+                                <a href="#" class="navigation__main-menu-link">
+                                    Пластиковые карты
+                                </a>
+                                <a href="#" class="navigation__main-menu-link">
+                                    Онлайн сервис
+                                </a>
                             </div>
                         </div>
                     </div>
-                    <div class="navigation__content-right-col">
-                        <div class="navigation__content-inner-slider">
-                            <div class="navigation__content-inner-slider-nav">
-                                <button class="navigation__content-inner-slider-arrow navigation__content-inner-slider-arrow--prev">
-                                    <svg width="28" height="46" aria-hidden="true" class="icon-arrow-left">
-                                        <use xlink:href="#arrow-left" />
-                                    </svg>
-                                </button>
-                                <button class="navigation__content-inner-slider-arrow navigation__content-inner-slider-arrow--next">
-                                    <svg width="28" height="46" aria-hidden="true" class="icon-arrow-right">
-                                        <use xlink:href="#arrow-right" />
-                                    </svg>
-                                </button>
+                </div>
+                <div class="navigation__content-right-col">
+                    <div class="navigation__content-right-col-sliders-menus">
+                        <div class="navigation__content-right-col-sliders active">
+                            <div class="navigation__content-inner-slider-layers">
+                                <div class="navigation__content-inner-slider-layer">
+                                    <div class="navigation__content-inner-slider">
+                                        <div class="navigation__content-inner-slider-nav">
+                                            <button class="navigation__content-inner-slider-arrow navigation__content-inner-slider-arrow--prev">
+                                                <svg width="28" height="46" aria-hidden="true" class="icon-arrow-left">
+                                                    <use xlink:href="#arrow-left" />
+                                                </svg>
+                                            </button>
+                                            <button class="navigation__content-inner-slider-arrow navigation__content-inner-slider-arrow--next">
+                                                <svg width="28" height="46" aria-hidden="true" class="icon-arrow-right">
+                                                    <use xlink:href="#arrow-right" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <div class="swiper-container">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <div class="navigation__content-inner-slider-card">
+                                                        <h4 class="navigation__content-inner-slider-card-title">
+                                                            Кредит «Быстрый»
+                                                        </h4>
+                                                        <div class="navigation__content-inner-slider-card-percent">
+                                                            <span class="navigation__content-inner-slider-card-percent-digit">12,5%</span>
+                                                        </div>
+                                                        <div class="navigation__content-inner-slider-card-text">
+                                                            <p>
+                                                                Кредит на обеспечение исполнения обязательств по контракту в рамках 44-ФЗ, 223-ФЗ.
+                                                            </p>
+                                                            <p>
+                                                                Принятие решения в течение 8 рабочих часов!
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="navigation__content-inner-slider-card">
+                                                        <h4 class="navigation__content-inner-slider-card-title">
+                                                            Кредит «Доверительный»
+                                                        </h4>
+                                                        <div class="navigation__content-inner-slider-card-percent">
+                                                            <span class="navigation__content-inner-slider-card-percent-digit">10,2%</span>
+                                                        </div>
+                                                        <div class="navigation__content-inner-slider-card-text">
+                                                            <p>
+                                                                Программа кредитования на потребительские нужды
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="navigation__content-inner-slider-card">
+                                                        <h4 class="navigation__content-inner-slider-card-title">
+                                                            Повышены ставки по вкладам и текущим счетам
+                                                        </h4>
+                                                        <div class="navigation__content-inner-slider-card-percent">
+                                                            <span class="navigation__content-inner-slider-card-percent-digit">+0,5%</span>
+                                                        </div>
+                                                        <div class="navigation__content-inner-slider-card-text">
+                                                            <p>
+                                                                Откройте вклад в Интернет-банке или мобильном приложении
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="navigation__content-inner-slider-layer">
+                                    <div class="navigation__content-inner-slider">
+                                        <div class="navigation__content-inner-slider-nav">
+                                            <button class="navigation__content-inner-slider-arrow navigation__content-inner-slider-arrow--prev">
+                                                <svg width="28" height="46" aria-hidden="true" class="icon-arrow-left">
+                                                    <use xlink:href="#arrow-left" />
+                                                </svg>
+                                            </button>
+                                            <button class="navigation__content-inner-slider-arrow navigation__content-inner-slider-arrow--next">
+                                                <svg width="28" height="46" aria-hidden="true" class="icon-arrow-right">
+                                                    <use xlink:href="#arrow-right" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <div class="swiper-container">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <div class="navigation__content-inner-slider-card">
+                                                        <h4 class="navigation__content-inner-slider-card-title">
+                                                            Кредит «Доступный»
+                                                        </h4>
+                                                        <div class="navigation__content-inner-slider-card-percent">
+                                                            от
+                                                            <span class="navigation__content-inner-slider-card-percent-digit">
+                                                                11%
+                                                            </span>
+                                                            годовых
+                                                        </div>
+                                                        <div class="navigation__content-inner-slider-card-text">
+                                                            <p>
+                                                                Кредит для бизнеса за 1 день с минимальным пакетом документов
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="navigation__content-inner-slider-card">
+                                                        <h4 class="navigation__content-inner-slider-card-title">
+                                                            Кредит «Доверительный»
+                                                        </h4>
+                                                        <div class="navigation__content-inner-slider-card-percent">
+                                                            <span class="navigation__content-inner-slider-card-percent-digit">10,2%</span>
+                                                        </div>
+                                                        <div class="navigation__content-inner-slider-card-text">
+                                                            <p>
+                                                                Программа кредитования на потребительские нужды
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="navigation__content-inner-slider-card">
+                                                        <h4 class="navigation__content-inner-slider-card-title">
+                                                            Повышены ставки по вкладам и текущим счетам
+                                                        </h4>
+                                                        <div class="navigation__content-inner-slider-card-percent">
+                                                            <span class="navigation__content-inner-slider-card-percent-digit">+0,5%</span>
+                                                        </div>
+                                                        <div class="navigation__content-inner-slider-card-text">
+                                                            <p>
+                                                                Откройте вклад в Интернет-банке или мобильном приложении
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="swiper-container">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <div class="navigation__content-inner-slider-card">
-                                            <h4 class="navigation__content-inner-slider-card-title">
-                                                Кредит «Быстрый»
-                                            </h4>
-                                            <div class="navigation__content-inner-slider-card-percent">
-                                                12,5%
-                                            </div>
-                                            <div class="navigation__content-inner-slider-card-text">
-                                                <p>
-                                                    Кредит на обеспечение исполнения обязательств по контракту в рамках 44-ФЗ, 223-ФЗ.
-                                                </p>
-                                                <p>
-                                                    Принятие решения в течение 8 рабочих часов!
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="navigation__content-inner-slider-card">
-                                            <h4 class="navigation__content-inner-slider-card-title">
-                                                Кредит «Доверительный»
-                                            </h4>
-                                            <div class="navigation__content-inner-slider-card-percent">
-                                                10,2%
-                                            </div>
-                                            <div class="navigation__content-inner-slider-card-text">
-                                                <p>
-                                                    Программа кредитования на потребительские нужды
-                                                </p>
-                                               
+                        </div>
+                        <div class="navigation__content-right-col-menus">
+                            <button class="navigation__menus-close-btn">
+                                <svg width="34" height="34" aria-hidden="true" class="icon-cross">
+                                    <use xlink:href="#cross" />
+                                </svg>
+                            </button>
+                            <div class="navigation__content-right-col-menus-groups">
+                                <div class="navigation__content-right-col-menus-group">
+                                    <div class="navigation__content-right-col-menu-card">
+                                        <div class="navigation__content-right-col-menu-card-left-col">
+                                            <h5 class="navigation__menu-card-heading">
+                                                тарифы
+                                            </h5>
+                                            <div class="navigation__menu-links">
+                                                <a href="#" class="navigation__menu-link">Доверительный </a>
+                                                <a href="#" class="navigation__menu-link"> Кредит на большие цели </a>
+                                                <a href="#" class="navigation__menu-link"> Пенсионный </a>
+                                                <a href="#" class="navigation__menu-link"> Рефинансирование кредитов </a>
+                                                <a href="#" class="navigation__menu-link"> Потребительский классический </a>
+                                                <a href="#" class="navigation__menu-link"> До зарплаты </a>
+                                                <a href="#" class="navigation__menu-link"> Оценка залога </a>
                                             </div>
                                         </div>
+                                        <div class="navigation__content-right-col-menu-card-right-col">
+                                            <h5 class="navigation__menu-card-heading">
+                                                полезное
+                                            </h5>
+                                            <div class="navigation__menu-links">
+                                                <a href="#" class="navigation__menu-link">Оплатить кредит </a>
+                                                <a href="#" class="navigation__menu-link"> Подобрать кредит </a>
+                                                <a href="#" class="navigation__menu-link"> Отправить заявку </a>
+                                            </div>
+                                            <h5 class="navigation__menu-card-heading">
+                                                нужен кредит?
+                                            </h5>
+                                            <a href="#" class="navigation__menu-large-link">
+                                                кредитный калькулятор
+                                            </a>
+                                        </div>
                                     </div>
-                                    <div class="swiper-slide">
-                                        <div class="navigation__content-inner-slider-card">
-                                            <h4 class="navigation__content-inner-slider-card-title">
-                                                Повышены ставки по вкладам и текущим счетам
-                                            </h4>
-                                            <div class="navigation__content-inner-slider-card-percent">
-                                                +0,5%
+                                    <div class="navigation__content-right-col-menu-card">
+                                        <div class="navigation__content-right-col-menu-card-left-col">
+                                            <h5 class="navigation__menu-card-heading">
+                                                тарифы
+                                            </h5>
+                                            <div class="navigation__menu-links">
+                                                <a href="#" class="navigation__menu-link">Доверительный </a>
+                                                <a href="#" class="navigation__menu-link"> Вклад на большие цели </a>
+                                                <a href="#" class="navigation__menu-link"> Пенсионный </a>
+
+                                                <a href="#" class="navigation__menu-link"> Потребительский классический </a>
                                             </div>
-                                            <div class="navigation__content-inner-slider-card-text">
-                                                <p>
-                                                    Откройте вклад в Интернет-банке или мобильном приложении
-                                                </p>
+                                        </div>
+                                        <div class="navigation__content-right-col-menu-card-right-col">
+                                            <h5 class="navigation__menu-card-heading">
+                                                полезное
+                                            </h5>
+                                            <div class="navigation__menu-links">
+                                                <a href="#" class="navigation__menu-link">Внести деньги на вклад </a>
+                                                <a href="#" class="navigation__menu-link"> Подобрать вклад </a>
+                                                <a href="#" class="navigation__menu-link"> Отправить заявку </a>
                                             </div>
+                                            <h5 class="navigation__menu-card-heading">
+                                                нужен кредит?
+                                            </h5>
+                                            <a href="#" class="navigation__menu-large-link">
+                                                кредитный калькулятор
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="navigation__content-right-col-menu-card">
+                                        <div class="navigation__content-right-col-menu-card-left-col">
+                                            <h5 class="navigation__menu-card-heading">
+                                                тарифы
+                                            </h5>
+                                            <div class="navigation__menu-links">
+                                                <a href="#" class="navigation__menu-link">Доверительный </a>
+                                                <a href="#" class="navigation__menu-link"> Вклад на большие цели </a>
+                                                <a href="#" class="navigation__menu-link"> Пенсионный </a>
+
+                                                <a href="#" class="navigation__menu-link"> Потребительский классический </a>
+                                            </div>
+                                        </div>
+                                        <div class="navigation__content-right-col-menu-card-right-col">
+                                            <h5 class="navigation__menu-card-heading">
+                                                полезное
+                                            </h5>
+                                            <div class="navigation__menu-links">
+                                                <a href="#" class="navigation__menu-link">Внести деньги на вклад </a>
+                                                <a href="#" class="navigation__menu-link"> Подобрать вклад </a>
+                                                <a href="#" class="navigation__menu-link"> Отправить заявку </a>
+                                            </div>
+                                            <h5 class="navigation__menu-card-heading">
+                                                нужен кредит?
+                                            </h5>
+                                            <a href="#" class="navigation__menu-large-link">
+                                                кредитный калькулятор
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="navigation__content-right-col-menu-card">
+                                        <div class="navigation__content-right-col-menu-card-left-col">
+                                            <h5 class="navigation__menu-card-heading">
+                                                тарифы
+                                            </h5>
+                                            <div class="navigation__menu-links">
+                                                <a href="#" class="navigation__menu-link">Доверительный </a>
+                                                <a href="#" class="navigation__menu-link"> Вклад на большие цели </a>
+                                                <a href="#" class="navigation__menu-link"> Пенсионный </a>
+
+                                                <a href="#" class="navigation__menu-link"> Потребительский классический </a>
+                                            </div>
+                                        </div>
+                                        <div class="navigation__content-right-col-menu-card-right-col">
+                                            <h5 class="navigation__menu-card-heading">
+                                                полезное
+                                            </h5>
+                                            <div class="navigation__menu-links">
+                                                <a href="#" class="navigation__menu-link">Внести деньги на вклад </a>
+                                                <a href="#" class="navigation__menu-link"> Подобрать вклад </a>
+                                                <a href="#" class="navigation__menu-link"> Отправить заявку </a>
+                                            </div>
+                                            <h5 class="navigation__menu-card-heading">
+                                                нужен кредит?
+                                            </h5>
+                                            <a href="#" class="navigation__menu-large-link">
+                                                кредитный калькулятор
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="navigation__content-right-col-menu-card">
+                                        <div class="navigation__content-right-col-menu-card-left-col">
+                                            <h5 class="navigation__menu-card-heading">
+                                                тарифы
+                                            </h5>
+                                            <div class="navigation__menu-links">
+                                                <a href="#" class="navigation__menu-link">Доверительный </a>
+                                                <a href="#" class="navigation__menu-link"> Вклад на большие цели </a>
+                                                <a href="#" class="navigation__menu-link"> Пенсионный </a>
+
+                                                <a href="#" class="navigation__menu-link"> Потребительский классический </a>
+                                            </div>
+                                        </div>
+                                        <div class="navigation__content-right-col-menu-card-right-col">
+                                            <h5 class="navigation__menu-card-heading">
+                                                полезное
+                                            </h5>
+                                            <div class="navigation__menu-links">
+                                                <a href="#" class="navigation__menu-link">Внести деньги на вклад </a>
+                                                <a href="#" class="navigation__menu-link"> Подобрать вклад </a>
+                                                <a href="#" class="navigation__menu-link"> Отправить заявку </a>
+                                            </div>
+                                            <h5 class="navigation__menu-card-heading">
+                                                нужен кредит?
+                                            </h5>
+                                            <a href="#" class="navigation__menu-large-link">
+                                                кредитный калькулятор
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="navigation__content-right-col-menu-card">
+                                        <div class="navigation__content-right-col-menu-card-left-col">
+                                            <h5 class="navigation__menu-card-heading">
+                                                тарифы
+                                            </h5>
+                                            <div class="navigation__menu-links">
+                                                <a href="#" class="navigation__menu-link">Доверительный </a>
+                                                <a href="#" class="navigation__menu-link"> Вклад на большие цели </a>
+                                                <a href="#" class="navigation__menu-link"> Пенсионный </a>
+
+                                                <a href="#" class="navigation__menu-link"> Потребительский классический </a>
+                                            </div>
+                                        </div>
+                                        <div class="navigation__content-right-col-menu-card-right-col">
+                                            <h5 class="navigation__menu-card-heading">
+                                                полезное
+                                            </h5>
+                                            <div class="navigation__menu-links">
+                                                <a href="#" class="navigation__menu-link">Внести деньги на вклад </a>
+                                                <a href="#" class="navigation__menu-link"> Подобрать вклад </a>
+                                                <a href="#" class="navigation__menu-link"> Отправить заявку </a>
+                                            </div>
+                                            <h5 class="navigation__menu-card-heading">
+                                                нужен кредит?
+                                            </h5>
+                                            <a href="#" class="navigation__menu-large-link">
+                                                кредитный калькулятор
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="navigation__content-right-col-menu-card">
+                                        <div class="navigation__content-right-col-menu-card-left-col">
+                                            <h5 class="navigation__menu-card-heading">
+                                                тарифы
+                                            </h5>
+                                            <div class="navigation__menu-links">
+                                                <a href="#" class="navigation__menu-link">Доверительный </a>
+                                                <a href="#" class="navigation__menu-link"> Вклад на большие цели </a>
+                                                <a href="#" class="navigation__menu-link"> Пенсионный </a>
+
+                                                <a href="#" class="navigation__menu-link"> Потребительский классический </a>
+                                            </div>
+                                        </div>
+                                        <div class="navigation__content-right-col-menu-card-right-col">
+                                            <h5 class="navigation__menu-card-heading">
+                                                полезное
+                                            </h5>
+                                            <div class="navigation__menu-links">
+                                                <a href="#" class="navigation__menu-link">Внести деньги на вклад </a>
+                                                <a href="#" class="navigation__menu-link"> Подобрать вклад </a>
+                                                <a href="#" class="navigation__menu-link"> Отправить заявку </a>
+                                            </div>
+                                            <h5 class="navigation__menu-card-heading">
+                                                нужен кредит?
+                                            </h5>
+                                            <a href="#" class="navigation__menu-large-link">
+                                                кредитный калькулятор
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="navigation__content-right-col-menu-card">
+                                        <div class="navigation__content-right-col-menu-card-left-col">
+                                            <h5 class="navigation__menu-card-heading">
+                                                тарифы
+                                            </h5>
+                                            <div class="navigation__menu-links">
+                                                <a href="#" class="navigation__menu-link">Доверительный </a>
+                                                <a href="#" class="navigation__menu-link"> Вклад на большие цели </a>
+                                                <a href="#" class="navigation__menu-link"> Пенсионный </a>
+
+                                                <a href="#" class="navigation__menu-link"> Потребительский классический </a>
+                                            </div>
+                                        </div>
+                                        <div class="navigation__content-right-col-menu-card-right-col">
+                                            <h5 class="navigation__menu-card-heading">
+                                                полезное
+                                            </h5>
+                                            <div class="navigation__menu-links">
+                                                <a href="#" class="navigation__menu-link">Внести деньги на вклад </a>
+                                                <a href="#" class="navigation__menu-link"> Подобрать вклад </a>
+                                                <a href="#" class="navigation__menu-link"> Отправить заявку </a>
+                                            </div>
+                                            <h5 class="navigation__menu-card-heading">
+                                                нужен кредит?
+                                            </h5>
+                                            <a href="#" class="navigation__menu-large-link">
+                                                кредитный калькулятор
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="navigation__content-right-col-menus-group">
+                                    <div class="navigation__content-right-col-menu-card">
+                                        <div class="navigation__content-right-col-menu-card-left-col">
+                                            <h5 class="navigation__menu-card-heading">
+                                                тарифы для бизнеса
+                                            </h5>
+                                            <div class="navigation__menu-links">
+                                                <a href="#" class="navigation__menu-link">Доверительный </a>
+                                                <a href="#" class="navigation__menu-link"> Вклад на большие цели </a>
+                                                <a href="#" class="navigation__menu-link"> Пенсионный </a>
+
+                                                <a href="#" class="navigation__menu-link"> Потребительский классический </a>
+                                            </div>
+                                        </div>
+                                        <div class="navigation__content-right-col-menu-card-right-col">
+                                            <h5 class="navigation__menu-card-heading">
+                                                полезное
+                                            </h5>
+                                            <div class="navigation__menu-links">
+                                                <a href="#" class="navigation__menu-link">Внести деньги на вклад </a>
+                                                <a href="#" class="navigation__menu-link"> Подобрать вклад </a>
+                                                <a href="#" class="navigation__menu-link"> Отправить заявку </a>
+                                            </div>
+                                            <h5 class="navigation__menu-card-heading">
+                                                нужен кредит?
+                                            </h5>
+                                            <a href="#" class="navigation__menu-large-link">
+                                                кредитный калькулятор
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="navigation__content-right-col-menu-card">
+                                        <div class="navigation__content-right-col-menu-card-left-col">
+                                            <h5 class="navigation__menu-card-heading">
+                                                тарифы для бизнеса
+                                            </h5>
+                                            <div class="navigation__menu-links">
+                                                <a href="#" class="navigation__menu-link">Доверительный </a>
+                                                <a href="#" class="navigation__menu-link"> Вклад на большие цели </a>
+                                                <a href="#" class="navigation__menu-link"> Пенсионный </a>
+
+                                                <a href="#" class="navigation__menu-link"> Потребительский классический </a>
+                                            </div>
+                                        </div>
+                                        <div class="navigation__content-right-col-menu-card-right-col">
+                                            <h5 class="navigation__menu-card-heading">
+                                                полезное
+                                            </h5>
+                                            <div class="navigation__menu-links">
+                                                <a href="#" class="navigation__menu-link">Внести деньги на вклад </a>
+                                                <a href="#" class="navigation__menu-link"> Подобрать вклад </a>
+                                                <a href="#" class="navigation__menu-link"> Отправить заявку </a>
+                                            </div>
+                                            <h5 class="navigation__menu-card-heading">
+                                                нужен кредит?
+                                            </h5>
+                                            <a href="#" class="navigation__menu-large-link">
+                                                кредитный калькулятор
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="navigation__content-right-col-menu-card">
+                                        <div class="navigation__content-right-col-menu-card-left-col">
+                                            <h5 class="navigation__menu-card-heading">
+                                                тарифы для бизнеса
+                                            </h5>
+                                            <div class="navigation__menu-links">
+                                                <a href="#" class="navigation__menu-link">Доверительный </a>
+                                                <a href="#" class="navigation__menu-link"> Вклад на большие цели </a>
+                                                <a href="#" class="navigation__menu-link"> Пенсионный </a>
+
+                                                <a href="#" class="navigation__menu-link"> Потребительский классический </a>
+                                            </div>
+                                        </div>
+                                        <div class="navigation__content-right-col-menu-card-right-col">
+                                            <h5 class="navigation__menu-card-heading">
+                                                полезное
+                                            </h5>
+                                            <div class="navigation__menu-links">
+                                                <a href="#" class="navigation__menu-link">Внести деньги на вклад </a>
+                                                <a href="#" class="navigation__menu-link"> Подобрать вклад </a>
+                                                <a href="#" class="navigation__menu-link"> Отправить заявку </a>
+                                            </div>
+                                            <h5 class="navigation__menu-card-heading">
+                                                нужен кредит?
+                                            </h5>
+                                            <a href="#" class="navigation__menu-large-link">
+                                                кредитный калькулятор
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="navigation__content-right-col-menu-card">
+                                        <div class="navigation__content-right-col-menu-card-left-col">
+                                            <h5 class="navigation__menu-card-heading">
+                                                тарифы для бизнеса
+                                            </h5>
+                                            <div class="navigation__menu-links">
+                                                <a href="#" class="navigation__menu-link">Доверительный </a>
+                                                <a href="#" class="navigation__menu-link"> Вклад на большие цели </a>
+                                                <a href="#" class="navigation__menu-link"> Пенсионный </a>
+
+                                                <a href="#" class="navigation__menu-link"> Потребительский классический </a>
+                                            </div>
+                                        </div>
+                                        <div class="navigation__content-right-col-menu-card-right-col">
+                                            <h5 class="navigation__menu-card-heading">
+                                                полезное
+                                            </h5>
+                                            <div class="navigation__menu-links">
+                                                <a href="#" class="navigation__menu-link">Внести деньги на вклад </a>
+                                                <a href="#" class="navigation__menu-link"> Подобрать вклад </a>
+                                                <a href="#" class="navigation__menu-link"> Отправить заявку </a>
+                                            </div>
+                                            <h5 class="navigation__menu-card-heading">
+                                                нужен кредит?
+                                            </h5>
+                                            <a href="#" class="navigation__menu-large-link">
+                                                кредитный калькулятор
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="navigation__content-right-col-menu-card">
+                                        <div class="navigation__content-right-col-menu-card-left-col">
+                                            <h5 class="navigation__menu-card-heading">
+                                                тарифы для бизнеса
+                                            </h5>
+                                            <div class="navigation__menu-links">
+                                                <a href="#" class="navigation__menu-link">Доверительный </a>
+                                                <a href="#" class="navigation__menu-link"> Вклад на большие цели </a>
+                                                <a href="#" class="navigation__menu-link"> Пенсионный </a>
+
+                                                <a href="#" class="navigation__menu-link"> Потребительский классический </a>
+                                            </div>
+                                        </div>
+                                        <div class="navigation__content-right-col-menu-card-right-col">
+                                            <h5 class="navigation__menu-card-heading">
+                                                полезное
+                                            </h5>
+                                            <div class="navigation__menu-links">
+                                                <a href="#" class="navigation__menu-link">Внести деньги на вклад </a>
+                                                <a href="#" class="navigation__menu-link"> Подобрать вклад </a>
+                                                <a href="#" class="navigation__menu-link"> Отправить заявку </a>
+                                            </div>
+                                            <h5 class="navigation__menu-card-heading">
+                                                нужен кредит?
+                                            </h5>
+                                            <a href="#" class="navigation__menu-large-link">
+                                                кредитный калькулятор
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="navigation__content-right-col-menu-card">
+                                        <div class="navigation__content-right-col-menu-card-left-col">
+                                            <h5 class="navigation__menu-card-heading">
+                                                тарифы для бизнеса
+                                            </h5>
+                                            <div class="navigation__menu-links">
+                                                <a href="#" class="navigation__menu-link">Доверительный </a>
+                                                <a href="#" class="navigation__menu-link"> Вклад на большие цели </a>
+                                                <a href="#" class="navigation__menu-link"> Пенсионный </a>
+
+                                                <a href="#" class="navigation__menu-link"> Потребительский классический </a>
+                                            </div>
+                                        </div>
+                                        <div class="navigation__content-right-col-menu-card-right-col">
+                                            <h5 class="navigation__menu-card-heading">
+                                                полезное
+                                            </h5>
+                                            <div class="navigation__menu-links">
+                                                <a href="#" class="navigation__menu-link">Внести деньги на вклад </a>
+                                                <a href="#" class="navigation__menu-link"> Подобрать вклад </a>
+                                                <a href="#" class="navigation__menu-link"> Отправить заявку </a>
+                                            </div>
+                                            <h5 class="navigation__menu-card-heading">
+                                                нужен кредит?
+                                            </h5>
+                                            <a href="#" class="navigation__menu-large-link">
+                                                кредитный калькулятор
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -197,7 +712,6 @@
                     </div>
                 </div>
             </div>
-            <div class="navigation__content-layer"></div>
         </div>
     </div>
 </section>
