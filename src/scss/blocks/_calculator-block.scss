@@ -272,6 +272,7 @@
     line-height: 120%;
     color: white;
     padding: 2.4rem 2.6rem;
+    transition: background-color .3s;
     &:link,
     &:visited {
         color: white;
@@ -288,6 +289,11 @@
             width: 0.7rem;
             height: 1.2rem;
         }
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        background-color: var(--secondary-color);
     }
 
     @include breakpoint(mobile) {
@@ -307,9 +313,15 @@
     line-height: 120%;
     text-transform: uppercase;
     padding: 2.4rem 2.6rem;
+    transition: color .3s;
     &:link,
     &:visited {
         color: var(--primary-color);
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        color: var(--secondary-color);
     }
 
     @include breakpoint(mobile) {

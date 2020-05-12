@@ -199,19 +199,18 @@
                     </div>
                     <div class="navigation__backplate"></div>
                     <div class="container">
-                        <div class="navigation__wrapper">
-                            <div class="navigation__logo-bar">
-                                <a href="index.html" class="navigation__logo">
-                                    <img src="img/logo.png" alt="" class="navigation__logo-image" width="245" />
-                                </a>
-                            </div>
+                        <div class="navigation__logo-bar">
+                            <a href="index.html" class="navigation__logo">
+                                <img src="img/logo.png" alt="" class="navigation__logo-image" width="245" />
+                            </a>
                         </div>
+
                         <div class="navigation__universal-toggle">
                             <div class="navigation__universal-toggle-select-category active">
                                 <a href="#" class="navigation__universal-toggle-select-category-link active">Частным лицам</a>
                                 <a href="#" class="navigation__universal-toggle-select-category-link">Бизнесу</a>
                             </div>
-                            <form action="/" method="GET" class="navigation__universal-toggle-search-form">
+                            <form action="/" method="GET" class="navigation__universal-toggle-search-form" autocomplete="off">
                                 <input type="search" name="q" class="navigation__universal-toggle-search-form-input" placeholder="Что ищете?" />
                             </form>
                             <button class="navigation__universal-search-close">
@@ -287,18 +286,6 @@
                                             <div class="navigation__content-inner-slider-layers">
                                                 <div class="navigation__content-inner-slider-layer">
                                                     <div class="navigation__content-inner-slider">
-                                                        <div class="navigation__content-inner-slider-nav">
-                                                            <button class="navigation__content-inner-slider-arrow navigation__content-inner-slider-arrow--prev">
-                                                                <svg width="28" height="46" aria-hidden="true" class="icon-arrow-left">
-                                                                    <use xlink:href="#arrow-left" />
-                                                                </svg>
-                                                            </button>
-                                                            <button class="navigation__content-inner-slider-arrow navigation__content-inner-slider-arrow--next">
-                                                                <svg width="28" height="46" aria-hidden="true" class="icon-arrow-right">
-                                                                    <use xlink:href="#arrow-right" />
-                                                                </svg>
-                                                            </button>
-                                                        </div>
                                                         <div class="swiper-container">
                                                             <div class="swiper-wrapper">
                                                                 <div class="swiper-slide">
@@ -351,22 +338,59 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                </div>
-                                                <div class="navigation__content-inner-slider-layer">
-                                                    <div class="navigation__content-inner-slider">
+                                                        <div class="navigation__content-btn-slider">
+                                                            <div class="swiper-container">
+                                                                <div class="swiper-wrapper">
+                                                                    <div class="swiper-slide">
+                                                                        <div class="navigation__content-btn-slider-card">
+                                                                            <a href="#" class="navigation__content-inner-slider-link"
+                                                                                >Узнать подробнее
+                                                                                <svg width="8" height="14" aria-hidden="true" class="icon-arrow-right">
+                                                                                    <use xlink:href="#arrow-right" />
+                                                                                </svg>
+                                                                            </a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="swiper-slide">
+                                                                        <div class="navigation__content-btn-slider-card">
+                                                                            <a href="#" class="navigation__content-inner-slider-link"
+                                                                                >Получить
+                                                                                <svg width="8" height="14" aria-hidden="true" class="icon-arrow-right">
+                                                                                    <use xlink:href="#arrow-right" />
+                                                                                </svg>
+                                                                            </a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="swiper-slide">
+                                                                        <div class="navigation__content-btn-slider-card">
+                                                                            <a href="#" class="navigation__content-inner-slider-link"
+                                                                                >Узнать подробнее
+                                                                                <svg width="8" height="14" aria-hidden="true" class="icon-arrow-right">
+                                                                                    <use xlink:href="#arrow-right" />
+                                                                                </svg>
+                                                                            </a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                         <div class="navigation__content-inner-slider-nav">
                                                             <button class="navigation__content-inner-slider-arrow navigation__content-inner-slider-arrow--prev">
                                                                 <svg width="28" height="46" aria-hidden="true" class="icon-arrow-left">
                                                                     <use xlink:href="#arrow-left" />
                                                                 </svg>
                                                             </button>
+                                                            <div class="navigation__content-inner-slider-pagination"></div>
                                                             <button class="navigation__content-inner-slider-arrow navigation__content-inner-slider-arrow--next">
                                                                 <svg width="28" height="46" aria-hidden="true" class="icon-arrow-right">
                                                                     <use xlink:href="#arrow-right" />
                                                                 </svg>
                                                             </button>
                                                         </div>
+                                                    </div>
+                                                </div>
+                                                <div class="navigation__content-inner-slider-layer">
+                                                    <div class="navigation__content-inner-slider">
                                                         <div class="swiper-container">
                                                             <div class="swiper-wrapper">
                                                                 <div class="swiper-slide">
@@ -419,6 +443,55 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
+                                                        </div>
+                                                        <div class="navigation__content-btn-slider">
+                                                            <div class="swiper-container">
+                                                                <div class="swiper-wrapper">
+                                                                    <div class="swiper-slide">
+                                                                        <div class="navigation__content-btn-slider-card">
+                                                                            <a href="#" class="navigation__content-inner-slider-link"
+                                                                                >Узнать подробнее
+                                                                                <svg width="8" height="14" aria-hidden="true" class="icon-arrow-right">
+                                                                                    <use xlink:href="#arrow-right" />
+                                                                                </svg>
+                                                                            </a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="swiper-slide">
+                                                                        <div class="navigation__content-btn-slider-card">
+                                                                            <a href="#" class="navigation__content-inner-slider-link"
+                                                                                >Узнать подробнее
+                                                                                <svg width="8" height="14" aria-hidden="true" class="icon-arrow-right">
+                                                                                    <use xlink:href="#arrow-right" />
+                                                                                </svg>
+                                                                            </a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="swiper-slide">
+                                                                        <div class="navigation__content-btn-slider-card">
+                                                                            <a href="#" class="navigation__content-inner-slider-link"
+                                                                                >Узнать подробнее
+                                                                                <svg width="8" height="14" aria-hidden="true" class="icon-arrow-right">
+                                                                                    <use xlink:href="#arrow-right" />
+                                                                                </svg>
+                                                                            </a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="navigation__content-inner-slider-nav">
+                                                            <button class="navigation__content-inner-slider-arrow navigation__content-inner-slider-arrow--prev">
+                                                                <svg width="28" height="46" aria-hidden="true" class="icon-arrow-left">
+                                                                    <use xlink:href="#arrow-left" />
+                                                                </svg>
+                                                            </button>
+                                                            <div class="navigation__content-inner-slider-pagination"></div>
+                                                            <button class="navigation__content-inner-slider-arrow navigation__content-inner-slider-arrow--next">
+                                                                <svg width="28" height="46" aria-hidden="true" class="icon-arrow-right">
+                                                                    <use xlink:href="#arrow-right" />
+                                                                </svg>
+                                                            </button>
                                                         </div>
                                                     </div>
                                                 </div>

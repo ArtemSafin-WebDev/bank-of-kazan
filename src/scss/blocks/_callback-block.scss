@@ -56,10 +56,11 @@
     margin-right: 2.4rem;
     flex-shrink: 0;
     @include breakpoint(mobile) {
-        max-width: auto;
+        max-width: none;
         margin: 0;
         margin-bottom: 1.6rem;
         flex-shrink: 1;
+
     }
 }
 

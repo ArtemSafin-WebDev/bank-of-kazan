@@ -23,6 +23,7 @@ export default function() {
         const innerMenusLayer = element.querySelector('.navigation__content-right-col-menus');
         const navMenuGroups = Array.from(element.querySelectorAll('.navigation__content-right-col-menus-group'));
         const menusCloseBtn = element.querySelector('.navigation__menus-close-btn');
+        const btnSliderContainers = Array.from(element.querySelectorAll('.navigation__content-btn-slider .swiper-container'));
 
         let forCompanies = false;
         let searchOpen = false;
@@ -32,30 +33,30 @@ export default function() {
             innerSliders.forEach((sliderWrapper, sliderIndex) => {
                 const container = sliderWrapper.querySelector('.swiper-container');
                 const bgSliderContainer = bgSliders[sliderIndex];
+                const btnSliderContainer = btnSliderContainers[sliderIndex];
 
                 const innerSlider = new Swiper(container, {
                     slidesPerView: 1,
                     watchOverflow: true,
                     autoHeight: false,
                     effect: 'fade',
-                    allowTouchMove: false,
+                    allowTouchMove: window.matchMedia('(max-width: 767px)').matches ? true : false,
                     speed: 1000,
+                    followFinger: false,
                     fadeEffect: {
                         crossFade: true
                     },
                     navigation: {
                         nextEl: sliderWrapper.querySelector('.navigation__content-inner-slider-arrow--next'),
                         prevEl: sliderWrapper.querySelector('.navigation__content-inner-slider-arrow--prev')
+                    },
+                    pagination: {
+                        el: sliderWrapper.querySelector('.navigation__content-inner-slider-pagination'),
+                        type: 'bullets'
                     }
                 });
 
-                console.log({
-                    nextEl: sliderWrapper.querySelector('.navigation__content-inner-slider-arrow--next'),
-                    prevEl: sliderWrapper.querySelector('.navigation__content-inner-slider-arrow--prev')
-                });
-
                 const bgSlider = new Swiper(bgSliderContainer, {
-                    slidesPerView: 1,
                     slidesPerView: 1,
                     effect: 'fade',
                     speed: 1800,
@@ -65,8 +66,19 @@ export default function() {
                     }
                 });
 
-                bgSlider.controller.control = innerSlider;
+                const btnSlider = new Swiper(btnSliderContainer, {
+                    slidesPerView: 1,
+                    effect: 'fade',
+                    speed: 300,
+                    allowTouchMove: false,
+                    fadeEffect: {
+                        crossFade: true
+                    }
+                });
+
+                bgSlider.controller.control = btnSlider;
                 innerSlider.controller.control = bgSlider;
+                // btnSlider.controller.control = innerSlider;
             });
         }
 
@@ -90,7 +102,7 @@ export default function() {
                 navLinks.forEach((link, linkIndex) => {
                     link.addEventListener('click', event => {
                         event.preventDefault();
-                     
+
                         allNavLinks.forEach(link => link.classList.remove('active'));
                         link.classList.add('active');
                         showNavigationMenuTab(linkIndex);
@@ -105,7 +117,7 @@ export default function() {
             innerMenusLayer.classList.add('active');
             menusCloseBtn.classList.add('active');
             element.classList.add('nav-menu-open');
-          
+
             allNavigationTabs.forEach(element => element.classList.remove('active'));
             const currentMenuGroup = navMenuGroups[activeCategoryIndex];
             const cardsInGroup = Array.from(currentMenuGroup.querySelectorAll('.navigation__content-right-col-menu-card'));
@@ -114,8 +126,7 @@ export default function() {
                 if (cardIndex === index) {
                     card.classList.add('active');
                 }
-            })
-        
+            });
         }
 
         function closeNavigationMenu() {
@@ -124,7 +135,6 @@ export default function() {
             innerMenusLayer.classList.remove('active');
             menusCloseBtn.classList.remove('active');
 
-           
             allNavLinks.forEach(link => link.classList.remove('active'));
             element.classList.remove('nav-menu-open');
 
