@@ -1,16 +1,28 @@
 .tabs-nav {
     display: flex;
     align-items: center;
+    @include breakpoint(mobile) {
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        margin: -1rem calc(-1 * var(--content-padding));
+        padding: 1rem var(--content-padding);
+        &::after {
+            content: '';
+            flex-shrink: 0;
+            height: 1px;
+            width: 1px;
+            
+        }
+    }
 }
-
 
 .tabs-nav__link {
     font-weight: 500;
     font-size: 2.4rem;
     line-height: 1.2;
-    padding: .8rem  1.6rem;
+    padding: 0.8rem 1.6rem;
     border-radius: 1rem;
-    transition: background-color .2s, color .2s;
+    transition: background-color 0.2s, color 0.2s;
     white-space: nowrap;
     flex-shrink: 0;
     margin-right: 2rem;
@@ -19,10 +31,18 @@
         color: inherit;
     }
 
-
     &.active,
     &:hover {
-        background: #ECF3DC;
+        background: #ecf3dc;
         color: var(--primary-color);
+    }
+
+    @include breakpoint(mobile) {
+        font-weight: 500;
+        font-size: 1.4rem;
+        line-height: 120%;
+        padding: .6rem 1rem;
+        border-radius: .4rem;
+        margin-right: .5rem;
     }
 }

@@ -8,11 +8,21 @@ export default function() {
 
         new Swiper(container, {
             slidesPerView: 'auto',
-            spaceBetween: 60,
+            spaceBetween: 20,
             watchOverflow: true,
             navigation: {
                 nextEl: element.querySelector('.producsts__slider-arrow--next'),
                 prevEl: element.querySelector('.producsts__slider-arrow--prev')
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 'auto',
+                    spaceBetween: 40
+                },
+                1025: {
+                    slidesPerView: 'auto',
+                    spaceBetween: 60
+                }
             }
         });
     });

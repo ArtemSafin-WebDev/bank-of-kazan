@@ -1,6 +1,11 @@
 .products {
     padding-top: 8.5rem;
     padding-bottom: 4rem;
+
+    @include breakpoint(mobile) {
+        padding: 3rem 0;
+        padding-bottom: 1.5rem;
+    }
 }
 
 .products__heading {
@@ -8,6 +13,12 @@
     font-size: 3.6rem;
     line-height: 120%;
     margin-bottom: 5.5rem;
+    @include breakpoint(mobile) {
+        font-weight: 500;
+        font-size: 2rem;
+        line-height: 120%;
+        margin-bottom: 1.6rem;
+    }
 }
 
 .products__top-row {
@@ -15,6 +26,13 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 6rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 2.7rem;
+        flex-direction: column;
+        justify-content: initial;
+        align-items: initial;
+    }
 }
 
 .products__all-products-link {
@@ -24,20 +42,19 @@
     line-height: 1.2;
     display: inline-flex;
     align-items: center;
-    transition: color .2s;
+    transition: color 0.2s;
     svg {
         fill: var(--primary-color);
         width: 2.4rem;
         height: 2.4rem;
         flex-shrink: 0;
         margin-right: 2rem;
-        transition: fill .2s;
+        transition: fill 0.2s;
     }
     &:link,
     &:visited {
         color: var(--primary-color);
     }
-
 
     .no-touch &:hover,
     .touch &:active {
@@ -45,6 +62,10 @@
         svg {
             fill: var(--secondary-color);
         }
+    }
+
+    @include breakpoint(mobile) {
+        display: none;
     }
 }
 
@@ -59,9 +80,12 @@
         display: flex;
         flex-direction: column;
         width: 51rem;
+
+        @include breakpoint(mobile) {
+            width: 25.8rem;
+        }
     }
 }
-
 
 .producsts__slider-arrow {
     display: flex;
@@ -79,7 +103,7 @@
     position: absolute;
     top: 12.4rem;
     z-index: 50;
-    transition: all .2s;
+    transition: all 0.2s;
     margin-left: 1rem;
     svg {
         fill: white;
@@ -103,7 +127,6 @@
         }
     }
 
-
     &:not(.swiper-button-disabled) {
         &:hover {
             background-color: var(--primary-color);
@@ -113,7 +136,11 @@
     &.swiper-button-disabled {
         opacity: 0;
         visibility: hidden;
-        transition: opacity .2s, visibility 0s linear .2s;
+        transition: opacity 0.2s, visibility 0s linear 0.2s;
+    }
+
+    @include breakpoint(mobile) {
+        display: none;
     }
 }
 
@@ -135,11 +162,9 @@
             height: 100%;
         }
 
-
         .products__card-prices-card-small-text {
-            color: rgba(white, .8);
+            color: rgba(white, 0.8);
         }
-
 
         .products__card-link-text {
             color: white;
@@ -149,6 +174,10 @@
                 fill: white;
             }
         }
+    }
+
+    @include breakpoint(mobile) {
+        padding: 2rem;
     }
 }
 
@@ -163,6 +192,12 @@
     border: 1px solid rgba(white, 0.4);
     color: white;
     align-self: flex-start;
+    @include breakpoint(mobile) {
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 120%;
+        padding: 0.6rem 0.9rem;
+    }
 }
 
 .products__card-image-container {
@@ -174,8 +209,12 @@
     border-radius: 1rem;
     overflow: hidden;
     z-index: -1;
-    transition: height .4s ease-out;
+    transition: height 0.4s ease-out;
     will-change: height;
+
+    @include breakpoint(mobile) {
+        height: 17.2rem;
+    }
 }
 
 .products__card-image {
@@ -194,24 +233,41 @@
     color: white;
     margin-top: 11.5rem;
     min-height: 8.6rem;
+    @include breakpoint(mobile) {
+        font-weight: 500;
+        font-size: 2rem;
+        line-height: 120%;
+        margin-top: 6.2rem;
+        min-height: 4.8rem;
+    }
 }
 
 .products__card-text-content {
     margin-top: 7.8rem;
     font-size: 2rem;
     line-height: 130%;
-    transition: color .4s;
+    transition: color 0.4s;
+    @include breakpoint(mobile) {
+        margin-top: 4rem;
+        font-size: 1.2rem;
+        line-height: 130%;
+    }
 }
-
 
 .products__card-prices {
     margin-top: 3.5rem;
+    @include breakpoint(mobile) {
+        margin-top: 2rem;
+    }
 }
 
 .products__card-prices-items {
     display: flex;
     flex-wrap: wrap;
     margin: -1.8rem;
+    @include breakpoint(mobile) {
+        margin: -1rem;
+    }
 }
 
 .products__card-prices-item {
@@ -219,13 +275,23 @@
     padding: 1.8rem;
     display: flex;
     flex-direction: column;
+    @include breakpoint(mobile) {
+        padding: 1rem;
+    }
 }
 
 .products__card-prices-card {
     border-top: 0.2rem solid var(--primary-color);
     padding-top: 1.2rem;
     padding-bottom: 1.2rem;
-    transition: color .4s;
+    transition: color 0.4s;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    @include breakpoint(mobile) {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
 }
 
 .products__card-prices-card-small-text {
@@ -233,13 +299,23 @@
     font-size: 1.6rem;
     line-height: 130%;
     margin-bottom: 0.5rem;
-    transition: color .4s;
+    transition: color 0.4s;
+    @include breakpoint(mobile) {
+        font-size: 1.2rem;
+        line-height: 130%;
+    }
 }
 
 .products__card-prices-card-large-text {
     font-weight: 500;
     font-size: 2.6rem;
     line-height: 120%;
+    margin-top: auto;
+    @include breakpoint(mobile) {
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 120%;
+    }
 }
 
 .products__card-link-text {
@@ -248,24 +324,37 @@
     padding: 2.4rem 2.8rem;
     background-color: #ecf3dc;
     color: var(--primary-color);
-    border-radius: .4rem;
+    border-radius: 0.4rem;
     font-weight: 500;
     font-size: 1.6rem;
     text-transform: uppercase;
     line-height: 120%;
     margin-top: 3rem;
     margin-left: auto;
-    transition: background-color .4s, color .4s;
+    transition: background-color 0.4s, color 0.4s;
     svg {
         width: 0.9rem;
         height: 1.4rem;
         flex-shrink: 0;
         fill: var(--primary-color);
         margin-left: 2rem;
-        transition: fill .4s;
+        transition: fill 0.4s;
+        @include breakpoint(mobile) {
+            width: 0.7rem;
+            height: 1.1rem;
+            margin-left: 1.5rem;
+        }
     }
     &:link,
     &:visited {
         color: var(--primary-color);
+    }
+
+    @include breakpoint(mobile) {
+        margin-top: 1rem;
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 120%;
+        padding: 1.4rem 1.6rem;
     }
 }

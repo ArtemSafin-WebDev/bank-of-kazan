@@ -1,10 +1,18 @@
 .currency {
     padding: 8.4rem;
     padding-top: 4rem;
+
+    @include breakpoint(mobile) {
+        padding: 3rem 0;
+        padding-top: 1.5rem;
+    }
 }
 
 .currency__row {
     display: flex;
+    @include breakpoint(mobile) {
+        flex-direction: column;
+    }
 }
 
 .currency__left-col {
@@ -12,6 +20,11 @@
     flex-grow: 1;
     display: flex;
     flex-direction: column;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        flex-grow: 0;
+    }
 }
 
 .currency__right-col {
@@ -20,24 +33,45 @@
     margin-left: 5rem;
     display: flex;
     flex-direction: column;
+    @include breakpoint(mobile) {
+        width: 100%;
+        flex-grow: 0;
+        margin: 0;
+        flex-shrink: 1;
+
+        display: none;
+    }
 }
 
 .currency__converter {
     padding: 5rem;
     border: 1px solid #e0e0e0;
     border-radius: 1rem;
-    
+    @include breakpoint(mobile) {
+        padding: 2rem;
+        
+    }
 }
 
 .currency__converter-row {
     display: flex;
     margin-bottom: 5.8rem;
+    @include breakpoint(mobile) {
+        flex-direction: column;
+        margin-bottom: 0;
+    }
 }
 
 .currency__converter-top-heading {
     font-weight: 500;
     font-size: 3.6rem;
     line-height: 1.2;
+    @include breakpoint(mobile) {
+        font-weight: 500;
+        font-size: 2rem;
+        line-height: 120%;
+        margin-bottom: 2rem;
+    }
 }
 
 .currency__converter-top-city {
@@ -85,16 +119,28 @@
 
 .currency__converter-nav {
     margin-left: auto;
+
+    @include breakpoint(mobile) {
+        margin-left: 0;
+    }
 }
 
 .currency__card {
     display: flex;
+    @include breakpoint(mobile) {
+        flex-direction: column;
+        margin-top: 2rem;
+    }
 }
 
 .currency__card-all-rates {
     display: flex;
     align-items: baseline;
     margin-top: 2rem;
+    @include breakpoint(mobile) {
+        margin: 0;
+        justify-content: space-between;
+    }
 }
 
 .currency__card-all-rates-remark {
@@ -102,6 +148,10 @@
     line-height: 130%;
     color: #c6c6c6;
     margin-right: 3rem;
+    @include breakpoint(mobile) {
+        font-size: 1rem;
+        line-height: 130%;
+    }
 }
 
 .currency__card-all-rates-link {
@@ -117,12 +167,19 @@
     &:hover {
         color: var(--primary-color);
     }
+
+    @include breakpoint(mobile) {
+        font-size: 1rem;
+        line-height: 130%;
+    }
 }
 
 .currency__card-rates-table-wrapper {
     table {
         border-collapse: collapse;
-
+        @include breakpoint(mobile) {
+            width: 100%;
+        }
         thead {
             th {
                 padding-bottom: 3rem;
@@ -134,6 +191,13 @@
                 vertical-align: middle;
                 .hidden {
                     @include visuallyHidden();
+                }
+
+                @include breakpoint(mobile) {
+                    font-weight: 500;
+                    font-size: 1rem;
+                    line-height: 120%;
+                    padding-bottom: 1rem;
                 }
             }
         }
@@ -150,6 +214,9 @@
                 .currency-name {
                     color: #c6c6c6;
                     padding-right: 3rem;
+                    @include breakpoint(mobile) {
+                        padding-right: 0;
+                    }
                 }
 
                 .rate {
@@ -163,6 +230,11 @@
                         margin-left: 1rem;
                         flex-shrink: 0;
                         transition: fill 0.2s;
+                        @include breakpoint(mobile) {
+                            width: .8rem;
+                            height: .8rem;
+                            margin-left: 0.5rem;
+                        }
                     }
 
                     &.down {
@@ -172,16 +244,37 @@
                         }
                     }
                 }
+
+                @include breakpoint(mobile) {
+                    font-weight: 500;
+                    font-size: 1.3rem;
+                    line-height: 120%;
+                    padding-right: 2rem;
+                    padding-bottom: 1.4rem;
+
+                
+                    &:last-child {
+                        padding-right: 0;
+
+                     
+                    }
+                }
             }
         }
     }
 }
 
-
 .currency__card-calculate {
     margin-left: auto;
     width: 39rem;
     margin-right: 7rem;
+
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        margin: 0;
+        margin-top: 2rem;
+    }
 }
 
 .currency__card-calculate-description {
@@ -190,18 +283,19 @@
     font-size: 1.6rem;
     line-height: 120%;
     color: #c6c6c6;
+    @include breakpoint(mobile) {
+        display: none;
+    }
 }
-
 
 .currency__card-calculate-widget-range-wrapper {
     width: 50%;
     flex-grow: 1;
 }
 
-
 .currency__card-calculate-widget-item {
     display: flex;
-   
+
     position: relative;
 
     &--top {
@@ -209,7 +303,6 @@
         margin-bottom: 0.6rem;
     }
 }
-
 
 .currency__card-calculate-divider {
     display: flex;
@@ -219,7 +312,7 @@
     svg {
         width: 1.4rem;
         height: 0.8rem;
-        fill: #DCDCDC;
+        fill: #dcdcdc;
     }
 }
 
@@ -227,8 +320,11 @@
     min-width: 11rem;
 
     flex-shrink: 0;
-}
 
+    @include breakpoint(mobile) {
+        min-width: 7rem;
+    }
+}
 
 .currency__info {
     background-color: var(--primary-color);
@@ -240,12 +336,11 @@
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    &:link, 
+    &:link,
     &:visited {
         color: white;
     }
 }
-
 
 .currency__info-image {
     position: absolute;
@@ -255,7 +350,6 @@
     height: 100%;
     @include objectFitCoverBottom();
 }
-
 
 .currency__info-heading {
     font-weight: 500;

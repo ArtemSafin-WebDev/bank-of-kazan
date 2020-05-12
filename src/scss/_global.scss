@@ -8,7 +8,7 @@
 
 :root {
     --max-container-width: 148.8rem;
-    --content-padding: 40px;
+    --content-padding: 4rem;
     --primary-color: #94C22B;
     --secondary-color: #531A62;
     --dark-text-color: #000000;
@@ -16,7 +16,7 @@
     --helvetica: 'HelveticaNeueCyr', sans-serif;
 
     @include breakpoint(mobile) {
-        --content-padding: 24px;
+        --content-padding: 2.4rem;
     }
     
 }
