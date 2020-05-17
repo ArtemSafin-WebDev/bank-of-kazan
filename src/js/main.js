@@ -8,6 +8,7 @@ import rangeSliders from './rangeSliders';
 import productsSlider from './productsSlider';
 import navigation from './navigation';
 import mobileMenu from './mobileMenu';
+import forBusiness from './forBusiness';
 
 import barba from '@barba/core';
 import css from '@barba/css';
@@ -72,6 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     productsSlider.destroy();
                     rangeSliders.destroy();
                     customSelects.destroy();
+                    forBusiness.destroy();
                 },
 
                 afterEnter() {
@@ -81,6 +83,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     customSelects.init();
                     rangeSliders.init();
                     productsSlider.init();
+                    forBusiness.init();
                 }
             }
         ]

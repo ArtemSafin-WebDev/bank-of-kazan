@@ -5,13 +5,10 @@
     {% include "blocks/navigation-block.html" %}
     <div data-barba="wrapper">
         <div data-barba="container" data-barba-namespace="home">
-            <div class="container">
-                <h1>
-                    Бизнес<br> Бизнес
-                    <br>
-                    Бизнес
-                </h1>
-            </div>
+            {% include "blocks/for-business.html" %}
+            {% include "blocks/news-block.html" %}
+            {% include "blocks/products-business.html" %}
+            {% include "blocks/rating-block.html" %}
         </div>
     </div>
 {% endblock %}
