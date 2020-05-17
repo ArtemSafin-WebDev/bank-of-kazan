@@ -1,5 +1,11 @@
 .rating {
-    padding: 6.5rem;
+  
+
+    &--with-border {
+        .rating__row {
+            border-top: 1px solid rgba(#A0A0A0, .5);
+        }
+    }
     @include breakpoint(mobile) {
         display: none;
     }
@@ -9,6 +15,7 @@
 .rating__row {
     display: flex;
     align-items: center;
+    padding: 6.5rem;
 }
 
 

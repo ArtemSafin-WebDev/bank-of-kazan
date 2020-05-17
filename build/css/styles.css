@@ -2795,11 +2795,12 @@ img.lazyload:not([src]) {
       font-size: 1rem;
       line-height: 130%; } }
 
-.rating {
-  padding: 6.5rem; }
-  @media only screen and (max-width: 767px) {
-    .rating {
-      display: none; } }
+.rating--with-border .rating__row {
+  border-top: 1px solid rgba(160, 160, 160, 0.5); }
+
+@media only screen and (max-width: 767px) {
+  .rating {
+    display: none; } }
 
 .rating__row {
   display: -webkit-box;
@@ -2807,7 +2808,8 @@ img.lazyload:not([src]) {
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  padding: 6.5rem; }
 
 .rating__heading {
   font-weight: 500;
