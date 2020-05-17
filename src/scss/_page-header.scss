@@ -7,10 +7,109 @@
     color: white;
 
     @include breakpoint(mobile) {
-        top: 2.2rem;
+        top: 1.8rem;
     }
 }
 
+.page-header__mobile-nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--secondary-color);
+    color: white;
+    z-index: 200;
+    padding-top: 8rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s, visibility 0s linear .3s;
+    display: none;
+
+    @include breakpoint(mobile) {
+        display: block;
+    }
+    .mobile-menu-open & {
+        transition: opacity .3s, visibility .3s;
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.page-header__mobile-nav-inner {
+    padding-left: var(--content-padding);
+    padding-right: var(--content-padding);
+    width: 100%;
+    max-height: 100%;
+    padding-bottom: 3rem;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+.page-header__mobile-nav-search-form {
+    display: flex;
+    align-items: center;
+    padding-bottom: 1.6rem;
+    border-bottom: 0.4rem solid white;
+    margin-bottom: 2.2rem;
+}
+
+.page-header__mobile-nav-search-form-input {
+    font: inherit;
+    color: white;
+    width: 50%;
+    flex-grow: 1;
+    font-weight: 500;
+    font-size: 1.3rem;
+    line-height: 80%;
+
+    @include placeholder {
+        color: rgba(white, 0.3);
+    }
+}
+
+.page-header__mobile-nav-search-form-submit {
+    flex-shrink: 0;
+    margin-left: 1rem;
+    svg {
+        fill: white;
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+}
+
+.page-header__mobile-nav-block {
+    margin-bottom: 3.8rem;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.page-header__mobile-nav-block-title {
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 120%;
+    padding-bottom: 1.2rem;
+    border-bottom: 1px solid rgba(white, 0.5);
+    margin-bottom: 2.2rem;
+}
+
+.page-header__mobile-nav-block-list-item {
+    margin-bottom: 1rem;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.page-header__mobile-nav-block-link {
+    font-weight: 500;
+    font-size: 1.3rem;
+
+    &:link,
+    &:visited {
+        color: white;
+    }
+}
 
 .page-header__row {
     display: flex;
@@ -20,16 +119,34 @@
 .page-header__burger-btn {
     display: none;
     margin-right: auto;
-    
+
     flex-direction: column;
+    position: relative;
+    z-index: 220;
 
     & > span {
         width: 2rem;
         height: 0.2rem;
         background-color: #fff;
         margin-bottom: 0.5rem;
+        transition: transform .2s, opacity .2s;
         &:last-child {
             margin-bottom: 0;
+        }
+    }
+
+
+    .mobile-menu-open & {
+        & > span {
+            &:nth-child(1) {
+                transform: translateY(.7rem) rotate(45deg);
+            }
+            &:nth-child(2) {
+                opacity: 0;
+            }
+            &:nth-child(3) {
+                transform: translateY(-.7rem) rotate(-45deg);
+            }
         }
     }
 
@@ -46,99 +163,77 @@
         margin-right: 0;
     }
 
-
     @include breakpoint(mobile) {
         display: none;
     }
 }
 
-.page-header__about-bank,
-.page-header__city {
-    margin-right: 4rem;
-    position: relative;
-
-    &:hover {
-        .page-header__about-bank-dropdown,
-        .page-header__city-dropdown {
-            opacity: 1; 
-            visibility: visible;
-            transition: all .3s;
-        }
-    }
-}
-
-
-.page-header__about-bank-text,
-.page-header__city-text {
+.page-header__about-bank-link,
+.page-header__city-link {
     display: flex;
     align-items: center;
     font-size: 1.4rem;
     font-weight: 500;
     text-transform: uppercase;
-    cursor: default;
+    // cursor: default;
+    margin-right: 4rem;
+
+    &:link,
+    &:visited {
+        color: white;
+    }
     svg {
         width: 1.4rem;
         height: 1.4rem;
-        fill: rgba(white, .6);
+        fill: rgba(white, 0.6);
         flex-shrink: 0;
         margin-right: 1.5rem;
     }
 }
 
-
-.page-header__about-bank-dropdown,
-.page-header__city-dropdown {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    padding-top: 1rem;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity .2s, visibility 0s linear .2s;
-    z-index: 50;
-
-    display: none;
-}
-
-
-.page-header__about-bank-dropdown-inner,
-.page-header__city-dropdown-inner {
-    border-radius: .4rem;
-    border: 1px solid rgba(white, .6);
-    color: white;
-    padding: 1.5rem 1.5rem;
-}
-
-
-.page-header__about-bank-dropdown-link,
-.page-header__city-dropdown-link {
-    font-size: 1.4rem;
-    font-weight: 500;
-    // text-transform: uppercase;
-    margin-bottom: 1rem;
-    white-space: nowrap;
-    display: block;
-    transition: color .2s;
-    &:last-child {
-        margin-bottom: 0;
-    }
-    &:link,
-    &:visited {
-        color: rgba(white, .6);
+.page-header__about-bank-link-cross {
+    display: flex;
+    flex-direction: column;
+    margin-right: 1.5rem;
+    flex-shrink: 0;
+    & > span {
+        width: 14px;
+        height: 2px;
+        background: rgba(white, 0.6);
+        flex-shrink: 0;
+        margin-bottom: 3px;
+        transition: opacity 0.2s, transform 0.2s, background-color 0.2s;
+        transform: translateZ(0);
+        outline: 1px solid transparent;
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
 
-    &:hover {
-        color: white;
+    .page-header__about-bank-link.active & {
+        & > span {
+            background-color: white;
+            &:nth-child(1) {
+                transform: translateZ(0) translateY(5px) rotate(45deg);
+            }
+            &:nth-child(2) {
+                opacity: 0;
+            }
+            &:nth-child(3) {
+                transform: translateZ(0) translateY(-5px) rotate(-45deg);
+            }
+        }
     }
 }
-
 
 .page-header__phone-link {
     font-weight: 500;
     font-size: 3rem;
     line-height: 1.2;
     margin-right: 3.5rem;
-    transition: color .2s;
+    transition: color 0.2s;
+    position: relative;
+    z-index: 220;
     &:link,
     &:visited {
         color: white;
@@ -149,13 +244,80 @@
         color: var(--primary-color);
     }
 
-
     @include breakpoint(mobile) {
         font-size: 1.4rem;
-        margin: 1.8rem;
+        margin-right: 1.8rem;
     }
 }
 
+.page-header__online-bank {
+    position: relative;
+    cursor: default;
+    z-index: 220;
+    &:hover {
+        .page-header__online-bank-dropdown {
+            opacity: 1;
+            visibility: visible;
+            transition: all 0.4s;
+        }
+
+        .page-header__online-bank-link {
+            background-color: rgba(white, 0.2);
+        }
+    }
+}
+
+.page-header__online-bank-dropdown {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    opacity: 0;
+    visibility: hidden;
+    padding-top: 1.2rem;
+    width: 24rem;
+    transition: opacity 0.3s, visibility 0s linear 0.3s;
+
+    @include breakpoint(mobile) {
+        width: 16rem;
+        padding-top: 0.5rem;
+    }
+}
+
+.page-header__online-bank-dropdown-inner {
+    border-radius: 0.4rem;
+    background-color: rgba(#531a62, 0.9);
+    color: white;
+    overflow: hidden;
+
+    .violet-backplate &,
+    .mobile-menu-open & {
+        background-color: rgba(#94c22b, 0.9);
+    }
+}
+
+.page-header__online-bank-dropdown-link {
+    font-weight: 500;
+    font-size: 1.6rem;
+    padding: 1.7rem 2.2rem;
+    text-transform: uppercase;
+    color: white;
+    border-bottom: 1px solid rgba(white, 0.3);
+    display: block;
+    line-height: 1.2;
+    transition: background-color 0.2s;
+    &:last-child {
+        border-bottom: none;
+    }
+    &:link,
+    &:visited {
+        color: white;
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 1rem;
+        padding: 1rem 1.5rem;
+    }
+}
 
 .page-header__offices-link,
 .page-header__online-bank-link {
@@ -163,20 +325,24 @@
     align-items: center;
     padding: 1.5rem 1.8rem;
     border-radius: 1rem;
-    border: 1px solid rgba(white, .5);
+    border: 1px solid rgba(white, 0.5);
     text-transform: uppercase;
     font-weight: 500;
     font-size: 1.6rem;
     line-height: 1.2;
-    margin-right: 1.7rem;
-    transition: border-color .2s, background-color .2s;
+
+    transition: border-color 0.2s, background-color 0.2s;
+
+    &:last-child {
+        margin-right: 0;
+    }
     svg {
         width: 1.5rem;
         height: 2rem;
-        fill: rgba(white, .5);
+        fill: rgba(white, 0.5);
         flex-shrink: 0;
         margin-right: 1.4rem;
-        transition: fill .2s;
+        transition: fill 0.2s;
     }
 
     &:link,
@@ -184,25 +350,22 @@
         color: white;
     }
 
-
     .no-touch &:hover,
     .touch &:active {
-       background-color: rgba(white, .2);
+        background-color: rgba(white, 0.2);
     }
-
 
     @include breakpoint(mobile) {
         font-size: 1rem;
-        padding: .7rem .8rem;
-        border-radius: .4rem;
+        padding: 0.7rem 0.8rem;
+        border-radius: 0.4rem;
         margin-right: 0;
     }
 }
 
-.page-header__online-bank-link {
-    margin-right: 0;
+.page-header__offices-link {
+    margin-right: 1.7rem;
 }
-
 
 .page-header__offices-link {
     @include breakpoint(mobile) {

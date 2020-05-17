@@ -1,6 +1,6 @@
 import 'select2';
 
-export default function() {
+function init() {
     $('.js-custom-select').each(function() {
         let currentSelect = $(this);
 
@@ -9,9 +9,24 @@ export default function() {
             dropdownParent: currentSelect.parent()
         });
 
-        currentSelect.on('change', () => {
+        const handler = function() {
             const event = new CustomEvent('choose');
-            this.dispatchEvent(event);
-        });
+            currentSelect.dispatchEvent(event);
+        };
+
+        currentSelect.on('change', handler);
     });
 }
+
+function destroy() {
+    $('.js-custom-select').each(function() {
+        let currentSelect = $(this);
+
+        currentSelect.select2('destroy');
+    });
+}
+
+export default {
+    init,
+    destroy
+};

@@ -189,3 +189,17 @@ img.lazyload:not([src]) {
     background-color: var(--primary-color);
 }
 
+.barba-leave-active,
+.barba-enter-active {
+  transition: opacity 800ms ease;
+}
+
+.barba-leave,
+.barba-enter-to {
+  opacity: 1;
+}
+
+.barba-enter,
+.barba-leave-to {
+  opacity: 0;
+}

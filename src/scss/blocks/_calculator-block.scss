@@ -129,10 +129,13 @@
     flex-direction: column;
     border-right: 0.3rem solid var(--primary-color);
     padding-right: 6rem;
+    position: relative;
+    width: 64rem;
     @include breakpoint(mobile) {
         padding: 0;
         border: none;
         padding-bottom: 2rem;
+        width: auto;
     }
 }
 
@@ -272,7 +275,7 @@
     line-height: 120%;
     color: white;
     padding: 2.4rem 2.6rem;
-    transition: background-color .3s;
+    transition: background-color 0.3s;
     &:link,
     &:visited {
         color: white;
@@ -313,7 +316,7 @@
     line-height: 120%;
     text-transform: uppercase;
     padding: 2.4rem 2.6rem;
-    transition: color .3s;
+    transition: color 0.3s;
     &:link,
     &:visited {
         color: var(--primary-color);
@@ -336,5 +339,42 @@
     display: flex;
     @include breakpoint(mobile) {
         flex-direction: column;
+    }
+}
+
+.calculator__info-card-title {
+    font-weight: 500;
+    font-size: 3.6rem;
+    line-height: 120%;
+    margin-bottom: 3.5rem;
+
+    @include breakpoint(mobile) {
+        font-size: 2.2rem;
+        line-height: 1.2;
+        margin-bottom: 1.5rem;
+    }
+}
+
+.calculator__info-card-text {
+    font-size: 2rem;
+    line-height: 120%;
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+    }
+}
+
+
+
+.calculator__info-card-image {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    right: -1px;
+    width: 16rem;
+    top: .9rem;
+    z-index: -1;
+
+    @include breakpoint(mobile) {
+        display: none;
     }
 }

@@ -24,10 +24,12 @@ export default function() {
         const navMenuGroups = Array.from(element.querySelectorAll('.navigation__content-right-col-menus-group'));
         const menusCloseBtn = element.querySelector('.navigation__menus-close-btn');
         const btnSliderContainers = Array.from(element.querySelectorAll('.navigation__content-btn-slider .swiper-container'));
+        const aboutBankBtn = document.querySelector('.page-header__about-bank-link');
 
-        let forCompanies = false;
         let searchOpen = false;
         let activeCategoryIndex = 0;
+        let navigationMenuOpen = false;
+        let aboutBankMenuOpen = false;
 
         function initializeInnerSliders() {
             innerSliders.forEach((sliderWrapper, sliderIndex) => {
@@ -113,11 +115,12 @@ export default function() {
 
         function showNavigationMenuTab(index) {
             backplate.classList.add('open');
+            document.body.classList.add('violet-backplate');
             innerSlidersLayer.classList.remove('active');
             innerMenusLayer.classList.add('active');
             menusCloseBtn.classList.add('active');
             element.classList.add('nav-menu-open');
-
+            navigationMenuOpen = true;
             allNavigationTabs.forEach(element => element.classList.remove('active'));
             const currentMenuGroup = navMenuGroups[activeCategoryIndex];
             const cardsInGroup = Array.from(currentMenuGroup.querySelectorAll('.navigation__content-right-col-menu-card'));
@@ -130,11 +133,15 @@ export default function() {
         }
 
         function closeNavigationMenu() {
-            backplate.classList.remove('open');
+            if (!aboutBankMenuOpen) {
+                backplate.classList.remove('open');
+                document.body.classList.remove('violet-backplate');
+            }
+
             innerSlidersLayer.classList.add('active');
             innerMenusLayer.classList.remove('active');
             menusCloseBtn.classList.remove('active');
-
+            navigationMenuOpen = false;
             allNavLinks.forEach(link => link.classList.remove('active'));
             element.classList.remove('nav-menu-open');
 
@@ -149,6 +156,36 @@ export default function() {
                 searchClose.classList.add('active');
             } else {
                 searchForm.submit();
+            }
+        }
+
+        function detectCurrentActiveCategory() {
+            const categoryIndex = categoryToggles.findIndex(link => {
+                const href = link.href;
+                const path = window.location.pathname;
+                const matched = href.includes(path);
+
+                return matched;
+            });
+
+            if (categoryIndex !== -1) {
+                handleCategoryClick(categoryIndex);
+            }
+        }
+
+        function showAboutBankMenu() {
+            element.classList.add('bank-menu-shown');
+            backplate.classList.add('open');
+            document.body.classList.add('violet-backplate');
+            aboutBankMenuOpen = true;
+        }
+
+        function hideAboutBankMenu() {
+            element.classList.remove('bank-menu-shown');
+            aboutBankMenuOpen = false;
+            if (!navigationMenuOpen) {
+                backplate.classList.remove('open');
+                document.body.classList.remove('violet-backplate');
             }
         }
 
@@ -185,5 +222,20 @@ export default function() {
             event.preventDefault();
             closeNavigationMenu();
         });
+
+        if (aboutBankBtn) {
+            aboutBankBtn.addEventListener('click', event => {
+                event.preventDefault();
+                const open = aboutBankBtn.classList.contains('active');
+                if (!open) {
+                    showAboutBankMenu();
+                } else {
+                    hideAboutBankMenu();
+                }
+                aboutBankBtn.classList.toggle('active');
+            });
+        }
+
+        detectCurrentActiveCategory();
     });
 }

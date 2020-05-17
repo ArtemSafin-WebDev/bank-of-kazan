@@ -1,4 +1,6 @@
-export default function() {
+let instances = [];
+
+function init() {
     const ratingBlocks = Array.from(document.querySelectorAll('.js-rating-stars'));
 
     ratingBlocks.forEach(element => {
@@ -29,9 +31,25 @@ export default function() {
         setInitialrating();
 
         starsCheckboxes.forEach((checkbox, checkboxIndex) => {
-            checkbox.addEventListener('change', () => {
-                handleRatingChange(checkboxIndex);
-            });
+            const handler = handleRatingChange.bind(this, checkboxIndex);
+            checkbox.addEventListener('change', handler);
+
+            const instance = {
+                checkbox,
+                handler
+            };
+            instances.push(instance);
         });
     });
+}
+
+function destroy() {
+    instances.forEach(instance => {
+        instance.checkbox.removeEventListener('change', instance.handler);
+    });
+}
+
+export default {
+    init,
+    destroy
 }

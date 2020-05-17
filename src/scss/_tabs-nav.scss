@@ -10,7 +10,7 @@
             content: '';
             flex-shrink: 0;
             height: 1px;
-            width: 1px;
+            width: var(--content-padding);
             
         }
     }

@@ -1,12 +1,15 @@
 import Swiper from 'swiper';
 
-export default function() {
-    const productsSliders = Array.from(document.querySelectorAll('.js-products-slider'));
 
+let instances = [];
+
+function init() {
+    const productsSliders = Array.from(document.querySelectorAll('.js-products-slider'));
+    
     productsSliders.forEach(element => {
         const container = element.querySelector('.swiper-container');
 
-        new Swiper(container, {
+        const instance = new Swiper(container, {
             slidesPerView: 'auto',
             spaceBetween: 20,
             watchOverflow: true,
@@ -25,5 +28,18 @@ export default function() {
                 }
             }
         });
+
+        instances.push(instance);
     });
+}
+
+function destroy() {
+    console.log('Cleaning products instances', instances);
+    instances.forEach(instance => instance.destroy());
+    instances = [];
+}
+
+export default {
+    init,
+    destroy
 }
