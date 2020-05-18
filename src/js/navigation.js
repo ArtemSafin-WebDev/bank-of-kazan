@@ -60,9 +60,9 @@ export default function() {
 
                 const bgSlider = new Swiper(bgSliderContainer, {
                     slidesPerView: 1,
-                    effect: 'fade',
                     speed: 1800,
                     allowTouchMove: false,
+                    effect: 'fade',
                     fadeEffect: {
                         crossFade: false
                     }

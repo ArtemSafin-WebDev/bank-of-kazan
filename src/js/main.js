@@ -74,6 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     rangeSliders.destroy();
                     customSelects.destroy();
                     forBusiness.destroy();
+                    document.body.classList.add('category-toggles-off');
                 },
 
                 afterEnter() {
@@ -84,6 +85,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     rangeSliders.init();
                     productsSlider.init();
                     forBusiness.init();
+                    document.body.classList.remove('category-toggles-off');
                 }
             }
         ]
@@ -93,6 +95,8 @@ document.addEventListener('DOMContentLoaded', function() {
         if (event.target.matches('.js-barba-link') || event.target.closest('.js-barba-link')) {
             event.preventDefault();
             const href = event.target.href;
+
+            if (barba.transitions.isRunning) return;
 
             barba.go(href);
         }

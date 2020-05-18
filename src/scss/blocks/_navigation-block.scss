@@ -208,7 +208,7 @@
     font-size: 5.4rem;
     line-height: 120%;
     margin-right: 6rem;
-    transition: color 0.2s;
+    transition: color 0.2s, opacity .2s;
     &:link,
     &:visited {
         color: rgba(white, 0.4);
@@ -216,6 +216,12 @@
 
     &.active {
         color: white;
+    }
+
+
+    .category-toggles-off & {
+        pointer-events: none;
+       
     }
 
     @include breakpoint(mobile) {

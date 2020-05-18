@@ -3666,12 +3666,14 @@ img.lazyload:not([src]) {
   font-size: 5.4rem;
   line-height: 120%;
   margin-right: 6rem;
-  -webkit-transition: color 0.2s;
-  transition: color 0.2s; }
+  -webkit-transition: color 0.2s, opacity .2s;
+  transition: color 0.2s, opacity .2s; }
   .navigation__universal-toggle-select-category-link:link, .navigation__universal-toggle-select-category-link:visited {
     color: rgba(255, 255, 255, 0.4); }
   .navigation__universal-toggle-select-category-link.active {
     color: white; }
+  .category-toggles-off .navigation__universal-toggle-select-category-link {
+    pointer-events: none; }
   @media only screen and (max-width: 767px) {
     .navigation__universal-toggle-select-category-link {
       font-size: 1.8rem;
