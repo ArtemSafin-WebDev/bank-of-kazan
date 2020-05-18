@@ -38,6 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     return new Promise(resolve => {
                         gsap.to(data.current.container, {
                             opacity: 0,
+                            duration: 0.3,
                             onComplete: () => {
                                 gsap.set(data.current.container, {
                                
@@ -51,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 enter: data => {
                     return new Promise(resolve => {
                         gsap.from(data.next.container, {
-                            duration: 0.7,
+                            duration: 0.3,
                             opacity: 0,
                             y: 100,
                             onComplete: () => {

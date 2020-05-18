@@ -2618,10 +2618,10 @@ img.lazyload:not([src]) {
   width: 100%;
   visibility: hidden;
   opacity: 0;
-  -webkit-transition: opacity 0.6s, visibility 0s linear 0.6s, -webkit-transform 0s linear 0.6s;
-  transition: opacity 0.6s, visibility 0s linear 0.6s, -webkit-transform 0s linear 0.6s;
-  transition: opacity 0.6s, transform 0s linear 0.6s, visibility 0s linear 0.6s;
-  transition: opacity 0.6s, transform 0s linear 0.6s, visibility 0s linear 0.6s, -webkit-transform 0s linear 0.6s;
+  -webkit-transition: opacity 0.4s, visibility 0s linear 0.4s, -webkit-transform 0s linear 0.4s;
+  transition: opacity 0.4s, visibility 0s linear 0.4s, -webkit-transform 0s linear 0.4s;
+  transition: opacity 0.4s, transform 0s linear 0.4s, visibility 0s linear 0.4s;
+  transition: opacity 0.4s, transform 0s linear 0.4s, visibility 0s linear 0.4s, -webkit-transform 0s linear 0.4s;
   z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2639,10 +2639,10 @@ img.lazyload:not([src]) {
     z-index: 2;
     -webkit-transform: translateX(0);
             transform: translateX(0);
-    -webkit-transition: all 0.6s, -webkit-transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    transition: all 0.6s, -webkit-transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    transition: all 0.6s, transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    transition: all 0.6s, transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), -webkit-transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+    -webkit-transition: all 0.4s, -webkit-transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: all 0.4s, -webkit-transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: all 0.4s, transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: all 0.4s, transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), -webkit-transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
 
 .custom-select {
   position: relative; }
