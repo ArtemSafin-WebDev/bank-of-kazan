@@ -40,8 +40,8 @@ document.addEventListener('DOMContentLoaded', function() {
                             opacity: 0,
                             onComplete: () => {
                                 gsap.set(data.current.container, {
-                                    position: 'absolute',
-                                    visibility: 'hidden'
+                               
+                                    display: 'none'
                                 });
                                 resolve();
                             }
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         gsap.from(data.next.container, {
                             duration: 0.7,
                             opacity: 0,
-                            // y: 100,
+                            y: 100,
                             onComplete: () => {
                                 resolve();
                             }
