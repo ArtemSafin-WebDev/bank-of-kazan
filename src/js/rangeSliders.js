@@ -2,19 +2,29 @@ import noUiSlider from 'noUiSlider';
 import moment from 'moment';
 import momentDurationFormatSetup from 'moment-duration-format';
 
-
-
-
-
 momentDurationFormatSetup(moment);
 
+moment.updateLocale('ru', {
+    durationLabelsStandard: {
+        M: 'месяц',
+        MM: 'месяца',
+        MMM: 'месяцев',
+        y: 'год',
+        yy: 'года',
+        yyy: 'лет'
+    },
+    durationPluralKey: function(token, integerValue, decimalValue) {
+        if (integerValue === 1) {
+            return token;
+        } else if (integerValue > 1 && integerValue <= 4) {
+            return token + token;
+        } else {
+            return token + token + token;
+        }
+    }
+});
+
 moment.locale('ru');
-
-
-
-
-
-console.log('Moment locale', moment.locale())
 
 let instances = [];
 
@@ -53,7 +63,7 @@ function init() {
             if (units === 'months') {
                 const duration = moment.duration(value, 'months');
 
-                displayedAmount.textContent = duration.format('Y [years] M [months]', {
+                displayedAmount.textContent = duration.format('Y __ M __', {
                     trim: 'small',
                     userLocale: 'ru'
                 });
