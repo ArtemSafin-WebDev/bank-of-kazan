@@ -156,28 +156,50 @@
         color: inherit;
     }
 
-    &:hover {
-        color: white;
-        .products__card-image-container {
-            height: 100%;
-        }
-
-        .products__card-prices-card-small-text {
-            color: rgba(white, 0.8);
-        }
-
-        .products__card-link-text {
+    @include breakpointMF(small-tablet) {
+        .no-touch &:hover {
             color: white;
-            background-color: var(--primary-color);
+            .products__card-image-container {
+                height: 100%;
+            }
 
-            svg {
-                fill: white;
+            .products__card-prices-card-small-text {
+                color: rgba(white, 0.8);
+            }
+
+            .products__card-link-text {
+                color: white;
+                background-color: var(--primary-color);
+
+                svg {
+                    fill: white;
+                }
             }
         }
     }
 
     @include breakpoint(mobile) {
         padding: 2rem;
+
+        .swiper-slide-active & {
+            color: white;
+            .products__card-image-container {
+                height: 100%;
+            }
+
+            .products__card-prices-card-small-text {
+                color: rgba(white, 0.8);
+            }
+
+            .products__card-link-text {
+                color: white;
+                background-color: var(--primary-color);
+
+                svg {
+                    fill: white;
+                }
+            }
+        }
     }
 }
 

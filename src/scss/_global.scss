@@ -44,6 +44,10 @@ html {
     @include breakpoint(mobile) {
         font-size: 10px;
     }
+
+    @include breakpoint(supersmall-mobile) {
+        font-size: 9px;
+    }
 }
 
 body {
