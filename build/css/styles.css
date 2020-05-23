@@ -4628,7 +4628,7 @@ img.lazyload:not([src]) {
       margin: 0;
       -ms-flex-negative: 1;
           flex-shrink: 1;
-      display: none; } }
+      margin-top: 2rem; } }
 
 .currency__converter {
   padding: 5rem;
@@ -4909,6 +4909,10 @@ img.lazyload:not([src]) {
   overflow: hidden; }
   .currency__info:link, .currency__info:visited {
     color: white; }
+  @media only screen and (max-width: 767px) {
+    .currency__info {
+      padding: 2rem;
+      min-height: 100vw; } }
 
 .currency__info-image {
   position: absolute;
@@ -4928,6 +4932,9 @@ img.lazyload:not([src]) {
   line-height: 120%;
   position: relative;
   z-index: 20; }
+  @media only screen and (max-width: 767px) {
+    .currency__info-heading {
+      font-size: 2.2rem; } }
 
 .callback {
   background-color: #f5f5f5;

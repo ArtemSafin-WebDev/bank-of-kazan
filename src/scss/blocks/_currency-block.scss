@@ -38,8 +38,8 @@
         flex-grow: 0;
         margin: 0;
         flex-shrink: 1;
-
-        display: none;
+        margin-top: 2rem;
+     
     }
 }
 
@@ -340,6 +340,12 @@
     &:visited {
         color: white;
     }
+
+
+    @include breakpoint(mobile) {
+        padding: 2rem;
+        min-height: 100vw;
+    }
 }
 
 .currency__info-image {
@@ -357,4 +363,8 @@
     line-height: 120%;
     position: relative;
     z-index: 20;
+
+    @include breakpoint(mobile) {
+        font-size: 2.2rem;
+    }
 }
