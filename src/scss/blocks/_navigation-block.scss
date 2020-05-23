@@ -902,6 +902,7 @@
     color: white;
     margin-bottom: 1.4rem;
     align-self: flex-start;
+    transition: color .2s;
     &:last-child {
         margin-bottom: 0;
     }

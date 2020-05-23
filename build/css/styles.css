@@ -4389,7 +4389,9 @@ img.lazyload:not([src]) {
   color: white;
   margin-bottom: 1.4rem;
   -ms-flex-item-align: start;
-      align-self: flex-start; }
+      align-self: flex-start;
+  -webkit-transition: color .2s;
+  transition: color .2s; }
   .navigation__menu-link:last-child {
     margin-bottom: 0; }
   .navigation__menu-link:link, .navigation__menu-link:visited {

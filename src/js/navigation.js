@@ -104,10 +104,17 @@ export default function() {
                 navLinks.forEach((link, linkIndex) => {
                     link.addEventListener('click', event => {
                         event.preventDefault();
+                        const linkIsActive = link.classList.contains('active')
 
                         allNavLinks.forEach(link => link.classList.remove('active'));
-                        link.classList.add('active');
-                        showNavigationMenuTab(linkIndex);
+
+                        if (!linkIsActive) {
+                            link.classList.add('active');
+                            showNavigationMenuTab(linkIndex);
+                        } else {
+                            closeNavigationMenu();
+                        }
+                      
                     });
                 });
             });
