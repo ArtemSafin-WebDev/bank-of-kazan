@@ -32,12 +32,19 @@
     .noUi-horizontal .noUi-handle {
         width: 2.4rem;
         height: 2.4rem;
+
+
+        width: 24px;
+        height: 24px;
         border-radius: 50%;
         top: 100%;
         right: 0;
         transform: translate(50%, -50%);
         box-shadow: none;
         border: 0.6rem solid var(--primary-color);
+
+
+        border: 6px solid var(--primary-color);
         background-color: white;
         box-shadow: none;
 
@@ -45,6 +52,11 @@
             width: 2rem;
             height: 2rem;
             border-width: 0.5rem;
+
+
+            width: 20px;
+            height: 20px;
+            border-width: 5px;
         }
     }
 

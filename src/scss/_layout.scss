@@ -21,6 +21,14 @@
     }
 }
 
+
+
+.inner-container {
+    width: 100%;
+    margin: 0 auto;
+    max-width: var(--max-inner-container-width);
+}
+
 .page-content {
     flex-grow: 1;
     display: flex;
