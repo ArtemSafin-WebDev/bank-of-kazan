@@ -28,17 +28,18 @@ export default function() {
             }
 
             tl.to(colToFade, {
-                // ease: 'none',
+                ease: 'none',
                 duration: 1,
-                opacity: 0
+                autoAlpha: 0,
+                xPercent: -100
             }).to(
                 colToSlide,
                 {
-                    // ease: 'none',
+                    ease: 'none',
                     duration: 1,
                     x: getOffset()
                 },
-                0.5
+                0
             );
 
             new ScrollMagic.Scene({
