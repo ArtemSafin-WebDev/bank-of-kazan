@@ -45,7 +45,7 @@ export default function() {
             new ScrollMagic.Scene({
                 triggerElement: document.querySelector('.product-navigation'),
                 triggerHook: 0,
-                duration: '100%'
+                duration: '20%'
                 // offset: 200
             })
                 .setTween(tl)
