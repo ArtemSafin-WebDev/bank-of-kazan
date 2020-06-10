@@ -39,7 +39,7 @@ export default function() {
                     duration: 1,
                     x: getOffset()
                 },
-                0
+                0.3
             );
 
             new ScrollMagic.Scene({
