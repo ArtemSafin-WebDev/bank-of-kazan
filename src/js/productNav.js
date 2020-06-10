@@ -15,6 +15,8 @@ export default function() {
         let searchFormOpen = false;
         let bankMenuOpen = false;
         let categoryIndex = categoryLayers.findIndex(element => element.classList.contains('active'));
+        let initialActiveNavLink = menuLinks.findIndex(element => element.classList.contains('active'));
+        let initialActiveCategory = categoryLinks.findIndex(element => element.classList.contains('active'));
 
         console.log('Menu items', menuItems);
         console.log('Menu btns', menuLinks);
@@ -47,7 +49,7 @@ export default function() {
                         behavior: 'smooth'
                     });
 
-                    console.log('Scrolled')
+                    console.log('Scrolled');
                 }
             });
         }
@@ -82,6 +84,10 @@ export default function() {
             categoryLayers[index].classList.add('active');
             categoryIndex = index;
             closeInnerMenu();
+
+            if (initialActiveNavLink !== -1 && initialActiveCategory !== categoryIndex) {
+                handleMenuClick(initialActiveNavLink);
+            }
         }
 
         searchBtn.addEventListener('click', event => {

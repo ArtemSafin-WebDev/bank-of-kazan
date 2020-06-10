@@ -20,7 +20,7 @@ export default function() {
                 const cardWidth = document.querySelector('.product-navigation__card').offsetWidth;
                 const containerWidth = document.querySelector('.container').offsetWidth - parseFloat(containerComputedStyle.paddingLeft) - parseFloat(containerComputedStyle.paddingRight);
                 const innerContainerWidth = document.querySelector('.inner-container').offsetWidth;
-                const columnWidth = colToSlide.offsetWidth;
+                const columnWidth = colToSlide[0].offsetWidth;
 
                 const offsetAmount = cardWidth - columnWidth - (containerWidth - innerContainerWidth) / 2;
 

@@ -14,7 +14,7 @@
             {{ title }}
         </title>
     </head>
-    <body class="no-touch" ontouchstart="" data-barba-prevent="all">
+    <body class="no-touch {% if navigationText == "dark" %} dark-nav-text {% endif %}" ontouchstart="" data-barba-prevent="all">
         <div class="sprite" aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;">
             {% include "sprite.njk" %}
         </div>
