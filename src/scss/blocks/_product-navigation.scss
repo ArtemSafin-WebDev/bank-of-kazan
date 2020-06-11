@@ -5,6 +5,10 @@
     background-color: var(--secondary-color);
     color: white;
 
+    &--rko {
+        background-color: #fff;
+    }
+
     .dark-nav-text & {
         color: black;
     }
@@ -32,6 +36,13 @@
     width: 100%;
     height: 100%;
     @include objectFitCover();
+
+    .product-navigation--rko & {
+        max-height: 80.7rem;
+        @include breakpoint(mobile) {
+            max-height: 65rem;
+        }
+    }
 }
 
 .product-navigation__logo-bar {
@@ -444,7 +455,6 @@
         &:link,
         &:visited {
             color: black;
-            
         }
 
         &:hover {
@@ -475,8 +485,6 @@
         color: rgba(white, 0.5);
     }
 
-    
-
     svg {
         width: 1rem;
         height: 1.4rem;
@@ -485,8 +493,6 @@
         margin-right: 1.5rem;
         transition: fill 0.2s;
     }
-
-    
 
     .no-touch &:hover,
     .touch &:active {
@@ -507,7 +513,6 @@
             fill: rgba(black, 0.3);
         }
     }
-
 
     .no-touch.dark-nav-text &:hover,
     .touch.dark-nav-text &:active {
@@ -849,4 +854,169 @@
 
 .product-navigation__extra-link {
     margin-top: 1rem;
+}
+
+.product-navigation__account {
+    // padding-top: 6.8rem;
+    padding-bottom: 3rem;
+
+    @include breakpoint(mobile) {
+        padding-bottom: 0rem;
+    }
+}
+
+.product-navigation__account-back-to-products {
+    font-size: 1.8rem;
+    line-height: 146%;
+    color: rgba(#5f0091, 0.5);
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 3.4rem;
+    transition: color 0.2s;
+    svg {
+        fill: rgba(#5f0091, 0.5);
+        width: 1.3rem;
+        height: 0.8rem;
+        flex-shrink: 0;
+        margin-right: 1rem;
+        margin-bottom: 0.2em;
+        transition: fill 0.2s;
+    }
+    &:link,
+    &:visited {
+        color: rgba(#5f0091, 0.5);
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        color: #5f0091;
+
+        svg {
+            fill: #5f0091;
+        }
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 1.2;
+        margin-bottom: 1.5rem;
+    }
+}
+
+.product-navigation__account-heading {
+    font-weight: 500;
+    font-size: 5.4rem;
+    line-height: 100%;
+    margin-bottom: 2.4rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 2rem;
+        font-size: 2.8rem;
+        line-height: 1.2;
+    }
+}
+
+.product-navigation__account-text {
+    font-size: 2rem;
+    line-height: 130%;
+    margin-bottom: 3.6rem;
+    max-width: 70rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 1.3;
+        margin-bottom: 2rem;
+    }
+}
+
+.product-navigation__account-links {
+    margin-bottom: 6.6rem;
+    display: flex;
+    align-items: center;
+    @include breakpoint(mobile) {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 3rem;
+    }
+}
+
+.product-navigation__account-open-account {
+    padding: 2.2rem 2.5rem;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 120%;
+    background: var(--primary-color);
+    border-radius: 1rem;
+    text-transform: uppercase;
+    margin-right: 3.6rem;
+    color: white;
+    &:link,
+    &:visited {
+        color: white;
+    }
+
+    @include breakpoint(mobile) {
+        font-weight: 500;
+        font-size: 1rem;
+        right: 0;
+        line-height: 120%;
+        margin-right: auto;
+        border-radius: 0.4rem;
+        padding: 1.4rem 1.5rem;
+
+        margin-right: 1.2rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+.product-navigation__account-registered {
+    font-size: 1.8rem;
+    line-height: 130%;
+    color: #000000;
+
+    a {
+        transition: color 0.2s;
+        &:link,
+        &:visited {
+            color: var(--primary-color);
+        }
+
+        .no-touch &:hover,
+        .touch &:active {
+            color: var(--secondary-color);
+        }
+    }
+
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+    }
+}
+
+.product-navigation__account-features {
+    overflow: visible;
+}
+
+
+.product-navigation__account-features-list {
+  
+    @include breakpointMF(small-tablet) {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -1.5rem;
+    }
+}
+
+.product-navigation__account-features-list-item {
+    width: 90%;
+
+   
+
+
+    @include breakpointMF(small-tablet) {
+        width: 33.33%;
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+    }
 }

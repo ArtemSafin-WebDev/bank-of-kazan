@@ -14,6 +14,8 @@ import barba from '@barba/core';
 // import css from '@barba/css';
 import { gsap } from 'gsap';
 import scrollAnimations from './scrollAnimations';
+import accordions from './accordions';
+import rkoFeatures from './rkoFeatures';
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -23,7 +25,8 @@ document.addEventListener('DOMContentLoaded', function() {
     mobileMenu();
     productNav();
     scrollAnimations();
-
+    accordions();
+    rkoFeatures();
     barba.init({
         
         transitions: [

@@ -9,10 +9,10 @@
         </script>
         <link rel="stylesheet" href="css/styles.min.css" />
         <title>
-            Банк Казани - Главная страница
+            Банк Казани - Кредит доверительный
         </title>
     </head>
-    <body class="no-touch " ontouchstart="" data-barba-prevent="all">
+    <body class="no-touch  dark-nav-text " ontouchstart="" data-barba-prevent="all">
         <div class="sprite" aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;">
             <?xml version="1.0" encoding="utf-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <symbol id="arrow-down" viewBox="0 0 14 9" xmlns="http://www.w3.org/2000/svg">
@@ -278,852 +278,537 @@
             </header>
 
             <main class="page-main">
-                <section class="navigation js-navigation">
-                    <div class="navigation__bg-layers">
-                        <div class="navigation__bg-layer active">
-                            <div class="navigation__bg-slider">
-                                <div class="swiper-container">
-                                    <div class="swiper-wrapper">
-                                        <div class="swiper-slide">
-                                            <div class="navigation__bg-slider-card">
-                                                <img src="img/navigation/backgrounds/bg-1.jpg" alt="" class="navigation__bg-slider-card-image" />
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="navigation__bg-slider-card">
-                                                <img src="img/navigation/backgrounds/bg-2.jpg" alt="" class="navigation__bg-slider-card-image" />
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="navigation__bg-slider-card">
-                                                <img src="img/navigation/backgrounds/bg-3.jpg" alt="" class="navigation__bg-slider-card-image" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="navigation__bg-layer">
-                            <div class="navigation__bg-slider">
-                                <div class="swiper-container">
-                                    <div class="swiper-wrapper">
-                                        <div class="swiper-slide">
-                                            <div class="navigation__bg-slider-card">
-                                                <img src="img/navigation/backgrounds/bg-4.jpg" alt="" class="navigation__bg-slider-card-image" />
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="navigation__bg-slider-card">
-                                                <img src="img/navigation/backgrounds/bg-5.jpg" alt="" class="navigation__bg-slider-card-image" />
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="navigation__bg-slider-card">
-                                                <img src="img/navigation/backgrounds/bg-1.jpg" alt="" class="navigation__bg-slider-card-image" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                <section class="product-navigation product-navigation--rko js-product-nav">
+                    <div class="product-navigation__bg">
+                        <img src="img/rko-bg.jpg" alt="" class="product-navigation__bg-image" />
                     </div>
-                    <div class="navigation__backplate"></div>
+                    <div class="product-navigation__backdrop"></div>
                     <div class="container">
-                        <div class="navigation__logo-bar">
-                            <a href="index.html" class="navigation__logo">
-                                <img src="img/logo.png" alt="" class="navigation__logo-image" width="245" />
+                        <div class="product-navigation__logo-bar">
+                            <a href="index.html" class="product-navigation__logo-link">
+                                <img src="img/logo-colored.png" alt="" class="product-navigation__logo-image" />
                             </a>
                         </div>
-
-                        <div class="navigation__universal-toggle">
-                            <div class="navigation__universal-toggle-select-category active">
-                                <a href="index.html" class="navigation__universal-toggle-select-category-link active js-barba-link">Частным лицам</a>
-                                <a href="index-business.html" class="navigation__universal-toggle-select-category-link js-barba-link">Бизнесу</a>
+                        <div class="product-navigation__categories">
+                            <div class="product-navigation__categories-content">
+                                <div class="product-navigation__categories-links">
+                                    <a href="#" class="product-navigation__categories-link js-product-nav-category-link">
+                                        Частным лицам
+                                    </a>
+                                    <a href="#" class="product-navigation__categories-link active js-product-nav-category-link">
+                                        Бизнесу
+                                    </a>
+                                </div>
+                                <form action="/" method="POST" class="product-navigation__search-form js-product-navigation-search-form">
+                                    <input type="search" name="q" class="product-navigation__search-form-input" placeholder="Поиск" />
+                                </form>
+                                <div class="product-navigation__about-bank-title">
+                                    О Банке
+                                </div>
                             </div>
-                            <form action="/" method="GET" class="navigation__universal-toggle-search-form" autocomplete="off">
-                                <input type="search" name="q" class="navigation__universal-toggle-search-form-input" placeholder="Что ищете?" />
-                            </form>
-                            <div class="navigation__universal-toggle-about-bank">
-                                О банке
-                            </div>
-                            <button class="navigation__universal-search-close">
-                                <svg width="34" height="34" aria-hidden="true" class="icon-cross">
+                            <button class="product-navigation__search-close-btn js-product-nav-close-btn">
+                                <svg width="28" height="28" aria-hidden="true" class="icon-cross">
                                     <use xlink:href="#cross" />
                                 </svg>
                             </button>
-                            <button class="navigation__universal-toggle-search">
-                                <svg width="34" height="34" aria-hidden="true" class="icon-search">
+                            <button class="product-navigation__search-submit-btn js-product-nav-search-btn">
+                                <svg width="28" height="28" aria-hidden="true" class="icon-search">
                                     <use xlink:href="#search" />
                                 </svg>
                             </button>
                         </div>
-                        <div class="navigation__content">
-                            <div class="navigation__content-row">
-                                <div class="navigation__content-left-col">
-                                    <div class="navigation__main-menu-layers">
-                                        <div class="navigation__main-menu-layer active">
-                                            <div class="navigation__main-menu">
-                                                <a href="#" class="navigation__main-menu-link">
-                                                    Кредиты
-                                                </a>
-                                                <a href="#" class="navigation__main-menu-link">
-                                                    Вклады
-                                                </a>
-                                                <a href="#" class="navigation__main-menu-link">
-                                                    Пластиковые карты
-                                                </a>
-                                                <a href="#" class="navigation__main-menu-link">
-                                                    Онлайн страхование
-                                                </a>
-                                                <a href="#" class="navigation__main-menu-link">
-                                                    Платежи и переводы
-                                                </a>
-                                                <a href="#" class="navigation__main-menu-link">
-                                                    Брокерское обслуживание
-                                                </a>
-                                                <a href="#" class="navigation__main-menu-link">
-                                                    Реализация залогового имущества
-                                                </a>
-                                                <a href="#" class="navigation__main-menu-link">
-                                                    Расчетно-кассовое обслуживание
-                                                </a>
+                        <div class="product-navigation__layers">
+                            <div class="product-navigation__layer js-product-nav-layer">
+                                <div class="product-navigation__card">
+                                    <div class="product-navigation__card-left-col js-col-to-fade">
+                                        <div class="product-navigation__card-menu">
+                                            <a href="#" class="product-navigation__card-menu-link js-product-nav-menu-link active">Кредиты</a>
+                                            <a href="#" class="product-navigation__card-menu-link js-product-nav-menu-link">Вклады</a>
+                                            <a href="#" class="product-navigation__card-menu-link js-product-nav-menu-link">Пластиковые карты</a>
+                                            <a href="#" class="product-navigation__card-menu-link js-product-nav-menu-link">Страхование</a>
+                                            <a href="#" class="product-navigation__card-menu-link js-product-nav-menu-link">Брокерское обслуживание</a>
+                                        </div>
+                                    </div>
+                                    <div class="product-navigation__card-right-col js-col-to-slide">
+                                        <div class="product-navigation__card-menu-items">
+                                            <div class="product-navigation__card-menu-item js-product-nav-menu-item">
+                                                <div class="product-navigation__card-menu-item-row">
+                                                    <div class="product-navigation__card-menu-item-left-col">
+                                                        <div class="product-navigation__card-menu-item-link-block">
+                                                            <h5 class="product-navigation__card-menu-item-heading">
+                                                                ТАРИФЫ
+                                                            </h5>
+                                                            <ul class="product-navigation__card-menu-item-list">
+                                                                <li class="product-navigation__card-menu-item-list-item">
+                                                                    <a href="#" class="product-navigation__card-menu-item-link">
+                                                                        Доверительный
+                                                                    </a>
+                                                                </li>
+                                                                <li class="product-navigation__card-menu-item-list-item">
+                                                                    <a href="#" class="product-navigation__card-menu-item-link">
+                                                                        Кредит на большие цели
+                                                                    </a>
+                                                                </li>
+                                                                <li class="product-navigation__card-menu-item-list-item">
+                                                                    <a href="#" class="product-navigation__card-menu-item-link">
+                                                                        Пенсионный
+                                                                    </a>
+                                                                </li>
+                                                                <li class="product-navigation__card-menu-item-list-item">
+                                                                    <a href="#" class="product-navigation__card-menu-item-link">
+                                                                        Потребительский классический
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-navigation__card-menu-item-right-col">
+                                                        <div class="product-navigation__card-menu-item-link-block">
+                                                            <h5 class="product-navigation__card-menu-item-heading">
+                                                                Полезное
+                                                            </h5>
+                                                            <ul class="product-navigation__card-menu-item-list">
+                                                                <li class="product-navigation__card-menu-item-list-item">
+                                                                    <a href="#" class="product-navigation__card-menu-item-link">
+                                                                        Оплатить кредит
+                                                                    </a>
+                                                                </li>
+                                                                <li class="product-navigation__card-menu-item-list-item">
+                                                                    <a href="#" class="product-navigation__card-menu-item-link">
+                                                                        Подобрать кредит
+                                                                    </a>
+                                                                </li>
+                                                                <li class="product-navigation__card-menu-item-list-item">
+                                                                    <a href="#" class="product-navigation__card-menu-item-link">
+                                                                        Отправить заявку
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="product-navigation__card-menu-item-link-block">
+                                                            <h5 class="product-navigation__card-menu-item-heading">
+                                                                Нужен кредит?
+                                                            </h5>
+                                                            <a href="#" class="product-navigation__link product-navigation__extra-link">
+                                                                заявка на кредит
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="product-navigation__card-menu-item js-product-nav-menu-item">
+                                                <div class="product-navigation__card-menu-item-row">
+                                                    <div class="product-navigation__card-menu-item-left-col">
+                                                        <div class="product-navigation__card-menu-item-link-block">
+                                                            <h5 class="product-navigation__card-menu-item-heading">
+                                                                ТАРИФЫ
+                                                            </h5>
+                                                            <ul class="product-navigation__card-menu-item-list">
+                                                                <li class="product-navigation__card-menu-item-list-item">
+                                                                    <a href="#" class="product-navigation__card-menu-item-link">
+                                                                        Доверительный
+                                                                    </a>
+                                                                </li>
+                                                                <li class="product-navigation__card-menu-item-list-item">
+                                                                    <a href="#" class="product-navigation__card-menu-item-link">
+                                                                        Кредит на большие цели
+                                                                    </a>
+                                                                </li>
+                                                                <li class="product-navigation__card-menu-item-list-item">
+                                                                    <a href="#" class="product-navigation__card-menu-item-link">
+                                                                        Пенсионный
+                                                                    </a>
+                                                                </li>
+                                                                <li class="product-navigation__card-menu-item-list-item">
+                                                                    <a href="#" class="product-navigation__card-menu-item-link">
+                                                                        Потребительский классический
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-navigation__card-menu-item-right-col">
+                                                        <div class="product-navigation__card-menu-item-link-block">
+                                                            <h5 class="product-navigation__card-menu-item-heading">
+                                                                Полезное
+                                                            </h5>
+                                                            <ul class="product-navigation__card-menu-item-list">
+                                                                <li class="product-navigation__card-menu-item-list-item">
+                                                                    <a href="#" class="product-navigation__card-menu-item-link">
+                                                                        Оплатить кредит
+                                                                    </a>
+                                                                </li>
+                                                                <li class="product-navigation__card-menu-item-list-item">
+                                                                    <a href="#" class="product-navigation__card-menu-item-link">
+                                                                        Подобрать кредит
+                                                                    </a>
+                                                                </li>
+                                                                <li class="product-navigation__card-menu-item-list-item">
+                                                                    <a href="#" class="product-navigation__card-menu-item-link">
+                                                                        Отправить заявку
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="product-navigation__card-menu-item-link-block">
+                                                            <h5 class="product-navigation__card-menu-item-heading">
+                                                                Нужен кредит?
+                                                            </h5>
+                                                            <a href="#" class="product-navigation__link product-navigation__extra-link">
+                                                                заявка на кредит
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="product-navigation__card-menu-item js-product-nav-menu-item">
+                                                <div class="product-navigation__card-menu-item-row">
+                                                    <div class="product-navigation__card-menu-item-left-col">
+                                                        <div class="product-navigation__card-menu-item-link-block">
+                                                            <h5 class="product-navigation__card-menu-item-heading">
+                                                                ТАРИФЫ
+                                                            </h5>
+                                                            <ul class="product-navigation__card-menu-item-list">
+                                                                <li class="product-navigation__card-menu-item-list-item">
+                                                                    <a href="#" class="product-navigation__card-menu-item-link">
+                                                                        Доверительный
+                                                                    </a>
+                                                                </li>
+                                                                <li class="product-navigation__card-menu-item-list-item">
+                                                                    <a href="#" class="product-navigation__card-menu-item-link">
+                                                                        Кредит на большие цели
+                                                                    </a>
+                                                                </li>
+                                                                <li class="product-navigation__card-menu-item-list-item">
+                                                                    <a href="#" class="product-navigation__card-menu-item-link">
+                                                                        Пенсионный
+                                                                    </a>
+                                                                </li>
+                                                                <li class="product-navigation__card-menu-item-list-item">
+                                                                    <a href="#" class="product-navigation__card-menu-item-link">
+                                                                        Потребительский классический
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-navigation__card-menu-item-right-col">
+                                                        <div class="product-navigation__card-menu-item-link-block">
+                                                            <h5 class="product-navigation__card-menu-item-heading">
+                                                                Полезное
+                                                            </h5>
+                                                            <ul class="product-navigation__card-menu-item-list">
+                                                                <li class="product-navigation__card-menu-item-list-item">
+                                                                    <a href="#" class="product-navigation__card-menu-item-link">
+                                                                        Оплатить кредит
+                                                                    </a>
+                                                                </li>
+                                                                <li class="product-navigation__card-menu-item-list-item">
+                                                                    <a href="#" class="product-navigation__card-menu-item-link">
+                                                                        Подобрать кредит
+                                                                    </a>
+                                                                </li>
+                                                                <li class="product-navigation__card-menu-item-list-item">
+                                                                    <a href="#" class="product-navigation__card-menu-item-link">
+                                                                        Отправить заявку
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="product-navigation__card-menu-item-link-block">
+                                                            <h5 class="product-navigation__card-menu-item-heading">
+                                                                Нужен кредит?
+                                                            </h5>
+                                                            <a href="#" class="product-navigation__link product-navigation__extra-link">
+                                                                заявка на кредит
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="product-navigation__card-menu-item js-product-nav-menu-item">
+                                                <div class="product-navigation__card-menu-item-row">
+                                                    <div class="product-navigation__card-menu-item-left-col">
+                                                        <div class="product-navigation__card-menu-item-link-block">
+                                                            <h5 class="product-navigation__card-menu-item-heading">
+                                                                ТАРИФЫ
+                                                            </h5>
+                                                            <ul class="product-navigation__card-menu-item-list">
+                                                                <li class="product-navigation__card-menu-item-list-item">
+                                                                    <a href="#" class="product-navigation__card-menu-item-link">
+                                                                        Доверительный
+                                                                    </a>
+                                                                </li>
+                                                                <li class="product-navigation__card-menu-item-list-item">
+                                                                    <a href="#" class="product-navigation__card-menu-item-link">
+                                                                        Кредит на большие цели
+                                                                    </a>
+                                                                </li>
+                                                                <li class="product-navigation__card-menu-item-list-item">
+                                                                    <a href="#" class="product-navigation__card-menu-item-link">
+                                                                        Пенсионный
+                                                                    </a>
+                                                                </li>
+                                                                <li class="product-navigation__card-menu-item-list-item">
+                                                                    <a href="#" class="product-navigation__card-menu-item-link">
+                                                                        Потребительский классический
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-navigation__card-menu-item-right-col">
+                                                        <div class="product-navigation__card-menu-item-link-block">
+                                                            <h5 class="product-navigation__card-menu-item-heading">
+                                                                Полезное
+                                                            </h5>
+                                                            <ul class="product-navigation__card-menu-item-list">
+                                                                <li class="product-navigation__card-menu-item-list-item">
+                                                                    <a href="#" class="product-navigation__card-menu-item-link">
+                                                                        Оплатить кредит
+                                                                    </a>
+                                                                </li>
+                                                                <li class="product-navigation__card-menu-item-list-item">
+                                                                    <a href="#" class="product-navigation__card-menu-item-link">
+                                                                        Подобрать кредит
+                                                                    </a>
+                                                                </li>
+                                                                <li class="product-navigation__card-menu-item-list-item">
+                                                                    <a href="#" class="product-navigation__card-menu-item-link">
+                                                                        Отправить заявку
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="product-navigation__card-menu-item-link-block">
+                                                            <h5 class="product-navigation__card-menu-item-heading">
+                                                                Нужен кредит?
+                                                            </h5>
+                                                            <a href="#" class="product-navigation__link product-navigation__extra-link">
+                                                                заявка на кредит
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="product-navigation__card-menu-item js-product-nav-menu-item">
+                                                <div class="product-navigation__card-menu-item-row">
+                                                    <div class="product-navigation__card-menu-item-left-col">
+                                                        <div class="product-navigation__card-menu-item-link-block">
+                                                            <h5 class="product-navigation__card-menu-item-heading">
+                                                                ТАРИФЫ
+                                                            </h5>
+                                                            <ul class="product-navigation__card-menu-item-list">
+                                                                <li class="product-navigation__card-menu-item-list-item">
+                                                                    <a href="#" class="product-navigation__card-menu-item-link">
+                                                                        Доверительный
+                                                                    </a>
+                                                                </li>
+                                                                <li class="product-navigation__card-menu-item-list-item">
+                                                                    <a href="#" class="product-navigation__card-menu-item-link">
+                                                                        Кредит на большие цели
+                                                                    </a>
+                                                                </li>
+                                                                <li class="product-navigation__card-menu-item-list-item">
+                                                                    <a href="#" class="product-navigation__card-menu-item-link">
+                                                                        Пенсионный
+                                                                    </a>
+                                                                </li>
+                                                                <li class="product-navigation__card-menu-item-list-item">
+                                                                    <a href="#" class="product-navigation__card-menu-item-link">
+                                                                        Потребительский классический
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-navigation__card-menu-item-right-col">
+                                                        <div class="product-navigation__card-menu-item-link-block">
+                                                            <h5 class="product-navigation__card-menu-item-heading">
+                                                                Полезное
+                                                            </h5>
+                                                            <ul class="product-navigation__card-menu-item-list">
+                                                                <li class="product-navigation__card-menu-item-list-item">
+                                                                    <a href="#" class="product-navigation__card-menu-item-link">
+                                                                        Оплатить кредит
+                                                                    </a>
+                                                                </li>
+                                                                <li class="product-navigation__card-menu-item-list-item">
+                                                                    <a href="#" class="product-navigation__card-menu-item-link">
+                                                                        Подобрать кредит
+                                                                    </a>
+                                                                </li>
+                                                                <li class="product-navigation__card-menu-item-list-item">
+                                                                    <a href="#" class="product-navigation__card-menu-item-link">
+                                                                        Отправить заявку
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="product-navigation__card-menu-item-link-block">
+                                                            <h5 class="product-navigation__card-menu-item-heading">
+                                                                Нужен кредит?
+                                                            </h5>
+                                                            <a href="#" class="product-navigation__link product-navigation__extra-link">
+                                                                заявка на кредит
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="navigation__main-menu-layer">
-                                            <div class="navigation__main-menu">
-                                                <a href="#" class="navigation__main-menu-link">
-                                                    Рассчетно-кассовое обслуживание
-                                                </a>
-                                                <a href="#" class="navigation__main-menu-link">
-                                                    Кредиты
-                                                </a>
-                                                <a href="#" class="navigation__main-menu-link">
-                                                    Депозиты бизнесу
-                                                </a>
-                                                <a href="#" class="navigation__main-menu-link">
-                                                    Банковские гарантии
-                                                </a>
-                                                <a href="#" class="navigation__main-menu-link">
-                                                    Пластиковые карты
-                                                </a>
-                                                <a href="#" class="navigation__main-menu-link">
-                                                    Онлайн сервис
-                                                </a>
-                                            </div>
+                                    </div>
+                                    <button class="product-navigation__close-btn js-product-nav-close">
+                                        <svg width="34" height="34" aria-hidden="true" class="icon-cross">
+                                            <use xlink:href="#cross" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="product-navigation__layer js-product-nav-layer active">
+                                <div class="product-navigation__card">
+                                    <div class="product-navigation__card-left-col js-col-to-fade">
+                                        <div class="product-navigation__card-menu">
+                                            <a href="#" class="product-navigation__card-menu-link active">
+                                                Расчетно-кассовое обслуживание
+                                            </a>
+                                            <a href="#" class="product-navigation__card-menu-link">
+                                                Кредиты бизнеcу
+                                            </a>
+                                            <a href="#" class="product-navigation__card-menu-link">
+                                                Депозиты бизнесу
+                                            </a>
+                                            <a href="#" class="product-navigation__card-menu-link">
+                                                Банковские гарантии
+                                            </a>
+                                            <a href="#" class="product-navigation__card-menu-link">
+                                                Пластиковые карты
+                                            </a>
                                         </div>
-                                        <div class="navigation__bank-menu-layer">
-                                            <div class="navigation__bank-menu">
-                                                <a href="#" class="navigation__bank-menu-link">
-                                                    Общая информация
+                                    </div>
+                                    <div class="product-navigation__card-right-col js-col-to-slide">
+                                        <div class="product-navigation__account">
+                                            <a href="#" class="product-navigation__account-back-to-products">
+                                                <svg width="14" height="10" aria-hidden="true" class="icon-arrow-up">
+                                                    <use xlink:href="#arrow-up" />
+                                                </svg>
+                                                К списку продуктов
+                                            </a>
+                                            <h1 class="product-navigation__account-heading">
+                                                Расчётный счёт за 5 минут
+                                            </h1>
+                                            <div class="product-navigation__account-text">
+                                                <p>
+                                                    За 5 минут вы получите зарезервированный номер счета. Чтобы воспользоваться им требуется подписать в Банке пакет документов, необходимый для открытия расчетного счета.
+                                                </p>
+                                            </div>
+                                            <div class="product-navigation__account-links">
+                                                <a href="#" class="product-navigation__account-open-account">
+                                                    открыть счет
                                                 </a>
-                                                <a href="#" class="navigation__bank-menu-link">
-                                                    Реквизиты банка
-                                                </a>
-                                                <a href="#" class="navigation__bank-menu-link">
-                                                    Лицензии и руководство банка
-                                                </a>
-                                                <a href="#" class="navigation__bank-menu-link">
-                                                    Открытая информация
-                                                </a>
-                                                <a href="#" class="navigation__bank-menu-link">
-                                                    Устав
-                                                </a>
-                                                <a href="#" class="navigation__bank-menu-link">
-                                                    Инсайдерам
-                                                </a>
+                                                <div class="product-navigation__account-registered">Уже зарегистрированы? <a href="#">Личный кабинет</a></div>
+                                            </div>
+                                            <div class="swiper-container product-navigation__account-features js-rko-features">
+                                                <ul class="swiper-wrapper product-navigation__account-features-list">
+                                                    <li class="swiper-slide product-navigation__account-features-list-item">
+                                                        <div class="program-advantages__card">
+                                                            <div class="program-advantages__card-top-row">
+                                                                Реквизиты доступны сразу
+                                                                <div class="program-advantages__card-icon-container">
+                                                                    <img src="img/for-business/fire.svg" alt="" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="program-advantages__card-bottom-row">
+                                                                <div class="program-advantages__card-text">
+                                                                    <p>
+                                                                        Пополнение оборотных средств (обновление товарного ассортимента, закуп сырья
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                            <span class="program-advantages__card-arrow">
+                                                                <svg width="10" height="14" aria-hidden="true" class="icon-arrow-right">
+                                                                    <use xlink:href="#arrow-right" />
+                                                                </svg>
+                                                            </span>
+                                                        </div>
+                                                    </li>
+                                                    <li class="swiper-slide product-navigation__account-features-list-item">
+                                                        <div class="program-advantages__card">
+                                                            <div class="program-advantages__card-top-row">
+                                                                Без визита в банк
+                                                                <div class="program-advantages__card-icon-container">
+                                                                    <img src="img/for-business/ok.svg" alt="" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="program-advantages__card-bottom-row">
+                                                                <div class="program-advantages__card-text">
+                                                                    <p>
+                                                                        Пополнение оборотных средств (обновление товарного ассортимента, закуп сырья
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                            <span class="program-advantages__card-arrow">
+                                                                <svg width="10" height="14" aria-hidden="true" class="icon-arrow-right">
+                                                                    <use xlink:href="#arrow-right" />
+                                                                </svg>
+                                                            </span>
+                                                        </div>
+                                                    </li>
+                                                    <li class="swiper-slide product-navigation__account-features-list-item">
+                                                        <div class="program-advantages__card">
+                                                            <div class="program-advantages__card-top-row">
+                                                                Всего за 5 минут
+                                                                <div class="program-advantages__card-icon-container">
+                                                                    <img src="img/for-business/bubble.svg" alt="" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="program-advantages__card-bottom-row">
+                                                                <div class="program-advantages__card-text">
+                                                                    <p>
+                                                                        Пополнение оборотных средств (обновление товарного ассортимента, закуп сырья
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                            <span class="program-advantages__card-arrow">
+                                                                <svg width="10" height="14" aria-hidden="true" class="icon-arrow-right">
+                                                                    <use xlink:href="#arrow-right" />
+                                                                </svg>
+                                                            </span>
+                                                        </div>
+                                                    </li>
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="navigation__content-right-col">
-                                    <div class="navigation__content-right-col-sliders-menus">
-                                        <div class="navigation__content-right-col-sliders active">
-                                            <div class="navigation__content-inner-slider-layers">
-                                                <div class="navigation__content-inner-slider-layer">
-                                                    <div class="navigation__content-inner-slider">
-                                                        <div class="swiper-container">
-                                                            <div class="swiper-wrapper">
-                                                                <div class="swiper-slide">
-                                                                    <div class="navigation__content-inner-slider-card">
-                                                                        <h4 class="navigation__content-inner-slider-card-title">
-                                                                            Кредит «Быстрый»
-                                                                        </h4>
-                                                                        <div class="navigation__content-inner-slider-card-percent">
-                                                                            <span class="navigation__content-inner-slider-card-percent-digit">12,5%</span>
-                                                                        </div>
-                                                                        <div class="navigation__content-inner-slider-card-text">
-                                                                            <p>
-                                                                                Кредит на обеспечение исполнения обязательств по контракту в рамках 44-ФЗ, 223-ФЗ.
-                                                                            </p>
-                                                                            <p>
-                                                                                Принятие решения в течение 8 рабочих часов!
-                                                                            </p>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="swiper-slide">
-                                                                    <div class="navigation__content-inner-slider-card">
-                                                                        <h4 class="navigation__content-inner-slider-card-title">
-                                                                            Кредит «Доверительный»
-                                                                        </h4>
-                                                                        <div class="navigation__content-inner-slider-card-percent">
-                                                                            <span class="navigation__content-inner-slider-card-percent-digit">10,2%</span>
-                                                                        </div>
-                                                                        <div class="navigation__content-inner-slider-card-text">
-                                                                            <p>
-                                                                                Программа кредитования на потребительские нужды
-                                                                            </p>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="swiper-slide">
-                                                                    <div class="navigation__content-inner-slider-card">
-                                                                        <h4 class="navigation__content-inner-slider-card-title">
-                                                                            Повышены ставки по вкладам и текущим счетам
-                                                                        </h4>
-                                                                        <div class="navigation__content-inner-slider-card-percent">
-                                                                            <span class="navigation__content-inner-slider-card-percent-digit">+0,5%</span>
-                                                                        </div>
-                                                                        <div class="navigation__content-inner-slider-card-text">
-                                                                            <p>
-                                                                                Откройте вклад в Интернет-банке или мобильном приложении
-                                                                            </p>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="navigation__content-btn-slider">
-                                                            <div class="swiper-container">
-                                                                <div class="swiper-wrapper">
-                                                                    <div class="swiper-slide">
-                                                                        <div class="navigation__content-btn-slider-card">
-                                                                            <a href="#" class="navigation__content-inner-slider-link"
-                                                                                >Узнать подробнее
-                                                                                <svg width="8" height="14" aria-hidden="true" class="icon-arrow-right">
-                                                                                    <use xlink:href="#arrow-right" />
-                                                                                </svg>
-                                                                            </a>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="swiper-slide">
-                                                                        <div class="navigation__content-btn-slider-card">
-                                                                            <a href="#" class="navigation__content-inner-slider-link"
-                                                                                >Получить
-                                                                                <svg width="8" height="14" aria-hidden="true" class="icon-arrow-right">
-                                                                                    <use xlink:href="#arrow-right" />
-                                                                                </svg>
-                                                                            </a>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="swiper-slide">
-                                                                        <div class="navigation__content-btn-slider-card">
-                                                                            <a href="#" class="navigation__content-inner-slider-link"
-                                                                                >Узнать подробнее
-                                                                                <svg width="8" height="14" aria-hidden="true" class="icon-arrow-right">
-                                                                                    <use xlink:href="#arrow-right" />
-                                                                                </svg>
-                                                                            </a>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="navigation__content-inner-slider-nav">
-                                                            <button class="navigation__content-inner-slider-arrow navigation__content-inner-slider-arrow--prev">
-                                                                <svg width="28" height="46" aria-hidden="true" class="icon-arrow-left">
-                                                                    <use xlink:href="#arrow-left" />
-                                                                </svg>
-                                                            </button>
-                                                            <div class="navigation__content-inner-slider-pagination"></div>
-                                                            <button class="navigation__content-inner-slider-arrow navigation__content-inner-slider-arrow--next">
-                                                                <svg width="28" height="46" aria-hidden="true" class="icon-arrow-right">
-                                                                    <use xlink:href="#arrow-right" />
-                                                                </svg>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="navigation__content-inner-slider-layer">
-                                                    <div class="navigation__content-inner-slider">
-                                                        <div class="swiper-container">
-                                                            <div class="swiper-wrapper">
-                                                                <div class="swiper-slide">
-                                                                    <div class="navigation__content-inner-slider-card">
-                                                                        <h4 class="navigation__content-inner-slider-card-title">
-                                                                            Кредит «Доступный»
-                                                                        </h4>
-                                                                        <div class="navigation__content-inner-slider-card-percent">
-                                                                            от
-                                                                            <span class="navigation__content-inner-slider-card-percent-digit">
-                                                                                11%
-                                                                            </span>
-                                                                            годовых
-                                                                        </div>
-                                                                        <div class="navigation__content-inner-slider-card-text">
-                                                                            <p>
-                                                                                Кредит для бизнеса за 1 день с минимальным пакетом документов
-                                                                            </p>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="swiper-slide">
-                                                                    <div class="navigation__content-inner-slider-card navigation__content-inner-slider-card--no-right-padding">
-                                                                        <h4 class="navigation__content-inner-slider-card-title">
-                                                                            Банковская гарантия<br />
-                                                                            за 4 часа
-                                                                        </h4>
+                            </div>
 
-                                                                        <div class="navigation__content-inner-slider-card-text">
-                                                                            <p>
-                                                                                Выдача банковских гарантий по 44-ФЗ, 223-ФЗ, ПП 615 на обеспечение заявок на участие в тендере
-                                                                            </p>
-                                                                            <p>
-                                                                                и на обеспечение обязательств по государственному контракту
-                                                                            </p>
-                                                                        </div>
-                                                                        <div class="navigation__content-inner-slider-card-features">
-                                                                            <ul class="navigation__content-inner-slider-card-features-list">
-                                                                                <li class="navigation__content-inner-slider-card-features-list-item">
-                                                                                    <div class="navigation__content-inner-slider-card-features-card">
-                                                                                        <span class="navigation__content-inner-slider-card-features-card-text">
-                                                                                            Ставка от 2,4%
-                                                                                        </span>
-                                                                                        <div class="navigation__content-inner-slider-card-features-card-icon-container">
-                                                                                            <img src="img/features-card/percent.svg" alt="" class="navigation__content-inner-slider-card-features-card-icon" />
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </li>
-                                                                                <li class="navigation__content-inner-slider-card-features-list-item">
-                                                                                    <div class="navigation__content-inner-slider-card-features-card">
-                                                                                        <span class="navigation__content-inner-slider-card-features-card-text">
-                                                                                            Оформление за 4 часа
-                                                                                        </span>
-                                                                                        <div class="navigation__content-inner-slider-card-features-card-icon-container">
-                                                                                            <img src="img/features-card/clock.svg" alt="" class="navigation__content-inner-slider-card-features-card-icon" />
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </li>
-                                                                                <li class="navigation__content-inner-slider-card-features-list-item">
-                                                                                    <div class="navigation__content-inner-slider-card-features-card">
-                                                                                        <span class="navigation__content-inner-slider-card-features-card-text">
-                                                                                            Без визита в банк
-                                                                                        </span>
-                                                                                        <div class="navigation__content-inner-slider-card-features-card-icon-container">
-                                                                                            <img src="img/features-card/pc.svg" alt="" class="navigation__content-inner-slider-card-features-card-icon" />
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </li>
-                                                                            </ul>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="swiper-slide">
-                                                                    <div class="navigation__content-inner-slider-card">
-                                                                        <h4 class="navigation__content-inner-slider-card-title">
-                                                                            Повышены ставки по вкладам и текущим счетам
-                                                                        </h4>
-                                                                        <div class="navigation__content-inner-slider-card-percent">
-                                                                            <span class="navigation__content-inner-slider-card-percent-digit">+0,5%</span>
-                                                                        </div>
-                                                                        <div class="navigation__content-inner-slider-card-text">
-                                                                            <p>
-                                                                                Откройте вклад в Интернет-банке или мобильном приложении
-                                                                            </p>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="navigation__content-btn-slider">
-                                                            <div class="swiper-container">
-                                                                <div class="swiper-wrapper">
-                                                                    <div class="swiper-slide">
-                                                                        <div class="navigation__content-btn-slider-card">
-                                                                            <a href="#" class="navigation__content-inner-slider-link"
-                                                                                >Узнать подробнее
-                                                                                <svg width="8" height="14" aria-hidden="true" class="icon-arrow-right">
-                                                                                    <use xlink:href="#arrow-right" />
-                                                                                </svg>
-                                                                            </a>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="swiper-slide">
-                                                                        <div class="navigation__content-btn-slider-card">
-                                                                            <a href="#" class="navigation__content-inner-slider-link"
-                                                                                >Узнать подробнее
-                                                                                <svg width="8" height="14" aria-hidden="true" class="icon-arrow-right">
-                                                                                    <use xlink:href="#arrow-right" />
-                                                                                </svg>
-                                                                            </a>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="swiper-slide">
-                                                                        <div class="navigation__content-btn-slider-card">
-                                                                            <a href="#" class="navigation__content-inner-slider-link"
-                                                                                >Узнать подробнее
-                                                                                <svg width="8" height="14" aria-hidden="true" class="icon-arrow-right">
-                                                                                    <use xlink:href="#arrow-right" />
-                                                                                </svg>
-                                                                            </a>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="navigation__content-inner-slider-nav">
-                                                            <button class="navigation__content-inner-slider-arrow navigation__content-inner-slider-arrow--prev">
-                                                                <svg width="28" height="46" aria-hidden="true" class="icon-arrow-left">
-                                                                    <use xlink:href="#arrow-left" />
-                                                                </svg>
-                                                            </button>
-                                                            <div class="navigation__content-inner-slider-pagination"></div>
-                                                            <button class="navigation__content-inner-slider-arrow navigation__content-inner-slider-arrow--next">
-                                                                <svg width="28" height="46" aria-hidden="true" class="icon-arrow-right">
-                                                                    <use xlink:href="#arrow-right" />
-                                                                </svg>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="navigation__content-right-col-menus">
-                                            <button class="navigation__menus-close-btn">
-                                                <svg width="34" height="34" aria-hidden="true" class="icon-cross">
-                                                    <use xlink:href="#cross" />
-                                                </svg>
-                                            </button>
-                                            <div class="navigation__content-right-col-menus-groups">
-                                                <div class="navigation__content-right-col-menus-group">
-                                                    <div class="navigation__content-right-col-menu-card">
-                                                        <div class="navigation__content-right-col-menu-card-left-col">
-                                                            <h5 class="navigation__menu-card-heading">
-                                                                тарифы
-                                                            </h5>
-                                                            <div class="navigation__menu-links">
-                                                                <a href="#" class="navigation__menu-link">Доверительный </a>
-                                                                <a href="#" class="navigation__menu-link"> Кредит на большие цели </a>
-                                                                <a href="#" class="navigation__menu-link"> Пенсионный </a>
-                                                                <a href="#" class="navigation__menu-link"> Рефинансирование кредитов </a>
-                                                                <a href="#" class="navigation__menu-link"> Потребительский классический </a>
-                                                                <a href="#" class="navigation__menu-link"> До зарплаты </a>
-                                                                <a href="#" class="navigation__menu-link"> Оценка залога </a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="navigation__content-right-col-menu-card-right-col">
-                                                            <h5 class="navigation__menu-card-heading">
-                                                                полезное
-                                                            </h5>
-                                                            <div class="navigation__menu-links">
-                                                                <a href="#" class="navigation__menu-link">Оплатить кредит </a>
-                                                                <a href="#" class="navigation__menu-link"> Подобрать кредит </a>
-                                                                <a href="#" class="navigation__menu-link"> Отправить заявку </a>
-                                                            </div>
-                                                            <h5 class="navigation__menu-card-heading">
-                                                                нужен кредит?
-                                                            </h5>
-                                                            <a href="#" class="navigation__menu-large-link">
-                                                                кредитный калькулятор
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="navigation__content-right-col-menu-card">
-                                                        <div class="navigation__content-right-col-menu-card-left-col">
-                                                            <h5 class="navigation__menu-card-heading">
-                                                                тарифы
-                                                            </h5>
-                                                            <div class="navigation__menu-links">
-                                                                <a href="#" class="navigation__menu-link">Доверительный </a>
-                                                                <a href="#" class="navigation__menu-link"> Вклад на большие цели </a>
-                                                                <a href="#" class="navigation__menu-link"> Пенсионный </a>
-
-                                                                <a href="#" class="navigation__menu-link"> Потребительский классический </a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="navigation__content-right-col-menu-card-right-col">
-                                                            <h5 class="navigation__menu-card-heading">
-                                                                полезное
-                                                            </h5>
-                                                            <div class="navigation__menu-links">
-                                                                <a href="#" class="navigation__menu-link">Внести деньги на вклад </a>
-                                                                <a href="#" class="navigation__menu-link"> Подобрать вклад </a>
-                                                                <a href="#" class="navigation__menu-link"> Отправить заявку </a>
-                                                            </div>
-                                                            <h5 class="navigation__menu-card-heading">
-                                                                нужен кредит?
-                                                            </h5>
-                                                            <a href="#" class="navigation__menu-large-link">
-                                                                кредитный калькулятор
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="navigation__content-right-col-menu-card">
-                                                        <div class="navigation__content-right-col-menu-card-left-col">
-                                                            <h5 class="navigation__menu-card-heading">
-                                                                тарифы
-                                                            </h5>
-                                                            <div class="navigation__menu-links">
-                                                                <a href="#" class="navigation__menu-link">Доверительный </a>
-                                                                <a href="#" class="navigation__menu-link"> Вклад на большие цели </a>
-                                                                <a href="#" class="navigation__menu-link"> Пенсионный </a>
-
-                                                                <a href="#" class="navigation__menu-link"> Потребительский классический </a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="navigation__content-right-col-menu-card-right-col">
-                                                            <h5 class="navigation__menu-card-heading">
-                                                                полезное
-                                                            </h5>
-                                                            <div class="navigation__menu-links">
-                                                                <a href="#" class="navigation__menu-link">Внести деньги на вклад </a>
-                                                                <a href="#" class="navigation__menu-link"> Подобрать вклад </a>
-                                                                <a href="#" class="navigation__menu-link"> Отправить заявку </a>
-                                                            </div>
-                                                            <h5 class="navigation__menu-card-heading">
-                                                                нужен кредит?
-                                                            </h5>
-                                                            <a href="#" class="navigation__menu-large-link">
-                                                                кредитный калькулятор
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="navigation__content-right-col-menu-card">
-                                                        <div class="navigation__content-right-col-menu-card-left-col">
-                                                            <h5 class="navigation__menu-card-heading">
-                                                                тарифы
-                                                            </h5>
-                                                            <div class="navigation__menu-links">
-                                                                <a href="#" class="navigation__menu-link">Доверительный </a>
-                                                                <a href="#" class="navigation__menu-link"> Вклад на большие цели </a>
-                                                                <a href="#" class="navigation__menu-link"> Пенсионный </a>
-
-                                                                <a href="#" class="navigation__menu-link"> Потребительский классический </a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="navigation__content-right-col-menu-card-right-col">
-                                                            <h5 class="navigation__menu-card-heading">
-                                                                полезное
-                                                            </h5>
-                                                            <div class="navigation__menu-links">
-                                                                <a href="#" class="navigation__menu-link">Внести деньги на вклад </a>
-                                                                <a href="#" class="navigation__menu-link"> Подобрать вклад </a>
-                                                                <a href="#" class="navigation__menu-link"> Отправить заявку </a>
-                                                            </div>
-                                                            <h5 class="navigation__menu-card-heading">
-                                                                нужен кредит?
-                                                            </h5>
-                                                            <a href="#" class="navigation__menu-large-link">
-                                                                кредитный калькулятор
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="navigation__content-right-col-menu-card">
-                                                        <div class="navigation__content-right-col-menu-card-left-col">
-                                                            <h5 class="navigation__menu-card-heading">
-                                                                тарифы
-                                                            </h5>
-                                                            <div class="navigation__menu-links">
-                                                                <a href="#" class="navigation__menu-link">Доверительный </a>
-                                                                <a href="#" class="navigation__menu-link"> Вклад на большие цели </a>
-                                                                <a href="#" class="navigation__menu-link"> Пенсионный </a>
-
-                                                                <a href="#" class="navigation__menu-link"> Потребительский классический </a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="navigation__content-right-col-menu-card-right-col">
-                                                            <h5 class="navigation__menu-card-heading">
-                                                                полезное
-                                                            </h5>
-                                                            <div class="navigation__menu-links">
-                                                                <a href="#" class="navigation__menu-link">Внести деньги на вклад </a>
-                                                                <a href="#" class="navigation__menu-link"> Подобрать вклад </a>
-                                                                <a href="#" class="navigation__menu-link"> Отправить заявку </a>
-                                                            </div>
-                                                            <h5 class="navigation__menu-card-heading">
-                                                                нужен кредит?
-                                                            </h5>
-                                                            <a href="#" class="navigation__menu-large-link">
-                                                                кредитный калькулятор
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="navigation__content-right-col-menu-card">
-                                                        <div class="navigation__content-right-col-menu-card-left-col">
-                                                            <h5 class="navigation__menu-card-heading">
-                                                                тарифы
-                                                            </h5>
-                                                            <div class="navigation__menu-links">
-                                                                <a href="#" class="navigation__menu-link">Доверительный </a>
-                                                                <a href="#" class="navigation__menu-link"> Вклад на большие цели </a>
-                                                                <a href="#" class="navigation__menu-link"> Пенсионный </a>
-
-                                                                <a href="#" class="navigation__menu-link"> Потребительский классический </a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="navigation__content-right-col-menu-card-right-col">
-                                                            <h5 class="navigation__menu-card-heading">
-                                                                полезное
-                                                            </h5>
-                                                            <div class="navigation__menu-links">
-                                                                <a href="#" class="navigation__menu-link">Внести деньги на вклад </a>
-                                                                <a href="#" class="navigation__menu-link"> Подобрать вклад </a>
-                                                                <a href="#" class="navigation__menu-link"> Отправить заявку </a>
-                                                            </div>
-                                                            <h5 class="navigation__menu-card-heading">
-                                                                нужен кредит?
-                                                            </h5>
-                                                            <a href="#" class="navigation__menu-large-link">
-                                                                кредитный калькулятор
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="navigation__content-right-col-menu-card">
-                                                        <div class="navigation__content-right-col-menu-card-left-col">
-                                                            <h5 class="navigation__menu-card-heading">
-                                                                тарифы
-                                                            </h5>
-                                                            <div class="navigation__menu-links">
-                                                                <a href="#" class="navigation__menu-link">Доверительный </a>
-                                                                <a href="#" class="navigation__menu-link"> Вклад на большие цели </a>
-                                                                <a href="#" class="navigation__menu-link"> Пенсионный </a>
-
-                                                                <a href="#" class="navigation__menu-link"> Потребительский классический </a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="navigation__content-right-col-menu-card-right-col">
-                                                            <h5 class="navigation__menu-card-heading">
-                                                                полезное
-                                                            </h5>
-                                                            <div class="navigation__menu-links">
-                                                                <a href="#" class="navigation__menu-link">Внести деньги на вклад </a>
-                                                                <a href="#" class="navigation__menu-link"> Подобрать вклад </a>
-                                                                <a href="#" class="navigation__menu-link"> Отправить заявку </a>
-                                                            </div>
-                                                            <h5 class="navigation__menu-card-heading">
-                                                                нужен кредит?
-                                                            </h5>
-                                                            <a href="#" class="navigation__menu-large-link">
-                                                                кредитный калькулятор
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="navigation__content-right-col-menu-card">
-                                                        <div class="navigation__content-right-col-menu-card-left-col">
-                                                            <h5 class="navigation__menu-card-heading">
-                                                                тарифы
-                                                            </h5>
-                                                            <div class="navigation__menu-links">
-                                                                <a href="#" class="navigation__menu-link">Доверительный </a>
-                                                                <a href="#" class="navigation__menu-link"> Вклад на большие цели </a>
-                                                                <a href="#" class="navigation__menu-link"> Пенсионный </a>
-
-                                                                <a href="#" class="navigation__menu-link"> Потребительский классический </a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="navigation__content-right-col-menu-card-right-col">
-                                                            <h5 class="navigation__menu-card-heading">
-                                                                полезное
-                                                            </h5>
-                                                            <div class="navigation__menu-links">
-                                                                <a href="#" class="navigation__menu-link">Внести деньги на вклад </a>
-                                                                <a href="#" class="navigation__menu-link"> Подобрать вклад </a>
-                                                                <a href="#" class="navigation__menu-link"> Отправить заявку </a>
-                                                            </div>
-                                                            <h5 class="navigation__menu-card-heading">
-                                                                нужен кредит?
-                                                            </h5>
-                                                            <a href="#" class="navigation__menu-large-link">
-                                                                кредитный калькулятор
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="navigation__content-right-col-menus-group">
-                                                    <div class="navigation__content-right-col-menu-card">
-                                                        <div class="navigation__content-right-col-menu-card-left-col">
-                                                            <h5 class="navigation__menu-card-heading">
-                                                                тарифы для бизнеса
-                                                            </h5>
-                                                            <div class="navigation__menu-links">
-                                                                <a href="#" class="navigation__menu-link">Доверительный </a>
-                                                                <a href="#" class="navigation__menu-link"> Вклад на большие цели </a>
-                                                                <a href="#" class="navigation__menu-link"> Пенсионный </a>
-
-                                                                <a href="#" class="navigation__menu-link"> Потребительский классический </a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="navigation__content-right-col-menu-card-right-col">
-                                                            <h5 class="navigation__menu-card-heading">
-                                                                полезное
-                                                            </h5>
-                                                            <div class="navigation__menu-links">
-                                                                <a href="#" class="navigation__menu-link">Внести деньги на вклад </a>
-                                                                <a href="#" class="navigation__menu-link"> Подобрать вклад </a>
-                                                                <a href="#" class="navigation__menu-link"> Отправить заявку </a>
-                                                            </div>
-                                                            <h5 class="navigation__menu-card-heading">
-                                                                нужен кредит?
-                                                            </h5>
-                                                            <a href="#" class="navigation__menu-large-link">
-                                                                кредитный калькулятор
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="navigation__content-right-col-menu-card">
-                                                        <div class="navigation__content-right-col-menu-card-left-col">
-                                                            <h5 class="navigation__menu-card-heading">
-                                                                тарифы для бизнеса
-                                                            </h5>
-                                                            <div class="navigation__menu-links">
-                                                                <a href="#" class="navigation__menu-link">Доверительный </a>
-                                                                <a href="#" class="navigation__menu-link"> Вклад на большие цели </a>
-                                                                <a href="#" class="navigation__menu-link"> Пенсионный </a>
-
-                                                                <a href="#" class="navigation__menu-link"> Потребительский классический </a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="navigation__content-right-col-menu-card-right-col">
-                                                            <h5 class="navigation__menu-card-heading">
-                                                                полезное
-                                                            </h5>
-                                                            <div class="navigation__menu-links">
-                                                                <a href="#" class="navigation__menu-link">Внести деньги на вклад </a>
-                                                                <a href="#" class="navigation__menu-link"> Подобрать вклад </a>
-                                                                <a href="#" class="navigation__menu-link"> Отправить заявку </a>
-                                                            </div>
-                                                            <h5 class="navigation__menu-card-heading">
-                                                                нужен кредит?
-                                                            </h5>
-                                                            <a href="#" class="navigation__menu-large-link">
-                                                                кредитный калькулятор
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="navigation__content-right-col-menu-card">
-                                                        <div class="navigation__content-right-col-menu-card-left-col">
-                                                            <h5 class="navigation__menu-card-heading">
-                                                                тарифы для бизнеса
-                                                            </h5>
-                                                            <div class="navigation__menu-links">
-                                                                <a href="#" class="navigation__menu-link">Доверительный </a>
-                                                                <a href="#" class="navigation__menu-link"> Вклад на большие цели </a>
-                                                                <a href="#" class="navigation__menu-link"> Пенсионный </a>
-
-                                                                <a href="#" class="navigation__menu-link"> Потребительский классический </a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="navigation__content-right-col-menu-card-right-col">
-                                                            <h5 class="navigation__menu-card-heading">
-                                                                полезное
-                                                            </h5>
-                                                            <div class="navigation__menu-links">
-                                                                <a href="#" class="navigation__menu-link">Внести деньги на вклад </a>
-                                                                <a href="#" class="navigation__menu-link"> Подобрать вклад </a>
-                                                                <a href="#" class="navigation__menu-link"> Отправить заявку </a>
-                                                            </div>
-                                                            <h5 class="navigation__menu-card-heading">
-                                                                нужен кредит?
-                                                            </h5>
-                                                            <a href="#" class="navigation__menu-large-link">
-                                                                кредитный калькулятор
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="navigation__content-right-col-menu-card">
-                                                        <div class="navigation__content-right-col-menu-card-left-col">
-                                                            <h5 class="navigation__menu-card-heading">
-                                                                тарифы для бизнеса
-                                                            </h5>
-                                                            <div class="navigation__menu-links">
-                                                                <a href="#" class="navigation__menu-link">Доверительный </a>
-                                                                <a href="#" class="navigation__menu-link"> Вклад на большие цели </a>
-                                                                <a href="#" class="navigation__menu-link"> Пенсионный </a>
-
-                                                                <a href="#" class="navigation__menu-link"> Потребительский классический </a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="navigation__content-right-col-menu-card-right-col">
-                                                            <h5 class="navigation__menu-card-heading">
-                                                                полезное
-                                                            </h5>
-                                                            <div class="navigation__menu-links">
-                                                                <a href="#" class="navigation__menu-link">Внести деньги на вклад </a>
-                                                                <a href="#" class="navigation__menu-link"> Подобрать вклад </a>
-                                                                <a href="#" class="navigation__menu-link"> Отправить заявку </a>
-                                                            </div>
-                                                            <h5 class="navigation__menu-card-heading">
-                                                                нужен кредит?
-                                                            </h5>
-                                                            <a href="#" class="navigation__menu-large-link">
-                                                                кредитный калькулятор
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="navigation__content-right-col-menu-card">
-                                                        <div class="navigation__content-right-col-menu-card-left-col">
-                                                            <h5 class="navigation__menu-card-heading">
-                                                                тарифы для бизнеса
-                                                            </h5>
-                                                            <div class="navigation__menu-links">
-                                                                <a href="#" class="navigation__menu-link">Доверительный </a>
-                                                                <a href="#" class="navigation__menu-link"> Вклад на большие цели </a>
-                                                                <a href="#" class="navigation__menu-link"> Пенсионный </a>
-
-                                                                <a href="#" class="navigation__menu-link"> Потребительский классический </a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="navigation__content-right-col-menu-card-right-col">
-                                                            <h5 class="navigation__menu-card-heading">
-                                                                полезное
-                                                            </h5>
-                                                            <div class="navigation__menu-links">
-                                                                <a href="#" class="navigation__menu-link">Внести деньги на вклад </a>
-                                                                <a href="#" class="navigation__menu-link"> Подобрать вклад </a>
-                                                                <a href="#" class="navigation__menu-link"> Отправить заявку </a>
-                                                            </div>
-                                                            <h5 class="navigation__menu-card-heading">
-                                                                нужен кредит?
-                                                            </h5>
-                                                            <a href="#" class="navigation__menu-large-link">
-                                                                кредитный калькулятор
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="navigation__content-right-col-menu-card">
-                                                        <div class="navigation__content-right-col-menu-card-left-col">
-                                                            <h5 class="navigation__menu-card-heading">
-                                                                тарифы для бизнеса
-                                                            </h5>
-                                                            <div class="navigation__menu-links">
-                                                                <a href="#" class="navigation__menu-link">Доверительный </a>
-                                                                <a href="#" class="navigation__menu-link"> Вклад на большие цели </a>
-                                                                <a href="#" class="navigation__menu-link"> Пенсионный </a>
-
-                                                                <a href="#" class="navigation__menu-link"> Потребительский классический </a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="navigation__content-right-col-menu-card-right-col">
-                                                            <h5 class="navigation__menu-card-heading">
-                                                                полезное
-                                                            </h5>
-                                                            <div class="navigation__menu-links">
-                                                                <a href="#" class="navigation__menu-link">Внести деньги на вклад </a>
-                                                                <a href="#" class="navigation__menu-link"> Подобрать вклад </a>
-                                                                <a href="#" class="navigation__menu-link"> Отправить заявку </a>
-                                                            </div>
-                                                            <h5 class="navigation__menu-card-heading">
-                                                                нужен кредит?
-                                                            </h5>
-                                                            <a href="#" class="navigation__menu-large-link">
-                                                                кредитный калькулятор
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                            <div class="product-navigation__layer js-bank-menu-layer">
+                                <div class="product-navigation__card">
+                                    <div class="product-navigation__card-left-col">
+                                        <div class="product-navigation__card-menu product-navigation__card-menu--bank">
+                                            <a href="#" class="product-navigation__card-menu-link">
+                                                Общая информация
+                                            </a>
+                                            <a href="#" class="product-navigation__card-menu-link">
+                                                Реквизиты банка
+                                            </a>
+                                            <a href="#" class="product-navigation__card-menu-link">
+                                                Лицензии и руководство банка
+                                            </a>
+                                            <a href="#" class="product-navigation__card-menu-link">
+                                                Открытая информация
+                                            </a>
+                                            <a href="#" class="product-navigation__card-menu-link">
+                                                Устав
+                                            </a>
+                                            <a href="#" class="product-navigation__card-menu-link">
+                                                Устав
+                                            </a>
                                         </div>
                                     </div>
+                                    <div class="product-navigation__card-right-col"></div>
                                 </div>
                             </div>
                         </div>
@@ -1132,154 +817,682 @@
 
                 <div data-barba="wrapper">
                     <div data-barba="container" data-barba-namespace="home">
-                        <section class="for-business js-for-business">
+                        <section class="flexible-tariffs">
                             <div class="container">
-                                <div class="for-business__row">
-                                    <div class="for-business__left-column">
-                                        <div class="for-business__tabs">
-                                            <div class="for-business__tabs-items">
-                                                <div class="for-business__tabs-item active">
-                                                    <div class="for-business__card">
-                                                        <h4 class="for-business__card-title">
-                                                            Удобный банк для среднего и крупного бизнеса
-                                                        </h4>
-                                                        <div class="for-business__card-text">
-                                                            <p>
-                                                                Выбираете банк для обслуживание? Мы поможем опре- делиться! Выбираете банк для обслуживание? Мы поможем определиться! Выбираете банк для обслуживание?
-                                                            </p>
-                                                        </div>
-                                                        <a href="#" class="for-business__card-link">
-                                                            узнать больше
-                                                            <svg width="8" height="14" aria-hidden="true" class="icon-arrow-right">
-                                                                <use xlink:href="#arrow-right" />
-                                                            </svg>
+                                <div class="inner-container">
+                                    <h2 class="flexible-tariffs__heading">
+                                        Гибкие пакеты
+                                    </h2>
+                                    <p class="flexible-tariffs__remark">
+                                        Мы создали для вас максимально комфортные условия
+                                    </p>
+                                    <div class="flexible-tariffs__content">
+                                        <ul class="flexible-tariffs__list">
+                                            <li class="flexible-tariffs__list-item">
+                                                <div class="flexible-tariffs__card">
+                                                    <img src="img/tariffs/tariffs-1.jpg" alt="" class="flexible-tariffs__card-image" />
+                                                    <h3 class="flexible-tariffs__card-title">
+                                                        Базовый
+                                                    </h3>
+                                                    <div class="flexible-tariffs__card-info">
+                                                        <table>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th>
+                                                                        Абонентская плата
+                                                                    </th>
+                                                                    <td>
+                                                                        <b>
+                                                                            390 ₽ / мес.
+                                                                        </b>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>
+                                                                        Подключение
+                                                                    </th>
+                                                                    <td>
+                                                                        <b>
+                                                                            0 ₽
+                                                                        </b>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>
+                                                                        Платежи
+                                                                    </th>
+                                                                    <td>
+                                                                        <b>
+                                                                            3 бесплатно
+                                                                        </b>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>
+                                                                        Снятие наличных
+                                                                    </th>
+                                                                    <td>
+                                                                        от 1,5%
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>
+                                                                        Внесение наличных по корпоративной карте
+                                                                    </th>
+                                                                    <td>
+                                                                        0 ₽
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>
+                                                                        Перевод физическим лицам
+                                                                    </th>
+                                                                    <td>
+                                                                        от 1,3%
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <div class="flexible-tariffs__card-links">
+                                                        <a href="#" class="flexible-tariffs__card-learn-more">
+                                                            Узнать больше
+                                                        </a>
+                                                        <a href="#" class="flexible-tariffs__card-link">
+                                                            открыть
                                                         </a>
                                                     </div>
                                                 </div>
-                                                <div class="for-business__tabs-item">
-                                                    <div class="for-business__card">
-                                                        <h4 class="for-business__card-title">
-                                                            Удобный банк для среднего и крупного бизнеса 2
-                                                        </h4>
-                                                        <div class="for-business__card-text">
-                                                            <p>
-                                                                Выбираете банк для обслуживание? Мы поможем опре- делиться! Выбираете банк для обслуживание? Мы поможем определиться! Выбираете банк для обслуживание?
-                                                            </p>
-                                                        </div>
-                                                        <a href="#" class="for-business__card-link">
-                                                            узнать больше
-                                                            <svg width="8" height="14" aria-hidden="true" class="icon-arrow-right">
-                                                                <use xlink:href="#arrow-right" />
-                                                            </svg>
+                                            </li>
+                                            <li class="flexible-tariffs__list-item">
+                                                <div class="flexible-tariffs__card flexible-tariffs__card--white">
+                                                    <img src="img/tariffs/tariffs-2.jpg" alt="" class="flexible-tariffs__card-image" />
+                                                    <h3 class="flexible-tariffs__card-title">
+                                                        Комфортный
+                                                    </h3>
+                                                    <div class="flexible-tariffs__card-info">
+                                                        <table>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th>
+                                                                        Абонентская плата
+                                                                    </th>
+                                                                    <td>
+                                                                        <b>
+                                                                            390 ₽ / мес.
+                                                                        </b>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>
+                                                                        Подключение
+                                                                    </th>
+                                                                    <td>
+                                                                        <b>
+                                                                            0 ₽
+                                                                        </b>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>
+                                                                        Платежи
+                                                                    </th>
+                                                                    <td>
+                                                                        <b>
+                                                                            3 бесплатно
+                                                                        </b>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>
+                                                                        Снятие наличных
+                                                                    </th>
+                                                                    <td>
+                                                                        от 1,5%
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>
+                                                                        Внесение наличных по корпоративной карте
+                                                                    </th>
+                                                                    <td>
+                                                                        0 ₽
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>
+                                                                        Перевод физическим лицам
+                                                                    </th>
+                                                                    <td>
+                                                                        от 1,3%
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <div class="flexible-tariffs__card-links">
+                                                        <a href="#" class="flexible-tariffs__card-learn-more">
+                                                            Узнать больше
+                                                        </a>
+                                                        <a href="#" class="flexible-tariffs__card-link">
+                                                            открыть
                                                         </a>
                                                     </div>
                                                 </div>
-                                                <div class="for-business__tabs-item">
-                                                    <div class="for-business__card">
-                                                        <h4 class="for-business__card-title">
-                                                            Удобный банк для среднего и крупного бизнеса 3
-                                                        </h4>
-                                                        <div class="for-business__card-text">
-                                                            <p>
-                                                                Выбираете банк для обслуживание? Мы поможем опре- делиться! Выбираете банк для обслуживание? Мы поможем определиться! Выбираете банк для обслуживание?
-                                                            </p>
-                                                        </div>
-                                                        <a href="#" class="for-business__card-link">
-                                                            узнать больше
-                                                            <svg width="8" height="14" aria-hidden="true" class="icon-arrow-right">
-                                                                <use xlink:href="#arrow-right" />
-                                                            </svg>
+                                            </li>
+                                            <li class="flexible-tariffs__list-item">
+                                                <div class="flexible-tariffs__card flexible-tariffs__card--white">
+                                                    <img src="img/tariffs/tariffs-3.jpg" alt="" class="flexible-tariffs__card-image" />
+                                                    <h3 class="flexible-tariffs__card-title">
+                                                        Мобильный бизнес
+                                                    </h3>
+                                                    <div class="flexible-tariffs__card-info">
+                                                        <table>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th>
+                                                                        Абонентская плата
+                                                                    </th>
+                                                                    <td>
+                                                                        <b>
+                                                                            390 ₽ / мес.
+                                                                        </b>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>
+                                                                        Подключение
+                                                                    </th>
+                                                                    <td>
+                                                                        <b>
+                                                                            0 ₽
+                                                                        </b>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>
+                                                                        Платежи
+                                                                    </th>
+                                                                    <td>
+                                                                        <b>
+                                                                            3 бесплатно
+                                                                        </b>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>
+                                                                        Снятие наличных
+                                                                    </th>
+                                                                    <td>
+                                                                        от 1,5%
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>
+                                                                        Внесение наличных по корпоративной карте
+                                                                    </th>
+                                                                    <td>
+                                                                        0 ₽
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>
+                                                                        Перевод физическим лицам
+                                                                    </th>
+                                                                    <td>
+                                                                        от 1,3%
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <div class="flexible-tariffs__card-links">
+                                                        <a href="#" class="flexible-tariffs__card-learn-more">
+                                                            Узнать больше
+                                                        </a>
+                                                        <a href="#" class="flexible-tariffs__card-link">
+                                                            открыть
                                                         </a>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="for-business__tabs-nav">
-                                                <a href="#" class="for-business__tabs-nav-link active">
-                                                    <span class="for-business__countdown"></span>
-                                                    <div class="for-business__tabs-nav-link-icon-container">
-                                                        <img src="img/for-business/fire.svg" alt="" class="for-business__tabs-nav-link-icon" />
-                                                    </div>
-                                                    Оптимальные проценты
-                                                </a>
-                                                <a href="#" class="for-business__tabs-nav-link">
-                                                    <span class="for-business__countdown"></span>
-                                                    <div class="for-business__tabs-nav-link-icon-container">
-                                                        <img src="img/for-business/ok.svg" alt="" class="for-business__tabs-nav-link-icon" />
-                                                    </div>
-                                                    Индивидуальные кредитные условия
-                                                </a>
-                                                <a href="#" class="for-business__tabs-nav-link">
-                                                    <span class="for-business__countdown"></span>
-                                                    <div class="for-business__tabs-nav-link-icon-container">
-                                                        <img src="img/for-business/bubble.svg" alt="" class="for-business__tabs-nav-link-icon" />
-                                                    </div>
-                                                    Персональный менеджер
-                                                </a>
-                                            </div>
-                                        </div>
+                                            </li>
+                                        </ul>
                                     </div>
-                                    <div class="for-business__right-column">
-                                        <form action="/" method="POST" class="for-business__form">
-                                            <h4 class="for-business__form-title">
-                                                Выбираете банк для обслуживания?
-                                            </h4>
-                                            <p class="for-business__form-text">
-                                                Поможем определиться:
-                                            </p>
 
-                                            <input type="tel" class="for-business__form-input js-phone-input" placeholder="+7" />
-
-                                            <button type="submit" class="for-business__form-submit">
-                                                бесплатная консультация
-                                            </button>
-                                            <p class="for-business__form-remark">
-                                                Нажимая кнопку "Отправить", я соглашаюсь с условиями обработки персональных данных
-                                            </p>
-                                        </form>
+                                    <div class="flexible-tariffs__message">
+                                        * <a href="#">В рамках акции</a> с 05.03.2020 г. по 31.08.2020 г. в течение 6 месяцев с даты подключения. Со стандартными условиями Вы можете ознакомиться в <em>тарифах</em> РКО ЮЛ и ИП.
                                     </div>
                                 </div>
                             </div>
                         </section>
 
-                        <section class="news">
+                        <section class="additional-info">
                             <div class="container">
-                                <div class="news__row">
-                                    <h2 class="news__heading">
-                                        Новости банка
+                                <div class="inner-container">
+                                    <h2 class="additional-info__heading">
+                                        Дополнительная информация
                                     </h2>
-                                    <div class="news__content">
-                                        <ul class="news__list">
-                                            <li class="news__list-item">
-                                                <a href="#" class="news__card">
-                                                    <h4 class="news__card-title">
-                                                        Банк Казани подвел итоги акции «Зима подарков» и определил победителей
-                                                    </h4>
-                                                    <span class="news__card-date">
-                                                        9 октября 2020
-                                                    </span>
-                                                </a>
-                                            </li>
-                                            <li class="news__list-item">
-                                                <a href="#" class="news__card">
-                                                    <h4 class="news__card-title">
-                                                        Банк Казани предупреждает об участившихся случаях мошенничества
-                                                    </h4>
-                                                    <span class="news__card-date">
-                                                        9 октября 2020
-                                                    </span>
-                                                </a>
-                                            </li>
-                                            <li class="news__list-item">
-                                                <a href="#" class="news__card">
-                                                    <h4 class="news__card-title">
-                                                        О временном приостановлении работы ОО «Нижегородский №1»
-                                                    </h4>
-                                                    <span class="news__card-date">
-                                                        9 октября 2020
-                                                    </span>
-                                                </a>
-                                            </li>
-                                        </ul>
+                                    <div class="additional-info__content">
+                                        <div class="additional-info__accordion js-accordion">
+                                            <a href="#" class="additional-info__accordion-btn js-accordion-btn">
+                                                <span class="additional-info__accordion-btn-arrow">
+                                                    <svg width="14" height="8" aria-hidden="true" class="icon-arrow-down">
+                                                        <use xlink:href="#arrow-down" />
+                                                    </svg>
+                                                </span>
+                                                Аффилированные лица и участники банка
+                                            </a>
+                                            <div class="additional-info__accordion-content js-accordion-content">
+                                                <div class="additional-info__accordion-content-inner">
+                                                    <ul class="additional-info__docs-list">
+                                                        <li class="additional-info__docs-list-item">
+                                                            <a href="#" class="additional-info__docs-card">
+                                                                <span class="additional-info__docs-card-icon-container">
+                                                                    <svg width="22" height="28" aria-hidden="true" class="icon-doc">
+                                                                        <use xlink:href="#doc" />
+                                                                    </svg>
+                                                                </span>
+                                                                <div class="additional-info__docs-card-content">
+                                                                    <p>
+                                                                        Лицензия на осуществление банковской деятельности с физическими лицами № 708 от 27 мая 2016 г.
+                                                                        <span class="additional-info__docs-card-meta-size">
+                                                                            pdf, 2,5mb
+                                                                        </span>
+                                                                    </p>
+                                                                </div>
+                                                            </a>
+                                                        </li>
+                                                        <li class="additional-info__docs-list-item">
+                                                            <a href="#" class="additional-info__docs-card">
+                                                                <span class="additional-info__docs-card-icon-container">
+                                                                    <svg width="22" height="28" aria-hidden="true" class="icon-doc">
+                                                                        <use xlink:href="#doc" />
+                                                                    </svg>
+                                                                </span>
+                                                                <div class="additional-info__docs-card-content">
+                                                                    <p>
+                                                                        Лицензия на осуществление банковской деятельности с физическими лицами № 708 от 27 мая 2016 г.
+                                                                        <span class="additional-info__docs-card-meta-size">
+                                                                            pdf, 2,5mb
+                                                                        </span>
+                                                                    </p>
+                                                                </div>
+                                                            </a>
+                                                        </li>
+                                                        <li class="additional-info__docs-list-item">
+                                                            <a href="#" class="additional-info__docs-card">
+                                                                <span class="additional-info__docs-card-icon-container">
+                                                                    <svg width="22" height="28" aria-hidden="true" class="icon-doc">
+                                                                        <use xlink:href="#doc" />
+                                                                    </svg>
+                                                                </span>
+                                                                <div class="additional-info__docs-card-content">
+                                                                    <p>
+                                                                        Лицензия на осуществление банковской деятельности с физическими лицами № 708 от 27 мая 2016 г.
+                                                                        <span class="additional-info__docs-card-meta-size">
+                                                                            pdf, 2,5mb
+                                                                        </span>
+                                                                    </p>
+                                                                </div>
+                                                            </a>
+                                                        </li>
+                                                        <li class="additional-info__docs-list-item">
+                                                            <a href="#" class="additional-info__docs-card">
+                                                                <span class="additional-info__docs-card-icon-container">
+                                                                    <svg width="22" height="28" aria-hidden="true" class="icon-doc">
+                                                                        <use xlink:href="#doc" />
+                                                                    </svg>
+                                                                </span>
+                                                                <div class="additional-info__docs-card-content">
+                                                                    <p>
+                                                                        Лицензия на осуществление банковской деятельности с физическими лицами № 708 от 27 мая 2016 г.
+                                                                        <span class="additional-info__docs-card-meta-size">
+                                                                            pdf, 2,5mb
+                                                                        </span>
+                                                                    </p>
+                                                                </div>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="additional-info__accordion js-accordion">
+                                            <a href="#" class="additional-info__accordion-btn js-accordion-btn">
+                                                <span class="additional-info__accordion-btn-arrow">
+                                                    <svg width="14" height="8" aria-hidden="true" class="icon-arrow-down">
+                                                        <use xlink:href="#arrow-down" />
+                                                    </svg>
+                                                </span>
+                                                Квартальная отчётность
+                                            </a>
+                                            <div class="additional-info__accordion-content js-accordion-content">
+                                                <div class="additional-info__accordion-content-inner">
+                                                    <ul class="additional-info__docs-list">
+                                                        <li class="additional-info__docs-list-item">
+                                                            <a href="#" class="additional-info__docs-card">
+                                                                <span class="additional-info__docs-card-icon-container">
+                                                                    <svg width="22" height="28" aria-hidden="true" class="icon-doc">
+                                                                        <use xlink:href="#doc" />
+                                                                    </svg>
+                                                                </span>
+                                                                <div class="additional-info__docs-card-content">
+                                                                    <p>
+                                                                        Лицензия на осуществление банковской деятельности с физическими лицами № 708 от 27 мая 2016 г.
+                                                                        <span class="additional-info__docs-card-meta-size">
+                                                                            pdf, 2,5mb
+                                                                        </span>
+                                                                    </p>
+                                                                </div>
+                                                            </a>
+                                                        </li>
+                                                        <li class="additional-info__docs-list-item">
+                                                            <a href="#" class="additional-info__docs-card">
+                                                                <span class="additional-info__docs-card-icon-container">
+                                                                    <svg width="22" height="28" aria-hidden="true" class="icon-doc">
+                                                                        <use xlink:href="#doc" />
+                                                                    </svg>
+                                                                </span>
+                                                                <div class="additional-info__docs-card-content">
+                                                                    <p>
+                                                                        Лицензия на осуществление банковской деятельности с физическими лицами № 708 от 27 мая 2016 г.
+                                                                        <span class="additional-info__docs-card-meta-size">
+                                                                            pdf, 2,5mb
+                                                                        </span>
+                                                                    </p>
+                                                                </div>
+                                                            </a>
+                                                        </li>
+                                                        <li class="additional-info__docs-list-item">
+                                                            <a href="#" class="additional-info__docs-card">
+                                                                <span class="additional-info__docs-card-icon-container">
+                                                                    <svg width="22" height="28" aria-hidden="true" class="icon-doc">
+                                                                        <use xlink:href="#doc" />
+                                                                    </svg>
+                                                                </span>
+                                                                <div class="additional-info__docs-card-content">
+                                                                    <p>
+                                                                        Лицензия на осуществление банковской деятельности с физическими лицами № 708 от 27 мая 2016 г.
+                                                                        <span class="additional-info__docs-card-meta-size">
+                                                                            pdf, 2,5mb
+                                                                        </span>
+                                                                    </p>
+                                                                </div>
+                                                            </a>
+                                                        </li>
+                                                        <li class="additional-info__docs-list-item">
+                                                            <a href="#" class="additional-info__docs-card">
+                                                                <span class="additional-info__docs-card-icon-container">
+                                                                    <svg width="22" height="28" aria-hidden="true" class="icon-doc">
+                                                                        <use xlink:href="#doc" />
+                                                                    </svg>
+                                                                </span>
+                                                                <div class="additional-info__docs-card-content">
+                                                                    <p>
+                                                                        Лицензия на осуществление банковской деятельности с физическими лицами № 708 от 27 мая 2016 г.
+                                                                        <span class="additional-info__docs-card-meta-size">
+                                                                            pdf, 2,5mb
+                                                                        </span>
+                                                                    </p>
+                                                                </div>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="additional-info__accordion js-accordion">
+                                            <a href="#" class="additional-info__accordion-btn js-accordion-btn">
+                                                <span class="additional-info__accordion-btn-arrow">
+                                                    <svg width="14" height="8" aria-hidden="true" class="icon-arrow-down">
+                                                        <use xlink:href="#arrow-down" />
+                                                    </svg>
+                                                </span>
+                                                Отчётность по РСБУ
+                                            </a>
+                                            <div class="additional-info__accordion-content js-accordion-content">
+                                                <div class="additional-info__accordion-content-inner">
+                                                    <ul class="additional-info__docs-list">
+                                                        <li class="additional-info__docs-list-item">
+                                                            <a href="#" class="additional-info__docs-card">
+                                                                <span class="additional-info__docs-card-icon-container">
+                                                                    <svg width="22" height="28" aria-hidden="true" class="icon-doc">
+                                                                        <use xlink:href="#doc" />
+                                                                    </svg>
+                                                                </span>
+                                                                <div class="additional-info__docs-card-content">
+                                                                    <p>
+                                                                        Лицензия на осуществление банковской деятельности с физическими лицами № 708 от 27 мая 2016 г.
+                                                                        <span class="additional-info__docs-card-meta-size">
+                                                                            pdf, 2,5mb
+                                                                        </span>
+                                                                    </p>
+                                                                </div>
+                                                            </a>
+                                                        </li>
+                                                        <li class="additional-info__docs-list-item">
+                                                            <a href="#" class="additional-info__docs-card">
+                                                                <span class="additional-info__docs-card-icon-container">
+                                                                    <svg width="22" height="28" aria-hidden="true" class="icon-doc">
+                                                                        <use xlink:href="#doc" />
+                                                                    </svg>
+                                                                </span>
+                                                                <div class="additional-info__docs-card-content">
+                                                                    <p>
+                                                                        Лицензия на осуществление банковской деятельности с физическими лицами № 708 от 27 мая 2016 г.
+                                                                        <span class="additional-info__docs-card-meta-size">
+                                                                            pdf, 2,5mb
+                                                                        </span>
+                                                                    </p>
+                                                                </div>
+                                                            </a>
+                                                        </li>
+                                                        <li class="additional-info__docs-list-item">
+                                                            <a href="#" class="additional-info__docs-card">
+                                                                <span class="additional-info__docs-card-icon-container">
+                                                                    <svg width="22" height="28" aria-hidden="true" class="icon-doc">
+                                                                        <use xlink:href="#doc" />
+                                                                    </svg>
+                                                                </span>
+                                                                <div class="additional-info__docs-card-content">
+                                                                    <p>
+                                                                        Лицензия на осуществление банковской деятельности с физическими лицами № 708 от 27 мая 2016 г.
+                                                                        <span class="additional-info__docs-card-meta-size">
+                                                                            pdf, 2,5mb
+                                                                        </span>
+                                                                    </p>
+                                                                </div>
+                                                            </a>
+                                                        </li>
+                                                        <li class="additional-info__docs-list-item">
+                                                            <a href="#" class="additional-info__docs-card">
+                                                                <span class="additional-info__docs-card-icon-container">
+                                                                    <svg width="22" height="28" aria-hidden="true" class="icon-doc">
+                                                                        <use xlink:href="#doc" />
+                                                                    </svg>
+                                                                </span>
+                                                                <div class="additional-info__docs-card-content">
+                                                                    <p>
+                                                                        Лицензия на осуществление банковской деятельности с физическими лицами № 708 от 27 мая 2016 г.
+                                                                        <span class="additional-info__docs-card-meta-size">
+                                                                            pdf, 2,5mb
+                                                                        </span>
+                                                                    </p>
+                                                                </div>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="additional-info__accordion js-accordion">
+                                            <a href="#" class="additional-info__accordion-btn js-accordion-btn">
+                                                <span class="additional-info__accordion-btn-arrow">
+                                                    <svg width="14" height="8" aria-hidden="true" class="icon-arrow-down">
+                                                        <use xlink:href="#arrow-down" />
+                                                    </svg>
+                                                </span>
+                                                Отчётность по МСФО
+                                            </a>
+                                            <div class="additional-info__accordion-content js-accordion-content">
+                                                <div class="additional-info__accordion-content-inner">
+                                                    <ul class="additional-info__docs-list">
+                                                        <li class="additional-info__docs-list-item">
+                                                            <a href="#" class="additional-info__docs-card">
+                                                                <span class="additional-info__docs-card-icon-container">
+                                                                    <svg width="22" height="28" aria-hidden="true" class="icon-doc">
+                                                                        <use xlink:href="#doc" />
+                                                                    </svg>
+                                                                </span>
+                                                                <div class="additional-info__docs-card-content">
+                                                                    <p>
+                                                                        Лицензия на осуществление банковской деятельности с физическими лицами № 708 от 27 мая 2016 г.
+                                                                        <span class="additional-info__docs-card-meta-size">
+                                                                            pdf, 2,5mb
+                                                                        </span>
+                                                                    </p>
+                                                                </div>
+                                                            </a>
+                                                        </li>
+                                                        <li class="additional-info__docs-list-item">
+                                                            <a href="#" class="additional-info__docs-card">
+                                                                <span class="additional-info__docs-card-icon-container">
+                                                                    <svg width="22" height="28" aria-hidden="true" class="icon-doc">
+                                                                        <use xlink:href="#doc" />
+                                                                    </svg>
+                                                                </span>
+                                                                <div class="additional-info__docs-card-content">
+                                                                    <p>
+                                                                        Лицензия на осуществление банковской деятельности с физическими лицами № 708 от 27 мая 2016 г.
+                                                                        <span class="additional-info__docs-card-meta-size">
+                                                                            pdf, 2,5mb
+                                                                        </span>
+                                                                    </p>
+                                                                </div>
+                                                            </a>
+                                                        </li>
+                                                        <li class="additional-info__docs-list-item">
+                                                            <a href="#" class="additional-info__docs-card">
+                                                                <span class="additional-info__docs-card-icon-container">
+                                                                    <svg width="22" height="28" aria-hidden="true" class="icon-doc">
+                                                                        <use xlink:href="#doc" />
+                                                                    </svg>
+                                                                </span>
+                                                                <div class="additional-info__docs-card-content">
+                                                                    <p>
+                                                                        Лицензия на осуществление банковской деятельности с физическими лицами № 708 от 27 мая 2016 г.
+                                                                        <span class="additional-info__docs-card-meta-size">
+                                                                            pdf, 2,5mb
+                                                                        </span>
+                                                                    </p>
+                                                                </div>
+                                                            </a>
+                                                        </li>
+                                                        <li class="additional-info__docs-list-item">
+                                                            <a href="#" class="additional-info__docs-card">
+                                                                <span class="additional-info__docs-card-icon-container">
+                                                                    <svg width="22" height="28" aria-hidden="true" class="icon-doc">
+                                                                        <use xlink:href="#doc" />
+                                                                    </svg>
+                                                                </span>
+                                                                <div class="additional-info__docs-card-content">
+                                                                    <p>
+                                                                        Лицензия на осуществление банковской деятельности с физическими лицами № 708 от 27 мая 2016 г.
+                                                                        <span class="additional-info__docs-card-meta-size">
+                                                                            pdf, 2,5mb
+                                                                        </span>
+                                                                    </p>
+                                                                </div>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="additional-info__accordion js-accordion">
+                                            <a href="#" class="additional-info__accordion-btn js-accordion-btn">
+                                                <span class="additional-info__accordion-btn-arrow">
+                                                    <svg width="14" height="8" aria-hidden="true" class="icon-arrow-down">
+                                                        <use xlink:href="#arrow-down" />
+                                                    </svg>
+                                                </span>
+                                                Аффилированные лица и участники банка
+                                            </a>
+                                            <div class="additional-info__accordion-content js-accordion-content">
+                                                <div class="additional-info__accordion-content-inner">
+                                                    <ul class="additional-info__docs-list">
+                                                        <li class="additional-info__docs-list-item">
+                                                            <a href="#" class="additional-info__docs-card">
+                                                                <span class="additional-info__docs-card-icon-container">
+                                                                    <svg width="22" height="28" aria-hidden="true" class="icon-doc">
+                                                                        <use xlink:href="#doc" />
+                                                                    </svg>
+                                                                </span>
+                                                                <div class="additional-info__docs-card-content">
+                                                                    <p>
+                                                                        Лицензия на осуществление банковской деятельности с физическими лицами № 708 от 27 мая 2016 г.
+                                                                        <span class="additional-info__docs-card-meta-size">
+                                                                            pdf, 2,5mb
+                                                                        </span>
+                                                                    </p>
+                                                                </div>
+                                                            </a>
+                                                        </li>
+                                                        <li class="additional-info__docs-list-item">
+                                                            <a href="#" class="additional-info__docs-card">
+                                                                <span class="additional-info__docs-card-icon-container">
+                                                                    <svg width="22" height="28" aria-hidden="true" class="icon-doc">
+                                                                        <use xlink:href="#doc" />
+                                                                    </svg>
+                                                                </span>
+                                                                <div class="additional-info__docs-card-content">
+                                                                    <p>
+                                                                        Лицензия на осуществление банковской деятельности с физическими лицами № 708 от 27 мая 2016 г.
+                                                                        <span class="additional-info__docs-card-meta-size">
+                                                                            pdf, 2,5mb
+                                                                        </span>
+                                                                    </p>
+                                                                </div>
+                                                            </a>
+                                                        </li>
+                                                        <li class="additional-info__docs-list-item">
+                                                            <a href="#" class="additional-info__docs-card">
+                                                                <span class="additional-info__docs-card-icon-container">
+                                                                    <svg width="22" height="28" aria-hidden="true" class="icon-doc">
+                                                                        <use xlink:href="#doc" />
+                                                                    </svg>
+                                                                </span>
+                                                                <div class="additional-info__docs-card-content">
+                                                                    <p>
+                                                                        Лицензия на осуществление банковской деятельности с физическими лицами № 708 от 27 мая 2016 г.
+                                                                        <span class="additional-info__docs-card-meta-size">
+                                                                            pdf, 2,5mb
+                                                                        </span>
+                                                                    </p>
+                                                                </div>
+                                                            </a>
+                                                        </li>
+                                                        <li class="additional-info__docs-list-item">
+                                                            <a href="#" class="additional-info__docs-card">
+                                                                <span class="additional-info__docs-card-icon-container">
+                                                                    <svg width="22" height="28" aria-hidden="true" class="icon-doc">
+                                                                        <use xlink:href="#doc" />
+                                                                    </svg>
+                                                                </span>
+                                                                <div class="additional-info__docs-card-content">
+                                                                    <p>
+                                                                        Лицензия на осуществление банковской деятельности с физическими лицами № 708 от 27 мая 2016 г.
+                                                                        <span class="additional-info__docs-card-meta-size">
+                                                                            pdf, 2,5mb
+                                                                        </span>
+                                                                    </p>
+                                                                </div>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -2233,52 +2446,6 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                        </section>
-
-                        <section class="rating rating--with-border">
-                            <div class="container">
-                                <div class="rating__row">
-                                    <h2 class="rating__heading">
-                                        Оцените нашу новую главную страницу
-                                    </h2>
-                                    <form action="/" method="POST" class="rating__form js-rating-stars">
-                                        <label class="rating__form-star">
-                                            <input type="checkbox" class="rating__form-star-input" name="rating" checked />
-                                            <svg width="40" height="40" aria-hidden="true" class="icon-star">
-                                                <use xlink:href="#star" />
-                                            </svg>
-                                        </label>
-                                        <label class="rating__form-star">
-                                            <input type="checkbox" class="rating__form-star-input" name="rating" checked />
-                                            <svg width="40" height="40" aria-hidden="true" class="icon-star">
-                                                <use xlink:href="#star" />
-                                            </svg>
-                                        </label>
-                                        <label class="rating__form-star">
-                                            <input type="checkbox" class="rating__form-star-input" name="rating" checked />
-                                            <svg width="40" height="40" aria-hidden="true" class="icon-star">
-                                                <use xlink:href="#star" />
-                                            </svg>
-                                        </label>
-                                        <label class="rating__form-star">
-                                            <input type="checkbox" class="rating__form-star-input" name="rating" />
-                                            <svg width="40" height="40" aria-hidden="true" class="icon-star">
-                                                <use xlink:href="#star" />
-                                            </svg>
-                                        </label>
-                                        <label class="rating__form-star">
-                                            <input type="checkbox" class="rating__form-star-input" name="rating" />
-                                            <svg width="40" height="40" aria-hidden="true" class="icon-star">
-                                                <use xlink:href="#star" />
-                                            </svg>
-                                        </label>
-                                        <input type="hidden" name="total-rating" class="rating__form-total-rating" />
-                                        <button type="submit" class="rating__form-submit">
-                                            Оставить отзыв
-                                        </button>
-                                    </form>
                                 </div>
                             </div>
                         </section>
