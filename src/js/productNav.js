@@ -123,7 +123,7 @@ export default function() {
                 if (!link.classList.contains('active')) {
                     handleMenuClick(linkIndex);
                 } else {
-                    closeInnerMenu();
+                    // closeInnerMenu();
                 }
             });
         });
@@ -131,6 +131,7 @@ export default function() {
         closeMenuBtn.addEventListener('click', event => {
             event.preventDefault();
             closeInnerMenu();
+            selectCategory(initialActiveCategory);
         });
 
         aboutBankLink.addEventListener('click', event => {
