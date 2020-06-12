@@ -17,7 +17,6 @@ import scrollAnimations from './scrollAnimations';
 import accordions from './accordions';
 import rkoFeatures from './rkoFeatures';
 
-
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
     detectTouch();
@@ -28,7 +27,6 @@ document.addEventListener('DOMContentLoaded', function() {
     accordions();
     rkoFeatures();
     barba.init({
-        
         transitions: [
             {
                 name: 'opacity-transition',
@@ -39,7 +37,6 @@ document.addEventListener('DOMContentLoaded', function() {
                             duration: 0.15,
                             onComplete: () => {
                                 gsap.set(data.current.container, {
-                               
                                     display: 'none'
                                 });
                                 resolve();
@@ -65,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 namespace: 'home',
 
                 beforeLeave() {
-                    console.log('Before leave')
+                    // console.log('Before leave');
                     ratingStars.destroy();
                     phoneMask.destroy();
                     tabs.destroy();
@@ -74,10 +71,14 @@ document.addEventListener('DOMContentLoaded', function() {
                     customSelects.destroy();
                     forBusiness.destroy();
                     document.body.classList.add('category-toggles-off');
+
+                    if (window.destroyBackendScripts && typeof window.destroyBackendScripts === 'function') {
+                        window.destroyBackendScripts();
+                    }
                 },
 
                 afterEnter() {
-                    console.log('After enter')
+                    // console.log('After enter');
                     ratingStars.init();
                     phoneMask.init();
                     tabs.init();
@@ -86,6 +87,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     productsSlider.init();
                     forBusiness.init();
                     document.body.classList.remove('category-toggles-off');
+
+                    if (window.initBackendScripts && typeof window.initBackendScripts === 'function') {
+                        window.initBackendScripts();
+                    } 
                 }
             }
         ]

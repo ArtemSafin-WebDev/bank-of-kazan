@@ -1830,7 +1830,8 @@ img.lazyload:not([src]) {
           display: grid;
           grid-template-areas: 'firstnav secondnav' 'info info' 'contacts contacts' 'license license' 'vision vision' 'madeby madeby';
           grid-template-columns: repeat(2, minmax(0, 1fr));
-          grid-gap: 3rem; } } }
+          grid-gap: 3rem;
+          grid-row-gap: 2rem; } } }
 
 .page-footer__col {
   width: 33.33%;
@@ -1868,10 +1869,10 @@ img.lazyload:not([src]) {
   @media only screen and (max-width: 767px) {
     .page-footer__col--low-vision {
       width: 100%;
-      grid-area: vision; }
-      @supports (display: contents) and (display: grid) {
-        .page-footer__col--low-vision {
-          display: contents; } } }
+      grid-area: vision;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start; } }
   @media only screen and (max-width: 767px) {
     .page-footer__col--info {
       -webkit-box-ordinal-group: 2;
@@ -1927,32 +1928,46 @@ img.lazyload:not([src]) {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between; } }
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; } }
 
-.page-footer__contacts-phone {
+.page-footer__contacts-phone-block {
+  margin-bottom: 3.5rem; }
+  @media only screen and (max-width: 767px) {
+    .page-footer__contacts-phone-block {
+      margin-bottom: 1.5rem; } }
+
+.page-footer__contacts-phone-link {
   font-weight: 500;
   font-size: 3.2rem;
   line-height: 1.2;
-  margin-bottom: 3.5rem;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
   -webkit-transition: color 0.2s;
-  transition: color 0.2s; }
-  .page-footer__contacts-phone:link, .page-footer__contacts-phone:visited {
+  transition: color 0.2s;
+  margin-bottom: .5rem; }
+  .page-footer__contacts-phone-link:link, .page-footer__contacts-phone-link:visited {
     color: inherit; }
-  .no-touch .page-footer__contacts-phone:hover,
-  .touch .page-footer__contacts-phone:active {
+  .no-touch .page-footer__contacts-phone-link:hover,
+  .touch .page-footer__contacts-phone-link:active {
     color: var(--primary-color); }
   @media only screen and (max-width: 767px) {
-    .page-footer__contacts-phone {
+    .page-footer__contacts-phone-link {
       font-size: 2rem;
       line-height: 1.2;
       margin: 0; } }
+
+.page-footer__contacts-phone-free-call {
+  font-size: 1.6rem;
+  line-height: 120%;
+  color: #a5a5a5; }
+  @media only screen and (max-width: 767px) {
+    .page-footer__contacts-phone-free-call {
+      font-size: 1rem;
+      line-height: 1.2; } }
 
 .page-footer__social-list {
   display: -webkit-box;
@@ -2007,9 +2022,9 @@ img.lazyload:not([src]) {
   margin-bottom: 2rem; }
   @media only screen and (max-width: 767px) {
     .page-footer__internet-bank-title {
-      font-size: 1.2rem;
+      font-size: 1.6rem;
       line-height: 1.2;
-      margin-bottom: 1rem; } }
+      margin-bottom: 1.5rem; } }
 
 .page-footer__internet-bank-download-link {
   display: inline-block;
@@ -2164,13 +2179,25 @@ img.lazyload:not([src]) {
   width: 8.8rem;
   height: auto;
   position: relative;
-  bottom: -0.85rem;
+  bottom: -.95rem;
   margin-left: 1.6rem; }
   @media only screen and (max-width: 767px) {
     .page-footer__made-by-logo {
       width: 8rem;
       margin-left: 0.8rem;
       bottom: -0.8rem; } }
+
+.page-footer__low-vision {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
 
 .page-footer__low-vision-link {
   display: -webkit-inline-box;
@@ -2192,7 +2219,8 @@ img.lazyload:not([src]) {
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
-          user-select: none; }
+          user-select: none;
+  margin-bottom: 1.5rem; }
   .page-footer__low-vision-link:link, .page-footer__low-vision-link:visited {
     color: white; }
   .page-footer__low-vision-link svg {
@@ -2214,7 +2242,25 @@ img.lazyload:not([src]) {
     .page-footer__low-vision-link {
       font-size: 1.2rem;
       line-height: 1.2;
-      padding: 1rem 1.3rem; } }
+      padding: 1rem 1.3rem;
+      margin-bottom: 0.8rem; } }
+
+.page-footer__old-site-link {
+  font-size: 1.6rem;
+  line-height: 120%;
+  color: #a5a5a5;
+  margin-top: auto;
+  -webkit-transition: color .2s;
+  transition: color .2s; }
+  .page-footer__old-site-link:link, .page-footer__old-site-link:visited {
+    color: #a5a5a5; }
+  .no-touch .page-footer__old-site-link:hover,
+  .touch .page-footer__old-site-link:active {
+    color: var(--primary-color); }
+  @media only screen and (max-width: 767px) {
+    .page-footer__old-site-link {
+      font-size: 1rem;
+      line-height: 1.2; } }
 
 .page-header {
   position: absolute;
@@ -5068,7 +5114,8 @@ img.lazyload:not([src]) {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  overflow: hidden; }
+  overflow: hidden;
+  z-index: 1; }
   .currency__info:link, .currency__info:visited {
     color: white; }
   @media only screen and (max-width: 767px) {
@@ -5082,6 +5129,7 @@ img.lazyload:not([src]) {
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: -1;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: top;
@@ -5093,10 +5141,21 @@ img.lazyload:not([src]) {
   font-size: 2.4rem;
   line-height: 120%;
   position: relative;
-  z-index: 20; }
+  z-index: 20;
+  margin-bottom: 2.9rem; }
   @media only screen and (max-width: 767px) {
     .currency__info-heading {
       font-size: 2.2rem; } }
+
+.currency__app-link {
+  display: block;
+  margin-bottom: 1.3rem; }
+  .currency__app-link:last-child {
+    margin-bottom: 0; }
+  .currency__app-link img {
+    display: block;
+    height: 5.4rem;
+    width: auto; }
 
 .callback {
   background-color: #f5f5f5;
@@ -5537,7 +5596,7 @@ img.lazyload:not([src]) {
   text-transform: uppercase;
   line-height: 120%;
   color: white;
-  padding: 2.4rem 2.6rem;
+  padding: 2.1rem 2.6rem;
   -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s; }
   .calculator__converter-apply-btn:link, .calculator__converter-apply-btn:visited {

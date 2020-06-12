@@ -63,6 +63,7 @@
             grid-template-areas: 'firstnav secondnav' 'info info' 'contacts contacts' 'license license' 'vision vision' 'madeby madeby';
             grid-template-columns: repeat(2, minmax(0, 1fr));
             grid-gap: 3rem;
+            grid-row-gap: 2rem;
         }
     }
 }
@@ -111,9 +112,10 @@
         @include breakpoint(mobile) {
             width: 100%;
             grid-area: vision;
-            @supports (display: contents) and (display: grid) {
-                display: contents;
-            }
+            align-items: flex-start;
+            // @supports (display: contents) and (display: grid) {
+            //     display: contents;
+            // }
         }
     }
 
@@ -181,18 +183,26 @@
 .page-footer__contacts {
     @include breakpoint(mobile) {
         display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+        flex-direction: column;
     }
 }
 
-.page-footer__contacts-phone {
+
+.page-footer__contacts-phone-block {
+    margin-bottom: 3.5rem;
+    @include breakpoint(mobile) {
+        margin-bottom: 1.5rem;
+    }
+}
+
+.page-footer__contacts-phone-link {
     font-weight: 500;
     font-size: 3.2rem;
     line-height: 1.2;
-    margin-bottom: 3.5rem;
+    
     display: inline-flex;
     transition: color 0.2s;
+    margin-bottom: .5rem;
     &:link,
     &:visited {
         color: inherit;
@@ -207,6 +217,17 @@
         font-size: 2rem;
         line-height: 1.2;
         margin: 0;
+    }
+}
+
+
+.page-footer__contacts-phone-free-call {
+    font-size: 1.6rem;
+    line-height: 120%;
+    color: #a5a5a5;
+    @include breakpoint(mobile) {
+        font-size: 1rem;
+        line-height: 1.2;
     }
 }
 
@@ -267,9 +288,9 @@
     margin-bottom: 2rem;
 
     @include breakpoint(mobile) {
-        font-size: 1.2rem;
+        font-size: 1.6rem;
         line-height: 1.2;
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
     }
 }
 
@@ -437,7 +458,7 @@
     width: 8.8rem;
     height: auto;
     position: relative;
-    bottom: -0.85rem;
+    bottom: -.95rem;
     margin-left: 1.6rem;
 
     @include breakpoint(mobile) {
@@ -445,6 +466,12 @@
         margin-left: 0.8rem;
         bottom: -0.8rem;
     }
+}
+
+.page-footer__low-vision {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .page-footer__low-vision-link {
@@ -460,6 +487,7 @@
     transition: background-color 0.2s;
     white-space: nowrap;
     user-select: none;
+    margin-bottom: 1.5rem;
     &:link,
     &:visited {
         color: white;
@@ -487,5 +515,30 @@
         font-size: 1.2rem;
         line-height: 1.2;
         padding: 1rem 1.3rem;
+        margin-bottom: 0.8rem;
+    }
+}
+
+
+.page-footer__old-site-link {
+    font-size: 1.6rem;
+    line-height: 120%;
+    color: #a5a5a5;
+    margin-top: auto;
+    transition: color .2s;
+    &:link,
+    &:visited {
+        color: #a5a5a5;
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        color: var(--primary-color);
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 1rem;
+        line-height: 1.2;
+       
     }
 }

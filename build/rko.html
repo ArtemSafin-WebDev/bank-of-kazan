@@ -2583,9 +2583,15 @@
                         </div>
                         <div class="page-footer__col page-footer__col--contacts">
                             <div class="page-footer__contacts">
-                                <a href="tel:+78007751877" class="page-footer__contacts-phone">
-                                    8-800-77-518-77
-                                </a>
+                                <div class="page-footer__contacts-phone-block">
+                                    <a href="tel:+78007751877" class="page-footer__contacts-phone-link">
+                                        8-800-77-518-77
+                                    </a>
+                                    <p class="page-footer__contacts-phone-free-call">
+                                        Звонок по России бесплатный
+                                    </p>
+                                </div>
+
                                 <ul class="page-footer__social-list">
                                     <li class="page-footer__social-list-item">
                                         <a href="#" class="page-footer__social-link">
@@ -2640,6 +2646,9 @@
                                     </svg>
                                     Версия для слабовидящих
                                 </a>
+                                <a href="#" class="page-footer__old-site-link">
+                                    Перейти на старую версию сайта
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -2647,6 +2656,14 @@
             </footer>
 
             <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script>
+                function initBackendScripts() {
+                    console.log('Здесь прописываем инициализацию скриптов для бэкенда');
+                }
+                function destroyBackendScripts() {
+                    console.log('Здесь прописываем подчистку скриптов для бэкенда');
+                }
+            </script>
             <script src="js/app.js"></script>
         </div>
     </body>

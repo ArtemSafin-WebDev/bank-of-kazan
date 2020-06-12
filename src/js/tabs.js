@@ -25,10 +25,7 @@ function init() {
 
             const heightAfter = parseFloat(window.getComputedStyle(element).getPropertyValue('height'));
 
-            console.log({
-                heightBefore,
-                heightAfter
-            });
+          
 
             gsap.fromTo(
                 element,

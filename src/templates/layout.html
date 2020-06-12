@@ -29,6 +29,14 @@
             {% include "partials/footer.html" %}
 
             <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script>
+                function initBackendScripts() {
+                    console.log('Здесь прописываем инициализацию скриптов для бэкенда')
+                }
+                function destroyBackendScripts() {
+                    console.log('Здесь прописываем подчистку скриптов для бэкенда')
+                }
+            </script>
             <script src="js/app.js"></script>
         </div>
     </body>
