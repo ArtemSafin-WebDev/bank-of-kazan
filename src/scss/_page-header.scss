@@ -78,7 +78,7 @@
 
     .dark-nav-text & {
         @include placeholder {
-            color: rgba(black, .3);
+            color: rgba(black, 0.3);
         }
     }
 }
@@ -87,12 +87,14 @@
     flex-shrink: 0;
     margin-left: 1rem;
     svg {
-        fill: currentColor;
+        fill: white;
         width: 1.5rem;
         height: 1.5rem;
+
+        .dark-nav-text & {
+            color: black;
+        }
     }
-
-
 }
 
 .page-header__mobile-nav-block {
@@ -111,7 +113,7 @@
     margin-bottom: 2.2rem;
 
     .dark-nav-text & {
-        border-color: rgba(black, .5);
+        border-color: rgba(black, 0.5);
     }
 }
 
@@ -134,7 +136,10 @@
 
 .page-header__row {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    @include breakpoint(mobile) {
+        align-items: center;
+    }
 }
 
 .page-header__burger-btn {
@@ -180,7 +185,8 @@
 }
 
 .page-header__selects {
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: 4rem;
     display: flex;
     align-items: center;
     & > *:last-child {
@@ -313,6 +319,7 @@
     flex-direction: column;
     margin-right: 1.5rem;
     flex-shrink: 0;
+    margin-bottom: 0.1em;
     & > span {
         width: 14px;
         height: 2px;
@@ -350,15 +357,16 @@
         & > span {
             background-color: var(--primary-color);
         }
-       
     }
 }
 
 .page-header__phone-link {
     font-weight: 500;
     font-size: 3rem;
-    line-height: 1.2;
-    margin-right: 3.5rem;
+    line-height: 1;
+    margin-top: -0.1em;
+    margin-bottom: 1.2rem;
+    white-space: nowrap;
     transition: color 0.2s;
     position: relative;
     z-index: 220;
@@ -381,7 +389,7 @@
 
     @include breakpoint(mobile) {
         font-size: 1.4rem;
-        margin-right: 1.8rem;
+        margin: 0;
     }
 }
 
@@ -389,6 +397,16 @@
     position: relative;
     cursor: default;
     z-index: 220;
+    margin-right: 2rem;
+    &:last-child {
+        margin-right: 0;
+    }
+
+    &--cards {
+        @include breakpoint(mobile) {
+            display: none;
+        }
+    }
     &:hover {
         .page-header__online-bank-dropdown {
             opacity: 1;
@@ -399,6 +417,10 @@
         .page-header__online-bank-link {
             background-color: rgba(white, 0.2);
         }
+    }
+
+    @include breakpoint(mobile) {
+        margin: 0;
     }
 }
 
@@ -454,7 +476,6 @@
     }
 }
 
-.page-header__offices-link,
 .page-header__online-bank-link {
     display: flex;
     align-items: center;
@@ -465,7 +486,7 @@
     font-weight: 500;
     font-size: 1.6rem;
     line-height: 1.2;
-
+    white-space: nowrap;
     transition: border-color 0.2s, background-color 0.2s;
 
     &:last-child {
@@ -503,7 +524,7 @@
 
     .no-touch.dark-nav-text &:hover,
     .touch.dark-nav-text &:active {
-        background-color: rgba(white, .4);
+        background-color: rgba(white, 0.4);
     }
 
     @include breakpoint(mobile) {
@@ -514,8 +535,36 @@
     }
 }
 
+
+.page-header__phone-block {
+    margin-right: 6.3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    @include breakpoint(mobile) {
+        margin-right: 2rem;
+        margin-left: auto;
+    }
+}
+
 .page-header__offices-link {
-    margin-right: 1.7rem;
+    
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    text-transform: uppercase;
+    transition: color .2s;
+    &:link,
+    &:visited {
+        color: #ffffff;
+    }
+
+
+    .no-touch &:hover,
+    .touch &:active {
+        color: var(--primary-color);
+    }
 }
 
 .page-header__offices-link {

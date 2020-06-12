@@ -7,6 +7,8 @@
     @include breakpoint(mobile) {
         padding-bottom: 9rem;
         padding-top: 2.2rem;
+
+        padding-bottom: 5rem;
     }
 }
 
@@ -83,7 +85,6 @@
     &--nav-1 {
         @include breakpoint(mobile) {
             grid-area: firstnav;
-           
         }
     }
     &--nav-2 {
@@ -103,7 +104,6 @@
         @include breakpoint(mobile) {
             width: 100%;
             grid-area: contacts;
-           
         }
     }
 
@@ -140,8 +140,6 @@
         margin-bottom: 1.8rem;
     }
 }
-
-
 
 .page-footer__nav-menu-list-item {
     margin-bottom: 1.5rem;
@@ -256,25 +254,92 @@
     }
 }
 
-.page-footer__offices-link {
+.page-footer__internet-bank {
+    margin-top: 3rem;
+   
+}
+
+.page-footer__internet-bank-title {
     font-weight: 500;
     font-size: 2.2rem;
     line-height: 120%;
     transition: color 0.2s;
-    &:link,
-    &:visited {
-        color: inherit;
-    }
-
-    .no-touch &:hover,
-    .touch &:active {
-        color: var(--primary-color);
-    }
+    margin-bottom: 2rem;
 
     @include breakpoint(mobile) {
         font-size: 1.2rem;
         line-height: 1.2;
-        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+}
+
+
+.page-footer__internet-bank-download-link {
+    display: inline-block;
+    margin-right: 1.5rem;
+    
+    img {
+        display: block;
+        height: 5.2rem;
+        width: auto;
+        max-width: 100%;
+        @include objectFitContain();
+
+        @include breakpoint(mobile) {
+            height: 3.5rem;
+        }
+    }
+
+    @include breakpoint(mobile) {
+        margin-right: 1rem;
+    }
+}
+.page-footer__offices-link {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 2rem 2.8rem;
+    border-radius: 1rem;
+    display: inline-flex;
+    text-transform: uppercase;
+    align-items: center;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 120%;
+    margin-top: auto;
+    transition: background-color 0.3s;
+
+    svg {
+        width: 0.9rem;
+        height: 1.4rem;
+        flex-shrink: 0;
+        fill: white;
+        margin-left: 2rem;
+        @include breakpoint(mobile) {
+            width: 0.6rem;
+            height: 1.2rem;
+            margin-left: 1rem;
+        }
+    }
+
+    &:link,
+    &:visited {
+        color: white;
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        background-color: var(--secondary-color);
+    }
+
+    @include breakpoint(mobile) {
+        font-weight: 500;
+        font-size: 1rem;
+        right: 0;
+        line-height: 120%;
+        margin-right: auto;
+        border-radius: 0.4rem;
+        padding: 1.4rem 1.5rem;
+        margin-top: 2rem;
     }
 }
 
@@ -312,7 +377,6 @@
     align-items: flex-end;
     flex-wrap: wrap;
 
-
     @include breakpoint(mobile) {
         @supports (display: contents) and (display: grid) {
             display: contents;
@@ -343,7 +407,6 @@
 
         @supports (display: contents) and (display: grid) {
             margin: 0;
-            
         }
     }
 }
@@ -366,7 +429,6 @@
         @supports (display: contents) and (display: grid) {
             display: flex;
             justify-content: flex-end;
-            
         }
     }
 }
