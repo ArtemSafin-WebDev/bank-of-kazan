@@ -3,8 +3,9 @@ export default function() {
 
     productNavElements.forEach(element => {
         const categoryLinks = Array.from(element.querySelectorAll('.js-product-nav-category-link'));
-        const menuLinks = Array.from(element.querySelectorAll('.js-product-nav-menu-link'));
+
         const categoryLayers = Array.from(element.querySelectorAll('.js-product-nav-layer'));
+        const menuLinks = Array.from(element.querySelectorAll('.js-product-nav-menu-link'));
         const menuItems = Array.from(element.querySelectorAll('.js-product-nav-menu-item'));
         const searchForm = element.querySelector('.js-product-navigation-search-form');
         const searchBtn = element.querySelector('.js-product-nav-search-btn');
@@ -12,11 +13,24 @@ export default function() {
         const closeMenuBtn = element.querySelector('.js-product-nav-close');
         const aboutBankLink = document.querySelector('.page-header__about-bank-link');
         const bankMenuLayer = element.querySelector('.js-bank-menu-layer');
+        const productInfoItem = element.querySelector('.js-product-info-item');
         let searchFormOpen = false;
         let bankMenuOpen = false;
         let categoryIndex = categoryLayers.findIndex(element => element.classList.contains('active'));
-        let initialActiveNavLink = menuLinks.findIndex(element => element.classList.contains('active'));
-        let initialActiveCategory = categoryLinks.findIndex(element => element.classList.contains('active'));
+
+        if (categoryIndex === -1) {
+            categoryIndex = 0;
+            console.error('No active category index detected');
+        }
+        let initialActiveCategory = categoryIndex;
+
+        let standardInitialActiveLink = menuLinks.find(link => {
+            return link.classList.contains('active') && !categoryLayers[initialActiveCategory].contains(link);
+        });
+
+        // let mainMenuActiveLink = menuLinks.findIndex(link => {
+        //     return link.classList.contains('active') && categoryLayers[initialActiveCategory].contains(link);
+        // });
 
         console.log('Menu items', menuItems);
         console.log('Menu btns', menuLinks);
@@ -67,14 +81,7 @@ export default function() {
             menuLinks.forEach(link => link.classList.remove('active'));
             menuItems.forEach(item => item.classList.remove('active'));
             element.classList.remove('product-nav-menu-open');
-        }
-
-        function handleMenuClick(index) {
-            menuLinks.forEach(link => link.classList.remove('active'));
-            menuLinks[index].classList.add('active');
-            menuItems.forEach(item => item.classList.remove('active'));
-            menuItems[index].classList.add('active');
-            element.classList.add('product-nav-menu-open');
+            productInfoItem.classList.add('active');
         }
 
         function selectCategory(index) {
@@ -85,8 +92,22 @@ export default function() {
             categoryIndex = index;
             closeInnerMenu();
 
-            if (initialActiveNavLink !== -1 && initialActiveCategory !== categoryIndex) {
-                handleMenuClick(initialActiveNavLink);
+            if (standardInitialActiveLink && initialActiveCategory !== categoryIndex) {
+                const layer = categoryLayers[categoryIndex];
+
+                const menuLinks = Array.from(layer.querySelectorAll('.js-product-nav-menu-link'));
+                const menuItems = Array.from(layer.querySelectorAll('.js-product-nav-menu-item'));
+
+                function handleMenuClick(index) {
+                    menuLinks.forEach(link => link.classList.remove('active'));
+                    menuLinks[index].classList.add('active');
+                    menuItems.forEach(item => item.classList.remove('active'));
+                    menuItems[index].classList.add('active');
+                    productInfoItem.classList.remove('active');
+                    element.classList.add('product-nav-menu-open');
+                }
+
+                handleMenuClick(menuLinks.indexOf(standardInitialActiveLink));
             }
         }
 
@@ -117,14 +138,32 @@ export default function() {
             });
         });
 
-        menuLinks.forEach((link, linkIndex) => {
-            link.addEventListener('click', event => {
-                event.preventDefault();
-                if (!link.classList.contains('active')) {
-                    handleMenuClick(linkIndex);
-                } else {
-                    // closeInnerMenu();
-                }
+        categoryLayers.forEach(layer => {
+            const menuLinks = Array.from(layer.querySelectorAll('.js-product-nav-menu-link'));
+            const menuItems = Array.from(layer.querySelectorAll('.js-product-nav-menu-item'));
+
+            function handleMenuClick(index) {
+                menuLinks.forEach(link => link.classList.remove('active'));
+                menuLinks[index].classList.add('active');
+                menuItems.forEach(item => item.classList.remove('active'));
+                menuItems[index].classList.add('active');
+                productInfoItem.classList.remove('active');
+                element.classList.add('product-nav-menu-open');
+            }
+
+            menuLinks.forEach((link, linkIndex) => {
+                link.addEventListener('click', event => {
+                    event.preventDefault();
+                    if (!link.classList.contains('active')) {
+                        handleMenuClick(linkIndex);
+                     
+                    } else if (!categoryLayers[initialActiveCategory].contains(link)) {
+                        closeInnerMenu();
+                        selectCategory(initialActiveCategory);
+                    } else {
+                        closeInnerMenu();
+                    }
+                });
             });
         });
 
@@ -132,6 +171,15 @@ export default function() {
             event.preventDefault();
             closeInnerMenu();
             selectCategory(initialActiveCategory);
+        });
+
+        element.addEventListener('click', function(event) {
+            if (event.target.matches('a') || event.target.matches('button')) {
+                console.log(event.target);
+            } else {
+                closeInnerMenu();
+                selectCategory(initialActiveCategory);
+            }
         });
 
         aboutBankLink.addEventListener('click', event => {

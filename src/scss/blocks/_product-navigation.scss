@@ -348,9 +348,10 @@
 .product-navigation__card {
     display: flex;
     position: relative;
-
+    align-items: flex-start;
     @include breakpoint(mobile) {
         flex-direction: column;
+        align-items: initial;
     }
 }
 
@@ -725,10 +726,12 @@
 
 .product-navigation__card-menu-item-row {
     display: flex;
+    align-items: flex-start;
     // margin: -1rem;
 
     @include breakpoint(mobile) {
         flex-direction: column;
+        align-items: initial;
         margin: 0;
     }
 }

@@ -1,4 +1,7 @@
 export default function() {
+
+
+    
     function openAccordeon(element) {
         element.style.maxHeight = 'none';
         const computedStyle = getComputedStyle(element);
