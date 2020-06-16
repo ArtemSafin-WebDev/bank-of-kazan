@@ -9,7 +9,7 @@
         background-color: #fff;
     }
 
-    .dark-nav-text & {
+    .dark-nav-text:not(.product-nav-menu-open):not(.bank-menu-shown) & {
         color: black;
     }
 
@@ -62,7 +62,7 @@
     z-index: 100;
     position: relative;
 
-    .dark-nav-text & {
+    .dark-nav-text:not(.product-nav-menu-open):not(.bank-menu-shown) & {
         border-color: var(--primary-color);
     }
     @include breakpoint(mobile) {
@@ -75,12 +75,31 @@
 
 .product-navigation__logo-link {
     margin-right: auto;
+    position: relative;
 }
 
 .product-navigation__logo-image {
     display: block;
     width: 24.5rem;
     height: auto;
+    &:nth-child(2) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        opacity: 0;
+        transition: opacity .2s;
+    }
+    .dark-nav-text:not(.product-nav-menu-open):not(.bank-menu-shown) & {
+        &:nth-child(1) {
+            opacity: 0;
+        }
+        &:nth-child(2) {
+            opacity: 1;
+        }
+    }
+
     @include breakpoint(mobile) {
         width: 15.5rem;
     }
@@ -94,8 +113,8 @@
     margin-bottom: 7rem;
     overflow: hidden;
     position: relative;
-
-    .dark-nav-text & {
+    z-index: 100;
+    .dark-nav-text:not(.product-nav-menu-open):not(.bank-menu-shown) & {
         border-color: rgba(#b4b4b4, 0.5);
     }
     @include breakpoint(mobile) {
@@ -123,7 +142,7 @@
     transition: transform 0.4s;
 
     .search-form-open &,
-    .bank-menu-open & {
+    .bank-menu-shown & {
         transform: translateZ(0) translateY(100%);
         opacity: 0;
         visibility: hidden;
@@ -156,7 +175,7 @@
         color: white;
     }
 
-    .dark-nav-text & {
+    .dark-nav-text:not(.product-nav-menu-open):not(.bank-menu-shown) & {
         color: black;
         &.active {
             color: var(--primary-color);
@@ -210,11 +229,11 @@
     visibility: hidden;
     transition: opacity 0.3s, visibility 0s linear 0.3s;
 
-    .dark-nav-text & {
+    .dark-nav-text:not(.product-nav-menu-open):not(.bank-menu-shown) & {
         color: black;
     }
 
-    .bank-menu-open & {
+    .bank-menu-shown & {
         opacity: 1;
         visibility: visible;
         transition: opacity 0.3s, visibility 0.3s;
@@ -243,7 +262,7 @@
         color: rgba(white, 0.4);
     }
 
-    .dark-nav-text & {
+    .dark-nav-text:not(.product-nav-menu-open):not(.bank-menu-shown) & {
         color: black;
         @include placeholder {
             color: rgba(black, 0.3);
@@ -266,7 +285,7 @@
         fill: white;
         transition: fill 0.2s;
 
-        .dark-nav-text & {
+        .dark-nav-text:not(.product-nav-menu-open):not(.bank-menu-shown) & {
             fill: var(--primary-color);
         }
 
@@ -282,14 +301,14 @@
             fill: white;
         }
     }
-    .dark-nav-text.no-touch &:hover,
-    .dark-nav-text.touch &:active {
+    .dark-nav-text.no-touch:not(.product-nav-menu-open):not(.bank-menu-shown) &:hover,
+    .dark-nav-text.touch:not(.product-nav-menu-open):not(.bank-menu-shown) &:active {
         svg {
             fill: black;
         }
     }
 
-    .bank-menu-open & {
+    .bank-menu-shown & {
         opacity: 0;
         visibility: hidden;
         transition: opacity 0.2s, visibility 0s linear 0.2s;
@@ -377,7 +396,7 @@
         fill: white;
         transition: fill 0.2s;
 
-        .dark-nav-text & {
+        .dark-nav-text:not(.product-nav-menu-open):not(.bank-menu-shown) & {
             fill: black;
         }
 
@@ -453,14 +472,14 @@
         }
     }
 
-    .dark-nav-text & {
+    .dark-nav-text:not(.product-nav-menu-open):not(.bank-menu-shown) & {
         color: black;
         &.active {
             color: var(--primary-color);
         }
     }
 
-    .dark-nav-text .product-navigation__card-menu--bank & {
+    .dark-nav-text:not(.product-nav-menu-open):not(.bank-menu-shown) .product-navigation__card-menu--bank & {
         &:link,
         &:visited {
             color: black;
@@ -512,7 +531,7 @@
         }
     }
 
-    .dark-nav-text & {
+    .dark-nav-text:not(.product-nav-menu-open):not(.bank-menu-shown) & {
         &:link,
         &:visited {
             color: rgba(black, 0.3);
@@ -523,8 +542,8 @@
         }
     }
 
-    .no-touch.dark-nav-text &:hover,
-    .touch.dark-nav-text &:active {
+    .no-touch.dark-nav-text:not(.product-nav-menu-open):not(.bank-menu-shown) &:hover,
+    .touch.dark-nav-text:not(.product-nav-menu-open):not(.bank-menu-shown) &:active {
         color: var(--primary-color);
 
         svg {
@@ -601,7 +620,7 @@
     flex-direction: column;
     justify-content: space-between;
 
-    .dark-nav-text & {
+    .dark-nav-text:not(.product-nav-menu-open):not(.bank-menu-shown) & {
         background-color: #fff;
     }
     @include breakpoint(mobile) {
@@ -777,7 +796,7 @@
     color: rgba(white, 0.5);
     margin-bottom: 1.5rem;
 
-    .dark-nav-text & {
+    .dark-nav-text:not(.product-nav-menu-open):not(.bank-menu-shown) & {
         color: rgba(black, 0.5);
     }
     @include breakpoint(mobile) {
@@ -811,7 +830,7 @@
         color: white;
     }
 
-    .dark-nav-text & {
+    .dark-nav-text:not(.product-nav-menu-open):not(.bank-menu-shown) & {
         &:link,
         &:visited {
             color: black;
@@ -851,13 +870,12 @@
     transform: translateZ(0) scaleX(0);
     transition: transform 0.5s;
 
-    .dark-nav-text & {
+    .dark-nav-text:not(.product-nav-menu-open):not(.bank-menu-shown) & {
         background-color: rgba(white, 0.6);
         backdrop-filter: blur(4px);
     }
 
-    .product-nav-menu-open &,
-    .bank-menu-open & {
+    .product-nav-menu-open & {
         transform: translateZ(0) scaleX(1);
         transition: transform 0.8s ease-out;
     }

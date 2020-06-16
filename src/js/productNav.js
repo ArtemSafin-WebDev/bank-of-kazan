@@ -11,11 +11,11 @@ export default function() {
         const searchBtn = element.querySelector('.js-product-nav-search-btn');
         const closeBtn = element.querySelector('.js-product-nav-close-btn');
         const closeMenuBtns = Array.from(element.querySelectorAll('.js-product-nav-close'));
-        const aboutBankLink = document.querySelector('.page-header__about-bank-link');
-        const bankMenuLayer = element.querySelector('.js-bank-menu-layer');
+        // const aboutBankLink = document.querySelector('.page-header__about-bank-link');
+        // const bankMenuLayer = element.querySelector('.js-bank-menu-layer');
         const productInfoItem = element.querySelector('.js-product-info-item');
         let searchFormOpen = false;
-        let bankMenuOpen = false;
+        // let bankMenuOpen = false;
         let categoryIndex = categoryLayers.findIndex(element => element.classList.contains('active'));
 
         if (categoryIndex === -1) {
@@ -35,17 +35,17 @@ export default function() {
         console.log('Menu items', menuItems);
         console.log('Menu btns', menuLinks);
 
-        function openBankMenu() {
-            categoryLinks.forEach(link => link.classList.remove('active'));
-            categoryLayers.forEach(layer => layer.classList.remove('active'));
-            bankMenuLayer.classList.add('active');
-            closeInnerMenu();
-            element.classList.add('bank-menu-open');
-            aboutBankLink.classList.add('active');
-            element.classList.remove('search-form-open');
-            searchFormOpen = false;
-            bankMenuOpen = true;
-        }
+        // function openBankMenu() {
+        //     categoryLinks.forEach(link => link.classList.remove('active'));
+        //     categoryLayers.forEach(layer => layer.classList.remove('active'));
+        //     bankMenuLayer.classList.add('active');
+        //     closeInnerMenu();
+        //     element.classList.add('bank-menu-open');
+        //     aboutBankLink.classList.add('active');
+        //     element.classList.remove('search-form-open');
+        //     searchFormOpen = false;
+        //     bankMenuOpen = true;
+        // }
 
         function autoScrollToActiveMenuItem() {
             const scrollContainers = Array.from(document.querySelectorAll('.product-navigation__card-menu'));
@@ -68,19 +68,19 @@ export default function() {
             });
         }
 
-        function closeBankMenu() {
-            selectCategory(categoryIndex);
-            bankMenuLayer.classList.remove('active');
-            closeInnerMenu();
-            element.classList.remove('bank-menu-open');
-            aboutBankLink.classList.remove('active');
-            bankMenuOpen = false;
-        }
+        // function closeBankMenu() {
+        //     selectCategory(categoryIndex);
+        //     bankMenuLayer.classList.remove('active');
+        //     closeInnerMenu();
+        //     element.classList.remove('bank-menu-open');
+        //     aboutBankLink.classList.remove('active');
+        //     bankMenuOpen = false;
+        // }
 
         function closeInnerMenu() {
             menuLinks.forEach(link => link.classList.remove('active'));
             menuItems.forEach(item => item.classList.remove('active'));
-            element.classList.remove('product-nav-menu-open');
+            document.body.classList.remove('product-nav-menu-open');
             productInfoItem.classList.add('active');
         }
 
@@ -104,7 +104,7 @@ export default function() {
                     menuItems.forEach(item => item.classList.remove('active'));
                     menuItems[index].classList.add('active');
                     productInfoItem.classList.remove('active');
-                    element.classList.add('product-nav-menu-open');
+                    document.body.classList.add('product-nav-menu-open');
                 }
 
                 handleMenuClick(menuLinks.indexOf(standardInitialActiveLink));
@@ -151,7 +151,7 @@ export default function() {
                 menuItems.forEach(item => item.classList.remove('active'));
                 menuItems[index].classList.add('active');
                 productInfoItem.classList.remove('active');
-                element.classList.add('product-nav-menu-open');
+                document.body.classList.add('product-nav-menu-open');
             }
 
             menuLinks.forEach((link, linkIndex) => {
@@ -189,14 +189,14 @@ export default function() {
             }
         });
 
-        aboutBankLink.addEventListener('click', event => {
-            event.preventDefault();
-            if (!bankMenuOpen) {
-                openBankMenu();
-            } else {
-                closeBankMenu();
-            }
-        });
+        // aboutBankLink.addEventListener('click', event => {
+        //     event.preventDefault();
+        //     if (!bankMenuOpen) {
+        //         openBankMenu();
+        //     } else {
+        //         closeBankMenu();
+        //     }
+        // });
 
         autoScrollToActiveMenuItem();
     });
