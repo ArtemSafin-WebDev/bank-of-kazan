@@ -17,6 +17,7 @@ import scrollAnimations from './scrollAnimations';
 import accordions from './accordions';
 import rkoFeatures from './rkoFeatures';
 import openAccount from './openAccount';
+import bankMenu from './bankMenu';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -28,6 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
     accordions();
     rkoFeatures();
     openAccount();
+    bankMenu();
     barba.init({
         transitions: [
             {

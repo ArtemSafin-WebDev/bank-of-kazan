@@ -24,12 +24,12 @@ export default function() {
         const navMenuGroups = Array.from(element.querySelectorAll('.navigation__content-right-col-menus-group'));
         const menusCloseBtn = element.querySelector('.navigation__menus-close-btn');
         const btnSliderContainers = Array.from(element.querySelectorAll('.navigation__content-btn-slider .swiper-container'));
-        const aboutBankBtn = document.querySelector('.page-header__about-bank-link');
+        // const aboutBankBtn = document.querySelector('.page-header__about-bank-link');
 
         let searchOpen = false;
         let activeCategoryIndex = 0;
         let navigationMenuOpen = false;
-        let aboutBankMenuOpen = false;
+        // let aboutBankMenuOpen = false;
 
         function initializeInnerSliders() {
             innerSliders.forEach((sliderWrapper, sliderIndex) => {
@@ -104,7 +104,7 @@ export default function() {
                 navLinks.forEach((link, linkIndex) => {
                     link.addEventListener('click', event => {
                         event.preventDefault();
-                        const linkIsActive = link.classList.contains('active')
+                        const linkIsActive = link.classList.contains('active');
 
                         allNavLinks.forEach(link => link.classList.remove('active'));
 
@@ -114,7 +114,6 @@ export default function() {
                         } else {
                             closeNavigationMenu();
                         }
-                      
                     });
                 });
             });
@@ -140,10 +139,8 @@ export default function() {
         }
 
         function closeNavigationMenu() {
-            if (!aboutBankMenuOpen) {
-                backplate.classList.remove('open');
-                document.body.classList.remove('violet-backplate');
-            }
+            backplate.classList.remove('open');
+            document.body.classList.remove('violet-backplate');
 
             innerSlidersLayer.classList.add('active');
             innerMenusLayer.classList.remove('active');
@@ -180,21 +177,21 @@ export default function() {
             }
         }
 
-        function showAboutBankMenu() {
-            element.classList.add('bank-menu-shown');
-            backplate.classList.add('open');
-            document.body.classList.add('violet-backplate');
-            aboutBankMenuOpen = true;
-        }
+        // function showAboutBankMenu() {
+        //     element.classList.add('bank-menu-shown');
+        //     backplate.classList.add('open');
+        //     document.body.classList.add('violet-backplate');
+        //     aboutBankMenuOpen = true;
+        // }
 
-        function hideAboutBankMenu() {
-            element.classList.remove('bank-menu-shown');
-            aboutBankMenuOpen = false;
-            if (!navigationMenuOpen) {
-                backplate.classList.remove('open');
-                document.body.classList.remove('violet-backplate');
-            }
-        }
+        // function hideAboutBankMenu() {
+        //     element.classList.remove('bank-menu-shown');
+        //     aboutBankMenuOpen = false;
+        //     if (!navigationMenuOpen) {
+        //         backplate.classList.remove('open');
+        //         document.body.classList.remove('violet-backplate');
+        //     }
+        // }
 
         function handleSearchCloseBtn() {
             searchOpen = false;
@@ -230,18 +227,18 @@ export default function() {
             closeNavigationMenu();
         });
 
-        if (aboutBankBtn) {
-            aboutBankBtn.addEventListener('click', event => {
-                event.preventDefault();
-                const open = aboutBankBtn.classList.contains('active');
-                if (!open) {
-                    showAboutBankMenu();
-                } else {
-                    hideAboutBankMenu();
-                }
-                aboutBankBtn.classList.toggle('active');
-            });
-        }
+        // if (aboutBankBtn) {
+        //     aboutBankBtn.addEventListener('click', event => {
+        //         event.preventDefault();
+        //         const open = aboutBankBtn.classList.contains('active');
+        //         if (!open) {
+        //             showAboutBankMenu();
+        //         } else {
+        //             hideAboutBankMenu();
+        //         }
+        //         aboutBankBtn.classList.toggle('active');
+        //     });
+        // }
 
         detectCurrentActiveCategory();
     });
