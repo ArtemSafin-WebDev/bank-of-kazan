@@ -10,7 +10,7 @@ export default function() {
         const searchForm = element.querySelector('.js-product-navigation-search-form');
         const searchBtn = element.querySelector('.js-product-nav-search-btn');
         const closeBtn = element.querySelector('.js-product-nav-close-btn');
-        const closeMenuBtn = element.querySelector('.js-product-nav-close');
+        const closeMenuBtns = Array.from(element.querySelectorAll('.js-product-nav-close'));
         const aboutBankLink = document.querySelector('.page-header__about-bank-link');
         const bankMenuLayer = element.querySelector('.js-bank-menu-layer');
         const productInfoItem = element.querySelector('.js-product-info-item');
@@ -130,6 +130,9 @@ export default function() {
             }
         });
 
+
+        if (element.classList.contains('js-product-nav-short')) return;
+
         categoryLinks.forEach((link, linkIndex) => {
             link.addEventListener('click', event => {
                 event.preventDefault();
@@ -167,11 +170,15 @@ export default function() {
             });
         });
 
-        closeMenuBtn.addEventListener('click', event => {
-            event.preventDefault();
-            closeInnerMenu();
-            selectCategory(initialActiveCategory);
-        });
+
+        closeMenuBtns.forEach(closeMenuBtn => {
+            closeMenuBtn.addEventListener('click', event => {
+                event.preventDefault();
+                closeInnerMenu();
+                selectCategory(initialActiveCategory);
+            });
+        })
+      
 
         element.addEventListener('click', function(event) {
             if (event.target.matches('a') || event.target.matches('button')) {

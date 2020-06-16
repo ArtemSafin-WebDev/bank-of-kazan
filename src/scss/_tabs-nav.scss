@@ -1,8 +1,10 @@
 .tabs-nav {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     @include breakpoint(mobile) {
         overflow-y: hidden;
+        flex-wrap: nowrap;
         -webkit-overflow-scrolling: touch;
         margin: -1rem calc(-1 * var(--content-padding));
         padding: 1rem var(--content-padding);
@@ -26,6 +28,12 @@
     white-space: nowrap;
     flex-shrink: 0;
     margin-right: 2rem;
+
+    .tabs-nav--compact & {
+        font-size: 2.2rem;
+        line-height: 1.2;
+        margin-right: 0.5rem;
+    }
     &:link,
     &:visited {
         color: inherit;

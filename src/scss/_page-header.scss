@@ -561,6 +561,13 @@
     }
 
 
+    .dark-nav-text & {
+        &:link,
+        &:visited {
+            color: black;
+        }
+    }
+
     .no-touch &:hover,
     .touch &:active {
         color: var(--primary-color);

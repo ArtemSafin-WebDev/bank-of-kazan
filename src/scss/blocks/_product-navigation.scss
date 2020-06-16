@@ -13,6 +13,11 @@
         color: black;
     }
 
+    &--short {
+        min-height: auto;
+        background-color: #fff;
+    }
+
     @include breakpoint(mobile) {
         min-height: auto;
         padding-bottom: 3rem;
@@ -43,6 +48,9 @@
             max-height: 65rem;
         }
     }
+
+
+   
 }
 
 .product-navigation__logo-bar {

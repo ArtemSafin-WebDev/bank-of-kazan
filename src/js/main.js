@@ -16,6 +16,7 @@ import { gsap } from 'gsap';
 import scrollAnimations from './scrollAnimations';
 import accordions from './accordions';
 import rkoFeatures from './rkoFeatures';
+import openAccount from './openAccount';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -26,6 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
     scrollAnimations();
     accordions();
     rkoFeatures();
+    openAccount();
     barba.init({
         transitions: [
             {

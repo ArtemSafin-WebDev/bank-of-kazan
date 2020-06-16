@@ -3,15 +3,12 @@
 {% set navigationText = "dark"  %}
 {% extends "layout.html" %}
 {% block content %}
-    {% include "blocks/navigation-rko.html" %}
+    {% include "blocks/navigation-short.html" %}
     <div data-barba="wrapper">
         <div data-barba="container" data-barba-namespace="home">
-           
-            {% include "blocks/flexible-tariffs.html" %}
-            
-            {% include "blocks/additional-info.html" %}
-            {% include "blocks/open-account.html" %}
-            {% include "blocks/products-business.html" %}
+            {% include "blocks/article.html" %}
+          
+            {% include "blocks/other-credit-products.html" %}
         </div>
     </div>
 {% endblock %}
