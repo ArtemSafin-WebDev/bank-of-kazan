@@ -363,18 +363,76 @@
     }
 }
 
-
-
 .calculator__info-card-image {
     width: 100%;
     height: auto;
     position: absolute;
     right: -1px;
     width: 16rem;
-    top: .9rem;
+    top: 0.9rem;
     z-index: -1;
 
     @include breakpoint(mobile) {
         display: none;
     }
+}
+
+.calculator__select-currency {
+    display: flex;
+}
+
+.calculator__select-currency-radio {
+    width: 5.2rem;
+    height: 5.2rem;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    
+    font-weight: 500;
+    font-size: 2.2rem;
+    line-height: 120%;
+  
+    overflow: hidden;
+
+    .calculator__select-currency-radio-content {
+        border-left: 1px solid #E0E0E0;
+       
+    }
+    &:last-child {
+        // border-right: none;
+        border-top-right-radius: .4rem;
+        border-bottom-right-radius: .4rem;
+    }
+
+
+    @include breakpoint(mobile) {
+        width: 4rem;
+        height: 4rem;
+        font-size: 1.4rem;
+    }
+}
+
+
+.calculator__select-currency-radio-content {
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #F5F5F5;
+    transition: background-color .2s, color .2s, border-color .2s;
+}
+
+
+.calculator__select-currency-radio-input {
+    @include visuallyHidden();
+}
+
+
+
+.calculator__select-currency-radio-input:checked ~ .calculator__select-currency-radio-content {
+    background-color: var(--primary-color);
+    color: white;
+    // border-color: var(--primary-color);
 }

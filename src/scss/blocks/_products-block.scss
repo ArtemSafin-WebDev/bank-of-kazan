@@ -2,7 +2,6 @@
     padding-top: 8.5rem;
     padding-bottom: 4rem;
 
-
     &--other-credits {
         padding-top: 4rem;
     }
@@ -259,7 +258,11 @@
     line-height: 1.2;
     color: white;
     margin-top: 11.5rem;
+    margin-top: 10.5rem;
     min-height: 8.6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     @include breakpoint(mobile) {
         font-weight: 500;
         font-size: 2rem;
@@ -270,7 +273,7 @@
 }
 
 .products__card-text-content {
-    margin-top: 7.8rem;
+    margin-top: 7rem;
     font-size: 2rem;
     line-height: 130%;
     transition: color 0.4s;
@@ -383,5 +386,80 @@
         font-size: 1rem;
         line-height: 120%;
         padding: 1.4rem 1.6rem;
+    }
+}
+
+.products__catalog-bottom-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.products__catalog-open-link {
+    color: var(--primary-color);
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 120%;
+    text-transform: uppercase;
+    &:link,
+    &:visited {
+        color: var(--primary-color);
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 1.2rem;
+    }
+}
+
+.products__catalog-conditions-link {
+    display: inline-flex;
+    align-items: center;
+    background: #94c22b;
+    border-radius: 1rem;
+    padding: 2.4rem 2.7rem;
+    color: white;
+    transition: all 0.2s;
+    font-weight: 500;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    line-height: 120%;
+    svg {
+        fill: currentColor;
+        width: 0.9rem;
+        height: 1.4rem;
+        flex-shrink: 0;
+        margin-left: 1.4rem;
+    }
+    &:link,
+    &:visited {
+        color: white;
+    }
+
+    @include breakpoint(mobile) {
+        padding: 1.4rem 1.5rem;
+        font-size: 1.2rem;
+        margin: 0;
+       
+        align-self: flex-end;
+        border-radius: 0.4rem;
+
+        svg {
+            width: 1rem;
+            height: 1rem;
+            margin-left: 1rem;
+        }
+    }
+}
+
+.products__catalog-condition {
+    font-weight: 500;
+    font-size: 2.6rem;
+    line-height: 130%;
+ 
+    margin-top: 7rem;
+
+    @include breakpoint(mobile) {
+        margin-top: 3.5rem;
+        font-size: 1.8rem;
     }
 }
