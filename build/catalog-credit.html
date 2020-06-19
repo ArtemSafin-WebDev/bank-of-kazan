@@ -375,47 +375,36 @@
                                     <div class="catalog__left-col">
                                         <div class="catalog__menu">
                                             <a href="#" class="catalog__menu-link">
-                                                Кредиты
+                                                Расчетно-кассовое обслуживание
                                             </a>
                                             <a href="#" class="catalog__menu-link active">
-                                                Вклады
+                                                Кредиты бизнеcу
+                                            </a>
+                                            <a href="#" class="catalog__menu-link">
+                                                Депозиты бизнесу
+                                            </a>
+                                            <a href="#" class="catalog__menu-link">
+                                                Банковские гарантии
                                             </a>
                                             <a href="#" class="catalog__menu-link">
                                                 Пластиковые карты
-                                            </a>
-                                            <a href="#" class="catalog__menu-link">
-                                                Онлайн страхование
-                                            </a>
-                                            <a href="#" class="catalog__menu-link">
-                                                Платежи и переводы
-                                            </a>
-                                            <a href="#" class="catalog__menu-link">
-                                                Брокерское обслуживание
-                                            </a>
-                                            <a href="#" class="catalog__menu-link">
-                                                Реализация залогового имущества
-                                            </a>
-                                            <a href="#" class="catalog__menu-link">
-                                                Расчетно-кассовое обслуживание
                                             </a>
                                         </div>
                                     </div>
                                     <div class="catalog__right-col">
                                         <h1 class="catalog__main-heading">
-                                            Вклады для частных лиц
+                                            Кредиты бизнесу
                                         </h1>
-                                        <div class="catalog__text">
-                                            Ваши доходы идут вверх
-                                        </div>
+
                                         <form method="POST" action="/" class="catalog__filters">
                                             <div class="catalog__filters-sliders">
                                                 <div class="catalog__filters-sliders-group">
                                                     <span class="catalog__filters-sliders-text">
-                                                        Сумма вклада
+                                                        Сумма кредита
                                                     </span>
                                                     <div class="catalog__filters-sliders-range-wrapper">
-                                                        <div class="catalog__filters-sliders-deposit-sum-range">
-                                                            <div class="range-slider range-slider--no-right-radius js-range-slider">
+                                                        <div class="catalog__filters-sliders-credit-sum-range">
+                                                            <div class="range-slider js-range-slider">
                                                                 <input type="range" name="first-currency-amount" step="100" min="90000" max="2000000" class="range-slider__input" value="6500" />
                                                                 <div class="range-slider__element-wrapper">
                                                                     <div class="range-slider__amount">12 000</div>
@@ -431,35 +420,14 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-
-                                                        <div class="calculator__select-currency">
-                                                            <label class="calculator__select-currency-radio">
-                                                                <input type="radio" name="currency" class="calculator__select-currency-radio-input" value="1" checked />
-                                                                <span class="calculator__select-currency-radio-content">
-                                                                    ₽
-                                                                </span>
-                                                            </label>
-                                                            <label class="calculator__select-currency-radio">
-                                                                <input type="radio" name="currency" class="calculator__select-currency-radio-input" value="1" />
-                                                                <span class="calculator__select-currency-radio-content">
-                                                                    $
-                                                                </span>
-                                                            </label>
-                                                            <label class="calculator__select-currency-radio">
-                                                                <input type="radio" name="currency" class="calculator__select-currency-radio-input" value="1" />
-                                                                <span class="calculator__select-currency-radio-content">
-                                                                    €
-                                                                </span>
-                                                            </label>
-                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div class="catalog__filters-sliders-group">
                                                     <span class="catalog__filters-sliders-text">
-                                                        Срок вклада
+                                                        Срок кредита
                                                     </span>
                                                     <div class="catalog__filters-sliders-range-wrapper">
-                                                        <div class="catalog__filters-deposit-duration-range">
+                                                        <div class="catalog__filters-credit-duration-range">
                                                             <div class="range-slider js-range-slider">
                                                                 <input type="range" name="first-currency-amount" step="1" min="13" max="60" class="range-slider__input" value="13" data-units="months" />
                                                                 <div class="range-slider__element-wrapper">
@@ -563,579 +531,260 @@
                                             </div>
                                         </form>
                                         <div class="catalog__products">
-                                            <div class="catalog__products-tabs js-tabs">
-                                                <div class="catalog__products-nav">
-                                                    <div class="tabs-nav tabs-nav--compact">
-                                                        <a href="#" class="tabs-nav__link js-tabs-nav active">
-                                                            Все тарифы
-                                                        </a>
-                                                        <a href="#" class="tabs-nav__link js-tabs-nav">
-                                                            Рекомендуемые
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div class="catalog__products-items">
-                                                    <div class="tab-items">
-                                                        <div class="tab-items__item js-tabs-item active">
-                                                            <ul class="catalog__products-list">
-                                                                <li class="catalog__products-list-item">
-                                                                    <div href="#" class="products__card">
-                                                                        <span class="products__card-tag">
-                                                                            Вклады
-                                                                        </span>
-                                                                        <div class="products__card-image-container">
-                                                                            <img src="img/products/products-business-2.jpg" alt="" class="products__card-image" />
-                                                                        </div>
-                                                                        <h5 class="products__card-title">Городской стабильный</h5>
-                                                                        <div class="products__catalog-condition">
-                                                                            31 день до 100 000 ₽
-                                                                        </div>
-                                                                        <div class="products__card-prices">
-                                                                            <div class="products__card-prices-items">
-                                                                                <div class="products__card-prices-item">
-                                                                                    <div class="products__card-prices-card">
-                                                                                        <p class="products__card-prices-card-small-text">
-                                                                                            Процентная ставка
-                                                                                        </p>
-                                                                                        <p class="products__card-prices-card-large-text">
-                                                                                            3.75 %
-                                                                                        </p>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="products__card-prices-item">
-                                                                                    <div class="products__card-prices-card">
-                                                                                        <p class="products__card-prices-card-small-text">
-                                                                                            Срок вклада
-                                                                                        </p>
-                                                                                        <p class="products__card-prices-card-large-text">
-                                                                                            31 день
-                                                                                        </p>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="products__card-prices-item">
-                                                                                    <div class="products__card-prices-card">
-                                                                                        <p class="products__card-prices-card-small-text">
-                                                                                            Минимальная сумма вклада
-                                                                                        </p>
-                                                                                        <p class="products__card-prices-card-large-text">
-                                                                                            5 000 ₽
-                                                                                        </p>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-
-                                                                        <div class="products__catalog-bottom-links">
-                                                                            <a href="#" class="products__catalog-open-link">
-                                                                                открыть вклад
-                                                                            </a>
-                                                                            <a href="#" class="products__catalog-conditions-link">
-                                                                                Все условия
-
-                                                                                <svg width="10" height="14" aria-hidden="true" class="icon-arrow-right">
-                                                                                    <use xlink:href="#arrow-right" />
-                                                                                </svg>
-                                                                            </a>
-                                                                        </div>
-                                                                    </div>
-                                                                </li>
-                                                                <li class="catalog__products-list-item">
-                                                                    <div href="#" class="products__card">
-                                                                        <span class="products__card-tag">
-                                                                            Вклады
-                                                                        </span>
-                                                                        <div class="products__card-image-container">
-                                                                            <img src="img/products/products-business-2.jpg" alt="" class="products__card-image" />
-                                                                        </div>
-                                                                        <h5 class="products__card-title">Городской стабильный с капитализацией</h5>
-                                                                        <div class="products__catalog-condition">
-                                                                            31 день до 100 000 ₽
-                                                                        </div>
-                                                                        <div class="products__card-prices">
-                                                                            <div class="products__card-prices-items">
-                                                                                <div class="products__card-prices-item">
-                                                                                    <div class="products__card-prices-card">
-                                                                                        <p class="products__card-prices-card-small-text">
-                                                                                            Процентная ставка
-                                                                                        </p>
-                                                                                        <p class="products__card-prices-card-large-text">
-                                                                                            3.75 %
-                                                                                        </p>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="products__card-prices-item">
-                                                                                    <div class="products__card-prices-card">
-                                                                                        <p class="products__card-prices-card-small-text">
-                                                                                            Срок вклада
-                                                                                        </p>
-                                                                                        <p class="products__card-prices-card-large-text">
-                                                                                            31 день
-                                                                                        </p>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="products__card-prices-item">
-                                                                                    <div class="products__card-prices-card">
-                                                                                        <p class="products__card-prices-card-small-text">
-                                                                                            Минимальная сумма вклада
-                                                                                        </p>
-                                                                                        <p class="products__card-prices-card-large-text">
-                                                                                            5 000 ₽
-                                                                                        </p>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-
-                                                                        <div class="products__catalog-bottom-links">
-                                                                            <a href="#" class="products__catalog-open-link">
-                                                                                открыть вклад
-                                                                            </a>
-                                                                            <a href="#" class="products__catalog-conditions-link">
-                                                                                Все условия
-
-                                                                                <svg width="10" height="14" aria-hidden="true" class="icon-arrow-right">
-                                                                                    <use xlink:href="#arrow-right" />
-                                                                                </svg>
-                                                                            </a>
-                                                                        </div>
-                                                                    </div>
-                                                                </li>
-                                                                <li class="catalog__products-list-item">
-                                                                    <div href="#" class="products__card">
-                                                                        <span class="products__card-tag">
-                                                                            Вклады
-                                                                        </span>
-                                                                        <div class="products__card-image-container">
-                                                                            <img src="img/products/products-business-2.jpg" alt="" class="products__card-image" />
-                                                                        </div>
-                                                                        <h5 class="products__card-title">Городской стабильный</h5>
-                                                                        <div class="products__catalog-condition">
-                                                                            31 день до 100 000 ₽
-                                                                        </div>
-                                                                        <div class="products__card-prices">
-                                                                            <div class="products__card-prices-items">
-                                                                                <div class="products__card-prices-item">
-                                                                                    <div class="products__card-prices-card">
-                                                                                        <p class="products__card-prices-card-small-text">
-                                                                                            Процентная ставка
-                                                                                        </p>
-                                                                                        <p class="products__card-prices-card-large-text">
-                                                                                            3.75 %
-                                                                                        </p>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="products__card-prices-item">
-                                                                                    <div class="products__card-prices-card">
-                                                                                        <p class="products__card-prices-card-small-text">
-                                                                                            Срок вклада
-                                                                                        </p>
-                                                                                        <p class="products__card-prices-card-large-text">
-                                                                                            31 день
-                                                                                        </p>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="products__card-prices-item">
-                                                                                    <div class="products__card-prices-card">
-                                                                                        <p class="products__card-prices-card-small-text">
-                                                                                            Минимальная сумма вклада
-                                                                                        </p>
-                                                                                        <p class="products__card-prices-card-large-text">
-                                                                                            5 000 ₽
-                                                                                        </p>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-
-                                                                        <div class="products__catalog-bottom-links">
-                                                                            <a href="#" class="products__catalog-open-link">
-                                                                                открыть вклад
-                                                                            </a>
-                                                                            <a href="#" class="products__catalog-conditions-link">
-                                                                                Все условия
-
-                                                                                <svg width="10" height="14" aria-hidden="true" class="icon-arrow-right">
-                                                                                    <use xlink:href="#arrow-right" />
-                                                                                </svg>
-                                                                            </a>
-                                                                        </div>
-                                                                    </div>
-                                                                </li>
-                                                                <li class="catalog__products-list-item">
-                                                                    <div href="#" class="products__card">
-                                                                        <span class="products__card-tag">
-                                                                            Вклады
-                                                                        </span>
-                                                                        <div class="products__card-image-container">
-                                                                            <img src="img/products/products-business-2.jpg" alt="" class="products__card-image" />
-                                                                        </div>
-                                                                        <h5 class="products__card-title">Городской стабильный с капитализацией</h5>
-                                                                        <div class="products__catalog-condition">
-                                                                            31 день до 100 000 ₽
-                                                                        </div>
-                                                                        <div class="products__card-prices">
-                                                                            <div class="products__card-prices-items">
-                                                                                <div class="products__card-prices-item">
-                                                                                    <div class="products__card-prices-card">
-                                                                                        <p class="products__card-prices-card-small-text">
-                                                                                            Процентная ставка
-                                                                                        </p>
-                                                                                        <p class="products__card-prices-card-large-text">
-                                                                                            3.75 %
-                                                                                        </p>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="products__card-prices-item">
-                                                                                    <div class="products__card-prices-card">
-                                                                                        <p class="products__card-prices-card-small-text">
-                                                                                            Срок вклада
-                                                                                        </p>
-                                                                                        <p class="products__card-prices-card-large-text">
-                                                                                            31 день
-                                                                                        </p>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="products__card-prices-item">
-                                                                                    <div class="products__card-prices-card">
-                                                                                        <p class="products__card-prices-card-small-text">
-                                                                                            Минимальная сумма вклада
-                                                                                        </p>
-                                                                                        <p class="products__card-prices-card-large-text">
-                                                                                            5 000 ₽
-                                                                                        </p>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-
-                                                                        <div class="products__catalog-bottom-links">
-                                                                            <a href="#" class="products__catalog-open-link">
-                                                                                открыть вклад
-                                                                            </a>
-                                                                            <a href="#" class="products__catalog-conditions-link">
-                                                                                Все условия
-
-                                                                                <svg width="10" height="14" aria-hidden="true" class="icon-arrow-right">
-                                                                                    <use xlink:href="#arrow-right" />
-                                                                                </svg>
-                                                                            </a>
-                                                                        </div>
-                                                                    </div>
-                                                                </li>
-                                                            </ul>
+                                            <ul class="catalog__products-list">
+                                                <li class="catalog__products-list-item">
+                                                    <div href="#" class="products__card">
+                                                        <span class="products__card-tag">
+                                                            Вклады
+                                                        </span>
+                                                        <div class="products__card-image-container">
+                                                            <img src="img/products/products-business-2.jpg" alt="" class="products__card-image" />
                                                         </div>
-                                                        <div class="tab-items__item js-tabs-item">
-                                                            <ul class="catalog__products-list">
-                                                                <li class="catalog__products-list-item">
-                                                                    <div href="#" class="products__card">
-                                                                        <span class="products__card-tag">
-                                                                            Вклады
-                                                                        </span>
-                                                                        <div class="products__card-image-container">
-                                                                            <img src="img/products/products-business-2.jpg" alt="" class="products__card-image" />
-                                                                        </div>
-                                                                        <h5 class="products__card-title">Городской стабильный</h5>
-                                                                        <div class="products__catalog-condition">
-                                                                            31 день до 100 000 ₽
-                                                                        </div>
-                                                                        <div class="products__card-prices">
-                                                                            <div class="products__card-prices-items">
-                                                                                <div class="products__card-prices-item">
-                                                                                    <div class="products__card-prices-card">
-                                                                                        <p class="products__card-prices-card-small-text">
-                                                                                            Процентная ставка
-                                                                                        </p>
-                                                                                        <p class="products__card-prices-card-large-text">
-                                                                                            3.75 %
-                                                                                        </p>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="products__card-prices-item">
-                                                                                    <div class="products__card-prices-card">
-                                                                                        <p class="products__card-prices-card-small-text">
-                                                                                            Срок вклада
-                                                                                        </p>
-                                                                                        <p class="products__card-prices-card-large-text">
-                                                                                            31 день
-                                                                                        </p>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="products__card-prices-item">
-                                                                                    <div class="products__card-prices-card">
-                                                                                        <p class="products__card-prices-card-small-text">
-                                                                                            Минимальная сумма вклада
-                                                                                        </p>
-                                                                                        <p class="products__card-prices-card-large-text">
-                                                                                            5 000 ₽
-                                                                                        </p>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-
-                                                                        <div class="products__catalog-bottom-links">
-                                                                            <a href="#" class="products__catalog-open-link">
-                                                                                открыть вклад
-                                                                            </a>
-                                                                            <a href="#" class="products__catalog-conditions-link">
-                                                                                Все условия
-
-                                                                                <svg width="10" height="14" aria-hidden="true" class="icon-arrow-right">
-                                                                                    <use xlink:href="#arrow-right" />
-                                                                                </svg>
-                                                                            </a>
-                                                                        </div>
+                                                        <h5 class="products__card-title">Городской стабильный</h5>
+                                                        <div class="products__card-text-content">
+                                                            <p>
+                                                                Пополнение оборотных средств (обновление товарного ассортимента, закуп сырья и полуфабрикатов, товаров и прочее)
+                                                            </p>
+                                                        </div>
+                                                        <div class="products__card-prices">
+                                                            <div class="products__card-prices-items">
+                                                                <div class="products__card-prices-item">
+                                                                    <div class="products__card-prices-card">
+                                                                        <p class="products__card-prices-card-small-text">
+                                                                            Процентная ставка
+                                                                        </p>
+                                                                        <p class="products__card-prices-card-large-text">
+                                                                            3.75 %
+                                                                        </p>
                                                                     </div>
-                                                                </li>
-                                                                <li class="catalog__products-list-item">
-                                                                    <div href="#" class="products__card">
-                                                                        <span class="products__card-tag">
-                                                                            Вклады
-                                                                        </span>
-                                                                        <div class="products__card-image-container">
-                                                                            <img src="img/products/products-business-2.jpg" alt="" class="products__card-image" />
-                                                                        </div>
-                                                                        <h5 class="products__card-title">Городской стабильный с капитализацией</h5>
-                                                                        <div class="products__catalog-condition">
-                                                                            31 день до 100 000 ₽
-                                                                        </div>
-                                                                        <div class="products__card-prices">
-                                                                            <div class="products__card-prices-items">
-                                                                                <div class="products__card-prices-item">
-                                                                                    <div class="products__card-prices-card">
-                                                                                        <p class="products__card-prices-card-small-text">
-                                                                                            Процентная ставка
-                                                                                        </p>
-                                                                                        <p class="products__card-prices-card-large-text">
-                                                                                            3.75 %
-                                                                                        </p>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="products__card-prices-item">
-                                                                                    <div class="products__card-prices-card">
-                                                                                        <p class="products__card-prices-card-small-text">
-                                                                                            Срок вклада
-                                                                                        </p>
-                                                                                        <p class="products__card-prices-card-large-text">
-                                                                                            31 день
-                                                                                        </p>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="products__card-prices-item">
-                                                                                    <div class="products__card-prices-card">
-                                                                                        <p class="products__card-prices-card-small-text">
-                                                                                            Минимальная сумма вклада
-                                                                                        </p>
-                                                                                        <p class="products__card-prices-card-large-text">
-                                                                                            5 000 ₽
-                                                                                        </p>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-
-                                                                        <div class="products__catalog-bottom-links">
-                                                                            <a href="#" class="products__catalog-open-link">
-                                                                                открыть вклад
-                                                                            </a>
-                                                                            <a href="#" class="products__catalog-conditions-link">
-                                                                                Все условия
-
-                                                                                <svg width="10" height="14" aria-hidden="true" class="icon-arrow-right">
-                                                                                    <use xlink:href="#arrow-right" />
-                                                                                </svg>
-                                                                            </a>
-                                                                        </div>
+                                                                </div>
+                                                                <div class="products__card-prices-item">
+                                                                    <div class="products__card-prices-card">
+                                                                        <p class="products__card-prices-card-small-text">
+                                                                            Срок вклада
+                                                                        </p>
+                                                                        <p class="products__card-prices-card-large-text">
+                                                                            31 день
+                                                                        </p>
                                                                     </div>
-                                                                </li>
-                                                                <li class="catalog__products-list-item">
-                                                                    <div href="#" class="products__card">
-                                                                        <span class="products__card-tag">
-                                                                            Вклады
-                                                                        </span>
-                                                                        <div class="products__card-image-container">
-                                                                            <img src="img/products/products-business-2.jpg" alt="" class="products__card-image" />
-                                                                        </div>
-                                                                        <h5 class="products__card-title">Городской стабильный</h5>
-                                                                        <div class="products__catalog-condition">
-                                                                            31 день до 100 000 ₽
-                                                                        </div>
-                                                                        <div class="products__card-prices">
-                                                                            <div class="products__card-prices-items">
-                                                                                <div class="products__card-prices-item">
-                                                                                    <div class="products__card-prices-card">
-                                                                                        <p class="products__card-prices-card-small-text">
-                                                                                            Процентная ставка
-                                                                                        </p>
-                                                                                        <p class="products__card-prices-card-large-text">
-                                                                                            3.75 %
-                                                                                        </p>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="products__card-prices-item">
-                                                                                    <div class="products__card-prices-card">
-                                                                                        <p class="products__card-prices-card-small-text">
-                                                                                            Срок вклада
-                                                                                        </p>
-                                                                                        <p class="products__card-prices-card-large-text">
-                                                                                            31 день
-                                                                                        </p>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="products__card-prices-item">
-                                                                                    <div class="products__card-prices-card">
-                                                                                        <p class="products__card-prices-card-small-text">
-                                                                                            Минимальная сумма вклада
-                                                                                        </p>
-                                                                                        <p class="products__card-prices-card-large-text">
-                                                                                            5 000 ₽
-                                                                                        </p>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-
-                                                                        <div class="products__catalog-bottom-links">
-                                                                            <a href="#" class="products__catalog-open-link">
-                                                                                открыть вклад
-                                                                            </a>
-                                                                            <a href="#" class="products__catalog-conditions-link">
-                                                                                Все условия
-
-                                                                                <svg width="10" height="14" aria-hidden="true" class="icon-arrow-right">
-                                                                                    <use xlink:href="#arrow-right" />
-                                                                                </svg>
-                                                                            </a>
-                                                                        </div>
+                                                                </div>
+                                                                <div class="products__card-prices-item">
+                                                                    <div class="products__card-prices-card">
+                                                                        <p class="products__card-prices-card-small-text">
+                                                                            Минимальная сумма вклада
+                                                                        </p>
+                                                                        <p class="products__card-prices-card-large-text">
+                                                                            5 000 ₽
+                                                                        </p>
                                                                     </div>
-                                                                </li>
-                                                                <li class="catalog__products-list-item">
-                                                                    <div href="#" class="products__card">
-                                                                        <span class="products__card-tag">
-                                                                            Вклады
-                                                                        </span>
-                                                                        <div class="products__card-image-container">
-                                                                            <img src="img/products/products-business-2.jpg" alt="" class="products__card-image" />
-                                                                        </div>
-                                                                        <h5 class="products__card-title">Городской стабильный с капитализацией</h5>
-                                                                        <div class="products__catalog-condition">
-                                                                            31 день до 100 000 ₽
-                                                                        </div>
-                                                                        <div class="products__card-prices">
-                                                                            <div class="products__card-prices-items">
-                                                                                <div class="products__card-prices-item">
-                                                                                    <div class="products__card-prices-card">
-                                                                                        <p class="products__card-prices-card-small-text">
-                                                                                            Процентная ставка
-                                                                                        </p>
-                                                                                        <p class="products__card-prices-card-large-text">
-                                                                                            3.75 %
-                                                                                        </p>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="products__card-prices-item">
-                                                                                    <div class="products__card-prices-card">
-                                                                                        <p class="products__card-prices-card-small-text">
-                                                                                            Срок вклада
-                                                                                        </p>
-                                                                                        <p class="products__card-prices-card-large-text">
-                                                                                            31 день
-                                                                                        </p>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="products__card-prices-item">
-                                                                                    <div class="products__card-prices-card">
-                                                                                        <p class="products__card-prices-card-small-text">
-                                                                                            Минимальная сумма вклада
-                                                                                        </p>
-                                                                                        <p class="products__card-prices-card-large-text">
-                                                                                            5 000 ₽
-                                                                                        </p>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
 
-                                                                        <div class="products__catalog-bottom-links">
-                                                                            <a href="#" class="products__catalog-open-link">
-                                                                                открыть вклад
-                                                                            </a>
-                                                                            <a href="#" class="products__catalog-conditions-link">
-                                                                                Все условия
+                                                        <div class="products__catalog-bottom-links">
+                                                            <a href="#" class="products__catalog-open-link">
+                                                                открыть вклад
+                                                            </a>
+                                                            <a href="#" class="products__catalog-conditions-link">
+                                                                Все условия
 
-                                                                                <svg width="10" height="14" aria-hidden="true" class="icon-arrow-right">
-                                                                                    <use xlink:href="#arrow-right" />
-                                                                                </svg>
-                                                                            </a>
-                                                                        </div>
-                                                                    </div>
-                                                                </li>
-                                                                <li class="catalog__products-list-item">
-                                                                    <div href="#" class="products__card">
-                                                                        <span class="products__card-tag">
-                                                                            Вклады
-                                                                        </span>
-                                                                        <div class="products__card-image-container">
-                                                                            <img src="img/products/products-business-2.jpg" alt="" class="products__card-image" />
-                                                                        </div>
-                                                                        <h5 class="products__card-title">Городской стабильный</h5>
-                                                                        <div class="products__catalog-condition">
-                                                                            31 день до 100 000 ₽
-                                                                        </div>
-                                                                        <div class="products__card-prices">
-                                                                            <div class="products__card-prices-items">
-                                                                                <div class="products__card-prices-item">
-                                                                                    <div class="products__card-prices-card">
-                                                                                        <p class="products__card-prices-card-small-text">
-                                                                                            Процентная ставка
-                                                                                        </p>
-                                                                                        <p class="products__card-prices-card-large-text">
-                                                                                            3.75 %
-                                                                                        </p>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="products__card-prices-item">
-                                                                                    <div class="products__card-prices-card">
-                                                                                        <p class="products__card-prices-card-small-text">
-                                                                                            Срок вклада
-                                                                                        </p>
-                                                                                        <p class="products__card-prices-card-large-text">
-                                                                                            31 день
-                                                                                        </p>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="products__card-prices-item">
-                                                                                    <div class="products__card-prices-card">
-                                                                                        <p class="products__card-prices-card-small-text">
-                                                                                            Минимальная сумма вклада
-                                                                                        </p>
-                                                                                        <p class="products__card-prices-card-large-text">
-                                                                                            5 000 ₽
-                                                                                        </p>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-
-                                                                        <div class="products__catalog-bottom-links">
-                                                                            <a href="#" class="products__catalog-open-link">
-                                                                                открыть вклад
-                                                                            </a>
-                                                                            <a href="#" class="products__catalog-conditions-link">
-                                                                                Все условия
-
-                                                                                <svg width="10" height="14" aria-hidden="true" class="icon-arrow-right">
-                                                                                    <use xlink:href="#arrow-right" />
-                                                                                </svg>
-                                                                            </a>
-                                                                        </div>
-                                                                    </div>
-                                                                </li>
-                                                            </ul>
+                                                                <svg width="10" height="14" aria-hidden="true" class="icon-arrow-right">
+                                                                    <use xlink:href="#arrow-right" />
+                                                                </svg>
+                                                            </a>
                                                         </div>
                                                     </div>
-                                                </div>
-                                            </div>
+                                                </li>
+                                                <li class="catalog__products-list-item">
+                                                    <div href="#" class="products__card">
+                                                        <span class="products__card-tag">
+                                                            Вклады
+                                                        </span>
+                                                        <div class="products__card-image-container">
+                                                            <img src="img/products/products-business-2.jpg" alt="" class="products__card-image" />
+                                                        </div>
+                                                        <h5 class="products__card-title">Городской стабильный с капитализацией</h5>
+                                                        <div class="products__card-text-content">
+                                                            <p>
+                                                                Пополнение оборотных средств (обновление товарного ассортимента, закуп сырья и полуфабрикатов, товаров и прочее)
+                                                            </p>
+                                                        </div>
+                                                        <div class="products__card-prices">
+                                                            <div class="products__card-prices-items">
+                                                                <div class="products__card-prices-item">
+                                                                    <div class="products__card-prices-card">
+                                                                        <p class="products__card-prices-card-small-text">
+                                                                            Процентная ставка
+                                                                        </p>
+                                                                        <p class="products__card-prices-card-large-text">
+                                                                            3.75 %
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="products__card-prices-item">
+                                                                    <div class="products__card-prices-card">
+                                                                        <p class="products__card-prices-card-small-text">
+                                                                            Срок вклада
+                                                                        </p>
+                                                                        <p class="products__card-prices-card-large-text">
+                                                                            31 день
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="products__card-prices-item">
+                                                                    <div class="products__card-prices-card">
+                                                                        <p class="products__card-prices-card-small-text">
+                                                                            Минимальная сумма вклада
+                                                                        </p>
+                                                                        <p class="products__card-prices-card-large-text">
+                                                                            5 000 ₽
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="products__catalog-bottom-links">
+                                                            <a href="#" class="products__catalog-open-link">
+                                                                открыть вклад
+                                                            </a>
+                                                            <a href="#" class="products__catalog-conditions-link">
+                                                                Все условия
+
+                                                                <svg width="10" height="14" aria-hidden="true" class="icon-arrow-right">
+                                                                    <use xlink:href="#arrow-right" />
+                                                                </svg>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="catalog__products-list-item">
+                                                    <div href="#" class="products__card">
+                                                        <span class="products__card-tag">
+                                                            Вклады
+                                                        </span>
+                                                        <div class="products__card-image-container">
+                                                            <img src="img/products/products-business-2.jpg" alt="" class="products__card-image" />
+                                                        </div>
+                                                        <h5 class="products__card-title">Городской стабильный</h5>
+                                                        <div class="products__card-text-content">
+                                                            <p>
+                                                                Пополнение оборотных средств (обновление товарного ассортимента, закуп сырья и полуфабрикатов, товаров и прочее)
+                                                            </p>
+                                                        </div>
+                                                        <div class="products__card-prices">
+                                                            <div class="products__card-prices-items">
+                                                                <div class="products__card-prices-item">
+                                                                    <div class="products__card-prices-card">
+                                                                        <p class="products__card-prices-card-small-text">
+                                                                            Процентная ставка
+                                                                        </p>
+                                                                        <p class="products__card-prices-card-large-text">
+                                                                            3.75 %
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="products__card-prices-item">
+                                                                    <div class="products__card-prices-card">
+                                                                        <p class="products__card-prices-card-small-text">
+                                                                            Срок вклада
+                                                                        </p>
+                                                                        <p class="products__card-prices-card-large-text">
+                                                                            31 день
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="products__card-prices-item">
+                                                                    <div class="products__card-prices-card">
+                                                                        <p class="products__card-prices-card-small-text">
+                                                                            Минимальная сумма вклада
+                                                                        </p>
+                                                                        <p class="products__card-prices-card-large-text">
+                                                                            5 000 ₽
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="products__catalog-bottom-links">
+                                                            <a href="#" class="products__catalog-open-link">
+                                                                открыть вклад
+                                                            </a>
+                                                            <a href="#" class="products__catalog-conditions-link">
+                                                                Все условия
+
+                                                                <svg width="10" height="14" aria-hidden="true" class="icon-arrow-right">
+                                                                    <use xlink:href="#arrow-right" />
+                                                                </svg>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="catalog__products-list-item">
+                                                    <div href="#" class="products__card">
+                                                        <span class="products__card-tag">
+                                                            Вклады
+                                                        </span>
+                                                        <div class="products__card-image-container">
+                                                            <img src="img/products/products-business-2.jpg" alt="" class="products__card-image" />
+                                                        </div>
+                                                        <h5 class="products__card-title">Городской стабильный с капитализацией</h5>
+                                                        <div class="products__card-text-content">
+                                                            <p>
+                                                                Пополнение оборотных средств (обновление товарного ассортимента, закуп сырья и полуфабрикатов, товаров и прочее)
+                                                            </p>
+                                                        </div>
+                                                        <div class="products__card-prices">
+                                                            <div class="products__card-prices-items">
+                                                                <div class="products__card-prices-item">
+                                                                    <div class="products__card-prices-card">
+                                                                        <p class="products__card-prices-card-small-text">
+                                                                            Процентная ставка
+                                                                        </p>
+                                                                        <p class="products__card-prices-card-large-text">
+                                                                            3.75 %
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="products__card-prices-item">
+                                                                    <div class="products__card-prices-card">
+                                                                        <p class="products__card-prices-card-small-text">
+                                                                            Срок вклада
+                                                                        </p>
+                                                                        <p class="products__card-prices-card-large-text">
+                                                                            31 день
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="products__card-prices-item">
+                                                                    <div class="products__card-prices-card">
+                                                                        <p class="products__card-prices-card-small-text">
+                                                                            Минимальная сумма вклада
+                                                                        </p>
+                                                                        <p class="products__card-prices-card-large-text">
+                                                                            5 000 ₽
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="products__catalog-bottom-links">
+                                                            <a href="#" class="products__catalog-open-link">
+                                                                открыть вклад
+                                                            </a>
+                                                            <a href="#" class="products__catalog-conditions-link">
+                                                                Все условия
+
+                                                                <svg width="10" height="14" aria-hidden="true" class="icon-arrow-right">
+                                                                    <use xlink:href="#arrow-right" />
+                                                                </svg>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
                                         </div>
                                         <div class="catalogs__offer">
                                             <h2 class="catalogs__offer-heading">

@@ -8996,8 +8996,8 @@ img.lazyload:not([src]) {
   padding: 3.2rem;
   background: #fafafa;
   border-radius: 1rem;
-  -webkit-box-shadow: 0 0.5rem 1.3rem rgba(119, 119, 119, 0.15);
-          box-shadow: 0 0.5rem 1.3rem rgba(119, 119, 119, 0.15); }
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(119, 119, 119, 0.15);
+          box-shadow: 0 0.5rem 1rem rgba(119, 119, 119, 0.15); }
   .article__advantages-card:link, .article__advantages-card:visited {
     color: black; }
   @media only screen and (max-width: 767px) {
@@ -9643,6 +9643,11 @@ img.lazyload:not([src]) {
   font-size: 5.4rem;
   line-height: 120%;
   margin-bottom: 2.3rem; }
+  .catalog__main-heading + .catalog__filters {
+    margin-top: 5rem; }
+    @media only screen and (max-width: 767px) {
+      .catalog__main-heading + .catalog__filters {
+        margin-top: 2rem; } }
   @media only screen and (max-width: 767px) {
     .catalog__main-heading {
       font-size: 2.8rem;
@@ -9811,8 +9816,14 @@ img.lazyload:not([src]) {
 .catalog__filters-sliders-deposit-sum-range {
   width: 24rem; }
 
+.catalog__filters-sliders-credit-sum-range {
+  width: 35rem; }
+
 .catalog__filters-deposit-duration-range {
   width: 29rem; }
+
+.catalog__filters-credit-duration-range {
+  width: 32rem; }
 
 .catalog__products {
   margin-bottom: 5rem; }
