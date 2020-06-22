@@ -6565,7 +6565,8 @@ img.lazyload:not([src]) {
   .product-navigation--rko {
     background-color: #fff; }
   .dark-nav-text:not(.product-nav-menu-open):not(.bank-menu-shown) .product-navigation {
-    color: black; }
+    color: black;
+    background-color: white; }
   .product-navigation--short {
     min-height: auto;
     background-color: #fff; }
