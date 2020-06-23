@@ -380,10 +380,13 @@
         &:visited {
             color: black;
         }
+
+        &:hover {
+            color: var(--primary-color);
+        }
     }
 
-    .no-touch &:hover,
-    .touch &:active {
+    &:hover {
         color: var(--primary-color);
     }
 
