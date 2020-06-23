@@ -14,7 +14,7 @@ export default function() {
         // const aboutBankLink = document.querySelector('.page-header__about-bank-link');
         // const bankMenuLayer = element.querySelector('.js-bank-menu-layer');
         const productInfoItem = element.querySelector('.js-product-info-item');
-        let searchFormOpen = false;
+        // let searchFormOpen = false;
         // let bankMenuOpen = false;
         let categoryIndex = categoryLayers.findIndex(element => element.classList.contains('active'));
 
@@ -113,9 +113,9 @@ export default function() {
 
         searchBtn.addEventListener('click', event => {
             event.preventDefault();
-            if (!searchFormOpen) {
+            if (!element.classList.contains('search-form-open')) {
                 element.classList.add('search-form-open');
-                searchFormOpen = true;
+                // searchFormOpen = true;
             } else {
                 searchForm.submit();
             }
@@ -123,9 +123,9 @@ export default function() {
 
         closeBtn.addEventListener('click', event => {
             event.preventDefault();
-            if (searchFormOpen) {
+            if (element.classList.contains('search-form-open')) {
                 element.classList.remove('search-form-open');
-                searchFormOpen = false;
+                // searchFormOpen = false;
                 searchForm.reset();
             }
         });
