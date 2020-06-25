@@ -8682,45 +8682,45 @@ img.lazyload:not([src]) {
     margin-top: 0; }
   .article__content > *:last-child {
     margin-bottom: 0; }
-  .article__content h2:not([class]) {
+  .article__content h2 {
     font-weight: 500;
     font-size: 3.6rem;
     line-height: 120%;
     margin-bottom: 3rem; }
     @media only screen and (max-width: 767px) {
-      .article__content h2:not([class]) {
+      .article__content h2 {
         font-size: 2.2rem;
         margin-bottom: 1.5rem; } }
-  .article__content h3:not([class]) {
+  .article__content h3 {
     font-weight: 500;
     font-size: 3rem;
     line-height: 120%;
     margin-bottom: 3rem; }
     @media only screen and (max-width: 767px) {
-      .article__content h3:not([class]) {
+      .article__content h3 {
         font-size: 1.8rem;
         margin-bottom: 1.5rem; } }
-  .article__content p:not([class]) {
+  .article__content p {
     margin-bottom: 1.5rem; }
     @media only screen and (max-width: 767px) {
-      .article__content p:not([class]) {
+      .article__content p {
         margin-bottom: 1rem; } }
-    .article__content p:not([class]):last-child {
+    .article__content p:last-child {
       margin-bottom: 0; }
-    .article__content p:not([class]) a:not([class]) {
+    .article__content p a {
       text-decoration: underline; }
-      .article__content p:not([class]) a:not([class]):link, .article__content p:not([class]) a:not([class]):visited {
+      .article__content p a:link, .article__content p a:visited {
         color: var(--secondary-color); }
-      .article__content p:not([class]) a:not([class]):hover, .article__content p:not([class]) a:not([class]):active {
+      .article__content p a:hover, .article__content p a:active {
         text-decoration: none; }
-  .article__content figcaption:not([class]) {
+  .article__content figcaption {
     font-size: 1.4rem;
     line-height: 146%;
     color: #949494; }
     @media only screen and (max-width: 767px) {
-      .article__content figcaption:not([class]) {
+      .article__content figcaption {
         font-size: 1.2rem; } }
-  .article__content img:not([class]) {
+  .article__content img {
     display: block;
     width: 100%;
     height: auto;
@@ -8730,15 +8730,15 @@ img.lazyload:not([src]) {
   .article__content thead {
     display: block;
     width: 100%; }
-  .article__content ul:not([class]) li {
+  .article__content ul li {
     margin-bottom: 1.5rem;
     padding-left: 2.7rem;
     position: relative; }
     @media only screen and (max-width: 767px) {
-      .article__content ul:not([class]) li {
+      .article__content ul li {
         padding-left: 1.8rem;
         margin-bottom: 1rem; } }
-    .article__content ul:not([class]) li::before {
+    .article__content ul li::before {
       content: '';
       position: absolute;
       left: 0;
@@ -8748,21 +8748,21 @@ img.lazyload:not([src]) {
       background-color: var(--primary-color);
       border-radius: 50%; }
       @media only screen and (max-width: 767px) {
-        .article__content ul:not([class]) li::before {
+        .article__content ul li::before {
           width: 6px;
           height: 6px;
           top: 6px; } }
-  .article__content ol:not([class]) li {
+  .article__content ol li {
     margin-bottom: 1.5rem;
     padding-left: 2.7rem;
     position: relative; }
-    .article__content ol:not([class]) li:last-child {
+    .article__content ol li:last-child {
       margin-bottom: 0; }
     @media only screen and (max-width: 767px) {
-      .article__content ol:not([class]) li {
+      .article__content ol li {
         padding-left: 2rem;
         margin-bottom: 1rem; } }
-    .article__content ol:not([class]) li::before {
+    .article__content ol li::before {
       content: counter(ordered-list) ".";
       position: absolute;
       left: 0;
@@ -8771,7 +8771,7 @@ img.lazyload:not([src]) {
       color: #95bf0a;
       top: 0rem; }
       @media only screen and (max-width: 767px) {
-        .article__content ol:not([class]) li::before {
+        .article__content ol li::before {
           font-size: 1.5rem; } }
   .article__content table tr {
     display: -webkit-box;
@@ -8909,7 +8909,7 @@ img.lazyload:not([src]) {
         font-size: 1.6rem; } }
   .article__content table b {
     font-weight: 500; }
-  .article__content table ul:not([class]) {
+  .article__content table ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -8917,26 +8917,26 @@ img.lazyload:not([src]) {
         flex-wrap: wrap;
     margin: -1.4rem -1.6rem; }
     @media only screen and (max-width: 767px) {
-      .article__content table ul:not([class]) {
+      .article__content table ul {
         margin: -1rem; } }
-    .article__content table ul:not([class]) li {
+    .article__content table ul li {
       width: 50%;
       padding: 1.4rem 1.6rem; }
       @media only screen and (max-width: 767px) {
-        .article__content table ul:not([class]) li {
+        .article__content table ul li {
           padding: 1rem;
           width: 100%; } }
-  .article__content table p:not([class]) {
+  .article__content table p {
     font-size: 1.6rem;
     line-height: 130%;
     color: #888888;
     margin-top: 1rem;
     margin-bottom: 1rem;
     font-weight: 400; }
-    .article__content table p:not([class]):first-child {
+    .article__content table p:first-child {
       margin-top: 0; }
     @media only screen and (max-width: 767px) {
-      .article__content table p:not([class]) {
+      .article__content table p {
         font-size: 1.4rem;
         margin-top: 0.6rem; } }
   .article__content table svg {
@@ -8978,13 +8978,13 @@ img.lazyload:not([src]) {
       width: 100%;
       padding: 1rem; } }
 
-.article__image-block img:not([class]) {
+.article__image-block img {
   border-radius: 1rem;
   display: block;
   width: 100%;
   margin-bottom: 1.7rem; }
   @media only screen and (max-width: 767px) {
-    .article__image-block img:not([class]) {
+    .article__image-block img {
       margin-bottom: 1rem;
       border-radius: .8rem; } }
 
@@ -9096,11 +9096,11 @@ img.lazyload:not([src]) {
 
 .article__advantages-card-text {
   margin-bottom: 1.4rem; }
-  .article__advantages-card-text p:not([class]) {
+  .article__advantages-card-text p {
     font-size: 1.8rem;
     line-height: 130%; }
     @media only screen and (max-width: 767px) {
-      .article__advantages-card-text p:not([class]) {
+      .article__advantages-card-text p {
         font-size: 1.6rem; } }
   @media only screen and (max-width: 767px) {
     .article__advantages-card-text {
