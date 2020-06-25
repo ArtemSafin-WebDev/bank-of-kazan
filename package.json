@@ -25,6 +25,7 @@
     "gsap": "^3.2.6",
     "inputmask": "^4.0.8",
     "lazysizes": "^5.2.0",
+    "lodash": "^4.17.15",
     "moment": "~2.24.0",
     "moment-duration-format": "^2.3.2",
     "nouislider": "^14.4.0",

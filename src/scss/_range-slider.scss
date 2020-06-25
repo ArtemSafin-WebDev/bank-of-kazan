@@ -97,7 +97,7 @@
     display: flex;
     align-items: center;
     user-select: none;
-    pointer-events: none;
+  
 
     @include breakpoint(mobile) {
         font-weight: 500;

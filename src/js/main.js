@@ -4,7 +4,7 @@ import ratingStars from './ratingStars';
 import phoneMask from './phoneMask';
 import tabs from './tabs';
 import customSelects from './customSelects';
-import rangeSliders from './rangeSliders';
+import rangeSliders from './newRangeSliders';
 import productsSlider from './productsSlider';
 import navigation from './navigation';
 import mobileMenu from './mobileMenu';
@@ -19,6 +19,8 @@ import rkoFeatures from './rkoFeatures';
 import openAccount from './openAccount';
 import bankMenu from './bankMenu';
 import articleAdvantages from './articleAdvantages';
+import bankOffices from './bankOffices';
+import onlyNumeric from './onlyNumeric';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -32,6 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
     openAccount();
     bankMenu();
     articleAdvantages();
+    bankOffices();
     barba.init({
         transitions: [
             {
@@ -92,6 +95,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     rangeSliders.init();
                     productsSlider.init();
                     forBusiness.init();
+                    onlyNumeric.init();
                     document.body.classList.remove('category-toggles-off');
 
                     if (window.initBackendScripts && typeof window.initBackendScripts === 'function') {
