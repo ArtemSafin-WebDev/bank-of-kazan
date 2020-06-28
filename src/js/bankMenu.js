@@ -50,6 +50,19 @@ export default function() {
                 closeBankMenu();
             });
         });
+
+        bankMenu.addEventListener('click', event => {
+            if (event.target.closest('.bank-menu') && !(event.target.matches('a') || event.target.matches('button'))) {
+                event.preventDefault();
+                closeBankMenu();
+            }
+        });
+
+        document.addEventListener('keydown', function(event) {
+            if (event.which === 27 && aboutBankMenuOpen) {
+                closeBankMenu();
+            }
+        });
     } else {
         console.error('No bank menu btn or bank menu scroll container');
     }

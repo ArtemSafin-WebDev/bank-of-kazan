@@ -279,6 +279,8 @@
     }
 }
 
+
+.product-navigation__bank-menu-close,
 .product-navigation__search-close-btn,
 .product-navigation__search-submit-btn {
     transition: all 0.2s;
@@ -1051,5 +1053,32 @@
         padding: 1.5rem;
         display: flex;
         flex-direction: column;
+    }
+}
+
+
+
+.product-navigation__bank-menu-close {
+    position: absolute;
+    right: 0;
+    top: 2.8rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s, visibility 0s linear .3s;
+
+    
+
+
+    .no-touch &:hover,
+    .touch &:active {
+        svg {
+            fill: var(--primary-color);
+        }
+    }
+
+    .bank-menu-shown & {
+        opacity: 1;
+        visibility: visible;
+        transition: all .3s;
     }
 }
