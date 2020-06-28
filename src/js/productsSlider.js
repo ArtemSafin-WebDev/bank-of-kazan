@@ -25,6 +25,16 @@ function init() {
                     slidesPerView: 'auto',
                     spaceBetween: 60
                 }
+            },
+            on: {
+                progress: function() {
+                    if (this.isEnd) {
+                        element.classList.add('last-slide-reached');
+                    } else {
+                        element.classList.remove('last-slide-reached');
+                    }
+                    console.log('is end', this.isEnd)
+                }
             }
         };
 

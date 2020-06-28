@@ -437,6 +437,14 @@
     width: 24rem;
     transition: opacity 0.3s, visibility 0s linear 0.3s;
 
+
+    &--btn-width {
+        width: 27.5rem;
+        @include breakpoint(mobile) {
+            width: 16rem;
+        }
+    }
+
     @include breakpoint(mobile) {
         width: 16rem;
         padding-top: 0.5rem;
@@ -458,7 +466,7 @@
 .page-header__online-bank-dropdown-link {
     font-weight: 500;
     font-size: 1.6rem;
-    padding: 1.7rem 2.2rem;
+    padding: 1.7rem 2rem;
     text-transform: uppercase;
     color: white;
     border-bottom: 1px solid rgba(white, 0.3);
