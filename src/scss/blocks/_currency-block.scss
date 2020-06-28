@@ -2,7 +2,7 @@
     padding: 8.4rem;
     padding-top: 4rem;
 
-    @include breakpoint(mobile) {
+    @include breakpoint(tablet) {
         padding: 3rem 0;
         padding-top: 1.5rem;
     }

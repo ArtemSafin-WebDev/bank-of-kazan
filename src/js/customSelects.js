@@ -1,29 +1,27 @@
-import 'select2';
+
+import Choices from 'choices.js';
+
+let instances = [];
 
 function init() {
-    $('.js-custom-select').each(function() {
-        let currentSelect = $(this);
+    const customSelects = Array.from(document.querySelectorAll('.js-custom-select'));
 
-        currentSelect.select2({
-            minimumResultsForSearch: -1,
-            dropdownParent: currentSelect.parent()
+    customSelects.forEach(select => {
+        let instance = new Choices(select, {
+            searchEnabled: false,
+            itemSelectText: '',
+            shouldSort: false
         });
 
-        const handler = function() {
-            const event = new CustomEvent('choose');
-            currentSelect.dispatchEvent(event);
-        };
-
-        currentSelect.on('change', handler);
-    });
+        instances.push(instance)
+    })
+   
 }
 
 function destroy() {
-    $('.js-custom-select').each(function() {
-        let currentSelect = $(this);
-
-        currentSelect.select2('destroy');
-    });
+    instances.forEach(instance => instance.destroy());
+    instances = [];
+  
 }
 
 export default {

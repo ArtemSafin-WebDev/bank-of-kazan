@@ -16,6 +16,7 @@ function init() {
             slidesPerView: 'auto',
             spaceBetween: 20,
             watchOverflow: true,
+            watchSlidesProgress: true,
             breakpoints: {
                 768: {
                     slidesPerView: 'auto',
@@ -25,24 +26,29 @@ function init() {
                     slidesPerView: 'auto',
                     spaceBetween: 60
                 }
-            },
-            on: {
-                progress: function() {
-                    if (this.isEnd) {
-                        element.classList.add('last-slide-reached');
-                    } else {
-                        element.classList.remove('last-slide-reached');
-                    }
-                    console.log('is end', this.isEnd)
-                }
             }
         };
 
         if (hasTabs) {
             tabItems.forEach(item => {
                 const container = item.querySelector('.swiper-container');
+                const sliderWrapper = container.closest('.products__slider-wrapper');
 
-                const slider = new Swiper(container, options);
+                let optionsExtended = {
+                    ...options,
+                    on: {
+                        progress: function() {
+                            if (this.isEnd) {
+                                sliderWrapper.classList.add('last-slide-reached');
+                            } else {
+                                sliderWrapper.classList.remove('last-slide-reached');
+                            }
+                            console.log('is end', this.isEnd);
+                        }
+                    }
+                };
+
+                const slider = new Swiper(container, optionsExtended);
 
                 instances.push({
                     slider
@@ -54,7 +60,22 @@ function init() {
             });
         } else {
             const container = element.querySelector('.swiper-container');
-            const slider = new Swiper(container, options);
+            const sliderWrapper = container.closest('.products__slider-wrapper');
+
+            let optionsExtended = {
+                ...options,
+                on: {
+                    progress: function() {
+                        if (this.isEnd) {
+                            sliderWrapper.classList.add('last-slide-reached');
+                        } else {
+                            sliderWrapper.classList.remove('last-slide-reached');
+                        }
+                        console.log('is end', this.isEnd);
+                    }
+                }
+            };
+            const slider = new Swiper(container, optionsExtended);
             instances.push({
                 slider
             });

@@ -33,13 +33,21 @@ html {
     }
 
 
-    @include breakpoint(tablet) {
+    @include breakpoint(desktop) {
         font-size: 7px;
     }
 
 
-    @include breakpoint(small-tablet) {
+    @include breakpoint(laptop) {
         font-size: 6px;
+    }
+
+    @include breakpoint(tablet) {
+        // font-size: 5px;
+    }
+
+    @include breakpoint(small-tablet) {
+        font-size: 5px;
     }
 
     @include breakpoint(mobile) {

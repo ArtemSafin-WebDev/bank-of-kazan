@@ -1086,3 +1086,48 @@
         @include objectFitCover();
     }
 }
+
+
+
+.navigation__bank-menu-close {
+    
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0s linear 0.3s;
+    position: absolute;
+    right: 0;
+    bottom: 4.5rem;
+    z-index: 80;
+    svg {
+        width: 3.4rem;
+        height: 3.4rem;
+        fill: white;
+        display: block;
+        transition: fill .2s;
+        @include breakpoint(mobile) {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+    }
+
+
+    &:hover {
+        svg {
+            fill: var(--primary-color);
+        }
+    }
+
+    .bank-menu-shown & {
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 0.3s, visibility 0.3s;
+      
+    }
+
+    @include breakpoint(mobile) {
+        margin-right: 1rem;
+        padding-top: 2.2rem;
+        padding-bottom: 1.2rem;
+        display: none;
+    }
+}
