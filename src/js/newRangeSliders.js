@@ -30,7 +30,7 @@ moment.locale('ru');
 function init() {
     const rangeSliders = Array.from(document.querySelectorAll('.js-range-slider'));
 
-    for (let slider of rangeSliders) {
+    rangeSliders.forEach(slider => {
         const rangeInput = slider.querySelector('.range-slider__input');
         const customRangeSliderElement = slider.querySelector('.range-slider__element');
         const displayedAmountElement = slider.querySelector('.range-slider__amount');
@@ -41,15 +41,11 @@ function init() {
         const units = rangeInput.hasAttribute('data-units') ? rangeInput.getAttribute('data-units') : 'rub';
         let initialRangeValue = checkValue(cleanInput(rangeInput.value));
 
-
-      
-
         function cleanInput(value) {
             return parseInt(value.toString().replace(/\s/g, ''), 10);
         }
 
         function checkValue(value) {
-           
             if (value > maxValue) {
                 return maxValue;
             } else if (value < minValue || !value) {
@@ -72,7 +68,6 @@ function init() {
             const value = event.target.value;
             const clearedValue = checkValue(cleanInput(value));
             setValue(clearedValue);
-           
         }, 900);
 
         function setValue(value) {
@@ -135,12 +130,20 @@ function init() {
             displayedAmountElement.addEventListener('input', handleManualInput);
             displayedAmountElement.addEventListener('input', checkManualInput);
         }
+    });
+}
+
+function initWithExceptionHandling() {
+    try {
+        init();
+    } catch (err) {
+        console.error('error');
     }
 }
 
 function destroy() {}
 
 export default {
-    init,
+    init: initWithExceptionHandling,
     destroy
 };

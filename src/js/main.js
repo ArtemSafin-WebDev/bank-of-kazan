@@ -11,7 +11,6 @@ import mobileMenu from './mobileMenu';
 import forBusiness from './forBusiness';
 import productNav from './productNav';
 import barba from '@barba/core';
-// import css from '@barba/css';
 import { gsap } from 'gsap';
 import scrollAnimations from './scrollAnimations';
 import accordions from './accordions';
@@ -20,7 +19,7 @@ import openAccount from './openAccount';
 import bankMenu from './bankMenu';
 import articleAdvantages from './articleAdvantages';
 import bankOffices from './bankOffices';
-import onlyNumeric from './onlyNumeric';
+
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -36,6 +35,8 @@ document.addEventListener('DOMContentLoaded', function() {
     articleAdvantages();
     bankOffices();
     barba.init({
+        debug: true,
+        logLevel: 'error',
         transitions: [
             {
                 name: 'opacity-transition',
@@ -71,10 +72,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 namespace: 'home',
 
                 beforeLeave() {
-                    // console.log('Before leave');
+                    console.log('Before leave');
+                    tabs.destroy();
                     ratingStars.destroy();
                     phoneMask.destroy();
-                    tabs.destroy();
+                   
                     productsSlider.destroy();
                     rangeSliders.destroy();
                     customSelects.destroy();
@@ -87,15 +89,20 @@ document.addEventListener('DOMContentLoaded', function() {
                 },
 
                 afterEnter() {
-                    // console.log('After enter');
-                    ratingStars.init();
-                    phoneMask.init();
+                    console.log('After enter');
                     tabs.init();
+                   
+                    ratingStars.init();
+                   
+                    phoneMask.init();
+                   
                     customSelects.init();
                     rangeSliders.init();
-                    productsSlider.init();
+                   
                     forBusiness.init();
-                    onlyNumeric.init();
+                    productsSlider.init();
+                    console.log('Error is here')
+                   
                     document.body.classList.remove('category-toggles-off');
 
                     if (window.initBackendScripts && typeof window.initBackendScripts === 'function') {
