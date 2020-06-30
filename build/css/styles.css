@@ -10659,3 +10659,24 @@ img.lazyload:not([src]) {
     transition: opacity .3s, visibility .3s;
     opacity: 1;
     visibility: visible; }
+
+.offices__map-container {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  margin-bottom: 8rem; }
+  @media only screen and (max-width: 767px) {
+    .offices__map-container {
+      margin-bottom: 4rem; } }
+  .offices__map-container::after {
+    content: '';
+    display: block;
+    width: 100%;
+    padding-bottom: 40%; }
+
+.offices__map {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%; }

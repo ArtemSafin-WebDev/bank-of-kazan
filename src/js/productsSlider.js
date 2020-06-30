@@ -107,24 +107,24 @@ function init() {
             } else {
                 activeInstance = localInstances[0];
             }
-            prev.classList.remove('button-disabled');
-            next.classList.remove('button-disabled');
+            if (prev) prev.classList.remove('button-disabled');
+            if (next) next.classList.remove('button-disabled');
             if (activeInstance.slider.progress == 0) {
-                prev.classList.add('button-disabled');
+                if (prev) prev.classList.add('button-disabled');
             }
             if (activeInstance.slider.progress == 1) {
-                next.classList.add('button-disabled');
+                if (next) next.classList.add('button-disabled');
             }
         }
 
-        prev.addEventListener('click', event => {
+        if (prev) prev.addEventListener('click', event => {
             event.preventDefault();
             if (prev.classList.contains('button-disabled')) return;
             handleArrowClick('prev');
             handleButtonsActivity();
         });
 
-        next.addEventListener('click', event => {
+        if (next) next.addEventListener('click', event => {
             event.preventDefault();
             if (next.classList.contains('button-disabled')) return;
             handleArrowClick('next');
