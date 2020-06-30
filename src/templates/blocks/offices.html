@@ -16,7 +16,7 @@
                         </span>
                     </label>
                     <label class="offices__checkbox">
-                        <input type="checkbox" name="offices" class="offices__checkbox-input" checked id="offices"/>
+                        <input type="checkbox" name="offices" class="offices__checkbox-input" checked id="offices" />
                         <span class="offices__checkbox-content">
                             <svg width="18" height="25" aria-hidden="true" class="icon-droplet">
                                 <use xlink:href="#droplet" />
@@ -25,7 +25,7 @@
                         </span>
                     </label>
                     <label class="offices__checkbox">
-                        <input type="checkbox" name="bankomats" class="offices__checkbox-input" checked id="bankomats"/>
+                        <input type="checkbox" name="bankomats" class="offices__checkbox-input" checked id="bankomats" />
                         <span class="offices__checkbox-content">
                             <svg width="18" height="25" aria-hidden="true" class="icon-droplet green">
                                 <use xlink:href="#droplet" />
@@ -34,7 +34,7 @@
                         </span>
                     </label>
                     <label class="offices__checkbox">
-                        <input type="checkbox" name="partners" class="offices__checkbox-input" checked id="partners-bankomats"/>
+                        <input type="checkbox" name="partners" class="offices__checkbox-input" checked id="partners-bankomats" />
                         <span class="offices__checkbox-content">
                             <svg width="18" height="25" aria-hidden="true" class="icon-droplet blue">
                                 <use xlink:href="#droplet" />
@@ -43,7 +43,7 @@
                         </span>
                     </label>
                     <label class="offices__checkbox">
-                        <input type="checkbox" name="terminals" class="offices__checkbox-input" id="terminals"/>
+                        <input type="checkbox" name="terminals" class="offices__checkbox-input" id="terminals" />
                         <span class="offices__checkbox-content">
                             <svg width="18" height="25" aria-hidden="true" class="icon-droplet red">
                                 <use xlink:href="#droplet" />
@@ -59,23 +59,23 @@
                             <svg width="18" height="25" aria-hidden="true" class="icon-droplet green">
                                 <use xlink:href="#droplet-with-hole" />
                             </svg>
-                            На карте            
+                            На карте
                         </span>
                     </label>
                     <label class="offices__checkbox">
-                        <input type="radio" name="viewmode" class="offices__checkbox-input js-offices-results-view-toggle"/>
+                        <input type="radio" name="viewmode" class="offices__checkbox-input js-offices-results-view-toggle" />
                         <span class="offices__checkbox-content">
                             <svg width="18" height="25" aria-hidden="true" class="icon-list-view green">
                                 <use xlink:href="#list-view" />
                             </svg>
-                            Списком       
+                            Списком
                         </span>
                     </label>
                 </div>
             </div>
             <div class="offices__filters-bottom-row">
                 <label class="catalog__filters-checkbox offices__filters-small-checkbox">
-                    <input type="checkbox" class="catalog__filters-checkmarks-input" name="filter" checked="">
+                    <input type="checkbox" class="catalog__filters-checkmarks-input" name="filter" checked="" />
                     <span class="catalog__filters-checkbox-mark">
                         <svg width="15" height="15" aria-hidden="true" class="icon-checkmark">
                             <use xlink:href="#checkmark"></use>
@@ -86,7 +86,7 @@
                     </span>
                 </label>
                 <label class="catalog__filters-checkbox offices__filters-small-checkbox">
-                    <input type="checkbox" class="catalog__filters-checkmarks-input" name="filter" checked="">
+                    <input type="checkbox" class="catalog__filters-checkmarks-input" name="filter" checked="" />
                     <span class="catalog__filters-checkbox-mark">
                         <svg width="15" height="15" aria-hidden="true" class="icon-checkmark">
                             <use xlink:href="#checkmark"></use>
@@ -105,7 +105,611 @@
                 </div>
             </div>
             <div class="offices__results-view js-offices-results-view">
-                Список
+                <div class="offices__list-view-group">
+                    <h2 class="offices__list-view-heading">
+                        Офисы
+                    </h2>
+                    <div class="offices__list-view-top-row">
+                        <form action="/" class="offices__list-view-search-form">
+                            <input type="search" name="q" class="offices__list-view-search-input" placeholder="Поиск адреса" />
+                            <button type="submit" class="offices__list-view-search-submit-btn">
+                                <svg width="20" height="20" aria-hidden="true" class="icon-search">
+                                    <use xlink:href="#search"></use>
+                                </svg>
+                            </button>
+                        </form>
+                        <div class="offices__work-time">
+                            <p class="offices__list-view-feature">
+                                Часы работы
+                            </p>
+                        </div>
+                        <div class="offices__currency-course">
+                            <p class="offices__list-view-feature">
+                                Курс валют
+                            </p>
+                        </div>
+                        <div class="offices__functionality">
+                            <p class="offices__list-view-feature">
+                                Функционал
+                            </p>
+                        </div>
+                    </div>
+                    <div class="offices__list-view-accordions">
+                        <div class="offices__list-view-accordion js-accordion">
+                            <div class="offices__list-view-accordion-header">
+                                <div class="offices__list-view-accordion-address">
+                                    <div class="offices__list-view-accordion-arrow">
+                                        <svg width="14" height="9" aria-hidden="true" class="icon-arrow-up">
+                                            <use xlink:href="#arrow-up"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="offices__list-view-accordion-content">
+                                        <div class="offices__list-view-accordion-address-name">
+                                            улица Декабристов, д.183
+                                        </div>
+                                        <div class="offices__list-view-accordion-address-office">
+                                            ДО "Декабристов"<br>Отделение банка
+                                        </div>
+                                        <a href="#" class="office__list-view-accordion-show-on-map js-accordion-btn">
+                                            Смотреть на карте
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="offices__schedule">
+                                    пн.-пт. 10:00-18:00, <br />
+                                    сб. нерабочий день
+                                </div>
+                                <div class="offices__currency">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th>
+                                                    покупка
+                                                </th>
+                                                <th>
+                                                    продажа
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th>
+                                                    USD
+                                                </th>
+                                                <td>
+                                                    76,30
+                                                </td>
+                                                <td>
+                                                    77,30
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>
+                                                    EUR
+                                                </th>
+                                                <td>
+                                                    82,30
+                                                </td>
+                                                <td>
+                                                    83,30
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="offices__features">
+                                    <div class="offices__features-group">
+                                        <span class="offices__features-item">
+                                            <svg width="20" height="20" aria-hidden="true" class="icon-percent">
+                                                <use xlink:href="#percent"></use>
+                                            </svg>
+                                        </span>
+                                        <span class="offices__features-item">
+                                            <svg width="20" height="20" aria-hidden="true" class="icon-calculator">
+                                                <use xlink:href="#calculator"></use>
+                                            </svg>
+                                        </span>
+                                        <span class="offices__features-item">
+                                            <svg width="20" height="20" aria-hidden="true" class="icon-cash">
+                                                <use xlink:href="#cash"></use>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                    <div class="offices__features-group">
+                                        <span class="offices__features-item">
+                                            <svg width="20" height="20" aria-hidden="true" class="icon-card">
+                                                <use xlink:href="#card"></use>
+                                            </svg>
+                                        </span>
+                                        <span class="offices__features-item">
+                                            <svg width="20" height="20" aria-hidden="true" class="icon-exchange">
+                                                <use xlink:href="#exchange"></use>
+                                            </svg>
+                                        </span>
+                                        <span class="offices__features-item">
+                                            <svg width="20" height="20" aria-hidden="true" class="icon-wallet">
+                                                <use xlink:href="#wallet"></use>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="offices__list-view-accordion-body js-accordion-content">
+                                <div class="offices__list-view-accordion-map-container">
+                                    <div class="offices__list-view-accordion-map js-offices-inner-map" data-lat="55.831082" data-lng="49.079644" data-type="office">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="offices__list-view-accordion js-accordion">
+                            <div class="offices__list-view-accordion-header">
+                                <div class="offices__list-view-accordion-address">
+                                    <div class="offices__list-view-accordion-arrow">
+                                        <svg width="14" height="9" aria-hidden="true" class="icon-arrow-up">
+                                            <use xlink:href="#arrow-up"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="offices__list-view-accordion-content">
+                                        <div class="offices__list-view-accordion-address-name">
+                                            улица Декабристов, д.183
+                                        </div>
+                                        <div class="offices__list-view-accordion-address-office">
+                                            ДО "Декабристов"<br>Отделение банка
+                                        </div>
+                                        <a href="#" class="office__list-view-accordion-show-on-map js-accordion-btn">
+                                            Смотреть на карте
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="offices__schedule">
+                                    пн.-пт. 10:00-18:00, <br />
+                                    сб. нерабочий день
+                                </div>
+                                <div class="offices__currency">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th>
+                                                    покупка
+                                                </th>
+                                                <th>
+                                                    продажа
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th>
+                                                    USD
+                                                </th>
+                                                <td>
+                                                    76,30
+                                                </td>
+                                                <td>
+                                                    77,30
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>
+                                                    EUR
+                                                </th>
+                                                <td>
+                                                    82,30
+                                                </td>
+                                                <td>
+                                                    83,30
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="offices__features">
+                                    <div class="offices__features-group">
+                                        <span class="offices__features-item">
+                                            <svg width="20" height="20" aria-hidden="true" class="icon-percent">
+                                                <use xlink:href="#percent"></use>
+                                            </svg>
+                                        </span>
+                                        <span class="offices__features-item">
+                                            <svg width="20" height="20" aria-hidden="true" class="icon-calculator">
+                                                <use xlink:href="#calculator"></use>
+                                            </svg>
+                                        </span>
+                                        <span class="offices__features-item">
+                                            <svg width="20" height="20" aria-hidden="true" class="icon-cash">
+                                                <use xlink:href="#cash"></use>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                    <div class="offices__features-group">
+                                        <span class="offices__features-item">
+                                            <svg width="20" height="20" aria-hidden="true" class="icon-card">
+                                                <use xlink:href="#card"></use>
+                                            </svg>
+                                        </span>
+                                        <span class="offices__features-item">
+                                            <svg width="20" height="20" aria-hidden="true" class="icon-exchange">
+                                                <use xlink:href="#exchange"></use>
+                                            </svg>
+                                        </span>
+                                        <span class="offices__features-item">
+                                            <svg width="20" height="20" aria-hidden="true" class="icon-wallet">
+                                                <use xlink:href="#wallet"></use>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="offices__list-view-accordion-body js-accordion-content">
+                                <div class="offices__list-view-accordion-map-container">
+                                    <div class="offices__list-view-accordion-map js-offices-inner-map" data-lat="55.831082" data-lng="49.079644" data-type="office">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="offices__list-view-accordion js-accordion">
+                            <div class="offices__list-view-accordion-header">
+                                <div class="offices__list-view-accordion-address">
+                                    <div class="offices__list-view-accordion-arrow">
+                                        <svg width="14" height="9" aria-hidden="true" class="icon-arrow-up">
+                                            <use xlink:href="#arrow-up"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="offices__list-view-accordion-content">
+                                        <div class="offices__list-view-accordion-address-name">
+                                            улица Декабристов, д.183
+                                        </div>
+                                        <div class="offices__list-view-accordion-address-office">
+                                            ДО "Декабристов"<br>Отделение банка
+                                        </div>
+                                        <a href="#" class="office__list-view-accordion-show-on-map js-accordion-btn">
+                                            Смотреть на карте
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="offices__schedule">
+                                    пн.-пт. 10:00-18:00, <br />
+                                    сб. нерабочий день
+                                </div>
+                                <div class="offices__currency">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th>
+                                                    покупка
+                                                </th>
+                                                <th>
+                                                    продажа
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th>
+                                                    USD
+                                                </th>
+                                                <td>
+                                                    76,30
+                                                </td>
+                                                <td>
+                                                    77,30
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>
+                                                    EUR
+                                                </th>
+                                                <td>
+                                                    82,30
+                                                </td>
+                                                <td>
+                                                    83,30
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="offices__features">
+                                    <div class="offices__features-group">
+                                        <span class="offices__features-item">
+                                            <svg width="20" height="20" aria-hidden="true" class="icon-percent">
+                                                <use xlink:href="#percent"></use>
+                                            </svg>
+                                        </span>
+                                        <span class="offices__features-item">
+                                            <svg width="20" height="20" aria-hidden="true" class="icon-calculator">
+                                                <use xlink:href="#calculator"></use>
+                                            </svg>
+                                        </span>
+                                        <span class="offices__features-item">
+                                            <svg width="20" height="20" aria-hidden="true" class="icon-cash">
+                                                <use xlink:href="#cash"></use>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                    <div class="offices__features-group">
+                                        <span class="offices__features-item">
+                                            <svg width="20" height="20" aria-hidden="true" class="icon-card">
+                                                <use xlink:href="#card"></use>
+                                            </svg>
+                                        </span>
+                                        <span class="offices__features-item">
+                                            <svg width="20" height="20" aria-hidden="true" class="icon-exchange">
+                                                <use xlink:href="#exchange"></use>
+                                            </svg>
+                                        </span>
+                                        <span class="offices__features-item">
+                                            <svg width="20" height="20" aria-hidden="true" class="icon-wallet">
+                                                <use xlink:href="#wallet"></use>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="offices__list-view-accordion-body js-accordion-content">
+                                <div class="offices__list-view-accordion-map-container">
+                                    <div class="offices__list-view-accordion-map js-offices-inner-map" data-lat="55.831082" data-lng="49.079644" data-type="office">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="offices__list-view-group">
+                    <h2 class="offices__list-view-heading">
+                        Банкоматы “Банка Казани”
+                    </h2>
+                    <div class="offices__list-view-top-row">
+                        <form action="/" class="offices__list-view-search-form">
+                            <input type="search" name="q" class="offices__list-view-search-input" placeholder="Поиск адреса" />
+                            <button type="submit" class="offices__list-view-search-submit-btn">
+                                <svg width="20" height="20" aria-hidden="true" class="icon-search">
+                                    <use xlink:href="#search"></use>
+                                </svg>
+                            </button>
+                        </form>
+                        <div class="offices__work-time">
+                            <p class="offices__list-view-feature">
+                                Часы работы
+                            </p>
+                        </div>
+                        <div class="offices__currency-course">
+                            <p class="offices__list-view-feature">
+                                Курс валют
+                            </p>
+                        </div>
+                        <div class="offices__functionality">
+                            <p class="offices__list-view-feature">
+                                Функционал
+                            </p>
+                        </div>
+                    </div>
+                    <div class="offices__list-view-accordions">
+                        <div class="offices__list-view-accordion js-accordion">
+                            <div class="offices__list-view-accordion-header">
+                                <div class="offices__list-view-accordion-address">
+                                    <div class="offices__list-view-accordion-arrow">
+                                        <svg width="14" height="9" aria-hidden="true" class="icon-arrow-up">
+                                            <use xlink:href="#arrow-up"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="offices__list-view-accordion-content">
+                                        <div class="offices__list-view-accordion-address-name">
+                                            улица Декабристов, д.183
+                                        </div>
+                                        <div class="offices__list-view-accordion-address-office">
+                                            ДО "Декабристов"<br>Отделение банка
+                                        </div>
+                                        <a href="#" class="office__list-view-accordion-show-on-map js-accordion-btn">
+                                            Смотреть на карте
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="offices__schedule">
+                                    пн.-пт. 10:00-18:00, <br />
+                                    сб. нерабочий день
+                                </div>
+                                <div class="offices__currency">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th>
+                                                    покупка
+                                                </th>
+                                                <th>
+                                                    продажа
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th>
+                                                    USD
+                                                </th>
+                                                <td>
+                                                    76,30
+                                                </td>
+                                                <td>
+                                                    77,30
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>
+                                                    EUR
+                                                </th>
+                                                <td>
+                                                    82,30
+                                                </td>
+                                                <td>
+                                                    83,30
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="offices__features">
+                                    <div class="offices__features-group">
+                                        <span class="offices__features-item">
+                                            <svg width="20" height="20" aria-hidden="true" class="icon-percent">
+                                                <use xlink:href="#percent"></use>
+                                            </svg>
+                                        </span>
+                                        <span class="offices__features-item">
+                                            <svg width="20" height="20" aria-hidden="true" class="icon-calculator">
+                                                <use xlink:href="#calculator"></use>
+                                            </svg>
+                                        </span>
+                                        <span class="offices__features-item">
+                                            <svg width="20" height="20" aria-hidden="true" class="icon-cash">
+                                                <use xlink:href="#cash"></use>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                    <div class="offices__features-group">
+                                        <span class="offices__features-item">
+                                            <svg width="20" height="20" aria-hidden="true" class="icon-card">
+                                                <use xlink:href="#card"></use>
+                                            </svg>
+                                        </span>
+                                        <span class="offices__features-item">
+                                            <svg width="20" height="20" aria-hidden="true" class="icon-exchange">
+                                                <use xlink:href="#exchange"></use>
+                                            </svg>
+                                        </span>
+                                        <span class="offices__features-item">
+                                            <svg width="20" height="20" aria-hidden="true" class="icon-wallet">
+                                                <use xlink:href="#wallet"></use>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="offices__list-view-accordion-body js-accordion-content">
+                                <div class="offices__list-view-accordion-map-container">
+                                    <div class="offices__list-view-accordion-map js-offices-inner-map" data-lat="55.831082" data-lng="49.079644" data-type="bankomat">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="offices__list-view-accordion js-accordion">
+                            <div class="offices__list-view-accordion-header">
+                                <div class="offices__list-view-accordion-address">
+                                    <div class="offices__list-view-accordion-arrow">
+                                        <svg width="14" height="9" aria-hidden="true" class="icon-arrow-up">
+                                            <use xlink:href="#arrow-up"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="offices__list-view-accordion-content">
+                                        <div class="offices__list-view-accordion-address-name">
+                                            улица Декабристов, д.183
+                                        </div>
+                                        <div class="offices__list-view-accordion-address-office">
+                                            ДО "Декабристов"<br>Отделение банка
+                                        </div>
+                                        <a href="#" class="office__list-view-accordion-show-on-map js-accordion-btn">
+                                            Смотреть на карте
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="offices__schedule">
+                                    пн.-пт. 10:00-18:00, <br />
+                                    сб. нерабочий день
+                                </div>
+                                <div class="offices__currency">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th>
+                                                    покупка
+                                                </th>
+                                                <th>
+                                                    продажа
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th>
+                                                    USD
+                                                </th>
+                                                <td>
+                                                    76,30
+                                                </td>
+                                                <td>
+                                                    77,30
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>
+                                                    EUR
+                                                </th>
+                                                <td>
+                                                    82,30
+                                                </td>
+                                                <td>
+                                                    83,30
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="offices__features">
+                                    <div class="offices__features-group">
+                                        <span class="offices__features-item">
+                                            <svg width="20" height="20" aria-hidden="true" class="icon-percent">
+                                                <use xlink:href="#percent"></use>
+                                            </svg>
+                                        </span>
+                                        <span class="offices__features-item">
+                                            <svg width="20" height="20" aria-hidden="true" class="icon-calculator">
+                                                <use xlink:href="#calculator"></use>
+                                            </svg>
+                                        </span>
+                                        <span class="offices__features-item">
+                                            <svg width="20" height="20" aria-hidden="true" class="icon-cash">
+                                                <use xlink:href="#cash"></use>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                    <div class="offices__features-group">
+                                        <span class="offices__features-item">
+                                            <svg width="20" height="20" aria-hidden="true" class="icon-card">
+                                                <use xlink:href="#card"></use>
+                                            </svg>
+                                        </span>
+                                        <span class="offices__features-item">
+                                            <svg width="20" height="20" aria-hidden="true" class="icon-exchange">
+                                                <use xlink:href="#exchange"></use>
+                                            </svg>
+                                        </span>
+                                        <span class="offices__features-item">
+                                            <svg width="20" height="20" aria-hidden="true" class="icon-wallet">
+                                                <use xlink:href="#wallet"></use>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="offices__list-view-accordion-body js-accordion-content">
+                                <div class="offices__list-view-accordion-map-container">
+                                    <div class="offices__list-view-accordion-map js-offices-inner-map" data-lat="55.831082" data-lng="49.079644" data-type="bankomat">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
             </div>
         </div>
     </div>

@@ -4,33 +4,42 @@ function init() {
     if (!mainMap) return;
     var mainMapInstance = new ymaps.Map(mainMap, {
         center: [55.796554, 49.104752],
-        zoom: 12
+        zoom: 12,
+        controls: []
     });
+
+    mainMapInstance.controls.add('zoomControl');
+
+    if (window.matchMedia("(min-width: 769px)").matches) {
+        mainMapInstance.controls.add('searchControl');
+    }
+    
 
     var mapPinImages = {
         office: {
             iconLayout: 'default#image',
             iconImageHref: 'img/map-pins/office.svg',
-            iconImageSize: [50, 74],
-            iconImageOffset: [-25, -74]
+            iconImageSize: window.matchMedia("(min-width: 769px)").matches ? [50, 74] : [25, 37],
+            iconImageOffset: window.matchMedia("(min-width: 769px)").matches ? [-12.5, -37] : [-25, -74]
+           
         },
         bankomat: {
             iconLayout: 'default#image',
             iconImageHref: 'img/map-pins/bankomat.svg',
-            iconImageSize: [50, 74],
-            iconImageOffset: [-25, -74]
+            iconImageSize: window.matchMedia("(min-width: 769px)").matches ? [50, 74] : [25, 37],
+            iconImageOffset: window.matchMedia("(min-width: 769px)").matches ? [-12.5, -37] : [-25, -74]
         },
         bankomatPartners: {
             iconLayout: 'default#image',
             iconImageHref: 'img/map-pins/bankomat-partner.svg',
-            iconImageSize: [50, 74],
-            iconImageOffset: [-25, -74]
+            iconImageSize: window.matchMedia("(min-width: 769px)").matches ? [50, 74] : [25, 37],
+            iconImageOffset: window.matchMedia("(min-width: 769px)").matches ? [-12.5, -37] : [-25, -74]
         },
         terminal: {
             iconLayout: 'default#image',
             iconImageHref: 'img/map-pins/terminal.svg',
-            iconImageSize: [50, 74],
-            iconImageOffset: [-25, -74]
+            iconImageSize: window.matchMedia("(min-width: 769px)").matches ? [50, 74] : [25, 37],
+            iconImageOffset: window.matchMedia("(min-width: 769px)").matches ? [-12.5, -37] : [-25, -74]
         }
     };
 
@@ -69,8 +78,6 @@ function init() {
         }
     ];
 
-
-
     var allCheckbox = document.querySelector('#all-offices');
     var officesCheckbox = document.querySelector('#offices');
     var bankomatsCheckbox = document.querySelector('#bankomats');
@@ -78,18 +85,14 @@ function init() {
     var terminalsCheckbox = document.querySelector('#terminals');
 
     var checkboxes = [allCheckbox, officesCheckbox, bankomatsCheckbox, bankomatsPartnersCheckbox, terminalsCheckbox];
-    
 
     var placemarksGeoQuery = null;
-
-
 
     function setMarkers() {
         if (placemarksGeoQuery) placemarksGeoQuery.removeFromMap(mainMapInstance);
         placemarksGeoQuery = null;
         var placemarks = [];
         var filteredObjects = [];
-
 
         filteredObjects = mainMapData.filter(function(item) {
             if (allCheckbox.checked) return true;
@@ -107,7 +110,7 @@ function init() {
             }
         });
 
-        console.log('Filtered map objects', filteredObjects)
+        console.log('Filtered map objects', filteredObjects);
 
         filteredObjects.forEach(item => {
             var pinOptions = null;
@@ -133,5 +136,35 @@ function init() {
 
     checkboxes.forEach(function(checkbox) {
         checkbox.addEventListener('change', setMarkers);
+    });
+
+    var innerMaps = Array.prototype.slice.call(document.querySelectorAll('.js-offices-inner-map'));
+
+    innerMaps.forEach(function(mapElement) {
+        var lat = mapElement.getAttribute('data-lat');
+        var lng = mapElement.getAttribute('data-lng');
+        var type = mapElement.getAttribute('data-type');
+        var innerMapInstance = new ymaps.Map(mapElement, {
+            center: [lat, lng],
+            zoom: 12,
+            controls: []
+        });
+
+        innerMapInstance.controls.add('zoomControl');
+      
+
+        var pinOptions = null;
+        if (type === 'office') {
+            pinOptions = mapPinImages.office;
+        } else if (type === 'bankomat') {
+            pinOptions = mapPinImages.bankomat;
+        } else if (type === 'bankomat-partner') {
+            pinOptions = mapPinImages.bankomatPartners;
+        } else if (type === 'terminal') {
+            pinOptions = mapPinImages.terminal;
+        }
+        var placemark = new ymaps.Placemark([lat, lng], {}, pinOptions);
+
+        innerMapInstance.geoObjects.add(placemark);
     });
 }
