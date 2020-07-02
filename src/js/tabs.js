@@ -7,6 +7,38 @@ function init() {
 
     tabs.forEach(element => {
         const tabsNav = Array.from(element.querySelectorAll('.js-tabs-nav'));
+
+        if (element.matches('.js-tabs-constructor')) {
+            if (document.body.classList.contains('is-admin')) return;
+            const tabItemsContainer = element.querySelector('.js-tab-items');
+            if (!tabItemsContainer) {
+                console.error('No tab items container specified');
+                return;
+            }
+            const moveTabItem = id => {
+                const blockToMove = document.querySelector(id);
+                if (!blockToMove) {
+                    console.error('No block to move');
+                    return;
+                }
+                const tabItem = document.createElement('div');
+                tabItem.className = 'tab-items__item js-tabs-item';
+                tabItem.appendChild(blockToMove);
+                tabItemsContainer.appendChild(tabItem);
+            }
+
+            tabsNav.forEach(btn => {
+                const id = btn.hash;
+                if (!id) {
+                    console.error('No block id on btn', btn);
+                    return;
+                }
+
+                moveTabItem(id);
+            })
+        }
+
+
         const tabItems = Array.from(element.querySelectorAll('.js-tabs-item'));
 
         function setActiveTab(index, event) {
