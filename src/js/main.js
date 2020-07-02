@@ -19,7 +19,7 @@ import openAccount from './openAccount';
 import bankMenu from './bankMenu';
 import articleAdvantages from './articleAdvantages';
 import bankOffices from './bankOffices';
-
+import modals from './modals';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -34,6 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
     bankMenu();
     articleAdvantages();
     bankOffices();
+    modals();
     barba.init({
         debug: true,
         logLevel: 'error',
