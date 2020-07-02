@@ -18,6 +18,8 @@
     }
 }
 
+
+
 .calculate-credit__heading {
     font-weight: 500;
     font-size: 3rem;
@@ -232,5 +234,30 @@
     @include breakpoint(mobile) {
         font-size: 1.2rem;
         margin-top: 2rem;
+    }
+}
+
+
+.calculate-credit__checkboxes {
+    color: white;
+    width: 32rem;
+    margin-left: auto;
+    padding-top: 1.6rem;
+    @include breakpoint(mobile) {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        padding-top: 1rem;
+    }
+}
+
+
+.calculate-credit__checkboxes-row {
+    margin-bottom: 1.6rem;
+    @include breakpoint(mobile) {
+        margin-bottom: 1.2rem;
+    }
+    &:last-child {
+        margin-bottom: 0;
     }
 }

@@ -8007,6 +8007,26 @@ img.lazyload:not([src]) {
       font-size: 1.2rem;
       margin-top: 2rem; } }
 
+.calculate-credit__checkboxes {
+  color: white;
+  width: 32rem;
+  margin-left: auto;
+  padding-top: 1.6rem; }
+  @media only screen and (max-width: 767px) {
+    .calculate-credit__checkboxes {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      padding-top: 1rem; } }
+
+.calculate-credit__checkboxes-row {
+  margin-bottom: 1.6rem; }
+  @media only screen and (max-width: 767px) {
+    .calculate-credit__checkboxes-row {
+      margin-bottom: 1.2rem; } }
+  .calculate-credit__checkboxes-row:last-child {
+    margin-bottom: 0; }
+
 .program-advantages {
   padding-top: 7.4rem;
   padding-bottom: 4rem; }
@@ -9814,7 +9834,11 @@ img.lazyload:not([src]) {
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
 
 .catalog__filters-checkmarks-input {
   border: 0;
@@ -9847,7 +9871,15 @@ img.lazyload:not([src]) {
   height: 2.2rem;
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  margin-right: 1.5rem; }
+  margin-right: 1.5rem;
+  -webkit-transition: border-color .2s, background-color .2s;
+  transition: border-color .2s, background-color .2s; }
+  .catalog__filters-checkbox--small-text .catalog__filters-checkbox-mark {
+    width: 1.8rem;
+    height: 1.8rem;
+    margin-right: 1rem;
+    background-color: transparent;
+    border: 1px solid white; }
   .catalog__filters-checkbox-mark svg {
     width: 1.4rem;
     height: 1.4rem;
@@ -9857,16 +9889,25 @@ img.lazyload:not([src]) {
     -webkit-transition: opacity 0.2s;
     transition: opacity 0.2s;
     fill: var(--primary-color); }
+    .catalog__filters-checkbox--small-text .catalog__filters-checkbox-mark svg {
+      width: 1.1rem;
+      height: 1.1rem; }
 
 .catalog__filters-checkbox-text {
   font-size: 2rem;
   line-height: 150%; }
+  .catalog__filters-checkbox--small-text .catalog__filters-checkbox-text {
+    font-size: 1.4rem;
+    line-height: 130%; }
   @media only screen and (max-width: 767px) {
     .catalog__filters-checkbox-text {
       font-size: 1.4rem; } }
 
 .catalog__filters-checkmarks-input:checked ~ .catalog__filters-checkbox-mark svg {
   opacity: 1; }
+
+.catalog__filters-checkmarks-input:checked ~ .catalog__filters-checkbox-mark {
+  background-color: #fff; }
 
 .catalog__filters-sliders {
   display: -webkit-box;
@@ -9899,7 +9940,7 @@ img.lazyload:not([src]) {
       font-size: 1.4rem;
       padding-top: 0;
       margin: 0;
-      margin-bottom: .6rem; } }
+      margin-bottom: 0.6rem; } }
 
 .catalog__filters-sliders-group {
   display: -webkit-box;
