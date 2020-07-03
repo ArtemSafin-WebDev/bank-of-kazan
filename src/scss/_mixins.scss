@@ -58,8 +58,13 @@
 }
 @mixin objectFitCoverBottom() {
     object-fit: cover;
-    object-position: top;
-    font-family: 'object-fit: cover; object-position: bottom;';
+    object-position: center bottom;
+    font-family: 'object-fit: cover; object-position: center bottom;';
+}
+@mixin objectFitCoverBottomRight() {
+    object-fit: cover;
+    object-position: right bottom;
+    font-family: 'object-fit: cover; object-position: right bottom;';
 }
 
 @mixin objectFitContain() {
