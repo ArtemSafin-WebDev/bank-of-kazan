@@ -16,7 +16,7 @@ function init() {
                 return;
             }
             const moveTabItem = id => {
-                const blockToMove = document.querySelector(id);
+                const blockToMove = document.querySelector(`#${id}`);
                 if (!blockToMove) {
                     console.error('No block to move');
                     return;
@@ -28,7 +28,7 @@ function init() {
             }
 
             tabsNav.forEach(btn => {
-                const id = btn.hash;
+                const id = btn.getAttribute("data-id")
                 if (!id) {
                     console.error('No block id on btn', btn);
                     return;
