@@ -10915,8 +10915,8 @@ img.lazyload:not([src]) {
   line-height: 150%;
   color: black;
   border-radius: 0.4rem;
-  -webkit-transition: background-color 0.2s;
-  transition: background-color 0.2s; }
+  -webkit-transition: background-color 0.2s, color .2s;
+  transition: background-color 0.2s, color .2s; }
   .offices__checkbox-content .icon-droplet {
     width: 1.8rem;
     height: 2.6rem;
@@ -10951,6 +10951,9 @@ img.lazyload:not([src]) {
     .offices__checkbox-content {
       font-size: 1.4rem;
       padding: .8rem 1.2rem; } }
+
+.offices__checkbox:hover .offices__checkbox-input:not(:checked) ~ .offices__checkbox-content {
+  color: var(--primary-color); }
 
 .offices__checkbox-input:checked ~ .offices__checkbox-content {
   background-color: #ecf3dc; }
@@ -11177,7 +11180,11 @@ img.lazyload:not([src]) {
   border-radius: 50%;
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  margin-right: 2rem; }
+  margin-right: 2rem;
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s; }
   .offices__list-view-accordion-arrow svg {
     width: 1.4rem;
     height: 0.9rem;
@@ -11188,6 +11195,9 @@ img.lazyload:not([src]) {
       .offices__list-view-accordion-arrow svg {
         width: 1.2rem;
         height: 1.2rem; } }
+  .offices__list-view-accordion.active .offices__list-view-accordion-arrow {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg); }
   @media only screen and (max-width: 767px) {
     .offices__list-view-accordion-arrow {
       width: 3rem;
@@ -11370,6 +11380,9 @@ img.lazyload:not([src]) {
   @media only screen and (max-width: 767px) {
     .offices__list-view-group {
       margin-bottom: 4rem; } }
+
+.offices__filters-small-checkbox .catalog__filters-checkmarks-input:checked ~ .catalog__filters-checkbox-mark {
+  background-color: #f5f5f5; }
 
 .modal {
   position: fixed;
