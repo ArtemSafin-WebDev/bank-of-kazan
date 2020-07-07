@@ -61,6 +61,12 @@
     @include breakpoint(mobile) {
         width: 24rem;
         flex-shrink: 0;
+        &:first-child {
+            .news__card {
+                padding-left: 0;
+                width: 22rem;
+            }
+        }
     }
 }
 
@@ -68,19 +74,39 @@
     flex-grow: 1;
   
     padding-left: 2rem;
-    padding-right: 4rem;
-    border-left: 0.3rem solid #7b398c;
+    padding-right: 2rem;
+    // border-left: 0.3rem solid #7b398c;
     display: flex;
     flex-direction: column;
     transition: border-color .2s;
+    position: relative;
+    z-index: 1;
+
+    &::before {
+        content: '';
+        right: 0;
+        height: 100%;
+        width: 0.3rem;
+        background-color: #7b398c;
+        position: absolute;
+        z-index: -1;
+        pointer-events: none;
+    }
+  
     &:link,
     &:visited {
         color: white;
     }
 
-    .no-touch &:hover,
-    .touch &:active {
-        border-color: var(--primary-color);
+    .no-touch &:hover {
+        .news__card-preview-backdrop {
+            opacity: 1;
+        }
+
+        .news__card-date {
+            background-color: #fff;
+            color: black;
+        }
     }
 
 
@@ -90,11 +116,52 @@
     }
 }
 
+
+.news__card-preview-backdrop {
+    position: absolute;
+    left: -.5rem;
+    right: -.5rem;
+    top: -2.1rem;
+    bottom: -2.5rem;
+    border-radius: 1.5rem;
+    background-color: var(--primary-color);
+    z-index: -1;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity .2s;
+
+
+    right: 0;
+
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.287) 18.23%, rgba(0, 0, 0, 0) 75.52%), linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45));
+    }
+}
+
+.news__card-preview-backdrop-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    @include objectFitCover();
+}
+
 .news__card-title {
     font-weight: 500;
     font-size: 2.2rem;
     line-height: 1.2;
-    margin-bottom: 2rem;
+    margin-bottom: 3.5rem;
     @include breakpoint(mobile) {
         font-size: 1.5rem;
         margin-bottom: 1.4rem;
@@ -111,6 +178,7 @@
     text-align: center;
     line-height: 1.2;
     align-self: flex-start;
+    transition: background-color .2s, color .2s;
     @include breakpoint(mobile) {
         font-size: 1.1rem;
         padding: .6rem .8rem;
