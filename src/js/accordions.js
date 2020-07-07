@@ -30,18 +30,22 @@ export default function() {
     const accordionElements = Array.from(document.querySelectorAll('.js-accordion'));
 
     accordionElements.forEach(element => {
-        const btn = element.querySelector('.js-accordion-btn');
+        const btns = Array.from(element.querySelectorAll('.js-accordion-btn'));
         const content = element.querySelector('.js-accordion-content');
 
-        btn.addEventListener('click', event => {
-            event.preventDefault();
-            if (!element.classList.contains('active')) {
-                openAccordeon(content);
-                element.classList.add('active');
-            } else {
-                closeAccordeon(content);
-                element.classList.remove('active');
-            }
-        });
+        btns.forEach(btn => {
+            btn.addEventListener('click', event => {
+                event.preventDefault();
+                if (!element.classList.contains('active')) {
+                    openAccordeon(content);
+                    element.classList.add('active');
+                } else {
+                    closeAccordeon(content);
+                    element.classList.remove('active');
+                }
+            });
+        })
+
+        
     });
 }

@@ -10764,44 +10764,112 @@ img.lazyload:not([src]) {
 .offices__heading {
   font-weight: 500;
   font-size: 3.6rem;
-  line-height: 120%;
-  margin-bottom: 4rem; }
+  line-height: 1;
+  margin-bottom: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline; }
   @media only screen and (max-width: 767px) {
     .offices__heading {
       font-size: 2.2rem;
       margin-bottom: 1.5rem; } }
-  .offices__heading a {
-    color: var(--secondary-color);
-    position: relative;
-    -webkit-transition: color 0.2s;
-    transition: color 0.2s; }
-    .offices__heading a::after, .offices__heading a::before {
-      content: '';
-      top: 100%;
-      left: 0;
-      width: 100%;
-      background-size: 0.4rem;
-      background-repeat: repeat-x;
-      background-image: -webkit-gradient(linear, left top, right top, from(var(--primary-color)), color-stop(50%, var(--primary-color)), color-stop(50%, rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0)));
-      background-image: linear-gradient(to right, var(--primary-color) 0%, var(--primary-color) 50%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%);
-      position: absolute;
-      height: 2px;
-      z-index: 20; }
-    .offices__heading a::before {
-      background-image: -webkit-gradient(linear, left top, right top, from(var(--secondary-color)), color-stop(50%, var(--secondary-color)), color-stop(50%, rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0)));
-      background-image: linear-gradient(to right, var(--secondary-color) 0%, var(--secondary-color) 50%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%); }
-    .offices__heading a::after {
-      opacity: 0;
-      -webkit-transition: opacity 0.2s;
-      transition: opacity 0.2s; }
-    .offices__heading a:link, .offices__heading a:visited {
-      color: var(--secondary-color); }
-    .no-touch .offices__heading a:hover,
-    .touch .offices__heading a:active {
-      color: var(--primary-color); }
-      .no-touch .offices__heading a:hover::after,
-      .touch .offices__heading a:active::after {
-        opacity: 1; }
+
+.offices__city {
+  margin-left: 1.4rem;
+  cursor: default;
+  position: relative; }
+  .offices__city:hover .offices__city-dropdown {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s; }
+  .offices__city:hover .offices__city-current {
+    color: var(--primary-color); }
+
+.offices__city-current {
+  color: var(--secondary-color);
+  position: relative;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s; }
+  .offices__city-current::after, .offices__city-current::before {
+    content: '';
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-size: 0.4rem;
+    background-repeat: repeat-x;
+    background-image: -webkit-gradient(linear, left top, right top, from(var(--primary-color)), color-stop(50%, var(--primary-color)), color-stop(50%, rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0)));
+    background-image: linear-gradient(to right, var(--primary-color) 0%, var(--primary-color) 50%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%);
+    position: absolute;
+    height: 2px;
+    z-index: 20; }
+  .offices__city-current::before {
+    background-image: -webkit-gradient(linear, left top, right top, from(var(--secondary-color)), color-stop(50%, var(--secondary-color)), color-stop(50%, rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0)));
+    background-image: linear-gradient(to right, var(--secondary-color) 0%, var(--secondary-color) 50%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%); }
+  .offices__city-current::after {
+    opacity: 0;
+    -webkit-transition: opacity 0.2s;
+    transition: opacity 0.2s; }
+  .offices__city-current:link, .offices__city-current:visited {
+    color: var(--secondary-color); }
+  .no-touch .offices__city-current:hover,
+  .touch .offices__city-current:active {
+    color: var(--primary-color); }
+    .no-touch .offices__city-current:hover::after,
+    .touch .offices__city-current:active::after {
+      opacity: 1; }
+
+.offices__city-dropdown {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  opacity: 0;
+  visibility: hidden;
+  padding-top: 1.2rem;
+  width: 24rem;
+  -webkit-transition: opacity 0.3s, visibility 0s linear 0.3s;
+  transition: opacity 0.3s, visibility 0s linear 0.3s; }
+  .offices__city-dropdown--btn-width {
+    width: 27.5rem; }
+    @media only screen and (max-width: 767px) {
+      .offices__city-dropdown--btn-width {
+        width: 16rem; } }
+  @media only screen and (max-width: 767px) {
+    .offices__city-dropdown {
+      width: 16rem;
+      padding-top: 0.5rem; } }
+
+.offices__city-dropdown-inner {
+  border-radius: 0.4rem;
+  background-color: rgba(83, 26, 98, 0.9);
+  color: white;
+  overflow: hidden; }
+  .violet-backplate .offices__city-dropdown-inner,
+  .mobile-menu-open .offices__city-dropdown-inner {
+    background-color: rgba(148, 194, 43, 0.9); }
+
+.offices__city-dropdown-link {
+  font-weight: 500;
+  font-size: 1.6rem;
+  padding: 1.7rem 2rem;
+  text-transform: uppercase;
+  color: white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  display: block;
+  line-height: 1.2;
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s; }
+  .offices__city-dropdown-link:last-child {
+    border-bottom: none; }
+  .offices__city-dropdown-link:link, .offices__city-dropdown-link:visited {
+    color: white; }
+  @media only screen and (max-width: 767px) {
+    .offices__city-dropdown-link {
+      font-size: 1rem;
+      padding: 1rem 1.5rem; } }
 
 .offices__filters {
   margin-bottom: 5rem; }
@@ -11210,7 +11278,8 @@ img.lazyload:not([src]) {
   line-height: 146%;
   color: var(--secondary-color);
   margin-bottom: 0.5rem;
-  margin-top: 0.3rem; }
+  margin-top: 0.3rem;
+  cursor: pointer; }
   @media only screen and (max-width: 767px) {
     .offices__list-view-accordion-address-name {
       font-size: 1.6rem;
