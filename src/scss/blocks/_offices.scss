@@ -14,7 +14,6 @@
     }
 }
 
-
 .offices__city {
     margin-left: 1.4rem;
     cursor: default;
@@ -29,6 +28,9 @@
 
         .offices__city-current {
             color: var(--primary-color);
+            &::after {
+                opacity: 1;
+            }
         }
     }
 }
@@ -37,7 +39,7 @@
     color: var(--secondary-color);
     position: relative;
     transition: color 0.2s;
-    
+
     &::after,
     &::before {
         content: '';
@@ -74,7 +76,6 @@
     }
 }
 
-
 .offices__city-dropdown {
     position: absolute;
     right: 0;
@@ -84,7 +85,6 @@
     padding-top: 1.2rem;
     width: 24rem;
     transition: opacity 0.3s, visibility 0s linear 0.3s;
-
 
     &--btn-width {
         width: 27.5rem;
@@ -209,9 +209,7 @@
     line-height: 150%;
     color: black;
     border-radius: 0.4rem;
-    transition: background-color 0.2s, color .2s;
-
-   
+    transition: background-color 0.2s, color 0.2s;
 
     .icon-droplet {
         width: 1.8rem;
@@ -222,7 +220,7 @@
         @include breakpoint(mobile) {
             width: 1.5rem;
             height: 1.5rem;
-            margin-right: .7rem;
+            margin-right: 0.7rem;
         }
     }
 
@@ -235,7 +233,7 @@
         @include breakpoint(mobile) {
             width: 1.5rem;
             height: 1.5rem;
-            margin-right: .7rem;
+            margin-right: 0.7rem;
         }
     }
 
@@ -253,13 +251,11 @@
         }
     }
 
-
     @include breakpoint(mobile) {
         font-size: 1.4rem;
-        padding: .8rem 1.2rem;
+        padding: 0.8rem 1.2rem;
     }
 }
-
 
 .offices__checkbox:hover .offices__checkbox-input:not(:checked) ~ .offices__checkbox-content {
     // background-color: rgba(#ecf3dc, .5);
@@ -306,7 +302,7 @@
     margin-bottom: 8rem;
     @include breakpoint(mobile) {
         margin-bottom: 2rem;
-        border-radius: .4rem;
+        border-radius: 0.4rem;
     }
     &::after {
         content: '';
@@ -429,10 +425,10 @@
     background: #f7f7f7;
 
     border-radius: 1rem;
-    overflow: hidden;
+    // overflow: hidden;
     margin-bottom: 1rem;
     @include breakpoint(mobile) {
-        border-radius: .8rem;
+        border-radius: 0.8rem;
     }
 }
 
@@ -442,7 +438,7 @@
     padding-left: 0;
     @include breakpoint(mobile) {
         padding: 1.2rem;
-      
+
         flex-direction: column;
     }
 }
@@ -471,13 +467,12 @@
     border-radius: 50%;
     flex-shrink: 0;
     margin-right: 2rem;
-    transition: transform .3s;
+    transition: transform 0.3s;
     svg {
         width: 1.4rem;
         height: 0.9rem;
         fill: var(--secondary-color);
         flex-shrink: 0;
-
 
         @include breakpoint(mobile) {
             width: 1.2rem;
@@ -653,6 +648,7 @@
     height: 2rem;
     flex-shrink: 0;
     margin-right: 2rem;
+    position: relative;
     &:last-child {
         margin-right: 0;
     }
@@ -661,6 +657,61 @@
         width: 100%;
         height: 100%;
         fill: var(--primary-color);
+        transition: fill .2s;
+    }
+
+    &:hover {
+        .offices__features-item-dropdown {
+            opacity: 1;
+            visibility: visible;
+            transition: all .3s;
+        }
+
+        svg {
+            fill: var(--secondary-color);
+        }
+    }
+}
+
+.offices__features-item-dropdown {
+    top: 100%;
+    padding-top: 1.5rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 18rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s, visibility 0s linear .3s;
+    @include breakpoint(mobile) {
+        width: 16rem;
+    }
+}
+
+.offices__features-item-dropdown-content {
+    background-color: #fff;
+    border-radius: 0.5rem;
+    font-size: 1.4rem;
+    filter: drop-shadow(0 0 1rem rgba(black, 0.1));
+    padding: 0.8rem;
+    color: black;
+    text-align: center;
+    position: relative;
+    @include breakpoint(mobile) {
+        font-size: 1.2rem;
+    }
+    &::before {
+        content: '';
+        bottom: 100%;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 .8rem .8rem .8rem;
+        border-color: transparent transparent #ffffff transparent;
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
 
@@ -673,6 +724,9 @@
 .offices__list-view-accordion-map-container {
     position: relative;
     background-color: var(--primary-color);
+    overflow: hidden;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
     &::after {
         content: '';
         padding-bottom: 30%;
@@ -681,6 +735,11 @@
         @include breakpoint(mobile) {
             padding-bottom: 70%;
         }
+    }
+
+    @include breakpoint(mobile) {
+        border-bottom-left-radius: .8rem;
+        border-bottom-right-radius: .8rem;
     }
 }
 
@@ -692,7 +751,6 @@
     height: 100%;
 }
 
-
 .offices__list-view-group {
     margin-bottom: 7rem;
     @include breakpoint(mobile) {
@@ -700,9 +758,6 @@
     }
 }
 
-
-
-
-.offices__filters-small-checkbox .catalog__filters-checkmarks-input:checked~.catalog__filters-checkbox-mark {
+.offices__filters-small-checkbox .catalog__filters-checkmarks-input:checked ~ .catalog__filters-checkbox-mark {
     background-color: #f5f5f5;
 }
