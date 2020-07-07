@@ -94,6 +94,8 @@ function init() {
         var placemarks = [];
         var filteredObjects = [];
 
+        
+
         filteredObjects = mainMapData.filter(function(item) {
             if (allCheckbox.checked) return true;
 
@@ -132,10 +134,31 @@ function init() {
         placemarksGeoQuery = ymaps.geoQuery(placemarks);
     }
 
+
+   
+
+    if (allCheckbox.checked) {
+        checkboxes.forEach(checkbox => {
+            checkbox.checked = false;
+            allCheckbox.checked = true;
+        });
+    }
+
     setMarkers();
 
     checkboxes.forEach(function(checkbox) {
-        checkbox.addEventListener('change', setMarkers);
+        checkbox.addEventListener('change', () => {
+           
+            if ((checkbox === allCheckbox) && allCheckbox.checked) {
+                console.log('Clicking on all checkbox')
+                checkboxes.forEach(box => box.checked = false);
+                allCheckbox.checked = true
+            } else {
+                allCheckbox.checked = false;
+            }
+
+            setMarkers();
+        });
     });
 
     var innerMaps = Array.prototype.slice.call(document.querySelectorAll('.js-offices-inner-map'));
