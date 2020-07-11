@@ -39,6 +39,7 @@ function init() {
         const maxValue = rangeInput.hasAttribute('max') ? cleanInput(rangeInput.getAttribute('max')) : 150000;
         const stepValue = rangeInput.hasAttribute('step') ? cleanInput(rangeInput.getAttribute('step')) : 500;
         const units = rangeInput.hasAttribute('data-units') ? rangeInput.getAttribute('data-units') : 'rub';
+        // const noDivisions = rangeInput.hasAttribute('data-no-divisions');
         let initialRangeValue = checkValue(cleanInput(rangeInput.value));
 
         function cleanInput(value) {
@@ -68,7 +69,7 @@ function init() {
             const value = event.target.value;
             const clearedValue = checkValue(cleanInput(value));
             setValue(clearedValue);
-        }, 900);
+        }, 1200);
 
         function setValue(value) {
             dispatchRangeUpdateEvent(value);
@@ -84,13 +85,14 @@ function init() {
         }
 
         function addDivisions(value) {
+            // if (noDivisions) return value;
             return value.toLocaleString();
-            // return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+            
         }
 
         function monthsToHumanReadable(value) {
             const duration = moment.duration(value, 'months');
-            const formattedDuration = duration.format('Y __ M __', {
+            const formattedDuration = duration.format('M __', {
                 trim: 'small',
                 userLocale: 'ru'
             });
@@ -128,7 +130,25 @@ function init() {
 
         if (manualInput) {
             displayedAmountElement.addEventListener('input', handleManualInput);
+            displayedAmountElement.addEventListener('focusout', () => {
+                console.log('Focusout triggered')
+                let value = displayedAmountElement.value;
+                let cleanedValue = checkValue(cleanInput(value));
+                if (isNaN(cleanedValue)) cleanedValue = '';
+                customRangeSliderElement.noUiSlider.set(cleanedValue);
+                
+                setValue(cleanedValue);
+            });
+            
             displayedAmountElement.addEventListener('input', checkManualInput);
+            displayedAmountElement.addEventListener('focus', () => {
+                let cleanedValue = '';
+                customRangeSliderElement.noUiSlider.set(cleanedValue);
+    
+                setValue(cleanedValue);
+            });
+
+
         }
     });
 }

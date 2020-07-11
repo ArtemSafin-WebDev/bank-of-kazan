@@ -26,11 +26,11 @@
                                         </div>
                                         <div class="calculator__converter-amount-range">
                                             <div class="range-slider js-range-slider">
-                                                <input type="range" name="first-currency-amount" step="100" min="90000" max="2000000" class="range-slider__input" value="6500" />
+                                                <input type="range" name="first-currency-amount" step="100" min="90000" max="2000000" class="range-slider__input" value="200000" />
                                                 <div class="range-slider__element-wrapper">
                                                     <!-- <div class="range-slider__amount">12 000</div> -->
 
-                                                    <input type="text" class="range-slider__amount js-only-numeric" value="12 000" />
+                                                    <input type="tel" class="range-slider__amount" value="200000" />
                                                     <div class="range-slider__element"></div>
                                                 </div>
                                                 <div class="range-slider__min-max">
@@ -50,17 +50,17 @@
                                         </div>
                                         <div class="calculator__converter-amount-range">
                                             <div class="range-slider js-range-slider">
-                                                <input type="range" name="first-currency-amount" step="1" min="13" max="60" class="range-slider__input" value="13" data-units="months" />
+                                                <input type="range" name="first-currency-amount" step="1" min="1" max="36" class="range-slider__input" value="12" data-units="months" />
                                                 <div class="range-slider__element-wrapper">
-                                                    <div class="range-slider__amount">12 000</div>
+                                                    <div class="range-slider__amount">12</div>
                                                     <div class="range-slider__element"></div>
                                                 </div>
                                                 <div class="range-slider__min-max">
                                                     <div class="range-slider__min">
-                                                        1 год 1 месяц
+                                                        1 месяц
                                                     </div>
                                                     <div class="range-slider__max">
-                                                        5 лет
+                                                        36 месяцев
                                                     </div>
                                                 </div>
                                             </div>
@@ -132,18 +132,31 @@
                                             Сумма вклада
                                         </div>
                                         <div class="calculator__converter-amount-range">
-                                            <div class="range-slider js-range-slider">
-                                                <input type="range" name="first-currency-amount" step="100" min="90000" max="2000000" class="range-slider__input" value="6500" />
-                                                <div class="range-slider__element-wrapper">
-                                                    <div class="range-slider__amount">12 000</div>
-                                                    <div class="range-slider__element"></div>
-                                                </div>
-                                                <div class="range-slider__min-max">
-                                                    <div class="range-slider__min">
-                                                        90 000
+                                            <div class="calculator__converter-deposit-sum">
+                                                <div class="range-slider js-range-slider">
+                                                    <input type="range" name="first-currency-amount" step="100" min="90000" max="2000000" class="range-slider__input" value="200000" />
+                                                    <div class="range-slider__element-wrapper">
+                                                        <input type="tel" class="range-slider__amount js-only-numeric" value="200000" />
+                                                        <div class="range-slider__element"></div>
                                                     </div>
-                                                    <div class="range-slider__max">
-                                                        2 000 000
+                                                    <div class="range-slider__min-max">
+                                                        <div class="range-slider__min">
+                                                            90 000
+                                                        </div>
+                                                        <div class="range-slider__max">
+                                                            2 000 000
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="calculator__converter-deposit-select">
+                                                    <div class="custom-select custom-select--currency">
+                                                        <select name="first-currency-name" class="custom-select__input js-custom-select">
+                                                            <option value="RUB">$</option>
+                                                            <option value="USD">
+                                                                €
+                                                            </option>
+                                                            <option value="EUR" selected>₽</option>
+                                                        </select>
                                                     </div>
                                                 </div>
                                             </div>
@@ -155,17 +168,17 @@
                                         </div>
                                         <div class="calculator__converter-amount-range">
                                             <div class="range-slider js-range-slider">
-                                                <input type="range" name="first-currency-amount" step="1" min="13" max="60" class="range-slider__input" value="13" data-units="months" />
+                                                <input type="range" name="first-currency-amount" step="1" min="1" max="36" class="range-slider__input" value="12" data-units="months" />
                                                 <div class="range-slider__element-wrapper">
-                                                    <div class="range-slider__amount">12 000</div>
+                                                    <div class="range-slider__amount">12</div>
                                                     <div class="range-slider__element"></div>
                                                 </div>
                                                 <div class="range-slider__min-max">
                                                     <div class="range-slider__min">
-                                                        1 год 1 месяц
+                                                        1 месяц
                                                     </div>
                                                     <div class="range-slider__max">
-                                                        5 лет
+                                                        36 месяцев
                                                     </div>
                                                 </div>
                                             </div>

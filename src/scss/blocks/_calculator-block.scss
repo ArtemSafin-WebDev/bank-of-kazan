@@ -157,7 +157,7 @@
     position: relative;
     margin-bottom: 2.4rem;
     &:first-child {
-        z-index: 10;
+        z-index: 100;
     }
 
     &:last-of-type {
@@ -572,3 +572,34 @@
 }
 
 
+
+.calculator__converter-deposit-sum {
+    display: flex;
+
+    .range-slider {
+        width: 50%;
+        flex-grow: 1;
+    }
+
+    .range-slider__min-max {
+        padding-right: 0.8rem;
+    }
+}
+
+
+.calculator__converter-deposit-select {
+    flex-shrink: 0;
+    margin-left: -.8rem;
+    .choices__inner {
+        padding-right: 3.8rem;
+        background: #EAEAEA;
+        border-left: none;
+        border-radius: .4rem;
+        min-width: 6rem;
+    }
+
+
+    .custom-select .choices[data-type*=select-one]:after {
+        background-image: url("data:image/svg+xml, %3Csvg fill='%2394C22B' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 9'%3E%3Cpath d='M12.35 0L7 5.56 1.64 0 0 1.71 7 9l7-7.29z' style='isolation:isolate'/%3E%3C/svg%3E");
+    }
+}
