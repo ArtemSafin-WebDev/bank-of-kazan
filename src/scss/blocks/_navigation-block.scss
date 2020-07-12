@@ -26,6 +26,10 @@
     border-bottom: 0.6rem solid white;
     z-index: 100;
     position: relative;
+    transition: border-color .2s;
+    .dark-main-nav.violet-backplate:not(.bank-menu-shown) & {
+        border-color: var(--primary-color);
+    }
     @include breakpoint(mobile) {
         padding: 1.8rem 0;
         margin-top: 7rem;
@@ -35,12 +39,28 @@
 
 .navigation__logo {
     margin-right: auto;
+    position: relative;
 }
 
 .navigation__logo-image {
     display: block;
     width: 24.5rem;
     height: auto;
+    transition: opacity .2s;
+    &--violet {
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0;
+       
+    }
+
+    .dark-main-nav.violet-backplate:not(.bank-menu-shown):not(.mobile-menu-open) & {
+        opacity: 0;
+        &--violet {
+            opacity: 1;
+        }
+    }
     @include breakpoint(mobile) {
         width: 15.5rem;
     }
@@ -123,6 +143,10 @@
     position: relative;
     overflow: hidden;
     z-index: 100;
+
+    .dark-main-nav.violet-backplate:not(.bank-menu-shown) & {
+        border-color: rgba(black, .2);
+    }
 }
 
 .navigation__universal-toggle-select-category {
@@ -233,6 +257,14 @@
         pointer-events: none;
     }
 
+
+    .dark-main-nav.violet-backplate:not(.bank-menu-shown) & {
+        color: black;
+        &.active {
+            color: var(--primary-color);
+        }
+    }
+
     @include breakpoint(mobile) {
         font-size: 1.8rem;
         margin-right: 1.5rem;
@@ -290,6 +322,7 @@
         height: 3.4rem;
         fill: white;
         display: block;
+        transition: fill .2s;
         @include breakpoint(mobile) {
             width: 1.5rem;
             height: 1.5rem;
@@ -300,6 +333,19 @@
         opacity: 0;
         visibility: hidden;
         transition: opacity 0.2s, visibility 0s linear 0.2s;
+    }
+
+
+    .dark-main-nav.violet-backplate:not(.bank-menu-shown) & {
+        svg {
+            fill: black;
+        }
+
+        &:hover {
+            svg {
+                fill: var(--primary-color);
+            }
+        }
     }
 
     @include breakpoint(mobile) {
@@ -476,8 +522,17 @@
         color: white;
     }
 
+   
+
     .nav-menu-open &:not(.active) {
         color: #af94b6;
+    }
+
+    .dark-main-nav .nav-menu-open &:not(.active) {
+        color: black;
+    }
+    .dark-main-nav .nav-menu-open &.active {
+        color: var(--primary-color);
     }
 
     @include breakpoint(mobile) {
@@ -809,6 +864,13 @@
     transform: translateZ(0) scaleX(0);
     transition: transform 0.5s;
 
+
+    .dark-main-nav & {
+        // background-color: rgba(white, .7);
+        // backdrop-filter: blur(2px);
+        background-color: rgba(white,.95);
+    }
+
     &.open {
         transform: translateZ(0) scaleX(1);
         transition: transform 0.8s ease-out;
@@ -864,12 +926,27 @@
         visibility: visible;
         transition: all 0.4s ease 0.5s;
     }
-
+    
     &:hover {
         svg {
             fill: var(--primary-color);
         }
     }
+
+
+    .dark-main-nav.violet-backplate:not(.bank-menu-shown) & {
+        svg {
+            fill: black;
+        }
+
+        &:hover {
+            svg {
+                fill: var(--primary-color);
+            }
+        }
+    }
+
+    
 
     @include breakpoint(mobile) {
         right: 0;
@@ -941,6 +1018,11 @@
     text-transform: uppercase;
     color: #9876a1;
     margin-bottom: 1.5rem;
+
+
+    .dark-main-nav & { 
+        color: var(--primary-color);
+    }
     @include breakpoint(mobile) {
         font-size: 0.9rem;
         line-height: 0.9rem;
@@ -971,11 +1053,22 @@
     &:visited {
         color: white;
     }
+    .dark-main-nav & {
+        &:link,
+        &:visited {
+            color: black;
+        }
+
+     
+    }
 
     .no-touch &:hover,
     .touch &:active {
         color: var(--primary-color);
     }
+
+
+ 
 
     @include breakpoint(mobile) {
         font-size: 1.3rem;
@@ -1109,6 +1202,10 @@
     background: #753785;
     border-radius: 1rem;
     overflow: hidden;
+
+    .dark-main-nav & {
+        background-color: var(--primary-color);
+    }
     &::after {
         content: '';
         width: 100%;

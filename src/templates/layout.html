@@ -9,6 +9,7 @@
         <script>
             window.MSInputMethodContext && document.documentMode && document.write('<script src="assets/js/ie11CustomProperties.js"><\x2fscript>');
         </script>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/styles.min.css" />
         <title>
             {{ title }}
@@ -17,7 +18,7 @@
         &lang=ru_RU" type="text/javascript">
         </script>
     </head>
-    <body class="no-touch {% if navigationText == "dark" %} dark-nav-text {% endif %}" ontouchstart="" data-barba-prevent="all">
+    <body class="no-touch {% if navigationText == "dark" %} dark-nav-text {% endif %} {% if mainNav == "dark" %} dark-main-nav {% endif %}" ontouchstart="" data-barba-prevent="all">
         <div class="sprite" aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;">
             {% include "sprite.njk" %}
         </div>
