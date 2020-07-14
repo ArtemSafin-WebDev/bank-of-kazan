@@ -13,7 +13,7 @@ export default function() {
     if (bankMenu && bankMenuSlot) {
         bankMenuSlot.appendChild(bankMenu);
     } else {
-        console.error('No bank menu or bank menu slot');
+        console.warn('No bank menu or bank menu slot');
     }
 
     const aboutBankBtn = document.querySelector('.page-header__about-bank-link');
@@ -64,6 +64,6 @@ export default function() {
             }
         });
     } else {
-        console.error('No bank menu btn or bank menu scroll container');
+        console.warn('No bank menu btn or bank menu scroll container');
     }
 }
