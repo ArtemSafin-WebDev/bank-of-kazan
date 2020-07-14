@@ -102,21 +102,21 @@
     color: black;
     z-index: 30;
     position: absolute;
-    left: 2rem;
-    right: 2rem;
+    left: 0;
+    width: 100%;
+    padding: 0 2rem;
     top: 0;
     bottom: 0;
     display: flex;
     align-items: center;
     user-select: none;
     pointer-events: none;
-
+   
     @include breakpoint(mobile) {
         font-weight: 500;
         font-size: 16px;
         line-height: 120%;
-        left: 1.3rem;
-        right: 1.3rem;
+        padding: 0 1.3rem;
     }
 }
 
@@ -132,9 +132,9 @@ input.range-slider__amount {
 .range-slider__min-max {
     display: flex;
     align-items: baseline;
-    margin-top: 1.2rem;
+    margin-top: .8rem;
     justify-content: space-between;
-    font-size: 1rem;
+    font-size: 1.4rem;
     color: #bababa;
     line-height: 130%;
 

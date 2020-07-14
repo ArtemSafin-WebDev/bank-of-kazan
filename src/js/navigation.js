@@ -43,7 +43,7 @@ export default function() {
                     autoHeight: false,
                     effect: 'fade',
                     allowTouchMove: window.matchMedia('(max-width: 767px)').matches ? true : false,
-                    speed: 1000,
+                    speed: 500,
                     followFinger: false,
                     loop: true,
                     loopedSlides: 3,

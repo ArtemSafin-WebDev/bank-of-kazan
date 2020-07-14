@@ -1249,13 +1249,13 @@
                                                             </div>
                                                             <div class="calculator__converter-amount-row">
                                                                 <div class="calculator__converter-amount-text">
-                                                                    Срок кредита
+                                                                    Срок кредита, мес.
                                                                 </div>
                                                                 <div class="calculator__converter-amount-range">
                                                                     <div class="range-slider js-range-slider">
                                                                         <input type="range" name="first-currency-amount" step="1" min="1" max="36" class="range-slider__input" value="12" data-units="months" />
                                                                         <div class="range-slider__element-wrapper">
-                                                                            <div class="range-slider__amount">12</div>
+                                                                            <input type="tel" class="range-slider__amount js-only-numeric" value="12" />
                                                                             <div class="range-slider__element"></div>
                                                                         </div>
                                                                         <div class="range-slider__min-max">
@@ -1332,7 +1332,7 @@
                                                         <div class="calculator__converter-left-col">
                                                             <div class="calculator__converter-amount-row">
                                                                 <div class="calculator__converter-amount-text">
-                                                                    Сумма вклада
+                                                                    Сумма вклада, рубли
                                                                 </div>
                                                                 <div class="calculator__converter-amount-range">
                                                                     <div class="calculator__converter-deposit-sum">
@@ -1367,13 +1367,13 @@
                                                             </div>
                                                             <div class="calculator__converter-amount-row">
                                                                 <div class="calculator__converter-amount-text">
-                                                                    Срок вклада
+                                                                    Срок вклада, мес.
                                                                 </div>
                                                                 <div class="calculator__converter-amount-range">
                                                                     <div class="range-slider js-range-slider">
                                                                         <input type="range" name="first-currency-amount" step="1" min="1" max="36" class="range-slider__input" value="12" data-units="months" />
                                                                         <div class="range-slider__element-wrapper">
-                                                                            <div class="range-slider__amount">12</div>
+                                                                            <input type="tel" class="range-slider__amount js-only-numeric" value="12" />
                                                                             <div class="range-slider__element"></div>
                                                                         </div>
                                                                         <div class="range-slider__min-max">
@@ -2406,6 +2406,7 @@
                                                                                 <div class="currency__card-calculate-widget-range-wrapper">
                                                                                     <div class="range-slider range-slider--no-right-radius js-range-slider">
                                                                                         <input type="range" name="first-currency-amount" step="100" min="0" max="60000" class="range-slider__input" value="20000" />
+                                                                                        <!-- Можно установить значение для input type="range" путем вызова на нем метода setValue(number) или setAnyValue(number). В первом случае устанавливаемое значение ограничено максимумом и минимумом, во втором нет -->
                                                                                         <div class="range-slider__element-wrapper">
                                                                                             <input type="tel" class="range-slider__amount js-only-numeric" value="20000" />
                                                                                             <div class="range-slider__element"></div>

@@ -101,7 +101,8 @@ function init() {
 
         function formatValue(value) {
             if (units === 'months') {
-                return monthsToHumanReadable(value);
+                return value;
+                // return monthsToHumanReadable(value);
             } else {
                 return addDivisions(value);
             }
@@ -149,6 +150,24 @@ function init() {
             });
 
 
+        }
+
+
+        rangeInput.setValue = function(value) {
+            let cleanedValue = checkValue(cleanInput(value));
+            if (isNaN(cleanedValue)) cleanedValue = '';
+            customRangeSliderElement.noUiSlider.set(cleanedValue);
+            
+            setValue(cleanedValue);
+        }
+
+
+        rangeInput.setAnyValue = function(value) {
+            let cleanedValue = cleanInput(value);
+            if (isNaN(cleanedValue)) cleanedValue = '';
+            customRangeSliderElement.noUiSlider.set(cleanedValue);
+            
+            setValue(cleanedValue);
         }
     });
 }

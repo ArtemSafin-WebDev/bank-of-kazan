@@ -661,15 +661,15 @@
     cursor: default;
     .swiper-slide-next & {
         transform: translateZ(0) translateX(8rem);
-        transition: transform 0.4s;
+        transition: transform 0.3s linear;
     }
     .swiper-slide-prev & {
         transform: translateZ(0) translateX(-8rem);
-        transition: transform 0.4s;
+        transition: transform 0.3s linear;
     }
     .swiper-slide-active & {
         transform: translateZ(0) translateX(0);
-        transition: transform 0.7s;
+        transition: transform 0.3s linear;
     }
 
     &--no-right-padding {
