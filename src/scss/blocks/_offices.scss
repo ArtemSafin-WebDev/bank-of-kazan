@@ -132,6 +132,10 @@
         color: white;
     }
 
+    &.selected {
+        display: none;
+    }
+
     @include breakpoint(mobile) {
         font-size: 1rem;
         padding: 1rem 1.5rem;

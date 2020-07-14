@@ -20,6 +20,7 @@ import bankMenu from './bankMenu';
 import articleAdvantages from './articleAdvantages';
 import bankOffices from './bankOffices';
 import modals from './modals';
+import currency from './currency';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -82,6 +83,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     rangeSliders.destroy();
                     customSelects.destroy();
                     forBusiness.destroy();
+                    currency.destroy();
                     document.body.classList.add('category-toggles-off');
 
                     if (window.destroyBackendScripts && typeof window.destroyBackendScripts === 'function') {
@@ -102,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function() {
                    
                     forBusiness.init();
                     productsSlider.init();
-                    console.log('Error is here')
+                    currency.init();
                    
                     document.body.classList.remove('category-toggles-off');
 

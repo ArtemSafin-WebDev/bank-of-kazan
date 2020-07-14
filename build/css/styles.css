@@ -5307,7 +5307,15 @@ input.range-slider__amount {
 .currency__converter-top-heading {
   font-weight: 500;
   font-size: 3.6rem;
-  line-height: 1.2; }
+  line-height: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  position: relative;
+  z-index: 20; }
   @media only screen and (max-width: 767px) {
     .currency__converter-top-heading {
       font-weight: 500;
@@ -5608,6 +5616,41 @@ input.range-slider__amount {
     @media only screen and (max-width: 767px) {
       .currency__app-link img {
         height: 4.4rem; } }
+
+.currency__outer-tabs {
+  position: relative; }
+
+.currency__outer-tab-item {
+  min-height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s, visibility 0s linear 0.4s, -webkit-transform 0s linear 0.4s;
+  transition: opacity 0.4s, visibility 0s linear 0.4s, -webkit-transform 0s linear 0.4s;
+  transition: opacity 0.4s, transform 0s linear 0.4s, visibility 0s linear 0.4s;
+  transition: opacity 0.4s, transform 0s linear 0.4s, visibility 0s linear 0.4s, -webkit-transform 0s linear 0.4s;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  .currency__outer-tab-item.active {
+    position: relative;
+    opacity: 1;
+    visibility: visible;
+    z-index: 2;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    -webkit-transition: all 0.4s, -webkit-transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: all 0.4s, -webkit-transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: all 0.4s, transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: all 0.4s, transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), -webkit-transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
 
 .callback {
   background-color: #f5f5f5;
@@ -11085,6 +11128,8 @@ input.range-slider__amount {
     border-bottom: none; }
   .offices__city-dropdown-link:link, .offices__city-dropdown-link:visited {
     color: white; }
+  .offices__city-dropdown-link.selected {
+    display: none; }
   @media only screen and (max-width: 767px) {
     .offices__city-dropdown-link {
       font-size: 1rem;
