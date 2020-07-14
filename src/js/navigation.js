@@ -45,6 +45,8 @@ export default function() {
                     allowTouchMove: window.matchMedia('(max-width: 767px)').matches ? true : false,
                     speed: 1000,
                     followFinger: false,
+                    loop: true,
+                    loopedSlides: 3,
                     fadeEffect: {
                         crossFade: true
                     },
@@ -63,6 +65,8 @@ export default function() {
                     speed: 1800,
                     allowTouchMove: false,
                     effect: 'fade',
+                    loop: true,
+                    loopedSlides: 3,
                     fadeEffect: {
                         crossFade: false
                     }
@@ -73,6 +77,8 @@ export default function() {
                     effect: 'fade',
                     speed: 300,
                     allowTouchMove: false,
+                    loop: true,
+                    loopedSlides: 3,
                     fadeEffect: {
                         crossFade: true
                     }
