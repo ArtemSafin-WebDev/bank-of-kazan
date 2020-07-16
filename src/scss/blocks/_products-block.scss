@@ -312,6 +312,7 @@
 
 .products__card-prices {
     margin-top: 3.5rem;
+    margin-bottom: auto;
     @include breakpoint(mobile) {
         margin-top: 2rem;
     }
