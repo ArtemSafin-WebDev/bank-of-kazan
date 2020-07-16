@@ -3640,15 +3640,17 @@ input.range-slider__amount {
   line-height: 130%;
   -webkit-transition: color 0.4s;
   transition: color 0.4s;
-  margin-bottom: auto; }
+  min-height: 9rem; }
   @media only screen and (max-width: 767px) {
     .products__card-text-content {
       margin-top: 4rem;
       font-size: 1.2rem;
-      line-height: 130%; } }
+      line-height: 130%;
+      min-height: 7rem; } }
 
 .products__card-prices {
-  margin-top: 3.5rem; }
+  margin-top: 3.5rem;
+  margin-bottom: auto; }
   @media only screen and (max-width: 767px) {
     .products__card-prices {
       margin-top: 2rem; } }
@@ -3714,8 +3716,7 @@ input.range-slider__amount {
 .products__card-prices-card-large-text {
   font-weight: 500;
   font-size: 2.6rem;
-  line-height: 120%;
-  margin-top: auto; }
+  line-height: 120%; }
   @media only screen and (max-width: 767px) {
     .products__card-prices-card-large-text {
       font-weight: 500;
