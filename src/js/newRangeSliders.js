@@ -39,11 +39,18 @@ function init() {
         const maxValue = rangeInput.hasAttribute('max') ? cleanInput(rangeInput.getAttribute('max')) : 150000;
         const stepValue = rangeInput.hasAttribute('step') ? cleanInput(rangeInput.getAttribute('step')) : 500;
         const units = rangeInput.hasAttribute('data-units') ? rangeInput.getAttribute('data-units') : 'rub';
+        const floatValue = rangeInput.hasAttribute('data-float-value');
         // const noDivisions = rangeInput.hasAttribute('data-no-divisions');
         let initialRangeValue = checkValue(cleanInput(rangeInput.value));
 
+        if (floatValue) console.log('Parsing as float value');
+
         function cleanInput(value) {
-            return parseInt(value.toString().replace(/\s/g, ''), 10);
+            const cleanedValue = value.toString().replace(/\s/g, '');
+            if (floatValue) {
+                return parseFloat(cleanedValue);
+            }
+            return parseInt(cleanedValue, 10);
         }
 
         function checkValue(value) {
