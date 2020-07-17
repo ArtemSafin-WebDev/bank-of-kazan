@@ -21,6 +21,7 @@ import articleAdvantages from './articleAdvantages';
 import bankOffices from './bankOffices';
 import modals from './modals';
 import currency from './currency';
+import validation from './validation';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -84,6 +85,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     customSelects.destroy();
                     forBusiness.destroy();
                     currency.destroy();
+                    validation.destroy();
                     document.body.classList.add('category-toggles-off');
 
                     if (window.destroyBackendScripts && typeof window.destroyBackendScripts === 'function') {
@@ -105,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     forBusiness.init();
                     productsSlider.init();
                     currency.init();
-                   
+                    validation.init();
                     document.body.classList.remove('category-toggles-off');
 
                     if (window.initBackendScripts && typeof window.initBackendScripts === 'function') {
