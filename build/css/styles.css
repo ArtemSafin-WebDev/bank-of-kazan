@@ -5653,7 +5653,6 @@ input.range-slider__amount {
   display: flex;
   position: relative; }
   .currency__card-calculate-widget-item--top {
-    z-index: 20;
     margin-bottom: 0.6rem; }
 
 .currency__card-calculate-divider {
