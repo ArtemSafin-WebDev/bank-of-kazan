@@ -297,7 +297,6 @@
     position: relative;
 
     &--top {
-       
         margin-bottom: 0.6rem;
     }
 }
@@ -343,7 +342,7 @@
 
     @include breakpoint(mobile) {
         padding: 2rem;
-        
+
         min-height: 110vw;
     }
 }
@@ -359,17 +358,13 @@
 }
 
 .currency__info-heading {
-    font-weight: bold;
-    font-size: 3rem;
-    line-height: 120%;
     position: relative;
     z-index: 20;
-  
+    font-weight: 500;
+    font-size: 2.4rem;
+    line-height: 120%;
     margin-bottom: auto;
-    @include breakpoint(mobile) {
-        font-size: 2.6rem;
-        // margin-bottom: 2.5rem;
-    }
+  
 }
 
 .currency__app-link {
@@ -391,12 +386,9 @@
     }
 }
 
-
-
 .currency__outer-tabs {
     position: relative;
 }
-
 
 .currency__outer-tab-item {
     min-height: 100%;
@@ -411,7 +403,6 @@
     display: flex;
     flex-direction: column;
     // transform: translateX(20%);
-    
 
     &.active {
         position: relative;

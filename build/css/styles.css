@@ -3733,7 +3733,7 @@ input.range-slider__amount {
   padding: 2.4rem 2.8rem;
   background-color: #ecf3dc;
   color: var(--primary-color);
-  border-radius: 0.4rem;
+  border-radius: 1rem;
   font-weight: 500;
   font-size: 1.6rem;
   text-transform: uppercase;
@@ -3764,7 +3764,8 @@ input.range-slider__amount {
       font-weight: 500;
       font-size: 1rem;
       line-height: 120%;
-      padding: 1.4rem 1.6rem; } }
+      padding: 1.4rem 1.6rem;
+      border-radius: .8rem; } }
 
 .products__card-links {
   margin-top: 3rem;
@@ -3958,7 +3959,7 @@ input.range-slider__amount {
   z-index: 1; }
   .news__card::before {
     content: '';
-    right: 0;
+    left: 0;
     height: 100%;
     width: 0.3rem;
     background-color: #7b398c;
@@ -5719,15 +5720,12 @@ input.range-slider__amount {
   font-family: 'object-fit: cover; object-position: right bottom;'; }
 
 .currency__info-heading {
-  font-weight: bold;
-  font-size: 3rem;
-  line-height: 120%;
   position: relative;
   z-index: 20;
+  font-weight: 500;
+  font-size: 2.4rem;
+  line-height: 120%;
   margin-bottom: auto; }
-  @media only screen and (max-width: 767px) {
-    .currency__info-heading {
-      font-size: 2.6rem; } }
 
 .currency__app-link {
   display: block;
