@@ -91,6 +91,10 @@
         position: absolute;
         z-index: -1;
         pointer-events: none;
+        @include breakpoint(mobile) {
+            left: auto;
+            right: 0;
+        }
     }
   
     &:link,

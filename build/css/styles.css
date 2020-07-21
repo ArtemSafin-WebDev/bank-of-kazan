@@ -3966,6 +3966,10 @@ input.range-slider__amount {
     position: absolute;
     z-index: -1;
     pointer-events: none; }
+    @media only screen and (max-width: 767px) {
+      .news__card::before {
+        left: auto;
+        right: 0; } }
   .news__card:link, .news__card:visited {
     color: white; }
   .no-touch .news__card:hover .news__card-preview-backdrop {
