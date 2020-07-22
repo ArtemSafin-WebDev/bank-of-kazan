@@ -1,5 +1,6 @@
 import Swiper from 'swiper';
 
+
 let instances = [];
 
 function init() {
@@ -43,7 +44,7 @@ function init() {
                             } else {
                                 sliderWrapper.classList.remove('last-slide-reached');
                             }
-                            console.log('is end', this.isEnd);
+                           
                         }
                     }
                 };
@@ -53,6 +54,7 @@ function init() {
                 instances.push({
                     slider
                 });
+
                 localInstances.push({
                     slider,
                     tabItem: item
@@ -71,7 +73,7 @@ function init() {
                         } else {
                             sliderWrapper.classList.remove('last-slide-reached');
                         }
-                        console.log('is end', this.isEnd);
+                       
                     }
                 }
             };
@@ -107,29 +109,42 @@ function init() {
             } else {
                 activeInstance = localInstances[0];
             }
-            if (prev) prev.classList.remove('button-disabled');
-            if (next) next.classList.remove('button-disabled');
+            if (prev) {
+                prev.classList.remove('button-disabled');
+                prev.classList.remove('button-lock-hidden');
+            }
+            if (next) {
+                next.classList.remove('button-disabled');
+                next.classList.remove('button-lock-hidden');
+            }
             if (activeInstance.slider.progress == 0) {
                 if (prev) prev.classList.add('button-disabled');
             }
             if (activeInstance.slider.progress == 1) {
                 if (next) next.classList.add('button-disabled');
             }
+
+            if (activeInstance.slider.isLocked) {
+                prev.classList.add('button-lock-hidden');
+                next.classList.add('button-lock-hidden');
+            } 
         }
 
-        if (prev) prev.addEventListener('click', event => {
-            event.preventDefault();
-            if (prev.classList.contains('button-disabled')) return;
-            handleArrowClick('prev');
-            handleButtonsActivity();
-        });
+        if (prev)
+            prev.addEventListener('click', event => {
+                event.preventDefault();
+                if (prev.classList.contains('button-disabled')) return;
+                handleArrowClick('prev');
+                handleButtonsActivity();
+            });
 
-        if (next) next.addEventListener('click', event => {
-            event.preventDefault();
-            if (next.classList.contains('button-disabled')) return;
-            handleArrowClick('next');
-            handleButtonsActivity();
-        });
+        if (next)
+            next.addEventListener('click', event => {
+                event.preventDefault();
+                if (next.classList.contains('button-disabled')) return;
+                handleArrowClick('next');
+                handleButtonsActivity();
+            });
 
         tabBtns.forEach(btn => btn.addEventListener('click', handleButtonsActivity));
 
