@@ -738,6 +738,7 @@
     left: -0.1em;
     display: flex;
     align-items: center;
+    
     @include breakpoint(mobile) {
         font-size: 1.6rem;
         margin-bottom: 0.8rem;
@@ -748,6 +749,7 @@
     font-weight: bold;
     font-size: 20rem;
     line-height: 120%;
+    margin-left: 0.095em;
     @include breakpoint(mobile) {
         font-size: 8rem;
         line-height: 1;

@@ -12,13 +12,15 @@ function init() {
             if (document.body.classList.contains('is-admin')) return;
             const tabItemsContainer = element.querySelector('.js-tab-items');
             if (!tabItemsContainer) {
-                console.error('No tab items container specified');
+                console.warn('No tab items container specified');
                 return;
             }
-            const moveTabItem = id => {
+            const moveTabItem = (id, btn) => {
                 const blockToMove = document.querySelector(`[data-id="${id.replace('#', '')}"]`);
                 if (!blockToMove) {
-                    console.error('No block to move');
+                    console.warn('No block to move');
+                    btn.remove();
+                    console.warn('Removing button to keep indexes in sync', btn)
                     return;
                 }
                 const tabItem = document.createElement('div');
@@ -30,11 +32,11 @@ function init() {
             tabsNav.forEach(btn => {
                 const id = btn.hash;
                 if (!id) {
-                    console.error('No block id on btn', btn);
+                    console.warn('No block id on btn', btn);
                     return;
                 }
 
-                moveTabItem(id);
+                moveTabItem(id, btn);
             })
         }
 

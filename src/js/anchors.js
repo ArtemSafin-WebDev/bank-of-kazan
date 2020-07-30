@@ -6,31 +6,27 @@ gsap.registerPlugin(ScrollToPlugin);
 let instances = [];
 
 function init() {
-    const anchorLinks = Array.from(document.querySelectorAll('.js-anchor-link'));
-
-    anchorLinks.forEach(link => {
-        const handler = (link, event) => {
-            event.preventDefault();
+    document.addEventListener('click', event => {
+        if (event.target.matches('a') || event.target.closest('a')) {
+            const link = event.target.matches('a') ? event.target : event.target.closest('a');
             const hash = link.hash;
-            gsap.to(window, { duration: 2, scrollTo: hash });
-        };
-        link.addEventListener('click', handler.bind(this, link));
 
-        instances.push({
-            link,
-            handler
-        });
+            if (hash && hash.startsWith('#to-')) {
+               
+                event.preventDefault();
+
+                const elementToScroll = document.getElementById(hash.replace(/^#to\-/, ''));
+                if (elementToScroll) {
+                    gsap.to(window, { duration: 2, scrollTo: elementToScroll });
+                }
+            }
+        }
     });
-
-    // if (window.location.hash) {
-    //     gsap.to(window, { duration: 2, scrollTo: window.location.hash });
-    // }
 }
 
 function destroy() {
     instances.forEach(instance => instance.link.removeEventListener('click', instance.handler));
     instances = [];
-    
 }
 
 export default {
