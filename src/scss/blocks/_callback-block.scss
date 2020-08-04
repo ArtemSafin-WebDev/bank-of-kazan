@@ -10,7 +10,7 @@
 
 .callback__row {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     @include breakpoint(mobile) {
         align-items: initial;
         flex-direction: column;
@@ -39,16 +39,25 @@
     }
 }
 
-
 .callback__form {
+    .parsley-errors-list {
+        font-size: 1.4rem;
+        color: #b90e0e;
+    }
+    .parsley-errors-list.filled {
+        margin-top: 0.5rem;
+    }
+}
+
+.callback__form-main-wrapper {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    margin-bottom: 1rem;
     @include breakpoint(mobile) {
         flex-direction: column;
         align-items: initial;
     }
 }
-
 
 .callback__input-wrapper {
     width: 100%;
@@ -60,21 +69,22 @@
         margin: 0;
         margin-bottom: 1.6rem;
         flex-shrink: 1;
-
     }
 }
 
-
 .callback__input {
-    padding: 2rem 2.2rem;
+    padding: 1.9rem 2.2rem;
     width: 100%;
     background-color: #fff;
     font-size: 2rem;
-    border-radius: .4rem;
-
-
+    border-radius: 0.4rem;
+    border: 1px solid white;
+    transition: border-color .2s;
+    &.parsley-error {
+        border-color: #b90e0e;
+    }
     @include placeholder {
-        color: #A0A0A0;
+        color: #a0a0a0;
     }
 
     @include breakpoint(mobile) {
@@ -82,7 +92,6 @@
         font-size: 1.4rem;
     }
 }
-
 
 .callback__submit-btn {
     font-weight: 500;
@@ -94,16 +103,16 @@
     border-radius: 1rem;
     background-color: var(--primary-color);
     white-space: nowrap;
-    transition: background-color .2s;
+    transition: background-color 0.2s;
     text-align: center;
     &:hover {
-        background-color: black;
+        background-color: var(--secondary-color);
     }
 
     @include breakpoint(mobile) {
         font-size: 1.2rem;
         line-height: 1.2;
         padding: 1.5rem 3rem;
-        border-radius: .4rem;
+        border-radius: 0.4rem;
     }
 }

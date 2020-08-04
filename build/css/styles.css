@@ -2283,8 +2283,8 @@ img.lazyload:not([src]) {
 
 .page-header__city-dropdown-inner {
   border-radius: 0.4rem;
-  background-color: rgba(83, 26, 98, 0.9);
-  color: white;
+  background-color: #fff;
+  color: black;
   overflow: hidden; }
   .violet-backplate .page-header__city-dropdown-inner,
   .mobile-menu-open .page-header__city-dropdown-inner {
@@ -2295,8 +2295,8 @@ img.lazyload:not([src]) {
   font-size: 1.6rem;
   padding: 1.7rem 2.2rem;
   text-transform: uppercase;
-  color: white;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  color: black;
+  border-bottom: 1px solid #F0F0F0;
   display: block;
   line-height: 1.2;
   -webkit-transition: background-color 0.2s;
@@ -2304,7 +2304,7 @@ img.lazyload:not([src]) {
   .page-header__city-dropdown-link:last-child {
     border-bottom: none; }
   .page-header__city-dropdown-link:link, .page-header__city-dropdown-link:visited {
-    color: white; }
+    color: black; }
   @media only screen and (max-width: 767px) {
     .page-header__city-dropdown-link {
       font-size: 1rem;
@@ -2425,8 +2425,8 @@ img.lazyload:not([src]) {
 
 .page-header__online-bank-dropdown-inner {
   border-radius: 0.4rem;
-  background-color: rgba(83, 26, 98, 0.9);
-  color: white;
+  background-color: #fff;
+  color: black;
   overflow: hidden; }
   .violet-backplate .page-header__online-bank-dropdown-inner,
   .mobile-menu-open .page-header__online-bank-dropdown-inner {
@@ -2437,8 +2437,8 @@ img.lazyload:not([src]) {
   font-size: 1.6rem;
   padding: 1.7rem 2rem;
   text-transform: uppercase;
-  color: white;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  color: black;
+  border-bottom: 1px solid #F0F0F0;
   display: block;
   line-height: 1.2;
   -webkit-transition: background-color 0.2s;
@@ -2446,7 +2446,7 @@ img.lazyload:not([src]) {
   .page-header__online-bank-dropdown-link:last-child {
     border-bottom: none; }
   .page-header__online-bank-dropdown-link:link, .page-header__online-bank-dropdown-link:visited {
-    color: white; }
+    color: black; }
   @media only screen and (max-width: 767px) {
     .page-header__online-bank-dropdown-link {
       font-size: 1rem;
@@ -4623,7 +4623,7 @@ input.range-slider__amount {
     color: white; }
   .nav-menu-open .navigation__main-menu-link:not(.active), .nav-menu-open
   .navigation__bank-menu-link:not(.active) {
-    color: #af94b6; }
+    color: rgba(255, 255, 255, 0.25); }
   .dark-main-nav .nav-menu-open .navigation__main-menu-link:not(.active), .dark-main-nav .nav-menu-open
   .navigation__bank-menu-link:not(.active) {
     color: black; }
@@ -5811,9 +5811,9 @@ input.range-slider__amount {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center; }
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start; }
   @media only screen and (max-width: 767px) {
     .callback__row {
       -webkit-box-align: initial;
@@ -5841,15 +5841,23 @@ input.range-slider__amount {
       .callback__heading br {
         display: block; } }
 
-.callback__form {
+.callback__form .parsley-errors-list {
+  font-size: 1.4rem;
+  color: #b90e0e; }
+
+.callback__form .parsley-errors-list.filled {
+  margin-top: 0.5rem; }
+
+.callback__form-main-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center; }
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-bottom: 1rem; }
   @media only screen and (max-width: 767px) {
-    .callback__form {
+    .callback__form-main-wrapper {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
@@ -5873,19 +5881,24 @@ input.range-slider__amount {
           flex-shrink: 1; } }
 
 .callback__input {
-  padding: 2rem 2.2rem;
+  padding: 1.9rem 2.2rem;
   width: 100%;
   background-color: #fff;
   font-size: 2rem;
-  border-radius: .4rem; }
+  border-radius: 0.4rem;
+  border: 1px solid white;
+  -webkit-transition: border-color .2s;
+  transition: border-color .2s; }
+  .callback__input.parsley-error {
+    border-color: #b90e0e; }
   .callback__input::-webkit-input-placeholder {
-    color: #A0A0A0; }
+    color: #a0a0a0; }
   .callback__input:-moz-placeholder {
-    color: #A0A0A0; }
+    color: #a0a0a0; }
   .callback__input::-moz-placeholder {
-    color: #A0A0A0; }
+    color: #a0a0a0; }
   .callback__input:-ms-input-placeholder {
-    color: #A0A0A0; }
+    color: #a0a0a0; }
   @media only screen and (max-width: 767px) {
     .callback__input {
       padding: 1.2rem 1.5rem;
@@ -5901,17 +5914,17 @@ input.range-slider__amount {
   border-radius: 1rem;
   background-color: var(--primary-color);
   white-space: nowrap;
-  -webkit-transition: background-color .2s;
-  transition: background-color .2s;
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
   text-align: center; }
   .callback__submit-btn:hover {
-    background-color: black; }
+    background-color: var(--secondary-color); }
   @media only screen and (max-width: 767px) {
     .callback__submit-btn {
       font-size: 1.2rem;
       line-height: 1.2;
       padding: 1.5rem 3rem;
-      border-radius: .4rem; } }
+      border-radius: 0.4rem; } }
 
 .calculator {
   padding-top: 6.6rem;
@@ -7213,7 +7226,7 @@ input.range-slider__amount {
     width: 100%;
     height: 100%;
     background-color: black;
-    opacity: var(--product-overlay-opacity, 0.3); }
+    opacity: var(--product-overlay-opacity, 0); }
 
 .product-navigation__bg-image {
   position: absolute;
@@ -7227,7 +7240,7 @@ input.range-slider__amount {
      object-position: center;
   font-family: 'object-fit: cover; object-position: center;'; }
   .product-navigation--rko .product-navigation__bg-image {
-    max-height: 80.7rem; }
+    max-height: 91rem; }
     @media only screen and (max-width: 767px) {
       .product-navigation--rko .product-navigation__bg-image {
         max-height: 65rem; } }
@@ -7647,7 +7660,7 @@ input.range-slider__amount {
   .product-navigation__card-menu-link:last-child {
     margin-bottom: 0; }
   .product-navigation__card-menu-link:link, .product-navigation__card-menu-link:visited {
-    color: rgba(255, 255, 255, 0.5); }
+    color: rgba(255, 255, 255, 0.25); }
   .product-navigation__card-menu-link.active {
     color: white; }
   .product-navigation__card-menu--bank .product-navigation__card-menu-link:link, .product-navigation__card-menu--bank .product-navigation__card-menu-link:visited {
@@ -8862,7 +8875,7 @@ input.range-slider__amount {
       .flexible-tariffs__card-info table tr:last-child {
         margin-bottom: 0; }
     .flexible-tariffs__card-info table th {
-      font-size: 1.4rem;
+      font-size: 1.6rem;
       line-height: 1.2;
       color: #808080;
       font-weight: 400;
@@ -10175,6 +10188,8 @@ input.range-slider__amount {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center; }
+  .open-account__privacy-policy-checkbox-mark--white {
+    background-color: #fff; }
   .open-account__privacy-policy-checkbox-mark svg {
     fill: var(--primary-color);
     width: 1.4rem;

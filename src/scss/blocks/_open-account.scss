@@ -255,6 +255,10 @@
     align-items: center;
     justify-content: center;
 
+    &--white {
+        background-color: #fff;
+    }
+
     svg {
         fill: var(--primary-color);
         width: 1.4rem;
