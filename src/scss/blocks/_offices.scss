@@ -104,10 +104,10 @@
 
 .offices__city-dropdown-inner {
     border-radius: 0.4rem;
-    background-color: rgba(#531a62, 0.9);
-    color: white;
+    background-color: #fff;
+    color: black;
     overflow: hidden;
-
+    box-shadow: 0 0 1rem rgba(black, .1);
     .violet-backplate &,
     .mobile-menu-open & {
         background-color: rgba(#94c22b, 0.9);
@@ -119,8 +119,8 @@
     font-size: 1.6rem;
     padding: 1.7rem 2rem;
     text-transform: uppercase;
-    color: white;
-    border-bottom: 1px solid rgba(white, 0.3);
+    color: black;
+    border-bottom: 1px solid #F0F0F0;
     display: block;
     line-height: 1.2;
     transition: background-color 0.2s;
@@ -129,7 +129,7 @@
     }
     &:link,
     &:visited {
-        color: white;
+        color: black;
     }
 
     &.selected {

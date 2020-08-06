@@ -611,7 +611,7 @@ button.swiper-pagination-bullet {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden; }
 
-/*! nouislider - 14.5.0 - 5/11/2020 */
+/*! nouislider - 14.6.0 - 6/27/2020 */
 /* Functional styling;
  * These styles are required for noUiSlider to function.
  * You don't need to change these rules to apply your design.
@@ -7280,8 +7280,8 @@ input.range-slider__amount {
     width: 100%;
     height: auto;
     opacity: 0;
-    -webkit-transition: opacity .2s;
-    transition: opacity .2s; }
+    -webkit-transition: opacity 0.2s;
+    transition: opacity 0.2s; }
   .dark-nav-text:not(.product-nav-menu-open):not(.bank-menu-shown) .product-navigation__logo-image:nth-child(1) {
     opacity: 0; }
   .dark-nav-text:not(.product-nav-menu-open):not(.bank-menu-shown) .product-navigation__logo-image:nth-child(2) {
@@ -7660,7 +7660,7 @@ input.range-slider__amount {
   .product-navigation__card-menu-link:last-child {
     margin-bottom: 0; }
   .product-navigation__card-menu-link:link, .product-navigation__card-menu-link:visited {
-    color: rgba(255, 255, 255, 0.25); }
+    color: rgba(255, 255, 255, 0.5); }
   .product-navigation__card-menu-link.active {
     color: white; }
   .product-navigation__card-menu--bank .product-navigation__card-menu-link:link, .product-navigation__card-menu--bank .product-navigation__card-menu-link:visited {
@@ -8144,13 +8144,6 @@ input.range-slider__amount {
           align-items: center; }
   @media only screen and (max-width: 767px) {
     .product-navigation__account-links {
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column;
-      -webkit-box-align: start;
-          -ms-flex-align: start;
-              align-items: flex-start;
       margin-bottom: 3rem; } }
 
 .product-navigation__account-open-account {
@@ -8172,10 +8165,9 @@ input.range-slider__amount {
       right: 0;
       line-height: 120%;
       margin-right: auto;
-      border-radius: 0.4rem;
+      border-radius: 0.8rem;
       padding: 1.4rem 1.5rem;
-      margin-right: 1.2rem;
-      margin-bottom: 1.5rem; } }
+      margin-right: 1.2rem; } }
 
 .product-navigation__account-registered {
   font-size: 1.8rem;
@@ -8225,16 +8217,53 @@ input.range-slider__amount {
   top: 2.8rem;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: opacity .3s, visibility 0s linear .3s;
-  transition: opacity .3s, visibility 0s linear .3s; }
+  -webkit-transition: opacity 0.3s, visibility 0s linear 0.3s;
+  transition: opacity 0.3s, visibility 0s linear 0.3s; }
   .no-touch .product-navigation__bank-menu-close:hover svg,
   .touch .product-navigation__bank-menu-close:active svg {
     fill: var(--primary-color); }
   .bank-menu-shown .product-navigation__bank-menu-close {
     opacity: 1;
     visibility: visible;
-    -webkit-transition: all .3s;
-    transition: all .3s; }
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s; }
+
+.product-navigation__account-login {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+  padding: 1.8rem 3.2rem;
+  border: 1px solid var(--primary-color);
+  border-radius: 1rem; }
+  .product-navigation__account-login svg {
+    width: 2.4rem;
+    height: 2.4rem;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    margin-right: 1.4rem; }
+  .product-navigation__account-login:link, .product-navigation__account-login:visited {
+    color: var(--primary-color); }
+  @media only screen and (max-width: 767px) {
+    .product-navigation__account-login {
+      font-weight: 500;
+      font-size: 1rem;
+      right: 0;
+      line-height: 120%;
+      margin-right: auto;
+      border-radius: 0.8rem;
+      padding: .8rem 1rem;
+      margin-right: 1.2rem; }
+      .product-navigation__account-login svg {
+        width: 2rem;
+        height: 2rem;
+        margin-right: 0.8rem; } }
 
 .rules {
   padding: 4rem 0; }
@@ -11315,9 +11344,11 @@ input.range-slider__amount {
 
 .offices__city-dropdown-inner {
   border-radius: 0.4rem;
-  background-color: rgba(83, 26, 98, 0.9);
-  color: white;
-  overflow: hidden; }
+  background-color: #fff;
+  color: black;
+  overflow: hidden;
+  -webkit-box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1); }
   .violet-backplate .offices__city-dropdown-inner,
   .mobile-menu-open .offices__city-dropdown-inner {
     background-color: rgba(148, 194, 43, 0.9); }
@@ -11327,8 +11358,8 @@ input.range-slider__amount {
   font-size: 1.6rem;
   padding: 1.7rem 2rem;
   text-transform: uppercase;
-  color: white;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  color: black;
+  border-bottom: 1px solid #F0F0F0;
   display: block;
   line-height: 1.2;
   -webkit-transition: background-color 0.2s;
@@ -11336,7 +11367,7 @@ input.range-slider__amount {
   .offices__city-dropdown-link:last-child {
     border-bottom: none; }
   .offices__city-dropdown-link:link, .offices__city-dropdown-link:visited {
-    color: white; }
+    color: black; }
   .offices__city-dropdown-link.selected {
     display: none; }
   @media only screen and (max-width: 767px) {
@@ -12002,8 +12033,8 @@ input.range-slider__amount {
   z-index: 800;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: opacity .4s, visibility 0s linear .4s;
-  transition: opacity .4s, visibility 0s linear .4s;
+  -webkit-transition: opacity 0.4s, visibility 0s linear 0.4s;
+  transition: opacity 0.4s, visibility 0s linear 0.4s;
   max-height: 100%;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
@@ -12013,8 +12044,8 @@ input.range-slider__amount {
   .modal.active {
     opacity: 1;
     visibility: visible;
-    -webkit-transition: opacity .4s, visibility .4s;
-    transition: opacity .4s, visibility .4s; }
+    -webkit-transition: opacity 0.4s, visibility 0.4s;
+    transition: opacity 0.4s, visibility 0.4s; }
   @media only screen and (max-width: 767px) {
     .modal {
       padding: 0; } }
@@ -12045,14 +12076,14 @@ input.range-slider__amount {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-transition: background-color .2s;
-  transition: background-color .2s; }
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s; }
   .modal__close-btn svg {
     width: 2.2rem;
     height: 2.2rem;
     fill: #d5d5d5;
-    -webkit-transition: fill .2s;
-    transition: fill .2s; }
+    -webkit-transition: fill 0.2s;
+    transition: fill 0.2s; }
     @media only screen and (max-width: 767px) {
       .modal__close-btn svg {
         width: 1.8rem;
@@ -12116,6 +12147,133 @@ input.range-slider__amount {
       border-radius: 0.4rem;
       padding: 1.4rem 1.5rem;
       margin-right: 1.2rem; } }
+
+.modal__table-heading {
+  font-weight: 550;
+  font-size: 3rem;
+  line-height: 120%;
+  margin-bottom: 2rem; }
+  @media only screen and (max-width: 767px) {
+    .modal__table-heading {
+      font-size: 1.8rem;
+      line-height: 1.2; } }
+
+.modal__table table {
+  width: 100%;
+  border-collapse: collapse; }
+  @media only screen and (max-width: 767px) {
+    .modal__table table {
+      display: block; } }
+  .modal__table table th,
+  .modal__table table td {
+    padding: 2.5rem 0;
+    padding-right: 2.5rem;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid #dadada; }
+    .modal__table table th:first-child,
+    .modal__table table td:first-child {
+      max-width: 32rem;
+      width: 32rem; }
+      @media only screen and (max-width: 767px) {
+        .modal__table table th:first-child,
+        .modal__table table td:first-child {
+          max-width: none;
+          width: auto; } }
+    @media only screen and (max-width: 767px) {
+      .modal__table table th,
+      .modal__table table td {
+        display: block;
+        padding: 0;
+        border: none; } }
+  @media only screen and (max-width: 767px) {
+    .modal__table table tbody, .modal__table table thead {
+      display: block; } }
+  .modal__table table tr.with-divider th,
+  .modal__table table tr.with-divider td {
+    border-bottom: 0.6rem solid #cae195; }
+    @media only screen and (max-width: 767px) {
+      .modal__table table tr.with-divider th,
+      .modal__table table tr.with-divider td {
+        border-bottom: none; } }
+  @media only screen and (max-width: 767px) {
+    .modal__table table tr {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 1rem;
+      grid-row-gap: .5rem;
+      margin-bottom: 3rem; } }
+  .modal__table table tr:last-child td,
+  .modal__table table tr:last-child th {
+    border-bottom: none; }
+  .modal__table table th {
+    font-weight: 500;
+    font-size: 1.4rem;
+    color: #717171;
+    text-transform: uppercase;
+    line-height: 130%; }
+    @media only screen and (max-width: 767px) {
+      .modal__table table th {
+        grid-column: span 4;
+        padding: 0;
+        font-size: 1.2rem; } }
+  .modal__table table td {
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 130%; }
+    .modal__table table td[colspan="4"] {
+      grid-column: span 4; }
+    @media only screen and (max-width: 767px) {
+      .modal__table table td {
+        font-size: 1.4rem; } }
+    .modal__table table td p {
+      font-size: 1.6rem;
+      color: #717171;
+      line-height: 130%;
+      font-weight: 400;
+      margin-bottom: 2rem; }
+      .modal__table table td p:last-child {
+        margin-bottom: 0; }
+      @media only screen and (max-width: 767px) {
+        .modal__table table td p {
+          font-size: 1.4rem; } }
+    .modal__table table td .remark {
+      font-size: 1.6rem;
+      color: #717171;
+      margin-bottom: 0.9rem;
+      line-height: 130%;
+      font-weight: 400;
+      display: block; }
+      @media only screen and (max-width: 767px) {
+        .modal__table table td .remark {
+          font-size: 1.2rem;
+          margin-bottom: 0.3rem; } }
+    .modal__table table td ul {
+      font-weight: 40; }
+      .modal__table table td ul li {
+        margin-bottom: 1.5rem;
+        padding-left: 2.7rem;
+        position: relative; }
+        .modal__table table td ul li:last-child {
+          margin-bottom: 0; }
+        @media only screen and (max-width: 767px) {
+          .modal__table table td ul li {
+            padding-left: 1.8rem;
+            margin-bottom: 0.8rem; } }
+        .modal__table table td ul li::before {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 0.65rem;
+          width: 8px;
+          height: 8px;
+          background-color: var(--primary-color);
+          border-radius: 50%; }
+          @media only screen and (max-width: 767px) {
+            .modal__table table td ul li::before {
+              width: 6px;
+              height: 6px;
+              top: 6px; } }
 
 .application {
   margin-bottom: 7rem; }

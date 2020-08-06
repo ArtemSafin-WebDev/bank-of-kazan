@@ -10,7 +10,7 @@
     z-index: 800;
     opacity: 0;
     visibility: hidden;
-    transition: opacity .4s, visibility 0s linear .4s;
+    transition: opacity 0.4s, visibility 0s linear 0.4s;
     max-height: 100%;
     overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
@@ -19,9 +19,8 @@
     &.active {
         opacity: 1;
         visibility: visible;
-        transition: opacity .4s, visibility .4s;
+        transition: opacity 0.4s, visibility 0.4s;
     }
-
 
     @include breakpoint(mobile) {
         padding: 0;
@@ -35,9 +34,6 @@
     position: relative;
     max-width: 123.3rem;
     margin: auto;
-
-
-  
 }
 
 .modal__close-btn {
@@ -52,18 +48,17 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    transition: background-color .2s;
+    transition: background-color 0.2s;
     svg {
         width: 2.2rem;
         height: 2.2rem;
         fill: #d5d5d5;
-        transition: fill .2s;
+        transition: fill 0.2s;
         @include breakpoint(mobile) {
             width: 1.8rem;
             height: 1.8rem;
         }
     }
-
 
     &:hover {
         background-color: var(--primary-color);
@@ -71,7 +66,6 @@
             fill: white;
         }
     }
-
 
     @include breakpoint(mobile) {
         right: 1.5rem;
@@ -96,7 +90,6 @@
 
 .modal__content {
     padding: 0;
-
 }
 
 .open-modal-test-btn {
@@ -131,5 +124,170 @@
         padding: 1.4rem 1.5rem;
 
         margin-right: 1.2rem;
+    }
+}
+
+.modal__table-heading {
+    font-weight: 550;
+    font-size: 3rem;
+    line-height: 120%;
+    margin-bottom: 2rem;
+    @include breakpoint(mobile) {
+        font-size: 1.8rem;
+        line-height: 1.2;
+    }
+}
+
+.modal__table {
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        @include breakpoint(mobile) {
+            display: block;
+        }
+
+        th,
+        td {
+            padding: 2.5rem 0;
+            padding-right: 2.5rem;
+            text-align: left;
+            vertical-align: top;
+            border-bottom: 1px solid #dadada;
+            &:first-child {
+                max-width: 32rem;
+                width: 32rem;
+                @include breakpoint(mobile) {
+                    max-width: none;
+                    width: auto;
+                }
+            }
+
+            @include breakpoint(mobile) {
+                display: block;
+                padding: 0;
+                border: none;
+            }
+        }
+
+        tbody, thead {
+            @include breakpoint(mobile) {
+                display: block;
+            }
+        }
+
+        th {
+        }
+
+        tr.with-divider th,
+        tr.with-divider td {
+            border-bottom: 0.6rem solid #cae195;
+            @include breakpoint(mobile) {
+                border-bottom: none;
+               
+            }
+        }
+
+        tr {
+            @include breakpoint(mobile) {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-gap: 1rem;
+                grid-row-gap: .5rem;
+                margin-bottom: 3rem;
+            }
+        }
+
+        tr:last-child {
+            td,
+            th {
+                border-bottom: none;
+            }
+        }
+
+        th {
+            font-weight: 500;
+            font-size: 1.4rem;
+            color: #717171;
+            text-transform: uppercase;
+            line-height: 130%;
+            @include breakpoint(mobile) {
+                grid-column: span 4;
+                padding: 0;
+                font-size: 1.2rem;
+            }
+        }
+
+        td {
+            font-weight: 500;
+            font-size: 2rem;
+
+            line-height: 130%;
+
+            &[colspan="4"] {
+                grid-column: span 4;
+            }
+
+            @include breakpoint(mobile) {
+                font-size: 1.4rem;
+            }
+
+            p {
+                font-size: 1.6rem;
+                color: #717171;
+                line-height: 130%;
+                font-weight: 400;
+                margin-bottom: 2rem;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                @include breakpoint(mobile) {
+                    font-size: 1.4rem;
+                }
+            }
+
+            .remark {
+                font-size: 1.6rem;
+                color: #717171;
+                margin-bottom: 0.9rem;
+                line-height: 130%;
+                font-weight: 400;
+                display: block;
+                @include breakpoint(mobile) {
+                    font-size: 1.2rem;
+                    margin-bottom: 0.3rem;
+                }
+            }
+
+            ul {
+                font-weight: 40;
+                li {
+                    margin-bottom: 1.5rem;
+                    padding-left: 2.7rem;
+                    position: relative;
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                    @include breakpoint(mobile) {
+                        padding-left: 1.8rem;
+                        margin-bottom: 0.8rem;
+                    }
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        top: 0.65rem;
+                        width: 8px;
+                        height: 8px;
+                        background-color: var(--primary-color);
+                        border-radius: 50%;
+                        @include breakpoint(mobile) {
+                            width: 6px;
+                            height: 6px;
+                            top: 6px;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
