@@ -4,7 +4,7 @@
             <h2 class="rating__heading">
                 Оцените нашу новую главную страницу
             </h2>
-            <form action="/" method="POST" class="rating__form js-rating-stars">
+            <div class="rating__form js-rating-stars">
                 <label class="rating__form-star">
                     <input type="checkbox" class="rating__form-star-input" name="rating" checked>
                     <svg width="40" height="40" aria-hidden="true" class="icon-star">
@@ -36,10 +36,10 @@
                     </svg>
                 </label>
                 <input type="hidden" name="total-rating" class="rating__form-total-rating">
-                <button type="submit" class="rating__form-submit">
+                <a href="#ratingpopup" class="rating__form-submit js-open-modal">
                     Оставить отзыв
-                </button>
-            </form>
+                </a>
+            </div>
         </div>
     </div>
 </section>

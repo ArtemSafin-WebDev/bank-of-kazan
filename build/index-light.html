@@ -3455,7 +3455,7 @@
                                     <h2 class="rating__heading">
                                         Оцените нашу новую главную страницу
                                     </h2>
-                                    <form action="/" method="POST" class="rating__form js-rating-stars">
+                                    <div class="rating__form js-rating-stars">
                                         <label class="rating__form-star">
                                             <input type="checkbox" class="rating__form-star-input" name="rating" checked />
                                             <svg width="40" height="40" aria-hidden="true" class="icon-star">
@@ -3487,10 +3487,10 @@
                                             </svg>
                                         </label>
                                         <input type="hidden" name="total-rating" class="rating__form-total-rating" />
-                                        <button type="submit" class="rating__form-submit">
+                                        <a href="#ratingpopup" class="rating__form-submit js-open-modal">
                                             Оставить отзыв
-                                        </button>
-                                    </form>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </section>
@@ -4019,6 +4019,72 @@
                                     </td>
                                 </tr>
                             </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal js-modal" id="ratingpopup">
+                <div class="modal__inner">
+                    <button class="modal__close-btn js-close-modal">
+                        <svg width="22" height="22" aria-hidden="true" class="icon-modal-close">
+                            <use xlink:href="#modal-close"></use>
+                        </svg>
+                    </button>
+                    <div class="modal__content-wrapper">
+                        <div class="modal__rating">
+                            <h1 class="article__main-heading">
+                                Оставьте свой отзыв
+                            </h1>
+                            <div class="article__description">
+                                <p>
+                                    Ваша оценка позволит нам сделать сайт лучше
+                                </p>
+                            </div>
+                            <form action="/" method="POST" class="modal__rating-form">
+                                <textarea name="comment" class="modal__rating-form-textarea"></textarea>
+                                <div class="modal__rating-form-choose-rating">
+                                    Выберите оценку
+
+                                    <div class="rating__form js-rating-stars">
+                                        <label class="rating__form-star rating__form-star--small">
+                                            <input type="checkbox" class="rating__form-star-input" name="rating" checked />
+                                            <svg width="40" height="40" aria-hidden="true" class="icon-star">
+                                                <use xlink:href="#star" />
+                                            </svg>
+                                        </label>
+                                        <label class="rating__form-star rating__form-star--small">
+                                            <input type="checkbox" class="rating__form-star-input" name="rating" checked />
+                                            <svg width="40" height="40" aria-hidden="true" class="icon-star">
+                                                <use xlink:href="#star" />
+                                            </svg>
+                                        </label>
+                                        <label class="rating__form-star rating__form-star--small">
+                                            <input type="checkbox" class="rating__form-star-input" name="rating" checked />
+                                            <svg width="40" height="40" aria-hidden="true" class="icon-star">
+                                                <use xlink:href="#star" />
+                                            </svg>
+                                        </label>
+                                        <label class="rating__form-star rating__form-star--small">
+                                            <input type="checkbox" class="rating__form-star-input" name="rating" />
+                                            <svg width="40" height="40" aria-hidden="true" class="icon-star">
+                                                <use xlink:href="#star" />
+                                            </svg>
+                                        </label>
+                                        <label class="rating__form-star rating__form-star--small">
+                                            <input type="checkbox" class="rating__form-star-input" name="rating" />
+                                            <svg width="40" height="40" aria-hidden="true" class="icon-star">
+                                                <use xlink:href="#star" />
+                                            </svg>
+                                        </label>
+                                        <input type="hidden" name="total-rating" class="rating__form-total-rating" />
+                                    </div>
+                                </div>
+
+                                <button type="submit" class="callback__submit-btn modal__rating-submit">
+                                    отправить отзыв
+                                </button>
+                            </form>
                         </div>
                     </div>
                 </div>

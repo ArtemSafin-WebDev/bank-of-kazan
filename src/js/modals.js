@@ -35,7 +35,11 @@ export default function() {
             event.preventDefault();
             const modalToClose = event.target.closest('.js-modal');
             closeModal(modalToClose);
-        } 
+        } else if (event.target.matches('.js-modal')) {
+            event.preventDefault();
+            const modalToClose = event.target;
+            closeModal(modalToClose);
+        }
     });
 
     document.addEventListener('keydown', function(event) {

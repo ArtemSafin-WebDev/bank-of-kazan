@@ -34,11 +34,22 @@ function init() {
             const handler = handleRatingChange.bind(this, checkboxIndex);
             checkbox.addEventListener('change', handler);
 
+            checkbox.addEventListener('change', () => {
+                const event = new CustomEvent('ratingchange', { detail: checkboxIndex });
+
+                document.dispatchEvent(event);
+            });
+
             const instance = {
                 checkbox,
                 handler
             };
             instances.push(instance);
+        });
+
+        document.addEventListener('ratingchange', event => {
+            console.log('Event detail', event.detail);
+            handleRatingChange(event.detail);
         });
     });
 }
@@ -52,4 +63,4 @@ function destroy() {
 export default {
     init,
     destroy
-}
+};
