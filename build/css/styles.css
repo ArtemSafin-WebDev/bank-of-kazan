@@ -2013,8 +2013,8 @@ img.lazyload:not([src]) {
   width: 100%;
   z-index: 600;
   color: white;
-  -webkit-transition: color .2s;
-  transition: color .2s; }
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s; }
   .dark-nav-text:not(.product-nav-menu-open):not(.bank-menu-shown) .page-header,
   .dark-main-nav.violet-backplate:not(.bank-menu-shown):not(.mobile-menu-open) .page-header {
     color: black; }
@@ -2160,10 +2160,10 @@ img.lazyload:not([src]) {
     height: 0.2rem;
     background-color: #fff;
     margin-bottom: 0.5rem;
-    -webkit-transition: opacity 0.2s, background-color .2s, -webkit-transform 0.2s;
-    transition: opacity 0.2s, background-color .2s, -webkit-transform 0.2s;
-    transition: transform 0.2s, opacity 0.2s, background-color .2s;
-    transition: transform 0.2s, opacity 0.2s, background-color .2s, -webkit-transform 0.2s; }
+    -webkit-transition: opacity 0.2s, background-color 0.2s, -webkit-transform 0.2s;
+    transition: opacity 0.2s, background-color 0.2s, -webkit-transform 0.2s;
+    transition: transform 0.2s, opacity 0.2s, background-color 0.2s;
+    transition: transform 0.2s, opacity 0.2s, background-color 0.2s, -webkit-transform 0.2s; }
     .page-header__burger-btn > span:last-child {
       margin-bottom: 0; }
   .dark-nav-text:not(.product-nav-menu-open):not(.bank-menu-shown) .page-header__burger-btn > span,
@@ -2209,8 +2209,8 @@ img.lazyload:not([src]) {
   font-size: 1.4rem;
   font-weight: 500;
   text-transform: uppercase;
-  -webkit-transition: color .2s;
-  transition: color .2s; }
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s; }
   .page-header__about-bank-link:link, .page-header__about-bank-link:visited,
   .page-header__city-link:link,
   .page-header__city-link:visited {
@@ -2249,8 +2249,8 @@ img.lazyload:not([src]) {
   cursor: default;
   z-index: 220;
   margin-right: 4rem;
-  -webkit-transition: color .2s;
-  transition: color .2s; }
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s; }
   .dark-nav-text:not(.product-nav-menu-open):not(.bank-menu-shown) .page-header__city,
   .dark-main-nav.violet-backplate:not(.bank-menu-shown) .page-header__city {
     color: black; }
@@ -2266,6 +2266,14 @@ img.lazyload:not([src]) {
   .page-header__city:hover .page-header__city-link svg {
     -webkit-transform: rotate(180deg);
             transform: rotate(180deg); }
+  .page-header__city:hover .page-header__about-bank-link-cross > span:nth-child(1) {
+    -webkit-transform: translateZ(0) translateY(0.5rem) rotate(45deg);
+            transform: translateZ(0) translateY(0.5rem) rotate(45deg); }
+  .page-header__city:hover .page-header__about-bank-link-cross > span:nth-child(2) {
+    opacity: 0; }
+  .page-header__city:hover .page-header__about-bank-link-cross > span:nth-child(3) {
+    -webkit-transform: translateZ(0) translateY(-0.5rem) rotate(-45deg);
+            transform: translateZ(0) translateY(-0.5rem) rotate(-45deg); }
 
 .page-header__city-dropdown {
   position: absolute;
@@ -2274,7 +2282,7 @@ img.lazyload:not([src]) {
   opacity: 0;
   visibility: hidden;
   padding-top: 1.2rem;
-  width: 24rem;
+  width: 27rem;
   -webkit-transition: opacity 0.3s, visibility 0s linear 0.3s;
   transition: opacity 0.3s, visibility 0s linear 0.3s; }
   @media only screen and (max-width: 767px) {
@@ -2283,29 +2291,29 @@ img.lazyload:not([src]) {
       padding-top: 0.5rem; } }
 
 .page-header__city-dropdown-inner {
-  border-radius: 0.4rem;
+  border-radius: 1rem;
   background-color: #fff;
   color: black;
-  overflow: hidden; }
+  overflow: hidden;
+  padding: 1.3rem 0; }
   .violet-backplate .page-header__city-dropdown-inner,
   .mobile-menu-open .page-header__city-dropdown-inner {
     background-color: rgba(148, 194, 43, 0.9); }
 
 .page-header__city-dropdown-link {
-  font-weight: 500;
-  font-size: 1.6rem;
-  padding: 1.7rem 2.2rem;
-  text-transform: uppercase;
+  padding: .9rem 2.6rem;
   color: black;
-  border-bottom: 1px solid #F0F0F0;
   display: block;
-  line-height: 1.2;
   -webkit-transition: background-color 0.2s;
-  transition: background-color 0.2s; }
+  transition: background-color 0.2s;
+  font-size: 1.8rem;
+  line-height: 120%; }
   .page-header__city-dropdown-link:last-child {
     border-bottom: none; }
   .page-header__city-dropdown-link:link, .page-header__city-dropdown-link:visited {
     color: black; }
+  .page-header__city-dropdown-link:hover {
+    background: #F5F5F5; }
   @media only screen and (max-width: 767px) {
     .page-header__city-dropdown-link {
       font-size: 1rem;
@@ -2439,7 +2447,7 @@ img.lazyload:not([src]) {
   padding: 1.7rem 2rem;
   text-transform: uppercase;
   color: black;
-  border-bottom: 1px solid #F0F0F0;
+  border-bottom: 1px solid #f0f0f0;
   display: block;
   line-height: 1.2;
   -webkit-transition: background-color 0.2s;
@@ -4711,8 +4719,8 @@ input.range-slider__amount {
           transform: translateY(-50%);
   z-index: 100; }
   .navigation__content-inner-slider-arrow svg {
-    width: 2.8rem;
-    height: 4.6rem;
+    width: 2.2rem;
+    height: 4.2rem;
     fill: rgba(255, 255, 255, 0.5);
     -webkit-transition: fill 0.2s;
     transition: fill 0.2s;
@@ -4774,20 +4782,6 @@ input.range-slider__amount {
     transition: -webkit-transform 0.3s linear;
     transition: transform 0.3s linear;
     transition: transform 0.3s linear, -webkit-transform 0.3s linear; }
-  .navigation__content-inner-slider-card--no-right-padding {
-    padding-right: 0; }
-    .navigation__content-inner-slider-card--no-right-padding .navigation__content-inner-slider-card-title {
-      padding-right: 8rem;
-      margin-bottom: 2.2rem; }
-      @media only screen and (max-width: 767px) {
-        .navigation__content-inner-slider-card--no-right-padding .navigation__content-inner-slider-card-title {
-          padding: 0;
-          margin-bottom: 1rem; } }
-    .navigation__content-inner-slider-card--no-right-padding .navigation__content-inner-slider-card-text {
-      padding-right: 8rem; }
-      @media only screen and (max-width: 767px) {
-        .navigation__content-inner-slider-card--no-right-padding .navigation__content-inner-slider-card-text {
-          padding: 0; } }
   @media only screen and (max-width: 767px) {
     .navigation__content-inner-slider-card {
       padding: 0;

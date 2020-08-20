@@ -612,8 +612,8 @@
     transform: translateY(-50%);
     z-index: 100;
     svg {
-        width: 2.8rem;
-        height: 4.6rem;
+        width: 2.2rem;
+        height: 4.2rem;
         fill: rgba(white, 0.5);
         transition: fill 0.2s;
         display: block;
@@ -669,25 +669,25 @@
         transition: transform 0.3s linear;
     }
 
-    &--no-right-padding {
-        padding-right: 0;
+    // &--no-right-padding {
+    //     padding-right: 0;
 
-        .navigation__content-inner-slider-card-title {
-            padding-right: 8rem;
-            margin-bottom: 2.2rem;
-            @include breakpoint(mobile) {
-                padding: 0;
-                margin-bottom: 1rem;
-            }
-        }
+    //     .navigation__content-inner-slider-card-title {
+    //         padding-right: 8rem;
+    //         margin-bottom: 2.2rem;
+    //         @include breakpoint(mobile) {
+    //             padding: 0;
+    //             margin-bottom: 1rem;
+    //         }
+    //     }
 
-        .navigation__content-inner-slider-card-text {
-            padding-right: 8rem;
-            @include breakpoint(mobile) {
-                padding: 0;
-            }
-        }
-    }
+    //     .navigation__content-inner-slider-card-text {
+    //         padding-right: 8rem;
+    //         @include breakpoint(mobile) {
+    //             padding: 0;
+    //         }
+    //     }
+    // }
 
     @include breakpoint(mobile) {
         padding: 0;

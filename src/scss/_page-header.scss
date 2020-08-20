@@ -5,13 +5,11 @@
     width: 100%;
     z-index: 600;
     color: white;
-    transition: color .2s;
+    transition: color 0.2s;
     .dark-nav-text:not(.product-nav-menu-open):not(.bank-menu-shown) &,
     .dark-main-nav.violet-backplate:not(.bank-menu-shown):not(.mobile-menu-open) & {
         color: black;
     }
-
-  
 
     @include breakpoint(mobile) {
         top: 1.8rem;
@@ -158,7 +156,7 @@
         height: 0.2rem;
         background-color: #fff;
         margin-bottom: 0.5rem;
-        transition: transform 0.2s, opacity 0.2s, background-color .2s;
+        transition: transform 0.2s, opacity 0.2s, background-color 0.2s;
 
         &:last-child {
             margin-bottom: 0;
@@ -210,7 +208,7 @@
     font-weight: 500;
     text-transform: uppercase;
     // cursor: default;
-    transition: color .2s;
+    transition: color 0.2s;
     &:link,
     &:visited {
         color: white;
@@ -235,8 +233,6 @@
         .dark-main-nav.violet-backplate:not(.bank-menu-shown) & {
             fill: var(--primary-color);
         }
-
-        
     }
 }
 
@@ -245,7 +241,7 @@
     cursor: default;
     z-index: 220;
     margin-right: 4rem;
-    transition: color .2s;
+    transition: color 0.2s;
     .dark-nav-text:not(.product-nav-menu-open):not(.bank-menu-shown) &,
     .dark-main-nav.violet-backplate:not(.bank-menu-shown) & {
         color: black;
@@ -255,7 +251,6 @@
         }
     }
 
-  
     &:hover {
         .page-header__city-dropdown {
             opacity: 1;
@@ -268,6 +263,22 @@
                 transform: rotate(180deg);
             }
         }
+
+
+        .page-header__about-bank-link-cross {
+            & > span {
+                // background-color: white;
+                &:nth-child(1) {
+                    transform: translateZ(0) translateY(0.5rem) rotate(45deg);
+                }
+                &:nth-child(2) {
+                    opacity: 0;
+                }
+                &:nth-child(3) {
+                    transform: translateZ(0) translateY(-0.5rem) rotate(-45deg);
+                }
+            }
+        }
     }
 }
 
@@ -278,7 +289,7 @@
     opacity: 0;
     visibility: hidden;
     padding-top: 1.2rem;
-    width: 24rem;
+    width: 27rem;
     transition: opacity 0.3s, visibility 0s linear 0.3s;
 
     @include breakpoint(mobile) {
@@ -287,11 +298,11 @@
     }
 }
 .page-header__city-dropdown-inner {
-    border-radius: 0.4rem;
+    border-radius: 1rem;
     background-color: #fff;
     color: black;
     overflow: hidden;
-
+    padding: 1.3rem 0;
     .violet-backplate &,
     .mobile-menu-open & {
         background-color: rgba(#94c22b, 0.9);
@@ -299,21 +310,28 @@
 }
 
 .page-header__city-dropdown-link {
-    font-weight: 500;
-    font-size: 1.6rem;
-    padding: 1.7rem 2.2rem;
-    text-transform: uppercase;
+  
+    padding: .9rem 2.6rem;
+   
     color: black;
-    border-bottom: 1px solid #F0F0F0;
+
     display: block;
-    line-height: 1.2;
+
     transition: background-color 0.2s;
+
+    font-size: 1.8rem;
+    line-height: 120%;
     &:last-child {
         border-bottom: none;
     }
     &:link,
     &:visited {
         color: black;
+    }
+
+
+    &:hover {
+        background: #F5F5F5;
     }
 
     @include breakpoint(mobile) {
@@ -400,8 +418,6 @@
         }
     }
 
-   
-
     &:hover {
         color: var(--primary-color);
     }
@@ -484,7 +500,7 @@
     padding: 1.7rem 2rem;
     text-transform: uppercase;
     color: black;
-    border-bottom: 1px solid #F0F0F0;
+    border-bottom: 1px solid #f0f0f0;
     display: block;
     line-height: 1.2;
     transition: background-color 0.2s;
@@ -517,8 +533,6 @@
     border: 1px solid rgba(white, 0.5);
     text-transform: uppercase;
     font-weight: 500;
-    
-
 
     font-size: 1.4rem;
     font-weight: 500;
