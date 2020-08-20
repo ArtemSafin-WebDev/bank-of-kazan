@@ -27,6 +27,31 @@
     }
 }
 
+
+.currency__card-calculate-checkbox-wrapper {
+    margin-top: 30px;
+    display: flex;
+    width: 100%;
+    .open-account__privacy-policy-checkbox {
+        width: 50%;
+        @include breakpoint(mobile) {
+            width: 100%;
+            flex-basis: auto;
+            margin-bottom: 1rem;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+
+    @include breakpoint(mobile) {
+        flex-direction: column;
+
+    }
+}
+
+
 .currency__right-col {
     width: 33.6rem;
     flex-shrink: 0;
