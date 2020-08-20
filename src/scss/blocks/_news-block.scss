@@ -82,19 +82,37 @@
     position: relative;
     z-index: 1;
 
-    &::before {
+    &::before,
+    &::after {
         content: '';
         left: 0;
         height: 100%;
         width: 0.3rem;
         background-color: #7b398c;
         position: absolute;
-        z-index: -1;
+        z-index: -2;
         pointer-events: none;
         @include breakpoint(mobile) {
             left: auto;
             right: 0;
         }
+    }
+
+
+    &::before {
+        display: none;
+    }
+
+    .news__list-item:first-child & {
+        &::before {
+            display: block;
+        }
+    }
+
+
+    &::after {
+        left: auto;
+        right: 0;
     }
   
     &:link,
@@ -103,6 +121,7 @@
     }
 
     .no-touch &:hover {
+        
         .news__card-preview-backdrop {
             opacity: 1;
         }
@@ -123,8 +142,8 @@
 
 .news__card-preview-backdrop {
     position: absolute;
-    left: -.5rem;
-    right: -.5rem;
+   
+  
     top: -2.1rem;
     bottom: -2.5rem;
     border-radius: 1.5rem;
@@ -134,8 +153,8 @@
     opacity: 0;
     transition: opacity .2s;
 
-
-    right: 0;
+    left: -.5rem;
+    right: -.5rem;
 
 
     @include breakpoint(mobile) {

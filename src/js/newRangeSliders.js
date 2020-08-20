@@ -149,12 +149,12 @@ function init() {
             });
             
             displayedAmountElement.addEventListener('input', checkManualInput);
-            displayedAmountElement.addEventListener('focus', () => {
-                let cleanedValue = '';
-                customRangeSliderElement.noUiSlider.set(cleanedValue);
+            // displayedAmountElement.addEventListener('focus', () => {
+            //     let cleanedValue = '';
+            //     customRangeSliderElement.noUiSlider.set(cleanedValue);
     
-                setValue(cleanedValue);
-            });
+            //     setValue(cleanedValue);
+            // });
 
 
         }
