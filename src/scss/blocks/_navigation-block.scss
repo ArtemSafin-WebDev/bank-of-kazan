@@ -533,6 +533,10 @@
 
     .nav-menu-open &:not(.active) {
         color: rgba(white, 0.25);
+
+        &:hover {
+            color: white;
+        }
     }
 
     .dark-main-nav .nav-menu-open &:not(.active) {
