@@ -4583,7 +4583,8 @@ input.range-slider__amount {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-bottom: 2rem; }
+  padding-bottom: 2rem;
+  padding-right: 3rem; }
   @media only screen and (max-width: 767px) {
     .navigation__main-menu,
     .navigation__bank-menu {
