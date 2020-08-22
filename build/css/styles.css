@@ -6581,18 +6581,19 @@ input.range-slider__amount {
       font-size: 1.6rem; } }
 
 .calculator__apply-for-card-cards {
-  width: 32.5rem;
+  width: 55.6rem;
   -ms-flex-negative: 0;
       flex-shrink: 0;
   margin-right: 6rem;
   display: grid;
-  grid-template-columns: 5.7rem 5.7rem 1fr 5.7rem 5.7rem;
-  grid-template-rows: repeat(4, 4.7rem); }
+  grid-template-columns: 5rem 1fr 5rem 1fr 5rem 1fr 5rem;
+  grid-template-rows: repeat(7, 2.8rem); }
   @media only screen and (max-width: 767px) {
     .calculator__apply-for-card-cards {
-      width: 90%;
+      width: 100%;
       margin: 0 auto;
-      margin-bottom: 1rem; } }
+      margin-bottom: 1rem;
+      grid-template-rows: repeat(7, 1.8rem); } }
 
 .calculator__apply-for-card-card-image {
   display: block;
@@ -6606,17 +6607,17 @@ input.range-slider__amount {
 
 .calculator__apply-for-card-card--1 {
   grid-column: 1 / 4;
-  grid-row: 1 / 4;
+  grid-row: 1 / 5;
   z-index: 30; }
 
 .calculator__apply-for-card-card--2 {
-  grid-column: 2 / 5;
-  grid-row: 2 / 5;
+  grid-column: 3 / 6;
+  grid-row: 2 / 7;
   z-index: 20; }
 
 .calculator__apply-for-card-card--3 {
-  grid-column: 3 / 6;
-  grid-row: 3 / 6;
+  grid-column: 5 / 8;
+  grid-row: 3 / 8;
   z-index: 10; }
 
 .calculator__apply-for-card-card {
@@ -6627,9 +6628,6 @@ input.range-slider__amount {
 
 .calculator__apply-for-card-card:hover {
   z-index: 40; }
-
-.calculator__apply-for-card-apply {
-  margin-right: 5rem; }
 
 .calculator__apply-for-card-percent {
   width: 20.8rem;
