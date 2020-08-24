@@ -4319,7 +4319,7 @@ input.range-slider__amount {
   font-weight: 500;
   color: white;
   width: 100%;
-  font-size: 4.6rem;
+  font-size: 3.8rem;
   line-height: 120%; }
   .navigation__universal-toggle-search-form-input::-webkit-input-placeholder {
     color: rgba(255, 255, 255, 0.4); }
@@ -4339,7 +4339,7 @@ input.range-slider__amount {
   margin-right: 5rem;
   -webkit-transition: color 0.2s, opacity 0.2s;
   transition: color 0.2s, opacity 0.2s;
-  font-size: 4.6rem;
+  font-size: 3.8rem;
   line-height: 120%; }
   .navigation__universal-toggle-select-category-link:link, .navigation__universal-toggle-select-category-link:visited {
     color: rgba(255, 255, 255, 0.4); }
