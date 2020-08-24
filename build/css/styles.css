@@ -4317,9 +4317,10 @@ input.range-slider__amount {
 .navigation__universal-toggle-search-form-input {
   padding-right: 5rem;
   font-weight: 500;
-  font-size: 5.4rem;
   color: white;
-  width: 100%; }
+  width: 100%;
+  font-size: 4.6rem;
+  line-height: 120%; }
   .navigation__universal-toggle-search-form-input::-webkit-input-placeholder {
     color: rgba(255, 255, 255, 0.4); }
   .navigation__universal-toggle-search-form-input:-moz-placeholder {
@@ -4335,11 +4336,11 @@ input.range-slider__amount {
 .navigation__universal-toggle-select-category-link {
   color: rgba(255, 255, 255, 0.4);
   font-weight: 500;
-  font-size: 5.4rem;
-  line-height: 120%;
-  margin-right: 6rem;
+  margin-right: 5rem;
   -webkit-transition: color 0.2s, opacity 0.2s;
-  transition: color 0.2s, opacity 0.2s; }
+  transition: color 0.2s, opacity 0.2s;
+  font-size: 4.6rem;
+  line-height: 120%; }
   .navigation__universal-toggle-select-category-link:link, .navigation__universal-toggle-select-category-link:visited {
     color: rgba(255, 255, 255, 0.4); }
   .navigation__universal-toggle-select-category-link.active {
@@ -5359,7 +5360,7 @@ input.range-slider__amount {
     .navigation__promo {
       margin-bottom: 1.5rem;
       min-height: 13rem;
-      border-radius: .8rem; } }
+      border-radius: 0.8rem; } }
 
 .navigation__promo-row {
   display: -webkit-box;
@@ -5429,7 +5430,7 @@ input.range-slider__amount {
     .navigation__promo-title {
       font-size: 1.6rem;
       line-height: 1.2;
-      margin-bottom: .5rem; } }
+      margin-bottom: 0.5rem; } }
 
 .navigation__promo-rate {
   font-weight: 500;
