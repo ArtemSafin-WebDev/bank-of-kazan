@@ -59,12 +59,19 @@
     display: flex;
     flex-direction: column;
     @include breakpoint(mobile) {
-        width: 24rem;
+        width: 26rem;
         flex-shrink: 0;
         &:first-child {
             .news__card {
                 padding-left: 0;
-                width: 22rem;
+               
+            }
+        }
+
+
+        &:last-child {
+            .news__card::after {
+                display: none;
             }
         }
     }
