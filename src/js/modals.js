@@ -22,6 +22,12 @@ export default function() {
     }
 
 
+
+    window.openModal = openModal;
+
+    window.closeModal = closeModal;
+
+
    
 
     document.addEventListener('click', event => {

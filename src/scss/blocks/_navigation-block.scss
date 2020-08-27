@@ -838,6 +838,13 @@
     margin-top: auto;
     transition: background-color 0.3s;
     margin-bottom: 4rem;
+    margin-right: 3rem;
+    &:last-child {
+        margin-right: 0;
+    }
+
+
+  
     svg {
         width: 0.9rem;
         height: 1.4rem;
@@ -855,9 +862,17 @@
         color: white;
     }
 
-    .no-touch &:hover,
-    .touch &:active {
+    &:hover {
         background-color: var(--secondary-color);
+    }
+
+
+    &--hollow {
+        background: transparent;
+        border: 1px solid var(--primary-color);
+        &:hover {
+            background-color: var(--primary-color);
+        }
     }
 
     @include breakpoint(mobile) {
@@ -865,10 +880,11 @@
         font-size: 1rem;
         right: 0;
         line-height: 120%;
-        margin-right: auto;
+        // margin-right: auto;
         border-radius: 0.4rem;
         padding: 1.4rem 1.5rem;
         margin-bottom: 0;
+        margin-right: 2rem;
     }
 }
 
@@ -1028,6 +1044,7 @@
         transform: translateZ(0) translateX(-5rem);
         flex-direction: column;
         padding-bottom: 2.4rem;
+        min-height: 30rem;
     }
 }
 

@@ -328,3 +328,19 @@
 .modal__rating-submit {
     margin-left: auto;
 }
+
+
+.modal__rating-form-message {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1.6rem;
+    color: var(--primary-color);
+
+    display: none;
+
+
+    form.success & {
+        display: flex;
+    }
+}

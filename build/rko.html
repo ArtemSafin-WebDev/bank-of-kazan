@@ -1287,6 +1287,19 @@
                                                                         <b>
                                                                             390 ₽ / мес.
                                                                         </b>
+
+                                                                        <div class="show-more-info">
+                                                                            <svg width="14" height="14" aria-hidden="true" class="icon-info">
+                                                                                <use xlink:href="#info" />
+                                                                            </svg>
+                                                                            <div class="show-more-info__dropdown">
+                                                                                <div class="show-more-info__dropdown-inner">
+                                                                                    <p>
+                                                                                        Текст выпадашки
+                                                                                    </p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -3680,7 +3693,7 @@
                                     Ваша оценка позволит нам сделать сайт лучше
                                 </p>
                             </div>
-                            <form action="/" method="POST" class="modal__rating-form">
+                            <form action="/" method="POST" class="modal__rating-form" id="review-form">
                                 <textarea name="comment" class="modal__rating-form-textarea"></textarea>
                                 <div class="modal__rating-form-choose-rating">
                                     Выберите оценку
@@ -3719,7 +3732,9 @@
                                         <input type="hidden" name="total-rating" class="rating__form-total-rating" />
                                     </div>
                                 </div>
-
+                                <div class="modal__rating-form-message">
+                                    Спасибо! Ваш отзыв добавлен.
+                                </div>
                                 <button type="submit" class="callback__submit-btn modal__rating-submit">
                                     отправить отзыв
                                 </button>
@@ -3749,6 +3764,23 @@
                                     document.documentElement.style.setProperty('--progress', '100%');
                                 }, 500);
                             }
+                        });
+                    }
+
+                    var reviewForm = document.querySelector('#review-form');
+
+                    if (reviewForm) {
+                        reviewForm.addEventListener('submit', function(event) {
+                            event.preventDefault();
+
+                            reviewForm.classList.add('success');
+                            var modal = reviewForm.closest('.js-modal');
+                            setTimeout(function() {
+                                if (window.closeModal) {
+                                    window.closeModal(modal);
+                                    reviewForm.classList.remove('success');
+                                }
+                            }, 2000);
                         });
                     }
                 }

@@ -51,6 +51,25 @@
                             }
                         })
                     }
+
+
+
+                    var reviewForm = document.querySelector('#review-form');
+
+                    if (reviewForm) {
+                        reviewForm.addEventListener('submit', function(event) {
+                            event.preventDefault();
+
+                            reviewForm.classList.add('success');
+                            var modal = reviewForm.closest('.js-modal');
+                            setTimeout(function() {
+                                if (window.closeModal) {
+                                    window.closeModal(modal);
+                                    reviewForm.classList.remove('success')
+                                }
+                            }, 2000)
+                        })
+                    }
                 }
                 function destroyBackendScripts() {
                     console.log('Здесь прописываем подчистку скриптов для бэкенда')
