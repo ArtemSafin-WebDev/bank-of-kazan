@@ -3956,7 +3956,7 @@ input.range-slider__amount {
           flex-direction: column; }
   @media only screen and (max-width: 767px) {
     .news__list-item {
-      width: 26rem;
+      width: 28rem;
       -ms-flex-negative: 0;
           flex-shrink: 0; }
       .news__list-item:first-child .news__card {
