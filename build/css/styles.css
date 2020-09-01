@@ -12318,7 +12318,10 @@ input.range-slider__amount {
       .modal__table table td {
         display: block;
         padding: 0;
-        border: none; } }
+        border: none; }
+        .modal__table table th[colspan="2"],
+        .modal__table table td[colspan="2"] {
+          grid-column: span 2; } }
   @media only screen and (max-width: 767px) {
     .modal__table table tbody,
     .modal__table table thead {
