@@ -273,6 +273,28 @@
     color: #a5a5a5;
     font-size: 1.6rem;
     line-height: 120%;
+
+    a {
+        display: inline;
+        align-items: center;
+        margin-right: 1rem;
+        &:link,
+        &:visited {
+            color: inherit;
+        }
+
+        &::before {
+            content: '';
+            margin-right: .6rem;
+            width: 0.6rem;
+            height: 0.6rem;
+            flex-shrink: 0;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
     @include breakpoint(mobile) {
         flex-basis: auto;
         margin: 0;

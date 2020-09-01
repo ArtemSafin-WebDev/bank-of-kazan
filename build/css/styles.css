@@ -1842,6 +1842,25 @@ img.lazyload:not([src]) {
   color: #a5a5a5;
   font-size: 1.6rem;
   line-height: 120%; }
+  .page-footer__bottom-section-info a {
+    display: inline;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-right: 1rem; }
+    .page-footer__bottom-section-info a:link, .page-footer__bottom-section-info a:visited {
+      color: inherit; }
+    .page-footer__bottom-section-info a::before {
+      content: '';
+      margin-right: .6rem;
+      width: 0.6rem;
+      height: 0.6rem;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+      border-radius: 50%;
+      background-color: var(--primary-color);
+      display: inline-block;
+      vertical-align: middle; }
   @media only screen and (max-width: 767px) {
     .page-footer__bottom-section-info {
       -ms-flex-preferred-size: auto;
