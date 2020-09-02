@@ -1070,6 +1070,18 @@
     color: #9876a1;
     margin-bottom: 1.5rem;
 
+    a {
+        transition: color .2s;
+        &:link,
+        &:visited {
+            color: inherit;
+        }
+
+        &:hover {
+            color: white;
+        }
+    }
+
     .dark-main-nav & {
         color: var(--primary-color);
     }

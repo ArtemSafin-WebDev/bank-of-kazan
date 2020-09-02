@@ -5171,6 +5171,13 @@ input.range-slider__amount {
   text-transform: uppercase;
   color: #9876a1;
   margin-bottom: 1.5rem; }
+  .navigation__menu-card-heading a {
+    -webkit-transition: color .2s;
+    transition: color .2s; }
+    .navigation__menu-card-heading a:link, .navigation__menu-card-heading a:visited {
+      color: inherit; }
+    .navigation__menu-card-heading a:hover {
+      color: white; }
   .dark-main-nav .navigation__menu-card-heading {
     color: var(--primary-color); }
   @media only screen and (max-width: 767px) {
@@ -8807,7 +8814,6 @@ input.range-slider__amount {
 .calculate-credit__card-total-info {
   -ms-flex-preferred-size: 25.5rem;
       flex-basis: 25.5rem;
-  margin-left: 2rem;
   margin-top: 3rem; }
   @media only screen and (max-width: 767px) {
     .calculate-credit__card-total-info {
