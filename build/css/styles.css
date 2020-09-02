@@ -5521,7 +5521,9 @@ input.range-slider__amount {
   border-radius: 1rem;
   -webkit-transition: border-color .2s, color .2s;
   transition: border-color .2s, color .2s;
-  min-width: 28rem; }
+  min-width: 28rem;
+  -ms-flex-item-align: start;
+      align-self: flex-start; }
   .navigation__menu-card-services-link svg {
     width: 2.4rem;
     height: 2.4rem;
