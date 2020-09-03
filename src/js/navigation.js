@@ -29,7 +29,7 @@ export default function() {
         let searchOpen = false;
         let activeCategoryIndex = 0;
         let navigationMenuOpen = false;
-        // let aboutBankMenuOpen = false;
+       
 
         function initializeInnerSliders() {
             innerSliders.forEach((sliderWrapper, sliderIndex) => {
@@ -101,6 +101,14 @@ export default function() {
             innerSliderLayers[btnIndex].classList.add('active');
 
             activeCategoryIndex = btnIndex;
+
+            if (navigationMenuOpen) {
+                const navigationLinks = Array.from(navigationMenuLayers[btnIndex].querySelectorAll('.navigation__main-menu-link'))
+
+                if (navigationLinks.length) {
+                    navigationLinks[0].click();
+                }
+            }
         }
 
         function initializeNavigationMenu() {
