@@ -1284,7 +1284,7 @@ button.swiper-pagination-bullet {
   --secondary-color: #641f76;
   --dark-text-color: #000000;
   --light-text-color: #8a8a8a;
-  --helvetica: 'Open Sans', 'Roboto', sans-serif; }
+  --helvetica: 'HelveticaNeueCyr', 'Roboto', sans-serif; }
   @media only screen and (max-width: 767px) {
     :root {
       --content-padding: 3rem; } }
@@ -12982,6 +12982,179 @@ input.range-slider__amount {
       line-height: 1.2;
       padding: 1.5rem 3rem;
       border-radius: 0.4rem; } }
+
+.about-bank__header-image-container {
+  min-height: 54rem;
+  position: relative;
+  padding: 8rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: var(--primary-color);
+  color: white;
+  z-index: 1; }
+  @media only screen and (max-width: 767px) {
+    .about-bank__header-image-container {
+      padding: 1.5rem;
+      border-radius: .8rem;
+      min-height: 16rem; } }
+
+.about-bank__header-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  font-family: 'object-fit: cover; object-position: center;';
+  z-index: -1; }
+
+.about-bank__header-title {
+  font-weight: 500;
+  font-size: 5.4rem;
+  line-height: 100%;
+  margin-bottom: 1.4rem; }
+  @media only screen and (max-width: 767px) {
+    .about-bank__header-title {
+      font-size: 2.4rem;
+      line-height: 1.2;
+      margin-bottom: 1rem; } }
+
+.about-bank__header-text {
+  font-size: 2.4rem;
+  line-height: 130%; }
+  @media only screen and (max-width: 767px) {
+    .about-bank__header-text {
+      font-size: 1.6rem;
+      line-height: 1.2; } }
+
+.about-bank__header-image-container {
+  margin-bottom: 4rem; }
+  @media only screen and (max-width: 767px) {
+    .about-bank__header-image-container {
+      margin-bottom: 2rem; } }
+
+.about-bank__history {
+  font-weight: 500;
+  font-size: 2.4rem;
+  line-height: 3rem;
+  color: #959595;
+  margin-bottom: 4rem; }
+  @media only screen and (max-width: 767px) {
+    .about-bank__history {
+      font-size: 1.6rem;
+      line-height: 1.2;
+      margin-bottom: 3rem; } }
+
+.about-bank__achievments {
+  margin-bottom: 3rem; }
+
+.about-bank__achievments-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  @media only screen and (max-width: 767px) {
+    .about-bank__achievments-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-gap: 1.8rem;
+      -webkit-box-pack: initial;
+          -ms-flex-pack: initial;
+              justify-content: initial; } }
+
+.about-bank__achievments-list-item {
+  -ms-flex-preferred-size: 18rem;
+      flex-basis: 18rem; }
+  @media only screen and (max-width: 767px) {
+    .about-bank__achievments-list-item {
+      -ms-flex-preferred-size: auto;
+          flex-basis: auto; } }
+
+.about-bank__achievments-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  color: var(--secondary-color); }
+
+.about-bank__achievments-card-title {
+  font-weight: 500;
+  font-size: 3rem;
+  line-height: 100%;
+  margin-bottom: 1.7rem;
+  white-space: nowrap; }
+  @media only screen and (max-width: 767px) {
+    .about-bank__achievments-card-title {
+      font-size: 1.6rem;
+      line-height: 1.2;
+      margin-bottom: 1rem; } }
+
+.about-bank__achievments-card-icon-container {
+  width: 11rem;
+  position: relative;
+  margin-bottom: 2rem; }
+  .about-bank__achievments-card-icon-container::after {
+    content: '';
+    display: block;
+    width: 100%;
+    padding-bottom: 100%; }
+  @media only screen and (max-width: 767px) {
+    .about-bank__achievments-card-icon-container {
+      width: 5rem;
+      margin-bottom: 1rem; } }
+
+.about-bank__achievments-card-icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+  font-family: 'object-fit: contain; object-position: center;'; }
+
+.about-bank__achievments-card-place {
+  font-size: 3rem;
+  line-height: 100%;
+  margin-bottom: 1.6rem; }
+  @media only screen and (max-width: 767px) {
+    .about-bank__achievments-card-place {
+      font-size: 1.6rem;
+      line-height: 1.2;
+      margin-bottom: 1rem; } }
+
+.about-bank__achievments-card-remark {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  color: #a5a5a5; }
+  @media only screen and (max-width: 767px) {
+    .about-bank__achievments-card-remark {
+      font-size: 1.2rem;
+      line-height: 1.2; } }
+
+.about-bank__text {
+  font-size: 2rem;
+  line-height: 130%;
+  margin-bottom: 5rem; }
+  @media only screen and (max-width: 767px) {
+    .about-bank__text {
+      font-size: 1.6rem;
+      line-height: 1.2;
+      margin-bottom: 3rem; } }
 
 .show-more-info {
   -ms-flex-negative: 0;

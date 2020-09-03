@@ -14,7 +14,8 @@
     --secondary-color: #641f76;
     --dark-text-color: #000000;
     --light-text-color: #8a8a8a;
-    --helvetica: 'Open Sans', 'Roboto', sans-serif;
+    // --helvetica: 'Open Sans', 'HelveticaNeueCyr', 'Roboto', sans-serif;
+    --helvetica: 'HelveticaNeueCyr', 'Roboto', sans-serif;
     @include breakpoint(mobile) {
         --content-padding: 3rem;
     }
