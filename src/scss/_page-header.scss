@@ -303,10 +303,7 @@
     color: black;
     overflow: hidden;
     padding: 1.3rem 0;
-    .violet-backplate &,
-    .mobile-menu-open & {
-        background-color: rgba(#94c22b, 0.9);
-    }
+  
 }
 
 .page-header__city-dropdown-link {
@@ -483,10 +480,7 @@
     color: black;
     overflow: hidden;
     padding: 1.3rem 0;
-    .violet-backplate &,
-    .mobile-menu-open & {
-        background-color: rgba(#94c22b, 0.9);
-    }
+  
     @include breakpoint(mobile) {
         border-radius: .8rem;
         padding:  .5rem 0;

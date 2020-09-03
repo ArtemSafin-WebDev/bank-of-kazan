@@ -2315,9 +2315,6 @@ img.lazyload:not([src]) {
   color: black;
   overflow: hidden;
   padding: 1.3rem 0; }
-  .violet-backplate .page-header__city-dropdown-inner,
-  .mobile-menu-open .page-header__city-dropdown-inner {
-    background-color: rgba(148, 194, 43, 0.9); }
 
 .page-header__city-dropdown-link {
   padding: .9rem 2.6rem;
@@ -2452,9 +2449,6 @@ img.lazyload:not([src]) {
   color: black;
   overflow: hidden;
   padding: 1.3rem 0; }
-  .violet-backplate .page-header__online-bank-dropdown-inner,
-  .mobile-menu-open .page-header__online-bank-dropdown-inner {
-    background-color: rgba(148, 194, 43, 0.9); }
   @media only screen and (max-width: 767px) {
     .page-header__online-bank-dropdown-inner {
       border-radius: .8rem;
