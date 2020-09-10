@@ -241,6 +241,16 @@ export default function() {
             closeNavigationMenu();
         });
 
+
+        element.addEventListener('click', event => {
+            if (event.target.matches('a, button, input') || event.target.closest('a, button')) {
+                return;
+            } else {
+                event.preventDefault();
+                closeNavigationMenu();
+            }
+        })
+
         // if (aboutBankBtn) {
         //     aboutBankBtn.addEventListener('click', event => {
         //         event.preventDefault();

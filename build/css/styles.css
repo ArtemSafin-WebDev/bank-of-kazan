@@ -1248,22 +1248,22 @@ button.swiper-pagination-bullet {
 
 /*=====  End of Choices  ======*/
 @font-face {
-  font-family: 'HelveticaNeueCyr';
-  src: url("../assets/fonts/HelveticaNeueCyr-Medium.woff2") format("woff2"), url("../assets/fonts/HelveticaNeueCyr-Medium.woff") format("woff");
+  font-family: 'Open Sans';
+  src: url("../assets/fonts/OpenSans-SemiBold.woff2") format("woff2"), url("../assets/fonts/OpenSans-SemiBold.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap; }
 
 @font-face {
-  font-family: 'HelveticaNeueCyr';
-  src: url("../assets/fonts/HelveticaNeueCyr-Bold.woff2") format("woff2"), url("../assets/fonts/HelveticaNeueCyr-Bold.woff") format("woff");
+  font-family: 'Open Sans';
+  src: url("../assets/fonts/OpenSans-Bold.woff2") format("woff2"), url("../assets/fonts/OpenSans-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap; }
 
 @font-face {
-  font-family: 'HelveticaNeueCyr';
-  src: url("../assets/fonts/HelveticaNeueCyr-Roman.woff2") format("woff2"), url("../assets/fonts/HelveticaNeueCyr-Roman.woff") format("woff");
+  font-family: 'Open Sans';
+  src: url("../assets/fonts/OpenSans-Regular.woff2") format("woff2"), url("../assets/fonts/OpenSans-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap; }
@@ -2286,13 +2286,13 @@ img.lazyload:not([src]) {
     -webkit-transform: rotate(180deg);
             transform: rotate(180deg); }
   .page-header__city:hover .page-header__about-bank-link-cross > span:nth-child(1) {
-    -webkit-transform: translateZ(0) translateY(0.5rem) rotate(45deg);
-            transform: translateZ(0) translateY(0.5rem) rotate(45deg); }
+    -webkit-transform: translateZ(0) translateY(5px) rotate(45deg);
+            transform: translateZ(0) translateY(5px) rotate(45deg); }
   .page-header__city:hover .page-header__about-bank-link-cross > span:nth-child(2) {
     opacity: 0; }
   .page-header__city:hover .page-header__about-bank-link-cross > span:nth-child(3) {
-    -webkit-transform: translateZ(0) translateY(-0.5rem) rotate(-45deg);
-            transform: translateZ(0) translateY(-0.5rem) rotate(-45deg); }
+    -webkit-transform: translateZ(0) translateY(-5px) rotate(-45deg);
+            transform: translateZ(0) translateY(-5px) rotate(-45deg); }
 
 .page-header__city-dropdown {
   position: absolute;
@@ -2350,15 +2350,14 @@ img.lazyload:not([src]) {
           flex-direction: column;
   margin-right: 1.5rem;
   -ms-flex-negative: 0;
-      flex-shrink: 0;
-  margin-bottom: 0.1em; }
+      flex-shrink: 0; }
   .page-header__about-bank-link-cross > span {
-    width: 1.4rem;
-    height: 0.2rem;
+    width: 14px;
+    height: 2px;
     background: rgba(255, 255, 255, 0.6);
     -ms-flex-negative: 0;
         flex-shrink: 0;
-    margin-bottom: 0.3rem;
+    margin-bottom: 3px;
     -webkit-transition: opacity 0.2s, background-color 0.2s, -webkit-transform 0.2s;
     transition: opacity 0.2s, background-color 0.2s, -webkit-transform 0.2s;
     transition: opacity 0.2s, transform 0.2s, background-color 0.2s;
@@ -2374,13 +2373,13 @@ img.lazyload:not([src]) {
   .page-header__about-bank-link.active .page-header__about-bank-link-cross > span {
     background-color: white; }
     .page-header__about-bank-link.active .page-header__about-bank-link-cross > span:nth-child(1) {
-      -webkit-transform: translateZ(0) translateY(0.5rem) rotate(45deg);
-              transform: translateZ(0) translateY(0.5rem) rotate(45deg); }
+      -webkit-transform: translateZ(0) translateY(5px) rotate(45deg);
+              transform: translateZ(0) translateY(5px) rotate(45deg); }
     .page-header__about-bank-link.active .page-header__about-bank-link-cross > span:nth-child(2) {
       opacity: 0; }
     .page-header__about-bank-link.active .page-header__about-bank-link-cross > span:nth-child(3) {
-      -webkit-transform: translateZ(0) translateY(-0.5rem) rotate(-45deg);
-              transform: translateZ(0) translateY(-0.5rem) rotate(-45deg); }
+      -webkit-transform: translateZ(0) translateY(-5px) rotate(-45deg);
+              transform: translateZ(0) translateY(-5px) rotate(-45deg); }
   .dark-nav-text:not(.product-nav-menu-open):not(.bank-menu-shown) .page-header__about-bank-link.active .page-header__about-bank-link-cross > span {
     background-color: var(--primary-color); }
 

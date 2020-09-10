@@ -269,13 +269,13 @@
             & > span {
                 // background-color: white;
                 &:nth-child(1) {
-                    transform: translateZ(0) translateY(0.5rem) rotate(45deg);
+                    transform: translateZ(0) translateY(5px) rotate(45deg);
                 }
                 &:nth-child(2) {
                     opacity: 0;
                 }
                 &:nth-child(3) {
-                    transform: translateZ(0) translateY(-0.5rem) rotate(-45deg);
+                    transform: translateZ(0) translateY(-5px) rotate(-45deg);
                 }
             }
         }
@@ -346,13 +346,13 @@
     flex-direction: column;
     margin-right: 1.5rem;
     flex-shrink: 0;
-    margin-bottom: 0.1em;
+    
     & > span {
-        width: 1.4rem;
-        height: 0.2rem;
+        width: 14px;
+        height: 2px;
         background: rgba(white, 0.6);
         flex-shrink: 0;
-        margin-bottom: 0.3rem;
+        margin-bottom: 3px;
         transition: opacity 0.2s, transform 0.2s, background-color 0.2s;
         transform: translateZ(0);
         outline: 1px solid transparent;
@@ -370,13 +370,13 @@
         & > span {
             background-color: white;
             &:nth-child(1) {
-                transform: translateZ(0) translateY(0.5rem) rotate(45deg);
+                transform: translateZ(0) translateY(5px) rotate(45deg);
             }
             &:nth-child(2) {
                 opacity: 0;
             }
             &:nth-child(3) {
-                transform: translateZ(0) translateY(-0.5rem) rotate(-45deg);
+                transform: translateZ(0) translateY(-5px) rotate(-45deg);
             }
         }
     }
