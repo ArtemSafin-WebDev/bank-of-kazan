@@ -7862,16 +7862,18 @@ input.range-slider__amount {
               flex-grow: 0; } }
 
 .product-navigation__card-menu-link {
-  font-weight: 500;
-  font-size: 2.6rem;
-  line-height: 122%;
   -webkit-transition: color 0.2s;
   transition: color 0.2s;
-  margin-bottom: 1.5rem; }
+  margin-bottom: 2rem;
+  font-weight: 500;
+  font-size: 2.2rem;
+  line-height: 140%; }
   .product-navigation__card-menu-link:last-child {
     margin-bottom: 0; }
   .product-navigation__card-menu-link:link, .product-navigation__card-menu-link:visited {
     color: rgba(255, 255, 255, 0.5); }
+  .product-navigation__card-menu-link:hover {
+    color: white; }
   .product-navigation__card-menu-link.active {
     color: white; }
   .product-navigation__card-menu--bank .product-navigation__card-menu-link:link, .product-navigation__card-menu--bank .product-navigation__card-menu-link:visited {
@@ -8216,7 +8218,7 @@ input.range-slider__amount {
       margin-bottom: 0.8rem; } }
 
 .product-navigation__card-menu-item-list-item {
-  margin-bottom: 1.5rem; }
+  margin-bottom: 2rem; }
   .product-navigation__card-menu-item-list-item:last-child {
     margin-bottom: 0; }
   @media only screen and (max-width: 767px) {
@@ -8224,19 +8226,19 @@ input.range-slider__amount {
       margin-bottom: 0.4rem; } }
 
 .product-navigation__card-menu-item-link {
-  font-weight: 500;
-  font-size: 2.6rem;
-  line-height: 122%;
   -webkit-transition: color 0.2s;
-  transition: color 0.2s; }
+  transition: color 0.2s;
+  font-weight: 500;
+  font-size: 2.9rem;
+  line-height: 122%;
+  color: rgba(255, 255, 255, 0.4); }
   .product-navigation__card-menu-item-link:link, .product-navigation__card-menu-item-link:visited {
-    color: rgba(255, 255, 255, 0.5);
-    color: white; }
+    color: rgba(255, 255, 255, 0.4); }
   .dark-nav-text:not(.product-nav-menu-open):not(.bank-menu-shown) .product-navigation__card-menu-item-link:link, .dark-nav-text:not(.product-nav-menu-open):not(.bank-menu-shown) .product-navigation__card-menu-item-link:visited {
     color: black; }
   .no-touch .product-navigation__card-menu-item-link:hover,
   .touch .product-navigation__card-menu-item-link:active {
-    color: var(--primary-color); }
+    color: white; }
   @media only screen and (max-width: 767px) {
     .product-navigation__card-menu-item-link {
       font-size: 1.3rem;
