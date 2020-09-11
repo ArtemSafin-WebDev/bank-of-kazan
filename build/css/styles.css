@@ -1293,6 +1293,7 @@ html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-size: 9px;
+  -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent; }
   @media only screen and (max-width: 1600px) {
     html {
@@ -1847,7 +1848,8 @@ img.lazyload:not([src]) {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin-right: 1rem; }
+    margin-right: 1rem;
+    font-size: inherit; }
     .page-footer__bottom-section-info a:link, .page-footer__bottom-section-info a:visited {
       color: inherit; }
     .page-footer__bottom-section-info a::before {

@@ -24,6 +24,7 @@
 html {
     box-sizing: border-box;
     font-size: 9px;
+    -webkit-text-size-adjust: 100%;
     @include noHighlight();
 
     @include breakpoint(large-desktop) {

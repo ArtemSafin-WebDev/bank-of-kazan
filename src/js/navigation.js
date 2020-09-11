@@ -29,7 +29,6 @@ export default function() {
         let searchOpen = false;
         let activeCategoryIndex = 0;
         let navigationMenuOpen = false;
-       
 
         function initializeInnerSliders() {
             innerSliders.forEach((sliderWrapper, sliderIndex) => {
@@ -37,7 +36,7 @@ export default function() {
                 const bgSliderContainer = bgSliders[sliderIndex];
                 const btnSliderContainer = btnSliderContainers[sliderIndex];
 
-                const innerSlider = new Swiper(container, {
+                const innerSliderOptions = {
                     slidesPerView: 1,
                     watchOverflow: true,
                     autoHeight: false,
@@ -58,7 +57,9 @@ export default function() {
                         el: sliderWrapper.querySelector('.navigation__content-inner-slider-pagination'),
                         type: 'bullets'
                     }
-                });
+                }
+
+                let innerSlider = new Swiper(container, innerSliderOptions);
 
                 const bgSlider = new Swiper(bgSliderContainer, {
                     slidesPerView: 1,
@@ -87,6 +88,13 @@ export default function() {
                 bgSlider.controller.control = btnSlider;
                 innerSlider.controller.control = bgSlider;
                 // btnSlider.controller.control = innerSlider;
+
+                // window.addEventListener('orientationchange', function(event) {
+                //     innerSlider.destroy(true);
+                   
+
+                //     innerSlider = new Swiper(container, innerSliderOptions);
+                // });
             });
         }
 
@@ -103,7 +111,7 @@ export default function() {
             activeCategoryIndex = btnIndex;
 
             if (navigationMenuOpen) {
-                const navigationLinks = Array.from(navigationMenuLayers[btnIndex].querySelectorAll('.navigation__main-menu-link'))
+                const navigationLinks = Array.from(navigationMenuLayers[btnIndex].querySelectorAll('.navigation__main-menu-link'));
 
                 if (navigationLinks.length) {
                     navigationLinks[0].click();
@@ -241,7 +249,6 @@ export default function() {
             closeNavigationMenu();
         });
 
-
         element.addEventListener('click', event => {
             if (event.target.matches('a, button, input') || event.target.closest('a, button')) {
                 return;
@@ -249,7 +256,7 @@ export default function() {
                 event.preventDefault();
                 closeNavigationMenu();
             }
-        })
+        });
 
         // if (aboutBankBtn) {
         //     aboutBankBtn.addEventListener('click', event => {
