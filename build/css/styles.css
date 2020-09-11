@@ -2604,7 +2604,8 @@ img.lazyload:not([src]) {
   white-space: nowrap;
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  margin-right: 2rem; }
+  margin-right: 2rem;
+  margin-bottom: .8rem; }
   .tabs-nav--compact .tabs-nav__link {
     font-size: 2.2rem;
     line-height: 1.2;
@@ -2629,6 +2630,7 @@ img.lazyload:not([src]) {
       line-height: 120%;
       padding: .6rem 1rem;
       border-radius: .4rem;
+      margin: 0;
       margin-right: .5rem; } }
 
 .tab-items {
@@ -5217,7 +5219,7 @@ input.range-slider__amount {
   @media only screen and (max-width: 767px) {
     .navigation__menu-link {
       font-size: 1.3rem;
-      line-height: 80%;
+      line-height: 1.2;
       margin-bottom: 1.5rem; } }
 
 .navigation__menu-large-link {
@@ -11965,7 +11967,8 @@ input.range-slider__amount {
   -webkit-transition: -webkit-transform 0.3s;
   transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
-  transition: transform 0.3s, -webkit-transform 0.3s; }
+  transition: transform 0.3s, -webkit-transform 0.3s;
+  cursor: pointer; }
   .offices__list-view-accordion-arrow svg {
     width: 1.4rem;
     height: 0.9rem;
@@ -12015,7 +12018,9 @@ input.range-slider__amount {
   font-size: 1.6rem;
   line-height: 140%;
   position: relative;
-  display: inline-block; }
+  display: inline-block;
+  -webkit-transition: color .2s;
+  transition: color .2s; }
   .office__list-view-accordion-show-on-map::after {
     content: '';
     top: 100%;

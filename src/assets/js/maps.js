@@ -19,26 +19,26 @@ function init() {
         office: {
             iconLayout: 'default#image',
             iconImageHref: 'img/map-pins/office.svg',
-            iconImageSize: window.matchMedia("(min-width: 769px)").matches ? [50, 74] : [25, 37],
+            iconImageSize: window.matchMedia("(min-width: 769px)").matches ? [25, 37] : [25, 37],
             iconImageOffset: window.matchMedia("(min-width: 769px)").matches ? [-12.5, -37] : [-25, -74]
            
         },
         bankomat: {
             iconLayout: 'default#image',
             iconImageHref: 'img/map-pins/bankomat.svg',
-            iconImageSize: window.matchMedia("(min-width: 769px)").matches ? [50, 74] : [25, 37],
+            iconImageSize: window.matchMedia("(min-width: 769px)").matches ? [25, 37] : [25, 37],
             iconImageOffset: window.matchMedia("(min-width: 769px)").matches ? [-12.5, -37] : [-25, -74]
         },
         bankomatPartners: {
             iconLayout: 'default#image',
             iconImageHref: 'img/map-pins/bankomat-partner.svg',
-            iconImageSize: window.matchMedia("(min-width: 769px)").matches ? [50, 74] : [25, 37],
+            iconImageSize: window.matchMedia("(min-width: 769px)").matches ? [25, 37] : [25, 37],
             iconImageOffset: window.matchMedia("(min-width: 769px)").matches ? [-12.5, -37] : [-25, -74]
         },
         terminal: {
             iconLayout: 'default#image',
             iconImageHref: 'img/map-pins/terminal.svg',
-            iconImageSize: window.matchMedia("(min-width: 769px)").matches ? [50, 74] : [25, 37],
+            iconImageSize: window.matchMedia("(min-width: 769px)").matches ? [25, 37] : [25, 37],
             iconImageOffset: window.matchMedia("(min-width: 769px)").matches ? [-12.5, -37] : [-25, -74]
         }
     };
