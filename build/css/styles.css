@@ -5455,7 +5455,7 @@ input.range-slider__amount {
 .navigation__promo-title {
   font-weight: 500;
   font-size: 2.2rem;
-  line-height: 1.8rem;
+  line-height: 1.2;
   margin-bottom: 1.5rem; }
   @media only screen and (max-width: 767px) {
     .navigation__promo-title {
