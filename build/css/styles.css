@@ -8217,6 +8217,13 @@ input.range-slider__amount {
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.5);
   margin-bottom: 1.5rem; }
+  .product-navigation__card-menu-item-heading a {
+    -webkit-transition: color .2s;
+    transition: color .2s; }
+    .product-navigation__card-menu-item-heading a:link, .product-navigation__card-menu-item-heading a:visited {
+      color: inherit; }
+    .product-navigation__card-menu-item-heading a:hover {
+      color: white; }
   .dark-nav-text:not(.product-nav-menu-open):not(.bank-menu-shown) .product-navigation__card-menu-item-heading {
     color: rgba(0, 0, 0, 0.5); }
   @media only screen and (max-width: 767px) {
@@ -8254,13 +8261,6 @@ input.range-slider__amount {
 
 .product-navigation__card-menu-item-link-block {
   margin-bottom: 4rem; }
-  .product-navigation__card-menu-item-link-block a {
-    -webkit-transition: color .2s;
-    transition: color .2s; }
-    .product-navigation__card-menu-item-link-block a:link, .product-navigation__card-menu-item-link-block a:visited {
-      color: inherit; }
-    .product-navigation__card-menu-item-link-block a:hover {
-      color: white; }
   .product-navigation__card-menu-item-link-block:last-child {
     margin-bottom: 0; }
   @media only screen and (max-width: 767px) {

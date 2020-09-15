@@ -824,7 +824,17 @@
     margin-bottom: 1.5rem;
 
 
- 
+    a {
+        transition: color .2s;
+        &:link,
+        &:visited {
+            color: inherit;
+        }
+
+        &:hover {
+            color: white;
+        }
+    }
 
     .dark-nav-text:not(.product-nav-menu-open):not(.bank-menu-shown) & {
         color: rgba(black, 0.5);
@@ -883,17 +893,7 @@
     margin-bottom: 4rem;
 
 
-    a {
-        transition: color .2s;
-        &:link,
-        &:visited {
-            color: inherit;
-        }
-
-        &:hover {
-            color: white;
-        }
-    }
+  
     &:last-child {
         margin-bottom: 0;
     }
