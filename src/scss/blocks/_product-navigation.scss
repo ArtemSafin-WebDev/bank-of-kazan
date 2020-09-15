@@ -881,6 +881,19 @@
 
 .product-navigation__card-menu-item-link-block {
     margin-bottom: 4rem;
+
+
+    a {
+        transition: color .2s;
+        &:link,
+        &:visited {
+            color: inherit;
+        }
+
+        &:hover {
+            color: white;
+        }
+    }
     &:last-child {
         margin-bottom: 0;
     }
