@@ -611,7 +611,7 @@ button.swiper-pagination-bullet {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden; }
 
-/*! nouislider - 14.6.1 - 8/17/2020 */
+/*! nouislider - 14.5.0 - 5/11/2020 */
 /* Functional styling;
  * These styles are required for noUiSlider to function.
  * You don't need to change these rules to apply your design.
@@ -7739,7 +7739,11 @@ input.range-slider__amount {
     transition: opacity 0.3s, visibility 0.3s; }
 
 .product-navigation__layers {
-  position: relative; }
+  position: relative;
+  padding-bottom: 4rem; }
+  @media only screen and (max-width: 767px) {
+    .product-navigation__layers {
+      padding-bottom: 0; } }
 
 .product-navigation__layer {
   position: absolute;

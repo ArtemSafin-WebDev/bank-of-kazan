@@ -343,6 +343,10 @@
 
 .product-navigation__layers {
     position: relative;
+    padding-bottom: 4rem;
+    @include breakpoint(mobile) {
+        padding-bottom: 0;
+    }
 }
 
 .product-navigation__layer {
