@@ -343,6 +343,10 @@
 
 .product-navigation__layers {
     position: relative;
+    padding-bottom: 4rem;
+    @include breakpoint(mobile) {
+        padding-bottom: 0;
+    }
 }
 
 .product-navigation__layer {
@@ -820,7 +824,17 @@
     margin-bottom: 1.5rem;
 
 
- 
+    a {
+        transition: color .2s;
+        &:link,
+        &:visited {
+            color: inherit;
+        }
+
+        &:hover {
+            color: white;
+        }
+    }
 
     .dark-nav-text:not(.product-nav-menu-open):not(.bank-menu-shown) & {
         color: rgba(black, 0.5);
@@ -877,6 +891,9 @@
 
 .product-navigation__card-menu-item-link-block {
     margin-bottom: 4rem;
+
+
+  
     &:last-child {
         margin-bottom: 0;
     }
