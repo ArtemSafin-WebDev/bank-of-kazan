@@ -23,6 +23,7 @@ import modals from './modals';
 import currency from './currency';
 import validation from './validation';
 import anchors from './anchors';
+import aboutBankAnimations from './aboutBankAnimations';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -38,6 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
     articleAdvantages();
     bankOffices();
     modals();
+    
     barba.init({
         debug: true,
         logLevel: 'error',
@@ -111,6 +113,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     currency.init();
                     validation.init();
                     anchors.init();
+                    aboutBankAnimations.init();
                     document.body.classList.remove('category-toggles-off');
 
                     if (window.initBackendScripts && typeof window.initBackendScripts === 'function') {

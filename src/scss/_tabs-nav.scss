@@ -53,6 +53,17 @@
         color: var(--primary-color);
     }
 
+
+    .tabs-nav--light & {
+        color: white;
+
+        &.active,
+        &:hover {
+            background: #ECF3DC;
+            color: var(--primary-color);
+        }
+    }
+
     @include breakpoint(mobile) {
         font-weight: 500;
         font-size: 1.4rem;

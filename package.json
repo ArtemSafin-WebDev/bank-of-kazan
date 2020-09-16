@@ -23,7 +23,7 @@
     "core-js": "^3.1.4",
     "css-vars-ponyfill": "^2.1.2",
     "detect-it": "^3.0.5",
-    "gsap": "^3.2.6",
+    "gsap": "^3.5.1",
     "inputmask": "^4.0.8",
     "lazysizes": "^5.2.0",
     "lodash": "^4.17.15",
