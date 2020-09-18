@@ -546,6 +546,24 @@
     position: relative;
     display: inline-block;
     transition: color .2s;
+
+    & > span {
+        &:nth-child(2) {
+            display: none;
+        }
+    }
+
+
+    .offices__list-view-accordion.active & > span {
+        
+        &:nth-child(2) {
+            display: inline;
+        }
+
+        &:nth-child(1) {
+            display: none;
+        }
+    }
     &::after {
         content: '';
         top: 100%;

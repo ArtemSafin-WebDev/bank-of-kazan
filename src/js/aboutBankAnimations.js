@@ -33,7 +33,7 @@ function init() {
             duration: 1,
             scrollTrigger: {
                 trigger: experience,
-                // start: "top bottom", // the default values
+                start: "top center"
                 // end: "bottom top",
                
             }

@@ -231,7 +231,8 @@
 }
 
 .navigation__universal-toggle-search-form-input {
-    padding-right: 5rem;
+   
+    padding-right: 22rem;
     font-weight: 500;
 
     color: white;
@@ -246,6 +247,7 @@
 
     @include breakpoint(mobile) {
         font-size: 1.8rem;
+        padding-right: 5rem;
     }
 }
 
@@ -325,7 +327,7 @@
 .navigation__universal-toggle-search {
     margin-left: 4rem;
     flex-shrink: 0;
-    margin-right: 3.5rem;
+    margin-right: 6.5rem;
     transition: opacity 0.2s, visibility 0.2s;
     padding-top: 5rem;
     padding-bottom: 3rem;

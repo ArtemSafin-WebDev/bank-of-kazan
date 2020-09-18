@@ -216,6 +216,9 @@
 
     margin-bottom: 4rem;
     justify-content: space-between;
+    &:last-child {
+        margin-bottom: 0;
+    }
     @include breakpoint(mobile) {
         margin-bottom: 2rem;
         flex-direction: column;

@@ -188,9 +188,9 @@
     }
 
     .dark-nav-text:not(.product-nav-menu-open):not(.bank-menu-shown) & {
-        color: black;
+        color: rgba(black, .3);
         &.active {
-            color: var(--primary-color);
+            color: black;
         }
     }
 
@@ -284,6 +284,14 @@
     @include breakpoint(mobile) {
         font-size: 1.8rem;
         line-height: 1.2;
+    }
+}
+
+
+.product-navigation__search-submit-btn {
+    margin-right: 5rem;
+    @include breakpoint(mobile) {
+        margin-right: 0;
     }
 }
 
