@@ -1448,6 +1448,10 @@ img.lazyload:not([src]) {
     height: auto;
     overflow: hidden; }
 
+.icon-search {
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1); }
+
 ::-moz-selection {
   color: white;
   background-color: var(--primary-color); }
@@ -8838,8 +8842,6 @@ input.range-slider__amount {
       margin-right: 2.5rem; } }
 
 .calculate-credit__card-total-info {
-  -ms-flex-preferred-size: 25.5rem;
-      flex-basis: 25.5rem;
   margin-top: 3rem; }
   @media only screen and (max-width: 767px) {
     .calculate-credit__card-total-info {
@@ -13329,6 +13331,9 @@ input.range-slider__amount {
   display: block; }
   .news-catalog__card-with-image:link, .news-catalog__card-with-image:visited {
     color: inherit; }
+  .news-catalog__card-with-image:hover .news-catalog__card-with-image-container img {
+    -webkit-transform: scale(1.035);
+            transform: scale(1.035); }
 
 .news-catalog__card-with-image-container {
   position: relative;
@@ -13355,7 +13360,11 @@ input.range-slider__amount {
        object-fit: cover;
     -o-object-position: center;
        object-position: center;
-    font-family: 'object-fit: cover; object-position: center;'; }
+    font-family: 'object-fit: cover; object-position: center;';
+    -webkit-transition: -webkit-transform .4s;
+    transition: -webkit-transform .4s;
+    transition: transform .4s;
+    transition: transform .4s, -webkit-transform .4s; }
   @media only screen and (max-width: 767px) {
     .news-catalog__card-with-image-container {
       border-radius: 0.8rem;
@@ -13395,6 +13404,8 @@ input.range-slider__amount {
   padding-bottom: 3rem; }
   .news-catalog__card-without-image:link, .news-catalog__card-without-image:visited {
     color: black; }
+  .news-catalog__card-without-image:hover .news-catalog__card-without-image-title {
+    color: var(--secondary-color); }
   @media only screen and (max-width: 767px) {
     .news-catalog__card-without-image {
       padding: 1.8rem;
@@ -13404,7 +13415,9 @@ input.range-slider__amount {
   font-weight: 500;
   font-size: 3.6rem;
   line-height: 120%;
-  margin-bottom: 3.5rem; }
+  margin-bottom: 3.5rem;
+  -webkit-transition: color .2s;
+  transition: color .2s; }
   @media only screen and (max-width: 767px) {
     .news-catalog__card-without-image-title {
       font-size: 2rem;
