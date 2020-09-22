@@ -13933,7 +13933,8 @@ input.range-slider__amount {
     .new-about-bank-products__accordion-text ul li {
       padding-left: 2rem;
       position: relative;
-      margin-bottom: 1.5rem; }
+      margin-bottom: 1.5rem;
+      counter-increment: none; }
       .new-about-bank-products__accordion-text ul li:last-child {
         margin-bottom: 0; }
       .new-about-bank-products__accordion-text ul li::before {
