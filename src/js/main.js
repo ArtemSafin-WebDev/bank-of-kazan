@@ -24,6 +24,8 @@ import currency from './currency';
 import validation from './validation';
 import anchors from './anchors';
 import aboutBankAnimations from './aboutBankAnimations';
+import teamSlider from './teamSlider';
+
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -32,13 +34,14 @@ document.addEventListener('DOMContentLoaded', function() {
     mobileMenu();
     productNav();
     scrollAnimations();
-    accordions();
+    
     rkoFeatures();
     openAccount();
     bankMenu();
     articleAdvantages();
     bankOffices();
     modals();
+    teamSlider();
     
     barba.init({
         debug: true,
@@ -114,6 +117,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     validation.init();
                     anchors.init();
                     aboutBankAnimations.init();
+                    accordions(Array.from(document.querySelectorAll('.js-accordion'))).init()
                     document.body.classList.remove('category-toggles-off');
 
                     if (window.initBackendScripts && typeof window.initBackendScripts === 'function') {
