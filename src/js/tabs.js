@@ -16,16 +16,16 @@ function init() {
                 return;
             }
             const moveTabItem = (id, btn) => {
-                const blockToMove = document.querySelector(`[data-id="${id.replace('#', '')}"]`);
-                if (!blockToMove) {
-                    console.warn('No block to move');
+                const blocksToMove = Array.from(document.querySelectorAll(`[data-id="${id.replace('#', '')}"]`));
+                if (!blocksToMove.length) {
+                    console.warn('No blocks to move');
                     btn.remove();
                     console.warn('Removing button to keep indexes in sync', btn)
                     return;
                 }
                 const tabItem = document.createElement('div');
                 tabItem.className = 'tab-items__item js-tabs-item';
-                tabItem.appendChild(blockToMove);
+                tabItem.append(...blocksToMove);
                 tabItemsContainer.appendChild(tabItem);
             }
 
