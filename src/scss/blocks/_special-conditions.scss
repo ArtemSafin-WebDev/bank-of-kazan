@@ -74,7 +74,7 @@
     color: var(--primary-color);
     display: inline-block;
     border-bottom: 1px solid var(--primary-color);
-    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
     span {
         &:nth-child(2) {
             display: none;
@@ -107,7 +107,10 @@
 
 
 .special-conditions__show-more-content {
-    max-height: 0;
+    max-height: 7rem;
     transition: max-height .4s;
     overflow: hidden;
+    @include breakpoint(mobile) {
+        max-height: 5rem;
+    }
 }
