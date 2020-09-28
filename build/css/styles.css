@@ -13337,6 +13337,14 @@ input.range-slider__amount {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column; }
+  .news-catalog__list--three-col .news-catalog__list-item {
+    width: 33.33%; }
+    @media only screen and (max-width: 968px) {
+      .news-catalog__list--three-col .news-catalog__list-item {
+        width: 50%; } }
+    @media only screen and (max-width: 767px) {
+      .news-catalog__list--three-col .news-catalog__list-item {
+        width: 100%; } }
   @media only screen and (max-width: 767px) {
     .news-catalog__list-item {
       padding: 1.5rem;
