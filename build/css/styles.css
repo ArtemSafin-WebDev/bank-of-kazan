@@ -2418,7 +2418,16 @@ img.lazyload:not([src]) {
   position: relative;
   cursor: default;
   z-index: 220;
-  margin-right: 2rem; }
+  margin-right: 2rem;
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
   .page-header__online-bank:last-child {
     margin-right: 0; }
   @media only screen and (max-width: 767px) {
@@ -2492,11 +2501,17 @@ img.lazyload:not([src]) {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 1.5rem 1.8rem;
   border-radius: 1rem;
   border: 1px solid rgba(255, 255, 255, 0.5);
   text-transform: uppercase;
   font-weight: 500;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   font-size: 1.4rem;
   font-weight: 500;
   white-space: nowrap;
@@ -4961,7 +4976,6 @@ input.range-slider__amount {
   font-weight: 500;
   font-size: 1.6rem;
   line-height: 120%;
-  margin-top: auto;
   -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
   margin-bottom: 4rem;
@@ -4997,6 +5011,7 @@ input.range-slider__amount {
       line-height: 120%;
       border-radius: 0.4rem;
       padding: 1.4rem 1.5rem;
+      margin-top: auto;
       margin-bottom: 0;
       margin-right: 2rem; } }
 
@@ -5539,7 +5554,7 @@ input.range-slider__amount {
   border-radius: 1rem;
   -webkit-transition: border-color .2s, color .2s;
   transition: border-color .2s, color .2s;
-  min-width: 28rem;
+  min-width: 29rem;
   -ms-flex-item-align: start;
       align-self: flex-start; }
   .navigation__menu-card-services-link svg {
