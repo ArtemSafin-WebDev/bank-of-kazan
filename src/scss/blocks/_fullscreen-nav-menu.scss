@@ -1,0 +1,31 @@
+.fullscreen-nav-menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--secondary-color);
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .4s, visibility 0s linear .4s;
+    padding-top: 30rem;
+
+    .product-nav-menu-open & {
+        opacity: 1;
+        visibility: visible;
+        transition: opacity .4s, visibility .4s;
+    }
+}
+
+
+.fullscreen-nav-menu__content {
+    display: flex;
+}
+
+
+.catalog__menu {
+    position: relative;
+    z-index: 120;
+}
