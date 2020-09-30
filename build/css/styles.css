@@ -12936,6 +12936,8 @@ input.range-slider__amount {
       flex-shrink: 0;
   margin-left: 2rem;
   position: relative; }
+  .advantages__card-btns-icon-container:first-child {
+    margin-left: 0; }
   @media only screen and (max-width: 767px) {
     .advantages__card-btns-icon-container {
       height: 4.5rem;

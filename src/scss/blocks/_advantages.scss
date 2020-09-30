@@ -108,6 +108,10 @@
     flex-shrink: 0;
     margin-left: 2rem;
     position: relative;
+
+    &:first-child {
+        margin-left: 0;
+    }
     @include breakpoint(mobile) {
         height: 4.5rem;
         width: 4.5rem;
