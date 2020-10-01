@@ -1,3 +1,11 @@
+
+.special-conditions {
+    margin-bottom: 2rem;
+    // &:last-child {
+    //     margin-bottom: 0;
+    // }
+}
+
 .special-conditions__list {
     display: flex;
     flex-wrap: wrap;

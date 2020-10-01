@@ -1,29 +1,49 @@
-.fullscreen-nav-menu {
+.fullscreen-nav-menu-backplate {
     position: fixed;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     background: var(--secondary-color);
+
+    transform-origin: left center;
+    transform: translateZ(0) scaleX(0);
+    transition: transform 0.5s;
+
+    .product-nav-menu-open & {
+        transform: translateZ(0) scaleX(1);
+        transition: transform 0.8s ease-out;
+    }
+}
+
+.fullscreen-nav-menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
     overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
     opacity: 0;
     visibility: hidden;
-    transition: opacity .4s, visibility 0s linear .4s;
-    padding-top: 30rem;
+    transition: opacity 0.4s, visibility 0s linear 0.4s;
+    padding-top: 37rem;
+
+    @include noScrollbar();
 
     .product-nav-menu-open & {
         opacity: 1;
         visibility: visible;
-        transition: opacity .4s, visibility .4s;
+        transition: opacity 0.4s, visibility 0.4s;
     }
 }
 
-
 .fullscreen-nav-menu__content {
-    display: flex;
+    
+    padding-left: 37rem;
+    position: relative;
 }
-
 
 .catalog__menu {
     position: relative;

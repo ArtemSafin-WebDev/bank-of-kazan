@@ -33,11 +33,14 @@
 }
 
 .catalog__menu-link {
+   
+
+
+    transition: color .2s;
+    margin-bottom: 2rem;
     font-weight: 500;
-    font-size: 2.6rem;
-    line-height: 122%;
-    transition: color 0.2s;
-    margin-bottom: 1.5rem;
+    font-size: 2.2rem;
+    line-height: 140%;
     &:last-child {
         margin-bottom: 0;
     }

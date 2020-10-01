@@ -18,7 +18,7 @@ export default function() {
         const searchClose = element.querySelector('.navigation__universal-search-close');
         const searchInput = element.querySelector('.navigation__universal-toggle-search-form-input');
         const allNavigationTabs = Array.from(document.querySelectorAll('.navigation__content-right-col-menu-card'));
-        const allNavLinks = Array.from(element.querySelectorAll('.navigation__main-menu-link'));
+        const allNavLinks = Array.from(element.querySelectorAll('.navigation__main-menu-link:not(.js-simple-link)'));
         const innerSlidersLayer = element.querySelector('.navigation__content-right-col-sliders');
         const innerMenusLayer = element.querySelector('.navigation__content-right-col-menus');
         const navMenuGroups = Array.from(element.querySelectorAll('.navigation__content-right-col-menus-group'));
@@ -111,7 +111,7 @@ export default function() {
             activeCategoryIndex = btnIndex;
 
             if (navigationMenuOpen) {
-                const navigationLinks = Array.from(navigationMenuLayers[btnIndex].querySelectorAll('.navigation__main-menu-link'));
+                const navigationLinks = Array.from(navigationMenuLayers[btnIndex].querySelectorAll('.navigation__main-menu-link:not(.js-simple-link)'));
 
                 if (navigationLinks.length) {
                     navigationLinks[0].click();
@@ -121,7 +121,7 @@ export default function() {
 
         function initializeNavigationMenu() {
             navigationMenuLayers.forEach(layer => {
-                const navLinks = Array.from(layer.querySelectorAll('.navigation__main-menu-link'));
+                const navLinks = Array.from(layer.querySelectorAll('.navigation__main-menu-link:not(.js-simple-link)'));
 
                 navLinks.forEach((link, linkIndex) => {
                     link.addEventListener('click', event => {

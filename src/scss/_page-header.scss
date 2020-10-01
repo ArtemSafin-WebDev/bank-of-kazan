@@ -208,19 +208,23 @@
     font-weight: 500;
     text-transform: uppercase;
     // cursor: default;
-    transition: color 0.2s;
+    transition: all 0.2s;
+    color: white;
     &:link,
     &:visited {
         color: white;
     }
 
-    .dark-nav-text:not(.product-nav-menu-open):not(.bank-menu-shown) &,
-    .dark-main-nav.violet-backplate:not(.bank-menu-shown) & {
+    .dark-nav-text:not(.product-nav-menu-open) &,
+    .dark-main-nav.violet-backplate & {
         &:link,
         &:visited {
             color: black;
         }
     }
+
+
+    
 
     svg {
         width: 1.4rem;
@@ -233,6 +237,15 @@
         .dark-main-nav.violet-backplate:not(.bank-menu-shown) & {
             fill: var(--primary-color);
         }
+    }
+}
+
+
+.dark-nav-text:not(.product-nav-menu-open) .page-header__city-link {
+    color: black;
+    &:link,
+    &:visited {
+        color: black;
     }
 }
 
@@ -314,7 +327,7 @@
 
     display: block;
 
-    transition: background-color 0.2s;
+    transition: color .2s, background-color 0.2s;
 
     font-size: 1.8rem;
     line-height: 120%;
