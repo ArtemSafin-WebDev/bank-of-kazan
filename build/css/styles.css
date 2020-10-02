@@ -5582,9 +5582,7 @@ input.range-slider__amount {
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 1rem;
   -webkit-transition: border-color .2s, color .2s;
-  transition: border-color .2s, color .2s;
-  -ms-flex-item-align: start;
-      align-self: flex-start; }
+  transition: border-color .2s, color .2s; }
   .navigation__menu-card-services-link svg {
     width: 2.4rem;
     height: 2.4rem;
