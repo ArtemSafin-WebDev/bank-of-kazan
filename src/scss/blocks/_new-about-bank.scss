@@ -323,6 +323,23 @@
     display: flex;
     flex-direction: column;
 
+
+    &--dark-text {
+        color: black;
+
+        .new-about-bank-products__bg::after {
+            display: none;
+        }
+
+        .new-about-bank-products__list-item {
+            border-color: rgba(#BDBDBD, .5);
+        }
+
+        .new-about-bank-products__accordion-btn svg {
+            fill: rgba(black, .6);
+        }
+    }
+
     .container,
     .inner-container {
         display: flex;
@@ -358,7 +375,7 @@
     display: block;
     width: 100%;
     height: 100%;
-    @include objectFitCover();
+    @include objectFitCoverTop();
 }
 
 .new-about-bank-products__heading {
@@ -378,7 +395,7 @@
     display: flex;
     align-items: baseline;
     padding: 3rem 0;
-    border-bottom: 0.3rem solid rgba(white, 0.1);
+    border-bottom: 1px solid rgba(white, 0.1);
     font-size: 2.4rem;
     line-height: 3.2rem;
     &::before {
@@ -405,7 +422,7 @@
         align-items: baseline;
         font-size: 1.8rem;
         line-height: 1.2;
-        border-bottom: 2px solid rgba(white, 0.1);
+        border-bottom: 1px solid rgba(white, 0.1);
     }
 }
 

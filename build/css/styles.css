@@ -11129,17 +11129,14 @@ input.range-slider__amount {
   margin-right: 6rem;
   display: block;
   -ms-flex-item-align: start;
-      align-self: flex-start; }
-  .catalog__cards-image--yellow-shadow {
-    -webkit-filter: drop-shadow(0px 54px 167px rgba(231, 201, 98, 0.21)) drop-shadow(0px 16.2794px 50.3456px rgba(231, 201, 98, 0.136834)) drop-shadow(0px 6.76164px 20.911px rgba(231, 201, 98, 0.105)) drop-shadow(0px 2.44555px 7.5631px rgba(231, 201, 98, 0.0731663));
-            filter: drop-shadow(0px 54px 167px rgba(231, 201, 98, 0.21)) drop-shadow(0px 16.2794px 50.3456px rgba(231, 201, 98, 0.136834)) drop-shadow(0px 6.76164px 20.911px rgba(231, 201, 98, 0.105)) drop-shadow(0px 2.44555px 7.5631px rgba(231, 201, 98, 0.0731663)); }
-  .catalog__cards-image--black-shadow {
-    -webkit-filter: drop-shadow(0px 54px 167px rgba(54, 53, 48, 0.21)) drop-shadow(0px 16.2794px 50.3456px rgba(54, 53, 48, 0.136834)) drop-shadow(0px 6.76164px 20.911px rgba(54, 53, 48, 0.105)) drop-shadow(0px 2.44555px 7.5631px rgba(54, 53, 48, 0.0731663));
-            filter: drop-shadow(0px 54px 167px rgba(54, 53, 48, 0.21)) drop-shadow(0px 16.2794px 50.3456px rgba(54, 53, 48, 0.136834)) drop-shadow(0px 6.76164px 20.911px rgba(54, 53, 48, 0.105)) drop-shadow(0px 2.44555px 7.5631px rgba(54, 53, 48, 0.0731663)); }
+      align-self: flex-start;
+  border-radius: 1.5rem;
+  -webkit-box-shadow: 0px 5rem 9rem -6rem rgba(33, 33, 33, 0.52);
+          box-shadow: 0px 5rem 9rem -6rem rgba(33, 33, 33, 0.52); }
   @media only screen and (max-width: 767px) {
     .catalog__cards-image {
-      -webkit-filter: none;
-              filter: none;
+      -webkit-box-shadow: none;
+              box-shadow: none;
       width: 100%;
       margin: 0;
       margin-bottom: 3rem;
@@ -11274,7 +11271,7 @@ input.range-slider__amount {
   @media only screen and (max-width: 767px) {
     .catalog__cards-block-btn-link-filled {
       padding: 1.6rem 2rem;
-      border-radius: .8rem;
+      border-radius: 0.8rem;
       font-size: 1.2rem;
       margin-right: 2rem; } }
 
@@ -14000,6 +13997,14 @@ input.range-slider__amount {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column; }
+  .new-about-bank-products--dark-text {
+    color: black; }
+    .new-about-bank-products--dark-text .new-about-bank-products__bg::after {
+      display: none; }
+    .new-about-bank-products--dark-text .new-about-bank-products__list-item {
+      border-color: rgba(189, 189, 189, 0.5); }
+    .new-about-bank-products--dark-text .new-about-bank-products__accordion-btn svg {
+      fill: rgba(0, 0, 0, 0.6); }
   .new-about-bank-products .container,
   .new-about-bank-products .inner-container {
     display: -webkit-box;
@@ -14040,9 +14045,9 @@ input.range-slider__amount {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-  font-family: 'object-fit: cover; object-position: center;'; }
+  -o-object-position: top;
+     object-position: top;
+  font-family: 'object-fit: cover; object-position: top;'; }
 
 .new-about-bank-products__heading {
   font-weight: bold;
@@ -14063,7 +14068,7 @@ input.range-slider__amount {
       -ms-flex-align: baseline;
           align-items: baseline;
   padding: 3rem 0;
-  border-bottom: 0.3rem solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   font-size: 2.4rem;
   line-height: 3.2rem; }
   .new-about-bank-products__list-item::before {
@@ -14089,7 +14094,7 @@ input.range-slider__amount {
               align-items: baseline;
       font-size: 1.8rem;
       line-height: 1.2;
-      border-bottom: 2px solid rgba(255, 255, 255, 0.1); } }
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1); } }
 
 .new-about-bank-advantages {
   padding: 9rem 0; }
