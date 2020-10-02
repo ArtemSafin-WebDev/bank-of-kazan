@@ -881,500 +881,152 @@
                                     </div>
                                     <div class="catalog__right-col">
                                         <h1 class="catalog__main-heading">
-                                            Кредиты бизнесу
+                                            Дебетовые карты
                                         </h1>
-
-                                        <form method="POST" action="/" class="catalog__filters">
-                                            <div class="catalog__filters-sliders">
-                                                <div class="catalog__filters-sliders-group">
-                                                    <span class="catalog__filters-sliders-text">
-                                                        Сумма кредита
-                                                    </span>
-                                                    <div class="catalog__filters-sliders-range-wrapper">
-                                                        <div class="catalog__filters-sliders-credit-sum-range">
-                                                            <div class="range-slider js-range-slider">
-                                                                <input type="range" name="first-currency-amount" step="100" min="90000" max="2000000" class="range-slider__input" value="6500" />
-                                                                <div class="range-slider__element-wrapper">
-                                                                    <div class="range-slider__amount">12 000</div>
-                                                                    <div class="range-slider__element"></div>
-                                                                </div>
-                                                                <div class="range-slider__min-max">
-                                                                    <div class="range-slider__min">
-                                                                        90 000
-                                                                    </div>
-                                                                    <div class="range-slider__max">
-                                                                        2 000 000
-                                                                    </div>
-                                                                </div>
+                                        <div class="catalog__cards">
+                                            <ul class="catalog__cards-list">
+                                                <li class="catalog__cards-list-item">
+                                                    <div class="catalog__cards-block">
+                                                        <img src="img/catalog-cards/card-1.png" alt="" class="catalog__cards-image catalog__cards-image--yellow-shadow" />
+                                                        <div class="catalog__cards-block-content">
+                                                            <h3 class="catalog__cards-block-title">
+                                                                VISA Gold
+                                                            </h3>
+                                                            <div class="catalog__cards-block-description">
+                                                                Удобная карта для ежедневного использования
                                                             </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="catalog__filters-sliders-group">
-                                                    <span class="catalog__filters-sliders-text">
-                                                        Срок кредита
-                                                    </span>
-                                                    <div class="catalog__filters-sliders-range-wrapper">
-                                                        <div class="catalog__filters-credit-duration-range">
-                                                            <div class="range-slider js-range-slider">
-                                                                <input type="range" name="first-currency-amount" step="1" min="13" max="60" class="range-slider__input" value="13" data-units="months" />
-                                                                <div class="range-slider__element-wrapper">
-                                                                    <div class="range-slider__amount">12 000</div>
-                                                                    <div class="range-slider__element"></div>
-                                                                </div>
-                                                                <div class="range-slider__min-max">
-                                                                    <div class="range-slider__min">
-                                                                        1 год 1 месяц
+                                                            <ul class="catalog__cards-block-features-list">
+                                                                <li class="catalog__cards-block-features-list-item">
+                                                                    <div class="catalog__cards-block-features-item-key">
+                                                                        Бесплатно
                                                                     </div>
-                                                                    <div class="range-slider__max">
-                                                                        5 лет
+                                                                    <div class="catalog__cards-block-features-item-value">
+                                                                        Интернет-банк и мобильный банк
                                                                     </div>
-                                                                </div>
+                                                                </li>
+                                                                <li class="catalog__cards-block-features-list-item">
+                                                                    <div class="catalog__cards-block-features-item-key">
+                                                                        Персональное обслуживание
+                                                                    </div>
+                                                                    <div class="catalog__cards-block-features-item-value">
+                                                                        Интернет-банк и мобильный банк
+                                                                    </div>
+                                                                </li>
+                                                                <li class="catalog__cards-block-features-list-item">
+                                                                    <div class="catalog__cards-block-features-item-key">
+                                                                        Дополнительные карты
+                                                                    </div>
+                                                                    <div class="catalog__cards-block-features-item-value">
+                                                                        Оформление дополнительных карт
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                            <div class="catalog__cards-block-btns">
+                                                                <a href="#" class="catalog__cards-block-btn-link-filled">
+                                                                    оформить карту
+                                                                </a>
+                                                                <a href="#" class="catalog__cards-block-btn-link">
+                                                                    узнать больше
+                                                                </a>
                                                             </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="catalog__filters-checkmarks">
-                                                <ul class="catalog__filters-checkmarks-list">
-                                                    <li class="catalog__filters-checkmarks-list-item">
-                                                        <label class="catalog__filters-checkbox">
-                                                            <input type="checkbox" class="catalog__filters-checkmarks-input" name="filter" checked />
-                                                            <span class="catalog__filters-checkbox-mark">
-                                                                <svg width="15" height="15" aria-hidden="true" class="icon-checkmark">
-                                                                    <use xlink:href="#checkmark" />
-                                                                </svg>
-                                                            </span>
-                                                            <span class="catalog__filters-checkbox-text">
-                                                                Пополнение счёта
-                                                            </span>
-                                                        </label>
-                                                    </li>
-                                                    <li class="catalog__filters-checkmarks-list-item">
-                                                        <label class="catalog__filters-checkbox">
-                                                            <input type="checkbox" class="catalog__filters-checkmarks-input" name="filter" checked />
-                                                            <span class="catalog__filters-checkbox-mark">
-                                                                <svg width="15" height="15" aria-hidden="true" class="icon-checkmark">
-                                                                    <use xlink:href="#checkmark" />
-                                                                </svg>
-                                                            </span>
-                                                            <span class="catalog__filters-checkbox-text">
-                                                                Частичное снятие
-                                                            </span>
-                                                        </label>
-                                                    </li>
-                                                    <li class="catalog__filters-checkmarks-list-item">
-                                                        <label class="catalog__filters-checkbox">
-                                                            <input type="checkbox" class="catalog__filters-checkmarks-input" name="filter" />
-                                                            <span class="catalog__filters-checkbox-mark">
-                                                                <svg width="15" height="15" aria-hidden="true" class="icon-checkmark">
-                                                                    <use xlink:href="#checkmark" />
-                                                                </svg>
-                                                            </span>
-                                                            <span class="catalog__filters-checkbox-text">
-                                                                Капитализация процентов
-                                                            </span>
-                                                        </label>
-                                                    </li>
-                                                    <li class="catalog__filters-checkmarks-list-item">
-                                                        <label class="catalog__filters-checkbox">
-                                                            <input type="checkbox" class="catalog__filters-checkmarks-input" name="filter" />
-                                                            <span class="catalog__filters-checkbox-mark">
-                                                                <svg width="15" height="15" aria-hidden="true" class="icon-checkmark">
-                                                                    <use xlink:href="#checkmark" />
-                                                                </svg>
-                                                            </span>
-                                                            <span class="catalog__filters-checkbox-text">
-                                                                Льготное расторжение
-                                                            </span>
-                                                        </label>
-                                                    </li>
-                                                    <li class="catalog__filters-checkmarks-list-item">
-                                                        <label class="catalog__filters-checkbox">
-                                                            <input type="checkbox" class="catalog__filters-checkmarks-input" name="filter" />
-                                                            <span class="catalog__filters-checkbox-mark">
-                                                                <svg width="15" height="15" aria-hidden="true" class="icon-checkmark">
-                                                                    <use xlink:href="#checkmark" />
-                                                                </svg>
-                                                            </span>
-                                                            <span class="catalog__filters-checkbox-text">
-                                                                Выплата % ежемесячно
-                                                            </span>
-                                                        </label>
-                                                    </li>
-                                                    <li class="catalog__filters-checkmarks-list-item">
-                                                        <label class="catalog__filters-checkbox">
-                                                            <input type="checkbox" class="catalog__filters-checkmarks-input" name="filter" />
-                                                            <span class="catalog__filters-checkbox-mark">
-                                                                <svg width="15" height="15" aria-hidden="true" class="icon-checkmark">
-                                                                    <use xlink:href="#checkmark" />
-                                                                </svg>
-                                                            </span>
-                                                            <span class="catalog__filters-checkbox-text">
-                                                                Для пенсионеров
-                                                            </span>
-                                                        </label>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </form>
-                                        <div class="catalog__products">
-                                            <ul class="catalog__products-list">
-                                                <li class="catalog__products-list-item">
-                                                    <div href="#" class="products__card">
-                                                        <span class="products__card-tag">
-                                                            Вклады
-                                                        </span>
-                                                        <div class="products__card-image-container">
-                                                            <img src="img/products/products-business-2.jpg" alt="" class="products__card-image" />
-                                                        </div>
-                                                        <h5 class="products__card-title">Городской стабильный</h5>
-                                                        <div class="products__card-text-content">
-                                                            <p>
-                                                                Пополнение оборотных средств (обновление товарного ассортимента, закуп сырья и полуфабрикатов, товаров и прочее)
-                                                            </p>
-                                                        </div>
-                                                        <div class="products__card-prices">
-                                                            <div class="products__card-prices-items">
-                                                                <div class="products__card-prices-item">
-                                                                    <div class="products__card-prices-card">
-                                                                        <p class="products__card-prices-card-small-text">
-                                                                            Процентная ставка
-                                                                        </p>
-                                                                        <p class="products__card-prices-card-large-text">
-                                                                            3.75 %
-                                                                        </p>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="products__card-prices-item">
-                                                                    <div class="products__card-prices-card">
-                                                                        <p class="products__card-prices-card-small-text">
-                                                                            Срок вклада
-                                                                        </p>
-                                                                        <p class="products__card-prices-card-large-text">
-                                                                            31 день
-                                                                        </p>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="products__card-prices-item">
-                                                                    <div class="products__card-prices-card">
-                                                                        <p class="products__card-prices-card-small-text">
-                                                                            Минимальная сумма вклада
-                                                                        </p>
-                                                                        <p class="products__card-prices-card-large-text">
-                                                                            5 000 ₽
-                                                                        </p>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="products__catalog-bottom-links">
-                                                            <a href="#" class="products__catalog-open-link">
-                                                                открыть вклад
-                                                            </a>
-                                                            <a href="#" class="products__catalog-conditions-link">
-                                                                Все условия
-
-                                                                <svg width="10" height="14" aria-hidden="true" class="icon-arrow-right">
-                                                                    <use xlink:href="#arrow-right" />
-                                                                </svg>
-                                                            </a>
                                                         </div>
                                                     </div>
                                                 </li>
-                                                <li class="catalog__products-list-item">
-                                                    <div href="#" class="products__card">
-                                                        <span class="products__card-tag">
-                                                            Вклады
-                                                        </span>
-                                                        <div class="products__card-image-container">
-                                                            <img src="img/products/products-business-2.jpg" alt="" class="products__card-image" />
-                                                        </div>
-                                                        <h5 class="products__card-title">Городской стабильный с капитализацией</h5>
-                                                        <div class="products__card-text-content">
-                                                            <p>
-                                                                Пополнение оборотных средств (обновление товарного ассортимента, закуп сырья и полуфабрикатов, товаров и прочее)
-                                                            </p>
-                                                        </div>
-                                                        <div class="products__card-prices">
-                                                            <div class="products__card-prices-items">
-                                                                <div class="products__card-prices-item">
-                                                                    <div class="products__card-prices-card">
-                                                                        <p class="products__card-prices-card-small-text">
-                                                                            Процентная ставка
-                                                                        </p>
-                                                                        <p class="products__card-prices-card-large-text">
-                                                                            3.75 %
-                                                                        </p>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="products__card-prices-item">
-                                                                    <div class="products__card-prices-card">
-                                                                        <p class="products__card-prices-card-small-text">
-                                                                            Срок вклада
-                                                                        </p>
-                                                                        <p class="products__card-prices-card-large-text">
-                                                                            31 день
-                                                                        </p>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="products__card-prices-item">
-                                                                    <div class="products__card-prices-card">
-                                                                        <p class="products__card-prices-card-small-text">
-                                                                            Минимальная сумма вклада
-                                                                        </p>
-                                                                        <p class="products__card-prices-card-large-text">
-                                                                            5 000 ₽
-                                                                        </p>
-                                                                    </div>
-                                                                </div>
+                                                <li class="catalog__cards-list-item">
+                                                    <div class="catalog__cards-block">
+                                                        <img src="img/catalog-cards/card-2.png" alt="" class="catalog__cards-image catalog__cards-image--black-shadow" />
+                                                        <div class="catalog__cards-block-content">
+                                                            <h3 class="catalog__cards-block-title">
+                                                                VISA Infinite
+                                                            </h3>
+                                                            <div class="catalog__cards-block-description">
+                                                                Премиальная карта
                                                             </div>
-                                                        </div>
-
-                                                        <div class="products__catalog-bottom-links">
-                                                            <a href="#" class="products__catalog-open-link">
-                                                                открыть вклад
-                                                            </a>
-                                                            <a href="#" class="products__catalog-conditions-link">
-                                                                Все условия
-
-                                                                <svg width="10" height="14" aria-hidden="true" class="icon-arrow-right">
-                                                                    <use xlink:href="#arrow-right" />
-                                                                </svg>
-                                                            </a>
+                                                            <ul class="catalog__cards-block-features-list">
+                                                                <li class="catalog__cards-block-features-list-item">
+                                                                    <div class="catalog__cards-block-features-item-key">
+                                                                        Бесплатно
+                                                                    </div>
+                                                                    <div class="catalog__cards-block-features-item-value">
+                                                                        Интернет-банк и мобильный банк
+                                                                    </div>
+                                                                </li>
+                                                                <li class="catalog__cards-block-features-list-item">
+                                                                    <div class="catalog__cards-block-features-item-key">
+                                                                        Повышенный расходный лимит
+                                                                    </div>
+                                                                    <div class="catalog__cards-block-features-item-value">
+                                                                        Интернет-банк и мобильный банк
+                                                                    </div>
+                                                                </li>
+                                                                <li class="catalog__cards-block-features-list-item">
+                                                                    <div class="catalog__cards-block-features-item-key">
+                                                                        Экстренные услуги
+                                                                    </div>
+                                                                    <div class="catalog__cards-block-features-item-value">
+                                                                        Оформление дополнительных карт
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                            <div class="catalog__cards-block-btns">
+                                                                <a href="#" class="catalog__cards-block-btn-link-filled">
+                                                                    оформить карту
+                                                                </a>
+                                                                <a href="#" class="catalog__cards-block-btn-link">
+                                                                    узнать больше
+                                                                </a>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </li>
-                                                <li class="catalog__products-list-item">
-                                                    <div href="#" class="products__card">
-                                                        <span class="products__card-tag">
-                                                            Вклады
-                                                        </span>
-                                                        <div class="products__card-image-container">
-                                                            <img src="img/products/products-business-2.jpg" alt="" class="products__card-image" />
-                                                        </div>
-                                                        <h5 class="products__card-title">Городской стабильный</h5>
-                                                        <div class="products__card-text-content">
-                                                            <p>
-                                                                Пополнение оборотных средств (обновление товарного ассортимента, закуп сырья и полуфабрикатов, товаров и прочее)
-                                                            </p>
-                                                        </div>
-                                                        <div class="products__card-prices">
-                                                            <div class="products__card-prices-items">
-                                                                <div class="products__card-prices-item">
-                                                                    <div class="products__card-prices-card">
-                                                                        <p class="products__card-prices-card-small-text">
-                                                                            Процентная ставка
-                                                                        </p>
-                                                                        <p class="products__card-prices-card-large-text">
-                                                                            3.75 %
-                                                                        </p>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="products__card-prices-item">
-                                                                    <div class="products__card-prices-card">
-                                                                        <p class="products__card-prices-card-small-text">
-                                                                            Срок вклада
-                                                                        </p>
-                                                                        <p class="products__card-prices-card-large-text">
-                                                                            31 день
-                                                                        </p>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="products__card-prices-item">
-                                                                    <div class="products__card-prices-card">
-                                                                        <p class="products__card-prices-card-small-text">
-                                                                            Минимальная сумма вклада
-                                                                        </p>
-                                                                        <p class="products__card-prices-card-large-text">
-                                                                            5 000 ₽
-                                                                        </p>
-                                                                    </div>
-                                                                </div>
+                                                <li class="catalog__cards-list-item">
+                                                    <div class="catalog__cards-block">
+                                                        <img src="img/catalog-cards/card-2.png" alt="" class="catalog__cards-image catalog__cards-image--black-shadow" />
+                                                        <div class="catalog__cards-block-content">
+                                                            <h3 class="catalog__cards-block-title">
+                                                                МИР Привилегия
+                                                            </h3>
+                                                            <div class="catalog__cards-block-description">
+                                                                Оптимальная карта для ежедневного пользования
                                                             </div>
-                                                        </div>
-
-                                                        <div class="products__catalog-bottom-links">
-                                                            <a href="#" class="products__catalog-open-link">
-                                                                открыть вклад
-                                                            </a>
-                                                            <a href="#" class="products__catalog-conditions-link">
-                                                                Все условия
-
-                                                                <svg width="10" height="14" aria-hidden="true" class="icon-arrow-right">
-                                                                    <use xlink:href="#arrow-right" />
-                                                                </svg>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li class="catalog__products-list-item">
-                                                    <div href="#" class="products__card">
-                                                        <span class="products__card-tag">
-                                                            Вклады
-                                                        </span>
-                                                        <div class="products__card-image-container">
-                                                            <img src="img/products/products-business-2.jpg" alt="" class="products__card-image" />
-                                                        </div>
-                                                        <h5 class="products__card-title">Городской стабильный с капитализацией</h5>
-                                                        <div class="products__card-text-content">
-                                                            <p>
-                                                                Пополнение оборотных средств (обновление товарного ассортимента, закуп сырья и полуфабрикатов, товаров и прочее)
-                                                            </p>
-                                                        </div>
-                                                        <div class="products__card-prices">
-                                                            <div class="products__card-prices-items">
-                                                                <div class="products__card-prices-item">
-                                                                    <div class="products__card-prices-card">
-                                                                        <p class="products__card-prices-card-small-text">
-                                                                            Процентная ставка
-                                                                        </p>
-                                                                        <p class="products__card-prices-card-large-text">
-                                                                            3.75 %
-                                                                        </p>
+                                                            <ul class="catalog__cards-block-features-list">
+                                                                <li class="catalog__cards-block-features-list-item">
+                                                                    <div class="catalog__cards-block-features-item-key">
+                                                                        Бесплатно
                                                                     </div>
-                                                                </div>
-                                                                <div class="products__card-prices-item">
-                                                                    <div class="products__card-prices-card">
-                                                                        <p class="products__card-prices-card-small-text">
-                                                                            Срок вклада
-                                                                        </p>
-                                                                        <p class="products__card-prices-card-large-text">
-                                                                            31 день
-                                                                        </p>
+                                                                    <div class="catalog__cards-block-features-item-value">
+                                                                        Снятие денежных средств по всей России
                                                                     </div>
-                                                                </div>
-                                                                <div class="products__card-prices-item">
-                                                                    <div class="products__card-prices-card">
-                                                                        <p class="products__card-prices-card-small-text">
-                                                                            Минимальная сумма вклада
-                                                                        </p>
-                                                                        <p class="products__card-prices-card-large-text">
-                                                                            5 000 ₽
-                                                                        </p>
+                                                                </li>
+                                                                <li class="catalog__cards-block-features-list-item">
+                                                                    <div class="catalog__cards-block-features-item-key">
+                                                                        Стоимость обслуживания
                                                                     </div>
-                                                                </div>
+                                                                    <div class="catalog__cards-block-features-item-value">
+                                                                        300 рублей в год
+                                                                    </div>
+                                                                </li>
+                                                                <li class="catalog__cards-block-features-list-item">
+                                                                    <div class="catalog__cards-block-features-item-key">
+                                                                        Бесплатно
+                                                                    </div>
+                                                                    <div class="catalog__cards-block-features-item-value">
+                                                                        Интернет-банки мобильный банк
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                            <div class="catalog__cards-block-btns">
+                                                                <a href="#" class="catalog__cards-block-btn-link-filled">
+                                                                    оформить карту
+                                                                </a>
+                                                                <a href="#" class="catalog__cards-block-btn-link">
+                                                                    узнать больше
+                                                                </a>
                                                             </div>
-                                                        </div>
-
-                                                        <div class="products__catalog-bottom-links">
-                                                            <a href="#" class="products__catalog-open-link">
-                                                                открыть вклад
-                                                            </a>
-                                                            <a href="#" class="products__catalog-conditions-link">
-                                                                Все условия
-
-                                                                <svg width="10" height="14" aria-hidden="true" class="icon-arrow-right">
-                                                                    <use xlink:href="#arrow-right" />
-                                                                </svg>
-                                                            </a>
                                                         </div>
                                                     </div>
                                                 </li>
                                             </ul>
-                                        </div>
-                                        <div class="catalogs__offer">
-                                            <h2 class="catalogs__offer-heading">
-                                                Подайте заявку на кредит для бизнеса
-                                            </h2>
-                                            <form action="/" method="POST" class="catalogs__offer-form">
-                                                <div class="catalogs__offer-form-row">
-                                                    <div class="catalogs__offer-form-text">
-                                                        Название компании
-                                                    </div>
-                                                    <div class="catalogs__offer-form-input-wrapper">
-                                                        <input type="text" class="catalogs__offer-form-input" />
-                                                    </div>
-                                                </div>
-                                                <div class="catalogs__offer-form-row">
-                                                    <div class="catalogs__offer-form-text">
-                                                        Имя и фамилия
-                                                    </div>
-                                                    <div class="catalogs__offer-form-input-wrapper">
-                                                        <input type="text" class="catalogs__offer-form-input" />
-                                                    </div>
-                                                </div>
-                                                <div class="catalogs__offer-form-row">
-                                                    <div class="catalogs__offer-form-text">
-                                                        Номер телефона
-                                                    </div>
-                                                    <div class="catalogs__offer-form-input-wrapper">
-                                                        <input type="tel" class="catalogs__offer-form-input js-phone-input" />
-                                                    </div>
-                                                </div>
-                                                <div class="catalogs__offer-form-row">
-                                                    <div class="catalogs__offer-form-text">
-                                                        E-mail
-                                                    </div>
-                                                    <div class="catalogs__offer-form-input-wrapper">
-                                                        <input type="email" class="catalogs__offer-form-input" />
-                                                    </div>
-                                                </div>
-                                                <div class="catalogs__offer-form-row">
-                                                    <div class="catalogs__offer-form-text">
-                                                        Сумма кредита
-                                                    </div>
-                                                    <div class="catalogs__offer-form-input-wrapper">
-                                                        <div class="range-slider js-range-slider">
-                                                            <input type="range" name="first-currency-amount" step="100" min="90000" max="2000000" class="range-slider__input" value="6500" />
-                                                            <div class="range-slider__element-wrapper">
-                                                                <div class="range-slider__amount">12 000</div>
-                                                                <div class="range-slider__element"></div>
-                                                            </div>
-                                                            <div class="range-slider__min-max">
-                                                                <div class="range-slider__min">
-                                                                    90 000
-                                                                </div>
-                                                                <div class="range-slider__max">
-                                                                    2 000 000
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="catalogs__offer-form-row">
-                                                    <div class="catalogs__offer-form-text">
-                                                        Срок кредита
-                                                    </div>
-                                                    <div class="catalogs__offer-form-input-wrapper">
-                                                        <div class="range-slider js-range-slider">
-                                                            <input type="range" name="first-currency-amount" step="1" min="13" max="60" class="range-slider__input" value="13" data-units="months" />
-                                                            <div class="range-slider__element-wrapper">
-                                                                <div class="range-slider__amount">12 000</div>
-                                                                <div class="range-slider__element"></div>
-                                                            </div>
-                                                            <div class="range-slider__min-max">
-                                                                <div class="range-slider__min">
-                                                                    1 год 1 месяц
-                                                                </div>
-                                                                <div class="range-slider__max">
-                                                                    5 лет
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="catalogs__offer-form-row">
-                                                    <div class="catalogs__offer-form-text"></div>
-                                                    <div class="catalogs__offer-form-input-wrapper">
-                                                        <label class="open-account__privacy-policy-checkbox">
-                                                            <input type="checkbox" name="policy" class="open-account__privacy-policy-checkbox-input" checked="" />
-                                                            <span class="open-account__privacy-policy-checkbox-mark">
-                                                                <svg width="16" height="16" aria-hidden="true" class="icon-checkmark">
-                                                                    <use xlink:href="#checkmark"></use>
-                                                                </svg>
-                                                            </span>
-                                                            <span class="open-account__privacy-policy-checkbox-text">
-                                                                Нажимая кнопку "Отправить", я соглашаюсь с условиями обработки персональных данных
-                                                            </span>
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                                <button type="submit" class="catalogs__offer-form-submit">
-                                                    оформить заявку
-                                                </button>
-                                            </form>
                                         </div>
                                     </div>
                                 </div>
