@@ -50,6 +50,7 @@
     "gulp-autoprefixer": "^6.0.0",
     "gulp-cached": "^1.1.1",
     "gulp-csso": "^3.0.1",
+    "gulp-debug": "^4.0.0",
     "gulp-filelist": "^2.0.3",
     "gulp-html-beautify": "^1.0.1",
     "gulp-newer": "^1.4.0",

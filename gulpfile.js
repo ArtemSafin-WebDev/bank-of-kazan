@@ -15,6 +15,7 @@ const webpack = require('webpack');
 const webpackconfig = require('./webpack.config.js');
 const webpackstream = require('webpack-stream');
 const filelist = require('gulp-filelist');
+const debug = require('gulp-debug');
 
 gulp.task('sprite', function() {
     return gulp
@@ -48,13 +49,14 @@ gulp.task('nunjucks-recompile-all', function() {
 gulp.task('nunjucks', function() {
     return gulp
         .src('./src/*.+(html|nunjucks|njk)')
+        .pipe(debug({title: 'nunjucks compiler:'}))
         .pipe(cache('nunjucks'))
         .pipe(
             nunjucksRender({
                 path: ['./src/templates', './src/img/symbol']
             })
         )
-        .pipe(prettier())
+        // .pipe(prettier())
         .pipe(gulp.dest('build'))
         .pipe(browserSync.stream());
 });
@@ -138,7 +140,7 @@ gulp.task('filelist', function() {
         .pipe(browserSync.stream());
 });
 
-gulp.task('build', gulp.series('clean', 'images', 'sprite', 'nunjucks', 'filelist', gulp.parallel('assets', 'styles', 'scripts')));
+gulp.task('build', gulp.series('clean', 'images', 'filelist', gulp.parallel('assets', 'styles', 'scripts'), gulp.parallel('sprite', 'nunjucks')));
 
 gulp.task('build-production', gulp.series('clean', 'images', 'sprite', 'nunjucks-recompile-all', 'filelist', gulp.parallel('assets', 'styles', 'scripts-production')));
 
