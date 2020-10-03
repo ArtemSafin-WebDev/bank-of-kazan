@@ -36,12 +36,13 @@ gulp.task('sprite', function() {
 gulp.task('nunjucks-recompile-all', function() {
     return gulp
         .src('./src/*.+(html|nunjucks|njk)')
+        .pipe(debug({title: 'nunjucks compiler:'}))
         .pipe(
             nunjucksRender({
                 path: ['./src/templates', './src/img/symbol']
             })
         )
-        .pipe(prettier())
+        
         .pipe(gulp.dest('build'))
         .pipe(browserSync.stream());
 });
@@ -56,7 +57,7 @@ gulp.task('nunjucks', function() {
                 path: ['./src/templates', './src/img/symbol']
             })
         )
-        // .pipe(prettier())
+        
         .pipe(gulp.dest('build'))
         .pipe(browserSync.stream());
 });

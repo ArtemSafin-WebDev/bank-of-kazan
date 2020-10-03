@@ -141,6 +141,7 @@
     @include objectFitCover();
     z-index: 5;
     transition: transform .5s;
+    backface-visibility: hidden;
 }
 
 .team__card-row {

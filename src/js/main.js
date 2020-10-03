@@ -26,6 +26,7 @@ import anchors from './anchors';
 import aboutBankAnimations from './aboutBankAnimations';
 import teamSlider from './teamSlider';
 import fullscreenMenu from './fullscreenMenu';
+import similarNewsSlider from './similarNewsSlider';
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -44,6 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
     modals();
     teamSlider();
     fullscreenMenu();
+    similarNewsSlider();
     
     barba.init({
         debug: true,
