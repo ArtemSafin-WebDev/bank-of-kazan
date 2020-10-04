@@ -2596,6 +2596,87 @@ img.lazyload:not([src]) {
   .page-header__offices-link {
     display: none; } }
 
+.page-header__contacts {
+  position: relative; }
+  .page-header__contacts.active .page-header__contacts-btn svg:nth-child(1) {
+    opacity: 0; }
+  .page-header__contacts.active .page-header__contacts-btn svg:nth-child(2) {
+    opacity: 1; }
+  .page-header__contacts.active .page-header__contacts-dropdown {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: opacity .3s, visibility .3s;
+    transition: opacity .3s, visibility .3s; }
+  @media only screen and (max-width: 767px) {
+    .page-header__contacts {
+      display: none; } }
+
+.page-header__contacts-btn {
+  position: relative;
+  background-color: var(--primary-color);
+  width: 5.2rem;
+  height: 5.2rem;
+  border-radius: 1rem; }
+  .page-header__contacts-btn svg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: 2.5rem;
+    height: 2.5rem;
+    fill: white;
+    -webkit-transition: opacity .2s;
+    transition: opacity .2s; }
+    .page-header__contacts-btn svg:nth-child(2) {
+      opacity: 0;
+      width: 2rem;
+      height: 2rem; }
+
+.page-header__contacts-dropdown {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  padding-top: 1.5rem;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity .3s, visibility 0s linear .3s;
+  transition: opacity .3s, visibility 0s linear .3s;
+  z-index: 20; }
+
+.page-header__contacts-dropdown-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 1.6rem 1.2rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.page-header__contacts-link {
+  margin-bottom: 2.5rem;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-transition: color .2s;
+  transition: color .2s; }
+  .page-header__contacts-link:last-child {
+    margin-bottom: 0; }
+  .page-header__contacts-link:link, .page-header__contacts-link:visited {
+    color: var(--primary-color); }
+  .page-header__contacts-link svg {
+    width: 2rem;
+    height: 2rem;
+    display: block;
+    fill: currentColor; }
+  .page-header__contacts-link:hover {
+    color: black; }
+
 .tabs-nav {
   display: -webkit-box;
   display: -ms-flexbox;

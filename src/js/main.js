@@ -27,6 +27,7 @@ import aboutBankAnimations from './aboutBankAnimations';
 import teamSlider from './teamSlider';
 import fullscreenMenu from './fullscreenMenu';
 import similarNewsSlider from './similarNewsSlider';
+import pageHeaderContacts from './pageHeaderContacts';
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -46,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
     teamSlider();
     fullscreenMenu();
     similarNewsSlider();
-    
+    pageHeaderContacts();
     barba.init({
         debug: true,
         logLevel: 'error',
