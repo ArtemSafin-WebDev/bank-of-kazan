@@ -479,6 +479,39 @@
                         Оформить заявку
                     </button>
                 </div>
+                <div class="application__form-success">
+                    <div class="application__form-success-row">
+                        <div class="application__form-success-left-col">
+                            <h4 class="application__form-success-heading">
+                                Готово!<br> Ваша заявка успешно оформлена
+                            </h4>
+                            <div class="application__form-success-text">
+                                <p>
+                                    Мы сформируем кредитное предложение на основе предоставленных данных и свяжемся с вами в течении 3 дней
+                                </p>
+                            </div>
+                            <a href="#" class="application__form-success-return-link">
+                                Вернуться на главную
+                            </a>
+                        </div>
+                        <div class="application__form-success-right-col">
+                            <img src="img/success.jpg" alt="" class="application__form-success-image">
+                            <h5 class="application__form-success-right-heading">
+                                Бесплатный<br>мобильный<br> банк
+                            </h5>
+
+                            <div class="application__form-success-marketplace-links">
+                                <a href="#" class="application__form-success-marketplace-link">
+                                    <img src="img/app-store.png" alt="" class="application__form-success-marketplace-link-image">
+                                </a>
+                                <a href="#" class="application__form-success-marketplace-link">
+                                    <img src="img/playstore.png" alt="" class="application__form-success-marketplace-link-image">
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </form>
         </div>
     </div>
@@ -1197,6 +1230,9 @@
                                 document.documentElement.style.setProperty('--progress', "40%");
                                 setTimeout(function() {
                                     document.documentElement.style.setProperty('--progress', "100%");
+                                    setTimeout(function() {
+                                        applicationForm.classList.add('success-shown')
+                                    }, 200)
                                 }, 500)
                             }
                         })

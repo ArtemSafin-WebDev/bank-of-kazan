@@ -85,7 +85,7 @@
                 </div>
             </div>
             <div class="for-business__right-column">
-                <form action="/" method="POST" class="for-business__form">
+                <form action="/" method="POST" class="for-business__form" data-need-validation>
                     <h4 class="for-business__form-title">
                         Выбираете банк для обслуживания?
                     </h4>
@@ -93,14 +93,22 @@
                         Поможем определиться:
                     </p>
 
-                    <input type="tel" class="for-business__form-input js-phone-input" placeholder="+7" />
+                    <input type="tel" class="for-business__form-input js-phone-input" placeholder="+7" required data-parsley-phone/>
 
                     <button type="submit" class="for-business__form-submit">
                         бесплатная консультация
                     </button>
-                    <p class="for-business__form-remark">
-                        Нажимая кнопку "Отправить", я соглашаюсь с условиями обработки персональных данных
-                    </p>
+                    <label class="open-account__privacy-policy-checkbox">
+                        <input type="checkbox" name="policy" class="open-account__privacy-policy-checkbox-input" checked="" required="" data-parsley-multiple="policy">
+                        <span class="open-account__privacy-policy-checkbox-mark">
+                            <svg width="16" height="16" aria-hidden="true" class="icon-checkmark">
+                                <use xlink:href="#checkmark"></use>
+                            </svg>
+                        </span>
+                        <span class="open-account__privacy-policy-checkbox-text">
+                            Нажимая кнопку "Отправить", я соглашаюсь с условиями обработки персональных данных
+                        </span>
+                    </label>
                 </form>
             </div>
         </div>

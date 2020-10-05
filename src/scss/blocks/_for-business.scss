@@ -56,10 +56,34 @@
         background-color: var(--primary-color);
     }
 
+
+    .parsley-errors-list.filled {
+        margin: 1rem 0;
+        font-size: 1.4rem;
+        color: #b90e0e;
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+
+        @include breakpoint(mobile) {
+            font-size: 1.2rem;
+        }
+    }
+
     @include breakpoint(mobile) {
         width: 100%;
         padding:  1.8rem 2.2rem;
         margin-top: 4rem;
+    }
+}
+
+
+.for-business__form-input + .parsley-errors-list.filled {
+    margin-top: -1rem;
+
+    @include breakpoint(mobile) {
+        margin-top: -.5rem;
     }
 }
 

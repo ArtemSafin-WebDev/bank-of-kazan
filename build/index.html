@@ -1453,7 +1453,10 @@
     <div class="container">
         <div class="news__row">
             <h2 class="news__heading">
-                Новости банка
+                <a href="news.html">
+                    Новости банка
+                </a>
+               
             </h2>
             <div class="news__content">
                 <ul class="news__list">
@@ -4089,6 +4092,9 @@
                                 document.documentElement.style.setProperty('--progress', "40%");
                                 setTimeout(function() {
                                     document.documentElement.style.setProperty('--progress', "100%");
+                                    setTimeout(function() {
+                                        applicationForm.classList.add('success-shown')
+                                    }, 200)
                                 }, 500)
                             }
                         })

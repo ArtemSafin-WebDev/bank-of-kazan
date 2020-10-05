@@ -140,9 +140,18 @@
 
 .contact-bank__form {
     display: flex;
+    flex-wrap: wrap;
     @include breakpoint(mobile) {
         flex-direction: column;
     }
+}
+
+
+.contact-bank__checkbox {
+    flex-shrink: 0;
+    width: 100%;
+    margin-top: 1.5rem;
+    flex-basis: auto;
 }
 
 .contact-bank__input-wrapper {
@@ -209,7 +218,7 @@
         min-height: auto;
         margin: 0;
         border-radius: .8rem;
-        padding: 1.8rem 2.4rem;
+        padding: 1.6rem 2.4rem;
         align-self: flex-start;
         font-size: 1.4rem;
     }

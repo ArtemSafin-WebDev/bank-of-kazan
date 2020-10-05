@@ -25,6 +25,18 @@
     line-height: 1.2;
     margin-right: 9.6rem;
     color: #90619c;
+
+    a {
+        transition: color .2s;
+        &:link,
+        &:visited {
+            color: inherit;
+        }
+
+        &:hover {
+            color: white;
+        }
+    }
     @include breakpoint(mobile) {
         font-size: 2rem;
         line-height: 1.2;
@@ -127,17 +139,22 @@
         color: white;
     }
 
-    .no-touch &:hover {
-        
-        .news__card-preview-backdrop {
-            opacity: 1;
-        }
 
-        .news__card-date {
-            background-color: #fff;
-            color: black;
+    @include breakpointMF(laptop) {
+        .no-touch &:hover {
+        
+            .news__card-preview-backdrop {
+                opacity: 1;
+            }
+    
+            .news__card-date {
+                background-color: #fff;
+                color: black;
+            }
         }
     }
+
+   
 
 
     @include breakpoint(mobile) {

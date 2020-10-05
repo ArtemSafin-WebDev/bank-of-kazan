@@ -1465,6 +1465,9 @@
                                 document.documentElement.style.setProperty('--progress', "40%");
                                 setTimeout(function() {
                                     document.documentElement.style.setProperty('--progress', "100%");
+                                    setTimeout(function() {
+                                        applicationForm.classList.add('success-shown')
+                                    }, 200)
                                 }, 500)
                             }
                         })
