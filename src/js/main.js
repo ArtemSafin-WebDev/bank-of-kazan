@@ -28,6 +28,7 @@ import teamSlider from './teamSlider';
 import fullscreenMenu from './fullscreenMenu';
 import similarNewsSlider from './similarNewsSlider';
 import pageHeaderContacts from './pageHeaderContacts';
+import lotsSlider from './lotsSlider';
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -48,6 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
     fullscreenMenu();
     similarNewsSlider();
     pageHeaderContacts();
+    lotsSlider();
     barba.init({
         debug: true,
         logLevel: 'error',
