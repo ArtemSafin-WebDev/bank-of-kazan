@@ -11,6 +11,7 @@ export default function() {
         const closeBtn = element.querySelector('.js-product-nav-close-btn');
         const closeMenuBtns = Array.from(element.querySelectorAll('.js-product-nav-close'));
         const productInfoItem = element.querySelector('.js-product-info-item');
+        const searchFormInput = searchForm.querySelector('input[type="search"]');
         const simple = true;
         let categoryIndex = categoryLayers.findIndex(element => element.classList.contains('active'));
         if (categoryIndex === -1) {
@@ -49,8 +50,6 @@ export default function() {
         }
 
         function selectCategory(index) {
-
-           
             categoryLinks.forEach(link => link.classList.remove('active'));
             categoryLinks[index].classList.add('active');
             categoryLayers.forEach(layer => layer.classList.remove('active'));
@@ -77,9 +76,10 @@ export default function() {
             event.preventDefault();
             if (!element.classList.contains('search-form-open')) {
                 element.classList.add('search-form-open');
-              
             } else {
-                searchForm.submit();
+                if (searchFormInput.value && searchFormInput.value.trim() !== '') {
+                    searchForm.submit();
+                }
             }
         });
 
@@ -87,13 +87,12 @@ export default function() {
             event.preventDefault();
             if (element.classList.contains('search-form-open')) {
                 element.classList.remove('search-form-open');
-               
+
                 searchForm.reset();
             }
         });
 
         if (element.classList.contains('js-product-nav-short')) return;
-
 
         if (!simple) {
             categoryLinks.forEach((link, linkIndex) => {
@@ -104,8 +103,6 @@ export default function() {
                 });
             });
         }
-
-       
 
         categoryLayers.forEach(layer => {
             const menuLinks = Array.from(layer.querySelectorAll('.js-product-nav-menu-link'));
@@ -125,7 +122,6 @@ export default function() {
                     event.preventDefault();
                     if (!link.classList.contains('active')) {
                         handleMenuClick(linkIndex);
-                     
                     } else if (!categoryLayers[initialActiveCategory].contains(link)) {
                         closeInnerMenu();
                         selectCategory(initialActiveCategory);
@@ -142,8 +138,8 @@ export default function() {
                 closeInnerMenu();
                 selectCategory(initialActiveCategory);
             });
-        })
-      
+        });
+
         element.addEventListener('click', function(event) {
             if (event.target.matches('a') || event.target.matches('button')) {
                 console.log(event.target);

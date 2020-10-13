@@ -181,7 +181,9 @@ export default function() {
                 searchFormLayer.classList.add('active');
                 searchClose.classList.add('active');
             } else {
-                searchForm.submit();
+                if (searchInput.value && searchInput.value.trim() !== '') {
+                    searchForm.submit();
+                }
             }
         }
 

@@ -790,6 +790,10 @@
 
 .offices__list-view-group {
     margin-bottom: 7rem;
+
+    &.hidden {
+        display: none;
+    }
     @include breakpoint(mobile) {
         margin-bottom: 4rem;
     }

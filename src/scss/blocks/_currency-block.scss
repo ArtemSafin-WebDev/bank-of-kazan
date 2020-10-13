@@ -79,6 +79,7 @@
 .currency__converter-row {
     display: flex;
     margin-bottom: 5.8rem;
+    align-items: center;
     @include breakpoint(mobile) {
         flex-direction: column;
         margin-bottom: 0;
@@ -87,7 +88,7 @@
 
 .currency__converter-top-heading {
     font-weight: 500;
-    font-size: 3.6rem;
+    font-size: 3rem;
     line-height: 1;
     display: flex;
     align-items: baseline;
@@ -146,6 +147,10 @@
 
 .currency__converter-nav {
     margin-left: auto;
+
+    .tabs-nav__link {
+        margin-bottom: 0;
+    }
 
     @include breakpoint(mobile) {
         margin-left: 0;

@@ -1,4 +1,4 @@
-
+// import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 let animating = false;
 
@@ -15,7 +15,7 @@ function openAccordeon(element) {
         element.style.maxHeight = 'none';
         element.removeEventListener('transitionend', transitionEndHandler);
         animating = false;
-        
+        // ScrollTrigger.refresh(true);
     };
     element.addEventListener('transitionend', transitionEndHandler);
     element.style.maxHeight = `${computedHeight}`;
@@ -30,7 +30,7 @@ function closeAccordeon(element) {
 
     element.style.maxHeight = '';
 
-    
+    // ScrollTrigger.refresh(true);
 }
 
 export default function(accordionElements, openFirst = false) {
@@ -39,16 +39,27 @@ export default function(accordionElements, openFirst = false) {
 
     function init() {
         accordionElements.forEach(element => {
-            const btn = element.querySelector('.js-accordion-btn');
+            const btns = Array.from(element.querySelectorAll('.js-accordion-btn'));
             const content = element.querySelector('.js-accordion-content');
 
+            if (!content || !btns.length) {
+                console.warn('No content or accordion btns');
+                return;
+            }
+
+            console.log('Btns', btns);
+            console.log('Content', content);
+
             const handler = function(event) {
-                event.preventDefault();
                 if (animating) return;
-                if (event.relatedTarget) {
-                    event.relatedTarget.focus();
-                } else {
-                    event.currentTarget.blur();
+
+                if (event) {
+                    event.preventDefault();
+                    if (event.relatedTarget) {
+                        event.relatedTarget.focus();
+                    } else {
+                        event.currentTarget.blur();
+                    }
                 }
 
                 if (!element.classList.contains('active')) {
@@ -64,10 +75,12 @@ export default function(accordionElements, openFirst = false) {
                 }
             };
 
-            btn.addEventListener('click', handler);
+            btns.forEach(btn => {
+                btn.addEventListener('click', handler);
+            });
 
             accordionInstances.push({
-                btn,
+                btns,
                 content,
                 handler,
                 element
@@ -75,7 +88,7 @@ export default function(accordionElements, openFirst = false) {
         });
 
         if (openFirst && accordionInstances.length) {
-            accordionInstances[0].btn.click();
+            accordionInstances[0].btns.length && accordionInstances[0].btns[0].click();
         }
 
         initialized = true;
@@ -83,7 +96,7 @@ export default function(accordionElements, openFirst = false) {
 
     function destroy() {
         accordionInstances.forEach(instance => {
-            instance.btn.removeEventListener('click', instance.handler);
+            instance.btns.forEach(btn => btn.removeEventListener('click', instance.handler));
         });
         accordionInstances = [];
         initialized = false;

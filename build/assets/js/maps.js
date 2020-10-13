@@ -10,36 +10,34 @@ function init() {
 
     mainMapInstance.controls.add('zoomControl');
 
-    if (window.matchMedia("(min-width: 769px)").matches) {
+    if (window.matchMedia('(min-width: 769px)').matches) {
         mainMapInstance.controls.add('searchControl');
     }
-    
 
     var mapPinImages = {
         office: {
             iconLayout: 'default#image',
             iconImageHref: 'img/map-pins/office.svg',
-            iconImageSize: window.matchMedia("(min-width: 769px)").matches ? [25, 37] : [25, 37],
-            iconImageOffset: window.matchMedia("(min-width: 769px)").matches ? [-12.5, -37] : [-25, -74]
-           
+            iconImageSize: window.matchMedia('(min-width: 769px)').matches ? [25, 37] : [25, 37],
+            iconImageOffset: window.matchMedia('(min-width: 769px)').matches ? [-12.5, -37] : [-25, -74]
         },
         bankomat: {
             iconLayout: 'default#image',
             iconImageHref: 'img/map-pins/bankomat.svg',
-            iconImageSize: window.matchMedia("(min-width: 769px)").matches ? [25, 37] : [25, 37],
-            iconImageOffset: window.matchMedia("(min-width: 769px)").matches ? [-12.5, -37] : [-25, -74]
+            iconImageSize: window.matchMedia('(min-width: 769px)').matches ? [25, 37] : [25, 37],
+            iconImageOffset: window.matchMedia('(min-width: 769px)').matches ? [-12.5, -37] : [-25, -74]
         },
         bankomatPartners: {
             iconLayout: 'default#image',
             iconImageHref: 'img/map-pins/bankomat-partner.svg',
-            iconImageSize: window.matchMedia("(min-width: 769px)").matches ? [25, 37] : [25, 37],
-            iconImageOffset: window.matchMedia("(min-width: 769px)").matches ? [-12.5, -37] : [-25, -74]
+            iconImageSize: window.matchMedia('(min-width: 769px)').matches ? [25, 37] : [25, 37],
+            iconImageOffset: window.matchMedia('(min-width: 769px)').matches ? [-12.5, -37] : [-25, -74]
         },
         terminal: {
             iconLayout: 'default#image',
             iconImageHref: 'img/map-pins/terminal.svg',
-            iconImageSize: window.matchMedia("(min-width: 769px)").matches ? [25, 37] : [25, 37],
-            iconImageOffset: window.matchMedia("(min-width: 769px)").matches ? [-12.5, -37] : [-25, -74]
+            iconImageSize: window.matchMedia('(min-width: 769px)').matches ? [25, 37] : [25, 37],
+            iconImageOffset: window.matchMedia('(min-width: 769px)').matches ? [-12.5, -37] : [-25, -74]
         }
     };
 
@@ -94,8 +92,6 @@ function init() {
         var placemarks = [];
         var filteredObjects = [];
 
-        
-
         filteredObjects = mainMapData.filter(function(item) {
             if (allCheckbox.checked) return true;
 
@@ -134,9 +130,6 @@ function init() {
         placemarksGeoQuery = ymaps.geoQuery(placemarks);
     }
 
-
-   
-
     if (allCheckbox.checked) {
         checkboxes.forEach(checkbox => {
             checkbox.checked = false;
@@ -144,20 +137,51 @@ function init() {
         });
     }
 
+    const listViewItems = Array.from(document.querySelectorAll('.offices__list-view-group'));
+
+    function filterListViewItems() {
+        const hiddenItems = listViewItems.filter(element => {
+            if (element.getAttribute('data-type') === 'office' && !officesCheckbox.checked) {
+                return true;
+            }
+            if (element.getAttribute('data-type') === 'bankomat' && !bankomatsCheckbox.checked) {
+                return true;
+            }
+            if (element.getAttribute('data-type') === 'bankomat-partner' && !bankomatsPartnersCheckbox.checked) {
+                return true;
+            }
+            if (element.getAttribute('data-type') === 'terminal' && !terminalsCheckbox.checked) {
+                return true;
+            }
+
+            return false;
+        });
+
+
+        console.log('Filtering hidden items', hiddenItems)
+
+        listViewItems.forEach(item => item.classList.remove('hidden'));
+
+        hiddenItems.forEach(item => item.classList.add('hidden'));
+    }
+
     setMarkers();
+
+    filterListViewItems();
 
     checkboxes.forEach(function(checkbox) {
         checkbox.addEventListener('change', () => {
-           
-            if ((checkbox === allCheckbox) && allCheckbox.checked) {
-                console.log('Clicking on all checkbox')
-                checkboxes.forEach(box => box.checked = false);
-                allCheckbox.checked = true
+            if (checkbox === allCheckbox && allCheckbox.checked) {
+                console.log('Clicking on all checkbox');
+                checkboxes.forEach(box => (box.checked = false));
+                allCheckbox.checked = true;
             } else {
                 allCheckbox.checked = false;
             }
 
             setMarkers();
+
+            filterListViewItems();
         });
     });
 
@@ -174,7 +198,6 @@ function init() {
         });
 
         innerMapInstance.controls.add('zoomControl');
-      
 
         var pinOptions = null;
         if (type === 'office') {

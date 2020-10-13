@@ -25,6 +25,9 @@
     padding-bottom: 2.4rem;
     z-index: 1;
 
+    
+  
+
     @include breakpoint(mobile) {
         padding: 0;
     }
@@ -177,7 +180,7 @@
         }
     }
 
-    p:not([class]) {
+    table p:not([class]) {
         font-size: 1.6rem;
         line-height: 130%;
         color: #888888;
@@ -192,6 +195,8 @@
             margin-bottom: 0.6rem;
         }
     }
+
+    
 
     svg {
         width: 2rem;
@@ -239,5 +244,24 @@
 
     @include breakpoint(mobile) {
         display: none;
+    }
+}
+
+
+
+.table-remark {
+    margin-top: 3rem;
+}
+
+.table-remark p {
+        
+    font-size: 1.4rem;
+    line-height: 120%;
+    color: #a5a5a5;
+    max-width: none;
+    margin-bottom: 1.5rem;
+    @include breakpoint(mobile) {
+        margin: 1.5rem 0;
+        font-size: 1.2rem;
     }
 }

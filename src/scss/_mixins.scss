@@ -50,6 +50,11 @@
     object-position: center;
     font-family: 'object-fit: cover; object-position: center;';
 }
+@mixin objectFitCoverRight() {
+    object-fit: cover;
+    object-position: right center;
+    font-family: 'object-fit: cover; object-position: right center;';
+}
 
 @mixin objectFitCoverTop() {
     object-fit: cover;

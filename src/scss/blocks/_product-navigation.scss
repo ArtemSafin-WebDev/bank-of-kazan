@@ -336,6 +336,16 @@
     }
 }
 
+
+.product-navigation__search-close-btn svg {
+    width: 2.5rem;
+    height: 2.5rem;
+    @include breakpoint(mobile) {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+}
+
 .product-navigation__search-close-btn {
     margin-right: 2rem;
     opacity: 0;
