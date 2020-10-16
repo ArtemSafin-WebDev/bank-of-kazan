@@ -9500,9 +9500,9 @@ input.range-slider__amount {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -9536,7 +9536,8 @@ input.range-slider__amount {
   overflow: hidden;
   max-height: 0;
   -webkit-transition: max-height .3s;
-  transition: max-height .3s; }
+  transition: max-height .3s;
+  margin-top: .25rem; }
 
 .additional-info__accordion-content-inner {
   padding: 3.6rem;
@@ -13620,13 +13621,13 @@ input.range-slider__amount {
   overflow: hidden;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: opacity .3s, visibility 0s linear .3s;
-  transition: opacity .3s, visibility 0s linear .3s; }
+  -webkit-transition: opacity 0.3s, visibility 0s linear 0.3s;
+  transition: opacity 0.3s, visibility 0s linear 0.3s; }
   .success-shown .application__form-success {
     opacity: 1;
     visibility: visible;
-    -webkit-transition: opacity .3s, visibility .3s;
-    transition: opacity .3s, visibility .3s; }
+    -webkit-transition: opacity 0.3s, visibility 0.3s;
+    transition: opacity 0.3s, visibility 0.3s; }
   @media only screen and (max-width: 767px) {
     .application__form-success {
       border-bottom-left-radius: 0.8rem;
@@ -13672,22 +13673,47 @@ input.range-slider__amount {
   line-height: 4.6rem;
   margin-bottom: 4rem;
   color: var(--primary-color); }
+  .application__form-success-heading img {
+    width: 2.2rem;
+    height: 2.2rem;
+    display: inline-block;
+    margin-left: 1rem; }
+    @media only screen and (max-width: 767px) {
+      .application__form-success-heading img {
+        width: 1.8rem;
+        height: 1.8rem; } }
+  .application__form--small .application__form-success-heading {
+    font-size: 2.6rem;
+    line-height: 3.4rem;
+    margin-bottom: 3rem; }
   @media only screen and (max-width: 767px) {
     .application__form-success-heading {
       font-size: 2.4rem;
       line-height: 1.2;
-      margin-bottom: 2rem; } }
+      margin-bottom: 2rem; }
+      .application__form--small .application__form-success-heading {
+        font-size: 2.2rem;
+        line-height: 1.2;
+        margin-bottom: 2rem; } }
 
 .application__form-success-text {
   font-size: 1.8rem;
   line-height: 3.4rem;
   margin-bottom: 6rem;
   color: #959595; }
+  .application__form--small .application__form-success-text {
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+    margin-bottom: 3.3rem; }
   @media only screen and (max-width: 767px) {
     .application__form-success-text {
       font-size: 1.6rem;
       line-height: 1.2;
-      margin-bottom: 2.4rem; } }
+      margin-bottom: 2.4rem; }
+      .application__form--small .application__form-success-text {
+        font-size: 1.6rem;
+        line-height: 1.2;
+        margin-bottom: 2.4rem; } }
 
 .application__form-success-return-link {
   font-weight: 500;
@@ -13719,7 +13745,7 @@ input.range-slider__amount {
       font-size: 1.2rem;
       line-height: 1.2;
       padding: 1.6rem 2rem;
-      border-radius: .8rem; } }
+      border-radius: 0.8rem; } }
 
 .application__form-success-left-col {
   display: -webkit-box;
@@ -13733,9 +13759,28 @@ input.range-slider__amount {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 10rem; }
+  .application__form--small .application__form-success-left-col {
+    padding-top: 6rem;
+    padding-bottom: 6rem; }
   @media only screen and (max-width: 767px) {
     .application__form-success-left-col {
-      padding: 3rem; } }
+      padding: 3rem; }
+      .application__form--small .application__form-success-left-col {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        -webkit-box-flex: 1;
+            -ms-flex-positive: 1;
+                flex-grow: 1;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center; } }
 
 .application__form-success-right-col {
   background-color: var(--primary-color);
@@ -13750,12 +13795,17 @@ input.range-slider__amount {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column; }
+  .application__form--small .application__form-success-right-col {
+    padding-top: 6rem;
+    padding-bottom: 6rem; }
   @media only screen and (max-width: 767px) {
     .application__form-success-right-col {
       padding: 3rem 3rem;
       -webkit-box-flex: 1;
           -ms-flex-positive: 1;
-              flex-grow: 1; } }
+              flex-grow: 1; }
+      .application__form--small .application__form-success-right-col {
+        display: none; } }
 
 .application__form-success-image {
   position: absolute;
@@ -13775,6 +13825,9 @@ input.range-slider__amount {
   font-size: 5rem;
   line-height: 120%;
   margin-bottom: 3rem; }
+  .application__form--small .application__form-success-right-heading {
+    font-size: 2.8rem;
+    line-height: 120%; }
   @media only screen and (max-width: 767px) {
     .application__form-success-right-heading {
       font-size: 2.4rem;
@@ -13797,7 +13850,9 @@ input.range-slider__amount {
   display: block;
   margin-bottom: 2.7rem; }
   .application__form-success-marketplace-link:last-child {
-    margin-bottom: 0; }
+    margin-bottom: 0 !important; }
+  .application__form--small .application__form-success-marketplace-link {
+    margin-bottom: 2rem; }
   @media only screen and (max-width: 767px) {
     .application__form-success-marketplace-link {
       margin-bottom: 1.4rem; } }
@@ -13808,6 +13863,8 @@ input.range-slider__amount {
       flex-shrink: 0;
   display: block;
   width: auto; }
+  .application__form--small .application__form-success-marketplace-link-image {
+    height: 5.2rem; }
   @media only screen and (max-width: 767px) {
     .application__form-success-marketplace-link-image {
       height: 4rem; } }
@@ -14343,6 +14400,11 @@ input.range-slider__amount {
     @media only screen and (max-width: 968px) {
       .news-catalog__list--three-col .news-catalog__list-item {
         width: 50%; } }
+    .news-catalog__list--three-col .news-catalog__list-item--large {
+      width: 66.66%; }
+      @media only screen and (max-width: 968px) {
+        .news-catalog__list--three-col .news-catalog__list-item--large {
+          width: 100%; } }
     @media only screen and (max-width: 767px) {
       .news-catalog__list--three-col .news-catalog__list-item {
         width: 100%; } }
@@ -15837,3 +15899,68 @@ input.range-slider__amount {
   @media only screen and (max-width: 767px) {
     .similar-news__slider-arrow {
       display: none; } }
+
+.asv__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  @media only screen and (max-width: 767px) {
+    .asv__row {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: initial;
+          -ms-flex-pack: initial;
+              justify-content: initial;
+      -webkit-box-align: initial;
+          -ms-flex-align: initial;
+              align-items: initial; } }
+
+.asv__text-col {
+  max-width: 72rem;
+  width: 50%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  font-size: 1.8rem;
+  line-height: 130%; }
+  @media only screen and (max-width: 767px) {
+    .asv__text-col {
+      font-size: 1.6rem;
+      width: 100%;
+      max-width: none;
+      -webkit-box-flex: 0;
+          -ms-flex-positive: 0;
+              flex-grow: 0; } }
+
+.asv__insurance-col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.asv__insurance-from-date {
+  font-size: 1.6rem;
+  color: #888888;
+  line-height: 130%;
+  margin-right: 3.3rem; }
+  @media only screen and (max-width: 767px) {
+    .asv__insurance-from-date {
+      font-size: 1.4rem;
+      margin-right: 2rem; } }
+
+.asv__insurance-image {
+  width: 10rem;
+  height: auto; }
+  @media only screen and (max-width: 767px) {
+    .asv__insurance-image {
+      width: 5rem; } }

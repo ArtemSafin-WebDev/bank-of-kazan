@@ -14,7 +14,7 @@
         <link rel="stylesheet" href="css/styles.min.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
         <title>
-            Банк Казани - Новости
+            Банк Казани - Заявка на кредит
         </title>
         <script src="https://api-maps.yandex.ru/2.1/?apikey=1c9ab29b-1afd-4a21-b1ea-478c36667e22
         &lang=ru_RU" type="text/javascript">
@@ -327,309 +327,230 @@
 
     <div data-barba="wrapper">
         <div data-barba="container" data-barba-namespace="home">
-            <section class="news-catalog">
+            <section class="application">
     <div class="container">
-        <h2 class="news-catalog__heading">
-            Новости
-        </h2>
-        <div class="news-catalog__results">
-            <ul class="news-catalog__list news-catalog__list--three-col">
-                <li class="news-catalog__list-item">
-                    <a href="#" class="news-catalog__card-with-image">
-                        <div class="news-catalog__card-with-image-container">
-                            <img src="img/news/1.jpg" alt="" />
-                        </div>
-                        <h4 class="news-catalog__card-with-image-title">
-                            О режиме работы офисов
-                        </h4>
-                        <div class="news-catalog__date">
-                            12 мая 2020
-                        </div>
-                    </a>
-                </li>
-                <li class="news-catalog__list-item">
-                    <a href="#" class="news-catalog__card-without-image">
-                        <h4 class="news-catalog__card-without-image-title">
-                            О режиме работы офисов
-                        </h4>
-                        <div class="news-catalog__card-without-image-text">
-                            <p>
-                                Уважаемые клиенты!
-                            </p>
-                            <p>
-                                ООО КБЭР "Банк Казани" информирует Вас об изменении режима работы офисов с 12 мая 2020г.
-                            </p>
-                        </div>
-                        <div class="news-catalog__date">
-                            12 мая 2020
-                        </div>
-                    </a>
-                </li>
-                <li class="news-catalog__list-item">
-                    <a href="#" class="news-catalog__card-with-image">
-                        <div class="news-catalog__card-with-image-container">
-                            <img src="img/news/2.jpg" alt="" />
-                        </div>
-                        <h4 class="news-catalog__card-with-image-title">
-                            Как обезопасить себя и своих близких от участившихся случаев мошенничества
-                        </h4>
-                        <div class="news-catalog__date">
-                            12 мая 2020
-                        </div>
-                    </a>
-                </li>
-                <li class="news-catalog__list-item">
-                    <a href="#" class="news-catalog__card-without-image">
-                        <h4 class="news-catalog__card-without-image-title">
-                            Как обезопасить себя и своих близких от участившихся случаев мошенничества
-                        </h4>
-                        <div class="news-catalog__card-without-image-text">
-                            <p>
-                                Уважаемые клиенты, будьте бдительны!
-                            </p>
-                        </div>
-                        <div class="news-catalog__date">
-                            12 мая 2020
-                        </div>
-                    </a>
-                </li>
-                <li class="news-catalog__list-item news-catalog__list-item--large">
-                    <form class="news-catalog__subscription-form">
-                        <img src="img/subscription-form-bg.jpg" alt="" class="news-catalog__subscription-form-bg" />
-                        <div class="news-catalog__subscription-form-content">
-                            <h3 class="news-catalog__subscription-form-heading">
-                                Узнавайте о новых событиях первым
-                            </h3>
-                            <div class="news-catalog__subscription-form-text">
+        <div class="inner-container">
+            <a href="#" class="article__go-back">
+                <svg width="14" height="10" aria-hidden="true" class="icon-arrow-up">
+                    <use xlink:href="#arrow-up" />
+                </svg>
+                Вернуться</a
+            >
+            <h1 class="article__main-heading">
+                Заявка на кредит для бизнеса
+            </h1>
+            <div class="article__description">
+                <p>
+                    Кредит на обеспечение исполнения обязательств по контракту в рамках 44-ФЗ, 223-ФЗ. Принятие решения в течение 8 рабочих часов!
+                </p>
+            </div>
+            <form action="/" method="POST" class="application__form application__form--small" data-need-validation>
+                <div class="application__form-progress">
+                    <div class="application__form-progress-bar"></div>
+                </div>
+                
+                <div class="application__form-fields">
+                   
+                    <div class="application__form-fields-group">
+                        <label class="application__form-label">
+                            <span class="appliaction__form-label-text">
+                                Имя и фамилия
+                            </span>
+                            <span class="application__form-input-wrapper">
+                                <input type="text" name="name" class="application__form-input" required />
+                                <svg width="25" height="25" aria-hidden="true" class="icon-success">
+                                    <use xlink:href="#success" />
+                                </svg>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="application__form-fields-group">
+                        <label class="application__form-label">
+                            <span class="appliaction__form-label-text">
+                                Номер телефона
+                            </span>
+                            <span class="application__form-input-wrapper">
+                                <input type="tel" name="tel" class="application__form-input js-phone-input" required data-parsley-phone placeholder="+7" />
+                                <svg width="25" height="25" aria-hidden="true" class="icon-success">
+                                    <use xlink:href="#success" />
+                                </svg>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="application__form-fields-group">
+                        <label class="application__form-label">
+                            <span class="appliaction__form-label-text">
+                                E-mail
+                            </span>
+                            <span class="application__form-input-wrapper">
+                                <input type="email" name="email" class="application__form-input" required />
+                                <svg width="25" height="25" aria-hidden="true" class="icon-success">
+                                    <use xlink:href="#success" />
+                                </svg>
+                            </span>
+                        </label>
+                    </div>
+                   
+                    <div class="application__form-fields-group">
+                        <label class="application__form-label">
+                            <span class="appliaction__form-label-text">
+                                <span class="visually-hidden">
+                                    Согласие на обработку персональных данных
+                                </span>
+                            </span>
+                            <span class="application__form-input-wrapper">
+                                <label class="open-account__privacy-policy-checkbox">
+                                    <input type="checkbox" name="policy" class="open-account__privacy-policy-checkbox-input" checked="" required>
+                                    <span class="open-account__privacy-policy-checkbox-mark">
+                                        <svg width="16" height="16" aria-hidden="true" class="icon-checkmark">
+                                            <use xlink:href="#checkmark"></use>
+                                        </svg>
+                                    </span>
+                                    <span class="open-account__privacy-policy-checkbox-text">
+                                        Нажимая кнопку "Отправить", я соглашаюсь с условиями обработки персональных данных
+                                    </span>
+                                </label>
+                            </span>
+                        </label>
+                    </div>
+                    <button type="submit" class="application__form-submit">
+                        Оформить заявку
+                    </button>
+                </div>
+                <div class="application__form-success">
+                    <div class="application__form-success-row">
+                        <div class="application__form-success-left-col">
+                            <h4 class="application__form-success-heading">
+                                Готово!<img src="img/ok.svg" alt=""> <br>  Ваша заявка успешно оформлена
+                            </h4>
+                            <div class="application__form-success-text">
                                 <p>
-                                    Подписывайтесь на рассылку от Банка Казани, и будьте в курсе всех актуальных событий
+                                    Мы сформируем кредитное предложение на основе предоставленных данных и свяжемся с вами в течении 3 дней
                                 </p>
                             </div>
-                            <div class="news-catalog__subscription-form-btns">
-                                <input type="email" name="email" class="news-catalog__subscription-form-input" required placeholder="E-mail" />
-                                <button type="submit" class="news-catalog__subscription-form-submit">
-                                    Подписаться
-                                </button>
+                            <a href="#" class="application__form-success-return-link">
+                                Вернуться на главную
+                            </a>
+                        </div>
+                        <div class="application__form-success-right-col">
+                            <img src="img/success-small.jpg" alt="" class="application__form-success-image">
+                            <h5 class="application__form-success-right-heading">
+                                Бесплатный<br>мобильный банк
+                            </h5>
+
+                            <div class="application__form-success-marketplace-links">
+                                <a href="#" class="application__form-success-marketplace-link">
+                                    <img src="img/app-store.png" alt="" class="application__form-success-marketplace-link-image">
+                                </a>
+                                <a href="#" class="application__form-success-marketplace-link">
+                                    <img src="img/playstore.png" alt="" class="application__form-success-marketplace-link-image">
+                                </a>
+
                             </div>
                         </div>
-                    </form>
-                </li>
-                <li class="news-catalog__list-item">
-                    <a href="#" class="news-catalog__card-with-image">
-                        <div class="news-catalog__card-with-image-container">
-                            <img src="img/news/3.jpg" alt="" />
-                        </div>
-                        <h4 class="news-catalog__card-with-image-title">
-                            О внесении в единый реестр инвестиционных советников сведений об ООО КБЭР «Банк Казани»
-                        </h4>
-                        <div class="news-catalog__date">
-                            12 мая 2020
-                        </div>
-                    </a>
-                </li>
-                <li class="news-catalog__list-item">
-                    <a href="#" class="news-catalog__card-without-image">
-                        <h4 class="news-catalog__card-without-image-title">
-                            О внесении в единый реестр инвестиционных советников сведений об ООО КБЭР «Банк Казани»
-                        </h4>
-                        <div class="news-catalog__card-without-image-text">
-                            <p>
-                                Банк России 23.04.2020 принял положительное решение о внесении сведений об ООО КБЭР «Банк Казани» в единый реестр инвестиционных советников.
-                            </p>
-                        </div>
-                        <div class="news-catalog__date">
-                            12 мая 2020
-                        </div>
-                    </a>
-                </li>
-                <li class="news-catalog__list-item">
-                    <a href="#" class="news-catalog__card-with-image">
-                        <div class="news-catalog__card-with-image-container">
-                            <img src="img/news/1.jpg" alt="" />
-                        </div>
-                        <h4 class="news-catalog__card-with-image-title">
-                            О режиме работы офисов
-                        </h4>
-                        <div class="news-catalog__date">
-                            12 мая 2020
-                        </div>
-                    </a>
-                </li>
-                <li class="news-catalog__list-item">
-                    <a href="#" class="news-catalog__card-without-image">
-                        <h4 class="news-catalog__card-without-image-title">
-                            О режиме работы офисов
-                        </h4>
-                        <div class="news-catalog__card-without-image-text">
-                            <p>
-                                Уважаемые клиенты!
-                            </p>
-                            <p>
-                                ООО КБЭР "Банк Казани" информирует Вас об изменении режима работы офисов с 12 мая 2020г.
-                            </p>
-                        </div>
-                        <div class="news-catalog__date">
-                            12 мая 2020
-                        </div>
-                    </a>
-                </li>
-                <li class="news-catalog__list-item">
-                    <a href="#" class="news-catalog__card-with-image">
-                        <div class="news-catalog__card-with-image-container">
-                            <img src="img/news/2.jpg" alt="" />
-                        </div>
-                        <h4 class="news-catalog__card-with-image-title">
-                            Как обезопасить себя и своих близких от участившихся случаев мошенничества
-                        </h4>
-                        <div class="news-catalog__date">
-                            12 мая 2020
-                        </div>
-                    </a>
-                </li>
-                <li class="news-catalog__list-item">
-                    <a href="#" class="news-catalog__card-without-image">
-                        <h4 class="news-catalog__card-without-image-title">
-                            Как обезопасить себя и своих близких от участившихся случаев мошенничества
-                        </h4>
-                        <div class="news-catalog__card-without-image-text">
-                            <p>
-                                Уважаемые клиенты, будьте бдительны!
-                            </p>
-                        </div>
-                        <div class="news-catalog__date">
-                            12 мая 2020
-                        </div>
-                    </a>
-                </li>
-                <li class="news-catalog__list-item">
-                    <a href="#" class="news-catalog__card-with-image">
-                        <div class="news-catalog__card-with-image-container">
-                            <img src="img/news/3.jpg" alt="" />
-                        </div>
-                        <h4 class="news-catalog__card-with-image-title">
-                            О внесении в единый реестр инвестиционных советников сведений об ООО КБЭР «Банк Казани»
-                        </h4>
-                        <div class="news-catalog__date">
-                            12 мая 2020
-                        </div>
-                    </a>
-                </li>
-                <li class="news-catalog__list-item">
-                    <a href="#" class="news-catalog__card-without-image">
-                        <h4 class="news-catalog__card-without-image-title">
-                            О внесении в единый реестр инвестиционных советников сведений об ООО КБЭР «Банк Казани»
-                        </h4>
-                        <div class="news-catalog__card-without-image-text">
-                            <p>
-                                Банк России 23.04.2020 принял положительное решение о внесении сведений об ООО КБЭР «Банк Казани» в единый реестр инвестиционных советников.
-                            </p>
-                        </div>
-                        <div class="news-catalog__date">
-                            12 мая 2020
-                        </div>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div class="pagination">
-            <a href="#" class="pagination__back">
-                <svg width="10" height="14" aria-hidden="true" class="icon-arrow-left">
-                    <use xlink:href="#arrow-left"></use>
-                </svg>
-                <span class="pagination__link-text">
-                    Назад
-                </span>
-            </a>
-            <ul class="pagination__list">
-                <li class="pagination__list-item">
-                    <a href="#" class="pagination__link">
-                        1
-                    </a>
-                </li>
-                <li class="pagination__list-item">
-                    <a href="#" class="pagination__link">
-                        2
-                    </a>
-                </li>
-                <li class="pagination__list-item active">
-                    <a href="#" class="pagination__link">
-                        3
-                    </a>
-                </li>
-
-                <li class="pagination__list-item">
-                    <a href="#" class="pagination__link">
-                        4
-                    </a>
-                </li>
-                <li class="pagination__list-item pagination__list-item--more">
-                    <a href="#" class="pagination__link">
-                        ...
-                    </a>
-                </li>
-                <li class="pagination__list-item">
-                    <a href="#" class="pagination__link">
-                        45
-                    </a>
-                </li>
-            </ul>
-            <a href="#" class="pagination__next">
-                <div class="pagination__link-text">
-                    Вперед
+                    </div>
                 </div>
-
-                <svg width="10" height="14" aria-hidden="true" class="icon-arrow-right">
-                    <use xlink:href="#arrow-right"></use>
-                </svg>
-            </a>
+            </form>
         </div>
     </div>
 </section>
 
-            <section class="contact-bank">
-    <div class="contact-bank__inner">
-        <div class="contact-bank__bg">
-            <img src="img/contact-bank-bg.jpg" alt="" class="contact-bank__bg-image" />
-        </div>
-        <div class="container">
-            <div class="contact-bank__row">
-                <div class="contact-bank__left-col">
-                    <h2 class="contact-bank__heading">
-                        Связаться с банком
-                    </h2>
-                </div>
-                <div class="contact-bank__right-col">
-                    <div class="contact-bank__content">
-                        <h5 class="contact-bank__call-us">
-                            Позвоните нам
-                        </h5>
-                        <a href="tel:+78007751877" class="contact-bank__phone-link">8 (800) 77-518-77</a>
-
-                        <h5 class="contact-bank__leave-request">
-                            Или оставьте заявку и мы вам перезовним
-                        </h5>
-                        <form action="/" method="POST" class="contact-bank__form">
-                            <div class="contact-bank__input-wrapper">
-                                <input type="tel" name="phone" id="" class="contact-bank__input js-phone-input" placeholder="+7" required/>
+            <section class="advantages">
+    <div class="container">
+        <div class="inner-container">
+            <h2 class="products__heading">
+                Преимущества
+            </h2>
+            <ul class="advantages__list">
+                <li class="advantages__list-item">
+                    <a href="#" class="advantages__card">
+                        <h4 class="advantages__card-title">
+                            Оптимальные проценты
+                        </h4>
+                        <div class="advantages__card-text">
+                            <p>
+                                Пополнение оборотных средств (обновление товарного ассортимента, закуп сырья
+                            </p>
+                        </div>
+                        <div class="advantages__card-btns">
+                            <div class="advantages__card-btns-arrow">
+                                <svg width="9" height="14" aria-hidden="true" class="icon-arrow-right">
+                                    <use xlink:href="#arrow-right" />
+                                </svg>
                             </div>
-                            <button type="submit" class="contact-bank__submit-btn">
-                                перезвоните мне
-                            </button>
-                            <label class="open-account__privacy-policy-checkbox contact-bank__checkbox">
-                                <input type="checkbox" name="policy" class="open-account__privacy-policy-checkbox-input" checked="" required="" data-parsley-multiple="policy">
-                                <span class="open-account__privacy-policy-checkbox-mark open-account__privacy-policy-checkbox-mark--white">
-                                    <svg width="16" height="16" aria-hidden="true" class="icon-checkmark">
-                                        <use xlink:href="#checkmark"></use>
-                                    </svg>
-                                </span>
-                                <span class="open-account__privacy-policy-checkbox-text">
-                                    Нажимая кнопку "Отправить", я соглашаюсь с условиями обработки персональных данных
-                                </span>
-                            </label>
-                        </form>
-                    </div>
-                </div>
-            </div>
+                            <div class="advantages__card-btns-icon-container">
+                                <img src="img/for-business/fire.svg" alt="" class="advantages__card-btns-icon">
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="advantages__list-item">
+                    <a href="#" class="advantages__card">
+                        <h4 class="advantages__card-title">
+                            Индивидуальные кредитные условия
+                        </h4>
+                        <div class="advantages__card-text">
+                            <p>
+                                Пополнение оборотных средств (обновление товарного ассортимента, закуп сырья
+                            </p>
+                        </div>
+                        <div class="advantages__card-btns">
+                            <div class="advantages__card-btns-arrow">
+                                <svg width="9" height="14" aria-hidden="true" class="icon-arrow-right">
+                                    <use xlink:href="#arrow-right" />
+                                </svg>
+                            </div>
+                            <div class="advantages__card-btns-icon-container">
+                                <img src="img/for-business/ok.svg" alt="" class="advantages__card-btns-icon">
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="advantages__list-item">
+                    <a href="#" class="advantages__card">
+                        <h4 class="advantages__card-title">
+                            Персональный менеджер
+                        </h4>
+                        <div class="advantages__card-text">
+                            <p>
+                                Пополнение оборотных средств (обновление товарного ассортимента, закуп сырья
+                            </p>
+                        </div>
+                        <div class="advantages__card-btns">
+                            <div class="advantages__card-btns-arrow">
+                                <svg width="9" height="14" aria-hidden="true" class="icon-arrow-right">
+                                    <use xlink:href="#arrow-right" />
+                                </svg>
+                            </div>
+                            <div class="advantages__card-btns-icon-container">
+                                <img src="img/for-business/bubble.svg" alt="" class="advantages__card-btns-icon">
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="advantages__list-item">
+                    <a href="#" class="advantages__card">
+                        <h4 class="advantages__card-title">
+                            Персональный менеджер
+                        </h4>
+                        <div class="advantages__card-text">
+                            <p>
+                                Пополнение оборотных средств (обновление товарного ассортимента, закуп сырья
+                            </p>
+                        </div>
+                        <div class="advantages__card-btns">
+                            <div class="advantages__card-btns-arrow">
+                                <svg width="9" height="14" aria-hidden="true" class="icon-arrow-right">
+                                    <use xlink:href="#arrow-right" />
+                                </svg>
+                            </div>
+                            <div class="advantages__card-btns-icon-container">
+                                <img src="img/for-business/bubble.svg" alt="" class="advantages__card-btns-icon">
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
         </div>
     </div>
 </section>

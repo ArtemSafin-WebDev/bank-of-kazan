@@ -118,8 +118,17 @@
     .news-catalog__list--three-col & {
         width: 33.33%;
 
+        
+
         @include breakpoint(small-tablet) {
             width: 50%;
+        }
+
+        &--large {
+            width: 66.66%;
+            @include breakpoint(small-tablet) {
+                width: 100%;
+            }
         }
 
         @include breakpoint(mobile) {
@@ -127,6 +136,8 @@
         }
     }
 
+
+   
     &--fullwidth {
         width: 100%;
     }

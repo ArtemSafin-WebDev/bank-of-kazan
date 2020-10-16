@@ -52,7 +52,7 @@
     margin-right: 1.8rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     background-color: #fff;
     border-radius: 50%;
@@ -85,6 +85,7 @@
     overflow: hidden;
     max-height: 0;
     transition: max-height .3s;
+    margin-top: .25rem;
 }
 
 .additional-info__accordion-content-inner {
