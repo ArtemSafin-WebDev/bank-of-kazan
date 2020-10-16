@@ -716,16 +716,26 @@
     flex-direction: column;
     background-color: #fff;
     border-radius: 1rem;
-    padding: 1.6rem 1.2rem;
-    align-items: center;
+    overflow: hidden;
+    
     box-shadow: 0 0 1rem rgba(black, .2);
 }
 
 
 .page-header__contacts-link {
-    margin-bottom: 2.5rem;
+    
     flex-shrink: 0;
-    transition: color .2s;
+    transition: color .2s, background-color .2s;
+    display: block;
+    position: relative;
+    display: block;
+    width: 100%;
+    &::after {
+        content: '';
+        display: block;
+        width: 100%;
+        padding-bottom: 100%;
+    }
     &:last-child {
         margin-bottom: 0;
     }
@@ -738,9 +748,14 @@
         height: 2rem;
         display: block;
         fill: currentColor;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
     }
 
     &:hover {
-        color: black;
+        color: white;
+        background-color: var(--social-bg-color, #94c22b);
     }
 }
