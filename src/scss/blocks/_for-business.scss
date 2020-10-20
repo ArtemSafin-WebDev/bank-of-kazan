@@ -347,18 +347,28 @@
     text-transform: uppercase;
     display: inline-flex;
     align-items: center;
-
+    transition: background-color .2s, color .2s;
     svg {
         fill: var(--primary-color);
         width: 1rem;
         height: 1.4rem;
         flex-shrink: 0;
         margin-left: 1rem;
+        transition: fill .2s;
         @include breakpoint(mobile) {
             width: 0.7rem;
             height: 1.1rem;
             margin-left: 1.5rem;
             
+        }
+    }
+
+    &:hover {
+        background-color: var(--primary-color);
+        color: white;
+
+        svg {
+            fill: white;
         }
     }
 

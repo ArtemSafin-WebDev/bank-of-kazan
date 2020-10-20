@@ -53,11 +53,14 @@ export default function() {
                         nextEl: sliderWrapper.querySelector('.navigation__content-inner-slider-arrow--next'),
                         prevEl: sliderWrapper.querySelector('.navigation__content-inner-slider-arrow--prev')
                     },
+                    autoplay: {
+                        delay: 4000
+                    },
                     pagination: {
                         el: sliderWrapper.querySelector('.navigation__content-inner-slider-pagination'),
                         type: 'bullets'
                     }
-                }
+                };
 
                 let innerSlider = new Swiper(container, innerSliderOptions);
 
@@ -85,13 +88,19 @@ export default function() {
                     }
                 });
 
+
+                window.addEventListener('orientationchange', () => {
+                    innerSlider.update();
+                    bgSlider.update();
+                    btnSlider.update();
+                })
+
                 bgSlider.controller.control = btnSlider;
                 innerSlider.controller.control = bgSlider;
                 // btnSlider.controller.control = innerSlider;
 
                 // window.addEventListener('orientationchange', function(event) {
                 //     innerSlider.destroy(true);
-                   
 
                 //     innerSlider = new Swiper(container, innerSliderOptions);
                 // });

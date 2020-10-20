@@ -282,13 +282,13 @@
             & > span {
                 // background-color: white;
                 &:nth-child(1) {
-                    transform: translateZ(0) translateY(5px) rotate(45deg);
+                    transform: translateZ(0) translateY(.5rem) rotate(45deg);
                 }
                 &:nth-child(2) {
                     opacity: 0;
                 }
                 &:nth-child(3) {
-                    transform: translateZ(0) translateY(-5px) rotate(-45deg);
+                    transform: translateZ(0) translateY(-.5rem) rotate(-45deg);
                 }
             }
         }
@@ -361,11 +361,11 @@
     flex-shrink: 0;
     
     & > span {
-        width: 14px;
-        height: 2px;
+        width: 1.4rem;
+        height: .2rem;
         background: rgba(white, 0.6);
         flex-shrink: 0;
-        margin-bottom: 3px;
+        margin-bottom: .3rem;
         transition: opacity 0.2s, transform 0.2s, background-color 0.2s;
         transform: translateZ(0);
         outline: 1px solid transparent;
@@ -383,13 +383,13 @@
         & > span {
             background-color: white;
             &:nth-child(1) {
-                transform: translateZ(0) translateY(5px) rotate(45deg);
+                transform: translateZ(0) translateY(.5rem) rotate(45deg);
             }
             &:nth-child(2) {
                 opacity: 0;
             }
             &:nth-child(3) {
-                transform: translateZ(0) translateY(-5px) rotate(-45deg);
+                transform: translateZ(0) translateY(-.5rem) rotate(-45deg);
             }
         }
     }

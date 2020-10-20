@@ -151,6 +151,7 @@
     display: flex;
     align-items: center;
     user-select: none;
+    cursor: pointer;
 }
 
 .catalog__filters-checkmarks-input {
@@ -208,7 +209,7 @@
     opacity: 1;
 }
 .catalog__filters-checkmarks-input:checked ~ .catalog__filters-checkbox-mark {
-    background-color: #fff;
+    // background-color: #fff;
 }
 
 .catalog__filters-sliders {

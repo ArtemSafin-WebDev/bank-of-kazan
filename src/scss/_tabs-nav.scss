@@ -8,6 +8,7 @@
         -webkit-overflow-scrolling: touch;
         margin: -1rem calc(-1 * var(--content-padding));
         padding: 1rem var(--content-padding);
+        @include noScrollbar();
         &::after {
             content: '';
             flex-shrink: 0;

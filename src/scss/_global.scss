@@ -11,7 +11,9 @@
     --max-inner-container-width: 123.2rem;
     --content-padding: 4rem;
     --primary-color: #94c22b;
+    --primary-color-hover: #7dad0d;
     --secondary-color: #641f76;
+    --secondary-color-hover: #500c61;
     --dark-text-color: #000000;
     --light-text-color: #8a8a8a;
     --helvetica: 'Open Sans', 'HelveticaNeueCyr', 'Roboto', sans-serif;
@@ -192,7 +194,6 @@ img.lazyload:not([src]) {
         overflow: hidden;
     }
 }
-
 
 .icon-search {
     transform: scaleX(-1);

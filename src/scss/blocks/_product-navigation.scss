@@ -736,12 +736,23 @@
     margin-right: 1.8rem;
     display: inline-flex;
     user-select: none;
-    &--violet {
-        background-color: var(--secondary-color);
-    }
+    transition: background-color .2s;
+   
     &:link,
     &:visited {
         color: white;
+    }
+
+    &:hover {
+        background-color: var(--primary-color-hover);
+    }
+
+
+    &--violet {
+        background-color: var(--secondary-color);
+        &:hover {
+            background-color: var(--secondary-color-hover);
+        }
     }
 
     @include breakpoint(mobile) {
@@ -1040,9 +1051,14 @@
     text-transform: uppercase;
     margin-right: 3.6rem;
     color: white;
+    transition: background-color .2s;
     &:link,
     &:visited {
         color: white;
+    }
+
+    &:hover {
+        background-color: var(--primary-color-hover);
     }
 
     @include breakpoint(mobile) {
@@ -1137,6 +1153,7 @@
     padding: 1.8rem 3.2rem;
     border: 1px solid var(--primary-color);
     border-radius: 1rem;
+    transition: color .2s, border-color .2s;
     svg {
         width: 2.4rem;
         height: 2.4rem;
@@ -1147,6 +1164,11 @@
     &:link,
     &:visited {
         color: var(--primary-color);
+    }
+
+    &:hover {
+        color: var(--primary-color-hover);
+        border-color: var(--primary-color-hover);
     }
 
 

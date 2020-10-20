@@ -1,8 +1,25 @@
 .container {
-    width: 100%;
-    max-width: calc(var(--max-container-width, 1200px) + (var(--content-padding, 20px) * 2));
+    width: auto;
+    max-width: var(--max-container-width);
+    box-sizing: content-box;
+    // max-width: calc(var(--max-container-width, 1200px) + (var(--content-padding, 20px) * 2));
     margin: 0 auto;
     padding: 0 var(--content-padding);
+
+
+
+    @supports (width: max(20vw, 100px)) {
+        padding-left: max(env(safe-area-inset-left, 1.4rem), var(--content-padding));
+        padding-right: max(env(safe-area-inset-right, 1.4rem), var(--content-padding));
+    }
+
+   
+    
+
+    & > * {
+        box-sizing: border-box;
+    }
+
 
     &--flex {
         display: flex;

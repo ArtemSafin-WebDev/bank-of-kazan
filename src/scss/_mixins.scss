@@ -1,6 +1,17 @@
+@function max($numbers...) {
+    @return m#{a}x(#{$numbers});
+}
+
+@function min($numbers...) {
+    @return m#{i}n(#{$numbers});
+}
+
+
 @mixin noHighlight() {
     -webkit-tap-highlight-color: transparent;
 }
+
+
 
 @mixin visuallyHidden() {
     border: 0;
@@ -28,7 +39,6 @@
         @content;
     }
 }
-
 
 @mixin fullpageBG {
     position: relative;
@@ -106,7 +116,7 @@
             @content;
         }
     } @else if $class == mobile {
-        @media only screen and (max-width: (767px)) {
+        @media only screen and (max-width: (680px)) {
             @content;
         }
     } @else if $class == small-mobile {
@@ -138,7 +148,7 @@
             @content;
         }
     } @else if $class == small-tablet {
-        @media only screen and (min-width: 768px) {
+        @media only screen and (min-width: 681px) {
             @content;
         }
     } @else if $class == mobile {
@@ -147,8 +157,6 @@
         }
     }
 }
-
-
 
 @mixin noScrollbar {
     &::-webkit-scrollbar * {
