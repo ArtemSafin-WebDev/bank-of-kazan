@@ -66,6 +66,6 @@
     transition: color .2s;
     .no-touch &:hover,
     .touch &:active {
-        color: black;
+        color: var(--primary-color-hover);
     }
 }

@@ -297,7 +297,7 @@
 
     .no-touch &:hover,
     .touch &:active {
-        background-color: var(--secondary-color);
+        background-color: var(--primary-color-hover);
     }
 
     @include breakpoint(mobile) {
@@ -325,7 +325,7 @@
 
     .no-touch &:hover,
     .touch &:active {
-        color: var(--secondary-color);
+        color: var(--primary-color-hover);
     }
 
     @include breakpoint(mobile) {

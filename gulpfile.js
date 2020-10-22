@@ -16,6 +16,7 @@ const webpackconfig = require('./webpack.config.js');
 const webpackstream = require('webpack-stream');
 const filelist = require('gulp-filelist');
 const debug = require('gulp-debug');
+const changed = require('gulp-changed');
 
 gulp.task('sprite', function() {
     return gulp
@@ -36,13 +37,13 @@ gulp.task('sprite', function() {
 gulp.task('nunjucks-recompile-all', function() {
     return gulp
         .src('./src/*.+(html|nunjucks|njk)')
-        .pipe(debug({title: 'nunjucks compiler:'}))
+        .pipe(debug({ title: 'nunjucks compiler:' }))
         .pipe(
             nunjucksRender({
                 path: ['./src/templates', './src/img/symbol']
             })
         )
-        
+
         .pipe(gulp.dest('build'))
         .pipe(browserSync.stream());
 });
@@ -50,14 +51,13 @@ gulp.task('nunjucks-recompile-all', function() {
 gulp.task('nunjucks', function() {
     return gulp
         .src('./src/*.+(html|nunjucks|njk)')
-        .pipe(debug({title: 'nunjucks compiler:'}))
+        .pipe(debug({ title: 'nunjucks compiler:' }))
         .pipe(cache('nunjucks'))
         .pipe(
             nunjucksRender({
                 path: ['./src/templates', './src/img/symbol']
             })
         )
-        
         .pipe(gulp.dest('build'))
         .pipe(browserSync.stream());
 });
@@ -115,9 +115,9 @@ gulp.task('serve', function() {
 gulp.task('images', function() {
     return gulp
         .src('./src/img/**/*')
-        .pipe(newer('./build/img'))
+        // .pipe(changed('./build/img'))
         .pipe(gulp.dest('./build/img'))
-        .pipe(browserSync.stream());
+        .pipe(browserSync.reload({ stream: true }));
 });
 
 gulp.task('assets', function() {

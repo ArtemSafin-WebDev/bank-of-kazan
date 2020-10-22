@@ -2309,13 +2309,21 @@ img.lazyload:not([src]) {
     -webkit-transform: rotate(180deg);
             transform: rotate(180deg); }
   .page-header__city:hover .page-header__about-bank-link-cross > span:nth-child(1) {
-    -webkit-transform: translateZ(0) translateY(0.5rem) rotate(45deg);
-            transform: translateZ(0) translateY(0.5rem) rotate(45deg); }
+    -webkit-transform: translateZ(0) translateY(5px) rotate(45deg);
+            transform: translateZ(0) translateY(5px) rotate(45deg); }
+    @media only screen and (max-width: 1200px) {
+      .page-header__city:hover .page-header__about-bank-link-cross > span:nth-child(1) {
+        -webkit-transform: translateZ(0) translateY(3px) rotate(45deg);
+                transform: translateZ(0) translateY(3px) rotate(45deg); } }
   .page-header__city:hover .page-header__about-bank-link-cross > span:nth-child(2) {
     opacity: 0; }
   .page-header__city:hover .page-header__about-bank-link-cross > span:nth-child(3) {
-    -webkit-transform: translateZ(0) translateY(-0.5rem) rotate(-45deg);
-            transform: translateZ(0) translateY(-0.5rem) rotate(-45deg); }
+    -webkit-transform: translateZ(0) translateY(-5px) rotate(-45deg);
+            transform: translateZ(0) translateY(-5px) rotate(-45deg); }
+    @media only screen and (max-width: 1200px) {
+      .page-header__city:hover .page-header__about-bank-link-cross > span:nth-child(3) {
+        -webkit-transform: translateZ(0) translateY(-3px) rotate(-45deg);
+                transform: translateZ(0) translateY(-3px) rotate(-45deg); } }
 
 .page-header__city-dropdown {
   position: absolute;
@@ -2375,12 +2383,12 @@ img.lazyload:not([src]) {
   -ms-flex-negative: 0;
       flex-shrink: 0; }
   .page-header__about-bank-link-cross > span {
-    width: 1.4rem;
-    height: .2rem;
+    width: 14px;
+    height: 2px;
     background: rgba(255, 255, 255, 0.6);
     -ms-flex-negative: 0;
         flex-shrink: 0;
-    margin-bottom: .3rem;
+    margin-bottom: 3px;
     -webkit-transition: opacity 0.2s, background-color 0.2s, -webkit-transform 0.2s;
     transition: opacity 0.2s, background-color 0.2s, -webkit-transform 0.2s;
     transition: opacity 0.2s, transform 0.2s, background-color 0.2s;
@@ -2390,19 +2398,14 @@ img.lazyload:not([src]) {
     outline: 1px solid transparent; }
     .page-header__about-bank-link-cross > span:last-child {
       margin-bottom: 0; }
+    @media only screen and (max-width: 1200px) {
+      .page-header__about-bank-link-cross > span {
+        width: 8px;
+        height: 1px;
+        margin-bottom: 2px; } }
   .dark-nav-text:not(.product-nav-menu-open):not(.bank-menu-shown) .page-header__about-bank-link-cross > span,
   .dark-main-nav.violet-backplate:not(.bank-menu-shown) .page-header__about-bank-link-cross > span {
     background-color: var(--primary-color); }
-  .page-header__about-bank-link.active .page-header__about-bank-link-cross > span {
-    background-color: white; }
-    .page-header__about-bank-link.active .page-header__about-bank-link-cross > span:nth-child(1) {
-      -webkit-transform: translateZ(0) translateY(0.5rem) rotate(45deg);
-              transform: translateZ(0) translateY(0.5rem) rotate(45deg); }
-    .page-header__about-bank-link.active .page-header__about-bank-link-cross > span:nth-child(2) {
-      opacity: 0; }
-    .page-header__about-bank-link.active .page-header__about-bank-link-cross > span:nth-child(3) {
-      -webkit-transform: translateZ(0) translateY(-0.5rem) rotate(-45deg);
-              transform: translateZ(0) translateY(-0.5rem) rotate(-45deg); }
   .dark-nav-text:not(.product-nav-menu-open):not(.bank-menu-shown) .page-header__about-bank-link.active .page-header__about-bank-link-cross > span {
     background-color: var(--primary-color); }
 
@@ -3522,7 +3525,7 @@ input.range-slider__amount {
   transition: color .2s; }
   .no-touch .rating__form-submit:hover,
   .touch .rating__form-submit:active {
-    color: black; }
+    color: var(--primary-color-hover); }
 
 .products {
   padding-top: 8.5rem;
@@ -4209,8 +4212,7 @@ input.range-slider__amount {
     top: 0;
     width: 100%;
     height: 100%;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(18.23%, rgba(0, 0, 0, 0.287)), color-stop(75.52%, rgba(0, 0, 0, 0))), -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.45)), to(rgba(0, 0, 0, 0.45)));
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.287) 18.23%, rgba(0, 0, 0, 0) 75.52%), linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)); }
+    background: rgba(0, 0, 0, 0.3); }
 
 .news__card-preview-backdrop-image {
   position: absolute;
@@ -5140,7 +5142,7 @@ input.range-slider__amount {
   .navigation__content-inner-slider-link:link, .navigation__content-inner-slider-link:visited {
     color: white; }
   .navigation__content-inner-slider-link:hover {
-    background-color: var(--secondary-color); }
+    background-color: var(--primary-color-hover); }
   .navigation__content-inner-slider-link--hollow {
     background: transparent;
     border: 1px solid var(--primary-color); }
@@ -5533,7 +5535,11 @@ input.range-slider__amount {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  color: white; }
+  color: white;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0); }
   .navigation__promo:link, .navigation__promo:visited {
     color: white; }
   .navigation__promo:hover img {
@@ -5567,7 +5573,7 @@ input.range-slider__amount {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.3); }
+    background-color: rgba(0, 0, 0, 0.1); }
   .navigation__promo:last-child {
     margin-bottom: 0; }
   @media only screen and (max-width: 680px) {
@@ -5599,7 +5605,8 @@ input.range-slider__amount {
 .navigation__promo-right-col {
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  margin-left: 2rem; }
+  margin-left: 2rem;
+  display: none; }
 
 .navigation__promo-arrow {
   display: -webkit-box;
@@ -6324,7 +6331,7 @@ input.range-slider__amount {
   transition: background-color 0.2s;
   text-align: center; }
   .callback__submit-btn:hover {
-    background-color: var(--secondary-color); }
+    background-color: var(--primary-color-hover); }
   @media only screen and (max-width: 680px) {
     .callback__submit-btn {
       font-size: 1.2rem;
@@ -6677,7 +6684,7 @@ input.range-slider__amount {
         height: 1.2rem; } }
   .no-touch .calculator__converter-apply-btn:hover,
   .touch .calculator__converter-apply-btn:active {
-    background-color: var(--secondary-color); }
+    background-color: var(--primary-color-hover); }
   @media only screen and (max-width: 680px) {
     .calculator__converter-apply-btn {
       font-weight: 500;
@@ -6700,7 +6707,7 @@ input.range-slider__amount {
     color: var(--primary-color); }
   .no-touch .calculator__converter-details-btn:hover,
   .touch .calculator__converter-details-btn:active {
-    color: var(--secondary-color); }
+    color: var(--primary-color-hover); }
   @media only screen and (max-width: 680px) {
     .calculator__converter-details-btn {
       font-weight: 500;
@@ -8721,19 +8728,21 @@ input.range-slider__amount {
   padding: 1.8rem 3.2rem;
   border: 1px solid var(--primary-color);
   border-radius: 1rem;
-  -webkit-transition: color .2s, border-color .2s;
-  transition: color .2s, border-color .2s; }
+  -webkit-transition: color .2s, border-color .2s, background-color .2s;
+  transition: color .2s, border-color .2s, background-color .2s; }
   .product-navigation__account-login svg {
     width: 2.4rem;
     height: 2.4rem;
     -ms-flex-negative: 0;
         flex-shrink: 0;
-    margin-right: 1.4rem; }
+    margin-right: 1.4rem;
+    fill: currentColor; }
   .product-navigation__account-login:link, .product-navigation__account-login:visited {
     color: var(--primary-color); }
   .product-navigation__account-login:hover {
-    color: var(--primary-color-hover);
-    border-color: var(--primary-color-hover); }
+    color: white;
+    border-color: var(--primary-color);
+    background-color: var(--primary-color); }
   @media only screen and (max-width: 680px) {
     .product-navigation__account-login {
       font-weight: 500;
@@ -9422,7 +9431,7 @@ input.range-slider__amount {
     color: white; }
   .no-touch .flexible-tariffs__card-link:hover,
   .touch .flexible-tariffs__card-link:active {
-    background-color: var(--secondary-color); }
+    background-color: var(--primary-color-hover); }
   @media only screen and (max-width: 680px) {
     .flexible-tariffs__card-link {
       font-weight: 500;
@@ -9634,9 +9643,9 @@ input.range-slider__amount {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   font-size: 1.8rem;
   line-height: 130%;
   -webkit-transition: color .2s;
@@ -10248,8 +10257,8 @@ input.range-slider__amount {
       .article__advantages-slider .swiper-slide {
         width: 90%; } }
   .article__advantages-slider .swiper-container {
-    margin: -2rem;
-    padding: 2rem; }
+    margin: -1.6rem;
+    padding: 1.6rem; }
     @media only screen and (max-width: 680px) {
       .article__advantages-slider .swiper-container {
         padding: 0;
@@ -10280,13 +10289,13 @@ input.range-slider__amount {
       padding: 2.5rem;
       border-radius: 0.8rem; } }
 
-.article__advantages-card-title {
+.article__advantages-card .article__advantages-card-title {
   font-weight: 500;
   font-size: 2.2rem;
   line-height: 120%;
   margin-bottom: 2.5rem; }
   @media only screen and (max-width: 680px) {
-    .article__advantages-card-title {
+    .article__advantages-card .article__advantages-card-title {
       font-size: 1.8rem;
       margin-bottom: 1.5rem; } }
 
@@ -10389,7 +10398,7 @@ input.range-slider__amount {
   .article__advantages-arrow:not(.swiper-button-disabled):hover .article__advantages-arrow-content {
     background-color: var(--secondary-color); }
     .article__advantages-arrow:not(.swiper-button-disabled):hover .article__advantages-arrow-content svg {
-      fill: var(--primary-color); }
+      fill: white; }
 
 .article__advantages-arrow-content {
   background: #f7f7f7;
@@ -10960,7 +10969,7 @@ input.range-slider__amount {
   .open-account__submit:hover,
   .touch
   .open-account__submit:active {
-    background-color: var(--secondary-color); }
+    background-color: var(--primary-color-hover); }
   @media only screen and (max-width: 680px) {
     .open-account__btns-next-btn,
     .open-account__submit {
@@ -11433,7 +11442,7 @@ input.range-slider__amount {
     color: white; }
   .no-touch .catalogs__offer-form-submit:hover,
   .touch .catalogs__offer-form-submit:active {
-    background-color: var(--secondary-color); }
+    background-color: var(--primary-color-hover); }
   @media only screen and (max-width: 680px) {
     .catalogs__offer-form-submit {
       padding: 1.4rem 1.5rem;
@@ -11620,7 +11629,7 @@ input.range-slider__amount {
   .catalog__cards-block-btn-link-filled:link, .catalog__cards-block-btn-link-filled:visited {
     color: white; }
   .catalog__cards-block-btn-link-filled:hover {
-    background-color: var(--secondary-color); }
+    background-color: var(--primary-color-hover); }
   @media only screen and (max-width: 680px) {
     .catalog__cards-block-btn-link-filled {
       padding: 1.6rem 2rem;
@@ -11637,7 +11646,7 @@ input.range-slider__amount {
   .catalog__cards-block-btn-link:link, .catalog__cards-block-btn-link:visited {
     color: var(--primary-color); }
   .catalog__cards-block-btn-link:hover {
-    color: black; }
+    color: var(--primary-color-hover); }
   @media only screen and (max-width: 680px) {
     .catalog__cards-block-btn-link {
       font-size: 1.2rem; } }
@@ -12245,7 +12254,7 @@ input.range-slider__amount {
   .contact-bank__submit-btn:link, .contact-bank__submit-btn:visited {
     color: white; }
   .contact-bank__submit-btn:hover {
-    background-color: var(--secondary-color); }
+    background-color: var(--primary-color-hover); }
   @media only screen and (max-width: 680px) {
     .contact-bank__submit-btn {
       min-height: auto;
@@ -14146,7 +14155,7 @@ input.range-slider__amount {
   -ms-flex-item-align: start;
       align-self: flex-start; }
   .announcement__btn:hover {
-    background-color: var(--secondary-color); }
+    background-color: var(--primary-color-hover); }
   @media only screen and (max-width: 680px) {
     .announcement__btn {
       font-size: 1.2rem;
@@ -14700,7 +14709,7 @@ input.range-slider__amount {
   .news-catalog__subscription-form-submit:link, .news-catalog__subscription-form-submit:visited {
     color: white; }
   .news-catalog__subscription-form-submit:hover {
-    background-color: var(--secondary-color); }
+    background-color: var(--primary-color-hover); }
   @media only screen and (max-width: 680px) {
     .news-catalog__subscription-form-submit {
       font-size: 1.4rem;

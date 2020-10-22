@@ -29,6 +29,7 @@ import fullscreenMenu from './fullscreenMenu';
 import similarNewsSlider from './similarNewsSlider';
 import pageHeaderContacts from './pageHeaderContacts';
 import lotsSlider from './lotsSlider';
+import officesForms from './officesInputs';
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -50,6 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
     similarNewsSlider();
     pageHeaderContacts();
     lotsSlider();
+    officesForms();
     barba.init({
         debug: true,
         logLevel: 'error',

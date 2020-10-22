@@ -282,13 +282,20 @@
             & > span {
                 // background-color: white;
                 &:nth-child(1) {
-                    transform: translateZ(0) translateY(.5rem) rotate(45deg);
+                    transform: translateZ(0) translateY(5px) rotate(45deg);
+
+                    @include breakpoint(laptop) {
+                        transform: translateZ(0) translateY(3px) rotate(45deg);
+                    }
                 }
                 &:nth-child(2) {
                     opacity: 0;
                 }
                 &:nth-child(3) {
-                    transform: translateZ(0) translateY(-.5rem) rotate(-45deg);
+                    transform: translateZ(0) translateY(-5px) rotate(-45deg);
+                    @include breakpoint(laptop) {
+                        transform: translateZ(0) translateY(-3px) rotate(-45deg);
+                    }
                 }
             }
         }
@@ -320,15 +327,10 @@
 }
 
 .page-header__city-dropdown-link {
-  
     padding: .9rem 2.6rem;
-   
     color: black;
-
     display: block;
-
     transition: color .2s, background-color 0.2s;
-
     font-size: 1.8rem;
     line-height: 120%;
     &:last-child {
@@ -338,7 +340,6 @@
     &:visited {
         color: black;
     }
-
 
     &:hover {
         background: #F5F5F5;
@@ -361,38 +362,47 @@
     flex-shrink: 0;
     
     & > span {
-        width: 1.4rem;
-        height: .2rem;
+        width: 14px;
+        height: 2px;
         background: rgba(white, 0.6);
         flex-shrink: 0;
-        margin-bottom: .3rem;
+        margin-bottom: 3px;
         transition: opacity 0.2s, transform 0.2s, background-color 0.2s;
         transform: translateZ(0);
         outline: 1px solid transparent;
         &:last-child {
             margin-bottom: 0;
         }
+
+        @include breakpoint(laptop) {
+            width: 8px;
+            height: 1px;
+            margin-bottom: 2px;
+        }
     }
+
+
+    
 
     .dark-nav-text:not(.product-nav-menu-open):not(.bank-menu-shown) & > span,
     .dark-main-nav.violet-backplate:not(.bank-menu-shown) & > span {
         background-color: var(--primary-color);
     }
 
-    .page-header__about-bank-link.active & {
-        & > span {
-            background-color: white;
-            &:nth-child(1) {
-                transform: translateZ(0) translateY(.5rem) rotate(45deg);
-            }
-            &:nth-child(2) {
-                opacity: 0;
-            }
-            &:nth-child(3) {
-                transform: translateZ(0) translateY(-.5rem) rotate(-45deg);
-            }
-        }
-    }
+    // .page-header__about-bank-link.active & {
+    //     & > span {
+    //         background-color: white;
+    //         &:nth-child(1) {
+    //             transform: translateZ(0) translateY(5px) rotate(45deg);
+    //         }
+    //         &:nth-child(2) {
+    //             opacity: 0;
+    //         }
+    //         &:nth-child(3) {
+    //             transform: translateZ(0) translateY(-5px) rotate(-45deg);
+    //         }
+    //     }
+    // }
 
     .dark-nav-text:not(.product-nav-menu-open):not(.bank-menu-shown) .page-header__about-bank-link.active & {
         & > span {

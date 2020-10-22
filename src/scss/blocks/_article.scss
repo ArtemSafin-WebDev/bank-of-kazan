@@ -634,8 +634,8 @@
     }
 
     .swiper-container {
-        margin: -2rem;
-        padding: 2rem;
+        margin: -1.6rem;
+        padding: 1.6rem;
 
         @include breakpoint(mobile) {
             padding: 0;
@@ -665,7 +665,7 @@
     }
 }
 
-.article__advantages-card-title {
+.article__advantages-card .article__advantages-card-title {
     font-weight: 500;
     font-size: 2.2rem;
     line-height: 120%;
@@ -775,7 +775,7 @@
                 background-color: var(--secondary-color);
 
                 svg {
-                    fill: var(--primary-color);
+                    fill: white;
                 }
             }
         }

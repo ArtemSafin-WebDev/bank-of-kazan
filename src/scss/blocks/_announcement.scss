@@ -76,7 +76,7 @@
     text-align: center;
     align-self: flex-start;
     &:hover {
-        background-color: var(--secondary-color);
+        background-color: var(--primary-color-hover);
     }
 
     @include breakpoint(mobile) {
