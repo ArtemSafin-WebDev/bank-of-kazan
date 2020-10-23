@@ -10,7 +10,7 @@ export default function fullscreenMenu() {
     const fullscreenMenu = document.querySelector('.fullscreen-nav-menu');
 
     if (catalogMenu && fullscreenMenu) {
-        const links = Array.from(catalogMenu.children);
+        const links = Array.from(catalogMenu.querySelectorAll('.catalog__menu-link:not(.js-simple-link)'));
 
         const initialActiveLinkIndex = links.findIndex(element => element.classList.contains('active'));
 

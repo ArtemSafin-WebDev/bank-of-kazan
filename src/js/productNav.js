@@ -4,7 +4,7 @@ export default function() {
     productNavElements.forEach(element => {
         const categoryLinks = Array.from(element.querySelectorAll('.js-product-nav-category-link'));
         const categoryLayers = Array.from(element.querySelectorAll('.js-product-nav-layer'));
-        const menuLinks = Array.from(element.querySelectorAll('.js-product-nav-menu-link'));
+        const menuLinks = Array.from(element.querySelectorAll('.js-product-nav-menu-link:not(.js-simple-link)'));
         const menuItems = Array.from(element.querySelectorAll('.js-product-nav-menu-item'));
         const searchForm = element.querySelector('.js-product-navigation-search-form');
         const searchBtn = element.querySelector('.js-product-nav-search-btn');
@@ -58,7 +58,7 @@ export default function() {
             closeInnerMenu();
             if (standardInitialActiveLink && initialActiveCategory !== categoryIndex) {
                 const layer = categoryLayers[categoryIndex];
-                const menuLinks = Array.from(layer.querySelectorAll('.js-product-nav-menu-link'));
+                const menuLinks = Array.from(layer.querySelectorAll('.js-product-nav-menu-link:not(.js-simple-link)'));
                 const menuItems = Array.from(layer.querySelectorAll('.js-product-nav-menu-item'));
                 function handleMenuClick(index) {
                     menuLinks.forEach(link => link.classList.remove('active'));
@@ -105,7 +105,7 @@ export default function() {
         }
 
         categoryLayers.forEach(layer => {
-            const menuLinks = Array.from(layer.querySelectorAll('.js-product-nav-menu-link'));
+            const menuLinks = Array.from(layer.querySelectorAll('.js-product-nav-menu-link:not(.js-simple-link)'));
             const menuItems = Array.from(layer.querySelectorAll('.js-product-nav-menu-item'));
 
             function handleMenuClick(index) {
