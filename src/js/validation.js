@@ -1,4 +1,8 @@
 import 'parsleyjs';
+import dayjs from 'dayjs';
+import customParseFormat from 'dayjs/plugin/customParseFormat';
+
+dayjs.extend(customParseFormat)
 
 window.Parsley.addValidator('phone', {
     requirementType: 'string',
@@ -8,6 +12,64 @@ window.Parsley.addValidator('phone', {
     messages: {
         en: 'This value should be a mobile number',
         ru: 'Введите правильный номер мобильного телефона'
+    }
+});
+window.Parsley.addValidator('passportseries', {
+    requirementType: 'string',
+    validateString: function(value) {
+        
+        return /^[0-9]{4}$/.test(value);
+    },
+    messages: {
+        en: 'Enter correct passport series',
+        ru: 'Введите правильно серию паспорта'
+    }
+});
+window.Parsley.addValidator('passportnumber', {
+    requirementType: 'string',
+    validateString: function(value) {
+        return /^[0-9]{6}$/.test(value);
+    },
+    messages: {
+        en: 'Enter correct passport number',
+        ru: 'Введите правильно номер паспорта'
+    }
+});
+window.Parsley.addValidator('department', {
+    requirementType: 'string',
+    validateString: function(value) {
+        return /^[0-9]{3}$/.test(value);
+    },
+    messages: {
+        en: 'Enter correct department number',
+        ru: 'Введите правильно код подразделения'
+    }
+});
+window.Parsley.addValidator('snils', {
+    requirementType: 'string',
+    validateString: function(value) {
+        const newValue = value.toString().replace(/\s/g, '');
+        console.log('Validating new snils value', newValue)
+        
+        return /^[0-9]{11}$/.test(newValue);
+    },
+    messages: {
+        en: 'Enter correct SNILS number',
+        ru: 'Введите правильно номер СНИЛС'
+    }
+});
+window.Parsley.addValidator('date', {
+    requirementType: 'string',
+    validateString: function(value) {
+        console.log('Validating date', {
+            value,
+            valid: dayjs(value, 'DD.MM.YYYY', true).isValid()
+        })
+        return dayjs(value, 'DD.MM.YYYY', true).isValid()
+    },
+    messages: {
+        en: 'Enter correct date',
+        ru: 'Введите правильно дату'
     }
 });
 

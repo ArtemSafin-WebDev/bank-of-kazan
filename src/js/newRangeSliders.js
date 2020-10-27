@@ -118,6 +118,8 @@ function init() {
         function dispatchRangeUpdateEvent(value) {
             const event = new CustomEvent('rangeupdate', { detail: value });
             rangeInput.dispatchEvent(event);
+           
+            rangeInput.dispatchEvent(new Event('change'));
         }
 
         noUiSlider.create(customRangeSliderElement, {

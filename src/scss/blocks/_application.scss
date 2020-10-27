@@ -16,13 +16,26 @@
     border-top: none;
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
-    // overflow: hidden;
+    overflow: hidden;
 
     box-shadow: 0 0.5rem 1rem rgba(black, 0.05);
     @include breakpoint(mobile) {
         padding: 2.5rem 2rem;
         border-bottom-left-radius: 0.8rem;
         border-bottom-right-radius: 0.8rem;
+
+
+
+
+
+        padding: 0;
+        
+        border: none;
+        box-shadow: none;
+        border-radius: 0;
+        overflow: visible;
+        background: transparent;
+        padding-top: 2.4rem;
     }
 }
 
@@ -31,7 +44,7 @@
     font-size: 3rem;
     line-height: 120%;
     color: #000000;
-    margin-bottom: 5.8rem;
+    margin-bottom: 6rem;
     @include breakpoint(mobile) {
         font-size: 2.4rem;
         margin-bottom: 3rem;
@@ -212,7 +225,11 @@
     border-radius: 1rem;
     background-color: var(--primary-color);
     margin-top: 1rem;
-    transition: background-color .2s;
+    transition: background-color 0.2s;
+
+    .application__form-btns-row & {
+        margin: 0;
+    }
 
     &:hover {
         background-color: var(--primary-color-hover);
@@ -222,6 +239,21 @@
         font-size: 1.4rem;
         padding: 1.5rem 1.6rem;
         border-radius: 0.8rem;
+
+
+    }
+}
+
+.application__form-submit-content {
+    display: flex;
+    align-items: center;
+
+    svg {
+        width: 0.85rem;
+        height: 1.4rem;
+        flex-shrink: 0;
+        margin-left: 1rem;
+        fill: white;
     }
 }
 
@@ -478,5 +510,776 @@
 
     @include breakpoint(mobile) {
         height: 4rem;
+    }
+}
+
+.application__form-steps-numbers {
+    font-size: 1.8rem;
+    line-height: 120%;
+    margin-bottom: 3rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 1.8rem;
+        font-size: 1.4rem;
+    }
+}
+
+.application__form-use-account {
+    padding: 6rem;
+    border-radius: 1rem;
+    color: white;
+    background-color: #0065b2;
+    background-image: url('../img/gosuslugi-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    margin-bottom: 6rem;
+    &:link,
+    &:visited {
+        color: white;
+    }
+
+    @include breakpoint(mobile) {
+        margin-bottom: 3rem;
+        padding: 1.8rem;
+        margin-bottom: 3rem;
+        border-radius: .8rem;
+        flex-direction: column;
+        background-image: none;
+    }
+}
+
+.application__form-use-account-heading {
+    font-size: 2.4rem;
+    line-height: 120%;
+    margin-bottom: 3rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        margin-bottom: 1.5rem;
+        font-weight: 500;
+    }
+}
+
+.application__form-use-account-text {
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 120%;
+
+    @include breakpoint(mobile) {
+        font-size: 1.2rem;
+        font-weight: 400;
+        margin-bottom: 3rem;
+    }
+}
+
+.application__form-use-account-left-col {
+    width: 50%;
+    flex-grow: 1;
+    @include breakpoint(mobile) {
+        width: 100%;
+    }
+}
+
+.application__form-use-account-right-col {
+    width: 24rem;
+    flex-shrink: 0;
+    margin-left: 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        flex-shrink: 1;
+        margin: 0;
+    }
+}
+
+.application__form-use-account-logo {
+    width: 100%;
+    height: auto;
+    margin-bottom: 3.4rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 2rem;
+        width: 65%;
+    }
+}
+
+.application__form-use-account-link {
+    align-self: stretch;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 120%;
+    background-color: #fff;
+    color: #0065b2;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 2.2rem;
+    border-radius: 1rem;
+    transition: color 0.2s, background-color 0.2s;
+    &:link,
+    &:visited {
+        color: #0065b2;
+    }
+
+    &:hover {
+        color: black;
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        padding: 1.3rem 2rem;
+        border-radius: .4rem;
+    }
+}
+
+.application__form-steps-layers,
+.application__form-inner-tabs-items {
+    position: relative;
+}
+
+.application__form-steps-layer,
+.application__form-inner-tabs-item {
+    min-height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.4s, transform 0s linear 0.4s, visibility 0s linear 0.4s;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(20%);
+
+    &.active {
+        position: relative;
+        opacity: 1;
+        visibility: inherit;
+        z-index: 2;
+        transform: translateX(0);
+        transition: all 0.4s, transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+}
+
+.application__form-btns-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.application__form-back-btn {
+    font-weight: 500;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    line-height: 120%;
+    transition: color 0.2s;
+    color: var(--primary-color);
+    &:link,
+    &:visited {
+        color: var(--primary-color);
+    }
+
+    svg {
+        width: 0.9rem;
+        height: 1.4rem;
+        flex-shrink: 0;
+        margin-right: 0.9rem;
+        fill: currentColor;
+    }
+
+    &:hover {
+        color: var(--primary-color-hover);
+    }
+
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+
+        svg {
+            width: 1.2rem;
+            height: 1.2rem;
+            margin-right: 0.4rem;
+        }
+    }
+}
+
+.application__form-back-btn-content {
+    display: flex;
+    align-items: center;
+}
+
+.application__form-inner-tabs-nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 3.5rem;
+    @include breakpoint(mobile) {
+        overflow-y: hidden;
+        flex-wrap: nowrap;
+        -webkit-overflow-scrolling: touch;
+        margin: -1rem calc(-1 * var(--content-padding));
+        padding: 1rem var(--content-padding);
+        @include noScrollbar();
+        &::after {
+            content: '';
+            flex-shrink: 0;
+            height: 1px;
+            width: var(--content-padding);
+        }
+    }
+
+
+    
+}
+
+.application__form-inner-tabs-checkbox {
+    white-space: nowrap;
+    flex-shrink: 0;
+    font-size: 2.2rem;
+    line-height: 1.2;
+    margin-right: 0.5rem;
+    margin-bottom: 0.8rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+.application__form-inner-tabs-checkbox-input {
+    @include visuallyHidden();
+}
+
+.application__form-inner-tabs-checkbox-text {
+    display: flex;
+    align-items: center;
+    font-size: 2.2rem;
+    line-height: 1.2;
+    padding: 0.8rem 1.6rem;
+    border-radius: 1rem;
+    transition: background-color 0.2s, color 0.2s;
+    font-weight: 500;
+
+    svg {
+        width: 1.8rem;
+        height: 1.8rem;
+        flex-shrink: 0;
+        margin-left: 0.8rem;
+        fill: #808080;
+        transition: fill 0.2s;
+    }
+    @include breakpoint(mobile) {
+        font-weight: 500;
+        font-size: 1.4rem;
+        line-height: 120%;
+        padding: 0.6rem 1rem;
+        border-radius: 0.4rem;
+        margin-right: 0.5rem;
+    }
+}
+
+.application__form-inner-tabs-checkbox-input:checked ~ .application__form-inner-tabs-checkbox-text {
+    background: #ecf3dc;
+    color: var(--primary-color);
+
+    svg {
+        fill: var(--primary-color);
+    }
+}
+
+.application__form-file-upload {
+    margin-bottom: 4rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 2rem;
+    }
+}
+
+.application__form-file-upload-dropzone {
+    background: #d9f3eb;
+    border: 1px dashed #c4c4c4;
+    color: black;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.9rem;
+    line-height: 2.3rem;
+    position: relative;
+    background: #fbfbfb;
+    padding: 5rem;
+    min-height: 45rem;
+    transition: border-color 0.2s;
+
+    &.dragged-over {
+        border-color: var(--primary-color);
+    }
+
+    @include breakpoint(mobile) {
+        
+        font-size: 1.6rem;
+        line-height: 1.2;
+        min-height: 20rem;
+        padding: 2rem;
+    }
+}
+
+.application__form-file-upload-file {
+    display: flex;
+    align-items: center;
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    line-height: 1.2;
+    margin-top: 1.5rem;
+
+    svg {
+        width: 1.4rem;
+        height: 1.4rem;
+        margin-left: 1rem;
+        flex-shrink: 0;
+    }
+
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+
+        svg {
+            width: 1rem;
+            height: 1rem;
+            margin-left: 0.8rem;
+        }
+    }
+}
+
+.application__form-file-upload-label {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    &.hidden {
+        display: none;
+    }
+    input[type='file'] {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        opacity: 0;
+        cursor: pointer;
+    }
+}
+
+.application__form-file-upload-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: auto;
+    cursor: default;
+}
+
+.application__form-file-upload-message-choose-file {
+    display: flex;
+    align-items: center;
+    padding: 2.2rem 2.4rem;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 120%;
+    color: black;
+    background-color: #fff;
+    border-radius: 1rem;
+    text-transform: uppercase;
+    margin-bottom: 1.4rem;
+    transition: color 0.2s, background-color 0.2s;
+    svg {
+        width: 1.3rem;
+        height: 1.3rem;
+        flex-shrink: 0;
+        margin-left: 1.4rem;
+        fill: currentColor;
+    }
+
+
+    @include breakpoint(mobile) {
+        padding: 1.3rem 2.2rem;
+        font-size: 1.2rem;
+
+        svg {
+            margin-left: 0.8rem;
+            width: 1.2rem;
+            height: 1.2rem;
+        }
+
+    }
+}
+
+.application__form-file-upload-message-format {
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 130%;
+    color: #717171;
+    p {
+        margin-bottom: 0.8rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+
+    @include breakpoint(mobile) {
+
+    }
+}
+
+.application__form-file-upload-action {
+    text-align: center;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &.hidden {
+        display: none;
+    }
+}
+
+.application__form-file-upload-action-heading {
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 130%;
+    margin-bottom: 3.5rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+}
+
+.application__form-file-upload-action-image {
+    width: 12.4rem;
+    margin: 0 auto;
+
+    @include breakpoint(mobile) {
+        width: 10rem;
+    }
+}
+
+.application__form-file-upload:not(.fileupload-full) .application__form-file-upload-dropzone:hover .application__form-file-upload-message-choose-file {
+    background-color: black;
+    color: white;
+}
+
+.application__form-file-upload-files-heading {
+    font-size: 1.8rem;
+    line-height: 130%;
+    margin-bottom: 3rem;
+    font-weight: 400;
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 1.2;
+    }
+}
+
+.application__form-file-upload-files {
+    width: 100%;
+    align-self: stretch;
+    display: none;
+    &.shown {
+        display: block;
+    }
+}
+
+.application__form-file-upload-files-list {
+    display: flex;
+    flex-wrap: wrap;
+    @include breakpoint(mobile) {
+        margin: -1.2rem;
+    }
+}
+
+.application__form-file-upload-files-list-item {
+    width: 12rem;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+
+    @include breakpoint(mobile) {
+        width: 50%;
+        margin: 0;
+        padding: 1.2rem;
+    }
+}
+
+.application__form-data {
+    background: #f5f5f5;
+    color: black;
+    padding: 6rem;
+    padding-top: 4rem;
+    border-radius: 1rem;
+    margin-bottom: 4rem;
+
+    @include breakpoint(mobile) {
+        padding: 1.8rem;
+        border-radius: .8rem;
+        margin-bottom: 2rem;
+        padding-bottom: 2.4rem;
+    }
+}
+
+.application__form-data-block {
+    padding-bottom: 4rem;
+    border-bottom: 1px solid #d5d5d5;
+    margin-bottom: 4rem;
+    display: flex;
+    &:last-child {
+        margin-bottom: 0;
+        padding: 0;
+        border: none;
+    }
+
+    @include breakpoint(mobile) {
+        padding-bottom: 1.8rem;
+        margin-bottom: 2rem;
+        flex-direction: column;
+    }
+}
+
+.application__form-data-block-left-col {
+    width: 25rem;
+    flex-shrink: 0;
+    padding-right: 2rem;
+    @include breakpoint(mobile) {
+        width: 100%;
+        flex-shrink: 1;
+        padding: 0;
+    }
+}
+
+.application__form-data-block-right-col {
+    width: 50%;
+    flex-grow: 1;
+    @include breakpoint(mobile) {
+        width: 100%;
+        flex-grow: 0;
+    }
+}
+
+.application__form-data-block-heading {
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 130%;
+    padding-top: 1.9rem;
+    @include breakpoint(mobile) {
+        font-size: 1.8rem;
+        padding-top: 0;
+        margin-bottom: 2rem;
+    }
+}
+
+.application__form-data-block-input-wrapper {
+    position: relative;
+
+    .parsley-errors-list {
+        color: var(--primary-color);
+        font-size: 1.2rem;
+
+        color: rgb(185, 14, 14);
+    }
+    .parsley-errors-list.filled {
+        margin-top: 0.5rem;
+    }
+
+
+   
+}
+
+.application__form-data-block-input {
+    background-color: #fff;
+    width: 100%;
+    color: black;
+    height: 6.2rem;
+    border-radius: 0.4rem;
+    padding: 0 2.4rem;
+    
+    font-size: 1.4rem;
+    line-height: 1.3;
+    transition: all 0.2s;
+    border: 1px solid transparent;
+    &.parsley-error {
+        border-color: rgb(185, 14, 14);
+    }
+    
+
+    @supports (display: grid) {
+        padding-top: 1.6rem;
+        @include placeholder {
+            opacity: 0;
+            transition: inherit;
+            color: #b7b7b7;
+        }
+    }
+
+    &:focus {
+        @include placeholder {
+            opacity: 1;
+        }
+    }
+
+
+    @include breakpoint(mobile) {
+        height: 52px;
+        padding: 0 14px;
+        font-size: 16px;
+        padding-top: 20px;
+    }
+}
+
+.application__form-data-block-label {
+    font-size: 1.4rem;
+    color: #b7b7b7;
+    line-height: 130%;
+    position: absolute;
+    top: 2.3rem;
+    left: 2.4rem;
+    transition: transform 0.2s;
+    transform-origin: left top;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 66.66%;
+    transform: scale(1) translateY(0);
+    transition: all 0.2s;
+    cursor: pointer;
+    user-select: none;
+    display: none;
+
+    @supports (display: grid) {
+        display: block;
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 14px;
+        top: 18px;
+        left: 14px;
+    }
+}
+
+.application__form-data-block-input:focus ~ .application__form-data-block-label,
+.application__form-data-block-input:not(:placeholder-shown) ~ .application__form-data-block-label {
+    transform: scale(0.85) translateY(-1.3rem);
+    cursor: default;
+    pointer-events: none;
+}
+
+.application__form-data-block-row {
+    display: flex;
+    margin: 0 -2.5rem;
+    margin-bottom: 2rem;
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    @include breakpoint(mobile) {
+        margin: 0;
+        margin-bottom: 1.8rem;
+        flex-direction: column;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.application__form-data-block-col {
+    padding: 0 2.5rem;
+    flex-grow: 1;
+    &--quarter {
+        width: 23rem;
+        flex-shrink: 0;
+        flex-grow: 0;
+    }
+    &--half {
+        width: 50%;
+        flex-grow: 0;
+    }
+
+
+    @include breakpoint(mobile) {
+        flex-shrink: 1;
+        width: 100%;
+        padding: 0;
+        flex-grow: 0;
+        margin-bottom: 1.8rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.application__form-data-checkbox {
+    display: flex;
+    align-items: flex-start;
+    cursor: pointer;
+    user-select: none;
+}
+
+.application__form-data-checkbox-mark {
+    width: 2.2rem;
+    height: 2.2rem;
+    flex-shrink: 0;
+    margin-right: 1.2rem;
+    border-radius: 0.4rem;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+        width: 1.5rem;
+        height: 1.5rem;
+        fill: var(--primary-color);
+        transition: opacity 0.2s;
+        opacity: 0;
+    }
+}
+
+.application__form-data-checkbox-input {
+    @include visuallyHidden();
+}
+
+.application__form-data-checkbox-text {
+    width: 50%;
+    flex-grow: 1;
+    padding-top: 0.3rem;
+    font-size: 1.4rem;
+    line-height: 130%;
+    color: #959595;
+
+    @include breakpoint(mobile) {
+        font-size: 1.2rem;
+    }
+}
+
+.application__form-data-checkbox-input:checked ~ .application__form-data-checkbox-mark svg {
+    opacity: 1;
+}
+
+.application__form-data-checkbox-text-black {
+    font-size: 2rem;
+    line-height: 1;
+    color: black;
+    margin-bottom: 1.1rem;
+    display: block;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 1.2;
+        margin-bottom: 0.8rem;
     }
 }

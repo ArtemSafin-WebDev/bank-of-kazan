@@ -293,9 +293,9 @@
     font-weight: 500;
     line-height: 1.2;
     color: white;
-    margin-top: 11.5rem;
-    margin-top: 10.5rem;
-    min-height: 8.6rem;
+    
+    margin-top: 5rem;
+    min-height: 15rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -309,26 +309,25 @@
 }
 
 .products__card-text-content {
-    margin-top: 7rem;
+    margin-top: 5rem;
     font-size: 2rem;
     line-height: 130%;
     transition: color 0.4s;
    
     min-height: 9rem;
+    margin-bottom: 3rem;
     @include breakpoint(mobile) {
-        margin-top: 4rem;
+        margin-top: 3rem;
         font-size: 1.2rem;
         line-height: 130%;
-        min-height: 7rem;
+        min-height: auto;
+        margin-bottom: 2rem;
     }
 }
 
 .products__card-prices {
-    margin-top: 3.5rem;
-    margin-bottom: auto;
-    @include breakpoint(mobile) {
-        margin-top: 2rem;
-    }
+    margin-top: auto;
+    
 }
 
 .products__card-prices-items {
@@ -454,6 +453,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-top: 3rem;
+    @include breakpoint(mobile) {
+        margin-top: 2rem;
+    }
 }
 
 .products__catalog-open-link {
@@ -485,6 +488,7 @@
     font-size: 1.6rem;
     text-transform: uppercase;
     line-height: 120%;
+    margin-left: auto;
     svg {
         fill: currentColor;
         width: 0.9rem;
@@ -501,7 +505,7 @@
         padding: 1.4rem 1.5rem;
         font-size: 1.2rem;
         margin: 0;
-
+        margin-left: auto;
         align-self: flex-end;
         border-radius: 0.4rem;
 

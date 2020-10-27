@@ -30,6 +30,8 @@ import similarNewsSlider from './similarNewsSlider';
 import pageHeaderContacts from './pageHeaderContacts';
 import lotsSlider from './lotsSlider';
 import officesForms from './officesInputs';
+import newApplicationForm from './newApplicationForm';
+import fileUpload from './fileUpload';
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -39,7 +41,6 @@ document.addEventListener('DOMContentLoaded', function() {
     mobileMenu();
     productNav();
     scrollAnimations();
-    
     rkoFeatures();
     openAccount();
     bankMenu();
@@ -52,6 +53,8 @@ document.addEventListener('DOMContentLoaded', function() {
     pageHeaderContacts();
     lotsSlider();
     officesForms();
+    newApplicationForm();
+    fileUpload();
     barba.init({
         debug: true,
         logLevel: 'error',

@@ -41,7 +41,7 @@
                 function initBackendScripts() {
                     console.log('Здесь прописываем инициализацию скриптов для бэкенда');
 
-                    var applicationForm = document.querySelector('.application__form');
+                    var applicationForm = document.querySelector('#application-form');
 
                     if (applicationForm) {
                         applicationForm.addEventListener('submit', function(event) {
@@ -74,6 +74,24 @@
                                     reviewForm.classList.remove('success')
                                 }
                             }, 2000)
+                        })
+                    }
+
+                    var newApplicationForm = document.querySelector('.js-new-application-form');
+
+                    if (newApplicationForm) {
+                        newApplicationForm.addEventListener('submit', function(event) {
+                            event.preventDefault();
+                            if ($(newApplicationForm).parsley().isValid()) {
+                                newApplicationForm.classList.add('success-shown');
+                                setTimeout(function() {
+                                    newApplicationForm.classList.remove('success-shown');
+                                    newApplicationForm.reset();
+                                    if (newApplicationForm.setStep) {
+                                        newApplicationForm.setStep(0);
+                                    }
+                                }, 80000);
+                            }
                         })
                     }
                 }

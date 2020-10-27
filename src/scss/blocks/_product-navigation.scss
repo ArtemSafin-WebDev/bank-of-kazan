@@ -192,6 +192,11 @@
         &.active {
             color: black;
         }
+
+
+        &:not(.active):hover {
+            color: rgba(black, .5);
+        }
     }
 
     @include breakpoint(mobile) {
@@ -520,6 +525,15 @@
         color: black;
         &.active {
             color: var(--primary-color);
+
+            &:hover {
+                color: var(--primary-color-hover);
+            }
+        }
+
+
+        &:not(.active):hover {
+            color: rgba(black, .5);
         }
     }
 

@@ -12,13 +12,40 @@ function init() {
             const hash = link.hash;
 
             if (hash && hash.startsWith('#to-')) {
-               
-                event.preventDefault();
-
                 const elementToScroll = document.getElementById(hash.replace(/^#to\-/, ''));
+
                 if (elementToScroll) {
-                    gsap.to(window, { duration: 2, scrollTo: elementToScroll });
+                    event.preventDefault();
+
+                    gsap.to(window, {
+                        duration: 2,
+                        scrollTo: {
+                            y: elementToScroll,
+                            autoKill: true,
+                            // onAutoKill: () => alert('autokilled scrolling')
+                        }
+                    });
                 }
+            }
+        }
+    });
+
+    window.addEventListener('load', () => {
+        if (window.location.hash && window.location.hash.startsWith('#to-')) {
+            console.log('Window hash', window.location.hash);
+            const elementToScroll = document.getElementById(window.location.hash.replace(/^#to\-/, ''));
+
+            if (elementToScroll) {
+                setTimeout(() => {
+                    gsap.to(window, {
+                        duration: 2,
+                        scrollTo: {
+                            y: elementToScroll,
+                            autoKill: true,
+                            // onAutoKill: () => alert('autokilled scrolling')
+                        }
+                    });
+                }, 50);
             }
         }
     });
