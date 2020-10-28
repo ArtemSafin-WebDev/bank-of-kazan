@@ -2,24 +2,18 @@
     width: auto;
     max-width: var(--max-container-width);
     box-sizing: content-box;
-    // max-width: calc(var(--max-container-width, 1200px) + (var(--content-padding, 20px) * 2));
+
     margin: 0 auto;
     padding: 0 var(--content-padding);
-
-
 
     @supports (width: max(20vw, 100px)) {
         padding-left: max(env(safe-area-inset-left, 1.4rem), var(--content-padding));
         padding-right: max(env(safe-area-inset-right, 1.4rem), var(--content-padding));
     }
 
-   
-    
-
     & > * {
         box-sizing: border-box;
     }
-
 
     &--flex {
         display: flex;
@@ -40,10 +34,24 @@
 
 
 
+
 .inner-container {
     width: 100%;
     margin: 0 auto;
     max-width: var(--max-inner-container-width);
+}
+
+
+.catalog__right-col .container,
+.catalog__right-col .inner-container {
+    padding: 0;
+    width: auto;
+    max-width: none;
+    margin: 0;
+    box-sizing: border-box;
+    display: block;
+    flex-grow: 0;
+    
 }
 
 .page-content {
