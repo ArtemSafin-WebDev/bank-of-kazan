@@ -4,7 +4,7 @@ export default function pageHeaderContacts() {
 
     if (element) {
         element.addEventListener('click', event => {
-            event.preventDefault();
+          
             element.classList.toggle('active');
         });
 
@@ -18,9 +18,7 @@ export default function pageHeaderContacts() {
 
 
         document.addEventListener('click', event => {
-            if (event.target.matches('.js-page-header-contacts') || event.target.closest('.js-page-header-contacts')) {
-                return;
-            } else {
+            if (!event.target.matches('.js-page-header-contacts') && !event.target.closest('.js-page-header-contacts')) {
                 element.classList.remove('active');
             }
         })
