@@ -299,6 +299,9 @@
     margin-right: 2.5rem;
     position: relative;
 
+
+
+
     @include breakpoint(mobile) {
         width: 3rem;
         height: 3rem;
@@ -312,7 +315,14 @@
     top: 0;
     width: 100%;
     height: 100%;
+    fill: var(--secondary-color);
+    transition: fill .2s;
     @include objectFitContain();
+
+
+    .for-business__tabs-nav-link.active & {
+        fill: var(--primary-color);
+    }
 }
 
 .for-business__card-title {

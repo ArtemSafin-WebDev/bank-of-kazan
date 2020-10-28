@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 namespace: 'home',
 
                 beforeLeave() {
-                    console.log('Before leave');
+                    // console.log('Before leave');
                     tabs.destroy();
                     ratingStars.destroy();
                     phoneMask.destroy();
@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 },
 
                 afterEnter() {
-                    console.log('After enter');
+                    // console.log('After enter');
                     tabs.init();
                    
                     ratingStars.init();

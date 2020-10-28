@@ -185,7 +185,7 @@ function initWithExceptionHandling() {
     try {
         init();
     } catch (err) {
-        console.error('error');
+        console.error('error', err.message);
     }
 }
 

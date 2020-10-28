@@ -153,7 +153,7 @@ function init() {
 }
 
 function destroy() {
-    instances.forEach(instance => instance.destroy());
+    instances.forEach(instance => instance.slider.destroy());
     instances = [];
 }
 
