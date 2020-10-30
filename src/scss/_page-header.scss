@@ -477,6 +477,16 @@
         }
     }
 
+
+    .dark-nav-text:not(.product-nav-menu-open):not(.bank-menu-shown) &,
+    .dark-main-nav.violet-backplate:not(.bank-menu-shown):not(.mobile-menu-open) & {
+        &:hover {
+            .page-header__online-bank-link {
+                background-color: rgba(#94C22B, 0.1);
+            }
+        }
+    }
+
     @include breakpoint(mobile) {
         margin: 0;
     }
@@ -580,8 +590,7 @@
         color: white;
     }
 
-    .no-touch &:hover,
-    .touch &:active {
+    &:hover {
         background-color: rgba(white, 0.2);
     }
     .dark-nav-text:not(.product-nav-menu-open):not(.bank-menu-shown) &,
@@ -594,6 +603,10 @@
         &:link,
         &:visited {
             color: black;
+        }
+
+        &:hover {
+            background-color: rgba(#94C22B, 0.1) !important;
         }
     }
 
@@ -689,6 +702,9 @@
     height: 5.1rem;
     border-radius: 1rem;
     display: block;
+
+
+    
     svg {
         position: absolute;
         left: 50%;
@@ -703,6 +719,13 @@
             opacity: 0;
             width: 2rem;
             height: 2rem;
+        }
+    }
+
+    .page-header__online-bank-link, .dark-nav-text:not(.product-nav-menu-open):not(.bank-menu-shown) & {
+        border-color: var(--primary-color);
+        svg {
+            fill: black;
         }
     }
 }

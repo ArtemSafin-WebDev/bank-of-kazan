@@ -539,6 +539,12 @@
         flex-shrink: 0;
         margin-left: 1.3rem;
         fill: currentColor;
+
+        @include breakpoint(mobile) {
+            width: .9rem;
+            height: .9rem;
+            margin-left: 0.6rem;
+        }
     }
     &:last-child {
         margin-bottom: 0;

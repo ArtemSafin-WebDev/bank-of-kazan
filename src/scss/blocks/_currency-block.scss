@@ -99,6 +99,8 @@
         font-size: 2rem;
         line-height: 120%;
         margin-bottom: 2rem;
+        align-self: stretch;
+        flex-wrap: wrap;
     }
 }
 
@@ -154,6 +156,8 @@
 
     @include breakpoint(mobile) {
         margin-left: 0;
+        width: auto;
+        align-self: stretch;
     }
 }
 

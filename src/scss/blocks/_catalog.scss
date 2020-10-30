@@ -12,8 +12,10 @@
     width: 35.4rem;
     margin-right: 3rem;
     flex-shrink: 0;
+    margin-bottom: 4rem;
     @include breakpoint(mobile) {
         display: none;
+        margin-bottom: 0;
     }
 }
 
@@ -817,7 +819,7 @@
 .catalog__lots-card-left-col {
     width: 50%;
     flex-grow: 1;
-
+   
     @include breakpoint(mobile) {
         width: 100%;
         flex-grow: 0;

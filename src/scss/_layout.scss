@@ -1,7 +1,7 @@
 .container {
-    width: auto;
-    max-width: var(--max-container-width);
-    box-sizing: content-box;
+    width: 100%;
+    max-width: calc(var(--max-container-width) + 2 * var(--content-padding));
+   
 
     margin: 0 auto;
     padding: 0 var(--content-padding);
@@ -11,9 +11,11 @@
         padding-right: max(env(safe-area-inset-right, 1.4rem), var(--content-padding));
     }
 
-    & > * {
-        box-sizing: border-box;
+
+    @include breakpoint(mobile) {
+        max-width: none;
     }
+  
 
     &--flex {
         display: flex;
@@ -43,7 +45,9 @@
 
 
 .catalog__right-col .container,
-.catalog__right-col .inner-container {
+.catalog__right-col .inner-container,
+.container .container,
+.inner-container .inner-container {
     padding: 0;
     width: auto;
     max-width: none;
