@@ -10,11 +10,56 @@
             <h1 class="article__main-heading">
                 Заявка на кредит для бизнеса
             </h1>
-            <div class="article__description">
-                <p>
-                    Кредит на обеспечение исполнения обязательств по контракту в рамках 44-ФЗ, 223-ФЗ. Принятие решения в течение 8 рабочих часов!
-                </p>
+            <div class="application-steps">
+                <ul class="application-steps__items">
+                    <li class="application-steps__item">
+                        <div class="application-steps__card">
+                            <div class="application-steps__card-number">
+                                1
+                            </div>
+                            <h4 class="application-steps__card-heading">
+                                Оставьте заявку
+                            </h4>
+                            <div class="application-steps__card-text">
+                                <p>
+                                    Заполните данные на сайте для получения кредита
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="application-steps__item">
+                        <div class="application-steps__card">
+                            <div class="application-steps__card-number">
+                                2
+                            </div>
+                            <h4 class="application-steps__card-heading">
+                                Дождитесь ответа
+                            </h4>
+                            <div class="application-steps__card-text">
+                                <p>
+                                    Вы получите SMS-сообщения с решением банка
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="application-steps__item">
+                        <div class="application-steps__card">
+                            <div class="application-steps__card-number">
+                                3
+                            </div>
+                            <h4 class="application-steps__card-heading">
+                                Получите кредит
+                            </h4>
+                            <div class="application-steps__card-text">
+                                <p>
+                                    Получите кредит в выбранном отеделении банка
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </div>
+
             <form action="/" method="POST" class="application__form js-new-application-form" enctype="multipart/form-data">
                 <div class="application__form-progress">
                     <div class="application__form-progress-bar"></div>
@@ -34,7 +79,7 @@
                                         Название компании
                                     </span>
                                     <span class="application__form-input-wrapper">
-                                        <input type="text" name="company" class="application__form-input" required data-parsley-trigger="change" data-parsley-group="firststep" data-affect-progress/>
+                                        <input type="text" name="company" class="application__form-input" required data-parsley-trigger="change" data-parsley-group="firststep" data-affect-progress />
                                         <svg width="25" height="25" aria-hidden="true" class="icon-success">
                                             <use xlink:href="#success" />
                                         </svg>
@@ -47,7 +92,7 @@
                                         Имя и фамилия
                                     </span>
                                     <span class="application__form-input-wrapper">
-                                        <input type="text" name="name" class="application__form-input" required data-parsley-trigger="change" data-parsley-group="firststep" data-affect-progress/>
+                                        <input type="text" name="name" class="application__form-input" required data-parsley-trigger="change" data-parsley-group="firststep" data-affect-progress />
                                         <svg width="25" height="25" aria-hidden="true" class="icon-success">
                                             <use xlink:href="#success" />
                                         </svg>
@@ -60,7 +105,7 @@
                                         Номер телефона
                                     </span>
                                     <span class="application__form-input-wrapper">
-                                        <input type="tel" name="tel" class="application__form-input js-phone-input" data-parsley-group="firststep" data-parsley-trigger="change" required data-parsley-phone placeholder="+7" data-affect-progress/>
+                                        <input type="tel" name="tel" class="application__form-input js-phone-input" data-parsley-group="firststep" data-parsley-trigger="change" required data-parsley-phone placeholder="+7" data-affect-progress />
                                         <svg width="25" height="25" aria-hidden="true" class="icon-success">
                                             <use xlink:href="#success" />
                                         </svg>
@@ -73,7 +118,7 @@
                                         E-mail
                                     </span>
                                     <span class="application__form-input-wrapper">
-                                        <input type="email" name="email" class="application__form-input" data-parsley-trigger="change" data-parsley-group="firststep" required data-affect-progress/>
+                                        <input type="email" name="email" class="application__form-input" data-parsley-trigger="change" data-parsley-group="firststep" required data-affect-progress />
                                         <svg width="25" height="25" aria-hidden="true" class="icon-success">
                                             <use xlink:href="#success" />
                                         </svg>
@@ -87,9 +132,20 @@
                                     </span>
                                     <span class="application__form-input-wrapper">
                                         <div class="range-slider js-range-slider">
-                                            <input type="range" name="first-currency-amount" data-parsley-trigger="change" step="100" min="90000" max="2000000" class="range-slider__input" value="200000" data-parsley-type="number" data-parsley-group="firststep"/>
+                                            <input
+                                                type="range"
+                                                name="first-currency-amount"
+                                                data-parsley-trigger="change"
+                                                step="100"
+                                                min="90000"
+                                                max="2000000"
+                                                class="range-slider__input"
+                                                value="200000"
+                                                data-parsley-type="number"
+                                                data-parsley-group="firststep"
+                                            />
                                             <div class="range-slider__element-wrapper">
-                                                <input type="tel" class="range-slider__amount" value="200000" data-parsley-excluded/>
+                                                <input type="tel" class="range-slider__amount" value="200000" data-parsley-excluded />
                                                 <div class="range-slider__element"></div>
                                             </div>
                                             <div class="range-slider__min-max">
@@ -111,9 +167,21 @@
                                     </span>
                                     <span class="application__form-input-wrapper">
                                         <div class="range-slider js-range-slider">
-                                            <input type="range" name="first-currency-amount" data-parsley-trigger="change" data-parsley-type="number" step="1" min="1" max="36" class="range-slider__input" value="12" data-units="months" data-parsley-group="firststep"/>
+                                            <input
+                                                type="range"
+                                                name="first-currency-amount"
+                                                data-parsley-trigger="change"
+                                                data-parsley-type="number"
+                                                step="1"
+                                                min="1"
+                                                max="36"
+                                                class="range-slider__input"
+                                                value="12"
+                                                data-units="months"
+                                                data-parsley-group="firststep"
+                                            />
                                             <div class="range-slider__element-wrapper">
-                                                <input type="tel" class="range-slider__amount js-only-numeric" value="12" data-parsley-excluded/>
+                                                <input type="tel" class="range-slider__amount js-only-numeric" value="12" data-parsley-excluded />
                                                 <div class="range-slider__element"></div>
                                             </div>
                                             <div class="range-slider__min-max">
@@ -210,7 +278,18 @@
                                                 <div class="application__form-data-block-row">
                                                     <div class="application__form-data-block-col application__form-data-block-col--quarter">
                                                         <div class="application__form-data-block-input-wrapper">
-                                                            <input type="tel" id="passport-series" class="application__form-data-block-input" data-passport-series-mask data-affect-progress data-parsley-trigger="change" data-parsley-group="secondstep" required data-parsley-passportseries placeholder="9207">
+                                                            <input
+                                                                type="tel"
+                                                                id="passport-series"
+                                                                class="application__form-data-block-input"
+                                                                data-passport-series-mask
+                                                                data-affect-progress
+                                                                data-parsley-trigger="change"
+                                                                data-parsley-group="secondstep"
+                                                                required
+                                                                data-parsley-passportseries
+                                                                placeholder="9207"
+                                                            />
                                                             <label for="passport-series" class="application__form-data-block-label">
                                                                 Серия
                                                             </label>
@@ -218,18 +297,37 @@
                                                     </div>
                                                     <div class="application__form-data-block-col">
                                                         <div class="application__form-data-block-input-wrapper">
-                                                            <input type="tel" id="passport-number" class="application__form-data-block-input" data-passport-number-mask data-affect-progress data-parsley-trigger="change" data-parsley-group="secondstep" required data-parsley-passportnumber  placeholder="325020">
+                                                            <input
+                                                                type="tel"
+                                                                id="passport-number"
+                                                                class="application__form-data-block-input"
+                                                                data-passport-number-mask
+                                                                data-affect-progress
+                                                                data-parsley-trigger="change"
+                                                                data-parsley-group="secondstep"
+                                                                required
+                                                                data-parsley-passportnumber
+                                                                placeholder="325020"
+                                                            />
                                                             <label for="passport-number" class="application__form-data-block-label">
                                                                 Номер
                                                             </label>
                                                         </div>
                                                     </div>
-                                                    
                                                 </div>
                                                 <div class="application__form-data-block-row">
                                                     <div class="application__form-data-block-col">
                                                         <div class="application__form-data-block-input-wrapper">
-                                                            <input type="text" id="passport-department" class="application__form-data-block-input" data-affect-progress data-parsley-trigger="change" data-parsley-group="secondstep" required placeholder="УФМС по Республике Татарстан">
+                                                            <input
+                                                                type="text"
+                                                                id="passport-department"
+                                                                class="application__form-data-block-input"
+                                                                data-affect-progress
+                                                                data-parsley-trigger="change"
+                                                                data-parsley-group="secondstep"
+                                                                required
+                                                                placeholder="УФМС по Республике Татарстан"
+                                                            />
                                                             <label for="passport-department" class="application__form-data-block-label">
                                                                 Кем выдан
                                                             </label>
@@ -240,7 +338,18 @@
                                                 <div class="application__form-data-block-row">
                                                     <div class="application__form-data-block-col application__form-data-block-col--half">
                                                         <div class="application__form-data-block-input-wrapper">
-                                                            <input type="tel" id="date-of-issue" class="application__form-data-block-input" data-date-mask data-affect-progress data-parsley-trigger="change" data-parsley-group="secondstep" required data-parsley-date placeholder="01.01.2020">
+                                                            <input
+                                                                type="tel"
+                                                                id="date-of-issue"
+                                                                class="application__form-data-block-input"
+                                                                data-date-mask
+                                                                data-affect-progress
+                                                                data-parsley-trigger="change"
+                                                                data-parsley-group="secondstep"
+                                                                required
+                                                                data-parsley-date
+                                                                placeholder="01.01.2020"
+                                                            />
                                                             <label for="date-of-issue" class="application__form-data-block-label">
                                                                 Дата выдачи
                                                             </label>
@@ -248,18 +357,39 @@
                                                     </div>
                                                     <div class="application__form-data-block-col application__form-data-block-col--half">
                                                         <div class="application__form-data-block-input-wrapper">
-                                                            <input type="tel" id="department" class="application__form-data-block-input" data-department-mask data-affect-progress data-parsley-trigger="change" data-parsley-group="secondstep" required data-parsley-department  placeholder="123">
+                                                            <input
+                                                                type="tel"
+                                                                id="department"
+                                                                class="application__form-data-block-input"
+                                                                data-department-mask
+                                                                data-affect-progress
+                                                                data-parsley-trigger="change"
+                                                                data-parsley-group="secondstep"
+                                                                required
+                                                                data-parsley-department
+                                                                placeholder="123"
+                                                            />
                                                             <label for="department" class="application__form-data-block-label">
                                                                 Код подразделения
                                                             </label>
                                                         </div>
                                                     </div>
-                                                    
                                                 </div>
                                                 <div class="application__form-data-block-row">
                                                     <div class="application__form-data-block-col application__form-data-block-col--half">
                                                         <div class="application__form-data-block-input-wrapper">
-                                                            <input type="tel" id="birth-date" class="application__form-data-block-input" data-date-mask data-affect-progress data-parsley-trigger="change" data-parsley-group="secondstep" required data-parsley-date placeholder="01.01.2020">
+                                                            <input
+                                                                type="tel"
+                                                                id="birth-date"
+                                                                class="application__form-data-block-input"
+                                                                data-date-mask
+                                                                data-affect-progress
+                                                                data-parsley-trigger="change"
+                                                                data-parsley-group="secondstep"
+                                                                required
+                                                                data-parsley-date
+                                                                placeholder="01.01.2020"
+                                                            />
                                                             <label for="birth-date" class="application__form-data-block-label">
                                                                 Дата рождения
                                                             </label>
@@ -270,7 +400,16 @@
                                                 <div class="application__form-data-block-row">
                                                     <div class="application__form-data-block-col">
                                                         <div class="application__form-data-block-input-wrapper">
-                                                            <input type="text" id="origin" class="application__form-data-block-input" data-affect-progress data-parsley-trigger="change" data-parsley-group="secondstep" required placeholder="г. Казань">
+                                                            <input
+                                                                type="text"
+                                                                id="origin"
+                                                                class="application__form-data-block-input"
+                                                                data-affect-progress
+                                                                data-parsley-trigger="change"
+                                                                data-parsley-group="secondstep"
+                                                                required
+                                                                placeholder="г. Казань"
+                                                            />
                                                             <label for="origin" class="application__form-data-block-label">
                                                                 Место рождения
                                                             </label>
@@ -280,7 +419,16 @@
                                                 <div class="application__form-data-block-row">
                                                     <div class="application__form-data-block-col">
                                                         <div class="application__form-data-block-input-wrapper">
-                                                            <input type="text" id="registration-address" class="application__form-data-block-input" data-affect-progress data-parsley-trigger="change" data-parsley-group="secondstep" required placeholder="Россия, Республика Татарстан, город Казань">
+                                                            <input
+                                                                type="text"
+                                                                id="registration-address"
+                                                                class="application__form-data-block-input"
+                                                                data-affect-progress
+                                                                data-parsley-trigger="change"
+                                                                data-parsley-group="secondstep"
+                                                                required
+                                                                placeholder="Россия, Республика Татарстан, город Казань"
+                                                            />
                                                             <label for="registration-address" class="application__form-data-block-label">
                                                                 Адрес регистрации
                                                             </label>
@@ -290,7 +438,7 @@
                                                 <div class="application__form-data-block-row">
                                                     <div class="application__form-data-block-col">
                                                         <label class="application__form-data-checkbox">
-                                                            <input type="checkbox" class="application__form-data-checkbox-input" name="address-matches">
+                                                            <input type="checkbox" class="application__form-data-checkbox-input" name="address-matches" />
                                                             <span class="application__form-data-checkbox-mark">
                                                                 <svg width="10" height="10" aria-hidden="true" class="icon-checkmark">
                                                                     <use xlink:href="#checkmark"></use>
@@ -314,7 +462,18 @@
                                                 <div class="application__form-data-block-row">
                                                     <div class="application__form-data-block-col">
                                                         <div class="application__form-data-block-input-wrapper">
-                                                            <input type="text" id="snils" class="application__form-data-block-input" data-snils-mask data-affect-progress data-parsley-trigger="change" data-parsley-group="secondstep" required data-parsley-snils placeholder="999 999 999 00">
+                                                            <input
+                                                                type="text"
+                                                                id="snils"
+                                                                class="application__form-data-block-input"
+                                                                data-snils-mask
+                                                                data-affect-progress
+                                                                data-parsley-trigger="change"
+                                                                data-parsley-group="secondstep"
+                                                                required
+                                                                data-parsley-snils
+                                                                placeholder="999 999 999 00"
+                                                            />
                                                             <label for="snils" class="application__form-data-block-label">
                                                                 Номер СНИЛС
                                                             </label>
@@ -324,7 +483,7 @@
                                                 <div class="application__form-data-block-row">
                                                     <div class="application__form-data-block-col">
                                                         <label class="application__form-data-checkbox">
-                                                            <input type="checkbox" class="application__form-data-checkbox-input" name="excerpt" checked>
+                                                            <input type="checkbox" class="application__form-data-checkbox-input" name="excerpt" checked />
                                                             <span class="application__form-data-checkbox-mark">
                                                                 <svg width="10" height="10" aria-hidden="true" class="icon-checkmark">
                                                                     <use xlink:href="#checkmark"></use>
@@ -375,12 +534,8 @@
                                                     Загруженные изображения
                                                 </h4>
                                                 <div class="application__form-file-upload-files-appended">
-                                                    <ul class="application__form-file-upload-files-list js-filelist">
-                                                        
-                                                    </ul>
+                                                    <ul class="application__form-file-upload-files-list js-filelist"></ul>
                                                 </div>
-                                               
-
                                             </div>
 
                                             <div class="application__form-file-upload-message">
@@ -388,7 +543,7 @@
                                                     <span class="application__form-file-upload-message-choose-file-text js-full-text" data-full-text="Выбрано максимальное количество файлов">
                                                         Выбрать файл
                                                     </span>
-                                                   
+
                                                     <svg width="10" height="10" aria-hidden="true" class="icon-upload">
                                                         <use xlink:href="#upload"></use>
                                                     </svg>
@@ -423,39 +578,19 @@
                     </div>
                 </div>
 
-                <div class="application__form-success">
-                    <div class="application__form-success-row">
-                        <div class="application__form-success-left-col">
-                            <h4 class="application__form-success-heading">
-                                Готово!<br />
-                                Ваша заявка успешно оформлена
-                            </h4>
-                            <div class="application__form-success-text">
-                                <p>
-                                    Мы сформируем кредитное предложение на основе предоставленных данных и свяжемся с вами в течении 3 дней
-                                </p>
-                            </div>
-                            <a href="#" class="application__form-success-return-link">
-                                Вернуться на главную
-                            </a>
+                <div class="form-success">
+                    <div class="form-success__text-content">
+                        <h4 class="form-success__heading">
+                            Спасибо, ваша заявка принята
+                        </h4>
+                        <div class="form-success__text">
+                            Мы с вами свяжемся в течении 3 дней
                         </div>
-                        <div class="application__form-success-right-col">
-                            <img src="img/success.jpg" alt="" class="application__form-success-image" />
-                            <h5 class="application__form-success-right-heading">
-                                Бесплатный<br />мобильный<br />
-                                банк
-                            </h5>
-
-                            <div class="application__form-success-marketplace-links">
-                                <a href="#" class="application__form-success-marketplace-link">
-                                    <img src="img/app-store.png" alt="" class="application__form-success-marketplace-link-image" />
-                                </a>
-                                <a href="#" class="application__form-success-marketplace-link">
-                                    <img src="img/playstore.png" alt="" class="application__form-success-marketplace-link-image" />
-                                </a>
-                            </div>
-                        </div>
+                        <a href="#" class="form-success__back-link">
+                            Вернуться на главную
+                        </a>
                     </div>
+                    <img src="img/form-success.jpg" alt="" class="form-success__image" />
                 </div>
             </form>
         </div>

@@ -22,9 +22,10 @@
     display: flex;
     flex-wrap: wrap;
     margin: -1.5rem;
-
+    justify-content: center;
     @include breakpoint(mobile) {
         margin: -1rem;
+        justify-content: initial;
     }
 }
 

@@ -2589,17 +2589,27 @@
                     var newApplicationForm = document.querySelector('.js-new-application-form');
 
                     if (newApplicationForm) {
+                        var success = document.querySelector('.form-success');
                         newApplicationForm.addEventListener('submit', function(event) {
                             event.preventDefault();
                             if ($(newApplicationForm).parsley().isValid()) {
-                                newApplicationForm.classList.add('success-shown');
+                                if (success) {
+                                    success.classList.add('shown');
+                                    
+                                        success.scrollIntoView({
+                                            behavior: 'smooth'
+                                        })
+                                    
+                                }
                                 setTimeout(function() {
-                                    newApplicationForm.classList.remove('success-shown');
+                                    if (success) {
+                                        success.classList.remove('shown');
+                                    }
                                     newApplicationForm.reset();
                                     if (newApplicationForm.setStep) {
                                         newApplicationForm.setStep(0);
                                     }
-                                }, 80000);
+                                }, 7000);
                             }
                         })
                     }
