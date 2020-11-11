@@ -900,9 +900,9 @@
         margin-bottom: 0;
         padding: .5rem 1rem;
         width: 50%;
-        &:nth-child(3) {
-            width: 100%;
-        }
+        // &:nth-child(3) {
+        //     width: 100%;
+        // }
     }
 }
 
@@ -934,7 +934,7 @@
     line-height: 120%;
 
     @include breakpoint(mobile) {
-        font-size: 2.6rem;
+        font-size: 2rem;
     }
 }
 
@@ -955,5 +955,37 @@
 
     @include breakpoint(mobile) {
         margin-bottom: 5rem;
+    }
+}
+
+
+.catalog__lots-call-link {
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 1.6rem;
+    padding: 2rem 3.4rem;
+    border-radius: .8rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: background-color .2s;
+    text-transform: uppercase;
+    font-weight: 500;
+    &:link,
+    &:visited {
+        color: white;
+    }
+
+    &:hover {
+        background-color: var(--primary-color-hover);
+    }
+
+
+    @include breakpoint(mobile) {
+        font-size: 1.2rem;
+        padding: 1.4rem 2.4rem;
+        margin-top: 1.2rem;
+        width: 100%;
     }
 }

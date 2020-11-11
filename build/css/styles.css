@@ -11926,9 +11926,7 @@ input.range-slider__amount {
     .catalog__lots-card-info {
       margin-bottom: 0;
       padding: .5rem 1rem;
-      width: 50%; }
-      .catalog__lots-card-info:nth-child(3) {
-        width: 100%; } }
+      width: 50%; } }
 
 .catalog__lots-card-info-key {
   font-size: 1.6rem;
@@ -11954,7 +11952,7 @@ input.range-slider__amount {
   line-height: 120%; }
   @media only screen and (max-width: 680px) {
     .catalog__lots-card-info-value--large {
-      font-size: 2.6rem; } }
+      font-size: 2rem; } }
 
 .catalog__lots-list {
   margin-bottom: 7.8rem; }
@@ -11969,6 +11967,37 @@ input.range-slider__amount {
   @media only screen and (max-width: 680px) {
     .catalog__lots-list-item {
       margin-bottom: 5rem; } }
+
+.catalog__lots-call-link {
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 1.6rem;
+  padding: 2rem 3.4rem;
+  border-radius: .8rem;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  -webkit-transition: background-color .2s;
+  transition: background-color .2s;
+  text-transform: uppercase;
+  font-weight: 500; }
+  .catalog__lots-call-link:link, .catalog__lots-call-link:visited {
+    color: white; }
+  .catalog__lots-call-link:hover {
+    background-color: var(--primary-color-hover); }
+  @media only screen and (max-width: 680px) {
+    .catalog__lots-call-link {
+      font-size: 1.2rem;
+      padding: 1.4rem 2.4rem;
+      margin-top: 1.2rem;
+      width: 100%; } }
 
 .personel__item {
   margin-bottom: 6.5rem; }
