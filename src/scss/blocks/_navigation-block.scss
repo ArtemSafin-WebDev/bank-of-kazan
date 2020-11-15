@@ -146,7 +146,7 @@
 }
 
 .navigation__universal-toggle {
-    border-bottom: 1px solid rgba(white, 0.4);
+   
     display: flex;
     align-items: center;
     position: relative;
@@ -622,6 +622,7 @@
         border: 1px solid #ffffff;
         opacity: 0.5;
         transition: opacity 0.3s, background-color 0.3s;
+        outline: none;
     }
 
     .swiper-pagination-bullet-active {
@@ -1508,5 +1509,52 @@
 
     @include breakpoint(mobile) {
         margin-top: 1rem;
+    }
+}
+
+
+.navigation__universal-toggle-progress-layers {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 10;
+    height: 1px;
+    background-color: rgba(white, 0.4);
+    // opacity: 0;
+    // visibility: hidden;
+    // transition: opacity .3s, visibility 0s linear .3s;
+
+    // &.active {
+    //     opacity: 1;
+    //     visibility: visible;
+    //     transition: opacity .3s, visibility .3s;
+    // }
+}
+
+.navigation__universal-toggle-progress-layer {
+    min-height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s, visibility 0s linear 0.3s;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  
+
+    .swiper-pagination-progressbar-fill {
+        background-color: #fff;
+    }
+    .navigation__universal-toggle-progress-layers.active &.active {
+        position: relative;
+        opacity: 1;
+        visibility: visible;
+        z-index: 2;
+        transition: opacity .3s, visibility .3s;
     }
 }

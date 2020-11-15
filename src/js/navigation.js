@@ -1,4 +1,5 @@
 import Swiper from 'swiper';
+import { MOBILE_WIDTH } from './constants';
 
 export default function() {
     const navigationBlocks = Array.from(document.querySelectorAll('.js-navigation'));
@@ -25,7 +26,8 @@ export default function() {
         const menusCloseBtn = element.querySelector('.navigation__menus-close-btn');
         const btnSliderContainers = Array.from(element.querySelectorAll('.navigation__content-btn-slider .swiper-container'));
         // const aboutBankBtn = document.querySelector('.page-header__about-bank-link');
-
+        const progressLayer = element.querySelector('.navigation__universal-toggle-progress-layers');
+        const progressLayers = Array.from(element.querySelectorAll('.navigation__universal-toggle-progress-layer'));
         let searchOpen = false;
         let activeCategoryIndex = 0;
         let navigationMenuOpen = false;
@@ -35,13 +37,14 @@ export default function() {
                 const container = sliderWrapper.querySelector('.swiper-container');
                 const bgSliderContainer = bgSliders[sliderIndex];
                 const btnSliderContainer = btnSliderContainers[sliderIndex];
+                const currentProgressLayer = progressLayers[sliderIndex];
 
                 const innerSliderOptions = {
                     slidesPerView: 1,
                     watchOverflow: true,
                     autoHeight: false,
                     effect: 'fade',
-                    allowTouchMove: window.matchMedia('(max-width: 767px)').matches ? true : false,
+                    allowTouchMove: window.matchMedia(`(max-width: ${MOBILE_WIDTH}px)`).matches ? true : false,
                     speed: 500,
                     followFinger: false,
                     loop: true,
@@ -57,8 +60,9 @@ export default function() {
                         delay: 4000
                     },
                     pagination: {
-                        el: sliderWrapper.querySelector('.navigation__content-inner-slider-pagination'),
-                        type: 'bullets'
+                        el: window.matchMedia(`(max-width: ${MOBILE_WIDTH}px)`).matches ? sliderWrapper.querySelector('.navigation__content-inner-slider-pagination') : currentProgressLayer,
+                        type: window.matchMedia(`(max-width: ${MOBILE_WIDTH}px)`).matches ? 'bullets' : 'progressbar',
+                        clickable: true
                     }
                 };
 
@@ -88,12 +92,11 @@ export default function() {
                     }
                 });
 
-
                 window.addEventListener('orientationchange', () => {
                     innerSlider.update();
                     bgSlider.update();
                     btnSlider.update();
-                })
+                });
 
                 bgSlider.controller.control = btnSlider;
                 innerSlider.controller.control = bgSlider;
@@ -112,10 +115,12 @@ export default function() {
             bgLayers.forEach(layer => layer.classList.remove('active'));
             navigationMenuLayers.forEach(layer => layer.classList.remove('active'));
             innerSliderLayers.forEach(layer => layer.classList.remove('active'));
+            progressLayers.forEach(layer => layer.classList.remove('active'));
             bgLayers[btnIndex].classList.add('active');
             categoryToggles[btnIndex].classList.add('active');
             navigationMenuLayers[btnIndex].classList.add('active');
             innerSliderLayers[btnIndex].classList.add('active');
+            progressLayers[btnIndex].classList.add('active');
 
             activeCategoryIndex = btnIndex;
 
@@ -154,6 +159,7 @@ export default function() {
             backplate.classList.add('open');
             document.body.classList.add('violet-backplate');
             innerSlidersLayer.classList.remove('active');
+            progressLayer.classList.remove('active');
             innerMenusLayer.classList.add('active');
             menusCloseBtn.classList.add('active');
             element.classList.add('nav-menu-open');
@@ -174,6 +180,7 @@ export default function() {
             document.body.classList.remove('violet-backplate');
 
             innerSlidersLayer.classList.add('active');
+            progressLayer.classList.add('active');
             innerMenusLayer.classList.remove('active');
             menusCloseBtn.classList.remove('active');
             navigationMenuOpen = false;
