@@ -18,8 +18,7 @@
         <title>
             Банк Казани - Офисы и банкоматы
         </title>
-        <script src="https://api-maps.yandex.ru/2.1/?apikey=1c9ab29b-1afd-4a21-b1ea-478c36667e22
-        &lang=ru_RU" type="text/javascript">
+        <script src="https://api-maps.yandex.ru/2.1/?apikey=d41198b4-79cf-4ff2-83a6-aaff2a77a15c&lang=ru_RU" type="text/javascript"> 
         </script>
     </head>
     <body class="no-touch  dark-nav-text  " ontouchstart="" data-barba-prevent="all">
@@ -332,10 +331,8 @@
             <section class="offices js-bank-offices">
     <div class="container">
         <h1 class="offices__heading">
-            
-                Офисы и банкоматы в
-            
-            
+            Офисы и банкоматы в
+
             <div class="offices__city">
                 <div class="offices__city-current">
                     Казани
@@ -447,12 +444,21 @@
         </form>
         <div class="offices__results-views">
             <div class="offices__results-view js-offices-results-view">
-                <div class="offices__map-container">
-                    <div class="offices__map js-main-offices-map"></div>
+                <div class="offices__map-wrapper">
+                    <div class="offices__city-search">
+                        <input type="text" class="offices__city-search-input" id="suggest">
+                        <svg width="14" height="14" aria-hidden="true" class="icon-search">
+                            <use xlink:href="#search"></use>
+                        </svg>
+                    </div>
+                    <div class="offices__map-container">
+                        <div class="offices__map js-main-offices-map"></div>
+                    </div>
+                   
                 </div>
             </div>
             <div class="offices__results-view js-offices-results-view">
-                <div class="offices__list-view-group" data-type="office">
+                <div class="offices__list-view-group" data-type="offices">
                     <h2 class="offices__list-view-heading">
                         Офисы
                     </h2>
@@ -603,7 +609,7 @@
                             </div>
                             <div class="offices__list-view-accordion-body js-accordion-content">
                                 <div class="offices__list-view-accordion-map-container">
-                                    <div class="offices__list-view-accordion-map js-offices-inner-map" data-lat="55.831082" data-lng="49.079644" data-type="office"></div>
+                                    <div class="offices__list-view-accordion-map js-offices-inner-map" data-lat="55.831082" data-lng="49.079644" data-type="offices"></div>
                                 </div>
                             </div>
                         </div>
@@ -728,7 +734,7 @@
                             </div>
                             <div class="offices__list-view-accordion-body js-accordion-content">
                                 <div class="offices__list-view-accordion-map-container">
-                                    <div class="offices__list-view-accordion-map js-offices-inner-map" data-lat="55.831082" data-lng="49.079644" data-type="office"></div>
+                                    <div class="offices__list-view-accordion-map js-offices-inner-map" data-lat="55.831082" data-lng="49.079644" data-type="offices"></div>
                                 </div>
                             </div>
                         </div>
@@ -853,13 +859,13 @@
                             </div>
                             <div class="offices__list-view-accordion-body js-accordion-content">
                                 <div class="offices__list-view-accordion-map-container">
-                                    <div class="offices__list-view-accordion-map js-offices-inner-map" data-lat="55.831082" data-lng="49.079644" data-type="office"></div>
+                                    <div class="offices__list-view-accordion-map js-offices-inner-map" data-lat="55.831082" data-lng="49.079644" data-type="offices"></div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="offices__list-view-group" data-type="bankomat">
+                <div class="offices__list-view-group" data-type="bankomats">
                     <h2 class="offices__list-view-heading">
                         Банкоматы “Банка Казани”
                     </h2>
@@ -1010,7 +1016,7 @@
                             </div>
                             <div class="offices__list-view-accordion-body js-accordion-content">
                                 <div class="offices__list-view-accordion-map-container">
-                                    <div class="offices__list-view-accordion-map js-offices-inner-map" data-lat="55.831082" data-lng="49.079644" data-type="bankomat"></div>
+                                    <div class="offices__list-view-accordion-map js-offices-inner-map" data-lat="55.831082" data-lng="49.079644" data-type="bankomats"></div>
                                 </div>
                             </div>
                         </div>
@@ -1135,7 +1141,7 @@
                             </div>
                             <div class="offices__list-view-accordion-body js-accordion-content">
                                 <div class="offices__list-view-accordion-map-container">
-                                    <div class="offices__list-view-accordion-map js-offices-inner-map" data-lat="55.831082" data-lng="49.079644" data-type="bankomat"></div>
+                                    <div class="offices__list-view-accordion-map js-offices-inner-map" data-lat="55.831082" data-lng="49.079644" data-type="bankomats"></div>
                                 </div>
                             </div>
                         </div>
