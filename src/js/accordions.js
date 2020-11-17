@@ -34,7 +34,7 @@ function closeAccordeon(element) {
 }
 
 export default function(accordionElements, openFirst = false) {
-    const accordionInstances = [];
+    let accordionInstances = [];
     let initialized = false;
 
     function init() {
