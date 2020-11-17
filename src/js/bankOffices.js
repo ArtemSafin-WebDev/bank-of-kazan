@@ -30,6 +30,9 @@ export default function() {
 
     var target = document.getElementById('map-list');
 
+
+    if (!target) return;
+
     // Конфигурация observer (за какими изменениями наблюдать)
     const config = {
         attributes: false,
