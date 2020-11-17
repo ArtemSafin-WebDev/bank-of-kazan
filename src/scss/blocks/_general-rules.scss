@@ -2,10 +2,18 @@
     background-color: #fff;
     padding-top: 7rem;
     padding-bottom: 4rem;
+    .tab-items__item & {
+        padding-bottom: 0;
+    }
     @include breakpoint(mobile) {
         padding: 3rem 0;
         padding-bottom: 2rem;
+        .tab-items__item & {
+            padding-bottom: 0;
+        }
     }
+
+  
 }
 
 .general-rules__heading {

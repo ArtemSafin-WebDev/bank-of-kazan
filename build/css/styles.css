@@ -7487,10 +7487,14 @@ input.range-slider__amount {
   background-color: #fff;
   padding-top: 7rem;
   padding-bottom: 4rem; }
+  .tab-items__item .general-rules {
+    padding-bottom: 0; }
   @media only screen and (max-width: 680px) {
     .general-rules {
       padding: 3rem 0;
-      padding-bottom: 2rem; } }
+      padding-bottom: 2rem; }
+      .tab-items__item .general-rules {
+        padding-bottom: 0; } }
 
 .general-rules__heading {
   font-weight: 500;
