@@ -74,7 +74,7 @@ export default function newApplicationForm() {
         }
 
         function updatePagination(index) {
-            pagination.innerHTML = `${index + 1} / ${stepsTotal}`;
+            pagination.innerHTML = `Шаг ${index + 1} из ${stepsTotal}`;
         }
 
         function setStep(index) {
@@ -142,7 +142,7 @@ export default function newApplicationForm() {
                 .parsley()
                 .validate({ group: 'firststep' });
 
-            console.log('Validation result before next step', validationResult);
+            // console.log('Validation result before next step', validationResult);
 
             if (!validationResult) return;
 
