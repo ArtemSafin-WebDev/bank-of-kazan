@@ -2473,6 +2473,28 @@
     </div>
 </div>
 
+            <div class="cookies">
+    <div class="container">
+        <div class="inner-container">
+            <div class="cookies__row">
+                <div class="cookies__message">
+                    Разрешить данному сайту обрабатывать данные, согласно
+                    <a href="#">
+                        Политике обработки данных
+                    </a>
+                </div>
+                <div class="cookies__buttons">
+                    <a href="#" class="cookies__accept">
+                        Разрешаю
+                    </a>
+                    <a href="#" class="cookies__decline">
+                        Отмена
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
             <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
             <script>
@@ -2542,6 +2564,17 @@
                             }
                         })
                     }
+
+
+                    const cookiesBtns = [document.querySelector('.cookies__accept'), document.querySelector('.cookies__decline')];
+
+                    cookiesBtns.forEach(btn => {
+                        btn.addEventListener('click', event => {
+                            event.preventDefault();
+                            // console.log('Hiding cookies panel')
+                            document.body.classList.add('cookies-panel-hidden')
+                        })
+                    })
                 }
                 function destroyBackendScripts() {
                     // console.log('Здесь прописываем подчистку скриптов для бэкенда')

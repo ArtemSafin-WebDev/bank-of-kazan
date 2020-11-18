@@ -35,7 +35,7 @@
 
             {% include "partials/footer.html" %}
             {% include "partials/modals.html" %}
-
+            {% include "partials/cookies.html" %}
             <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
             <script>
                 function initBackendScripts() {
@@ -104,6 +104,17 @@
                             }
                         })
                     }
+
+
+                    const cookiesBtns = [document.querySelector('.cookies__accept'), document.querySelector('.cookies__decline')];
+
+                    cookiesBtns.forEach(btn => {
+                        btn.addEventListener('click', event => {
+                            event.preventDefault();
+                            // console.log('Hiding cookies panel')
+                            document.body.classList.add('cookies-panel-hidden')
+                        })
+                    })
                 }
                 function destroyBackendScripts() {
                     // console.log('Здесь прописываем подчистку скриптов для бэкенда')
