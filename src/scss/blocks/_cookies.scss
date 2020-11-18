@@ -13,13 +13,16 @@
     }
 
 
-    .container,
-    .inner-container {
-        padding: 0;
-        max-width: none;
-        width: 100%;
-        margin: 0;
+    @include breakpoint(mobile) {
+        .container,
+        .inner-container {
+            padding: 0;
+            max-width: none;
+            width: 100%;
+            margin: 0;
+        }
     }
+  
 }
 
 .cookies__row {

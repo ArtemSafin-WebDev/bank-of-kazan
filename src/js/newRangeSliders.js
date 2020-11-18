@@ -40,6 +40,7 @@ function init() {
         const stepValue = rangeInput.hasAttribute('step') ? cleanInput(rangeInput.getAttribute('step')) : 500;
         const units = rangeInput.hasAttribute('data-units') ? rangeInput.getAttribute('data-units') : 'rub';
         const floatValue = rangeInput.hasAttribute('data-float-value');
+        const form = slider.closest('form');
         // const noDivisions = rangeInput.hasAttribute('data-no-divisions');
         let initialRangeValue = checkValue(cleanInput(rangeInput.value));
 
@@ -177,6 +178,14 @@ function init() {
             customRangeSliderElement.noUiSlider.set(cleanedValue);
             
             setValue(cleanedValue);
+        }
+
+        if (form) {
+            form.addEventListener('reset', () => {
+                console.log('Parent form has been reset')
+
+                customRangeSliderElement.noUiSlider.reset()
+            })
         }
     });
 }

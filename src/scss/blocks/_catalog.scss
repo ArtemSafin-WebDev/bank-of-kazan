@@ -699,8 +699,6 @@
         display: block;
         width: 100%;
         padding-bottom: 56.25%;
-       
-       
     }
 
     img {
@@ -723,9 +721,8 @@
         border-radius: 50%;
         opacity: 1;
         margin: 0 0.8rem !important;
-        transition: background-color .2s;
+        transition: background-color 0.2s;
         outline: none !important;
-        
     }
 
     .swiper-pagination-bullet-active {
@@ -755,7 +752,7 @@
     position: relative;
 
     @include breakpoint(mobile) {
-        border-radius: .8rem;
+        border-radius: 0.8rem;
     }
 }
 
@@ -769,7 +766,7 @@
     background-color: #fff;
     border-radius: 50%;
     z-index: 50;
-    transition: background-color .3s, opacity 0.3s, visibility 0.3s;
+    transition: background-color 0.3s, opacity 0.3s, visibility 0.3s;
 
     &:not(.swiper-button-disabled) {
         &:hover {
@@ -784,7 +781,7 @@
     &.swiper-button-disabled {
         opacity: 0;
         visibility: hidden;
-        transition: background-color .3s, opacity 0.3s, visibility 0s linear 0.3s;
+        transition: background-color 0.3s, opacity 0.3s, visibility 0s linear 0.3s;
     }
 
     svg {
@@ -819,7 +816,7 @@
 .catalog__lots-card-left-col {
     width: 50%;
     flex-grow: 1;
-   
+
     @include breakpoint(mobile) {
         width: 100%;
         flex-grow: 0;
@@ -842,8 +839,7 @@
         padding: 0;
         display: flex;
         flex-wrap: wrap;
-        margin: -.5rem -1rem;
-        
+        margin: -0.5rem -1rem;
     }
 }
 
@@ -898,7 +894,7 @@
 
     @include breakpoint(mobile) {
         margin-bottom: 0;
-        padding: .5rem 1rem;
+        padding: 0.5rem 1rem;
         width: 50%;
         // &:nth-child(3) {
         //     width: 100%;
@@ -938,7 +934,6 @@
     }
 }
 
-
 .catalog__lots-list {
     margin-bottom: 7.8rem;
 
@@ -958,18 +953,17 @@
     }
 }
 
-
 .catalog__lots-call-link {
     background-color: var(--primary-color);
     color: white;
     font-size: 1.6rem;
     padding: 2rem 3.4rem;
-    border-radius: .8rem;
+    border-radius: 0.8rem;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    transition: background-color .2s;
+    transition: background-color 0.2s;
     text-transform: uppercase;
     font-weight: 500;
     &:link,
@@ -981,11 +975,55 @@
         background-color: var(--primary-color-hover);
     }
 
-
     @include breakpoint(mobile) {
         font-size: 1.2rem;
         padding: 1.4rem 2.4rem;
         margin-top: 1.2rem;
         width: 100%;
     }
+}
+
+.catalog__filters-reset {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 5rem;
+    svg {
+        width: 1.6rem;
+        height: 1.6rem;
+        flex-shrink: 0;
+        margin-right: 1rem;
+        fill: #949494;
+        margin-bottom: 0.2rem;
+        transition: fill 0.2s;
+    }
+
+    @include breakpoint(mobile) {
+        margin-top: 3rem;
+    }
+}
+
+.catalog__filters-reset-wrapper {
+    display: flex;
+    align-items: center;
+
+    &:hover {
+        svg {
+            fill: black;
+        }
+
+        .catalog__filters-reset-input {
+            color: black;
+        }
+    }
+}
+
+.catalog__filters-reset-input {
+    color: #949494;
+    font-size: 1.4rem;
+    line-height: 120%;
+    text-transform: uppercase;
+    width: 14.6rem;
+    cursor: pointer;
+    transition: color .2s;
 }
