@@ -39,20 +39,17 @@
     display: flex;
     flex-direction: column;
     @media screen and (max-width: 1024px) {
-       
         flex-grow: 1;
         margin-left: 2rem;
         flex-shrink: 1;
     }
 
- 
     @include breakpoint(mobile) {
         width: 100%;
         flex-grow: 0;
         margin: 0;
         flex-shrink: 1;
         margin-top: 3.2rem;
-        
     }
 }
 
@@ -152,7 +149,7 @@
     padding-left: 6rem;
     display: flex;
     flex-direction: column;
-    
+
     @include breakpoint(mobile) {
         padding: 0;
 
@@ -486,7 +483,7 @@
     flex-shrink: 0;
     margin-right: 6rem;
     display: grid;
-   
+
     grid-template-columns: 5rem 1fr 5rem 1fr 5rem 1fr 5rem;
     grid-template-rows: repeat(7, 2.8rem);
     @include breakpoint(mobile) {
@@ -521,7 +518,7 @@
 .calculator__apply-for-card-card--3 {
     grid-column: 5 / 8;
     grid-row: 3 / 8;
-    
+
     z-index: 10;
 }
 
@@ -531,10 +528,7 @@
 
 .calculator__apply-for-card-card:hover {
     z-index: 40;
-    
 }
-
-
 
 .calculator__apply-for-card-percent {
     width: 20.8rem;
@@ -550,7 +544,7 @@
     @include breakpoint(mobile) {
         display: none;
     }
-   
+
     &::before {
         content: '';
         width: 13.8rem;
@@ -578,15 +572,12 @@
     }
 }
 
-
 .calculator__apply-for-card-additional {
     display: flex;
     @include breakpoint(mobile) {
         justify-content: space-between;
     }
 }
-
-
 
 .calculator__converter-deposit-sum {
     display: flex;
@@ -601,15 +592,14 @@
     }
 }
 
-
 .calculator__converter-deposit-select {
     flex-shrink: 0;
-    margin-left: -.8rem;
+    margin-left: -0.8rem;
     .choices__inner {
         padding-right: 3.8rem;
-        background: #EAEAEA;
+        background: #eaeaea;
         border-left: none;
-        border-radius: .4rem;
+        border-radius: 0.4rem;
         min-width: 8rem;
 
         @include breakpoint(mobile) {
@@ -617,8 +607,83 @@
         }
     }
 
-
-    .custom-select .choices[data-type*=select-one]:after {
+    .custom-select .choices[data-type*='select-one']:after {
         background-image: url("data:image/svg+xml, %3Csvg fill='%2394C22B' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 9'%3E%3Cpath d='M12.35 0L7 5.56 1.64 0 0 1.71 7 9l7-7.29z' style='isolation:isolate'/%3E%3C/svg%3E");
+    }
+}
+
+.calculator__green-link {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary-color);
+    padding: 2rem 2.5rem;
+    justify-content: flex-end;
+    border-radius: 1rem;
+    color: white;
+    min-height: 20rem;
+    background-image: url('../img/green-link-bg.png');
+    background-position: left -0.5rem center;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    transition: background-color 0.4s;
+    &:link,
+    &:visited {
+        color: white;
+    }
+
+    &:hover {
+        background-color: var(--primary-color-hover);
+    }
+
+    @include breakpoint(mobile) {
+        padding: 1.8rem;
+        border-radius: 0.4rem;
+        min-height: 16rem;
+        background-position: left -0.2rem center;
+    }
+}
+
+.calculator__green-link-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 500;
+    font-size: 2.4rem;
+    line-height: 1.2;
+
+    @include breakpoint(mobile) {
+        font-size: 2rem;
+        line-height: 120%;
+    }
+}
+
+.calculator__green-link-arrow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 3.8rem;
+    height: 3.8rem;
+    background-color: #fff;
+    border-radius: 50%;
+    flex-shrink: 0;
+    svg {
+        width: 0.9rem;
+        height: 1.4rem;
+        fill: var(--primary-color);
+        margin-left: 2rem;
+        display: block;
+        margin: 0;
+    }
+
+    @include breakpoint(mobile) {
+        width: 3.2rem;
+        height: 3.2rem;
+
+        svg {
+            width: 0.8rem;
+            height: 1.2rem;
+        }
     }
 }
