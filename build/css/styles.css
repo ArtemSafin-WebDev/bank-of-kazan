@@ -13530,7 +13530,8 @@ input.range-slider__amount {
   opacity: 0;
   visibility: hidden;
   -webkit-transition: opacity 0.3s, visibility 0s linear 0.3s;
-  transition: opacity 0.3s, visibility 0s linear 0.3s; }
+  transition: opacity 0.3s, visibility 0s linear 0.3s;
+  z-index: 50; }
   @media only screen and (max-width: 680px) {
     .offices__features-item-dropdown {
       width: 16rem; } }
@@ -13544,7 +13545,8 @@ input.range-slider__amount {
   padding: 0.8rem;
   color: black;
   text-align: center;
-  position: relative; }
+  position: relative;
+  display: block; }
   @media only screen and (max-width: 680px) {
     .offices__features-item-dropdown-content {
       font-size: 1.2rem; } }
@@ -13724,7 +13726,7 @@ input.range-slider__amount {
       width: 100%;
       font-size: 1.4rem;
       line-height: 1.7;
-      border-radius: .8rem;
+      border-radius: 0.8rem;
       -webkit-box-shadow: 0px 0 1.3rem rgba(0, 0, 0, 0.09);
               box-shadow: 0px 0 1.3rem rgba(0, 0, 0, 0.09); } }
 
@@ -13792,8 +13794,8 @@ input.range-slider__amount {
         flex-shrink: 0;
     display: block;
     fill: #8a8a8a;
-    -webkit-transition: fill .2s;
-    transition: fill .2s; }
+    -webkit-transition: fill 0.2s;
+    transition: fill 0.2s; }
   .offices__balloon-close:hover svg {
     fill: black; }
   @media only screen and (max-width: 680px) {
@@ -13824,6 +13826,25 @@ input.range-slider__amount {
   margin-right: 2rem; }
   .offices__balloon-features-icon:last-child {
     margin-right: 0; }
+
+.offices__no-fee {
+  position: absolute;
+  padding: 0.5rem .8rem;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 0.3rem;
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1.2;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 0.6rem; }
+  .offices__no-fee:hover .offices__features-item-dropdown {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s; }
 
 .modal {
   position: fixed;
