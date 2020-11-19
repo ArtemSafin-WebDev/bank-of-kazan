@@ -3,8 +3,9 @@ export default function pageHeaderContacts() {
 
 
     if (element) {
-        element.addEventListener('click', event => {
-          
+        const btn = element.querySelector('.page-header__contacts-btn')
+        btn.addEventListener('click', event => {
+            event.preventDefault();
             element.classList.toggle('active');
         });
 
@@ -21,6 +22,11 @@ export default function pageHeaderContacts() {
             if (!event.target.matches('.js-page-header-contacts') && !event.target.closest('.js-page-header-contacts')) {
                 element.classList.remove('active');
             }
+            if (event.target.matches('.page-header__contacts-dropdown-close') || event.target.closest('.page-header__contacts-dropdown-close')) {
+                element.classList.remove('active');
+            }
+
+
         })
     }
 

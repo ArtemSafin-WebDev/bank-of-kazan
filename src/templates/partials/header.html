@@ -7,15 +7,6 @@
                 <span></span>
             </div>
             <div class="page-header__selects">
-                <!-- <a href="#" class="page-header__about-bank-link">
-                    <div class="page-header__about-bank-link-cross">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-
-                    о банке
-                </a> -->
                 <div class="page-header__city">
                     <div class="page-header__city-link">
                         <div class="page-header__about-bank-link-cross">
@@ -52,23 +43,28 @@
                         </div>
                     </div>
                 </div>
-               
             </div>
             <div class="page-header__phone-block">
                 <a href="#" class="page-header__phone-link">
-                    8-800-77-518-77
+                    <span class="page-header__phone-link-text">
+                        8-800-77-518-77
+                    </span>
+                    <svg width="16" height="22" aria-hidden="true" class="icon-phone">
+                        <use xlink:href="#header-phone" />
+                    </svg>
                 </a>
-              
             </div>
-            
+
             <div class="page-header__online-bank page-header__online-bank--cards">
                 <a href="#" class="page-header__online-bank-link">
                     <svg width="16" height="22" aria-hidden="true" class="icon-location">
                         <use xlink:href="#location" />
                     </svg>
-                    офисы и банкоматы
+                    <span class="page-header__online-bank-link-text">
+                        офисы и банкоматы
+                    </span>
+                   
                 </a>
-               
             </div>
             <div class="page-header__online-bank">
                 <div class="page-header__online-bank-link">
@@ -96,25 +92,45 @@
                 </button>
                 <div class="page-header__contacts-dropdown">
                     <div class="page-header__contacts-dropdown-inner">
+                        <h4 class="page-header__contacts-dropdown-inner-heading">
+                            Связаться с нами
+                            <button class="page-header__contacts-dropdown-close">
+                                <svg width="16" height="16" aria-hidden="true" class="icon-cross">
+                                    <use xlink:href="#cross" />
+                                </svg>
+                            </button>
+                        </h4>
                         <a href="#" class="page-header__contacts-link" style="--social-bg-color: #25D366" ie-style="--social-bg-color: #25D366" title="WhatsApp">
                             <svg width="16" height="16" aria-hidden="true" class="icon-whatsapp">
                                 <use xlink:href="#whatsapp" />
                             </svg>
+                            <span class="page-header__contacts-link-text">
+                                WhatsApp
+                            </span>
                         </a>
                         <a href="#" class="page-header__contacts-link" style="--social-bg-color: #38A6DB" ie-style="--social-bg-color: #38A6DB" title="Telegram">
                             <svg width="16" height="16" aria-hidden="true" class="icon-telegram">
                                 <use xlink:href="#telegram" />
                             </svg>
+                            <span class="page-header__contacts-link-text">
+                                Telegram
+                            </span>
                         </a>
                         <a href="#" class="page-header__contacts-link" style="--social-bg-color: #7360F2" ie-style="--social-bg-color: #7360F2" title="Viber">
                             <svg width="16" height="16" aria-hidden="true" class="icon-messanger">
                                 <use xlink:href="#messenger" />
                             </svg>
+                            <span class="page-header__contacts-link-text">
+                                Viber
+                            </span>
                         </a>
                         <a href="#" class="page-header__contacts-link" style="--social-bg-color: #6C2F7C" ie-style="--social-bg-color: #6C2F7C" title="Email">
                             <svg width="16" height="16" aria-hidden="true" class="icon-letter">
                                 <use xlink:href="#letter" />
                             </svg>
+                            <span class="page-header__contacts-link-text">
+                                E-mail
+                            </span>
                         </a>
                     </div>
                 </div>
@@ -215,6 +231,15 @@
                             </ul>
                         </div>
                     </div>
+                    <a href="tel:88007751877" class="page-header__mobile-nav-inner-phone">
+                        8-800-77-518-77
+                    </a>
+                    <a href="#" class="page-header__mobile-nav-inner-offices">
+                        <svg width="15" height="15" aria-hidden="true" class="icon-location">
+                            <use xlink:href="#location" />
+                        </svg>
+                        офисы и банкоматы
+                    </a>
                 </div>
             </div>
         </div>
