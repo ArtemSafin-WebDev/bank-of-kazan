@@ -11,7 +11,7 @@ function openAccordeon(element) {
     element && element.scrollTop;
 
     const transitionEndHandler = () => {
-        console.log('Tranisitionnd Initiated');
+      
         element.style.maxHeight = 'none';
         element.removeEventListener('transitionend', transitionEndHandler);
         animating = false;
@@ -47,9 +47,7 @@ export default function(accordionElements, openFirst = false) {
                 return;
             }
 
-            console.log('Btns', btns);
-            console.log('Content', content);
-
+        
             const handler = function(event) {
                 if (animating) return;
 
