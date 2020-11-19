@@ -30,6 +30,23 @@
     flex-shrink: 0;
     margin-right: 2rem;
     margin-bottom: .8rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    .icon-link {
+        width: 2rem;
+        height: 2rem;
+        flex-shrink: 0;
+        margin-left: 1.4rem;
+        fill: currentColor;
+
+        @include breakpoint(mobile) {
+            width: 1.2rem;
+            height: 1.2rem;
+            margin-left: 1rem;
+        }
+    }
     .tabs-nav--compact & {
         font-size: 2.2rem;
         line-height: 1.2;
