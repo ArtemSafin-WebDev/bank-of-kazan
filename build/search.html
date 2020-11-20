@@ -526,9 +526,9 @@
                         <h5 class="contact-bank__leave-request">
                             Или оставьте заявку и мы вам перезовним
                         </h5>
-                        <form action="/" method="POST" class="contact-bank__form">
+                        <form action="/" method="POST" class="contact-bank__form" >
                             <div class="contact-bank__input-wrapper">
-                                <input type="tel" name="phone" id="" class="contact-bank__input js-phone-input" placeholder="+7" required/>
+                                <input type="tel" name="phone" class="contact-bank__input js-phone-input" placeholder="+7" required/>
                             </div>
                             <button type="submit" class="contact-bank__submit-btn">
                                 перезвоните мне
@@ -1176,6 +1176,39 @@
     </div>
 </div>
 
+            <div class="success">
+    <div class="success__card">
+        <button class="success__card-close">
+            <svg width="20" height="20" aria-hidden="true" class="icon-cross">
+                <use xlink:href="#cross" />
+            </svg>
+        </button>
+        <div class="success__card-image-container">
+            <img src="img/global-success.jpg" alt="" class="success__card-image">
+        </div>
+        <div class="success__card-content">
+            <h4 class="success__card-heading">
+                <svg width="20" height="20" aria-hidden="true" class="icon-checkmark">
+                    <use xlink:href="#checkmark" />
+                </svg>
+                Спасибо за подписку
+            </h4>
+            <div class="success__card-text">
+                <p>
+                    Все новые события и новости нашего банкавы будете узнавать первым!
+                </p>
+            </div>
+            <div class="success__card-btns">
+                <a href="#" class="success__card-back-link">
+                    Вернуться на главную
+                </a>
+                <a href="#" class="success__card-news-link">
+                    Перейти в Новости
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
             <script>
                 function initBackendScripts() {
@@ -1191,7 +1224,9 @@
                                 setTimeout(function() {
                                     document.documentElement.style.setProperty('--progress', "100%");
                                     setTimeout(function() {
-                                        applicationForm.classList.add('success-shown')
+                                   
+
+                                        document.body.classList.add('global-success-shown')
                                     }, 200)
                                 }, 500)
                             }
@@ -1206,12 +1241,12 @@
                         reviewForm.addEventListener('submit', function(event) {
                             event.preventDefault();
 
-                            reviewForm.classList.add('success');
+                            document.body.classList.add('global-success-shown')
                             var modal = reviewForm.closest('.js-modal');
                             setTimeout(function() {
                                 if (window.closeModal) {
                                     window.closeModal(modal);
-                                    reviewForm.classList.remove('success')
+                                    document.body.classList.remove('global-success-shown')
                                 }
                             }, 2000)
                         })
@@ -1224,18 +1259,9 @@
                         newApplicationForm.addEventListener('submit', function(event) {
                             event.preventDefault();
                             if ($(newApplicationForm).parsley().isValid()) {
-                                if (success) {
-                                    success.classList.add('shown');
-                                    
-                                        success.scrollIntoView({
-                                            behavior: 'smooth'
-                                        })
-                                    
-                                }
+                                document.body.classList.add('global-success-shown')
                                 setTimeout(function() {
-                                    if (success) {
-                                        success.classList.remove('shown');
-                                    }
+                                    document.body.classList.remove('global-success-shown')
                                     newApplicationForm.reset();
                                     if (newApplicationForm.setStep) {
                                         newApplicationForm.setStep(0);
@@ -1255,6 +1281,26 @@
                             document.body.classList.add('cookies-panel-hidden')
                         })
                     })
+
+
+
+                    var newsSubscription = document.querySelector('#news-subscription');
+
+                    if (newsSubscription) {
+                        newsSubscription.addEventListener('submit', event => {
+                            event.preventDefault();
+                            document.body.classList.add('global-success-shown')
+                        })
+                    }
+
+                    var successClose = document.querySelector('.success__card-close');
+
+                    if (successClose) {
+                        successClose.addEventListener('click', event => {
+                            event.preventDefault();
+                            document.body.classList.remove('global-success-shown')
+                        })
+                    }
                 }
                 function destroyBackendScripts() {
                     // console.log('Здесь прописываем подчистку скриптов для бэкенда')
