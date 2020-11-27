@@ -1475,6 +1475,22 @@ img.lazyload:not([src]) {
 .barba-leave-to {
   opacity: 0; }
 
+@media only screen and (max-width: 680px) {
+  .general-rules__table .landing-block-node-table {
+    padding-left: var(--content-padding);
+    margin-left: calc(var(--content-padding) * -1);
+    padding-bottom: 2rem; }
+    .general-rules__table .landing-block-node-table::-webkit-scrollbar {
+      background-color: #f1f1f1;
+      width: 0.5rem;
+      height: 0.5rem; }
+    .general-rules__table .landing-block-node-table::-webkit-scrollbar-thumb {
+      background-color: var(--primary-color); }
+    .general-rules__table .landing-block-node-table::-webkit-scrollbar-button {
+      display: none; }
+    .general-rules__table .landing-block-node-table::-webkit-scrollbar-track {
+      background-color: #f1f1f1; } }
+
 .container {
   width: 100%;
   max-width: calc(var(--max-container-width) + 2 * var(--content-padding));
@@ -13815,10 +13831,8 @@ input.range-slider__amount {
             transform: translateX(-50%); }
 
 .offices__list-view-accordion-body {
-  max-height: 0;
-  overflow: hidden;
-  -webkit-transition: max-height 0.3s;
-  transition: max-height 0.3s; }
+  height: 0;
+  overflow: hidden; }
 
 .offices__list-view-accordion-map-container {
   position: relative;
@@ -17139,6 +17153,12 @@ input.range-slider__amount {
       font-size: 2.4rem;
       line-height: 1.2;
       margin-bottom: 2rem; } }
+
+.new-about-bank-products__accordion {
+  width: 50%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1; }
 
 .new-about-bank-products__accordion-btn {
   display: -webkit-box;
