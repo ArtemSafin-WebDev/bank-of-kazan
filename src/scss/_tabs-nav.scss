@@ -2,11 +2,18 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    margin-left: -1.6rem;
+
+    &--compact {
+        margin-left: -1rem;
+    }
     @include breakpoint(mobile) {
         overflow-y: hidden;
         flex-wrap: nowrap;
         -webkit-overflow-scrolling: touch;
         margin: -1rem calc(-1 * var(--content-padding));
+        margin-left: calc(-1 * (var(--content-padding) + 1rem));
+        margin-right: calc(-1 * (var(--content-padding) + 1rem));
         padding: 1rem var(--content-padding);
         @include noScrollbar();
         &::after {
@@ -33,7 +40,9 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    margin-left: -1.6rem;
+  
+
+   
     .icon-link {
         width: 2rem;
         height: 2rem;
@@ -58,6 +67,7 @@
             padding: .6rem 1rem;
             border-radius: .4rem;
             margin-right: .5rem;
+          
         }
     }
     &:link,
@@ -91,9 +101,7 @@
         margin: 0;
         margin-right: .5rem;
 
-        &:first-child {
-            margin-left: -1rem;
-        }
+      
        
     }
 }

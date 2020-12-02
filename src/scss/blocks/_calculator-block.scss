@@ -523,11 +523,12 @@
 }
 
 .calculator__apply-for-card-card {
-    transition: box-shadow 0.3s;
+    transition: transform .3s, box-shadow 0.3s;
+    transform-origin: left top;
 }
 
-.calculator__apply-for-card-card:hover {
-    z-index: 40;
+.calculator__apply-for-card-card:not(:first-child):hover {
+    transform: rotate(8deg) translateX(15%);
 }
 
 .calculator__apply-for-card-percent {

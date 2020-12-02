@@ -611,7 +611,7 @@ button.swiper-pagination-bullet {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden; }
 
-/*! nouislider - 14.6.3 - 11/19/2020 */
+/*! nouislider - 14.6.2 - 9/16/2020 */
 /* Functional styling;
  * These styles are required for noUiSlider to function.
  * You don't need to change these rules to apply your design.
@@ -2997,7 +2997,10 @@ img.lazyload:not([src]) {
       -ms-flex-align: center;
           align-items: center;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
+      flex-wrap: wrap;
+  margin-left: -1.6rem; }
+  .tabs-nav--compact {
+    margin-left: -1rem; }
   @media only screen and (max-width: 680px) {
     .tabs-nav {
       overflow-y: hidden;
@@ -3005,6 +3008,8 @@ img.lazyload:not([src]) {
           flex-wrap: nowrap;
       -webkit-overflow-scrolling: touch;
       margin: -1rem calc(-1 * var(--content-padding));
+      margin-left: calc(-1 * (var(--content-padding) + 1rem));
+      margin-right: calc(-1 * (var(--content-padding) + 1rem));
       padding: 1rem var(--content-padding); }
       .tabs-nav::-webkit-scrollbar * {
         background: transparent; }
@@ -3043,8 +3048,7 @@ img.lazyload:not([src]) {
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center;
-  margin-left: -1.6rem; }
+          justify-content: center; }
   .tabs-nav__link .icon-link {
     width: 2rem;
     height: 2rem;
@@ -3087,9 +3091,7 @@ img.lazyload:not([src]) {
       padding: .6rem 1rem;
       border-radius: .4rem;
       margin: 0;
-      margin-right: .5rem; }
-      .tabs-nav__link:first-child {
-        margin-left: -1rem; } }
+      margin-right: .5rem; } }
 
 .tab-items {
   position: relative; }
@@ -5376,8 +5378,7 @@ input.range-slider__amount {
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center;
-  margin-right: .08em; }
+          align-items: center; }
   @media only screen and (max-width: 680px) {
     .navigation__content-inner-slider-card-percent {
       font-size: 1.6rem;
@@ -5387,7 +5388,8 @@ input.range-slider__amount {
   font-weight: bold;
   font-size: 20rem;
   line-height: 120%;
-  margin-left: 0.095em; }
+  margin-left: 0.095em;
+  margin-right: .08em; }
   @media only screen and (max-width: 680px) {
     .navigation__content-inner-slider-card-percent-digit {
       font-size: 8rem;
@@ -7315,13 +7317,16 @@ input.range-slider__amount {
   z-index: 10; }
 
 .calculator__apply-for-card-card {
-  -webkit-transition: -webkit-box-shadow 0.3s;
-  transition: -webkit-box-shadow 0.3s;
-  transition: box-shadow 0.3s;
-  transition: box-shadow 0.3s, -webkit-box-shadow 0.3s; }
+  -webkit-transition: -webkit-transform .3s, -webkit-box-shadow 0.3s;
+  transition: -webkit-transform .3s, -webkit-box-shadow 0.3s;
+  transition: transform .3s, box-shadow 0.3s;
+  transition: transform .3s, box-shadow 0.3s, -webkit-transform .3s, -webkit-box-shadow 0.3s;
+  -webkit-transform-origin: left top;
+          transform-origin: left top; }
 
-.calculator__apply-for-card-card:hover {
-  z-index: 40; }
+.calculator__apply-for-card-card:not(:first-child):hover {
+  -webkit-transform: rotate(8deg) translateX(15%);
+          transform: rotate(8deg) translateX(15%); }
 
 .calculator__apply-for-card-percent {
   width: 20.8rem;
@@ -9662,10 +9667,7 @@ input.range-slider__amount {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin: -1.5rem;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center; }
+  margin: -1.5rem; }
   @media only screen and (max-width: 680px) {
     .program-advantages__list {
       margin: -1rem;
@@ -13503,7 +13505,9 @@ input.range-slider__amount {
   transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
   transition: transform 0.3s, -webkit-transform 0.3s;
-  cursor: pointer; }
+  cursor: pointer;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg); }
   .offices__list-view-accordion-arrow svg {
     width: 1.4rem;
     height: 0.9rem;
@@ -13515,8 +13519,8 @@ input.range-slider__amount {
         width: 1.2rem;
         height: 1.2rem; } }
   .offices__list-view-accordion.active .offices__list-view-accordion-arrow {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg); }
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
   @media only screen and (max-width: 680px) {
     .offices__list-view-accordion-arrow {
       width: 3rem;
@@ -14472,7 +14476,7 @@ input.range-slider__amount {
   margin-bottom: 6rem; }
   @media only screen and (max-width: 680px) {
     .application__form-heading {
-      font-size: 2.2rem;
+      font-size: 1.8rem;
       margin-bottom: 2rem; } }
 
 .application__form-progress {

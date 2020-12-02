@@ -763,7 +763,7 @@
     left: -0.1em;
     display: flex;
     align-items: center;
-    margin-right: .08em;
+  
 
     @include breakpoint(mobile) {
         font-size: 1.6rem;
@@ -776,6 +776,7 @@
     font-size: 20rem;
     line-height: 120%;
     margin-left: 0.095em;
+    margin-right: .08em;
     @include breakpoint(mobile) {
         font-size: 8rem;
         line-height: 1;
