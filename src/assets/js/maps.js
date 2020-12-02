@@ -498,7 +498,13 @@ function init() {
                 const firstGeoObject = res.geoObjects.get(0);
                 const coords = firstGeoObject.geometry.getCoordinates();
 
-                map.setCenter(coords, 12);
+
+                // console.log(`Geocoding result for ${suggestion.value}`, {
+                //     firstGeoObject,
+                //     coords
+                // })
+
+                map.setCenter(coords, 15);
             },
             function(err) {
                 console.error(err);

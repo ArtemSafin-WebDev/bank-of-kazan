@@ -17,6 +17,16 @@ export default function() {
         if (categoryIndex === -1) {
             categoryIndex = 0;
         }
+
+       
+
+        const linksInActiveLayer = Array.from(document.querySelectorAll('.product-navigation__layer.active .js-product-nav-menu-link'));
+
+        
+
+        const initialActiveLink = linksInActiveLayer.find(link => link.classList.contains('active'));
+        
+
         let initialActiveCategory = categoryIndex;
         let standardInitialActiveLink = menuLinks.find(link => {
             return link.classList.contains('active') && !categoryLayers[initialActiveCategory].contains(link);
@@ -45,6 +55,9 @@ export default function() {
         function closeInnerMenu() {
             menuLinks.forEach(link => link.classList.remove('active'));
             menuItems.forEach(item => item.classList.remove('active'));
+            if (initialActiveLink) {
+                initialActiveLink.classList.add('active');
+            }
             document.body.classList.remove('product-nav-menu-open');
             productInfoItem.classList.add('active');
         }
@@ -142,7 +155,7 @@ export default function() {
 
         element.addEventListener('click', function(event) {
             if (event.target.matches('a') || event.target.matches('button')) {
-                console.log(event.target);
+                // console.log(event.target);
             } else {
                 closeInnerMenu();
                 selectCategory(initialActiveCategory);

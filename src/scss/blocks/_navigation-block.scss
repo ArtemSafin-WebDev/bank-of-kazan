@@ -744,11 +744,13 @@
     line-height: 120%;
     margin-bottom: 1.5rem;
 
+
+
     @include breakpoint(mobile) {
         font-weight: 500;
         font-size: 2.4rem;
         line-height: 120%;
-        margin-bottom: 0.5rem;
+        margin-bottom: 1.5rem;
     }
 }
 
@@ -761,10 +763,11 @@
     left: -0.1em;
     display: flex;
     align-items: center;
+    margin-right: .08em;
 
     @include breakpoint(mobile) {
         font-size: 1.6rem;
-        margin-bottom: 0.8rem;
+        margin-bottom: 1.5rem;
     }
 }
 

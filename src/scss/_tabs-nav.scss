@@ -33,7 +33,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-
+    margin-left: -1.6rem;
     .icon-link {
         width: 2rem;
         height: 2rem;
@@ -90,5 +90,10 @@
         border-radius: .4rem;
         margin: 0;
         margin-right: .5rem;
+
+        &:first-child {
+            margin-left: -1rem;
+        }
+       
     }
 }
