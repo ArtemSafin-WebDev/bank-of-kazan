@@ -26,6 +26,7 @@ function init() {
                         scrollTo: {
                             y: elementToScroll,
                             autoKill: true,
+                            offsetY: 60
                         }
                     });
                 } else {
@@ -49,7 +50,8 @@ function init() {
                         scrollTo: {
                             y: elementToScroll,
                             autoKill: true,
-                            // onAutoKill: () => alert('autokilled scrolling')
+                            offsetY: 60
+                            
                         }
                     });
                 }, 50);

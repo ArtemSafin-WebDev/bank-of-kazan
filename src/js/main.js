@@ -33,7 +33,6 @@ import officesForms from './officesInputs';
 import newApplicationForm from './newApplicationForm';
 import fileUpload from './fileUpload';
 
-
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
     detectTouch();
@@ -55,37 +54,33 @@ document.addEventListener('DOMContentLoaded', function() {
     officesForms();
     newApplicationForm();
     fileUpload();
+
+    
+
     barba.init({
         debug: true,
         logLevel: 'error',
         transitions: [
             {
                 name: 'opacity-transition',
-                leave: data => {
-                    return new Promise(resolve => {
-                        gsap.to(data.current.container, {
-                            opacity: 0,
-                            duration: 0.15,
-                            onComplete: () => {
-                                gsap.set(data.current.container, {
-                                    display: 'none'
-                                });
-                                resolve();
-                            }
-                        });
-                    });
-                },
-                enter: data => {
-                    return new Promise(resolve => {
-                        gsap.from(data.next.container, {
-                            duration: 0.15,
-                            opacity: 0,
-                            onComplete: () => {
-                                resolve();
-                            }
-                        });
-                    });
-                }
+                sync: false,
+                leave: data =>
+                    gsap.to(data.current.container, {
+                        opacity: 0,
+                        duration: 0.15,
+                        onComplete: () => {
+                            gsap.set(data.current.container, {
+                                display: 'none'
+                            });
+                            
+                        }
+                    }),
+                enter: data =>
+                    gsap.from(data.next.container, {
+                        duration: 0.15,
+                        opacity: 0,
+                       
+                    })
             }
         ],
         views: [
@@ -93,11 +88,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 namespace: 'home',
 
                 beforeLeave() {
-                    // console.log('Before leave');
                     tabs.destroy();
                     ratingStars.destroy();
                     phoneMask.destroy();
-                   
+
                     productsSlider.destroy();
                     rangeSliders.destroy();
                     customSelects.destroy();
@@ -112,29 +106,28 @@ document.addEventListener('DOMContentLoaded', function() {
                     }
                 },
 
-                afterEnter() {
-                    // console.log('After enter');
+                beforeEnter() {
                     tabs.init();
-                   
+
                     ratingStars.init();
-                   
+
                     phoneMask.init();
-                   
+
                     customSelects.init();
                     rangeSliders.init();
-                   
+
                     forBusiness.init();
                     productsSlider.init();
                     currency.init();
                     validation.init();
                     anchors.init();
                     aboutBankAnimations.init();
-                    accordions(Array.from(document.querySelectorAll('.js-accordion'))).init()
+                    accordions(Array.from(document.querySelectorAll('.js-accordion'))).init();
                     document.body.classList.remove('category-toggles-off');
 
                     if (window.initBackendScripts && typeof window.initBackendScripts === 'function') {
                         window.initBackendScripts();
-                    } 
+                    }
                 }
             }
         ]

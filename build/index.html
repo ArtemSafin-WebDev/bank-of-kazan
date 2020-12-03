@@ -15,6 +15,7 @@
     
         <link rel="stylesheet" href="css/styles.min.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+        <link rel="stylesheet" href="assets/plugins/bvi/css/bvi.min.css">
         <title>
             Банк Казани - Главная страница
         </title>
@@ -467,6 +468,46 @@
                             </div>
                         </div>
                     </div>
+                    <div class="navigation__currency">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Валюта
+                                    </th>
+                                    <th>
+                                        Покупка
+                                    </th>
+                                    <th>
+                                        Продажа
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        USD
+                                    </td>
+                                    <td>
+                                        <div class="currency-amount">
+                                            65,13
+                                            <svg width="34" height="34" aria-hidden="true" class="icon-trend icon-trend-down">
+                                                <use xlink:href="#trend" />
+                                            </svg>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="currency-amount">
+                                            75,24
+                                            <svg width="34" height="34" aria-hidden="true" class="icon-trend icon-trend-up">
+                                                <use xlink:href="#trend" />
+                                            </svg>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
                 <div class="navigation__content-right-col">
                     <div class="navigation__content-right-col-sliders-menus">
@@ -813,11 +854,13 @@
 
                                                 <a href="#" class="navigation__menu-link"> Потребительский классический </a>
                                             </div>
-                                            <h5 class="navigation__menu-card-heading">
-                                                <a href="#">
-                                                    Все кредиты
-                                                </a>
-                                            </h5>
+                                            <a href="#" class="navigation__archive-link">
+                                                
+                                                Все кредиты
+                                                <svg width="14" height="14" aria-hidden="true" class="icon-arrow-right">
+                                                    <use xlink:href="#arrow-right" />
+                                                </svg>
+                                            </a>
                                         </div>
                                         <div class="navigation__content-right-col-menu-card-right-col">
                                             <h5 class="navigation__menu-card-heading">
@@ -3649,7 +3692,7 @@
                 <div class="page-footer__bottom-section-info">
                     <a href="#">Информация о лицах, под контролем которых находится банк;</a><a href="#">Центр раскрытия корпоративной информации;</a><a href="#">Информация о максимальных процентных ставках по вкладам физических лиц;</a><a href="#">Раскрытие информации профессиональным участником рынка ценных бумаг</a>
                 </div>
-                <a href="#" class="page-footer__low-vision-version">
+                <a href="#" class="page-footer__low-vision-version bvi-open">
                     <svg width="22" height="18" aria-hidden="true" class="icon-glasses">
                         <use xlink:href="#glasses" />
                     </svg>
@@ -4242,7 +4285,9 @@
             </script>
             <script src="assets/js/maps.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
-            
+            <script src="assets/plugins/bvi/js/js.cookie.min.js"></script>
+            <script src="assets/plugins/bvi/js/bvi-init.min.js"></script>
+            <script src="assets/plugins/bvi/js/bvi.min.js"></script>
             <script src="js/app.js"></script>
         </div>
     </body>
