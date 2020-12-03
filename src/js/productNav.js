@@ -18,15 +18,9 @@ export default function() {
             categoryIndex = 0;
         }
 
-       
-
         const linksInActiveLayer = Array.from(document.querySelectorAll('.product-navigation__layer.active .js-product-nav-menu-link'));
-
-        
-
         const initialActiveLink = linksInActiveLayer.find(link => link.classList.contains('active'));
         
-
         let initialActiveCategory = categoryIndex;
         let standardInitialActiveLink = menuLinks.find(link => {
             return link.classList.contains('active') && !categoryLayers[initialActiveCategory].contains(link);

@@ -16,16 +16,23 @@ function init() {
 
                 if (elementToScroll) {
                     event.preventDefault();
+                    console.log('Event prevented', elementToScroll)
 
+                    const anchorScrollEvent = new CustomEvent('anchorscroll');
+
+                    document.dispatchEvent(anchorScrollEvent);
                     gsap.to(window, {
                         duration: 2,
                         scrollTo: {
                             y: elementToScroll,
                             autoKill: true,
-                            // onAutoKill: () => alert('autokilled scrolling')
                         }
                     });
+                } else {
+                    console.warn('No element to scroll for hash', link.hash)
                 }
+            } else {
+                // console.log('No valid hash', link)
             }
         }
     });
@@ -47,7 +54,7 @@ function init() {
                     });
                 }, 50);
             }
-        }
+        } 
     });
 }
 

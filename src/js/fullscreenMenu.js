@@ -64,6 +64,14 @@ export default function fullscreenMenu() {
         productNavClose.addEventListener('click', event => {
             event.preventDefault();
             closeMenu();
+        });
+
+
+        document.addEventListener('anchorscroll', event => {
+            // console.log('Anchorscroll event captured')
+            if (menuOpen) {
+                closeMenu();
+            }
         })
     }
 }
