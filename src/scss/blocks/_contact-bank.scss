@@ -141,6 +141,11 @@
 .contact-bank__form {
     display: flex;
     flex-wrap: wrap;
+
+    .parsley-errors-list {
+        display: none;
+    }
+   
     @include breakpoint(mobile) {
         flex-direction: column;
     }
@@ -157,6 +162,7 @@
 .contact-bank__input-wrapper {
     width: 50%;
     flex-grow: 1;
+
     @include breakpoint(mobile) {
         width: 100%;
         flex-grow: 0;
@@ -172,6 +178,12 @@
     width: 100%;
     height: 6.4rem;
     font-size: 2rem;
+    border: 1px solid transparent;
+    transition: border-color .2s;
+
+    &.parsley-error {
+        border-color: #b90e0e;
+    }
 
     @include placeholder {
         color: #a0a0a0;
