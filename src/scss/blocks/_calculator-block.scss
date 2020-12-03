@@ -530,6 +530,9 @@
 .calculator__apply-for-card-card:not(:first-child):hover {
     transform: rotate(8deg) translateX(15%);
 }
+.calculator__apply-for-card-card:first-child:hover {
+    transform: translateX(10%);
+}
 
 .calculator__apply-for-card-percent {
     width: 20.8rem;
