@@ -2194,7 +2194,8 @@ img.lazyload:not([src]) {
 
 .page-header__mobile-nav-block-link {
   font-weight: 500;
-  font-size: 1.3rem; }
+  font-size: 1.5rem;
+  line-height: 1.4; }
   .page-header__mobile-nav-block-link:link, .page-header__mobile-nav-block-link:visited {
     color: inherit; }
 
