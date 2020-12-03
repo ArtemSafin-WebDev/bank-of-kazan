@@ -1555,8 +1555,51 @@
     }
 }
 
-.navigation__currency {
 
+.navigation__archive-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    line-height: 1.2;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #9876a1;
+    transition: color .2s;
+    &:link,
+    &:visited {
+        color: #9876a1;
+    }
+    svg {
+        fill: currentColor;
+        width: 1.4rem;
+        height: 1.4rem;
+        flex-shrink: 0;
+        margin-left: 1rem;
+    }
+
+    &:hover {
+        color: white;
+    }
+
+
+    @include breakpoint(mobile) {
+        font-size: 1.2rem;
+        line-height: 1.2;
+        margin-bottom: 3rem;
+
+        svg {
+            width: 1rem;
+            height: 1rem;
+            flex-shrink: 0;
+            margin-left: 0.5rem;
+            
+        }
+    }
+}
+
+.navigation__currency {
+    margin-top: 1rem;
     @include breakpoint(mobile) {
         margin-top: 4rem;
     }

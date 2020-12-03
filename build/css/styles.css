@@ -6152,52 +6152,93 @@ input.range-slider__amount {
     -webkit-transition: opacity 0.3s, visibility 0.3s;
     transition: opacity 0.3s, visibility 0.3s; }
 
-@media only screen and (max-width: 680px) {
-  .navigation__currency {
-    margin-top: 4rem; } }
+.navigation__archive-link {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.6rem;
+  line-height: 1.2;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #9876a1;
+  -webkit-transition: color .2s;
+  transition: color .2s; }
+  .navigation__archive-link:link, .navigation__archive-link:visited {
+    color: #9876a1; }
+  .navigation__archive-link svg {
+    fill: currentColor;
+    width: 1.4rem;
+    height: 1.4rem;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    margin-left: 1rem; }
+  .navigation__archive-link:hover {
+    color: white; }
+  @media only screen and (max-width: 680px) {
+    .navigation__archive-link {
+      font-size: 1.2rem;
+      line-height: 1.2;
+      margin-bottom: 3rem; }
+      .navigation__archive-link svg {
+        width: 1rem;
+        height: 1rem;
+        -ms-flex-negative: 0;
+            flex-shrink: 0;
+        margin-left: 0.5rem; } }
 
-.navigation__currency table {
-  width: auto;
-  border-collapse: collapse; }
-  .navigation__currency table th,
-  .navigation__currency table td {
-    text-align: left;
-    vertical-align: top;
-    padding-right: 4rem; }
-    @media only screen and (max-width: 680px) {
-      .navigation__currency table th,
-      .navigation__currency table td {
-        padding-right: 2rem; } }
-  .navigation__currency table thead th {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 120%;
-    color: #c4c4c4;
-    padding-bottom: 1rem; }
-  .navigation__currency table tbody td {
-    font-size: 1.6rem;
-    line-height: 120%;
-    padding-bottom: 1rem; }
-  .navigation__currency table .currency-amount {
-    font-weight: 500;
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center; }
-    .navigation__currency table .currency-amount svg {
-      width: 1.4rem;
-      height: 1.4rem;
-      -ms-flex-negative: 0;
-          flex-shrink: 0;
-      margin-left: 1.2rem; }
-      .navigation__currency table .currency-amount svg.icon-trend-down {
-        fill: #E21111;
-        -webkit-transform: scaleY(-1);
-                transform: scaleY(-1); }
-      .navigation__currency table .currency-amount svg.icon-trend-up {
-        fill: #94C22B; }
+.navigation__currency {
+  margin-top: 1rem; }
+  @media only screen and (max-width: 680px) {
+    .navigation__currency {
+      margin-top: 4rem; } }
+  .navigation__currency table {
+    width: auto;
+    border-collapse: collapse; }
+    .navigation__currency table th,
+    .navigation__currency table td {
+      text-align: left;
+      vertical-align: top;
+      padding-right: 4rem; }
+      @media only screen and (max-width: 680px) {
+        .navigation__currency table th,
+        .navigation__currency table td {
+          padding-right: 2rem; } }
+    .navigation__currency table thead th {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 120%;
+      color: #c4c4c4;
+      padding-bottom: 1rem; }
+    .navigation__currency table tbody td {
+      font-size: 1.6rem;
+      line-height: 120%;
+      padding-bottom: 1rem; }
+    .navigation__currency table .currency-amount {
+      font-weight: 500;
+      display: -webkit-inline-box;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      .navigation__currency table .currency-amount svg {
+        width: 1.4rem;
+        height: 1.4rem;
+        -ms-flex-negative: 0;
+            flex-shrink: 0;
+        margin-left: 1.2rem; }
+        .navigation__currency table .currency-amount svg.icon-trend-down {
+          fill: #E21111;
+          -webkit-transform: scaleY(-1);
+                  transform: scaleY(-1); }
+        .navigation__currency table .currency-amount svg.icon-trend-up {
+          fill: #94C22B; }
 
 .currency {
   padding: 8.4rem;
