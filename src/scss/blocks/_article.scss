@@ -269,15 +269,18 @@
                 content: '';
                 position: absolute;
                 left: 0;
-                top: 0.65rem;
-                width: 8px;
-                height: 8px;
+                top: 0.92rem;
+                // width: 8px;
+                // height: 8px;
+
+                width: 0.8rem;
+                height: 0.8rem;
                 background-color: var(--primary-color);
                 border-radius: 50%;
                 @include breakpoint(mobile) {
                     width: 6px;
                     height: 6px;
-                    top: 6px;
+                    top: 6.5px;
                 }
             }
         }
@@ -304,9 +307,10 @@
                 font-size: 2rem;
                 line-height: 130%;
                 color: #95bf0a;
-                top: 0rem;
+                top: .1rem;
                 @include breakpoint(mobile) {
                     font-size: 1.5rem;
+                    top: 0;
                 }
             }
         }

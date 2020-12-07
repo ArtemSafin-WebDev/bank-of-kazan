@@ -18,14 +18,10 @@ export default function() {
             categoryIndex = 0;
         }
 
-       
-
         const linksInActiveLayer = Array.from(document.querySelectorAll('.product-navigation__layer.active .js-product-nav-menu-link'));
 
-        
-
         const initialActiveLink = linksInActiveLayer.find(link => link.classList.contains('active'));
-        
+        let initialActiveLinkOpen = false;
 
         let initialActiveCategory = categoryIndex;
         let standardInitialActiveLink = menuLinks.find(link => {
@@ -60,6 +56,7 @@ export default function() {
             }
             document.body.classList.remove('product-nav-menu-open');
             productInfoItem.classList.add('active');
+            initialActiveLinkOpen = false;
         }
 
         function selectCategory(index) {
@@ -70,6 +67,7 @@ export default function() {
             categoryIndex = index;
             closeInnerMenu();
             if (standardInitialActiveLink && initialActiveCategory !== categoryIndex) {
+                console.log('Strange piece of code');
                 const layer = categoryLayers[categoryIndex];
                 const menuLinks = Array.from(layer.querySelectorAll('.js-product-nav-menu-link:not(.js-simple-link)'));
                 const menuItems = Array.from(layer.querySelectorAll('.js-product-nav-menu-item'));
@@ -135,8 +133,17 @@ export default function() {
                     event.preventDefault();
                     if (!link.classList.contains('active')) {
                         handleMenuClick(linkIndex);
+                        initialActiveLinkOpen = true;
+                    } else if (link.classList.contains('active') && link === initialActiveLink) {
+                        if (!initialActiveLinkOpen) {
+                            handleMenuClick(linkIndex);
+                            initialActiveLinkOpen = true;
+                        } else {
+                            closeInnerMenu();
+                        }
                     } else if (!categoryLayers[initialActiveCategory].contains(link)) {
                         closeInnerMenu();
+
                         selectCategory(initialActiveCategory);
                     } else {
                         closeInnerMenu();
@@ -149,6 +156,7 @@ export default function() {
             closeMenuBtn.addEventListener('click', event => {
                 event.preventDefault();
                 closeInnerMenu();
+
                 selectCategory(initialActiveCategory);
             });
         });
@@ -158,6 +166,7 @@ export default function() {
                 // console.log(event.target);
             } else {
                 closeInnerMenu();
+
                 selectCategory(initialActiveCategory);
             }
         });

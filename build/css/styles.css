@@ -10541,16 +10541,16 @@ input.range-slider__amount {
       content: '';
       position: absolute;
       left: 0;
-      top: 0.65rem;
-      width: 8px;
-      height: 8px;
+      top: 0.92rem;
+      width: 0.8rem;
+      height: 0.8rem;
       background-color: var(--primary-color);
       border-radius: 50%; }
       @media only screen and (max-width: 680px) {
         .article__content ul li::before {
           width: 6px;
           height: 6px;
-          top: 6px; } }
+          top: 6.5px; } }
   .article__content ol li {
     margin-bottom: 1.5rem;
     padding-left: 2.7rem;
@@ -10568,10 +10568,11 @@ input.range-slider__amount {
       font-size: 2rem;
       line-height: 130%;
       color: #95bf0a;
-      top: 0rem; }
+      top: .1rem; }
       @media only screen and (max-width: 680px) {
         .article__content ol li::before {
-          font-size: 1.5rem; } }
+          font-size: 1.5rem;
+          top: 0; } }
   .article__content table tr {
     display: -webkit-box;
     display: -ms-flexbox;
