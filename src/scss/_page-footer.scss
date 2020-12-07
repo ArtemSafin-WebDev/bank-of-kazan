@@ -201,6 +201,7 @@
 .page-footer__mobile-apps-link {
     flex-shrink: 0;
     margin-right: 2rem;
+    margin-bottom: 2rem;
     @include breakpoint(mobile) {
         margin-right: 1.5rem;
     }

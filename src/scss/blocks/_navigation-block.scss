@@ -1600,8 +1600,10 @@
 
 .navigation__currency {
     margin-top: 1rem;
+    margin-bottom: 2rem;
     @include breakpoint(mobile) {
         margin-top: 4rem;
+        margin-bottom: 0;
     }
     table {
         width: auto;
@@ -1621,7 +1623,7 @@
         thead {
             th {
                 font-weight: 400;
-                font-size: 14px;
+                font-size: 1.4rem;
                 line-height: 120%;
                 color: #c4c4c4;
                 padding-bottom: 1rem;

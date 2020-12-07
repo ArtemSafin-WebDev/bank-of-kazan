@@ -47,6 +47,13 @@
         height: 4rem;
         transition: fill .2s;
     }
+
+    &:hover {
+        svg {
+            fill: #d3d3d3;
+        }
+    }
+    
 }
 
 
@@ -55,7 +62,7 @@
 }
 
 .rating__form-star-input:checked ~ svg {
-    fill: var(--primary-color);
+    fill: var(--primary-color) !important;
 }
 
 .rating__form-submit {

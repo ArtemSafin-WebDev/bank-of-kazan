@@ -195,9 +195,9 @@
 
     @include breakpoint(mobile) {
         margin: 0 calc(-1 * var(--content-padding));
-        padding-left: var(--content-padding);
+        padding: 0 var(--content-padding);
         margin-bottom: 2rem;
-        flex-wrap: nowrap;
+       
         overflow-y: hidden;
         -webkit-overflow-scrolling: touch;
 
@@ -211,6 +211,8 @@
         }
     }
 }
+
+
 
 .offices__filters-regimes {
     display: flex;
@@ -238,6 +240,10 @@
 
 .offices__checkbox-input {
     @include visuallyHidden();
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
 }
 
 .offices__checkbox-content {
@@ -389,6 +395,9 @@
         margin-bottom: 2rem;
         flex-direction: column;
         align-items: initial;
+
+
+        
     }
 }
 
@@ -691,10 +700,12 @@
     align-items: center;
     align-self: flex-start;
     padding-top: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 0;
     @include breakpoint(mobile) {
         padding: 0;
         padding-left: 4.4rem;
-        margin-bottom: 1rem;
+        margin-bottom: -1rem;
     }
 }
 
@@ -811,6 +822,7 @@
     height: 2rem;
     flex-shrink: 0;
     margin-right: 2rem;
+    margin-bottom: 2rem;
     position: relative;
     &:last-child {
         margin-right: 0;
