@@ -403,6 +403,8 @@
         position: relative;
         margin: -1.5rem calc(-1 * var(--content-padding));
         padding: 1.5rem var(--content-padding);
+
+        @include noScrollbar();
         &::after {
             content: '';
             height: 1px;

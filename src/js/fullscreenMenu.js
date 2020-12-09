@@ -1,5 +1,6 @@
 import { gsap } from 'gsap';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
+import { MOBILE_WIDTH } from './constants';
 import { lockScroll, unlockScroll } from './scrollBlocker';
 
 gsap.registerPlugin(ScrollToPlugin);
@@ -41,6 +42,10 @@ export default function fullscreenMenu() {
 
             links[initialActiveLinkIndex].classList.add('active');
         }
+
+        // if (window.matchMedia(`(max-width: ${MOBILE_WIDTH}px)`).matches) {
+          
+        // }
 
         links.forEach((link, linkIndex) => {
             link.addEventListener('click', event => {

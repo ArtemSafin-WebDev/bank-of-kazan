@@ -31,41 +31,47 @@ function unlockScrollDesktop() {
 }
 
 function lockScroll(element, isMobile = isTouch) {
-    const { scrollLocked } = state;
-    if (scrollLocked) return;
-    if (isMobile) {
-        disableBodyScroll(element);
-        setState({
-            scrollLocked: true,
-            lockedOnMobile: true,
-            scrollAllowedOn: element
-        });
-        return;
-    } else {
-        lockScrollDesktop();
-        setState({
-            scrollLocked: true
-        });
-        return;
-    }
+    // const { scrollLocked } = state;
+    // if (scrollLocked) return;
+    // if (isMobile) {
+    //     disableBodyScroll(element);
+    //     setState({
+    //         scrollLocked: true,
+    //         lockedOnMobile: true,
+    //         scrollAllowedOn: element
+    //     });
+    //     return;
+    // } else {
+    //     lockScrollDesktop();
+    //     setState({
+    //         scrollLocked: true
+    //     });
+    //     return;
+    // }
+
+
+    lockScrollDesktop();
 }
 
 function unlockScroll() {
     const { scrollLocked, lockedOnMobile, scrollAllowedOn } = state;
 
-    if (!scrollLocked) return;
+    // if (!scrollLocked) return;
 
-    if (lockedOnMobile) {
-        enableBodyScroll(scrollAllowedOn);
-    } else {
-        unlockScrollDesktop();
-    }
+    // if (lockedOnMobile) {
+    //     enableBodyScroll(scrollAllowedOn);
+    // } else {
+    //     unlockScrollDesktop();
+    // }
 
-    setState({
-        scrollLocked: false,
-        lockedOnMobile: false,
-        scrollAllowedOn: null
-    });
+    // setState({
+    //     scrollLocked: false,
+    //     lockedOnMobile: false,
+    //     scrollAllowedOn: null
+    // });
+
+
+    unlockScrollDesktop();
 }
 
 export { lockScroll, unlockScroll };
