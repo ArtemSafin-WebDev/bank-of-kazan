@@ -26,7 +26,10 @@ function init() {
                         scrollTo: {
                             y: elementToScroll,
                             autoKill: true,
-                            offsetY: 60
+                            offsetY: 60,
+                            onComplete: () => {
+                                console.log('Прокрутка до элемента', elementToScroll, hash)
+                            }
                         }
                     });
                 } else {

@@ -27,6 +27,7 @@ export default function fullscreenMenu() {
         }
 
         function openMenu() {
+            console.log('Прокрутка до верха меню')
             gsap.to(window, { duration: 0.3, scrollTo: 0, clearProps: 'all', onComplete: () => lockScroll(fullscreenMenu) });
             menuOpen = true;
             document.body.classList.add('product-nav-menu-open');
