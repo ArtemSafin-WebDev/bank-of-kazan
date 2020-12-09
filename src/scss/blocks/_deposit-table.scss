@@ -83,6 +83,10 @@
         }
     }
 
+    b {
+        font-weight: 500;
+    }
+
     tr {
         @include breakpointMF(small-tablet) {
             &:first-child {

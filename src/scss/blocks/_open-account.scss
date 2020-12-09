@@ -240,7 +240,7 @@
     flex-basis: 40rem;
     flex-grow: 1;
     cursor: pointer;
-    
+    user-select: none;
 }
 
 .open-account__privacy-policy-checkbox-mark {
@@ -269,6 +269,32 @@
         
     }
 
+    &--radio {
+        width: 1.6rem;
+        height: 1.6rem;
+        flex-shrink: 0;
+        margin-right: 0.8rem;
+        border: 1px solid var(--primary-color);
+        border-radius: 50%;
+        background: transparent;
+        position: relative;
+        align-self: center;
+        &::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 0.8rem;
+            height: 0.8rem;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity .2s;
+            transform: translate(-50%, -50%);
+        }
+    }
+
 
     @include breakpoint(mobile) {
         margin-right: 1.5rem;
@@ -294,6 +320,10 @@
 }
 
 .open-account__privacy-policy-checkbox-input:checked ~ .open-account__privacy-policy-checkbox-mark svg {
+    opacity: 1;
+}
+
+.open-account__privacy-policy-checkbox-input:checked ~ .open-account__privacy-policy-checkbox-mark--radio::before {
     opacity: 1;
 }
 
