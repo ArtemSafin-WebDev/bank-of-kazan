@@ -18078,10 +18078,36 @@ input.range-slider__amount {
     .fullscreen-nav-menu {
       padding-top: 25rem;
       height: auto;
-      min-height: 100vh;
-      overflow: initial; }
+      height: 100%;
+      overflow: initial;
+      padding-top: 22rem; }
+      .fullscreen-nav-menu .container {
+        height: 100%; }
       .fullscreen-nav-menu .product-navigation__close-btn {
-        top: 0; } }
+        top: 0; }
+      .fullscreen-nav-menu .product-navigation__close-btn {
+        right: var(--content-padding);
+        top: 25rem; }
+      .fullscreen-nav-menu::after {
+        content: '';
+        position: absolute;
+        top: 22rem;
+        left: 0;
+        width: 100vw;
+        height: 2rem;
+        z-index: 20;
+        background: -webkit-gradient(linear, left top, left bottom, from(#641f76), to(rgba(100, 31, 118, 0.1)));
+        background: linear-gradient(to bottom, #641f76, rgba(100, 31, 118, 0.1));
+        opacity: 0;
+        pointer-events: none;
+        -webkit-transition: opacity .2s;
+        transition: opacity .2s; }
+      .product-nav-menu-open .fullscreen-nav-menu::after {
+        opacity: 1;
+        -webkit-transition: opacity .2s ease .8s;
+        transition: opacity .2s ease .8s; }
+      .fullscreen-nav-menu .navigation__promos {
+        margin-bottom: 4rem; } }
 
 .fullscreen-nav-menu__content {
   padding-left: 37rem;
@@ -18089,7 +18115,20 @@ input.range-slider__amount {
   @media only screen and (max-width: 680px) {
     .fullscreen-nav-menu__content {
       padding-left: 0;
-      padding-top: 0; } }
+      padding-top: 0;
+      height: 100%;
+      overflow-y: auto;
+      padding-top: 3rem;
+      position: static; }
+      .fullscreen-nav-menu__content::-webkit-scrollbar * {
+        background: transparent; }
+      .fullscreen-nav-menu__content::-webkit-scrollbar-track {
+        background-color: transparent; }
+      .fullscreen-nav-menu__content::-webkit-scrollbar {
+        display: none;
+        background-color: transparent; }
+      .fullscreen-nav-menu__content::-webkit-scrollbar-thumb {
+        background-color: transparent; } }
 
 .catalog__menu {
   position: relative;

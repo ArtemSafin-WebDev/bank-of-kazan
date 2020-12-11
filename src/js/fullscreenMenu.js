@@ -79,5 +79,20 @@ export default function fullscreenMenu() {
                 closeMenu();
             }
         })
+
+
+        if (window.matchMedia(`(max-width: ${MOBILE_WIDTH}px)`).matches) {
+            if (initialActiveLinkIndex !== -1) {
+                const link = links[initialActiveLinkIndex]
+                const distance = link.offsetLeft;
+                const parent = link.parentElement
+
+                console.log('Distance', distance);
+
+                parent.scrollLeft = distance - parent.offsetWidth / 2 + link.offsetWidth / 2;
+
+
+            }
+        }
     }
 }
