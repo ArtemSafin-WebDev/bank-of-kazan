@@ -7,10 +7,15 @@ function init() {
         zoom: 12,
         controls: []
     });
-    const checkboxes = Array.from(document.querySelectorAll('.js-office-categories .offices__checkbox-input'));
-    const allCheckbox = checkboxes.find(element => element.name === 'all');
+    const checkboxes = Array.from(document.querySelectorAll('.js-office-categories .offices__checkbox-input:not([name="all"])'));
+    const allCheckbox = document.querySelector('.js-office-categories .offices__checkbox-input[name="all"]');
     const innerMapElements = Array.from(document.querySelectorAll('.js-offices-inner-map'));
     const balloonContainer = document.querySelector('.js-offices-balloon-container');
+
+    console.log({
+        allCheckbox,
+        checkboxes
+    });
 
     const mapPinImages = {
         offices: {
@@ -413,12 +418,41 @@ function init() {
     filterObjects();
     filterListViewItems();
 
-    checkboxes.forEach(element =>
-        element.addEventListener('change', () => {
-            filterObjects();
-            filterListViewItems();
-        })
-    );
+    console.log('Hello', checkboxes);
+
+    const handleChange = (event) => {
+      
+
+        const checkedBoxes = checkboxes.filter(checkbox => checkbox.checked);
+        const allChecked = allCheckbox.checked;
+        const targetIsAllCheckbox = event.target === allCheckbox;
+
+        console.log('Checkbox changed', {
+            checkedBoxes,
+            allChecked,
+            targetIsAllCheckbox
+        });
+
+
+        if (targetIsAllCheckbox && allChecked && checkedBoxes.length) {
+            checkboxes.forEach(box => box.checked = false);
+        } else if (!targetIsAllCheckbox && allChecked && checkedBoxes.length) {
+            allCheckbox.checked = false;
+        } else if (!targetIsAllCheckbox && !allChecked && !checkedBoxes.length) {
+            allCheckbox.checked = true;
+        } else if (targetIsAllCheckbox && !allChecked && !checkedBoxes.length) {
+            allCheckbox.checked = true;
+        }
+       
+
+     
+        filterObjects();
+        filterListViewItems();
+    };
+
+    checkboxes.forEach(element => element.addEventListener('change', handleChange));
+
+    allCheckbox.addEventListener('change', handleChange)
 
     mainMapData.forEach(item => {
         const objectToAdd = {
@@ -436,7 +470,6 @@ function init() {
                 balloonContent: item.content
             }
         };
-        // console.log('Object to add', objectToAdd);
 
         objectManager.add(objectToAdd);
     });
@@ -465,18 +498,11 @@ function init() {
 
     const suggestView = new ymaps.SuggestView('suggest', { results: 7 });
 
-    // map.geoObjects.events.add('click', function(e) {
-    //     const object = e.get('target');
-
-    // });
-
     objectManager.objects.events.add(['click'], e => {
         const objectId = e.get('objectId');
         const baloonContent = objectManager.objects.getById(objectId).properties.balloonContent;
 
         if (baloonContent) {
-            // console.log('Baloon content', baloonContent);
-
             balloonContainer.innerHTML = baloonContent;
 
             const button = balloonContainer.querySelector('button');
@@ -485,11 +511,9 @@ function init() {
                 event.preventDefault();
 
                 balloonContainer.innerHTML = '';
-            })
+            });
         }
     });
-
-
 
     suggestView.events.add('select', function(e) {
         const suggestion = e.get('item');
@@ -497,7 +521,6 @@ function init() {
             function(res) {
                 const firstGeoObject = res.geoObjects.get(0);
                 const coords = firstGeoObject.geometry.getCoordinates();
-
 
                 // console.log(`Geocoding result for ${suggestion.value}`, {
                 //     firstGeoObject,

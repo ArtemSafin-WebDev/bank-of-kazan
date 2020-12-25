@@ -80,6 +80,17 @@ export default function fullscreenMenu() {
             }
         })
 
+        fullscreenMenu.addEventListener('click', event => {
+            
+
+            if (event.target.matches('a') || event.target.closest('a') || event.target.matches('button') || event.target.closest('button')) {
+                
+            } else {
+                event.preventDefault()
+                closeMenu();
+            }
+        })
+
 
         if (window.matchMedia(`(max-width: ${MOBILE_WIDTH}px)`).matches) {
             if (initialActiveLinkIndex !== -1) {

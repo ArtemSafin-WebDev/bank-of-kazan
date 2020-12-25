@@ -32,6 +32,8 @@ import lotsSlider from './lotsSlider';
 import officesForms from './officesInputs';
 import newApplicationForm from './newApplicationForm';
 import fileUpload from './fileUpload';
+import currencyTabs from './currencyTabs';
+import mobileSubmenu from './mobileSubmenu';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -123,6 +125,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     anchors.init();
                     aboutBankAnimations.init();
                     accordions(Array.from(document.querySelectorAll('.js-accordion'))).init();
+                    accordions(Array.from(document.querySelectorAll('.js-mobile-nav-accordion'))).init();
+                    currencyTabs.init();
+                    mobileSubmenu.init();
                     document.body.classList.remove('category-toggles-off');
 
                     if (window.initBackendScripts && typeof window.initBackendScripts === 'function') {

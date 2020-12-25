@@ -91,41 +91,5 @@ export default function() {
 
 
 
-    return;
-
-    let officesAccordions = accordions(Array.from(document.querySelectorAll('.js-offices-accordion')));
-
-    officesAccordions.init();
-    
-
-    var target = document.getElementById('map-list');
-
-
-    if (!target) return;
-
-    // Конфигурация observer (за какими изменениями наблюдать)
-    const config = {
-        attributes: false,
-        childList: true,
-        subtree: false
-    };
-
-    // Функция обратного вызова при срабатывании мутации
-    const callback = function(mutationsList, observer) {
-        for (let mutation of mutationsList) {
-            if (mutation.type === 'childList') {
-                console.log('A child node has been added or removed.');
-
-                officesAccordions.destroy();
-                officesAccordions = accordions(Array.from(document.querySelectorAll('.js-offices-accordion')));
-                officesAccordions.init();
-            }
-        }
-    };
-
-    // Создаем экземпляр наблюдателя с указанной функцией обратного вызова
-    const observer = new MutationObserver(callback);
-
-    // Начинаем наблюдение за настроенными изменениями целевого элемента
-    observer.observe(target, config);
+   
 }

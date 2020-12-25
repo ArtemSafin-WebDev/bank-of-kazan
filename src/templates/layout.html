@@ -92,6 +92,8 @@
                                 setTimeout(function() {
                                     document.body.classList.remove('global-success-shown')
                                     newApplicationForm.reset();
+                                    $(newApplicationForm).parsley().reset();
+                                    document.documentElement.style.setProperty('--progress', '0%');
                                     if (newApplicationForm.setStep) {
                                         newApplicationForm.setStep(0);
                                     }
@@ -101,7 +103,7 @@
                     }
 
 
-                    const cookiesBtns = [document.querySelector('.cookies__accept'), document.querySelector('.cookies__decline')];
+                    const cookiesBtns = [document.querySelector('.cookies__accept'), document.querySelector('.cookies__decline'), document.querySelector('.cookies__close-btn')];
 
                     cookiesBtns.forEach(btn => {
                         btn.addEventListener('click', event => {

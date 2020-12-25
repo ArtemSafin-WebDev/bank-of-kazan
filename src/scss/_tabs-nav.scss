@@ -11,10 +11,10 @@
         overflow-y: hidden;
         flex-wrap: nowrap;
         -webkit-overflow-scrolling: touch;
-        margin: -1rem calc(-1 * var(--content-padding));
+        margin: -2.4rem calc(-1 * var(--content-padding));
         margin-left: calc(-1 * (var(--content-padding) + 1rem));
         margin-right: calc(-1 * (var(--content-padding) + 1rem));
-        padding: 1rem var(--content-padding);
+        padding: 2.4rem var(--content-padding);
         @include noScrollbar();
         &::after {
             content: '';

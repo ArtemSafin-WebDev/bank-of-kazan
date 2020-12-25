@@ -52,7 +52,7 @@
     }
 
     @include breakpoint(mobile) {
-        margin-bottom: .7rem;
+        margin-bottom: 0.7rem;
     }
 }
 
@@ -70,7 +70,6 @@
     &:hover {
         color: var(--primary-color);
     }
-
 
     @include breakpoint(mobile) {
         font-size: 1.4rem;
@@ -130,7 +129,7 @@
     line-height: 122%;
     align-self: flex-start;
     margin-bottom: 0.3rem;
-    transition: color .2s;
+    transition: color 0.2s;
     &:link,
     &:visited {
         color: inherit;
@@ -177,7 +176,7 @@
     @include breakpoint(mobile) {
         font-size: 1.6rem;
         padding: 1.2rem 2rem;
-        border-radius: .8rem;
+        border-radius: 0.8rem;
     }
 }
 
@@ -236,7 +235,6 @@
     display: block;
     @include objectFitContain();
 
-
     @include breakpoint(mobile) {
         width: 3.4rem;
         height: 3.4rem;
@@ -248,7 +246,6 @@
     padding-bottom: 5.1rem;
     border-top: 1px solid rgba(#a0a0a0, 0.5);
     @include breakpoint(mobile) {
-        
         border: none;
         padding-bottom: 4rem;
         padding-top: 0;
@@ -287,7 +284,7 @@
 
         &::before {
             content: '';
-            margin-right: .6rem;
+            margin-right: 0.6rem;
             width: 0.6rem;
             height: 0.6rem;
             flex-shrink: 0;
@@ -310,13 +307,13 @@
     align-items: center;
     text-align: center;
     background: #000000;
-    border-radius: .8rem;
+    border-radius: 0.8rem;
     color: white;
     font-weight: 500;
     font-size: 2rem;
     line-height: 120%;
     padding: 1.6rem 2.2rem;
-    transition: all .2s;
+    transition: all 0.2s;
     svg {
         width: 2.2rem;
         height: 1.8rem;
@@ -337,7 +334,6 @@
     &:hover {
         background-color: var(--primary-color);
     }
-
 
     @include breakpoint(mobile) {
         font-size: 1.6rem;
@@ -398,7 +394,7 @@
     flex-shrink: 0;
     margin-left: 2rem;
     position: relative;
-    bottom: -.4rem;
+    bottom: -0.4rem;
     @include breakpoint(mobile) {
         width: 7.5rem;
         margin-left: 1.2rem;
@@ -410,35 +406,30 @@
     line-height: 120%;
     color: rgba(black, 0.5);
     text-decoration-line: underline;
-    transition: color .2s;
+    transition: color 0.2s;
     &:link,
     &:visited {
         color: rgba(black, 0.5);
     }
 
-
     &:hover {
         color: var(--primary-color);
     }
-
 
     @include breakpoint(mobile) {
         font-size: 1.4rem;
     }
 }
 
-
-
 .page-footer__top-nav {
     display: flex;
-    border-top: .5rem solid var(--primary-color);
+    border-top: 0.5rem solid var(--primary-color);
     padding-top: 1rem;
     flex-wrap: wrap;
     @include breakpoint(mobile) {
         display: none;
     }
 }
-
 
 .page-footer__top-nav-link {
     font-weight: 500;
@@ -447,7 +438,7 @@
     color: black;
     padding: 3rem 0;
     margin-right: 3.8rem;
-    transition: color .2s;
+    transition: color 0.2s;
     &:link,
     &:visited {
         color: black;
@@ -462,4 +453,28 @@
         padding: 1.5rem 0;
         margin-right: 1.5rem;
     }
+}
+
+.page-footer__qr-code {
+    display: flex;
+    align-items: center;
+    max-width: 26rem;
+
+    @include breakpoint(mobile) {
+        max-width: none;
+    }
+}
+
+.page-footer__qr-code-image {
+    flex-shrink: 0;
+    margin-right: 1.4rem;
+    width: 5.8rem;
+}
+
+.page-footer__qr-code-text {
+    font-size: 1.4rem;
+    line-height: 120%;
+    color: #8a8a8a;
+    width: 50%;
+    flex-grow: 1;
 }

@@ -38,7 +38,7 @@ window.Parsley.addValidator('passportnumber', {
 window.Parsley.addValidator('department', {
     requirementType: 'string',
     validateString: function(value) {
-        return /^[0-9]{3}$/.test(value);
+        return /^[0-9]{3}\-[0-9]{3}$/.test(value);
     },
     messages: {
         en: 'Enter correct department number',

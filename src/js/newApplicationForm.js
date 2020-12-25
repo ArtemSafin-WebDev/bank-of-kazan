@@ -6,6 +6,7 @@ export default function newApplicationForm() {
     const elements = Array.from(document.querySelectorAll('.js-new-application-form'));
 
     elements.forEach(element => {
+        const form = element;
         const pagination = element.querySelector('.application__form-steps-numbers');
 
         const stepsContainer = element.querySelector('.application__form-steps-layers');
@@ -18,13 +19,16 @@ export default function newApplicationForm() {
         const prevBtn = element.querySelector('.js-form-prev');
 
         const tabsContainer = element.querySelector('.application__form-inner-tabs-items');
-        const tabItems = Array.from(tabsContainer.children);
+        const tabItems = tabsContainer ? Array.from(tabsContainer.children) : [];
         const tabCheckboxes = Array.from(element.querySelectorAll('.application__form-inner-tabs-checkbox-input'));
+        const secondStepRequiredInputs = Array.from(form.querySelectorAll('[data-parsley-group="secondstep"][required]'))
 
-        const form = element;
+        console.log('secondStepRequiredInputs', secondStepRequiredInputs)
+       
 
         let activeStep = 0;
         let activeCheckboxIndex = tabCheckboxes.findIndex(box => box.checked);
+        let mode = '';
 
         Array.from(element.querySelectorAll('[data-passport-series-mask]')).forEach(item => {
             const im = new Inputmask({
@@ -40,7 +44,7 @@ export default function newApplicationForm() {
             im.mask(item);
         });
         Array.from(element.querySelectorAll('[data-department-mask]')).forEach(item => {
-            const im = new Inputmask({ mask: '999', placeholder: ' ', showMaskOnHover: false, showMaskOnFocus: false });
+            const im = new Inputmask({ mask: '999-999', placeholder: ' ', showMaskOnHover: false, showMaskOnFocus: false });
             im.mask(item);
         });
         Array.from(element.querySelectorAll('[data-date-mask]')).forEach(item => {
@@ -67,11 +71,9 @@ export default function newApplicationForm() {
                 // console.log('Progress', progress)
 
                 document.documentElement.style.setProperty('--progress', `${progress}%`);
-            });
+            })
 
-        if (activeCheckboxIndex === -1) {
-            throw new Error('No initial active mode checkbox');
-        }
+       
 
         function updatePagination(index) {
             pagination.innerHTML = `Шаг ${index + 1} из ${stepsTotal}`;
@@ -101,7 +103,11 @@ export default function newApplicationForm() {
 
             activeStep = index;
 
-            updatePagination(index);
+            if (pagination) {
+                updatePagination(index);
+            }
+
+           
         }
 
         function setTab(index) {
@@ -128,39 +134,66 @@ export default function newApplicationForm() {
                 }
             );
 
+
+            mode = Array.from(form.querySelectorAll('input[type="radio"][name="mode"]')).find(radio => radio.checked).value;
+
+            if (mode === 'automatic') {
+               secondStepRequiredInputs.forEach(input => input.required = false)
+            } else {
+                secondStepRequiredInputs.forEach(input => input.required = true)
+            }
+
+            console.log('Mode', mode);
+
             activeCheckboxIndex = index;
         }
 
         setStep(activeStep);
-        setTab(activeCheckboxIndex);
+
+
+        if (stepsTotal >= 2) {
+            setTab(0);
+        }
+      
 
         element.setStep = setStep;
 
-        nextBtn.addEventListener('click', event => {
-            event.preventDefault();
-            const validationResult = $(form)
-                .parsley()
-                .validate({ group: 'firststep' });
 
-            // console.log('Validation result before next step', validationResult);
+        if (nextBtn) {
+            nextBtn.addEventListener('click', event => {
+                event.preventDefault();
+                const validationResult = $(form)
+                    .parsley()
+                    .validate({ group: 'firststep' });
+                   
+                // console.log('Validation result before next step', validationResult);
+    
+                if (!validationResult) return;
+    
+                if (activeStep + 1 < stepsTotal) {
+                    setStep(activeStep + 1);
+                    if (stepsTotal >= 2) {
+                        setTab(0);
+                    }
+                } else {
+                    return;
+                }
+            });
+        }
 
-            if (!validationResult) return;
+        if (prevBtn) {
+            prevBtn.addEventListener('click', event => {
+                event.preventDefault();
+                if (activeStep - 1 >= 0) {
+                    setStep(activeStep - 1);
+                } else {
+                    return;
+                }
+            });
+        }
+        
 
-            if (activeStep + 1 < stepsTotal) {
-                setStep(activeStep + 1);
-            } else {
-                return;
-            }
-        });
-
-        prevBtn.addEventListener('click', event => {
-            event.preventDefault();
-            if (activeStep - 1 >= 0) {
-                setStep(activeStep - 1);
-            } else {
-                return;
-            }
-        });
+      
 
         tabCheckboxes.forEach((box, boxIndex) => {
             box.addEventListener('change', event => {
