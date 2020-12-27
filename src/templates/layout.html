@@ -7,11 +7,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
         
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <script>
-            window.MSInputMethodContext && document.documentMode && document.write('<script src="assets/js/ie11CustomProperties.js"><\x2fscript>');
-        </script>
-         <script src="assets/js/svgInject.js"></script>
-         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+        <script src="assets/js/ie11CustomProperties.js"></script>
+        <script src="assets/js/svgInject.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     
         <link rel="stylesheet" href="css/styles.min.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
@@ -53,8 +51,7 @@
                                 setTimeout(function() {
                                     document.documentElement.style.setProperty('--progress', "100%");
                                     setTimeout(function() {
-                                   
-
+                                
                                         document.body.classList.add('global-success-shown')
                                     }, 200)
                                 }, 500)
@@ -105,10 +102,9 @@
 
                     const cookiesBtns = [document.querySelector('.cookies__accept'), document.querySelector('.cookies__decline'), document.querySelector('.cookies__close-btn')];
 
-                    cookiesBtns.forEach(btn => {
-                        btn.addEventListener('click', event => {
+                    cookiesBtns.forEach(function(btn) {
+                        btn.addEventListener('click', function(event) {
                             event.preventDefault();
-                            // console.log('Hiding cookies panel')
                             document.body.classList.add('cookies-panel-hidden')
                         })
                     })
@@ -118,7 +114,7 @@
                     var newsSubscription = document.querySelector('#news-subscription');
 
                     if (newsSubscription) {
-                        newsSubscription.addEventListener('submit', event => {
+                        newsSubscription.addEventListener('submit', function(event) {
                             event.preventDefault();
                             document.body.classList.add('global-success-shown')
                         })
@@ -127,7 +123,7 @@
                     var successClose = document.querySelector('.success__card-close');
 
                     if (successClose) {
-                        successClose.addEventListener('click', event => {
+                        successClose.addEventListener('click', function(event) {
                             event.preventDefault();
                             document.body.classList.remove('global-success-shown')
                         })

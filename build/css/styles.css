@@ -611,7 +611,7 @@ button.swiper-pagination-bullet {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden; }
 
-/*! nouislider - 14.6.2 - 9/16/2020 */
+/*! nouislider - 14.6.3 - 11/19/2020 */
 /* Functional styling;
  * These styles are required for noUiSlider to function.
  * You don't need to change these rules to apply your design.
@@ -4454,8 +4454,8 @@ input.range-slider__amount {
       -ms-flex-align: center;
           align-items: center;
   padding: 2.4rem 2.8rem;
-  background-color: #ecf3dc;
-  color: var(--primary-color);
+  background-color: var(--primary-color);
+  color: white;
   border-radius: 1rem;
   font-weight: 500;
   font-size: 1.6rem;
@@ -4472,7 +4472,7 @@ input.range-slider__amount {
     height: 1.4rem;
     -ms-flex-negative: 0;
         flex-shrink: 0;
-    fill: var(--primary-color);
+    fill: white;
     margin-left: 2rem;
     -webkit-transition: fill 0.4s;
     transition: fill 0.4s; }
@@ -4482,7 +4482,15 @@ input.range-slider__amount {
         height: 1.1rem;
         margin-left: 1.5rem; } }
   .products__card-link-text:link, .products__card-link-text:visited {
-    color: var(--primary-color); }
+    color: white; }
+  @supports ((-webkit-clip-path: circle(50%)) or (clip-path: circle(50%))) {
+    .products__card-link-text {
+      background-color: #ecf3dc;
+      color: var(--primary-color); }
+      .products__card-link-text svg {
+        fill: var(--primary-color); }
+      .products__card-link-text:link, .products__card-link-text:visited {
+        color: var(--primary-color); } }
   @media only screen and (max-width: 680px) {
     .products__card-link-text {
       margin-top: 1rem;
@@ -4704,7 +4712,8 @@ input.range-slider__amount {
     background-color: #7b398c;
     position: absolute;
     z-index: -2;
-    pointer-events: none; }
+    pointer-events: none;
+    top: 0; }
     @media only screen and (max-width: 680px) {
       .news__card::before, .news__card::after {
         left: auto;
@@ -6338,7 +6347,7 @@ input.range-slider__amount {
           flex-direction: column;
   height: 100%; }
   .navigation__universal-toggle-progress-layer .swiper-pagination-progressbar-fill {
-    background-color: #fff; }
+    background-color: #fff !important; }
   .navigation__universal-toggle-progress-layers.active .navigation__universal-toggle-progress-layer.active {
     position: relative;
     opacity: 1;
@@ -6408,7 +6417,8 @@ input.range-slider__amount {
 
 .navigation__currency {
   margin-top: 1rem;
-  margin-bottom: 2rem; }
+  margin-bottom: 2rem;
+  position: relative; }
   @media only screen and (max-width: 680px) {
     .navigation__currency {
       margin-top: 4rem;
@@ -7585,9 +7595,14 @@ input.range-slider__amount {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   margin-right: 6rem;
-  display: grid;
-  grid-template-columns: 5rem 1fr 5rem 1fr 5rem 1fr 5rem;
-  grid-template-rows: repeat(7, 2.8rem); }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  @supports (display: grid) {
+    .calculator__apply-for-card-cards {
+      display: grid;
+      grid-template-columns: 5rem 1fr 5rem 1fr 5rem 1fr 5rem;
+      grid-template-rows: repeat(7, 2.8rem); } }
   @media only screen and (max-width: 680px) {
     .calculator__apply-for-card-cards {
       width: 100%;
@@ -7605,6 +7620,16 @@ input.range-slider__amount {
      object-position: center;
   font-family: 'object-fit: contain; object-position: center;'; }
 
+.calculator__apply-for-card-card {
+  margin-right: 3rem;
+  width: 33.33%; }
+  .calculator__apply-for-card-card:last-child {
+    margin-right: 0; }
+  @supports (display: grid) {
+    .calculator__apply-for-card-card {
+      margin: 0;
+      width: 100%; } }
+
 .calculator__apply-for-card-card--1 {
   grid-column: 1 / 4;
   grid-row: 1 / 5;
@@ -7621,20 +7646,20 @@ input.range-slider__amount {
   z-index: 10; }
 
 .calculator__apply-for-card-card {
-  -webkit-transition: -webkit-transform .3s, -webkit-box-shadow 0.3s;
-  transition: -webkit-transform .3s, -webkit-box-shadow 0.3s;
-  transition: transform .3s, box-shadow 0.3s;
-  transition: transform .3s, box-shadow 0.3s, -webkit-transform .3s, -webkit-box-shadow 0.3s;
+  -webkit-transition: -webkit-transform 0.3s, -webkit-box-shadow 0.3s;
+  transition: -webkit-transform 0.3s, -webkit-box-shadow 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s, -webkit-transform 0.3s, -webkit-box-shadow 0.3s;
   -webkit-transform-origin: left top;
           transform-origin: left top; }
 
-.no-touch .calculator__apply-for-card-card:not(:first-child):hover {
-  -webkit-transform: rotate(8deg) translateX(15%);
-          transform: rotate(8deg) translateX(15%); }
-
-.no-touch .calculator__apply-for-card-card:first-child:hover {
-  -webkit-transform: translateX(10%);
-          transform: translateX(10%); }
+@supports (display: grid) {
+  .no-touch .calculator__apply-for-card-card:first-child:hover {
+    -webkit-transform: translateX(10%);
+            transform: translateX(10%); }
+  .no-touch .calculator__apply-for-card-card:not(:first-child):hover {
+    -webkit-transform: rotate(8deg) translateX(15%);
+            transform: rotate(8deg) translateX(15%); } }
 
 .calculator__apply-for-card-percent {
   width: 20.8rem;
@@ -11711,8 +11736,8 @@ input.range-slider__amount {
     -webkit-transition: opacity 0.2s;
     transition: opacity 0.2s; }
   .open-account__privacy-policy-checkbox-mark--radio {
-    width: 1.6rem;
-    height: 1.6rem;
+    width: 16px;
+    height: 16px;
     -ms-flex-negative: 0;
         flex-shrink: 0;
     margin-right: 0.8rem;
@@ -11727,8 +11752,8 @@ input.range-slider__amount {
       position: absolute;
       left: 50%;
       top: 50%;
-      width: 0.8rem;
-      height: 0.8rem;
+      width: 8px;
+      height: 8px;
       border-radius: 50%;
       background-color: var(--primary-color);
       pointer-events: none;

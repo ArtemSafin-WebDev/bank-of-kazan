@@ -1,9 +1,12 @@
-import cssVars from 'css-vars-ponyfill';
+// import cssVars from 'css-vars-ponyfill';
+import "core-js/stable";
+import "regenerator-runtime/runtime";
 import lazySizes from 'lazysizes';
 import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 import 'lazysizes/plugins/respimg/ls.respimg';
 import smoothscroll from 'smoothscroll-polyfill';
-
+import 'custom-event-polyfill';
+import 'classlist-polyfill';
 if (!('object-fit' in document.createElement('a').style)) {
     require('lazysizes/plugins/object-fit/ls.object-fit');
 }
@@ -38,18 +41,7 @@ export default function() {
             };
     })(Element.prototype);
 
-    // Полифилл для кастомных событий
-
-    if (typeof window.CustomEvent === 'function') return false;
-
-    function CustomEvent(event, params) {
-        params = params || { bubbles: false, cancelable: false, detail: null };
-        var evt = document.createEvent('CustomEvent');
-        evt.initCustomEvent(event, params.bubbles, params.cancelable, params.detail);
-        return evt;
-    }
-
-    window.CustomEvent = CustomEvent;
+   
 
     // Source: https://github.com/jserz/js_piece/blob/master/DOM/ParentNode/append()/append().md
     (function(arr) {

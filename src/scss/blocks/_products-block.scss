@@ -434,8 +434,9 @@
     display: inline-flex;
     align-items: center;
     padding: 2.4rem 2.8rem;
-    background-color: #ecf3dc;
-    color: var(--primary-color);
+    background-color: var(--primary-color);
+    color: white;
+   
     border-radius: 1rem;
     font-weight: 500;
     font-size: 1.6rem;
@@ -450,7 +451,7 @@
         width: 0.9rem;
         height: 1.4rem;
         flex-shrink: 0;
-        fill: var(--primary-color);
+        fill: white;
         margin-left: 2rem;
         transition: fill 0.4s;
         @include breakpoint(mobile) {
@@ -459,9 +460,24 @@
             margin-left: 1.5rem;
         }
     }
+
     &:link,
     &:visited {
+        color: white;
+    }
+   
+
+    @supports (clip-path: circle(50%)) {
+        background-color: #ecf3dc;
         color: var(--primary-color);
+
+        svg {
+            fill: var(--primary-color);
+        }
+        &:link,
+        &:visited {
+            color: var(--primary-color);
+        }
     }
 
     @include breakpoint(mobile) {

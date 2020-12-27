@@ -1544,7 +1544,8 @@
     height: 100%;
 
     .swiper-pagination-progressbar-fill {
-        background-color: #fff;
+        background-color: #fff !important;
+       
     }
     .navigation__universal-toggle-progress-layers.active &.active {
         position: relative;
@@ -1627,6 +1628,7 @@
 .navigation__currency {
     margin-top: 1rem;
     margin-bottom: 2rem;
+    position: relative;
     @include breakpoint(mobile) {
         margin-top: 4rem;
         margin-bottom: 0;

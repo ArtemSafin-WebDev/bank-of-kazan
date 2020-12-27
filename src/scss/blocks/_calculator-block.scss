@@ -482,10 +482,15 @@
     width: 55.6rem;
     flex-shrink: 0;
     margin-right: 6rem;
-    display: grid;
 
-    grid-template-columns: 5rem 1fr 5rem 1fr 5rem 1fr 5rem;
-    grid-template-rows: repeat(7, 2.8rem);
+    display: flex;
+    @supports (display: grid) {
+        display: grid;
+
+        grid-template-columns: 5rem 1fr 5rem 1fr 5rem 1fr 5rem;
+        grid-template-rows: repeat(7, 2.8rem);
+    }
+
     @include breakpoint(mobile) {
         width: 100%;
         margin: 0 auto;
@@ -499,6 +504,19 @@
     width: 100%;
     height: auto;
     @include objectFitContain();
+}
+
+.calculator__apply-for-card-card {
+    margin-right: 3rem;
+    width: 33.33%;
+    &:last-child {
+        margin-right: 0;
+    }
+
+    @supports (display: grid) {
+        margin: 0;
+        width: 100%;
+    }
 }
 
 .calculator__apply-for-card-card--1 {
@@ -518,16 +536,22 @@
 }
 
 .calculator__apply-for-card-card {
-    transition: transform .3s, box-shadow 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
     transform-origin: left top;
 }
 
-.no-touch .calculator__apply-for-card-card:not(:first-child):hover {
-    transform: rotate(8deg) translateX(15%);
+.no-touch .calculator__apply-for-card-card {
+    @supports (display: grid) {
+        &:first-child:hover {
+            transform: translateX(10%);
+        }
+        &:not(:first-child):hover {
+            transform: rotate(8deg) translateX(15%);
+        }
+    }
 }
-.no-touch .calculator__apply-for-card-card:first-child:hover {
-    transform: translateX(10%);
-}
+
+
 
 .calculator__apply-for-card-percent {
     width: 20.8rem;

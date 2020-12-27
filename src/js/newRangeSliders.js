@@ -44,7 +44,7 @@ function init() {
         // const noDivisions = rangeInput.hasAttribute('data-no-divisions');
         let initialRangeValue = checkValue(cleanInput(rangeInput.value));
 
-        if (floatValue) console.log('Parsing as float value');
+        
 
         function cleanInput(value) {
             const cleanedValue = value.toString().replace(/\s/g, '');
@@ -119,8 +119,20 @@ function init() {
         function dispatchRangeUpdateEvent(value) {
             const event = new CustomEvent('rangeupdate', { detail: value });
             rangeInput.dispatchEvent(event);
-           
-            rangeInput.dispatchEvent(new Event('change'));
+
+
+            const changeEvent = new CustomEvent('change');
+            rangeInput.dispatchEvent(changeEvent);
+
+            // if (typeof(Event) === 'function') {
+            //     const changeEvent = new Event('change');
+            //     rangeInput.dispatchEvent(changeEvent);
+            // } else {
+            //     const changeEvent = document.createEvent('Event');
+            //     event.initEvent('change', true, true);
+            //     rangeInput.dispatchEvent(changeEvent);
+            // }
+        
         }
 
         noUiSlider.create(customRangeSliderElement, {
@@ -194,7 +206,8 @@ function initWithExceptionHandling() {
     try {
         init();
     } catch (err) {
-        console.error('error', err.message);
+        console.error('error in range sliders', err);
+       
     }
 }
 

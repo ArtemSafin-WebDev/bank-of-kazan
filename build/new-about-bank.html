@@ -7,11 +7,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
         
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <script>
-            window.MSInputMethodContext && document.documentMode && document.write('<script src="assets/js/ie11CustomProperties.js"><\x2fscript>');
-        </script>
-         <script src="assets/js/svgInject.js"></script>
-         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+        <script src="assets/js/ie11CustomProperties.js"></script>
+        <script src="assets/js/svgInject.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     
         <link rel="stylesheet" href="css/styles.min.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
@@ -129,6 +127,14 @@
                                 </svg>
                             </button>
                         </h4>
+                        <a href="#" class="page-header__contacts-link" style="--social-bg-color: #DA652F" ie-style="--social-bg-color: #DA652F" title="Чат">
+                            <svg width="16" height="16" aria-hidden="true" class="icon-message">
+                                <use xlink:href="#message" />
+                            </svg>
+                            <span class="page-header__contacts-link-text">
+                                Чат
+                            </span>
+                        </a>
                         <a href="#" class="page-header__contacts-link" style="--social-bg-color: #25D366" ie-style="--social-bg-color: #25D366" title="WhatsApp">
                             <svg width="16" height="16" aria-hidden="true" class="icon-whatsapp">
                                 <use xlink:href="#whatsapp" />
@@ -2056,11 +2062,11 @@
 </div>
 
             <div class="cookies">
-    <button class="cookies__close-btn">
+    <!-- <button class="cookies__close-btn">
         <svg width="15" height="15" aria-hidden="true" class="icon-cross">
             <use xlink:href="#cross" />
         </svg>
-    </button>
+    </button> -->
     <div class="cookies__row">
         <div class="cookies__message">
             Разрешить данному сайту обрабатывать данные, согласно
@@ -2072,9 +2078,9 @@
             <a href="#" class="cookies__accept">
                 Разрешаю
             </a>
-            <a href="#" class="cookies__decline">
+            <!-- <a href="#" class="cookies__decline">
                 Отмена
-            </a>
+            </a> -->
         </div>
     </div>
 </div>
@@ -2127,8 +2133,7 @@
                                 setTimeout(function() {
                                     document.documentElement.style.setProperty('--progress', "100%");
                                     setTimeout(function() {
-                                   
-
+                                
                                         document.body.classList.add('global-success-shown')
                                     }, 200)
                                 }, 500)
@@ -2179,10 +2184,9 @@
 
                     const cookiesBtns = [document.querySelector('.cookies__accept'), document.querySelector('.cookies__decline'), document.querySelector('.cookies__close-btn')];
 
-                    cookiesBtns.forEach(btn => {
-                        btn.addEventListener('click', event => {
+                    cookiesBtns.forEach(function(btn) {
+                        btn.addEventListener('click', function(event) {
                             event.preventDefault();
-                            // console.log('Hiding cookies panel')
                             document.body.classList.add('cookies-panel-hidden')
                         })
                     })
@@ -2192,7 +2196,7 @@
                     var newsSubscription = document.querySelector('#news-subscription');
 
                     if (newsSubscription) {
-                        newsSubscription.addEventListener('submit', event => {
+                        newsSubscription.addEventListener('submit', function(event) {
                             event.preventDefault();
                             document.body.classList.add('global-success-shown')
                         })
@@ -2201,7 +2205,7 @@
                     var successClose = document.querySelector('.success__card-close');
 
                     if (successClose) {
-                        successClose.addEventListener('click', event => {
+                        successClose.addEventListener('click', function(event) {
                             event.preventDefault();
                             document.body.classList.remove('global-success-shown')
                         })

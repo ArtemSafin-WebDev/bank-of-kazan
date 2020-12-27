@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
     newApplicationForm();
     fileUpload();
 
-    
+    console.log('Тест работы')
 
     barba.init({
         debug: true,
@@ -109,29 +109,34 @@ document.addEventListener('DOMContentLoaded', function() {
                 },
 
                 beforeEnter() {
+                    console.log('Тест работы 2')
                     tabs.init();
-
+                    console.log('Тест работы 3')
                     ratingStars.init();
 
                     phoneMask.init();
 
                     customSelects.init();
+                    console.log('Перед ползунками')
                     rangeSliders.init();
-
+                    console.log('Тест работы 4')
                     forBusiness.init();
                     productsSlider.init();
                     currency.init();
                     validation.init();
                     anchors.init();
+                    console.log('Тест работы 5')
                     aboutBankAnimations.init();
                     accordions(Array.from(document.querySelectorAll('.js-accordion'))).init();
                     accordions(Array.from(document.querySelectorAll('.js-mobile-nav-accordion'))).init();
                     currencyTabs.init();
                     mobileSubmenu.init();
+                    console.log('Тест работы 6')
                     document.body.classList.remove('category-toggles-off');
 
                     if (window.initBackendScripts && typeof window.initBackendScripts === 'function') {
                         window.initBackendScripts();
+                        console.log('Проинициализированы бэкэнд скрипты')
                     }
                 }
             }
