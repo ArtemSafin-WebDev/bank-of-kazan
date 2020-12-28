@@ -60,6 +60,11 @@
     flex-grow: 1;
     display: flex;
     flex-direction: column;
+
+    .low-vision & {
+        border-color: black;
+        padding: 1.8rem;
+    }
     @include breakpoint(mobile) {
         padding: 1.8rem;
     }
@@ -70,6 +75,10 @@
     line-height: 130%;
     color: #898989;
     margin-bottom: 2.5rem;
+    .low-vision & {
+        color: black;
+        font-size: 2rem;
+    }
     @include breakpoint(mobile) {
         font-size: 1.2rem;
         line-height: 130%;
@@ -106,11 +115,28 @@
         transition: background-color 0.2s;
     }
 
-    .no-touch &:hover,
-    .touch &:active {
+    &:hover {
         color: var(--primary-color);
         &::after {
             background-color: var(--primary-color);
+        }
+    }
+
+    .low-vision & {
+        font-size: 1.8rem;
+        color: black;
+        text-decoration: underline;
+        &::after {
+            display: none;
+        }
+        &:link,
+        &:visited {
+            color: black;
+        }
+
+        &:hover {
+            color: black;
+            text-decoration: none;
         }
     }
 
@@ -137,6 +163,10 @@
     padding-right: 6rem;
     position: relative;
     width: 64rem;
+
+    .low-vision & {
+        border-color: black;
+    }
     @include breakpoint(mobile) {
         padding: 0;
         border: none;
@@ -155,6 +185,10 @@
 
         border-top: 0.3rem solid var(--primary-color);
         padding-top: 2rem;
+
+        .low-vision & {
+            border-color: black;
+        }
     }
 }
 
@@ -177,6 +211,10 @@
         justify-content: initial;
         margin: 0;
         margin-bottom: 1rem;
+
+        .low-vision & {
+            margin-bottom: 2.4rem;
+        }
         &:last-of-type {
             margin-bottom: 1rem;
         }
@@ -194,6 +232,11 @@
         line-height: 130%;
         margin: 0;
         margin-bottom: 0.6rem;
+
+
+        .low-vision & {
+            font-size: 1.6rem;
+        }
     }
 }
 
@@ -210,6 +253,15 @@
     line-height: 130%;
     color: #898989;
     margin-top: 1.5rem;
+
+    .low-vision & {
+        color: black;
+        font-size: 2rem;
+
+        @include breakpoint(mobile) {
+            font-size: 1.8rem;
+        }
+    }
 
     @include breakpoint(mobile) {
         font-size: 1.2rem;
@@ -250,6 +302,15 @@
     font-size: 1.5rem;
     line-height: 130%;
     color: #898989;
+
+    .low-vision & {
+        color: black;
+        font-size: 1.8rem;
+
+        @include breakpoint(mobile) {
+            font-size: 1.6rem;
+        }
+    }
     @include breakpoint(mobile) {
         font-size: 1.2rem;
         line-height: 130%;
@@ -302,9 +363,22 @@
         }
     }
 
-    .no-touch &:hover,
-    .touch &:active {
+    &:hover {
         background-color: var(--primary-color-hover);
+    }
+
+    .low-vision & {
+        color: black;
+        background: transparent;
+        border: 1px solid black;
+
+        svg {
+            fill: black;
+        }
+        &:link,
+        &:visited {
+            color: black;
+        }
     }
 
     @include breakpoint(mobile) {
@@ -314,6 +388,11 @@
         padding: 1.4rem;
         border-radius: 0.4rem;
         margin-right: 2.5rem;
+
+
+        .low-vision & {
+            font-size: 1.4rem;
+        }
     }
 }
 
@@ -330,9 +409,16 @@
         color: var(--primary-color);
     }
 
-    .no-touch &:hover,
-    .touch &:active {
+    &:hover {
         color: var(--primary-color-hover);
+    }
+
+    .low-vision & {
+        color: black;
+
+        &:hover {
+            text-decoration: underline;
+        }
     }
 
     @include breakpoint(mobile) {
@@ -340,6 +426,10 @@
         font-size: 1rem;
         line-height: 120%;
         padding: 0;
+
+        .low-vision & {
+            font-size: 1.4rem;
+        }
     }
 }
 
@@ -504,6 +594,10 @@
     width: 100%;
     height: auto;
     @include objectFitContain();
+
+    .low-vision & {
+        filter: grayscale(100%);
+    }
 }
 
 .calculator__apply-for-card-card {
@@ -540,7 +634,7 @@
     transform-origin: left top;
 }
 
-.no-touch .calculator__apply-for-card-card {
+.no-touch:not(.low-vision) .calculator__apply-for-card-card {
     @supports (display: grid) {
         &:first-child:hover {
             transform: translateX(10%);
@@ -550,8 +644,6 @@
         }
     }
 }
-
-
 
 .calculator__apply-for-card-percent {
     width: 20.8rem;
@@ -659,6 +751,22 @@
         background-color: var(--primary-color-hover);
     }
 
+    .low-vision & {
+        color: black;
+        border: 1px solid black;
+        background-image: none;
+        background-color: transparent;
+        min-height: auto;
+        &:link,
+        &:visited {
+            color: black;
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
     @include breakpoint(mobile) {
         padding: 1.8rem;
         border-radius: 0.4rem;
@@ -698,6 +806,13 @@
         margin-left: 2rem;
         display: block;
         margin: 0;
+    }
+
+    .low-vision & {
+        background-color: black;
+        svg {
+            fill: white;
+        }
     }
 
     @include breakpoint(mobile) {

@@ -1,9 +1,7 @@
 .rating {
-  
-
     &--with-border {
         .rating__row {
-            border-top: 1px solid rgba(#A0A0A0, .5);
+            border-top: 1px solid rgba(#a0a0a0, 0.5);
         }
     }
     @include breakpoint(mobile) {
@@ -11,13 +9,11 @@
     }
 }
 
-
 .rating__row {
     display: flex;
     align-items: center;
     padding: 4rem 0;
 }
-
 
 .rating__heading {
     font-weight: 500;
@@ -25,13 +21,11 @@
     line-height: 1.2;
 }
 
-
 .rating__form {
     display: flex;
     align-items: center;
     margin-left: 5.4rem;
 }
-
 
 .rating__form-star {
     margin-right: 2rem;
@@ -41,11 +35,11 @@
     justify-content: center;
     cursor: pointer;
     svg {
-        fill: #E0E0E0;
+        fill: #e0e0e0;
         flex-shrink: 0;
         width: 4rem;
         height: 4rem;
-        transition: fill .2s;
+        transition: fill 0.2s;
     }
 
     &:hover {
@@ -53,9 +47,7 @@
             fill: #d3d3d3;
         }
     }
-    
 }
-
 
 .rating__form-star-input {
     @include visuallyHidden();
@@ -65,14 +57,21 @@
     fill: var(--primary-color) !important;
 }
 
+.low-vision .rating__form-star-input:checked ~ svg {
+    fill: black !important;
+}
+
 .rating__form-submit {
     margin-left: 3rem;
     font-size: 2rem;
     line-height: 1.2;
     color: var(--primary-color);
-    transition: color .2s;
-    .no-touch &:hover,
-    .touch &:active {
+    transition: color 0.2s;
+    &:hover {
         color: var(--primary-color-hover);
+    }
+
+    .low-vision & {
+        color: black;
     }
 }

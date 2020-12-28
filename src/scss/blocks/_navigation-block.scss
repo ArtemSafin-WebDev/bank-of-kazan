@@ -4,6 +4,10 @@
     min-height: 98.8rem;
     position: relative;
     z-index: 100;
+
+    .low-vision & {
+        color: black;
+    }
     @include breakpoint(mobile) {
         min-height: 68rem;
 
@@ -29,6 +33,10 @@
     transition: border-color 0.2s;
     .dark-main-nav.violet-backplate:not(.bank-menu-shown) & {
         border-color: var(--primary-color);
+    }
+
+    .low-vision & {
+        border-color: black !important;
     }
     @include breakpoint(mobile) {
         padding: 1.8rem 0;
@@ -60,6 +68,15 @@
             opacity: 1;
         }
     }
+
+    .low-vision & {
+        opacity: 0 !important;
+
+        &--violet {
+            opacity: 1 !important;
+            filter: grayscale(100%) brightness(0);
+        }
+    }
     @include breakpoint(mobile) {
         width: 15.5rem;
     }
@@ -72,6 +89,10 @@
     top: 0;
     width: 100%;
     height: 100%;
+
+    .low-vision & {
+        display: none;
+    }
 }
 
 .navigation__bg-layer {
@@ -155,6 +176,10 @@
     .dark-main-nav.violet-backplate:not(.bank-menu-shown) & {
         border-color: rgba(black, 0.2);
     }
+
+    .low-vision & {
+        border-color: black !important;
+    }
 }
 
 .navigation__universal-toggle-select-category {
@@ -195,6 +220,10 @@
     line-height: 120%;
     margin-right: 6rem;
     transition: color 0.2s;
+
+    .low-vision & {
+        color: black;
+    }
 
     @include breakpoint(mobile) {
         font-size: 1.8rem;
@@ -243,6 +272,13 @@
         color: rgba(white, 0.4);
     }
 
+    .low-vision & {
+        color: black;
+        @include placeholder {
+            color: rgba(black, 0.4);
+        }
+    }
+
     @include breakpoint(mobile) {
         font-size: 1.8rem;
         padding-right: 5rem;
@@ -279,9 +315,26 @@
         }
     }
 
+    .low-vision & {
+        color: rgba(black, 0.5);
+        &:link,
+        &:visited {
+            color: rgba(black, 0.5);
+        }
+
+        &.active {
+            color: black !important;
+        }
+    }
+
     @include breakpoint(mobile) {
         font-size: 1.8rem;
         margin-right: 1.5rem;
+
+
+        .low-vision & {
+            font-size: 2rem;
+        }
     }
 }
 
@@ -300,6 +353,9 @@
         height: 3.4rem;
         fill: white;
         display: block;
+        .low-vision & {
+            fill: black;
+        }
         @include breakpoint(mobile) {
             width: 1.5rem;
             height: 1.5rem;
@@ -337,6 +393,9 @@
         fill: white;
         display: block;
         transition: fill 0.2s;
+        .low-vision & {
+            fill: black;
+        }
         @include breakpoint(mobile) {
             width: 1.5rem;
             height: 1.5rem;
@@ -567,12 +626,36 @@
         color: var(--primary-color);
     }
 
+    .low-vision & {
+        color: black;
+        &:link,
+        &:visited {
+            color: black;
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .low-vision .nav-menu-open &:not(.active) {
+        color: black;
+
+        &:hover {
+            color: black;
+        }
+    }
+
     @include breakpoint(mobile) {
         font-size: 1.3rem;
         line-height: 80%;
         margin: 0;
         margin-right: 1.5rem;
         white-space: nowrap;
+
+        .low-vision & {
+            font-size: 1.6rem;
+        }
     }
 }
 
@@ -621,11 +704,22 @@
         opacity: 0.5;
         transition: opacity 0.3s, background-color 0.3s;
         outline: none;
+
+        .low-vision & {
+            border-color: black;
+            width: 1.2rem;
+            height: 1.2rem;
+            margin: 0 .6rem;
+        }
     }
 
     .swiper-pagination-bullet-active {
         opacity: 1;
         background-color: #fff;
+
+        .low-vision & {
+            background-color: black;
+        }
     }
     @include breakpoint(mobile) {
         display: flex;
@@ -643,6 +737,10 @@
         fill: rgba(white, 0.5);
         transition: fill 0.2s;
         display: block;
+
+        .low-vision & {
+            fill: black;
+        }
         @include breakpoint(mobile) {
             width: 0.9rem;
             height: 1.4rem;
@@ -661,7 +759,7 @@
         cursor: default;
     }
 
-    &:not(.swiper-button-disabled):hover {
+    body:not(.low-vision) &:not(.swiper-button-disabled):hover {
         svg {
             fill: white;
         }
@@ -671,6 +769,14 @@
         position: static;
         transform: none;
         top: auto;
+
+
+        .low-vision & {
+            svg {
+                width: 2.4rem;
+                height: 2.4rem;
+            }
+        }
     }
 }
 
@@ -805,6 +911,10 @@
         font-size: 1.2rem;
         line-height: 130%;
         margin-bottom: 1.6rem;
+
+        .low-vision & {
+            font-size: 1.6rem;
+        }
     }
 }
 
@@ -817,6 +927,10 @@
     overflow: hidden;
     position: relative;
     background-color: rgba(white, 0.2);
+
+    .low-vision & {
+        background-color: rgba(black, 0.5);
+    }
     img {
         position: absolute;
         left: 0;
@@ -864,6 +978,10 @@
         flex-shrink: 0;
         fill: white;
         margin-left: 2rem;
+
+        .low-vision & {
+            fill: black;
+        }
         @include breakpoint(mobile) {
             width: 0.6rem;
             height: 1.2rem;
@@ -887,6 +1005,20 @@
         }
     }
 
+    .low-vision & {
+        color: black;
+        border: 1px solid black;
+        background-color: transparent;
+        &:link,
+        &:visited {
+            color: black;
+        }
+
+        &:hover {
+            background-color: transparent;
+        }
+    }
+
     @include breakpoint(mobile) {
         font-weight: 500;
         font-size: 1rem;
@@ -898,6 +1030,16 @@
         margin-top: auto;
         margin-bottom: 0;
         margin-right: 2rem;
+
+
+        .low-vision & {
+            font-size: 1.4rem;
+
+            svg {
+                width: 1.2rem;
+                height: 1.2rem;
+            }
+        }
     }
 }
 
@@ -938,6 +1080,10 @@
         // background-color: rgba(white, .7);
         // backdrop-filter: blur(2px);
         background-color: white;
+    }
+
+    .low-vision & {
+        background-color: #fff;
     }
 
     &.open {
@@ -985,6 +1131,7 @@
         transition: fill 0.2s;
         width: 2.2rem;
         height: 2.2rem;
+
         @include breakpoint(mobile) {
             width: 2rem;
             height: 2rem;
@@ -1012,6 +1159,12 @@
             svg {
                 fill: var(--primary-color);
             }
+        }
+    }
+
+    .low-vision & {
+        svg {
+            fill: black !important;
         }
     }
 
@@ -1102,6 +1255,11 @@
     .dark-main-nav & {
         color: var(--primary-color);
     }
+
+    .low-vision & {
+        font-size: 1.8rem;
+        color: black;
+    }
     @include breakpoint(mobile) {
         font-size: 0.9rem;
         line-height: 0.9rem;
@@ -1140,9 +1298,20 @@
         }
     }
 
-    .no-touch &:hover,
-    .touch &:active {
+    &:hover {
         color: white;
+    }
+
+    .low-vision & {
+        color: black;
+        &:link,
+        &:visited {
+            color: black;
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
     }
 
     @include breakpoint(mobile) {
@@ -1172,6 +1341,16 @@
 
     &:hover {
         background-color: var(--primary-color-hover);
+    }
+
+    .low-vision & {
+        border: 1px solid black;
+        color: black;
+        background: transparent;
+        &:link,
+        &:visited {
+            color: black;
+        }
     }
 
     @include breakpoint(mobile) {
@@ -1234,6 +1413,12 @@
     border-radius: 1rem;
     background-color: rgba(white, 0.15);
 
+    .low-vision & {
+        color: black;
+        background-color: transparent;
+        border: 1px solid black;
+    }
+
     @include breakpoint(mobile) {
         font-size: 1.2rem;
         line-height: 1.2;
@@ -1264,6 +1449,10 @@
     width: 100%;
     height: 100%;
     @include objectFitContain();
+
+    .low-vision & {
+        filter: grayscale(100%) brightness(0);
+    }
 }
 
 .navigation__promo {
@@ -1294,6 +1483,17 @@
         background-color: var(--primary-color);
     }
 
+    .low-vision & {
+        color: black;
+        background: transparent;
+        border: 1px solid black;
+        min-height: auto;
+        &:link,
+        &:visited {
+            color: black;
+        }
+    }
+
     img {
         position: absolute;
         left: 0;
@@ -1304,6 +1504,10 @@
         backface-visibility: hidden;
         transform: translateZ(0);
         transition: transform 0.4s;
+
+        .low-vision & {
+            display: none;
+        }
     }
 
     &::after {
@@ -1314,6 +1518,10 @@
         width: 100%;
         height: 100%;
         background-color: rgba(black, 0.1);
+
+        .low-vision & {
+            display: none;
+        }
     }
 
     &:last-child {
@@ -1366,6 +1574,14 @@
         fill: var(--primary-color);
         width: 0.9rem;
         height: 1.4rem;
+    }
+
+    .low-vision & {
+        background-color: black;
+
+        svg {
+            fill: white;
+        }
     }
 
     @include breakpoint(mobile) {
@@ -1478,12 +1694,25 @@
         color: rgba(white, 0.5);
     }
 
-    &:hover {
+    body:not(.low-vision) &:hover {
         color: white;
         border-color: white;
 
         svg {
             fill: white;
+        }
+    }
+
+    .low-vision & {
+        color: black;
+        border-color: black;
+
+        svg {
+            fill: black;
+        }
+        &:link,
+        &:visited {
+            color: black;
         }
     }
 
@@ -1518,15 +1747,10 @@
     z-index: 10;
     height: 1px;
     background-color: rgba(white, 0.4);
-    // opacity: 0;
-    // visibility: hidden;
-    // transition: opacity .3s, visibility 0s linear .3s;
 
-    // &.active {
-    //     opacity: 1;
-    //     visibility: visible;
-    //     transition: opacity .3s, visibility .3s;
-    // }
+    .low-vision & {
+        background-color: rgba(black, 0.4);
+    }
 }
 
 .navigation__universal-toggle-progress-layer {
@@ -1545,7 +1769,10 @@
 
     .swiper-pagination-progressbar-fill {
         background-color: #fff !important;
-       
+
+        .low-vision & {
+            background-color: #000 !important;
+        }
     }
     .navigation__universal-toggle-progress-layers.active &.active {
         position: relative;
@@ -1556,7 +1783,6 @@
     }
 }
 
-
 .navigation__archive-link {
     display: inline-flex;
     align-items: center;
@@ -1566,7 +1792,7 @@
     font-weight: 500;
     text-transform: uppercase;
     color: #9876a1;
-    transition: color .2s;
+    transition: color 0.2s;
     &:link,
     &:visited {
         color: #9876a1;
@@ -1583,6 +1809,24 @@
         color: white;
     }
 
+    .low-vision & {
+        color: black;
+        text-decoration: underline;
+        font-size: 1.8rem;
+        &:link,
+        &:visited {
+            color: black;
+        }
+
+        svg {
+            fill: black;
+        }
+
+        &:hover {
+            color: black;
+            text-decoration: none;
+        }
+    }
 
     @include breakpoint(mobile) {
         font-size: 1.2rem;
@@ -1594,7 +1838,6 @@
             height: 1rem;
             flex-shrink: 0;
             margin-left: 0.5rem;
-            
         }
     }
 }
@@ -1609,20 +1852,16 @@
     opacity: 0;
     transition: opacity 0.8s, visibility 0s linear 0.8s;
     z-index: 1;
-  
-   
-    
+
     &:only-child,
     &.active {
         position: relative;
         opacity: 1;
         visibility: inherit;
         z-index: 2;
-       
-        transition: opacity .8s, visibility .8s;
-    }
 
-    
+        transition: opacity 0.8s, visibility 0.8s;
+    }
 }
 
 .navigation__currency {
@@ -1655,6 +1894,15 @@
                 line-height: 120%;
                 color: #c4c4c4;
                 padding-bottom: 1rem;
+
+                .low-vision & {
+                    color: black;
+                    font-size: 1.8rem;
+
+                    @include breakpoint(mobile) {
+                        font-size: 1.6rem;
+                    }
+                }
             }
         }
 
@@ -1663,6 +1911,13 @@
                 font-size: 1.6rem;
                 line-height: 120%;
                 padding-bottom: 1rem;
+
+                .low-vision & {
+                    font-size: 2rem;
+                    @include breakpoint(mobile) {
+                        font-size: 1.6rem;
+                    }
+                }
             }
         }
 
@@ -1678,16 +1933,27 @@
                 margin-left: 1.2rem;
 
                 &.icon-trend-down {
-                    fill: #E21111;
+                    fill: #e21111;
                     transform: scaleY(-1);
                 }
 
                 &.icon-trend-up {
-                    fill: #94C22B;
-                   
+                    fill: #94c22b;
+                }
+
+                .low-vision & {
+                    fill: black !important;
+                    width: 1.8rem;
+                    height: 1.8rem;
+                    margin-left: 1.8rem;
+
+                    @include breakpoint(mobile) {
+                        width: 1.6rem;
+                        height: 1.6rem;
+                        margin-left: 1.4rem;
+                    }
                 }
             }
-
         }
     }
 }

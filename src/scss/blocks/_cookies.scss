@@ -1,6 +1,6 @@
 .cookies {
     position: fixed;
-    right: 6rem;
+    right: 3rem;
     bottom: 3rem;
     width: 27.8rem;
     z-index: 500;
@@ -13,6 +13,14 @@
         opacity: 0;
         visibility: hidden;
         transition: opacity 0.3s, visibility 0s linear 0.3s;
+    }
+
+
+    .low-vision & {
+        border: 1px solid black;
+        box-shadow: none;
+        color: black;
+        width: 35rem;
     }
 
     @include breakpoint(mobile) {
@@ -57,6 +65,14 @@
     line-height: 2rem;
     color: #585858;
     margin-bottom: 1.8rem;
+
+    .low-vision & {
+        color: black;
+        font-size: 1.8rem;
+        @include breakpoint(mobile) {
+            font-size: 1.6rem;
+        }
+    }
     a {
         font-weight: 500;
         &:link,
@@ -64,9 +80,19 @@
             color: var(--primary-color);
         }
 
+        .low-vision & {
+            color: black;
+            &:link,
+            &:visited {
+                color: black;
+            }
+        }
+
         &:hover {
             text-decoration: underline;
         }
+
+
     }
 }
 
@@ -88,12 +114,28 @@
     &:visited {
         color: #808080;
     }
+
+    .low-vision & {
+        color: black !important;
+        background: white !important;
+        border: 1px solid black;
+        font-size: 1.8rem;
+
+        @include breakpoint(mobile) {
+            font-size: 1.4rem;
+        }
+        &:link,
+        &:visited {
+            color: black;
+        }
+    }
 }
 
 .cookies__accept {
     background: #94c22b;
     border-radius: 1rem;
-    margin-right: 1.2rem;
+    width: 100%;
+    text-align: center;
     color: white;
     &:link,
     &:visited {

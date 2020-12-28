@@ -2,12 +2,16 @@
     padding: 6.2rem 0;
     background-color: var(--secondary-color);
     color: white;
+
+    .low-vision & {
+        background: transparent;
+        color: black;
+    }
     @include breakpoint(mobile) {
         padding-top: 2.2rem;
         padding-bottom: 3.6rem;
     }
 }
-
 
 .news__row {
     display: flex;
@@ -26,8 +30,12 @@
     margin-right: 9.6rem;
     color: #90619c;
 
+    .low-vision & {
+        color: black;
+    }
+
     a {
-        transition: color .2s;
+        transition: color 0.2s;
         &:link,
         &:visited {
             color: inherit;
@@ -36,12 +44,24 @@
         &:hover {
             color: white;
         }
+
+        .low-vision & {
+            text-decoration: underline;
+            &:hover {
+                color: inherit;
+                text-decoration: none;
+            }
+        }
     }
     @include breakpoint(mobile) {
         font-size: 2rem;
         line-height: 1.2;
         margin: 0;
         margin-bottom: 1.8rem;
+
+        .low-vision & {
+            font-size: 2.6rem;
+        }
     }
 }
 
@@ -76,10 +96,8 @@
         &:first-child {
             .news__card {
                 padding-left: 0;
-               
             }
         }
-
 
         &:last-child {
             .news__card::after {
@@ -95,7 +113,7 @@
     padding-right: 2rem;
     display: flex;
     flex-direction: column;
-    transition: border-color .2s;
+    transition: border-color 0.2s;
     position: relative;
     z-index: 1;
 
@@ -110,12 +128,15 @@
         z-index: -2;
         pointer-events: none;
         top: 0;
+
+        .low-vision & {
+            background: black;
+        }
         @include breakpoint(mobile) {
             left: auto;
             right: 0;
         }
     }
-
 
     &::before {
         display: none;
@@ -127,25 +148,34 @@
         }
     }
 
-
     &::after {
         left: auto;
         right: 0;
     }
-  
+
     &:link,
     &:visited {
         color: white;
     }
 
+    .low-vision & {
+        color: black;
+        &:link,
+        &:visited {
+            color: black;
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 
     @include breakpointMF(laptop) {
-        .no-touch &:hover {
-        
+        .no-touch:not(.low-vision) &:hover {
             .news__card-preview-backdrop {
                 opacity: 1;
             }
-    
+
             .news__card-date {
                 background-color: #fff;
                 color: black;
@@ -153,20 +183,15 @@
         }
     }
 
-   
-
-
     @include breakpoint(mobile) {
         padding-left: 2rem;
         padding-right: 2rem;
     }
 }
 
-
 .news__card-preview-backdrop {
     position: absolute;
-   
-  
+
     top: -2.1rem;
     bottom: -2.5rem;
     border-radius: 1.5rem;
@@ -174,11 +199,14 @@
     z-index: -1;
     overflow: hidden;
     opacity: 0;
-    transition: opacity .2s;
+    transition: opacity 0.2s;
 
-    left: -.5rem;
-    right: -.5rem;
+    left: -0.5rem;
+    right: -0.5rem;
 
+    .low-vision & {
+        display: none;
+    }
 
     @include breakpoint(mobile) {
         display: none;
@@ -190,7 +218,7 @@
         top: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, .3);
+        background: rgba(0, 0, 0, 0.3);
     }
 }
 
@@ -208,9 +236,21 @@
     font-size: 2.2rem;
     line-height: 1.2;
     margin-bottom: 3.5rem;
+
+    .low-vision & {
+        font-weight: 400;
+        font-size: 2.4rem;
+
+        @include breakpoint(mobile) {
+            font-size: 1.8rem;
+        }
+    }
     @include breakpoint(mobile) {
         font-size: 1.5rem;
         margin-bottom: 1.4rem;
+
+
+
     }
 }
 
@@ -218,15 +258,27 @@
     margin-top: auto;
     background: #7b398c;
     border-radius: 0.4rem;
-    padding: .5rem 1rem;
+    padding: 0.5rem 1rem;
     color: white;
     font-size: 1.4rem;
     text-align: center;
     line-height: 1.2;
     align-self: flex-start;
-    transition: background-color .2s, color .2s;
+    transition: background-color 0.2s, color 0.2s;
+
+    .low-vision & {
+        background: black;
+        color: white;
+        font-size: 2rem;
+        padding: 0.8rem 1.4rem;
+
+        @include breakpoint(mobile) {
+            font-size: 1.6rem;
+            padding: 0.8rem;
+        }
+    }
     @include breakpoint(mobile) {
         font-size: 1.1rem;
-        padding: .6rem .8rem;
+        padding: 0.6rem 0.8rem;
     }
 }

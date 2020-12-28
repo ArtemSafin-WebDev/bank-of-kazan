@@ -83,6 +83,16 @@
             opacity: 1;
         }
     }
+
+
+    .low-vision & {
+        color: black !important;
+
+        &::before,
+        &::after {
+            filter: grayscale(100%);
+        }
+    }
 }
 
 .offices__city-dropdown {

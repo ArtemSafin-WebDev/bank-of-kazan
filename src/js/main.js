@@ -34,10 +34,12 @@ import newApplicationForm from './newApplicationForm';
 import fileUpload from './fileUpload';
 import currencyTabs from './currencyTabs';
 import mobileSubmenu from './mobileSubmenu';
+import lowVision from './lowVision';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
     detectTouch();
+    lowVision();
     navigation();
     mobileMenu();
     productNav();
@@ -56,6 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
     officesForms();
     newApplicationForm();
     fileUpload();
+    
 
     console.log('Тест работы')
 

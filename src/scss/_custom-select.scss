@@ -27,6 +27,13 @@
         align-items: center;
         justify-content: center;
         border-left: 1px solid #e0e0e0;
+
+
+        .low-vision & {
+            border: 1px solid black;
+            background: white;
+            border-left: none;
+        }
         @include breakpoint(mobile) {
             font-weight: 500;
             font-size: 1.4rem;
@@ -65,6 +72,10 @@
         top: 50%;
         transform: translateY(-50%);
 
+        .low-vision & {
+            filter: grayscale(100%);
+        }
+
         @include breakpoint(mobile) {
             // width: 6px;
             // height: 9px;
@@ -93,6 +104,12 @@
     .choices__list--dropdown .choices__item--selectable.is-highlighted {
         background-color: var(--primary-color);
         color: white;
+
+
+        .low-vision & {
+            background: black;
+            color: white;
+        }
     }
 
     .choices__list--dropdown {

@@ -4523,11 +4523,17 @@
                 <div class="page-footer__bottom-section-info">
                     <a href="#">Информация о лицах, под контролем которых находится банк;</a><a href="#">Центр раскрытия корпоративной информации;</a><a href="#">Информация о максимальных процентных ставках по вкладам физических лиц;</a><a href="#">Раскрытие информации профессиональным участником рынка ценных бумаг</a>
                 </div>
-                <a href="#" class="page-footer__low-vision-version bvi-open">
+                <a href="#" class="page-footer__low-vision-version js-low-vision">
                     <svg width="22" height="18" aria-hidden="true" class="icon-glasses">
                         <use xlink:href="#glasses" />
                     </svg>
-                    Версия для слабовидящих
+                    <span>
+                        Версия для слабовидящих
+                    </span>
+                    <span>
+                        Обычная версия сайта
+                    </span>
+                   
                 </a>
             </div>
             <div class="page-footer__bottom-section-bottom">
@@ -5072,11 +5078,19 @@
                     const cookiesBtns = [document.querySelector('.cookies__accept'), document.querySelector('.cookies__decline'), document.querySelector('.cookies__close-btn')];
 
                     cookiesBtns.forEach(function(btn) {
-                        btn.addEventListener('click', function(event) {
+                        if (btn) {
+                            btn.addEventListener('click', function(event) {
                             event.preventDefault();
-                            document.body.classList.add('cookies-panel-hidden')
+                            document.body.classList.add('cookies-panel-hidden');
+                            sessionStorage.setItem('cookiesAccepted', 1);
                         })
+                        }
+                       
                     })
+
+                    if (sessionStorage.getItem('cookiesAccepted') == 1) {
+                        document.body.classList.add('cookies-panel-hidden');
+                    }
 
 
 

@@ -79,6 +79,12 @@
     &:hover {
         background: #ecf3dc;
         color: var(--primary-color);
+
+
+        .low-vision & {
+            background: black;
+            color: white;
+        }
     }
 
 
@@ -100,6 +106,13 @@
         border-radius: .4rem;
         margin: 0;
         margin-right: .5rem;
+
+
+        .low-vision & {
+            font-size: 1.6rem;
+            padding: .8rem .6rem;
+            margin-right: 0.8rem;
+        }
 
       
        

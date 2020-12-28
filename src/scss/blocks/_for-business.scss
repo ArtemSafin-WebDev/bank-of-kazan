@@ -46,6 +46,10 @@
     border: 1px solid #e0e0e0;
     border-left: none;
     position: relative;
+
+    .low-vision & {
+        border-color: black;
+    }
     &::after {
         content: '';
         position: absolute;
@@ -54,8 +58,11 @@
         height: 100%;
         width: 0.4rem;
         background-color: var(--primary-color);
-    }
 
+        .low-vision & {
+            background: black;
+        }
+    }
 
     .parsley-errors-list.filled {
         margin: 1rem 0;
@@ -65,7 +72,6 @@
             margin-bottom: 0;
         }
 
-
         @include breakpoint(mobile) {
             font-size: 1.2rem;
         }
@@ -73,17 +79,16 @@
 
     @include breakpoint(mobile) {
         width: 100%;
-        padding:  1.8rem 2.2rem;
+        padding: 1.8rem 2.2rem;
         margin-top: 4rem;
     }
 }
-
 
 .for-business__form-input + .parsley-errors-list.filled {
     margin-top: -1rem;
 
     @include breakpoint(mobile) {
-        margin-top: -.5rem;
+        margin-top: -0.5rem;
     }
 }
 
@@ -119,8 +124,19 @@
     line-height: 120%;
     margin-bottom: 2rem;
     color: var(--text-color);
+
+
+  
     @include placeholder {
         color: #a0a0a0;
+    }
+
+    .low-vision & {
+        background: transparent;
+        border: 1px solid black;
+        @include placeholder {
+            color: black;
+        }
     }
 
     @include breakpoint(mobile) {
@@ -143,16 +159,24 @@
     display: block;
     margin-bottom: 2.4rem;
     transition: background-color 0.2s;
-    .no-touch &:hover,
-    .touch &:active {
+    &:hover {
         background-color: var(--secondary-color);
+    }
+
+    .low-vision & {
+        background: transparent;
+        color: black;
+        border: 1px solid black;
+        &:hover {
+            color: black;
+        }
     }
 
     @include breakpoint(mobile) {
         font-size: 1.2rem;
         padding: 1.6rem;
         margin-bottom: 2rem;
-        border-radius: .4rem;
+        border-radius: 0.4rem;
     }
 }
 
@@ -246,11 +270,18 @@
 
     &.active {
         color: var(--primary-color);
+        
+    }
+
+    .low-vision &.active {
+        color: black;
     }
 
     .autoplay-disabled &.active {
         .for-business__countdown {
             background-color: var(--primary-color);
+
+           
         }
     }
 
@@ -265,7 +296,7 @@
 
     @include breakpoint(mobile) {
         font-size: 1.6rem;
-        padding: 1.4rem .5rem;
+        padding: 1.4rem 0.5rem;
         min-height: 6rem;
     }
 }
@@ -278,7 +309,7 @@
     top: 0;
     left: 0;
     animation-duration: inherit;
-    transition: background-color .2s;
+    transition: background-color 0.2s;
     &::after {
         content: '';
         position: absolute;
@@ -288,7 +319,10 @@
         background-color: var(--primary-color);
         transform-origin: left center;
         transform: translateZ(0) scaleX(0);
-        
+
+        .low-vision & {
+            background-color: black;
+        }
     }
 }
 
@@ -298,9 +332,6 @@
     flex-shrink: 0;
     margin-right: 2.5rem;
     position: relative;
-
-
-
 
     @include breakpoint(mobile) {
         width: 3rem;
@@ -316,12 +347,18 @@
     width: 100%;
     height: 100%;
     fill: var(--secondary-color);
-    transition: fill .2s;
+    transition: fill 0.2s;
     @include objectFitContain();
+
 
 
     .for-business__tabs-nav-link.active & {
         fill: var(--primary-color);
+    }
+
+
+    .low-vision & {
+        fill: black !important;
     }
 }
 
@@ -357,19 +394,18 @@
     text-transform: uppercase;
     display: inline-flex;
     align-items: center;
-    transition: background-color .2s, color .2s;
+    transition: background-color 0.2s, color 0.2s;
     svg {
         fill: var(--primary-color);
         width: 1rem;
         height: 1.4rem;
         flex-shrink: 0;
         margin-left: 1rem;
-        transition: fill .2s;
+        transition: fill 0.2s;
         @include breakpoint(mobile) {
             width: 0.7rem;
             height: 1.1rem;
             margin-left: 1.5rem;
-            
         }
     }
 
@@ -382,11 +418,24 @@
         }
     }
 
+    .low-vision & {
+        background: transparent;
+        border: 1px solid black;
+        color: black;
+        &:link,
+        &:visited {
+            color: black;
+        }
+        svg {
+            fill: black;
+        }
+    }
+
     @include breakpoint(mobile) {
         font-weight: 500;
         font-size: 1rem;
         line-height: 120%;
         padding: 1.4rem 1.6rem;
-        border-radius: .4rem;
+        border-radius: 0.4rem;
     }
 }

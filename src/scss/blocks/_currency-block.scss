@@ -27,7 +27,6 @@
     }
 }
 
-
 .currency__card-calculate-checkbox-wrapper {
     margin-top: 30px;
     display: flex;
@@ -44,13 +43,10 @@
         }
     }
 
-
     @include breakpoint(mobile) {
         flex-direction: column;
-
     }
 }
-
 
 .currency__right-col {
     width: 33.6rem;
@@ -71,6 +67,10 @@
     padding: 5rem;
     border: 1px solid #e0e0e0;
     border-radius: 1rem;
+
+    .low-vision & {
+        border-color: black;
+    }
     @include breakpoint(mobile) {
         padding: 2rem;
     }
@@ -184,6 +184,15 @@
     line-height: 130%;
     color: #c6c6c6;
     margin-right: 3rem;
+
+    .low-vision & {
+        color: black;
+        font-size: 1.8rem;
+
+        @include breakpoint(mobile) {
+            font-size: 1.6rem;
+        }
+    }
     @include breakpoint(mobile) {
         font-size: 1rem;
         line-height: 130%;
@@ -202,6 +211,20 @@
 
     &:hover {
         color: var(--primary-color);
+    }
+
+    .low-vision & {
+        color: black;
+        text-decoration: underline;
+        font-size: 1.8rem;
+
+        &:hover {
+            text-decoration: none;
+        }
+
+        @include breakpoint(mobile) {
+            font-size: 1.6rem;
+        }
     }
 
     @include breakpoint(mobile) {
@@ -225,6 +248,15 @@
                 color: #c6c6c6;
                 text-align: left;
                 vertical-align: middle;
+
+                .low-vision & {
+                    color: black;
+                    font-size: 2rem;
+
+                    @include breakpoint(mobile) {
+                        font-size: 1.6rem;
+                    }
+                }
                 .hidden {
                     @include visuallyHidden();
                 }
@@ -250,6 +282,10 @@
                 .currency-name {
                     color: #c6c6c6;
                     padding-right: 3rem;
+
+                    .low-vision & {
+                        color: black;
+                    }
                     @include breakpoint(mobile) {
                         padding-right: 0;
                     }
@@ -266,6 +302,17 @@
                         margin-left: 1rem;
                         flex-shrink: 0;
                         transition: fill 0.2s;
+
+                        .low-vision & {
+                            fill: black !important;
+                            width: 1.4rem;
+                            height: 1.8rem;
+
+                            @include breakpoint(mobile) {
+                                width: 1.2rem;
+                                height: 1.2rem;
+                            }
+                        }
                         @include breakpoint(mobile) {
                             width: 0.8rem;
                             height: 0.8rem;
@@ -287,6 +334,10 @@
                     line-height: 120%;
                     padding-right: 2rem;
                     padding-bottom: 1.4rem;
+
+                    .low-vision & {
+                        font-size: 1.6rem;
+                    }
 
                     &:last-child {
                         padding-right: 0;
@@ -315,6 +366,10 @@
     font-size: 1.6rem;
     line-height: 120%;
     color: #c6c6c6;
+
+    .low-vision & {
+        color: black;
+    }
     @include breakpoint(mobile) {
         display: none;
     }
@@ -344,6 +399,10 @@
         width: 1.4rem;
         height: 0.8rem;
         fill: #dcdcdc;
+
+        .low-vision & {
+            fill: black;
+        }
     }
 }
 
@@ -374,10 +433,24 @@
         color: white;
     }
 
+    .low-vision & {
+        background-color: white;
+        color: black;
+        border: 1px solid black;
+        &:link,
+        &:visited {
+            color: black;
+        }
+    }
+
     @include breakpoint(mobile) {
         padding: 2rem;
 
         min-height: 110vw;
+
+        .low-vision & {
+            min-height: auto;
+        }
     }
 }
 
@@ -389,6 +462,10 @@
     height: 100%;
     z-index: -1;
     @include objectFitCoverBottomRight();
+
+    .low-vision & {
+        display: none;
+    }
 }
 
 .currency__info-heading {
@@ -398,7 +475,15 @@
     font-size: 2.4rem;
     line-height: 120%;
     margin-bottom: auto;
-  
+
+    .low-vision & {
+        font-size: 2.8rem;
+
+        @include breakpoint(mobile) {
+            font-size: 2.4rem;
+            margin-bottom: 3rem;
+        }
+    }
 }
 
 .currency__app-link {
@@ -414,6 +499,10 @@
         display: block;
         height: 4.8rem;
         width: auto;
+
+        .low-vision & {
+            filter: grayscale(100%);
+        }
         @include breakpoint(mobile) {
             height: 4.4rem;
         }
