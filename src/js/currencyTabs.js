@@ -3,7 +3,7 @@ function init() {
 
     if (layers.length) {
         let activeIndex = 0;
-        const autoplay = 7000;
+        const autoplay = 4000;
         function setLayer(index) {
             layers.forEach(layer => layer.classList.remove('active'));
             layers[index].classList.add('active');
