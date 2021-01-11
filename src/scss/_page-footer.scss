@@ -255,6 +255,10 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+
+    @include breakpoint(mobile) {
+        margin-bottom: -2rem;
+    }
 }
 
 .page-footer__mobile-apps-link {
@@ -626,16 +630,21 @@
     display: flex;
     align-items: center;
     max-width: 26rem;
+    
 
     @include breakpoint(mobile) {
         max-width: none;
+
+        display: none;
     }
 }
 
 .page-footer__qr-code-image {
     flex-shrink: 0;
     margin-right: 1.4rem;
-    width: 5.8rem;
+    width: 12rem;
+
+    
 }
 
 .page-footer__qr-code-text {

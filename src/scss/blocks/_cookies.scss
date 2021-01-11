@@ -35,10 +35,10 @@
     position: absolute;
     left: 100%;
     top: 0;
-    margin-left: 1.6rem;
+    margin-left: .8rem;
 
     svg {
-        fill: white;
+        fill: var(--primary-color);
         transition: fill .2s;
         width: 1.4rem;
         height: 1.4rem;
@@ -46,7 +46,7 @@
 
     &:hover {
         svg {
-            fill: var(--primary-color);
+            fill: var(--primary-color-hover);
         }
     }
 
