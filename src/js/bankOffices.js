@@ -25,16 +25,6 @@ export default function() {
         setActiveLayer();
     });
 
-
-
-
-
-
-
-
-
-
-
     document.addEventListener('click', event => {
         if (event.target.matches('.js-accordion-btn') || event.target.closest('.js-accordion-btn')) {
          
@@ -46,8 +36,6 @@ export default function() {
             }
             event.preventDefault();
             
-
-
             const content = accordion.querySelector('.offices__list-view-accordion-body');
 
             if (accordion.classList.contains('active')) {
@@ -63,7 +51,6 @@ export default function() {
                     duration: 0.4
                 })
             }
-
 
             const otherAccordions = Array.from(document.querySelectorAll('.js-offices-accordion'));
 

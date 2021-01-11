@@ -21,10 +21,9 @@ export default function newApplicationForm() {
         const tabsContainer = element.querySelector('.application__form-inner-tabs-items');
         const tabItems = tabsContainer ? Array.from(tabsContainer.children) : [];
         const tabCheckboxes = Array.from(element.querySelectorAll('.application__form-inner-tabs-checkbox-input'));
-        const secondStepRequiredInputs = Array.from(form.querySelectorAll('[data-parsley-group="secondstep"][required]'))
+        const secondStepRequiredInputs = Array.from(form.querySelectorAll('[data-parsley-group="secondstep"][required]'));
 
-        console.log('secondStepRequiredInputs', secondStepRequiredInputs)
-       
+        console.log('secondStepRequiredInputs', secondStepRequiredInputs);
 
         let activeStep = 0;
         let activeCheckboxIndex = tabCheckboxes.findIndex(box => box.checked);
@@ -71,9 +70,7 @@ export default function newApplicationForm() {
                 // console.log('Progress', progress)
 
                 document.documentElement.style.setProperty('--progress', `${progress}%`);
-            })
-
-       
+            });
 
         function updatePagination(index) {
             pagination.innerHTML = `Шаг ${index + 1} из ${stepsTotal}`;
@@ -106,8 +103,6 @@ export default function newApplicationForm() {
             if (pagination) {
                 updatePagination(index);
             }
-
-           
         }
 
         function setTab(index) {
@@ -134,13 +129,12 @@ export default function newApplicationForm() {
                 }
             );
 
-
             mode = Array.from(form.querySelectorAll('input[type="radio"][name="mode"]')).find(radio => radio.checked).value;
 
             if (mode === 'automatic') {
-               secondStepRequiredInputs.forEach(input => input.required = false)
+                secondStepRequiredInputs.forEach(input => (input.required = false));
             } else {
-                secondStepRequiredInputs.forEach(input => input.required = true)
+                secondStepRequiredInputs.forEach(input => (input.required = true));
             }
 
             console.log('Mode', mode);
@@ -150,26 +144,83 @@ export default function newApplicationForm() {
 
         setStep(activeStep);
 
-
         if (stepsTotal >= 2) {
             setTab(0);
         }
-      
 
         element.setStep = setStep;
 
+        const codeInput = element.querySelector('.js-code-input');
+        const codeInputWrapper = element.querySelector('.js-code-input-wrapper');
+        const errorMessage = element.querySelector('.js-code-error-message');
+        const confirmationRow = element.querySelector('.js-confirmation-row');
+        const getCodeBtns = Array.from(element.querySelectorAll('.js-get-code-btn'));
+        const clearCodeInputBtns = Array.from(document.querySelectorAll('.js-clear-code-input'));
+
+        getCodeBtns.forEach(btn => {
+            btn.addEventListener('click', async event => {
+                event.preventDefault();
+                if (typeof element.sendCode === 'function') {
+                    try {
+                        await element.sendCode();
+                        confirmationRow.classList.add('shown');
+                    } catch (err) {
+                        return;
+                    }
+                }
+            });
+        });
+
+        clearCodeInputBtns.forEach(btn => {
+            btn.addEventListener('click', event => {
+                event.preventDefault();
+                const input = btn.parentElement.querySelector('.js-code-input');
+
+                if (input) input.value = '';
+            });
+        });
 
         if (nextBtn) {
-            nextBtn.addEventListener('click', event => {
+            nextBtn.addEventListener('click', async event => {
                 event.preventDefault();
                 const validationResult = $(form)
                     .parsley()
                     .validate({ group: 'firststep' });
-                   
+
                 // console.log('Validation result before next step', validationResult);
-    
+
                 if (!validationResult) return;
-    
+
+                if (typeof element.validateCode === 'function') {
+                    try {
+                        const codeValidationResult = await element.validateCode(codeInput.value);
+
+                        console.log(`Code ${codeInput.value} validated`, codeValidationResult);
+
+                        errorMessage.classList.remove('shown');
+                        codeInputWrapper.classList.remove('code-error');
+                        confirmationRow.classList.remove('shown');
+
+                        const phoneInput = element.querySelector('.js-phone-input');
+                        const mainSendCodeBtn = element.querySelector('.js-main-send-code-btn');
+
+                        if (mainSendCodeBtn) {
+                            mainSendCodeBtn.style.display = 'none';
+                        }
+                        if (phoneInput) {
+                            phoneInput.setAttribute('readonly', '');
+                            console.log('Setting field as readonly', phoneInput);
+                        }
+                    } catch (err) {
+                        errorMessage.classList.add('shown');
+                        codeInputWrapper.classList.add('code-error');
+                        console.error(`Code ${codeInput.value} validation failed`);
+                        return;
+                    }
+                } else {
+                    console.log('No validation function for code');
+                }
+
                 if (activeStep + 1 < stepsTotal) {
                     setStep(activeStep + 1);
                     if (stepsTotal >= 2) {
@@ -191,9 +242,6 @@ export default function newApplicationForm() {
                 }
             });
         }
-        
-
-      
 
         tabCheckboxes.forEach((box, boxIndex) => {
             box.addEventListener('change', event => {

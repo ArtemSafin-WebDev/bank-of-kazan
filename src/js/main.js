@@ -35,6 +35,7 @@ import fileUpload from './fileUpload';
 import currencyTabs from './currencyTabs';
 import mobileSubmenu from './mobileSubmenu';
 import lowVision from './lowVision';
+import codeInput from './codeInput';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -58,6 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
     officesForms();
     newApplicationForm();
     fileUpload();
+    codeInput();
     
 
     console.log('Тест работы')

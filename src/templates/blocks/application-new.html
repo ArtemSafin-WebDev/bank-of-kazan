@@ -113,6 +113,29 @@
                                         </svg>
                                     </span>
                                 </label>
+
+                                <button type="button" class="application__form-get-code js-get-code-btn js-main-send-code-btn">
+                                    Получить код
+                                </button>
+                            </div>
+                            <div class="application__form-fields-group application__form-fields-group--phone-confirmation js-confirmation-row">
+                                <div class="application__form-code-input-wrapper js-code-input-wrapper">
+                                    <input type="text" name="code" class="application__form-code-input js-code-input" />
+                                    <button class="application__form-code-clear-input-btn js-clear-code-input" type="button">
+                                        <svg width="14" height="14" aria-hidden="true" class="icon-trashcan">
+                                            <use xlink:href="#trashcan" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="application__form-code-code-error js-code-error-message">
+                                    Неверный код подтверждения
+                                </div>
+                                <div class="application__form-code-code-message">
+                                    Код отправлен.
+                                    <a href="#">
+                                        Получить
+                                    </a> код еще раз.
+                                </div>
                             </div>
                             <div class="application__form-fields-group">
                                 <label class="application__form-label">
