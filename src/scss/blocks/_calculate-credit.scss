@@ -16,7 +16,7 @@
 
     .low-vision & {
         background: white;
-        border: 2px solid black;
+        border: 1px solid black;
         color: black;
     }
 
@@ -228,6 +228,10 @@
 
     .low-vision & {
         background-color: black !important;
+
+        @include breakpoint(mobile) {
+            font-size: 1.2rem;
+        }
     }
 
     @include breakpoint(mobile) {

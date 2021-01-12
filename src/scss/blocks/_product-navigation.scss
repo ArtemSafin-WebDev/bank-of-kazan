@@ -765,7 +765,7 @@
 
     .low-vision & {
         background: transparent;
-        border: 2px solid black;
+        border: 1px solid black;
     }
     @include breakpoint(mobile) {
         padding: 1.5rem;
@@ -808,9 +808,17 @@
     font-size: 2.5rem;
     line-height: 130%;
 
+
+
+
     @include breakpoint(mobile) {
         font-size: 1.2rem;
         line-height: 1.3;
+
+
+        .low-vision & {
+            font-size: 1.4rem;
+        }
     }
 }
 
