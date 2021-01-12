@@ -565,6 +565,11 @@
         svg {
             fill: black;
         }
+
+
+        @include breakpoint(mobile) {
+            font-size: 1.4rem;
+        }
     }
    
 

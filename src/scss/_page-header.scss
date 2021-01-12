@@ -361,7 +361,7 @@
 
     .low-vision & {
         & > span {
-            background-color: #000;
+            background-color: #000 !important;
         }
        
     }
@@ -444,13 +444,13 @@
         color: black;
         font-size: 1.6rem;
         svg {
-            fill: black;
+            fill: black !important;
             width: 1.6rem;
             height: 1.6rem;
         }
         &:link,
         &:visited {
-            color: black;
+            color: black !important;
         }
     }
 }
@@ -618,7 +618,7 @@
 
     .low-vision & {
         & > span {
-            background-color: #000;
+            background-color: #000 !important;
         }
     }
 
@@ -686,14 +686,14 @@
 
 
     .low-vision & {
-        color: black;
+        color: black !important;
         &:link,
         &:visited {
-            color: black;
+            color: black !important;
         }
 
         &:hover {
-            color: black;
+            color: black !important;
         }
     }
 
@@ -723,7 +723,7 @@
 
 
         .low-vision & {
-            border-color: black;
+            border-color: black !important;
         }
 
         &:hover {
@@ -920,7 +920,7 @@
         }
 
         &:hover {
-            background-color: rgba(#94c22b, 0.1) !important;
+            background-color: rgba(#94c22b, 0.1);
         }
     }
 
@@ -935,16 +935,21 @@
 
 
     .low-vision & {
-        color: black;
-        border-color: black;
-        background: white;
+        color: black !important;
+        border-color: black !important;
+        background: white !important;
 
         svg {
-            fill: black;
+            fill: black !important;
         }
         &:link,
         &:visited {
-            color: black;
+            color: black !important;
+        }
+
+
+        &:hover {
+            background: white !important;
         }
 
 
@@ -1082,9 +1087,9 @@
 
 
     .low-vision & {
-        border-color: black;
+        border-color: black !important;
         svg {
-            fill: black;
+            fill: black !important;
         }
     }
 

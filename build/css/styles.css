@@ -2521,7 +2521,7 @@ img.lazyload:not([src]) {
   .dark-main-nav.violet-backplate:not(.bank-menu-shown):not(.mobile-menu-open) .page-header__burger-btn > span {
     background-color: var(--primary-color); }
   .low-vision .page-header__burger-btn > span {
-    background-color: #000; }
+    background-color: #000 !important; }
   .mobile-menu-open .page-header__burger-btn > span:nth-child(1) {
     -webkit-transform: translateY(0.7rem) rotate(45deg);
             transform: translateY(0.7rem) rotate(45deg); }
@@ -2606,13 +2606,13 @@ img.lazyload:not([src]) {
     font-size: 1.6rem; }
     .low-vision .page-header__about-bank-link svg, .low-vision
     .page-header__city-link svg {
-      fill: black;
+      fill: black !important;
       width: 1.6rem;
       height: 1.6rem; }
     .low-vision .page-header__about-bank-link:link, .low-vision .page-header__about-bank-link:visited, .low-vision
     .page-header__city-link:link, .low-vision
     .page-header__city-link:visited {
-      color: black; }
+      color: black !important; }
 
 .dark-nav-text:not(.product-nav-menu-open) .page-header__city-link {
   color: black; }
@@ -2747,7 +2747,7 @@ img.lazyload:not([src]) {
   .dark-main-nav.violet-backplate:not(.bank-menu-shown) .page-header__about-bank-link-cross > span {
     background-color: var(--primary-color); }
   .low-vision .page-header__about-bank-link-cross > span {
-    background-color: #000; }
+    background-color: #000 !important; }
   .dark-nav-text:not(.product-nav-menu-open):not(.bank-menu-shown) .page-header__about-bank-link.active .page-header__about-bank-link-cross > span {
     background-color: var(--primary-color); }
 
@@ -2780,11 +2780,11 @@ img.lazyload:not([src]) {
   .dark-main-nav.violet-backplate:not(.bank-menu-shown):not(.mobile-menu-open) .page-header__phone-link:hover {
     color: var(--primary-color); }
   .low-vision .page-header__phone-link {
-    color: black; }
+    color: black !important; }
     .low-vision .page-header__phone-link:link, .low-vision .page-header__phone-link:visited {
-      color: black; }
+      color: black !important; }
     .low-vision .page-header__phone-link:hover {
-      color: black; }
+      color: black !important; }
   @media only screen and (min-width: 681px) {
     .page-header__phone-link:hover {
       color: var(--primary-color); } }
@@ -2814,7 +2814,7 @@ img.lazyload:not([src]) {
       .mobile-menu-open:not(.low-vision) .page-header__phone-link {
         background-color: var(--secondary-color); }
       .low-vision .page-header__phone-link {
-        border-color: black; }
+        border-color: black !important; }
       .page-header__phone-link:hover {
         background-color: rgba(255, 255, 255, 0.2); }
       .dark-nav-text:not(.product-nav-menu-open):not(.bank-menu-shown):not(.mobile-menu-open) .page-header__phone-link,
@@ -2985,18 +2985,20 @@ img.lazyload:not([src]) {
       color: black; }
     .dark-nav-text:not(.product-nav-menu-open):not(.bank-menu-shown):not(.mobile-menu-open) .page-header__online-bank-link:hover,
     .dark-main-nav.violet-backplate:not(.bank-menu-shown):not(.mobile-menu-open) .page-header__online-bank-link:hover {
-      background-color: rgba(148, 194, 43, 0.1) !important; }
+      background-color: rgba(148, 194, 43, 0.1); }
   .no-touch.dark-nav-text:not(.product-nav-menu-open):not(.bank-menu-shown):not(.mobile-menu-open) .page-header__online-bank-link:hover,
   .touch.dark-nav-text:not(.product-nav-menu-open):not(.bank-menu-shown) .page-header__online-bank-link:active {
     background-color: rgba(255, 255, 255, 0.4); }
   .low-vision .page-header__online-bank-link {
-    color: black;
-    border-color: black;
-    background: white; }
+    color: black !important;
+    border-color: black !important;
+    background: white !important; }
     .low-vision .page-header__online-bank-link svg {
-      fill: black; }
+      fill: black !important; }
     .low-vision .page-header__online-bank-link:link, .low-vision .page-header__online-bank-link:visited {
-      color: black; }
+      color: black !important; }
+    .low-vision .page-header__online-bank-link:hover {
+      background: white !important; }
   @media only screen and (max-width: 680px) {
     .page-header__online-bank-link {
       font-size: 1rem;
@@ -3102,9 +3104,9 @@ img.lazyload:not([src]) {
     .dark-nav-text:not(.product-nav-menu-open):not(.bank-menu-shown):not(.mobile-menu-open) .page-header__contacts-btn svg {
       fill: black; }
   .low-vision .page-header__contacts-btn {
-    border-color: black; }
+    border-color: black !important; }
     .low-vision .page-header__contacts-btn svg {
-      fill: black; }
+      fill: black !important; }
   @media only screen and (max-width: 680px) {
     .page-header__contacts-btn {
       width: 3.2rem;
@@ -4723,6 +4725,9 @@ input.range-slider__amount {
       color: black; }
     .low-vision .products__card-link-text svg {
       fill: black; }
+    @media only screen and (max-width: 680px) {
+      .low-vision .products__card-link-text {
+        font-size: 1.4rem; } }
   @supports ((-webkit-clip-path: circle(50%)) or (clip-path: circle(50%))) {
     .products__card-link-text {
       background-color: #ecf3dc;
@@ -9197,7 +9202,7 @@ input.range-slider__amount {
   .dark-nav-text:not(.product-nav-menu-open):not(.bank-menu-shown) .product-navigation__logo-bar {
     border-color: var(--primary-color); }
   .low-vision .product-navigation__logo-bar {
-    border-color: black; }
+    border-color: black !important; }
   @media only screen and (max-width: 680px) {
     .product-navigation__logo-bar {
       padding: 1.8rem 0;
@@ -9321,6 +9326,9 @@ input.range-slider__amount {
       color: rgba(0, 0, 0, 0.5) !important; }
     .low-vision .product-navigation__categories-link.active {
       color: black !important; }
+    @media only screen and (max-width: 680px) {
+      .low-vision .product-navigation__categories-link {
+        font-size: 2rem; } }
   @media only screen and (max-width: 680px) {
     .product-navigation__categories-link {
       font-size: 1.8rem;
@@ -9658,12 +9666,6 @@ input.range-slider__amount {
     color: white; }
   .product-navigation__card-menu-link.active {
     color: white; }
-  .low-vision .product-navigation__card-menu-link {
-    color: black !important; }
-    .low-vision .product-navigation__card-menu-link.active {
-      text-decoration: underline; }
-    .low-vision .product-navigation__card-menu-link:hover {
-      text-decoration: underline; }
   .product-navigation__card-menu--bank .product-navigation__card-menu-link:link, .product-navigation__card-menu--bank .product-navigation__card-menu-link:visited {
     color: white; }
   .dark-nav-text:not(.product-nav-menu-open):not(.bank-menu-shown) .product-navigation__card-menu-link {
@@ -9678,6 +9680,16 @@ input.range-slider__amount {
     color: black; }
   .dark-nav-text:not(.product-nav-menu-open):not(.bank-menu-shown) .product-navigation__card-menu--bank .product-navigation__card-menu-link:hover {
     color: var(--primary-color); }
+  .low-vision .product-navigation__card-menu-link {
+    color: black !important; }
+    .low-vision .product-navigation__card-menu-link.active {
+      text-decoration: underline; }
+    .low-vision .product-navigation__card-menu-link:hover {
+      text-decoration: underline; }
+    @media only screen and (max-width: 680px) {
+      .low-vision .product-navigation__card-menu-link {
+        font-size: 1.6rem;
+        line-height: 1.2; } }
   @media only screen and (max-width: 680px) {
     .product-navigation__card-menu-link {
       font-size: 1.3rem;
@@ -9929,6 +9941,10 @@ input.range-slider__amount {
 .product-navigation__card-menu-items {
   position: relative; }
 
+@media only screen and (max-width: 680px) {
+  .low-vision .product-navigation__card-menu {
+    padding-top: 2rem; } }
+
 .product-navigation__card-menu-item {
   z-index: 5;
   position: absolute;
@@ -10149,6 +10165,16 @@ input.range-slider__amount {
     .no-touch .product-navigation__account-back-to-products:hover svg,
     .touch .product-navigation__account-back-to-products:active svg {
       fill: #5f0091; }
+  .low-vision .product-navigation__account-back-to-products {
+    color: black !important; }
+    .low-vision .product-navigation__account-back-to-products svg {
+      fill: black !important; }
+    .low-vision .product-navigation__account-back-to-products:hover {
+      text-decoration: underline; }
+    @media only screen and (max-width: 680px) {
+      .low-vision .product-navigation__account-back-to-products {
+        font-size: 1.6rem;
+        line-height: 1.2; } }
   @media only screen and (max-width: 680px) {
     .product-navigation__account-back-to-products {
       font-size: 1.4rem;
@@ -10171,6 +10197,10 @@ input.range-slider__amount {
   line-height: 130%;
   margin-bottom: 3.6rem;
   max-width: 70rem; }
+  @media only screen and (max-width: 680px) {
+    .low-vision .product-navigation__account-text {
+      font-size: 1.6rem;
+      line-height: 1.3; } }
   @media only screen and (max-width: 680px) {
     .product-navigation__account-text {
       font-size: 1.4rem;
@@ -10205,6 +10235,12 @@ input.range-slider__amount {
     color: white; }
   .product-navigation__account-open-account:hover {
     background-color: var(--primary-color-hover); }
+  .low-vision .product-navigation__account-open-account {
+    color: white !important;
+    background-color: black !important; }
+    @media only screen and (max-width: 680px) {
+      .low-vision .product-navigation__account-open-account {
+        font-size: 1.2rem; } }
   @media only screen and (max-width: 680px) {
     .product-navigation__account-open-account {
       font-weight: 500;
@@ -10304,6 +10340,14 @@ input.range-slider__amount {
     color: white;
     border-color: var(--primary-color);
     background-color: var(--primary-color); }
+  .low-vision .product-navigation__account-login {
+    color: white !important;
+    background-color: black !important;
+    border-color: black !important; }
+    @media only screen and (max-width: 680px) {
+      .low-vision .product-navigation__account-login {
+        font-size: 1.2rem;
+        padding: 1rem 1rem; } }
   @media only screen and (max-width: 680px) {
     .product-navigation__account-login {
       font-weight: 500;
@@ -10313,7 +10357,8 @@ input.range-slider__amount {
       margin-right: auto;
       border-radius: 0.8rem;
       padding: 0.8rem 1rem;
-      margin-right: 1.2rem; }
+      margin-right: 1.2rem;
+      margin-right: 0; }
       .product-navigation__account-login svg {
         width: 2rem;
         height: 2rem;
@@ -10782,6 +10827,11 @@ input.range-slider__amount {
   padding-top: 2.8rem;
   -webkit-box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.05);
           box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.05); }
+  .low-vision .program-advantages__card {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    background: white;
+    border: 1px solid black; }
   @media only screen and (max-width: 680px) {
     .program-advantages__card {
       padding: 2.5rem; } }
@@ -10819,6 +10869,9 @@ input.range-slider__amount {
     -o-object-position: center;
        object-position: center;
     font-family: 'object-fit: contain; object-position: center;'; }
+    .low-vision .program-advantages__card-icon-container img {
+      -webkit-filter: grayscale(100%) brightness(0);
+              filter: grayscale(100%) brightness(0); }
   @media only screen and (max-width: 680px) {
     .program-advantages__card-icon-container {
       width: 4rem;
@@ -10828,6 +10881,11 @@ input.range-slider__amount {
 .program-advantages__card-text {
   font-size: 1.8rem;
   line-height: 130%; }
+  .low-vision .program-advantages__card-text {
+    font-size: 1.8rem; }
+    @media only screen and (max-width: 680px) {
+      .low-vision .program-advantages__card-text {
+        font-size: 1.6rem; } }
   @media only screen and (max-width: 680px) {
     .program-advantages__card-text {
       font-size: 1.4rem; } }
@@ -10859,6 +10917,16 @@ input.range-slider__amount {
     fill: var(--primary-color);
     -ms-flex-negative: 0;
         flex-shrink: 0; }
+    .low-vision .program-advantages__card-arrow svg {
+      fill: white; }
+  .low-vision .program-advantages__card-arrow {
+    width: 4.5rem;
+    height: 4.5rem;
+    background-color: #000; }
+    @media only screen and (max-width: 680px) {
+      .low-vision .program-advantages__card-arrow {
+        width: 3.4rem;
+        height: 3.4rem; } }
 
 .flexible-tariffs {
   padding-top: 6.7rem;
@@ -10884,6 +10952,8 @@ input.range-slider__amount {
   line-height: 130%;
   color: #959595;
   margin-bottom: 4rem; }
+  .low-vision .flexible-tariffs__remark {
+    color: black; }
   @media only screen and (max-width: 680px) {
     .flexible-tariffs__remark {
       font-size: 1.6rem;
@@ -10934,6 +11004,12 @@ input.range-slider__amount {
     color: white; }
     .flexible-tariffs__card--white:link, .flexible-tariffs__card--white:visited {
       color: white; }
+  .low-vision .flexible-tariffs__card {
+    color: black !important;
+    border-radius: 1rem;
+    border: 1px solid black; }
+    .low-vision .flexible-tariffs__card:link, .low-vision .flexible-tariffs__card:visited {
+      color: black !important; }
   @media only screen and (max-width: 680px) {
     .flexible-tariffs__card {
       padding: 2rem; } }
@@ -10952,7 +11028,7 @@ input.range-slider__amount {
   margin-bottom: 7.2rem; }
   @media only screen and (max-width: 680px) {
     .flexible-tariffs__card-info {
-      margin-bottom: 4rem; } }
+      margin-bottom: 3rem; } }
   .flexible-tariffs__card-info table {
     border-collapse: collapse;
     width: 100%;
@@ -10984,9 +11060,12 @@ input.range-slider__amount {
       color: #808080;
       font-weight: 400;
       -ms-flex-preferred-size: 70%;
-          flex-basis: 70%; }
+          flex-basis: 70%;
+      padding-right: 1rem; }
       .flexible-tariffs__card--white .flexible-tariffs__card-info table th {
         color: white; }
+      .low-vision .flexible-tariffs__card-info table th {
+        color: black !important; }
     .flexible-tariffs__card-info table td {
       font-size: 1.8rem;
       line-height: 1.2;
@@ -10995,6 +11074,13 @@ input.range-slider__amount {
       white-space: nowrap;
       -ms-flex-negative: 0;
           flex-shrink: 0; }
+      .low-vision .flexible-tariffs__card-info table td {
+        color: black !important; }
+        .low-vision .flexible-tariffs__card-info table td b {
+          font-weight: 500; }
+        @media only screen and (max-width: 680px) {
+          .low-vision .flexible-tariffs__card-info table td {
+            font-size: 1.6rem; } }
       @media only screen and (max-width: 680px) {
         .flexible-tariffs__card-info table td {
           font-size: 1.4rem; } }
@@ -11019,6 +11105,14 @@ input.range-slider__amount {
   .no-touch .flexible-tariffs__card-link:hover,
   .touch .flexible-tariffs__card-link:active {
     background-color: var(--primary-color-hover); }
+  .low-vision .flexible-tariffs__card-link {
+    background-color: black !important;
+    color: white !important; }
+    @media only screen and (max-width: 680px) {
+      .low-vision .flexible-tariffs__card-link {
+        font-size: 1.4rem;
+        padding-right: 2rem;
+        padding-left: 2rem; } }
   @media only screen and (max-width: 680px) {
     .flexible-tariffs__card-link {
       font-weight: 500;
@@ -11041,6 +11135,8 @@ input.range-slider__amount {
   -o-object-position: center;
      object-position: center;
   font-family: 'object-fit: cover; object-position: center;'; }
+  .low-vision .flexible-tariffs__card-image {
+    display: none; }
 
 .flexible-tariffs__content {
   margin-bottom: 3.6rem; }
@@ -11060,6 +11156,16 @@ input.range-slider__amount {
     .flexible-tariffs__message a:link,
     .flexible-tariffs__message a:visited {
       color: var(--primary-color); }
+  .low-vision .flexible-tariffs__message {
+    color: black !important; }
+    .low-vision .flexible-tariffs__message em {
+      color: black !important;
+      font-weight: 500; }
+    .low-vision .flexible-tariffs__message a {
+      color: black !important;
+      text-decoration: underline; }
+      .low-vision .flexible-tariffs__message a:hover {
+        text-decoration: none; }
   @media only screen and (max-width: 680px) {
     .flexible-tariffs__message {
       font-size: 1.4rem; } }
@@ -11094,6 +11200,11 @@ input.range-slider__amount {
     color: white; }
   .flexible-tariffs__card--white .flexible-tariffs__card-learn-more:hover {
     color: black; }
+  .low-vision .flexible-tariffs__card-learn-more {
+    color: black !important;
+    font-size: 1.5rem; }
+    .low-vision .flexible-tariffs__card-learn-more:hover {
+      text-decoration: underline; }
   @media only screen and (max-width: 680px) {
     .flexible-tariffs__card-learn-more {
       font-size: 1rem; } }
@@ -11121,6 +11232,10 @@ input.range-slider__amount {
   border-radius: 1rem;
   margin-bottom: 0.8rem;
   padding: 1rem; }
+  .low-vision .additional-info__accordion {
+    background: white;
+    border: 1px solid black;
+    color: black; }
   @media only screen and (max-width: 680px) {
     .additional-info__accordion {
       padding: 1rem; } }
@@ -11136,6 +11251,8 @@ input.range-slider__amount {
   line-height: 146%; }
   .additional-info__accordion-btn:link, .additional-info__accordion-btn:visited {
     color: var(--secondary-color); }
+  .low-vision .additional-info__accordion-btn {
+    color: black !important; }
   @media only screen and (max-width: 680px) {
     .additional-info__accordion-btn {
       font-size: 1.6rem; } }
@@ -11172,6 +11289,8 @@ input.range-slider__amount {
     -ms-flex-negative: 0;
         flex-shrink: 0;
     margin-top: 0.1em; }
+    .low-vision .additional-info__accordion-btn-arrow svg {
+      fill: black !important; }
   .additional-info__accordion.active .additional-info__accordion-btn-arrow {
     -webkit-transform: rotate(540deg);
             transform: rotate(540deg); }
@@ -11242,6 +11361,8 @@ input.range-slider__amount {
   .no-touch .additional-info__docs-card:hover,
   .touch .additional-info__docs-card:active {
     color: var(--primary-color); }
+  .low-vision .additional-info__docs-card {
+    color: black !important; }
   @media only screen and (max-width: 680px) {
     .additional-info__docs-card {
       -webkit-box-align: start;
@@ -11274,6 +11395,14 @@ input.range-slider__amount {
     height: 2.8rem;
     -ms-flex-negative: 0;
         flex-shrink: 0; }
+    .low-vision .additional-info__docs-card-icon-container svg {
+      fill: black;
+      width: 3.4rem;
+      height: 3.4rem; }
+      @media only screen and (max-width: 680px) {
+        .low-vision .additional-info__docs-card-icon-container svg {
+          width: 2.4rem;
+          height: 2.4rem; } }
   @media only screen and (max-width: 680px) {
     .additional-info__docs-card-icon-container {
       width: 3.2rem;
@@ -11294,6 +11423,13 @@ input.range-slider__amount {
   font-size: 1.4rem;
   line-height: 146%;
   color: #949494; }
+  .low-vision .additional-info__docs-card-meta-size {
+    color: black;
+    font-size: 1.6rem;
+    font-weight: 500; }
+    @media only screen and (max-width: 680px) {
+      .low-vision .additional-info__docs-card-meta-size {
+        font-size: 1.4rem; } }
   @media only screen and (max-width: 680px) {
     .additional-info__docs-card-meta-size {
       font-size: 1.2rem; } }
@@ -12169,6 +12305,8 @@ input.range-slider__amount {
   -o-object-position: center;
      object-position: center;
   font-family: 'object-fit: cover; object-position: center;'; }
+  .low-vision .open-account__bg-image {
+    display: none; }
 
 .open-account__top-row {
   display: -webkit-box;
@@ -12226,6 +12364,8 @@ input.range-slider__amount {
   font-size: 2.4rem;
   line-height: 130%;
   color: #959595; }
+  .low-vision .open-account__text {
+    color: black; }
   @media only screen and (max-width: 680px) {
     .open-account__text {
       font-size: 1.6rem;
@@ -12272,6 +12412,12 @@ input.range-slider__amount {
     margin-right: 0; }
   .open-account__step.active {
     background: #f5f5f5; }
+  .low-vision .open-account__step {
+    background-color: white;
+    color: black; }
+    .low-vision .open-account__step.active {
+      background-color: black;
+      color: white; }
   @media only screen and (max-width: 680px) {
     .open-account__step {
       width: 3.4rem;
@@ -12340,6 +12486,9 @@ input.range-slider__amount {
   font-size: 1.8rem;
   height: 6.2rem;
   padding: 0 2rem; }
+  .low-vision .open-account__form-input {
+    background-color: white;
+    border: 1px solid black; }
   @media only screen and (max-width: 680px) {
     .open-account__form-input {
       -ms-flex-preferred-size: auto;
@@ -12384,6 +12533,8 @@ input.range-slider__amount {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1; }
+  .low-vision .open-account__form-info-text {
+    font-size: 1.6rem; }
 
 .open-account__form-input-row {
   margin-bottom: 2rem; }
@@ -12394,6 +12545,8 @@ input.range-slider__amount {
   border-radius: 1rem;
   padding: 5.8rem;
   overflow: hidden; }
+  .low-vision .open-account__content {
+    border: 1px solid black; }
   @media only screen and (max-width: 680px) {
     .open-account__content {
       padding: 2.5rem;
@@ -12589,6 +12742,17 @@ input.range-slider__amount {
       color: var(--primary-color); }
     .open-account__btns-login a:hover {
       color: var(--secondary-color); }
+  .low-vision .open-account__btns-login {
+    color: black; }
+    .low-vision .open-account__btns-login a {
+      text-decoration: underline; }
+      .low-vision .open-account__btns-login a:link, .low-vision .open-account__btns-login a:visited {
+        color: black; }
+      .low-vision .open-account__btns-login a:hover {
+        text-decoration: none; }
+    @media only screen and (max-width: 680px) {
+      .low-vision .open-account__btns-login {
+        font-size: 1.6rem; } }
   @media only screen and (max-width: 680px) {
     .open-account__btns-login {
       font-size: 1.4rem; } }
@@ -12619,6 +12783,14 @@ input.range-slider__amount {
   .touch
   .open-account__submit:active {
     background-color: var(--primary-color-hover); }
+  .low-vision .open-account__btns-next-btn, .low-vision
+  .open-account__submit {
+    background-color: black !important;
+    color: white !important; }
+    @media only screen and (max-width: 680px) {
+      .low-vision .open-account__btns-next-btn, .low-vision
+      .open-account__submit {
+        font-size: 1.4rem; } }
   @media only screen and (max-width: 680px) {
     .open-account__btns-next-btn,
     .open-account__submit {
@@ -17458,6 +17630,10 @@ input.range-slider__amount {
   z-index: 1; }
   .announcement__card:link, .announcement__card:visited {
     color: black; }
+  .low-vision .announcement__card {
+    border: 1px solid black;
+    background-color: white;
+    color: black; }
   @media only screen and (max-width: 680px) {
     .announcement__card {
       padding: 2rem;
@@ -17475,6 +17651,8 @@ input.range-slider__amount {
      object-position: center;
   font-family: 'object-fit: cover; object-position: center;';
   z-index: -1; }
+  .low-vision .announcement__card-image {
+    display: none; }
 
 .announcement__card-heading {
   font-weight: 500;
@@ -17512,6 +17690,12 @@ input.range-slider__amount {
       align-self: flex-start; }
   .announcement__btn:hover {
     background-color: var(--primary-color-hover); }
+  .low-vision .announcement__btn {
+    background-color: black !important;
+    color: white; }
+    @media only screen and (max-width: 680px) {
+      .low-vision .announcement__btn {
+        font-size: 1.4rem; } }
   @media only screen and (max-width: 680px) {
     .announcement__btn {
       font-size: 1.2rem;

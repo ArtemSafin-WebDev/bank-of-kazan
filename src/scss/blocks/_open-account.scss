@@ -15,6 +15,11 @@
     height: 100%;
     z-index: -1;
     @include objectFitCover();
+
+
+    .low-vision & {
+        display: none;
+    }
 }
 
 .open-account__top-row {
@@ -62,6 +67,11 @@
     font-size: 2.4rem;
     line-height: 130%;
     color: #959595;
+
+
+    .low-vision & {
+        color: black;
+    }
     @include breakpoint(mobile) {
         font-size: 1.6rem;
         margin-bottom: 2rem;
@@ -93,6 +103,9 @@
     line-height: 130%;
     transition: background-color 0.3s;
 
+
+
+
     &:link,
     &:visited {
         color: #959595;
@@ -103,6 +116,17 @@
 
     &.active {
         background: #f5f5f5;
+    }
+
+
+    .low-vision & {
+        background-color: white;
+        color: black;
+
+        &.active {
+            background-color: black;
+            color: white;
+        }
     }
 
     @include breakpoint(mobile) {
@@ -164,6 +188,13 @@
     font-size: 1.8rem;
     height: 6.2rem;
     padding: 0 2rem;
+
+
+
+    .low-vision & {
+        background-color: white;
+        border: 1px solid black;
+    }
     @include breakpoint(mobile) {
         flex-basis: auto;
         height: 4rem;
@@ -204,6 +235,10 @@
     line-height: 130%;
     flex-basis: 40rem;
     flex-grow: 1;
+
+    .low-vision & {
+        font-size: 1.6rem;
+    }
 }
 
 .open-account__form-input-row {
@@ -216,6 +251,11 @@
     border-radius: 1rem;
     padding: 5.8rem;
     overflow: hidden;
+
+
+    .low-vision & {
+        border: 1px solid black;
+    }
     @include breakpoint(mobile) {
         padding: 2.5rem;
         border-radius: .8rem;
@@ -398,6 +438,27 @@
         }
     }
 
+
+    .low-vision & {
+        color: black;
+
+        a {
+            text-decoration: underline;
+            &:link,
+            &:visited {
+                color: black;
+            }
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+
+        @include breakpoint(mobile) {
+            font-size: 1.6rem;
+        }
+    }
+
     @include breakpoint(mobile) {
         font-size: 1.4rem;
     }
@@ -427,6 +488,15 @@
         background-color: var(--primary-color-hover);
     }
 
+
+    .low-vision & {
+        background-color: black !important;
+        color: white !important;
+
+        @include breakpoint(mobile) {
+            font-size: 1.4rem;
+        }
+    }
 
     @include breakpoint(mobile) {
         padding: 1.6rem 2.2rem;

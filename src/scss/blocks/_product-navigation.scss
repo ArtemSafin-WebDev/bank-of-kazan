@@ -88,7 +88,7 @@
     }
 
     .low-vision & {
-        border-color: black;
+        border-color: black !important;
     }
     @include breakpoint(mobile) {
         padding: 1.8rem 0;
@@ -228,6 +228,11 @@
 
         &.active {
             color: black !important;
+        }
+
+
+        @include breakpoint(mobile) {
+            font-size: 2rem;
         }
     }
 
@@ -557,16 +562,7 @@
         color: white;
     }
 
-    .low-vision & {
-        color: black !important;
-        &.active {
-            text-decoration: underline;
-        }
-
-        &:hover {
-            text-decoration: underline;
-        }
-    }
+  
 
     .product-navigation__card-menu--bank & {
         &:link,
@@ -598,6 +594,23 @@
 
         &:hover {
             color: var(--primary-color);
+        }
+    }
+
+
+    .low-vision & {
+        color: black !important;
+        &.active {
+            text-decoration: underline;
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        @include breakpoint(mobile) {
+            font-size: 1.6rem;
+            line-height: 1.2;
         }
     }
 
@@ -867,6 +880,14 @@
     position: relative;
 }
 
+.product-navigation__card-menu {
+    .low-vision & {
+        @include breakpoint(mobile) {
+            padding-top: 2rem;
+        }
+    }
+}
+
 .product-navigation__card-menu-item {
     z-index: 5;
     position: absolute;
@@ -1111,6 +1132,22 @@
         }
     }
 
+    .low-vision & {
+        color: black !important;
+        svg {
+            fill: black !important;
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        @include breakpoint(mobile) {
+            font-size: 1.6rem;
+            line-height: 1.2;
+        }
+    }
+
     @include breakpoint(mobile) {
         font-size: 1.4rem;
         line-height: 1.2;
@@ -1136,6 +1173,13 @@
     line-height: 130%;
     margin-bottom: 3.6rem;
     max-width: 70rem;
+
+    .low-vision & {
+        @include breakpoint(mobile) {
+            font-size: 1.6rem;
+            line-height: 1.3;
+        }
+    }
 
     @include breakpoint(mobile) {
         font-size: 1.4rem;
@@ -1171,6 +1215,16 @@
 
     &:hover {
         background-color: var(--primary-color-hover);
+    }
+
+
+    .low-vision & {
+        color: white !important;
+        background-color: black !important;
+
+        @include breakpoint(mobile) {
+            font-size: 1.2rem;
+        }
     }
 
     @include breakpoint(mobile) {
@@ -1284,6 +1338,17 @@
         background-color: var(--primary-color);
     }
 
+    .low-vision & {
+        color: white !important;
+        background-color: black !important;
+        border-color: black !important;
+
+        @include breakpoint(mobile) {
+            font-size: 1.2rem;
+            padding: 1rem 1rem;
+        }
+    }
+
     @include breakpoint(mobile) {
         font-weight: 500;
         font-size: 1rem;
@@ -1294,7 +1359,7 @@
         padding: 0.8rem 1rem;
 
         margin-right: 1.2rem;
-
+        margin-right: 0;
         svg {
             width: 2rem;
             height: 2rem;
