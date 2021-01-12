@@ -85,48 +85,64 @@ function init() {
     var mainMapData = [
         {
             type: 'offices',
+            cash: true,
+            allDay: false,
             coords: [55.831082, 49.079644],
             content:
                 '<div class="offices__balloon-inner"><button class="offices__balloon-close"><svg width="20" height="20" aria-hidden="true" class="icon-cross"> <use xlink:href="#cross"/> </svg> </button> <div class="offices__balloon-inner-row"><h5>Адрес</h5><p><strong>Казань, улица Декабристов, д.183</strong></p><p>ДО "Декабристов"</p></div><div class="offices__balloon-inner-row"> <h5>Время работы</h5> <table> <tr> <th><strong>Понедельник - пятница</strong></th> <td>09:00 до 19:00</td></tr><tr> <th><strong>Суббота</strong></th> <td>10:00 до 15:00</td></tr></table> </div><div class="offices__balloon-inner-row"><h5>Функционал</h5> <div class="offices__balloon-features"> <img src="img/features-1.svg" class="offices__balloon-features-icon"/><img src="img/features-2.svg" class="offices__balloon-features-icon"/></div></div></div>'
         },
         {
             type: 'offices',
+            cash: true,
+            allDay: true,
             coords: [55.815159, 49.101276],
             content:
                 '<div class="offices__balloon-inner"> <button class="offices__balloon-close"> <svg width="20" height="20" aria-hidden="true" class="icon-cross"> <use xlink:href="#cross"/> </svg> </button> <div class="offices__balloon-inner-row"> <h5>Адрес</h5> <p><strong>Казань, улица Декабристов, д.183</strong></p><p>ДО "Декабристов"</p></div><div class="offices__balloon-inner-row"> <h5>Время работы</h5> <table> <tr> <th><strong>Понедельник - пятница</strong></th> <td>09:00 до 19:00</td></tr><tr> <th><strong>Суббота</strong></th> <td>10:00 до 15:00</td></tr></table> </div><div class="offices__balloon-inner-row"> <h5>Функционал</h5> <div class="offices__balloon-features"> <img src="img/features-1.svg" class="offices__balloon-features-icon"/> <img src="img/features-2.svg" class="offices__balloon-features-icon"/> </div></div></div>'
         },
         {
             type: 'offices',
+            cash: false,
+            allDay: true,
             coords: [55.812957, 49.183735],
             content:
                 '<div class="offices__balloon-inner"> <button class="offices__balloon-close"> <svg width="20" height="20" aria-hidden="true" class="icon-cross"> <use xlink:href="#cross"/> </svg> </button> <div class="offices__balloon-inner-row"> <h5>Адрес</h5> <p><strong>Казань, улица Декабристов, д.183</strong></p><p>ДО "Декабристов"</p></div><div class="offices__balloon-inner-row"> <h5>Время работы</h5> <table> <tr> <th><strong>Понедельник - пятница</strong></th> <td>09:00 до 19:00</td></tr><tr> <th><strong>Суббота</strong></th> <td>10:00 до 15:00</td></tr></table> </div><div class="offices__balloon-inner-row"> <h5>Функционал</h5> <div class="offices__balloon-features"> <img src="img/features-1.svg" class="offices__balloon-features-icon"/> <img src="img/features-2.svg" class="offices__balloon-features-icon"/> </div></div></div>'
         },
         {
             type: 'offices',
+            cash: false,
+            allDay: true,
             coords: [55.79474, 49.114071],
             content:
                 '<div class="offices__balloon-inner"> <button class="offices__balloon-close"> <svg width="20" height="20" aria-hidden="true" class="icon-cross"> <use xlink:href="#cross"/> </svg> </button> <div class="offices__balloon-inner-row"> <h5>Адрес</h5> <p><strong>Казань, улица Декабристов, д.183</strong></p><p>ДО "Декабристов"</p></div><div class="offices__balloon-inner-row"> <h5>Время работы</h5> <table> <tr> <th><strong>Понедельник - пятница</strong></th> <td>09:00 до 19:00</td></tr><tr> <th><strong>Суббота</strong></th> <td>10:00 до 15:00</td></tr></table> </div><div class="offices__balloon-inner-row"> <h5>Функционал</h5> <div class="offices__balloon-features"> <img src="img/features-1.svg" class="offices__balloon-features-icon"/> <img src="img/features-2.svg" class="offices__balloon-features-icon"/> <img src="img/features-1.svg" class="offices__balloon-features-icon"/> <img src="img/features-2.svg" class="offices__balloon-features-icon"/> </div></div></div>'
         },
         {
             type: 'bankomats',
+            cash: false,
+            allDay: false,
             coords: [55.833308, 49.132141],
             content:
                 '<div class="offices__balloon-inner"> <button class="offices__balloon-close"> <svg width="20" height="20" aria-hidden="true" class="icon-cross"> <use xlink:href="#cross"/> </svg> </button> <div class="offices__balloon-inner-row"> <h5>Адрес</h5> <p><strong>Казань, улица Декабристов, д.183</strong></p><p>ДО "Декабристов"</p></div><div class="offices__balloon-inner-row"> <h5>Время работы</h5> <table> <tr> <th><strong>Понедельник - пятница</strong></th> <td>09:00 до 19:00</td></tr><tr> <th><strong>Суббота</strong></th> <td>10:00 до 15:00</td></tr></table> </div><div class="offices__balloon-inner-row"> <h5>Функционал</h5> <div class="offices__balloon-features"> <img src="img/features-1.svg" class="offices__balloon-features-icon"/> <img src="img/features-2.svg" class="offices__balloon-features-icon"/> </div></div></div>'
         },
         {
             type: 'bankomats',
+            cash: true,
+            allDay: false,
             coords: [55.776266, 49.140724],
             content:
                 '<div class="offices__balloon-inner"> <button class="offices__balloon-close"> <svg width="20" height="20" aria-hidden="true" class="icon-cross"> <use xlink:href="#cross"/> </svg> </button> <div class="offices__balloon-inner-row"> <h5>Адрес</h5> <p><strong>Казань, улица Декабристов, д.183</strong></p><p>ДО "Декабристов"</p></div><div class="offices__balloon-inner-row"> <h5>Время работы</h5> <table> <tr> <th><strong>Понедельник - пятница</strong></th> <td>09:00 до 19:00</td></tr><tr> <th><strong>Суббота</strong></th> <td>10:00 до 15:00</td></tr></table> </div><div class="offices__balloon-inner-row"> <h5>Функционал</h5> <div class="offices__balloon-features"> <img src="img/features-1.svg" class="offices__balloon-features-icon"/> <img src="img/features-2.svg" class="offices__balloon-features-icon"/> <img src="img/features-1.svg" class="offices__balloon-features-icon"/> </div></div></div>'
         },
         {
             type: 'partners',
+            cash: false,
+            allDay: false,
             coords: [55.748973, 49.104675],
             content:
                 '<div class="offices__balloon-inner"> <button class="offices__balloon-close"> <svg width="20" height="20" aria-hidden="true" class="icon-cross"> <use xlink:href="#cross"/> </svg> </button> <div class="offices__balloon-inner-row"> <h5>Адрес</h5> <p><strong>Казань, улица Декабристов, д.183</strong></p><p>ДО "Декабристов"</p></div><div class="offices__balloon-inner-row"> <h5>Время работы</h5> <table> <tr> <th><strong>Понедельник - пятница</strong></th> <td>09:00 до 19:00</td></tr><tr> <th><strong>Суббота</strong></th> <td>10:00 до 15:00</td></tr></table> </div><div class="offices__balloon-inner-row"> <h5>Функционал</h5> <div class="offices__balloon-features"> <img src="img/features-1.svg" class="offices__balloon-features-icon"/> <img src="img/features-2.svg" class="offices__balloon-features-icon"/> </div></div></div>'
         },
         {
             type: 'terminals',
+            cash: true,
+            allDay: true,
             coords: [55.744519, 49.218315],
             content:
                 '<div class="offices__balloon-inner"> <button class="offices__balloon-close"> <svg width="20" height="20" aria-hidden="true" class="icon-cross"> <use xlink:href="#cross"/> </svg> </button> <div class="offices__balloon-inner-row"> <h5>Адрес</h5> <p><strong>Казань, улица Декабристов, д.183</strong></p><p>ДО "Декабристов"</p></div><div class="offices__balloon-inner-row"> <h5>Время работы</h5> <table> <tr> <th><strong>Понедельник - пятница</strong></th> <td>09:00 до 19:00</td></tr><tr> <th><strong>Суббота</strong></th> <td>10:00 до 15:00</td></tr></table> </div><div class="offices__balloon-inner-row"> <h5>Функционал</h5> <div class="offices__balloon-features"> <img src="img/features-1.svg" class="offices__balloon-features-icon"/> <img src="img/features-2.svg" class="offices__balloon-features-icon"/> </div></div></div>'
@@ -149,26 +165,76 @@ function init() {
     });
     map.geoObjects.add(objectManager);
 
+
+    var allDayCheckbox = document.querySelector('.catalog__filters-checkmarks-input[name="allday"]');
+    var cashCheckbox = document.querySelector('.catalog__filters-checkmarks-input[name="cash"]');
+
+
+    var regimeCheckboxes = [allDayCheckbox, cashCheckbox]
+
     var filterObjects = function filterObjects() {
+
         if (allCheckbox.checked) {
-            var filterString = '';
-            objectManager.setFilter(filterString);
-        } else {
-            var activeCheckboxes = [];
-            checkboxes.map(function(checkbox) {
-                if (checkbox.checked) {
-                    activeCheckboxes.push('properties.type == "'.concat(checkbox.name, '"'));
+            objectManager.setFilter(function(object) {
+                // console.log({
+                //     allDayCheckbox: allDayCheckbox.checked,
+                //     cashCheckbox: cashCheckbox.checked,
+                //     object,
+                //     allDay: object.properties.allDay,
+                //     cash: object.properties.cash
+                // })
+                if (allDayCheckbox.checked && !object.properties.allDay) {
+                    return false;
                 }
-            });
-
-            var _filterString = activeCheckboxes.length ? activeCheckboxes.join(' || ') : "properties.type == 'none'";
-
-            objectManager.setFilter(_filterString);
+                if (cashCheckbox.checked && !object.properties.cash) {
+                    return false;
+                }
+                return true;
+            })
+        } else {
+            objectManager.setFilter(function(object) {
+                var activeCheckboxesNames = checkboxes
+                .filter(function(checkbox) {
+                    return checkbox.checked;
+                })
+                .map(function(checkbox) {
+                    return checkbox.name;
+                });
+                if (activeCheckboxesNames.includes(object.properties.type)) {
+                    if (allDayCheckbox.checked && !object.properties.allDay) {
+                        return false;
+                    }
+                    if (cashCheckbox.checked && !object.properties.cash) {
+                        return false;
+                    }
+                    return true;
+                } else {
+                    return false;
+                }
+            })
         }
     };
 
+    var filterAccordions = function() {
+        var accordions = Array.prototype.slice.call(document.querySelectorAll('.offices__list-view-accordion'));
+
+        accordions.forEach(function(accordion) {
+            if (allDayCheckbox.checked && !accordion.hasAttribute('data-allday')) {
+                accordion.classList.add('hidden');
+                return;
+            }
+            if (cashCheckbox.checked && !accordion.hasAttribute('data-cash')) {
+                accordion.classList.add('hidden');
+                return;
+            }
+            accordion.classList.remove('hidden');
+        });
+
+        console.log('Filtered accordions', accordions)
+    }
+
     var filterListViewItems = function filterListViewItems() {
-        var items = Array.from(document.querySelectorAll('.offices__list-view-group'));
+        var items = Array.prototype.slice.call(document.querySelectorAll('.offices__list-view-group'));
 
         if (allCheckbox.checked) {
             items.forEach(function(item) {
@@ -196,6 +262,7 @@ function init() {
 
     filterObjects();
     filterListViewItems();
+    filterAccordions();
     console.log('Hello', checkboxes);
 
     var handleChange = function handleChange(event) {
@@ -224,12 +291,21 @@ function init() {
 
         filterObjects();
         filterListViewItems();
+        filterAccordions();
     };
 
     checkboxes.forEach(function(element) {
         return element.addEventListener('change', handleChange);
     });
     allCheckbox.addEventListener('change', handleChange);
+
+
+    regimeCheckboxes.forEach(function(checkbox) {
+        if (checkbox) {
+            checkbox.addEventListener('change', handleChange)
+        }
+       
+    })
     mainMapData.forEach(function(item) {
         var objectToAdd = {
             id: item.coords.join('-'),
@@ -241,6 +317,8 @@ function init() {
             options: _objectSpread({}, mapPinImages[item.type]),
             properties: {
                 type: item.type,
+                allDay: item.allDay,
+                cash: item.cash,
                 balloonContent: item.content
             }
         };
@@ -279,10 +357,11 @@ function init() {
         ymaps.geocode(suggestion.value).then(
             function(res) {
                 var firstGeoObject = res.geoObjects.get(0);
-                var coords = firstGeoObject.geometry.getCoordinates(); // console.log(`Geocoding result for ${suggestion.value}`, {
-                //     firstGeoObject,
-                //     coords
-                // })
+                var coords = firstGeoObject.geometry.getCoordinates();
+                console.log(`Geocoding result for ${suggestion.value}`, {
+                    firstGeoObject,
+                    coords
+                });
 
                 map.setCenter(coords, 15);
             },
@@ -292,4 +371,3 @@ function init() {
         );
     });
 }
-
