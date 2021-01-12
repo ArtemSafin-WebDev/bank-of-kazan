@@ -38,6 +38,10 @@
     color: #888888;
     line-height: 130%;
     margin-right: 3.3rem;
+
+    .low-vision & {
+        color: black;
+    }
     @include breakpoint(mobile) {
         font-size: 1.4rem;
         margin-right: 2rem;
@@ -47,6 +51,10 @@
 .asv__insurance-image {
     width: 10rem;
     height: auto;
+
+    .low-vision & {
+        filter: grayscale(100%);
+    }
     @include breakpoint(mobile) {
         width: 5rem;
     }

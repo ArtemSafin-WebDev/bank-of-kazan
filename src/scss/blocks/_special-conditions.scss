@@ -33,6 +33,10 @@
     border-top: 2px solid var(--primary-color);
     padding-top: 2.4rem;
 
+    .low-vision & {
+        border-color: black;
+    }
+
     @include breakpoint(mobile) {
         padding-top: 1.8rem;
         
@@ -104,6 +108,19 @@
         color: var(--primary-color);
     }
 
+
+    .low-vision & {
+        color: black;
+        font-size: 2rem;
+        text-decoration: underline;
+        &:hover {
+            text-decoration: none;
+        }
+
+        @include breakpoint(mobile) {
+            font-size: 1.6rem;
+        }
+    }
 
     @include breakpoint(mobile) {
         margin-bottom: 1rem;

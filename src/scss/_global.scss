@@ -19,12 +19,14 @@
     --helvetica: 'Open Sans', 'HelveticaNeueCyr', 'Roboto', sans-serif;
     // --helvetica: 'HelveticaNeueCyr', 'Roboto', sans-serif;
 
-
+    
   
     @include breakpoint(mobile) {
         --content-padding: 3rem;
     }
 }
+
+
 
 html {
     box-sizing: border-box;

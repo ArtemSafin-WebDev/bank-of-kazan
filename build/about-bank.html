@@ -2074,7 +2074,10 @@
 
 
 
-                    newApplicationForm.sendCode = function() {
+                   
+
+                    if (newApplicationForm) {
+                        newApplicationForm.sendCode = function() {
                         return new Promise((resolve, reject) => {
                             setTimeout(function() {
                                 if ($('.js-new-application-form input.js-phone-input').parsley().isValid()) {
@@ -2087,21 +2090,19 @@
                                 }
                             }, 500)
                         })
-                    }
+                        }
 
-                    newApplicationForm.validateCode = function(code) {
-                        return new Promise((resolve, reject) => {
-                            setTimeout(function() {
-                                if (code === '937362') {
-                                    resolve(true);
-                                } else {
-                                    reject(false);
-                                }
-                            }, 500)
-                        })
-                    }
-
-                    if (newApplicationForm) {
+                        newApplicationForm.validateCode = function(code) {
+                            return new Promise((resolve, reject) => {
+                                setTimeout(function() {
+                                    if (code === '937362') {
+                                        resolve(true);
+                                    } else {
+                                        reject(false);
+                                    }
+                                }, 500)
+                            })
+                        }
                         var success = document.querySelector('.form-success');
                         newApplicationForm.addEventListener('submit', function(event) {
                             event.preventDefault();

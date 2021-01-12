@@ -633,6 +633,10 @@
             color: black;
         }
 
+        &.active {
+            text-decoration: underline;
+        }
+
         &:hover {
             text-decoration: underline;
         }

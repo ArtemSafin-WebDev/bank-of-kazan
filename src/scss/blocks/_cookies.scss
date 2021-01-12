@@ -37,11 +37,21 @@
     top: 0;
     margin-left: .8rem;
 
+    .low-vision & {
+        margin-left: 0.6rem;
+    }
+
     svg {
         fill: var(--primary-color);
         transition: fill .2s;
         width: 1.4rem;
         height: 1.4rem;
+
+        .low-vision & {
+            width: 2rem;
+            height: 2rem;
+            fill: black;
+        }
     }
 
     &:hover {

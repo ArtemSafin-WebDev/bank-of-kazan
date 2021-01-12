@@ -19,6 +19,11 @@
         background-color: #fff;
     }
 
+    .low-vision & {
+        background-color: white !important;
+        color: black !important;
+    }
+
     @include breakpoint(mobile) {
         min-height: auto;
         padding-bottom: 3rem;
@@ -46,6 +51,10 @@
         height: 100%;
         background-color: black;
         opacity: var(--product-overlay-opacity, 0);
+    }
+
+    .low-vision & {
+        display: none;
     }
 }
 
@@ -76,6 +85,10 @@
 
     .dark-nav-text:not(.product-nav-menu-open):not(.bank-menu-shown) & {
         border-color: var(--primary-color);
+    }
+
+    .low-vision & {
+        border-color: black;
     }
     @include breakpoint(mobile) {
         padding: 1.8rem 0;
@@ -112,6 +125,10 @@
         }
     }
 
+    .low-vision & {
+        filter: grayscale(100%) brightness(0);
+    }
+
     @include breakpoint(mobile) {
         width: 15.5rem;
     }
@@ -128,6 +145,10 @@
     z-index: 100;
     .dark-nav-text:not(.product-nav-menu-open):not(.bank-menu-shown) & {
         border-color: rgba(#b4b4b4, 0.5);
+    }
+
+    .low-vision & {
+        border-color: black !important;
     }
     @include breakpoint(mobile) {
         margin-top: 1rem;
@@ -188,14 +209,25 @@
     }
 
     .dark-nav-text:not(.product-nav-menu-open):not(.bank-menu-shown) & {
-        color: rgba(black, .3);
+        color: rgba(black, 0.3);
         &.active {
             color: black;
         }
 
-
         &:not(.active):hover {
-            color: rgba(black, .5);
+            color: rgba(black, 0.5);
+        }
+    }
+
+    .low-vision & {
+        color: rgba(black, 0.5) !important;
+        &:link,
+        &:visited {
+            color: rgba(black, 0.5) !important;
+        }
+
+        &.active {
+            color: black !important;
         }
     }
 
@@ -286,12 +318,17 @@
         }
     }
 
+    .low-vision & {
+        @include placeholder {
+            color: rgba(black, 0.3);
+        }
+    }
+
     @include breakpoint(mobile) {
         font-size: 1.8rem;
         line-height: 1.2;
     }
 }
-
 
 .product-navigation__search-submit-btn {
     margin-right: 3rem;
@@ -313,6 +350,10 @@
 
         .dark-nav-text:not(.product-nav-menu-open):not(.bank-menu-shown) & {
             fill: var(--primary-color);
+        }
+
+        .low-vision & {
+            fill: black !important;
         }
 
         @include breakpoint(mobile) {
@@ -340,7 +381,6 @@
         transition: opacity 0.2s, visibility 0s linear 0.2s;
     }
 }
-
 
 .product-navigation__search-close-btn svg {
     width: 2.5rem;
@@ -442,6 +482,10 @@
             fill: black;
         }
 
+        .low-vision & {
+            fill: black !important;
+        }
+
         @include breakpoint(mobile) {
             width: 2rem;
             height: 2rem;
@@ -490,16 +534,13 @@
 }
 
 .product-navigation__card-menu-link {
-    
     transition: color 0.2s;
     margin-bottom: 2rem;
-
 
     font-weight: 500;
     font-size: 2.2rem;
     line-height: 140%;
 
-    
     &:last-child {
         margin-bottom: 0;
     }
@@ -514,6 +555,17 @@
 
     &.active {
         color: white;
+    }
+
+    .low-vision & {
+        color: black !important;
+        &.active {
+            text-decoration: underline;
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
     }
 
     .product-navigation__card-menu--bank & {
@@ -533,9 +585,8 @@
             }
         }
 
-
         &:not(.active):hover {
-            color: rgba(black, .5);
+            color: rgba(black, 0.5);
         }
     }
 
@@ -580,6 +631,11 @@
         flex-shrink: 0;
         margin-right: 1.5rem;
         transition: fill 0.2s;
+
+
+        .low-vision & {
+            fill: black !important;
+        }
     }
 
     .no-touch &:hover,
@@ -608,6 +664,15 @@
 
         svg {
             fill: var(--primary-color);
+        }
+    }
+
+
+    .low-vision & {
+        color: black !important;
+
+        &:hover {
+            text-decoration: underline;
         }
     }
 
@@ -684,6 +749,11 @@
     .dark-nav-text:not(.product-nav-menu-open):not(.bank-menu-shown) & {
         background-color: #fff;
     }
+
+    .low-vision & {
+        background: transparent;
+        border: 2px solid black;
+    }
     @include breakpoint(mobile) {
         padding: 1.5rem;
     }
@@ -708,6 +778,10 @@
     flex-shrink: 0;
     margin-left: 2rem;
     @include objectFitContain();
+
+    .low-vision & {
+        filter: grayscale(100%) brightness(0);
+    }
 
     @include breakpoint(mobile) {
         width: 1.8rem;
@@ -752,8 +826,8 @@
     margin-right: 1.8rem;
     display: inline-flex;
     user-select: none;
-    transition: background-color .2s;
-   
+    transition: background-color 0.2s;
+
     &:link,
     &:visited {
         color: white;
@@ -763,12 +837,17 @@
         background-color: var(--primary-color-hover);
     }
 
-
     &--violet {
         background-color: var(--secondary-color);
         &:hover {
             background-color: var(--secondary-color-hover);
         }
+    }
+
+
+    .low-vision & {
+        background-color: black !important;
+        color: white;
     }
 
     @include breakpoint(mobile) {
@@ -868,9 +947,8 @@
     color: rgba(white, 0.5);
     margin-bottom: 1.5rem;
 
-
     a {
-        transition: color .2s;
+        transition: color 0.2s;
         &:link,
         &:visited {
             color: inherit;
@@ -883,6 +961,11 @@
 
     .dark-nav-text:not(.product-nav-menu-open):not(.bank-menu-shown) & {
         color: rgba(black, 0.5);
+    }
+
+
+    .low-vision & {
+        color: black !important;
     }
     @include breakpoint(mobile) {
         font-size: 0.9rem;
@@ -903,9 +986,7 @@
 }
 
 .product-navigation__card-menu-item-link {
- 
     transition: color 0.2s;
-
 
     font-weight: 500;
     font-size: 2.9rem;
@@ -928,6 +1009,19 @@
         color: white;
     }
 
+
+    .low-vision & {
+        color: black !important;
+
+        &.active {
+            text-decoration: underline;
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
     @include breakpoint(mobile) {
         font-size: 1.3rem;
         line-height: 80%;
@@ -937,8 +1031,6 @@
 .product-navigation__card-menu-item-link-block {
     margin-bottom: 4rem;
 
-
-  
     &:last-child {
         margin-bottom: 0;
     }
@@ -967,6 +1059,11 @@
     .product-nav-menu-open & {
         transform: translateZ(0) scaleX(1);
         transition: transform 0.8s ease-out;
+    }
+
+
+    .low-vision & {
+        background-color: white !important;
     }
 }
 
@@ -1052,7 +1149,6 @@
     display: flex;
     align-items: center;
     @include breakpoint(mobile) {
-       
         margin-bottom: 3rem;
     }
 }
@@ -1067,7 +1163,7 @@
     text-transform: uppercase;
     margin-right: 3.6rem;
     color: white;
-    transition: background-color .2s;
+    transition: background-color 0.2s;
     &:link,
     &:visited {
         color: white;
@@ -1087,7 +1183,6 @@
         padding: 1.4rem 1.5rem;
 
         margin-right: 1.2rem;
-       
     }
 }
 
@@ -1169,7 +1264,7 @@
     padding: 1.8rem 3.2rem;
     border: 1px solid var(--primary-color);
     border-radius: 1rem;
-    transition: color .2s, border-color .2s, background-color .2s;
+    transition: color 0.2s, border-color 0.2s, background-color 0.2s;
     svg {
         width: 2.4rem;
         height: 2.4rem;
@@ -1186,9 +1281,8 @@
     &:hover {
         color: white;
         border-color: var(--primary-color);
-        background-color: var(--primary-color)
+        background-color: var(--primary-color);
     }
-
 
     @include breakpoint(mobile) {
         font-weight: 500;
@@ -1197,10 +1291,9 @@
         line-height: 120%;
         margin-right: auto;
         border-radius: 0.8rem;
-        padding: .8rem 1rem;
+        padding: 0.8rem 1rem;
 
         margin-right: 1.2rem;
-        
 
         svg {
             width: 2rem;

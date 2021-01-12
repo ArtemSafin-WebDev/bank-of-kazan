@@ -13,6 +13,13 @@
     padding: 7rem 0;
     padding-bottom: 8.4rem;
 
+
+    .low-vision & {
+        background: white;
+        border: 2px solid black;
+        color: black;
+    }
+
     @include breakpoint(mobile) {
         padding: 2.5rem 2rem;
     }
@@ -57,7 +64,9 @@
     flex-direction: column;
 
 
-
+    .low-vision & {
+        border-color: black;
+    }
     
     @include breakpoint(mobile) {
         width: 100%;
@@ -146,6 +155,10 @@
    
     color: #ffffff;
     margin-bottom: 2rem;
+
+    .low-vision & {
+        color: black;
+    }
 }
 
 .calculate-credit__card-total-card-key {
@@ -167,6 +180,10 @@
     font-size: 1.5rem;
     line-height: 130%;
     color: #c7aecf;
+
+    .low-vision & {
+        color: black;
+    }
     @include breakpoint(mobile) {
         font-size: 1.2rem;
         line-height: 130%;
@@ -209,10 +226,9 @@
         }
     }
 
-    // .no-touch &:hover,
-    // .touch &:active {
-    //     background-color: var(--secondary-color);
-    // }
+    .low-vision & {
+        background-color: black !important;
+    }
 
     @include breakpoint(mobile) {
         font-weight: 500;
@@ -239,6 +255,10 @@
     font-size: 1.5rem;
     line-height: 130%;
     color: #c7aecf;
+
+    .low-vision & {
+        color: black;
+    }
 
     @include breakpoint(mobile) {
         font-size: 1.2rem;
