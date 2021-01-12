@@ -358,10 +358,7 @@ function init() {
             function(res) {
                 var firstGeoObject = res.geoObjects.get(0);
                 var coords = firstGeoObject.geometry.getCoordinates();
-                console.log(`Geocoding result for ${suggestion.value}`, {
-                    firstGeoObject,
-                    coords
-                });
+              
 
                 map.setCenter(coords, 15);
             },
