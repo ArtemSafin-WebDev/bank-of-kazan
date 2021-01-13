@@ -54,6 +54,21 @@
         }
     }
 
+
+    .low-vision & {
+        color: black !important;
+        @include breakpoint(mobile) {
+            font-size: 1.6rem;
+        }
+        svg {
+            fill: black !important;
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
     @include breakpoint(mobile) {
         font-size: 1.4rem;
         margin-bottom: 2rem;
@@ -91,6 +106,14 @@
     &--light {
         font-weight: 400;
     }
+
+    .low-vision & {
+        color: black !important;
+
+        @include breakpoint(mobile) {
+            font-size: 1.8rem;
+        }
+    }
     @include breakpoint(mobile) {
         font-size: 1.6rem;
         margin-bottom: 2rem;
@@ -127,8 +150,15 @@
 .article__content {
     font-size: 2rem;
     line-height: 1.4;
+
+
+    
     @include breakpoint(mobile) {
         font-size: 1.4rem;
+
+        .low-vision & {
+            font-size: 1.6rem;
+        }
     }
     & > * {
         &:first-child {
@@ -205,6 +235,10 @@
                 color: var(--secondary-color);
             }
 
+            .low-vision & {
+                color: black !important;
+            }
+
             &:hover,
             &:active {
                 text-decoration: none;
@@ -213,6 +247,10 @@
     }
 
     figure {
+
+        .low-vision & {
+            display: none;
+        }
         img {
             border-radius: 1rem;
             display: block;
@@ -239,6 +277,11 @@
         width: 100%;
         height: auto;
         margin-bottom: 3rem;
+
+
+        .low-vision & {
+            display: none;
+        }
     }
 
     table,
@@ -277,6 +320,14 @@
                 height: 0.8rem;
                 background-color: var(--primary-color);
                 border-radius: 50%;
+
+
+                .low-vision & {
+                    background-color: black;
+                    @include breakpoint(mobile) {
+                        top: 7.4px;
+                    }
+                }
                 @include breakpoint(mobile) {
                     width: 6px;
                     height: 6px;
@@ -308,6 +359,14 @@
                 line-height: 130%;
                 color: #95bf0a;
                 top: .1rem;
+
+                .low-vision & {
+                    color: black;
+
+                    @include breakpoint(mobile) {
+                        top: .1rem;
+                    }
+                }
                 @include breakpoint(mobile) {
                     font-size: 1.5rem;
                     top: 0;
@@ -322,6 +381,11 @@
             align-items: baseline;
             border-bottom: 1px solid rgba(#c8c8c8, 0.5);
             padding: 2.2rem 0;
+
+
+            .low-vision & {
+                border-color: black;
+            }
             &:last-child {
                 border-bottom: none;
             }
@@ -336,6 +400,9 @@
 
         thead tr {
             border-bottom: 1px solid rgba(#c8c8c8, 0.5) !important;
+            .low-vision & {
+                border-color: black !important;
+            }
             @include breakpoint(mobile) {
                 display: none;
             }
@@ -357,6 +424,17 @@
             color: #717171;
             width: 38rem;
             flex-shrink: 0;
+
+
+            .low-vision & {
+                font-size: 1.6rem;
+                color: black;
+
+                @include breakpoint(mobile) {
+                    font-size: 1.8rem;
+                    font-weight: 400;
+                }
+            }
             @include breakpoint(mobile) {
                 width: 100%;
                 flex-shrink: 1;
@@ -478,6 +556,15 @@
             margin-top: 1rem;
             margin-bottom: 1rem;
             font-weight: 400;
+
+            .low-vision & {
+                color: black;
+                font-size: 1.8rem;
+
+                @include breakpoint(mobile) {
+                    font-size: 1.6rem;
+                }
+            }
             &:first-child {
                 margin-top: 0;
             }
@@ -817,6 +904,14 @@
     margin-bottom: 5.2rem;
     display: block;
 
+    .low-vision & {
+        color: black;
+        font-size: 2rem;
+        @include breakpoint(mobile) {
+            font-size: 1.6rem;
+        }
+    }
+
     @include breakpoint(mobile) {
         font-size: 1.2rem;
         margin-bottom: 2rem;
@@ -832,6 +927,10 @@
     align-items: baseline;
     justify-content: space-between;
 
+    .low-vision & {
+        border-color: black;
+    }
+
     @include breakpoint(mobile) {
         padding: 2rem 0;
         margin-top: 3rem;
@@ -844,6 +943,15 @@
     color: #a5a5a5;
     line-height: 130%;
     margin-right: 3rem;
+
+    .low-vision & {
+        color: black;
+        font-size: 1.8rem;
+
+        @include breakpoint(mobile) {
+            font-size: 1.4rem;
+        }
+    }
 
     @include breakpoint(mobile) {
         font-size: 1.2rem;
@@ -861,6 +969,15 @@
     line-height: 130%;
     color: #a5a5a5;
     margin-right: 1.5rem;
+
+    .low-vision & {
+        color: black;
+        font-size: 1.8rem;
+
+        @include breakpoint(mobile) {
+            font-size: 1.4rem;
+        }
+    }
 
     @include breakpoint(mobile) {
         font-size: 1.2rem;
@@ -881,6 +998,10 @@
     &:last-child {
         margin-right: 0;
     }
+
+    @include breakpoint(mobile) {
+        margin-right: .8rem;
+    }
 }
 
 
@@ -896,6 +1017,10 @@
     position: relative;
     z-index: 1;
     transition: color .2s;
+
+    .low-vision & {
+        color: white !important;
+    }
     &::before { 
         content: '';
         position: absolute;
@@ -908,6 +1033,12 @@
         z-index: -1;
         border-radius: .8rem;
         pointer-events: none;
+
+
+        .low-vision & {
+            opacity: 1;
+            background: black !important;
+        }
     }
 
 
@@ -953,8 +1084,8 @@
 
 
     @include breakpoint(mobile) {
-        width: 2.4rem;
-        height: 2.4rem;
+        width: 2.8rem;
+        height: 2.8rem;
         border-radius: .8rem;
         svg {
             width: 1.8rem;

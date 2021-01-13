@@ -55,6 +55,13 @@
             transform: translateZ(0) scale(1.02);
         }
     }
+
+
+    .low-vision & {
+        padding: 2rem;
+        border: 1px solid black;
+        border-radius: 1rem;
+    }
 }
 
 .similar-news__slider-card-image-container {
@@ -67,6 +74,10 @@
         display: block;
         width: 100%;
         padding-bottom: 65%;
+    }
+
+    .low-vision & {
+        display: none;
     }
 
 
@@ -97,6 +108,10 @@
     @include breakpoint(mobile) {
         font-size: 1.4rem;
         margin-bottom: 1rem;
+
+        .low-vision & {
+            font-size: 1.8rem;
+        }
     }
 }
 
@@ -104,6 +119,11 @@
     font-size: 1.5rem;
     line-height: 1.3;
     color: #a5a5a5;
+
+    .low-vision & {
+        font-size: 1.8rem;
+        color: black;
+    }
 
     @include breakpoint(mobile) {
         font-size: 1.2rem;
@@ -143,6 +163,13 @@
         svg {
             margin-left: 0.4rem;
         }
+    }
+
+    .low-vision & {
+        background-color: black !important;
+        margin-top: 0;
+        transform: translateY(-50%);
+        
     }
 
     &.swiper-button-disabled {

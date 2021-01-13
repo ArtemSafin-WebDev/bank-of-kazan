@@ -102,6 +102,16 @@
         }
     }
 
+
+    .low-vision & {
+        color: black !important;
+
+        &:hover,
+        &.active {
+            text-decoration: underline;
+        }
+    }
+
     @include breakpoint(mobile) {
         font-size: 1.3rem;
         line-height: 1.3;

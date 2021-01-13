@@ -43,6 +43,16 @@
         }
     }
 
+
+    .low-vision & {
+        background: black !important;
+        color: white !important;
+
+        svg {
+            fill: white !important;
+        }
+    }
+
     @include breakpoint(mobile) {
         width: 4rem;
         height: 4rem;
@@ -121,6 +131,22 @@
     &:hover {
         background-color: var(--primary-color);
         color: white;
+
+
+        
+    }
+
+    .low-vision & {
+        background: transparent !important;
+        border: 1px solid black !important;
+        color: black !important;
+
+       
+    }
+
+    .low-vision .pagination__list-item.active & {
+        background: black !important;
+        color: white !important;
     }
 
     @include breakpoint(mobile) {

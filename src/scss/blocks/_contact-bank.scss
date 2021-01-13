@@ -35,6 +35,11 @@
             display: block;
         }
     }
+
+
+    .low-vision & {
+        display: none;
+    }
 }
 
 
@@ -52,6 +57,11 @@
     align-items: flex-start;
     padding-top: 7.5rem;
     padding-bottom: 9rem;
+
+    .low-vision & {
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+    }
     @include breakpoint(mobile) {
         flex-direction: column;
         align-items: initial;
@@ -190,6 +200,16 @@
     }
 
 
+    .low-vision & {
+        border: 1px solid black;
+        color: black; 
+
+        @include placeholder {
+            color: rgba(black, .6);
+        }
+    }
+
+
     @include breakpoint(mobile) {
         font-size: 16px;
         height: 5.2rem;
@@ -223,6 +243,12 @@
 
     &:hover {
         background-color: var(--primary-color-hover);
+    }
+
+
+    .low-vision & {
+        background-color: black !important;
+        color: white !important;
     }
 
 

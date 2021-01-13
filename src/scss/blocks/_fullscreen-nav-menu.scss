@@ -10,6 +10,11 @@
     transform: translateZ(0) scaleX(0);
     transition: transform 0.5s;
 
+
+    .low-vision & {
+        background: white !important;
+    }
+
     .product-nav-menu-open & {
         transform: translateZ(0) scaleX(1);
         transition: transform 0.8s ease-out;
