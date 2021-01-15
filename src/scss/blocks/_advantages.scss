@@ -49,6 +49,12 @@
         color: black;
     }
 
+
+    .low-vision & {
+        background: white;
+        border: 1px solid black;
+    }
+
     @include breakpoint(mobile) {
         padding: 2rem;
     }
@@ -98,6 +104,13 @@
         fill: var(--primary-color);
     }
 
+    .low-vision & {
+        background-color: black;
+        svg {
+            fill: white;
+        }
+    }
+
    
 }
 
@@ -126,4 +139,8 @@
     width: 100%;
     height: 100%;
     @include objectFitContain();
+
+    .low-vision & {
+        filter: grayscale(100%) brightness(0);
+    }
 }

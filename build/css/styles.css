@@ -15967,6 +15967,10 @@ input.range-slider__amount {
   overflow: hidden;
   -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
           box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05); }
+  .low-vision .application__form {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    border: 1px solid black; }
   @media only screen and (max-width: 680px) {
     .application__form {
       padding: 2.5rem 2rem;
@@ -16017,7 +16021,9 @@ input.range-slider__amount {
     .application__form-progress-bar {
       background: linear-gradient(250.44deg, #9546aa 14.49%, #d98bed 129.54%);
       -webkit-clip-path: polygon(0% 0%, var(--progress, 0%) 0%, var(--progress, 0%) 100%, 0% 100%);
-              clip-path: polygon(0% 0%, var(--progress, 0%) 0%, var(--progress, 0%) 100%, 0% 100%); } }
+              clip-path: polygon(0% 0%, var(--progress, 0%) 0%, var(--progress, 0%) 100%, 0% 100%); }
+      .low-vision .application__form-progress-bar {
+        background: #c2c2c2; } }
   .application__form-progress-bar::after {
     content: '';
     position: absolute;
@@ -16030,6 +16036,9 @@ input.range-slider__amount {
     background-repeat: repeat-x;
     background-position: left center;
     display: none; }
+    .low-vision .application__form-progress-bar::after {
+      -webkit-filter: grayscale(100%);
+              filter: grayscale(100%); }
     @supports (display: grid) {
       .application__form-progress-bar::after {
         display: block; } }
@@ -16101,6 +16110,8 @@ input.range-slider__amount {
     opacity: 0;
     -webkit-transition: opacity 0.2s;
     transition: opacity 0.2s; }
+    .low-vision .application__form-input-wrapper .icon-success {
+      fill: black; }
     @media only screen and (max-width: 680px) {
       .application__form-input-wrapper .icon-success {
         width: 1.8rem;
@@ -16110,6 +16121,9 @@ input.range-slider__amount {
     color: var(--primary-color);
     font-size: 1.2rem;
     color: #ff6969; }
+    .low-vision .application__form-input-wrapper .parsley-errors-list {
+      font-size: 1.6rem;
+      color: black; }
   .application__form-input-wrapper .parsley-errors-list.filled {
     margin-top: 0.5rem; }
   .application__form-input-wrapper .range-slider__element-wrapper {
@@ -16149,6 +16163,9 @@ input.range-slider__amount {
       opacity: 1; }
   .application__form-input.parsley-error {
     border-color: #ff6969; }
+  .low-vision .application__form-input {
+    border-color: black;
+    background-color: #fff; }
   .application__form-input::-webkit-input-placeholder {
     color: #b8b8b8; }
   .application__form-input:-moz-placeholder {
@@ -16183,6 +16200,9 @@ input.range-slider__amount {
     margin: 0; }
   .application__form-submit:hover {
     background-color: var(--primary-color-hover); }
+  .low-vision .application__form-submit {
+    background-color: black;
+    color: white; }
   @media only screen and (max-width: 680px) {
     .application__form-submit {
       font-size: 1.4rem;
@@ -16478,6 +16498,8 @@ input.range-slider__amount {
   line-height: 120%;
   margin-bottom: 3rem;
   color: #aaaaaa; }
+  .low-vision .application__form-steps-numbers {
+    color: black; }
   @media only screen and (max-width: 680px) {
     .application__form-steps-numbers {
       margin-bottom: 1.8rem;
@@ -16498,6 +16520,11 @@ input.range-slider__amount {
   margin-bottom: 6rem; }
   .application__form-use-account:link, .application__form-use-account:visited {
     color: white; }
+  .low-vision .application__form-use-account {
+    color: black !important;
+    background: white;
+    background-image: none;
+    border: 1px solid black; }
   @media only screen and (max-width: 680px) {
     .application__form-use-account {
       margin-bottom: 3rem;
@@ -16565,6 +16592,9 @@ input.range-slider__amount {
   width: 100%;
   height: auto;
   margin-bottom: 3.4rem; }
+  .low-vision .application__form-use-account-logo {
+    -webkit-filter: grayscale(100%) brightness(0);
+            filter: grayscale(100%) brightness(0); }
   @media only screen and (max-width: 680px) {
     .application__form-use-account-logo {
       margin-bottom: 2rem;
@@ -16588,6 +16618,9 @@ input.range-slider__amount {
     color: #0065b2; }
   .application__form-use-account-link:hover {
     color: black; }
+  .low-vision .application__form-use-account-link {
+    background-color: black !important;
+    color: white !important; }
   @media only screen and (max-width: 680px) {
     .application__form-use-account-link {
       font-size: 1.4rem;
@@ -16664,6 +16697,8 @@ input.range-slider__amount {
     fill: currentColor; }
   .application__form-back-btn:hover {
     color: var(--primary-color-hover); }
+  .low-vision .application__form-back-btn {
+    color: black !important; }
   @media only screen and (max-width: 680px) {
     .application__form-back-btn {
       font-size: 1.4rem; }
@@ -16762,6 +16797,8 @@ input.range-slider__amount {
     fill: #808080;
     -webkit-transition: fill 0.2s;
     transition: fill 0.2s; }
+    .low-vision .application__form-inner-tabs-checkbox-text svg {
+      fill: black; }
   @media only screen and (max-width: 680px) {
     .application__form-inner-tabs-checkbox-text {
       font-weight: 500;
@@ -16776,6 +16813,11 @@ input.range-slider__amount {
   color: var(--primary-color); }
   .application__form-inner-tabs-checkbox-input:checked ~ .application__form-inner-tabs-checkbox-text svg {
     fill: var(--primary-color); }
+  .low-vision .application__form-inner-tabs-checkbox-input:checked ~ .application__form-inner-tabs-checkbox-text {
+    background: black !important;
+    color: white !important; }
+    .low-vision .application__form-inner-tabs-checkbox-input:checked ~ .application__form-inner-tabs-checkbox-text svg {
+      fill: black !important; }
 
 .application__form-file-upload {
   margin-bottom: 4rem; }
@@ -16811,6 +16853,9 @@ input.range-slider__amount {
   transition: border-color 0.2s; }
   .application__form-file-upload-dropzone.dragged-over {
     border-color: var(--primary-color); }
+  .low-vision .application__form-file-upload-dropzone {
+    border-color: black !important;
+    background: white; }
   @media only screen and (max-width: 680px) {
     .application__form-file-upload-dropzone {
       font-size: 1.6rem;
@@ -16915,6 +16960,9 @@ input.range-slider__amount {
   font-size: 1rem;
   line-height: 130%;
   color: #717171; }
+  .low-vision .application__form-file-upload-message-format {
+    color: black !important;
+    font-size: 1.4rem; }
   .application__form-file-upload-message-format p {
     margin-bottom: 0.8rem; }
     .application__form-file-upload-message-format p:last-child {
@@ -17002,6 +17050,10 @@ input.range-slider__amount {
   padding-top: 4rem;
   border-radius: 1rem;
   margin-bottom: 4rem; }
+  .low-vision .application__form-data {
+    background: white;
+    color: black;
+    border: 1px solid black; }
   @media only screen and (max-width: 680px) {
     .application__form-data {
       padding: 1.8rem;
@@ -17016,6 +17068,8 @@ input.range-slider__amount {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
+  .low-vision .application__form-data-block {
+    border-color: black; }
   .application__form-data-block:last-child {
     margin-bottom: 0;
     padding: 0;
@@ -17082,6 +17136,9 @@ input.range-slider__amount {
     color: var(--primary-color);
     font-size: 1.2rem;
     color: #ff6969; }
+    .low-vision .application__form-data-block-input-wrapper .parsley-errors-list {
+      color: black;
+      font-size: 1.6rem; }
   .application__form-data-block-input-wrapper .parsley-errors-list.filled {
     margin-top: 0.5rem; }
 
@@ -17099,6 +17156,8 @@ input.range-slider__amount {
   border: 1px solid transparent; }
   .application__form-data-block-input.parsley-error {
     border-color: #ff6969; }
+  .low-vision .application__form-data-block-input {
+    border-color: black !important; }
   .application__form-data-block-input::-webkit-input-placeholder {
     color: rgba(255, 255, 255, 0); }
   .application__form-data-block-input:-moz-placeholder {
@@ -17129,7 +17188,15 @@ input.range-slider__amount {
         opacity: 0;
         -ms-transition: inherit;
         transition: inherit;
-        color: #b7b7b7; } }
+        color: #b7b7b7; }
+      .low-vision .application__form-data-block-input::-webkit-input-placeholder {
+        color: black; }
+      .low-vision .application__form-data-block-input:-moz-placeholder {
+        color: black; }
+      .low-vision .application__form-data-block-input::-moz-placeholder {
+        color: black; }
+      .low-vision .application__form-data-block-input:-ms-input-placeholder {
+        color: black; } }
   .application__form-data-block-input:focus::-webkit-input-placeholder {
     opacity: 1; }
   .application__form-data-block-input:focus:-moz-placeholder {
@@ -17172,6 +17239,8 @@ input.range-slider__amount {
   -webkit-box-ordinal-group: 0;
       -ms-flex-order: -1;
           order: -1; }
+  .low-vision .application__form-data-block-label {
+    color: black !important; }
   @supports (display: grid) {
     .application__form-data-block-label {
       display: block;
@@ -17181,7 +17250,9 @@ input.range-slider__amount {
       margin-bottom: 0;
       color: #b7b7b7;
       font-size: 1.4rem;
-      line-height: 130%; } }
+      line-height: 130%; }
+      .low-vision .application__form-data-block-label {
+        color: black !important; } }
   @media only screen and (max-width: 680px) {
     .application__form-data-block-label {
       font-size: 14px;
@@ -17297,6 +17368,10 @@ input.range-slider__amount {
     -webkit-transition: opacity 0.2s;
     transition: opacity 0.2s;
     opacity: 0; }
+  .low-vision .application__form-data-checkbox-mark {
+    border: 1px solid black; }
+    .low-vision .application__form-data-checkbox-mark svg {
+      fill: black; }
 
 .application__form-data-checkbox-input {
   border: 0;
@@ -17315,6 +17390,8 @@ input.range-slider__amount {
   line-height: 130%;
   color: #959595;
   width: 100%; }
+  .low-vision .application__form-data-checkbox-text {
+    color: black; }
   @media only screen and (max-width: 680px) {
     .application__form-data-checkbox-text {
       font-size: 1.2rem; } }
@@ -17398,6 +17475,8 @@ input.range-slider__amount {
     background-color: #94c22b;
     pointer-events: none;
     top: 2.8rem; }
+    .low-vision .application__steps-card::before {
+      background-color: black; }
   @media only screen and (max-width: 680px) {
     .application__steps-card {
       padding: 0; }
@@ -17429,6 +17508,9 @@ input.range-slider__amount {
   line-height: 120%;
   color: #94c22b;
   border-radius: 50%; }
+  .low-vision .application__steps-card-number {
+    border-color: black;
+    color: black; }
   @media only screen and (max-width: 680px) {
     .application__steps-card-number {
       width: 4.2rem;
@@ -17467,6 +17549,9 @@ input.range-slider__amount {
   border-radius: 1rem;
   padding: 2.7rem 4rem;
   margin-bottom: 5rem; }
+  .low-vision .application__completion {
+    background: transparent;
+    border: 1px solid black; }
   @media only screen and (max-width: 680px) {
     .application__completion {
       border-radius: 0.8rem;
@@ -17479,6 +17564,8 @@ input.range-slider__amount {
   line-height: 130%;
   margin-right: 2.5rem;
   color: var(--primary-color); }
+  .low-vision .application__completion-amount {
+    color: black; }
   @media only screen and (max-width: 680px) {
     .application__completion-amount {
       font-size: 3rem;
@@ -17510,6 +17597,9 @@ input.range-slider__amount {
       align-self: flex-start; }
   .application__form-get-code:hover {
     background-color: var(--primary-color-hover); }
+  .low-vision .application__form-get-code {
+    background-color: black;
+    color: white; }
   @media only screen and (max-width: 680px) {
     .application__form-get-code {
       font-size: 1rem;
@@ -17536,6 +17626,8 @@ input.range-slider__amount {
   height: 6.2rem;
   -webkit-transition: border-color 0.2s;
   transition: border-color 0.2s; }
+  .low-vision .application__form-code-input-wrapper {
+    border-color: black; }
   .application__form-code-input-wrapper.code-error {
     border-color: #ff6969; }
   @media only screen and (max-width: 680px) {
@@ -17618,12 +17710,20 @@ input.range-slider__amount {
   font-size: 1.4rem;
   line-height: 130%;
   color: #808080; }
+  .low-vision .application__form-code-code-message {
+    font-size: 1.6rem;
+    color: black; }
   .application__form-code-code-message a {
     color: var(--primary-color); }
     .application__form-code-code-message a:link, .application__form-code-code-message a:visited {
       color: var(--primary-color); }
     .application__form-code-code-message a:hover {
       color: var(--primary-color-hover); }
+    .low-vision .application__form-code-code-message a {
+      color: black !important;
+      text-decoration: underline; }
+      .low-vision .application__form-code-code-message a:hover {
+        text-decoration: none; }
   @media only screen and (max-width: 680px) {
     .application__form-code-code-message {
       font-size: 1.2rem;
@@ -17688,6 +17788,9 @@ input.range-slider__amount {
     z-index: -1; }
   .advantages__card:link, .advantages__card:visited {
     color: black; }
+  .low-vision .advantages__card {
+    background: white;
+    border: 1px solid black; }
   @media only screen and (max-width: 680px) {
     .advantages__card {
       padding: 2rem; } }
@@ -17745,6 +17848,10 @@ input.range-slider__amount {
     width: 0.9rem;
     height: 1.4rem;
     fill: var(--primary-color); }
+  .low-vision .advantages__card-btns-arrow {
+    background-color: black; }
+    .low-vision .advantages__card-btns-arrow svg {
+      fill: white; }
 
 .advantages__card-btns-icon-container {
   width: 5.4rem;
@@ -17771,6 +17878,9 @@ input.range-slider__amount {
   -o-object-position: center;
      object-position: center;
   font-family: 'object-fit: contain; object-position: center;'; }
+  .low-vision .advantages__card-btns-icon {
+    -webkit-filter: grayscale(100%) brightness(0);
+            filter: grayscale(100%) brightness(0); }
 
 .announcement {
   padding: 8rem 0;
@@ -21214,6 +21324,11 @@ input.range-slider__amount {
   width: 71rem;
   -webkit-box-shadow: 0 0.8rem 6rem -0.9rem rgba(0, 0, 0, 0.12);
           box-shadow: 0 0.8rem 6rem -0.9rem rgba(0, 0, 0, 0.12); }
+  .low-vision .success__card {
+    border: 1px solid black;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    width: 50rem; }
   @media only screen and (max-width: 680px) {
     .success__card {
       width: 100%;
@@ -21234,6 +21349,8 @@ input.range-slider__amount {
     display: block; }
   .success__card-close:hover {
     color: black; }
+  .low-vision .success__card-close {
+    color: black !important; }
   @media only screen and (max-width: 680px) {
     .success__card-close {
       left: auto;
@@ -21249,6 +21366,8 @@ input.range-slider__amount {
     display: block;
     width: 100%;
     padding-bottom: 100%; }
+  .low-vision .success__card-image-container {
+    display: none; }
   @media only screen and (max-width: 680px) {
     .success__card-image-container {
       width: 8rem;
@@ -21297,6 +21416,10 @@ input.range-slider__amount {
         width: 1.6rem;
         height: 1.6rem;
         position: static; } }
+  .low-vision .success__card-heading {
+    color: black !important; }
+    .low-vision .success__card-heading svg {
+      fill: black !important; }
   @media only screen and (max-width: 680px) {
     .success__card-heading {
       font-size: 1.8rem;
@@ -21314,6 +21437,12 @@ input.range-slider__amount {
   color: #585858;
   margin-bottom: 3.2rem;
   max-width: 34rem; }
+  .low-vision .success__card-text {
+    color: black;
+    font-size: 1.8rem; }
+    @media only screen and (max-width: 680px) {
+      .low-vision .success__card-text {
+        font-size: 1.6rem; } }
   @media only screen and (max-width: 680px) {
     .success__card-text {
       max-width: none;
@@ -21347,6 +21476,8 @@ input.range-slider__amount {
     color: white; }
   .success__card-back-link:hover {
     background-color: var(--primary-color-hover); }
+  .low-vision .success__card-back-link {
+    background-color: black !important; }
   @media only screen and (max-width: 680px) {
     .success__card-back-link {
       font-size: 1.2rem;
@@ -21363,6 +21494,8 @@ input.range-slider__amount {
     color: var(--primary-color); }
   .success__card-news-link:hover {
     color: var(--primary-color-hover); }
+  .low-vision .success__card-news-link {
+    color: black !important; }
   @media only screen and (max-width: 680px) {
     .success__card-news-link {
       font-size: 1.2rem; } }
