@@ -9262,20 +9262,15 @@ input.range-slider__amount {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 3rem;
-  padding-bottom: 7rem;
+  margin-bottom: 7rem;
   overflow: hidden;
   position: relative;
-  z-index: 100; }
-  .product-navigation__categories::before {
-    content: '';
-    bottom: 7rem;
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    background-color: rgba(255, 255, 255, 0.5); }
-  .dark-nav-text:not(.product-nav-menu-open):not(.bank-menu-shown) .product-navigation__categories::before {
-    background-color: rgba(180, 180, 180, 0.5); }
+  z-index: 100;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  -webkit-transition: border-color 0.2s;
+  transition: border-color 0.2s; }
+  .dark-nav-text:not(.product-nav-menu-open):not(.bank-menu-shown) .product-navigation__categories {
+    border-color: rgba(180, 180, 180, 0.5); }
   .low-vision .product-navigation__categories {
     border-color: black !important; }
     .low-vision .product-navigation__categories::before {
