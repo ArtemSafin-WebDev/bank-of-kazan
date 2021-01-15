@@ -90,11 +90,7 @@
         @supports (display: grid) {
             display: block;
         }
-
-
     }
-
- 
 }
 
 .application__form-fields {
@@ -1072,7 +1068,11 @@
     font-weight: 500;
     font-size: 2rem;
     line-height: 130%;
-    padding-top: 1.9rem;
+    
+
+    @supports (display: grid) {
+        padding-top: 1.9rem;
+    }
     @include breakpoint(mobile) {
         font-size: 1.8rem;
         padding-top: 0;
@@ -1082,6 +1082,11 @@
 
 .application__form-data-block-input-wrapper {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    @supports (display: grid) {
+        display: block;
+    }
 
     .parsley-errors-list {
         color: var(--primary-color);
@@ -1110,9 +1115,8 @@
         border-color: #ff6969;
     }
 
-
     @include placeholder {
-        color: #b7b7b7;
+        color: rgba(white, 0);
     }
 
     @supports (display: grid) {
@@ -1139,12 +1143,10 @@
 }
 
 .application__form-data-block-label {
-    font-size: 1.4rem;
-    color: #b7b7b7;
+    font-size: 1.5rem;
+
     line-height: 130%;
-    position: absolute;
-    top: 2.3rem;
-    left: 2.4rem;
+
     transition: transform 0.2s;
     transform-origin: left top;
     white-space: nowrap;
@@ -1155,10 +1157,20 @@
     transition: all 0.2s;
     cursor: pointer;
     user-select: none;
-    display: none;
+    color: #959595;
+    margin-bottom: 1.5rem;
+    order: -1;
 
     @supports (display: grid) {
         display: block;
+        position: absolute;
+        top: 2.3rem;
+        left: 2.4rem;
+        margin-bottom: 0;
+        color: #b7b7b7;
+        font-size: 1.4rem;
+
+        line-height: 130%;
     }
 
     @include breakpoint(mobile) {
@@ -1196,6 +1208,7 @@
 .application__form-data-block-col {
     padding: 0 2.5rem;
     flex-grow: 1;
+    width: 100%;
     &--quarter {
         width: 23rem;
         flex-shrink: 0;
@@ -1223,6 +1236,7 @@
     align-items: flex-start;
     cursor: pointer;
     user-select: none;
+    width: 100%;
 }
 
 .application__form-data-checkbox-mark {
@@ -1251,13 +1265,14 @@
 }
 
 .application__form-data-checkbox-text {
-    width: 50%;
-    flex-grow: 1;
+    // width: 50%;
+    // flex-grow: 1;
     padding-top: 0.3rem;
     font-size: 1.4rem;
     line-height: 130%;
     color: #959595;
-
+  
+    width: 100%;
     @include breakpoint(mobile) {
         font-size: 1.2rem;
     }
@@ -1273,7 +1288,7 @@
     color: black;
     margin-bottom: 1.1rem;
     display: block;
-
+    width: 100%;
     @include breakpoint(mobile) {
         font-size: 1.6rem;
         line-height: 1.2;

@@ -17056,8 +17056,10 @@ input.range-slider__amount {
 .application__form-data-block-heading {
   font-weight: 500;
   font-size: 2rem;
-  line-height: 130%;
-  padding-top: 1.9rem; }
+  line-height: 130%; }
+  @supports (display: grid) {
+    .application__form-data-block-heading {
+      padding-top: 1.9rem; } }
   @media only screen and (max-width: 680px) {
     .application__form-data-block-heading {
       font-size: 1.8rem;
@@ -17065,7 +17067,17 @@ input.range-slider__amount {
       margin-bottom: 2rem; } }
 
 .application__form-data-block-input-wrapper {
-  position: relative; }
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  @supports (display: grid) {
+    .application__form-data-block-input-wrapper {
+      display: block; } }
   .application__form-data-block-input-wrapper .parsley-errors-list {
     color: var(--primary-color);
     font-size: 1.2rem;
@@ -17088,13 +17100,13 @@ input.range-slider__amount {
   .application__form-data-block-input.parsley-error {
     border-color: #ff6969; }
   .application__form-data-block-input::-webkit-input-placeholder {
-    color: #b7b7b7; }
+    color: rgba(255, 255, 255, 0); }
   .application__form-data-block-input:-moz-placeholder {
-    color: #b7b7b7; }
+    color: rgba(255, 255, 255, 0); }
   .application__form-data-block-input::-moz-placeholder {
-    color: #b7b7b7; }
+    color: rgba(255, 255, 255, 0); }
   .application__form-data-block-input:-ms-input-placeholder {
-    color: #b7b7b7; }
+    color: rgba(255, 255, 255, 0); }
   @supports (display: grid) {
     .application__form-data-block-input {
       padding-top: 1.6rem; }
@@ -17134,12 +17146,8 @@ input.range-slider__amount {
       padding-top: 20px; } }
 
 .application__form-data-block-label {
-  font-size: 1.4rem;
-  color: #b7b7b7;
+  font-size: 1.5rem;
   line-height: 130%;
-  position: absolute;
-  top: 2.3rem;
-  left: 2.4rem;
   -webkit-transition: -webkit-transform 0.2s;
   transition: -webkit-transform 0.2s;
   transition: transform 0.2s;
@@ -17159,10 +17167,21 @@ input.range-slider__amount {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  display: none; }
+  color: #959595;
+  margin-bottom: 1.5rem;
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1; }
   @supports (display: grid) {
     .application__form-data-block-label {
-      display: block; } }
+      display: block;
+      position: absolute;
+      top: 2.3rem;
+      left: 2.4rem;
+      margin-bottom: 0;
+      color: #b7b7b7;
+      font-size: 1.4rem;
+      line-height: 130%; } }
   @media only screen and (max-width: 680px) {
     .application__form-data-block-label {
       font-size: 14px;
@@ -17209,7 +17228,8 @@ input.range-slider__amount {
   padding: 0 2.5rem;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
-          flex-grow: 1; }
+          flex-grow: 1;
+  width: 100%; }
   .application__form-data-block-col--quarter {
     width: 23rem;
     -ms-flex-negative: 0;
@@ -17246,7 +17266,8 @@ input.range-slider__amount {
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
-          user-select: none; }
+          user-select: none;
+  width: 100%; }
 
 .application__form-data-checkbox-mark {
   width: 2.2rem;
@@ -17289,14 +17310,11 @@ input.range-slider__amount {
   white-space: nowrap; }
 
 .application__form-data-checkbox-text {
-  width: 50%;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
   padding-top: 0.3rem;
   font-size: 1.4rem;
   line-height: 130%;
-  color: #959595; }
+  color: #959595;
+  width: 100%; }
   @media only screen and (max-width: 680px) {
     .application__form-data-checkbox-text {
       font-size: 1.2rem; } }
@@ -17309,7 +17327,8 @@ input.range-slider__amount {
   line-height: 1;
   color: black;
   margin-bottom: 1.1rem;
-  display: block; }
+  display: block;
+  width: 100%; }
   @media only screen and (max-width: 680px) {
     .application__form-data-checkbox-text-black {
       font-size: 1.6rem;
