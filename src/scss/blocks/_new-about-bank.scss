@@ -19,6 +19,15 @@
         flex-grow: 1;
     }
 
+
+    .low-vision & {
+        color: black;
+        background-color: #fff;
+       
+        padding-bottom: 5rem;
+        min-height: auto;
+    }
+
     @include breakpoint(mobile) {
         padding: 3rem 0;
         min-height: 44rem;
@@ -34,6 +43,11 @@
     height: 130%;
 
     z-index: -1;
+
+
+    .low-vision & {
+        display: none;
+    }
     img {
         display: block;
         width: 100%;
@@ -170,6 +184,11 @@
         padding-bottom: 120%;
     }
 
+
+    .low-vision & {
+        display: none;
+    }
+
     @include breakpoint(mobile) {
         border-radius: 1rem;
         max-width: none;
@@ -235,6 +254,11 @@
     flex-shrink: 0;
     margin-bottom: 3.4rem;
 
+
+    .low-vision & {
+        filter: grayscale(100%) brightness(0);
+    }
+
     @include breakpoint(mobile) {
         width: 3rem;
         height: 3rem;
@@ -247,6 +271,15 @@
     font-size: 1.8rem;
     line-height: 100%;
     margin-bottom: 1.6rem;
+
+
+    .low-vision & {
+        font-size: 2rem;
+
+        @include breakpoint(mobile) {
+            font-size: 1.8rem;
+        }
+    }
 
    
 
@@ -307,6 +340,10 @@
     line-height: 2rem;
     color: rgba(#8a8a8a, 0.8);
 
+    .low-vision & {
+        color: black;
+    }
+
     @include breakpoint(mobile) {
         font-size: 1.4rem;
         line-height: 1.2;
@@ -323,7 +360,10 @@
     display: flex;
     flex-direction: column;
 
-
+    .low-vision & {
+        background-color: white !important;
+        color: black !important;
+    }
     &--dark-text {
         color: black;
 
@@ -333,10 +373,19 @@
 
         .new-about-bank-products__list-item {
             border-color: rgba(#BDBDBD, .5);
+
+
+            .low-vision & {
+                border-color: black;
+            }
         }
 
         .new-about-bank-products__accordion-btn svg {
             fill: rgba(black, .6);
+
+            .low-vision & {
+                fill: black;
+            }
         }
     }
 
@@ -368,6 +417,10 @@
         top: 0;
         width: 100%;
         height: 100%;
+    }
+
+    .low-vision & {
+        display: none;
     }
 }
 
@@ -534,6 +587,10 @@
                 left: 0;
                 top: .8rem;
                 position: absolute;
+
+                .low-vision & {
+                    background-color: #000;
+                }
 
                 @include breakpoint(mobile) {
                     width: 0.6rem;

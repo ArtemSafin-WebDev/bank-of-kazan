@@ -1465,6 +1465,14 @@ img.lazyload:not([src]) {
   color: white;
   background-color: var(--primary-color); }
 
+.low-vision ::-moz-selection {
+  color: white;
+  background-color: black; }
+
+.low-vision ::selection {
+  color: white;
+  background-color: black; }
+
 .barba-leave-active,
 .barba-enter-active {
   -webkit-transition: opacity 800ms ease;
@@ -3433,8 +3441,8 @@ img.lazyload:not([src]) {
     background: #ecf3dc;
     color: var(--primary-color); }
     .low-vision .tabs-nav__link.active, .low-vision .tabs-nav__link:hover {
-      background: black;
-      color: white; }
+      background: black !important;
+      color: white !important; }
   .tabs-nav--light .tabs-nav__link {
     color: white; }
     .tabs-nav--light .tabs-nav__link.active, .tabs-nav--light .tabs-nav__link:hover {
@@ -4052,6 +4060,8 @@ input.range-slider__amount {
   background-size: 66px 116px;
   background-repeat: repeat;
   background-position: center; }
+  .low-vision .error {
+    background-image: none; }
   @media only screen and (max-width: 680px) {
     .error {
       background-size: 33px 58px; } }
@@ -4065,6 +4075,10 @@ input.range-slider__amount {
   max-width: 63rem;
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem; }
+  .low-vision .error__card {
+    background-color: white;
+    color: black;
+    border: 1px solid black; }
   @media only screen and (max-width: 680px) {
     .error__card {
       padding: 2rem;
@@ -4085,6 +4099,9 @@ input.range-slider__amount {
   display: block;
   width: 20rem;
   height: auto; }
+  .low-vision .error__card-logo-image {
+    -webkit-filter: grayscale(100%) brightness(0);
+            filter: grayscale(100%) brightness(0); }
   @media only screen and (max-width: 680px) {
     .error__card-logo-image {
       width: 18rem; } }
@@ -4146,6 +4163,8 @@ input.range-slider__amount {
     color: white; }
   .error__card-nav-link:hover {
     color: var(--primary-color); }
+  .low-vision .error__card-nav-link {
+    color: black !important; }
   .error__card-nav-link::after {
     content: '';
     top: 100%;
@@ -8093,6 +8112,8 @@ input.range-slider__amount {
   overflow: hidden; }
   .calculator__select-currency-radio .calculator__select-currency-radio-content {
     border-left: 1px solid #e0e0e0; }
+    .low-vision .calculator__select-currency-radio .calculator__select-currency-radio-content {
+      border-color: black; }
   .calculator__select-currency-radio:last-child {
     border-top-right-radius: 0.4rem;
     border-bottom-right-radius: 0.4rem; }
@@ -8123,6 +8144,8 @@ input.range-slider__amount {
   background: #f5f5f5;
   -webkit-transition: background-color 0.2s, color 0.2s, border-color 0.2s;
   transition: background-color 0.2s, color 0.2s, border-color 0.2s; }
+  .low-vision .calculator__select-currency-radio-content {
+    background-color: white; }
 
 .calculator__select-currency-radio-input {
   border: 0;
@@ -8138,6 +8161,9 @@ input.range-slider__amount {
 .calculator__select-currency-radio-input:checked ~ .calculator__select-currency-radio-content {
   background-color: var(--primary-color);
   color: white; }
+  .low-vision .calculator__select-currency-radio-input:checked ~ .calculator__select-currency-radio-content {
+    background-color: black;
+    color: white; }
 
 .calculator__apply-for-card {
   display: -webkit-box;
@@ -11989,6 +12015,12 @@ input.range-slider__amount {
     line-height: 120%;
     color: #a5a5a5;
     max-width: none; }
+    .low-vision .article__info-table p {
+      color: black;
+      font-size: 1.8rem; }
+      @media only screen and (max-width: 680px) {
+        .low-vision .article__info-table p {
+          font-size: 1.6rem; } }
     @media only screen and (max-width: 680px) {
       .article__info-table p {
         margin: 1.5rem 0;
@@ -13467,6 +13499,11 @@ input.range-slider__amount {
   border-radius: 1.5rem;
   -webkit-box-shadow: 0px 5rem 9rem -6rem rgba(33, 33, 33, 0.52);
           box-shadow: 0px 5rem 9rem -6rem rgba(33, 33, 33, 0.52); }
+  .low-vision .catalog__cards-image {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    -webkit-filter: grayscale(100%);
+            filter: grayscale(100%); }
   @media only screen and (max-width: 680px) {
     .catalog__cards-image {
       -webkit-box-shadow: none;
@@ -13567,6 +13604,9 @@ input.range-slider__amount {
   line-height: 120%;
   color: #808080;
   font-weight: 400; }
+  .low-vision .catalog__cards-block-features-item-value {
+    color: black;
+    font-size: 1.8rem; }
   @media only screen and (max-width: 680px) {
     .catalog__cards-block-features-item-value {
       font-size: 1.4rem; } }
@@ -13602,6 +13642,9 @@ input.range-slider__amount {
     color: white; }
   .catalog__cards-block-btn-link-filled:hover {
     background-color: var(--primary-color-hover); }
+  .low-vision .catalog__cards-block-btn-link-filled {
+    background-color: black !important;
+    color: white !important; }
   @media only screen and (max-width: 680px) {
     .catalog__cards-block-btn-link-filled {
       padding: 1.6rem 2rem;
@@ -13619,6 +13662,12 @@ input.range-slider__amount {
     color: var(--primary-color); }
   .catalog__cards-block-btn-link:hover {
     color: var(--primary-color-hover); }
+  .low-vision .catalog__cards-block-btn-link {
+    color: black !important;
+    font-size: 1.8rem; }
+    @media only screen and (max-width: 680px) {
+      .low-vision .catalog__cards-block-btn-link {
+        font-size: 1.4rem; } }
   @media only screen and (max-width: 680px) {
     .catalog__cards-block-btn-link {
       font-size: 1.2rem; } }
@@ -13659,6 +13708,9 @@ input.range-slider__amount {
     -o-object-position: center;
        object-position: center;
     font-family: 'object-fit: cover; object-position: center;'; }
+    .low-vision .catalog__lots-card-slider-card img {
+      -webkit-filter: grayscale(100%);
+              filter: grayscale(100%); }
 
 .catalog__lots-card-slider {
   margin-bottom: 3rem; }
@@ -13672,8 +13724,16 @@ input.range-slider__amount {
     -webkit-transition: background-color 0.2s;
     transition: background-color 0.2s;
     outline: none !important; }
+    .low-vision .catalog__lots-card-slider .swiper-pagination-bullet {
+      border: 1px solid black;
+      width: 1rem;
+      height: 1rem;
+      margin: 0 1rem !important;
+      background-color: #fff; }
   .catalog__lots-card-slider .swiper-pagination-bullet-active {
     background-color: var(--primary-color); }
+    .low-vision .catalog__lots-card-slider .swiper-pagination-bullet-active {
+      background-color: #000; }
   @media only screen and (max-width: 680px) {
     .catalog__lots-card-slider {
       margin-bottom: 1.5rem; } }
@@ -13735,6 +13795,11 @@ input.range-slider__amount {
             transform: translate(-50%, -50%);
     -webkit-transition: fill 0.2s;
     transition: fill 0.2s; }
+  .low-vision .catalog__lots-card-slider-arrow {
+    background-color: black !important;
+    color: white !important; }
+    .low-vision .catalog__lots-card-slider-arrow svg {
+      fill: white !important; }
   @media only screen and (max-width: 680px) {
     .catalog__lots-card-slider-arrow {
       display: none; } }
@@ -13774,6 +13839,8 @@ input.range-slider__amount {
   margin-left: 4.5rem;
   padding-left: 4.5rem;
   border-left: 0.3rem solid var(--primary-color); }
+  .low-vision .catalog__lots-card-right-col {
+    border-color: black; }
   @media only screen and (max-width: 680px) {
     .catalog__lots-card-right-col {
       width: 100%;
@@ -13804,6 +13871,8 @@ input.range-slider__amount {
   line-height: 130%;
   color: #959595;
   margin-bottom: 2.5rem; }
+  .low-vision .catalog__lots-card-description {
+    color: black; }
   @media only screen and (max-width: 680px) {
     .catalog__lots-card-description {
       font-size: 1.6rem;
@@ -13840,6 +13909,9 @@ input.range-slider__amount {
   line-height: 130%;
   color: #a5a5a5;
   margin-bottom: 0.5rem; }
+  .low-vision .catalog__lots-card-info-key {
+    color: black;
+    font-size: 1.8rem; }
   @media only screen and (max-width: 680px) {
     .catalog__lots-card-info-key {
       font-size: 1.4rem; } }
@@ -13899,6 +13971,9 @@ input.range-slider__amount {
     color: white; }
   .catalog__lots-call-link:hover {
     background-color: var(--primary-color-hover); }
+  .low-vision .catalog__lots-call-link {
+    background-color: black !important;
+    color: white !important; }
   @media only screen and (max-width: 680px) {
     .catalog__lots-call-link {
       font-size: 1.2rem;
@@ -13927,6 +14002,10 @@ input.range-slider__amount {
     margin-bottom: 0.2rem;
     -webkit-transition: fill 0.2s;
     transition: fill 0.2s; }
+    .low-vision .catalog__filters-reset svg {
+      width: 1.8rem;
+      height: 1.8rem;
+      fill: black; }
   @media only screen and (max-width: 680px) {
     .catalog__filters-reset {
       margin-top: 3rem; } }
@@ -13952,6 +14031,8 @@ input.range-slider__amount {
   cursor: pointer;
   -webkit-transition: color .2s;
   transition: color .2s; }
+  .low-vision .catalog__filters-reset-input {
+    color: black; }
 
 .personel__item {
   margin-bottom: 6.5rem; }
@@ -14353,6 +14434,8 @@ input.range-slider__amount {
   line-height: 130%;
   color: #959595;
   margin-bottom: 5rem; }
+  .low-vision .search__found-results {
+    color: black; }
   @media only screen and (max-width: 680px) {
     .search__found-results {
       font-size: 1.8rem;
@@ -14403,6 +14486,9 @@ input.range-slider__amount {
       align-self: flex-start;
   -webkit-transition: color 0.2s, border-color 0.2s;
   transition: color 0.2s, border-color 0.2s; }
+  .low-vision .search__results-card-label {
+    color: black;
+    border-color: black; }
   @media only screen and (max-width: 680px) {
     .search__results-card-label {
       margin-bottom: 1.5rem;
@@ -14416,6 +14502,8 @@ input.range-slider__amount {
   margin-bottom: 2rem;
   -webkit-transition: color 0.2s;
   transition: color 0.2s; }
+  .low-vision .search__results-card-text {
+    color: black; }
   @media only screen and (max-width: 680px) {
     .search__results-card-text {
       font-size: 1.8rem;
@@ -14427,6 +14515,8 @@ input.range-slider__amount {
   color: #808080;
   -webkit-transition: color 0.2s;
   transition: color 0.2s; }
+  .low-vision .search__results-description {
+    color: black; }
   .search__results-description em {
     color: black;
     font-style: normal; }
@@ -14440,6 +14530,8 @@ input.range-slider__amount {
   line-height: 120%;
   margin-bottom: 2.2rem;
   color: #8a8a8a; }
+  .low-vision .search__not-found-message {
+    color: black; }
   @media only screen and (max-width: 680px) {
     .search__not-found-message {
       font-size: 2.4rem;
@@ -14452,6 +14544,8 @@ input.range-slider__amount {
     font-weight: 700; }
     .search__not-found-suggestion a:link, .search__not-found-suggestion a:visited {
       color: var(--primary-color); }
+    .low-vision .search__not-found-suggestion a {
+      color: black !important; }
   @media only screen and (max-width: 680px) {
     .search__not-found-suggestion {
       font-size: 1.6rem;
@@ -15824,6 +15918,10 @@ input.range-slider__amount {
     background-color: var(--primary-color); }
     .modal__close-btn:hover svg {
       fill: white; }
+  .low-vision .modal__close-btn {
+    background-color: black !important; }
+    .low-vision .modal__close-btn svg {
+      fill: white !important; }
   @media only screen and (max-width: 680px) {
     .modal__close-btn {
       right: 1.5rem;
@@ -15837,6 +15935,8 @@ input.range-slider__amount {
   background-color: #fff;
   color: black;
   border-radius: 1rem; }
+  .low-vision .modal__content-wrapper {
+    border: 1px solid black; }
   @media only screen and (max-width: 680px) {
     .modal__content-wrapper {
       padding: 5rem var(--content-padding);
@@ -18103,6 +18203,11 @@ input.range-slider__amount {
   background-color: var(--primary-color);
   color: white;
   z-index: 1; }
+  .low-vision .about-bank__header-image-container {
+    background-color: #fff;
+    border: 1px solid black;
+    color: black;
+    min-height: auto; }
   @media only screen and (max-width: 680px) {
     .about-bank__header-image-container {
       padding: 1.5rem;
@@ -18121,6 +18226,8 @@ input.range-slider__amount {
      object-position: center;
   font-family: 'object-fit: cover; object-position: center;';
   z-index: -1; }
+  .low-vision .about-bank__header-image {
+    display: none; }
 
 .about-bank__header-title {
   font-weight: 500;
@@ -18153,6 +18260,8 @@ input.range-slider__amount {
   line-height: 3rem;
   color: #959595;
   margin-bottom: 4rem; }
+  .low-vision .about-bank__history {
+    color: black; }
   @media only screen and (max-width: 680px) {
     .about-bank__history {
       font-size: 1.6rem;
@@ -18199,6 +18308,8 @@ input.range-slider__amount {
           align-items: center;
   text-align: center;
   color: var(--secondary-color); }
+  .low-vision .about-bank__achievments-card {
+    color: black; }
 
 .about-bank__achievments-card-title {
   font-weight: 500;
@@ -18237,6 +18348,9 @@ input.range-slider__amount {
   -o-object-position: center;
      object-position: center;
   font-family: 'object-fit: contain; object-position: center;'; }
+  .low-vision .about-bank__achievments-card-icon {
+    -webkit-filter: grayscale(100%) brightness(0);
+            filter: grayscale(100%) brightness(0); }
 
 .about-bank__achievments-card-place {
   font-size: 3rem;
@@ -18252,6 +18366,8 @@ input.range-slider__amount {
   font-size: 1.6rem;
   line-height: 2rem;
   color: #a5a5a5; }
+  .low-vision .about-bank__achievments-card-remark {
+    color: black; }
   @media only screen and (max-width: 680px) {
     .about-bank__achievments-card-remark {
       font-size: 1.2rem;
@@ -18788,6 +18904,11 @@ input.range-slider__amount {
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1; }
+  .low-vision .new-about-bank-intro {
+    color: black;
+    background-color: #fff;
+    padding-bottom: 5rem;
+    min-height: auto; }
   @media only screen and (max-width: 680px) {
     .new-about-bank-intro {
       padding: 3rem 0;
@@ -18801,6 +18922,8 @@ input.range-slider__amount {
   width: 100%;
   height: 130%;
   z-index: -1; }
+  .low-vision .new-about-bank-intro__bg {
+    display: none; }
   .new-about-bank-intro__bg img {
     display: block;
     width: 100%;
@@ -18925,6 +19048,8 @@ input.range-slider__amount {
     display: block;
     width: 100%;
     padding-bottom: 120%; }
+  .low-vision .new-about-bank-experience__image-block {
+    display: none; }
   @media only screen and (max-width: 680px) {
     .new-about-bank-experience__image-block {
       border-radius: 1rem;
@@ -18996,6 +19121,9 @@ input.range-slider__amount {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   margin-bottom: 3.4rem; }
+  .low-vision .new-about-bank-success__achievements-card-icon {
+    -webkit-filter: grayscale(100%) brightness(0);
+            filter: grayscale(100%) brightness(0); }
   @media only screen and (max-width: 680px) {
     .new-about-bank-success__achievements-card-icon {
       width: 3rem;
@@ -19007,6 +19135,11 @@ input.range-slider__amount {
   font-size: 1.8rem;
   line-height: 100%;
   margin-bottom: 1.6rem; }
+  .low-vision .new-about-bank-success__achievements-card-title {
+    font-size: 2rem; }
+    @media only screen and (max-width: 680px) {
+      .low-vision .new-about-bank-success__achievements-card-title {
+        font-size: 1.8rem; } }
   @media only screen and (max-width: 680px) {
     .new-about-bank-success__achievements-card-title {
       font-size: 1.6rem;
@@ -19050,6 +19183,8 @@ input.range-slider__amount {
   font-size: 1.6rem;
   line-height: 2rem;
   color: rgba(138, 138, 138, 0.8); }
+  .low-vision .new-about-bank-success__achievements-card-remark {
+    color: black; }
   @media only screen and (max-width: 680px) {
     .new-about-bank-success__achievements-card-remark {
       font-size: 1.4rem;
@@ -19069,14 +19204,21 @@ input.range-slider__amount {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column; }
+  .low-vision .new-about-bank-products {
+    background-color: white !important;
+    color: black !important; }
   .new-about-bank-products--dark-text {
     color: black; }
     .new-about-bank-products--dark-text .new-about-bank-products__bg::after {
       display: none; }
     .new-about-bank-products--dark-text .new-about-bank-products__list-item {
       border-color: rgba(189, 189, 189, 0.5); }
+      .low-vision .new-about-bank-products--dark-text .new-about-bank-products__list-item {
+        border-color: black; }
     .new-about-bank-products--dark-text .new-about-bank-products__accordion-btn svg {
       fill: rgba(0, 0, 0, 0.6); }
+      .low-vision .new-about-bank-products--dark-text .new-about-bank-products__accordion-btn svg {
+        fill: black; }
   .new-about-bank-products .container,
   .new-about-bank-products .inner-container {
     display: -webkit-box;
@@ -19110,6 +19252,8 @@ input.range-slider__amount {
     top: 0;
     width: 100%;
     height: 100%; }
+  .low-vision .new-about-bank-products__bg {
+    display: none; }
 
 .new-about-bank-products__bg-image {
   display: block;
@@ -19275,6 +19419,8 @@ input.range-slider__amount {
         left: 0;
         top: .8rem;
         position: absolute; }
+        .low-vision .new-about-bank-products__accordion-text ul li::before {
+          background-color: #000; }
         @media only screen and (max-width: 680px) {
           .new-about-bank-products__accordion-text ul li::before {
             width: 0.6rem;
@@ -19401,6 +19547,9 @@ input.range-slider__amount {
   display: flex;
   background: #f7f7f7;
   border-radius: 1rem; }
+  .low-vision .career-contacts__card {
+    background-color: #fff;
+    border: 1px solid black; }
   .career-contacts__card--lots {
     margin-bottom: 17rem; }
     @media only screen and (max-width: 680px) {
@@ -19420,6 +19569,8 @@ input.range-slider__amount {
       flex-shrink: 0;
   padding-right: 3.2rem;
   border-right: 3px solid var(--primary-color); }
+  .low-vision .career-contacts__card-left-col {
+    border-color: black; }
   @media only screen and (max-width: 680px) {
     .career-contacts__card-left-col {
       border: none;
@@ -19467,6 +19618,8 @@ input.range-slider__amount {
   line-height: 120%;
   margin-bottom: 2.5rem;
   color: var(--primary-color); }
+  .low-vision .career-contacts__card-title {
+    color: black; }
   @media only screen and (max-width: 680px) {
     .career-contacts__card-title {
       font-size: 1.8rem;
@@ -19500,6 +19653,8 @@ input.range-slider__amount {
   line-height: 120%;
   margin-bottom: 0.8rem;
   color: #808080; }
+  .low-vision .career-contacts__item-key {
+    color: black; }
   @media only screen and (max-width: 680px) {
     .career-contacts__item-key {
       font-size: 1.4rem;
@@ -19517,6 +19672,11 @@ input.range-slider__amount {
     transition: color 0.2s; }
     .career-contacts__item-value a:link, .career-contacts__item-value a:visited {
       color: black; }
+    .low-vision .career-contacts__item-value a {
+      color: black !important;
+      text-decoration: underline; }
+      .low-vision .career-contacts__item-value a:hover {
+        text-decoration: none; }
     .career-contacts__item-value a:hover {
       color: var(--primary-color); }
   @media only screen and (max-width: 680px) {
@@ -19684,10 +19844,12 @@ input.range-slider__amount {
           transform: translateY(-50%);
   width: 9.2rem;
   height: 9.2rem;
-  background: #531A62;
+  background: #531a62;
   z-index: 40;
-  -webkit-transition: background-color .3s;
-  transition: background-color .3s; }
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s; }
+  .low-vision .team__arrow {
+    background-color: #000 !important; }
   .team__arrow svg {
     fill: white;
     width: 2.8rem;
@@ -19697,19 +19859,21 @@ input.range-slider__amount {
     top: 50%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%); }
+    .low-vision .team__arrow svg {
+      fill: white !important; }
   .team__arrow--prev {
     left: 0; }
     .team__arrow--prev svg {
-      margin-left: -.4rem; }
+      margin-left: -0.4rem; }
   .team__arrow--next {
     right: 0; }
     .team__arrow--next svg {
-      margin-left: .4rem; }
+      margin-left: 0.4rem; }
   .team__arrow.swiper-button-disabled {
     opacity: 0;
     visibility: hidden;
-    -webkit-transition: opacity .3s, visibility 0s linear .3s, background-color .3s;
-    transition: opacity .3s, visibility 0s linear .3s, background-color .3s; }
+    -webkit-transition: opacity 0.3s, visibility 0s linear 0.3s, background-color 0.3s;
+    transition: opacity 0.3s, visibility 0s linear 0.3s, background-color 0.3s; }
   .team__arrow:not(.swiper-button-disabled):hover {
     background-color: var(--primary-color); }
   @media only screen and (max-width: 680px) {
@@ -19738,6 +19902,9 @@ input.range-slider__amount {
           user-select: none; }
   .team__card:link, .team__card:visited {
     color: white; }
+  .low-vision .team__card {
+    color: black;
+    border: 1px solid black; }
   .team__card::after {
     content: '';
     position: absolute;
@@ -19748,6 +19915,8 @@ input.range-slider__amount {
     background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 29, 84, 0.29)), to(rgba(0, 29, 84, 0.29)));
     background: linear-gradient(0deg, rgba(0, 29, 84, 0.29), rgba(0, 29, 84, 0.29));
     z-index: 8; }
+    .low-vision .team__card::after {
+      display: none; }
   .team__card:hover .team__card-image {
     -webkit-transform: scale(1.04);
             transform: scale(1.04); }
@@ -19768,12 +19937,14 @@ input.range-slider__amount {
      object-position: center;
   font-family: 'object-fit: cover; object-position: center;';
   z-index: 5;
-  -webkit-transition: -webkit-transform .5s;
-  transition: -webkit-transform .5s;
-  transition: transform .5s;
-  transition: transform .5s, -webkit-transform .5s;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden; }
+  .low-vision .team__card-image {
+    display: none; }
 
 .team__card-row {
   margin-top: auto;
@@ -19794,6 +19965,9 @@ input.range-slider__amount {
     -ms-flex-negative: 0;
         flex-shrink: 0;
     margin-left: 2rem; }
+    .low-vision .team__card-row svg {
+      -webkit-filter: grayscale(100%);
+              filter: grayscale(100%); }
     @media only screen and (max-width: 680px) {
       .team__card-row svg {
         width: 3.4rem;
@@ -20275,6 +20449,9 @@ input.range-slider__amount {
   .no-touch .picture-block__btn:hover,
   .touch .picture-block__btn:active {
     background-color: var(--primary-color-hover); }
+  .low-vision .picture-block__btn {
+    background-color: black !important;
+    color: white !important; }
   @media only screen and (max-width: 680px) {
     .picture-block__btn {
       font-weight: 500;
@@ -20300,7 +20477,9 @@ input.range-slider__amount {
     .two-column-table__heading {
       font-size: 2rem;
       line-height: 1.2;
-      margin-bottom: 2rem; } }
+      margin-bottom: 2rem; }
+      .low-vision .two-column-table__heading {
+        font-size: 2.2rem; } }
 
 .two-column-table__content table {
   width: 100%;
@@ -20315,6 +20494,9 @@ input.range-slider__amount {
     padding-right: 6rem;
     border-bottom: 1px solid rgba(180, 180, 180, 0.5);
     width: 50%; }
+    .low-vision .two-column-table__content table td, .low-vision
+    .two-column-table__content table th {
+      border-color: black; }
     .two-column-table__content table td:last-child,
     .two-column-table__content table th:last-child {
       padding-right: 0; }
@@ -20332,6 +20514,12 @@ input.range-slider__amount {
     padding-top: 2.8rem;
     padding-bottom: 2.8rem;
     border-top: 0.6rem solid rgba(148, 194, 43, 0.5); }
+    .low-vision .two-column-table__content table thead th {
+      color: black;
+      border-color: black; }
+      @media only screen and (max-width: 680px) {
+        .low-vision .two-column-table__content table thead th {
+          border-color: black; } }
     @media only screen and (max-width: 680px) {
       .two-column-table__content table thead th {
         border-top: 0.3rem solid rgba(148, 194, 43, 0.5);
@@ -20339,7 +20527,9 @@ input.range-slider__amount {
         padding-bottom: 1.6rem;
         font-size: 1.2rem;
         line-height: 1.3;
-        padding-right: 3rem; } }
+        padding-right: 3rem; }
+        .low-vision .two-column-table__content table thead th {
+          font-size: 1.6rem; } }
   .two-column-table__content table tbody th {
     font-weight: 400;
     font-size: 2rem;
@@ -20347,10 +20537,17 @@ input.range-slider__amount {
     @media only screen and (max-width: 680px) {
       .two-column-table__content table tbody th {
         font-size: 1.2rem;
-        line-height: 1.2; } }
+        line-height: 1.2; }
+        .low-vision .two-column-table__content table tbody th {
+          font-size: 1.6rem; } }
   .two-column-table__content table tbody td {
     font-size: 1.4rem;
     line-height: 120%; }
+    .low-vision .two-column-table__content table tbody td {
+      font-size: 1.8rem; }
+      @media only screen and (max-width: 680px) {
+        .low-vision .two-column-table__content table tbody td {
+          font-size: 1.6rem; } }
     @media only screen and (max-width: 680px) {
       .two-column-table__content table tbody td {
         font-size: 1.2rem; } }
@@ -20362,6 +20559,8 @@ input.range-slider__amount {
   font-size: 1.6rem;
   line-height: 2.3rem;
   color: #717171; }
+  .low-vision .two-column-table__remark {
+    color: black; }
   .two-column-table__remark p {
     margin-bottom: 1.5rem; }
     .two-column-table__remark p:last-child {
@@ -20453,6 +20652,9 @@ input.range-slider__amount {
   padding: 0 3.2rem;
   width: 33.33%;
   border-bottom: 1px solid rgba(200, 200, 200, 0.5); }
+  .low-vision .deposit-table td, .low-vision
+  .deposit-table th {
+    border-color: black; }
   @media only screen and (min-width: 681px) {
     .deposit-table td:nth-child(1),
     .deposit-table th:nth-child(1) {
@@ -20482,6 +20684,9 @@ input.range-slider__amount {
   line-height: 120%;
   text-transform: uppercase;
   color: #717171; }
+  .low-vision .deposit-table th {
+    color: black;
+    font-size: 1.6rem; }
   @media only screen and (max-width: 680px) {
     .deposit-table th {
       width: 100%;
@@ -20522,6 +20727,8 @@ input.range-slider__amount {
         flex-wrap: wrap;
     border-bottom: 1px solid rgba(200, 200, 200, 0.5);
     padding: 1.8rem 0; }
+    .low-vision .deposit-table tr {
+      border-color: black; }
     .deposit-table tr:last-child {
       border-bottom: none; } }
 
@@ -20546,6 +20753,9 @@ input.range-slider__amount {
   color: #717171;
   margin-top: 1rem;
   margin-bottom: 1.8rem; }
+  .low-vision .deposit-table__remark {
+    color: black;
+    font-size: 1.6rem; }
   .deposit-table__remark:last-child {
     margin-bottom: 0; }
   @media only screen and (max-width: 680px) {
@@ -20591,6 +20801,9 @@ input.range-slider__amount {
   font-size: 1.3rem;
   color: #717171;
   line-height: 140%; }
+  .low-vision .deposit-table__rates-item-details {
+    color: black;
+    font-size: 1.6rem; }
   @media only screen and (max-width: 680px) {
     .deposit-table__rates-item-details {
       font-size: 1.2rem;
@@ -20609,6 +20822,8 @@ input.range-slider__amount {
   display: -ms-flexbox;
   display: flex;
   z-index: -1; }
+  .low-vision .deposit-table__bg {
+    display: none; }
   @media only screen and (max-width: 680px) {
     .deposit-table__bg {
       display: none; } }
@@ -20744,6 +20959,8 @@ input.range-slider__amount {
         background-color: var(--primary-color);
         border-radius: 50%;
         position: absolute; }
+        .low-vision .text-block-1__content ul li::before {
+          background-color: black; }
         @media only screen and (max-width: 680px) {
           .text-block-1__content ul li::before {
             width: 0.6rem;
@@ -20776,6 +20993,8 @@ input.range-slider__amount {
         position: absolute;
         left: 0;
         top: 0; }
+        .low-vision .text-block-1__content ol li::before {
+          color: black; }
 
 .text-block-1__link {
   padding: 2.2rem 3.2rem;
@@ -20794,6 +21013,9 @@ input.range-slider__amount {
   text-transform: uppercase; }
   .text-block-1__link:link, .text-block-1__link:visited {
     color: white; }
+  .low-vision .text-block-1__link {
+    background-color: black;
+    color: white; }
   @media only screen and (max-width: 680px) {
     .text-block-1__link {
       border-radius: 0.8rem;
@@ -20804,6 +21026,8 @@ input.range-slider__amount {
 .text-block-1__image {
   display: block;
   border-radius: 1rem; }
+  .low-vision .text-block-1__image {
+    display: none; }
   @media only screen and (max-width: 680px) {
     .text-block-1__image {
       border-radius: 0.8rem; } }
@@ -20842,6 +21066,9 @@ input.range-slider__amount {
   display: block;
   width: auto;
   max-width: none; }
+  .low-vision .text-block-payments__link-image {
+    -webkit-filter: grayscale(100%);
+            filter: grayscale(100%); }
   @media only screen and (max-width: 680px) {
     .text-block-payments__link-image {
       height: 4.5rem;
@@ -20879,6 +21106,8 @@ input.range-slider__amount {
   display: block;
   border-radius: 1rem;
   margin-bottom: 4.2rem; }
+  .low-vision .text-block-protect__image {
+    display: none; }
   @media only screen and (max-width: 680px) {
     .text-block-protect__image {
       border-radius: 0.8rem;
@@ -20922,6 +21151,8 @@ input.range-slider__amount {
     border-radius: 50%;
     background-color: var(--primary-color);
     top: 0.8rem; }
+    .low-vision .text-block-protect__actions-list-item::before {
+      background-color: #000; }
     @media only screen and (max-width: 680px) {
       .text-block-protect__actions-list-item::before {
         width: 0.6rem;
@@ -20940,6 +21171,9 @@ input.range-slider__amount {
   padding: 4rem 5.4rem;
   font-size: 2rem;
   line-height: 140%; }
+  .low-vision .text-block-protect__message {
+    background-color: #fff;
+    border: 1px solid black; }
   .text-block-protect__message p {
     margin-bottom: 0.6rem; }
     .text-block-protect__message p:last-child {
@@ -21013,6 +21247,9 @@ input.range-slider__amount {
      object-position: center;
   font-family: 'object-fit: contain; object-position: center;';
   margin-bottom: 2.5rem; }
+  .low-vision .text-block-advantages__card-icon {
+    -webkit-filter: grayscale(100%) brightness(0);
+            filter: grayscale(100%) brightness(0); }
   @media only screen and (max-width: 680px) {
     .text-block-advantages__card-icon {
       width: 3.4rem;
@@ -21458,6 +21695,8 @@ input.range-slider__amount {
   color: #C3C2C2;
   -webkit-transition: color .2s;
   transition: color .2s; }
+  .low-vision .success__card-close {
+    color: black; }
   .success__card-close svg {
     width: 1.6rem;
     height: 1.6rem;
@@ -21675,6 +21914,10 @@ input.range-slider__amount {
     color: #2e3127; }
   .catalog-products__card:hover {
     color: var(--primary-color); }
+  .low-vision .catalog-products__card {
+    background-color: #fff !important;
+    border: 1px solid black;
+    color: black !important; }
   @media only screen and (max-width: 680px) {
     .catalog-products__card {
       padding: 2rem;
@@ -21704,6 +21947,9 @@ input.range-slider__amount {
   border-radius: .4rem; }
   .catalog-products__tag:last-child {
     margin-right: 0; }
+  .low-vision .catalog-products__tag {
+    border-color: black !important;
+    color: black !important; }
   @media only screen and (max-width: 680px) {
     .catalog-products__tag {
       font-size: 1.2rem;
@@ -21842,12 +22088,17 @@ input.range-slider__amount {
   border-bottom: 3px solid var(--primary-color);
   margin-bottom: 1.8rem;
   padding-bottom: 1rem; }
+  .low-vision .success-story__history-card-year {
+    color: black;
+    border-color: black; }
   @media only screen and (max-width: 680px) {
     .success-story__history-card-year {
       font-size: 1.6rem;
       line-height: 1.2;
       border-bottom: 2px solid var(--primary-color);
-      margin-bottom: 1.4rem; } }
+      margin-bottom: 1.4rem; }
+      .low-vision .success-story__history-card-year {
+        border-color: black; } }
 
 .success-story__history-text {
   font-size: 2rem;
@@ -21864,6 +22115,9 @@ input.range-slider__amount {
     display: block;
     width: 100%;
     height: auto; }
+    .low-vision .success-story__image-block img {
+      -webkit-filter: grayscale(100%);
+              filter: grayscale(100%); }
   @media only screen and (max-width: 680px) {
     .success-story__image-block {
       padding: 0; } }
@@ -21882,6 +22136,9 @@ input.range-slider__amount {
   font-size: 1.8rem;
   line-height: 2.5rem;
   z-index: 1; }
+  .low-vision .success-story__image-block-quote {
+    background-color: #fff;
+    border: 1px solid black; }
   .success-story__image-block-quote::before {
     content: '';
     position: absolute;
@@ -21895,6 +22152,9 @@ input.range-slider__amount {
     height: 4.2rem;
     top: 1.4rem;
     left: 1.6rem; }
+    .low-vision .success-story__image-block-quote::before {
+      -webkit-filter: grayscale(100%) brightness(0);
+              filter: grayscale(100%) brightness(0); }
     @media only screen and (max-width: 680px) {
       .success-story__image-block-quote::before {
         width: 3rem;

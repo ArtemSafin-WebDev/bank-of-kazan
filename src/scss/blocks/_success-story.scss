@@ -125,11 +125,20 @@
     padding-bottom: 1rem;
 
 
+    .low-vision & {
+        color: black;
+        border-color: black;
+    }
+
     @include breakpoint(mobile) {
         font-size: 1.6rem;
         line-height: 1.2;
         border-bottom: 2px solid var(--primary-color);
         margin-bottom: 1.4rem;
+
+        .low-vision & {
+            border-color: black;
+        }
     }
 }
 
@@ -150,6 +159,10 @@
         display: block;
         width: 100%;
         height: auto;
+
+        .low-vision & {
+            filter: grayscale(100%);
+        }
     }
 
 
@@ -172,6 +185,11 @@
     line-height: 2.5rem;
     z-index: 1;
 
+    .low-vision & {
+        background-color: #fff;
+        border: 1px solid black;
+    }
+
     &::before {
         content: '';
         position: absolute;
@@ -185,6 +203,10 @@
         height: 4.2rem;
         top: 1.4rem;
         left: 1.6rem;
+
+        .low-vision & {
+            filter: grayscale(100%) brightness(0);
+        }
 
         @include breakpoint(mobile) {
             width: 3rem;

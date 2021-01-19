@@ -82,8 +82,8 @@
 
 
         .low-vision & {
-            background: black;
-            color: white;
+            background: black !important; 
+            color: white !important;
         }
     }
 
@@ -95,6 +95,9 @@
         &:hover {
             background: #ECF3DC;
             color: var(--primary-color);
+
+
+            
         }
     }
 

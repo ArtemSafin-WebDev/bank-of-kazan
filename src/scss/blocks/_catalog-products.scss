@@ -53,6 +53,13 @@
         color: var(--primary-color);
     }
 
+
+    .low-vision & {
+        background-color: #fff !important;
+        border: 1px solid black;
+        color: black !important;
+    }
+
     @include breakpoint(mobile) {
         padding: 2rem;
         min-height: 16rem;
@@ -81,6 +88,12 @@
     border-radius: .4rem;
     &:last-child {
         margin-right: 0;
+    }
+
+
+    .low-vision & {
+        border-color: black !important;
+        color: black !important;
     }
 
 

@@ -664,6 +664,14 @@
         line-height: 120%;
         color: #a5a5a5;
         max-width: none;
+
+        .low-vision & {
+            color: black;
+            font-size: 1.8rem;
+            @include breakpoint(mobile) {
+                font-size: 1.6rem;
+            }
+        }
         @include breakpoint(mobile) {
             margin: 1.5rem 0;
             font-size: 1.2rem;

@@ -68,6 +68,14 @@
         }
     }
 
+    .low-vision & {
+        background-color: black !important;
+
+        svg {
+            fill: white !important;
+        }
+    }
+
     @include breakpoint(mobile) {
         right: 1.5rem;
         top: 1.5rem;
@@ -82,6 +90,11 @@
     background-color: #fff;
     color: black;
     border-radius: 1rem;
+
+
+    .low-vision & {
+        border: 1px solid black;
+    }
     @include breakpoint(mobile) {
         padding: 5rem var(--content-padding);
         padding-top: 6rem;

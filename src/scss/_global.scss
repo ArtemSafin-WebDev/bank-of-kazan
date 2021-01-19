@@ -154,6 +154,8 @@ a {
     &:link,
     &:visited {
         color: var(--primary-color);
+
+       
     }
 }
 
@@ -210,6 +212,15 @@ img.lazyload:not([src]) {
     color: white;
     background-color: var(--primary-color);
 }
+
+
+.low-vision {
+    ::selection {
+        color: white;
+        background-color: black;
+    }
+}
+
 
 .barba-leave-active,
 .barba-enter-active {

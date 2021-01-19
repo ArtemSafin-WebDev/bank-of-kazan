@@ -18,6 +18,11 @@
     color: #959595;
     margin-bottom: 5rem;
 
+
+    .low-vision & {
+        color: black;
+    }
+
     @include breakpoint(mobile) {
         font-size: 1.8rem;
         margin-bottom: 3rem;
@@ -75,6 +80,12 @@
     margin-bottom: 2.8rem;
     align-self: flex-start;
     transition: color 0.2s, border-color 0.2s;
+
+
+    .low-vision & {
+        color: black;
+        border-color: black;
+    }
     @include breakpoint(mobile) {
         margin-bottom: 1.5rem;
         font-size: 1.2rem;
@@ -88,6 +99,10 @@
     line-height: 130%;
     margin-bottom: 2rem;
     transition: color 0.2s;
+
+    .low-vision & {
+        color: black;
+    }
     @include breakpoint(mobile) {
         font-size: 1.8rem;
         margin-bottom: 1.5rem;
@@ -99,6 +114,10 @@
     line-height: 130%;
     color: #808080;
     transition: color 0.2s;
+
+    .low-vision & {
+        color: black;
+    }
     em {
         color: black;
         font-style: normal;
@@ -116,6 +135,10 @@
     margin-bottom: 2.2rem;
     color: #8a8a8a;
 
+    .low-vision & {
+        color: black;
+    }
+
     @include breakpoint(mobile) {
         font-size: 2.4rem;
         margin-bottom: 2rem;
@@ -131,6 +154,10 @@
         &:link,
         &:visited {
             color: var(--primary-color);
+        }
+
+        .low-vision & {
+            color: black !important;
         }
     }
 

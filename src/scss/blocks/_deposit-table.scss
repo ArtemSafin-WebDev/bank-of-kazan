@@ -28,6 +28,11 @@
         padding: 0 3.2rem;
         width: 33.33%;
         border-bottom: 1px solid rgba(#c8c8c8, 0.5);
+
+
+        .low-vision & {
+            border-color: black;
+        }
         @include breakpointMF(small-tablet) {
             &:nth-child(1) {
                 width: 28%;
@@ -36,10 +41,14 @@
                 width: 36%;
 
                 border-right: 2.6rem solid white;
+
+               
             }
             &:nth-child(3) {
                 width: 36%;
                 border-left: 2.6rem solid white;
+
+               
             }
         }
 
@@ -60,6 +69,11 @@
         line-height: 120%;
         text-transform: uppercase;
         color: #717171;
+
+        .low-vision & {
+            color: black;
+            font-size: 1.6rem;
+        }
         @include breakpoint(mobile) {
             width: 100%;
             padding: 0;
@@ -111,6 +125,10 @@
             flex-wrap: wrap;
             border-bottom: 1px solid rgba(#c8c8c8, 0.5);
             padding: 1.8rem 0;
+
+            .low-vision & {
+                border-color: black;
+            }
             &:last-child {
                 border-bottom: none;
             }
@@ -144,6 +162,10 @@
     color: #717171;
     margin-top: 1rem;
     margin-bottom: 1.8rem;
+    .low-vision & {
+        color: black;
+        font-size: 1.6rem;
+    }
     &:last-child {
         margin-bottom: 0;
     }
@@ -195,6 +217,10 @@
     font-size: 1.3rem;
     color: #717171;
     line-height: 140%;
+    .low-vision & {
+        color: black;
+        font-size: 1.6rem;
+    }
 
     @include breakpoint(mobile) {
         font-size: 1.2rem;
@@ -214,6 +240,10 @@
     height: 100%;
     display: flex;
     z-index: -1;
+
+    .low-vision & {
+        display: none;
+    }
 
     @include breakpoint(mobile) {
         display: none;

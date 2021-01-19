@@ -105,6 +105,10 @@
                 border-radius: 50%;
                 position: absolute;
 
+                .low-vision & {
+                    background-color: black;
+                }
+
                 @include breakpoint(mobile) {
                     width: 0.6rem;
                     height: 0.6rem;
@@ -145,6 +149,10 @@
                 position: absolute;
                 left: 0;
                 top: 0;
+
+                .low-vision & {
+                    color: black;
+                }
             }
         }
     }
@@ -168,6 +176,12 @@
         color: white;
     }
 
+
+    .low-vision & {
+        background-color: black;
+        color: white;
+    }
+
     @include breakpoint(mobile) {
         border-radius: 0.8rem;
         padding: 1.7rem 2rem;
@@ -179,6 +193,10 @@
 .text-block-1__image {
     display: block;
     border-radius: 1rem;
+
+    .low-vision & {
+        display: none;
+    }
     @include breakpoint(mobile) {
         border-radius: 0.8rem;
     }
@@ -217,6 +235,10 @@
     display: block;
     width: auto;
     max-width: none;
+
+    .low-vision & {
+        filter: grayscale(100%);
+    }
 
     @include breakpoint(mobile) {
         height: 4.5rem;
@@ -259,6 +281,11 @@
     display: block;
     border-radius: 1rem;
     margin-bottom: 4.2rem;
+
+
+    .low-vision & {
+        display: none;
+    }
     @include breakpoint(mobile) {
         border-radius: 0.8rem;
         margin-bottom: 1.5rem;
@@ -295,6 +322,10 @@
         border-radius: 50%;
         background-color: var(--primary-color);
         top: 0.8rem;
+
+        .low-vision & {
+            background-color: #000;
+        }
         @include breakpoint(mobile) {
             width: 0.6rem;
             height: 0.6rem;
@@ -316,6 +347,12 @@
     padding: 4rem 5.4rem;
     font-size: 2rem;
     line-height: 140%;
+
+
+    .low-vision & {
+        background-color: #fff;
+        border: 1px solid black;
+    }
 
     p {
         margin-bottom: 0.6rem;
@@ -386,6 +423,11 @@
     flex-shrink: 0;
     @include objectFitContain();
     margin-bottom: 2.5rem;
+
+
+    .low-vision & {
+        filter: grayscale(100%) brightness(0);
+    }
 
     @include breakpoint(mobile) {
         width: 3.4rem;

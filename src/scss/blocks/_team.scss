@@ -35,16 +35,19 @@
     }
 }
 
-
 .team__arrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     width: 9.2rem;
     height: 9.2rem;
-    background: #531A62;
+    background: #531a62;
     z-index: 40;
-    transition: background-color .3s;
+    transition: background-color 0.3s;
+
+    .low-vision & {
+        background-color: #000 !important;
+    }
     svg {
         fill: white;
         width: 2.8rem;
@@ -53,31 +56,32 @@
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
-        
+
+        .low-vision & {
+            fill: white !important;
+        }
     }
 
     &--prev {
         left: 0;
 
         svg {
-            margin-left: -.4rem;
+            margin-left: -0.4rem;
         }
     }
-
 
     &--next {
         right: 0;
 
         svg {
-            margin-left: .4rem;
+            margin-left: 0.4rem;
         }
     }
-
 
     &.swiper-button-disabled {
         opacity: 0;
         visibility: hidden;
-        transition: opacity .3s, visibility 0s linear .3s, background-color .3s;
+        transition: opacity 0.3s, visibility 0s linear 0.3s, background-color 0.3s;
     }
 
     &:not(.swiper-button-disabled) {
@@ -85,7 +89,6 @@
             background-color: var(--primary-color);
         }
     }
-
 
     @include breakpoint(mobile) {
         display: none;
@@ -106,6 +109,11 @@
     &:visited {
         color: white;
     }
+
+    .low-vision & {
+        color: black;
+        border: 1px solid black;
+    }
     &::after {
         content: '';
         position: absolute;
@@ -115,8 +123,11 @@
         height: 100%;
         background: linear-gradient(0deg, rgba(0, 29, 84, 0.29), rgba(0, 29, 84, 0.29));
         z-index: 8;
-    }
 
+        .low-vision & {
+            display: none;
+        }
+    }
 
     &:hover {
         .team__card-image {
@@ -124,13 +135,11 @@
         }
     }
 
-
     @include breakpoint(mobile) {
         min-height: 20rem;
         padding: 2rem;
     }
 }
-
 
 .team__card-image {
     position: absolute;
@@ -140,8 +149,12 @@
     height: 100%;
     @include objectFitCover();
     z-index: 5;
-    transition: transform .5s;
+    transition: transform 0.5s;
     backface-visibility: hidden;
+
+    .low-vision & {
+        display: none;
+    }
 }
 
 .team__card-row {
@@ -156,6 +169,11 @@
         height: 5.4rem;
         flex-shrink: 0;
         margin-left: 2rem;
+
+
+        .low-vision & {
+            filter: grayscale(100%);
+        }
         @include breakpoint(mobile) {
             width: 3.4rem;
             height: 3.4rem;

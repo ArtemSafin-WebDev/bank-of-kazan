@@ -6,6 +6,11 @@
     background-repeat: repeat;
     background-position: center;
 
+
+    .low-vision & {
+        background-image: none;
+    }
+
     @include breakpoint(mobile) {
         background-size: 33px 58px;
     }
@@ -20,6 +25,12 @@
     max-width: 63rem;
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
+
+    .low-vision & {
+        background-color: white;
+        color: black;
+        border: 1px solid black;
+    }
     @include breakpoint(mobile) {
         padding: 2rem;
         max-width: 100%;
@@ -45,6 +56,10 @@
     display: block;
     width: 20rem;
     height: auto;
+
+    .low-vision & {
+        filter: grayscale(100%) brightness(0);
+    }
     @include breakpoint(mobile) {
         width: 18rem;
     }
@@ -109,6 +124,11 @@
 
     &:hover {
         color: var(--primary-color);
+    }
+
+
+    .low-vision & {
+        color: black !important;
     }
     &::after {
         content: '';

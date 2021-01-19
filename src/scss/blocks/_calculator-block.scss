@@ -494,6 +494,11 @@
 
     .calculator__select-currency-radio-content {
         border-left: 1px solid #e0e0e0;
+
+
+        .low-vision & {
+            border-color: black;
+        }
     }
     &:last-child {
         // border-right: none;
@@ -517,6 +522,11 @@
     justify-content: center;
     background: #f5f5f5;
     transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+
+
+    .low-vision & {
+        background-color: white;
+    }
 }
 
 .calculator__select-currency-radio-input {
@@ -527,6 +537,12 @@
     background-color: var(--primary-color);
     color: white;
     // border-color: var(--primary-color);
+
+
+    .low-vision & {
+        background-color: black;
+        color: white;
+    }
 }
 
 .calculator__apply-for-card {
