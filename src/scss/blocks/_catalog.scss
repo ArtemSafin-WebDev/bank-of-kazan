@@ -228,6 +228,16 @@
             height: 1.1rem;
         }
     }
+
+
+    .low-vision & {
+        background-color: #fff;
+        border: 1px solid black;
+
+        svg {
+            fill: black;
+        }
+    }
 }
 
 .catalog__filters-checkbox-text {

@@ -13151,6 +13151,11 @@ input.range-slider__amount {
     .catalog__filters-checkbox--small-text .catalog__filters-checkbox-mark svg {
       width: 1.1rem;
       height: 1.1rem; }
+  .low-vision .catalog__filters-checkbox-mark {
+    background-color: #fff;
+    border: 1px solid black; }
+    .low-vision .catalog__filters-checkbox-mark svg {
+      fill: black; }
 
 .catalog__filters-checkbox-text {
   font-size: 2rem;
@@ -14562,6 +14567,10 @@ input.range-slider__amount {
   .violet-backplate .offices__city-dropdown-inner,
   .mobile-menu-open .offices__city-dropdown-inner {
     background-color: rgba(148, 194, 43, 0.9); }
+  .low-vision .offices__city-dropdown-inner {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    border: 1px solid black !important; }
   @media only screen and (max-width: 680px) {
     .offices__city-dropdown-inner {
       border-radius: 0.8rem;
@@ -14584,6 +14593,10 @@ input.range-slider__amount {
     color: black; }
   .offices__city-dropdown-link:hover {
     background: #f5f5f5; }
+  .low-vision .offices__city-dropdown-link {
+    background: white !important; }
+    .low-vision .offices__city-dropdown-link:hover {
+      text-decoration: underline; }
   @media only screen and (max-width: 680px) {
     .offices__city-dropdown-link {
       padding: 1rem 1.5rem;
@@ -14734,8 +14747,8 @@ input.range-slider__amount {
   line-height: 150%;
   color: black;
   border-radius: 0.4rem;
-  -webkit-transition: background-color 0.2s, color 0.2s;
-  transition: background-color 0.2s, color 0.2s; }
+  -webkit-transition: background-color 0.2s, color 0.2s, border-color .2s;
+  transition: background-color 0.2s, color 0.2s, border-color .2s; }
   .offices__checkbox-content .icon-droplet {
     width: 1.8rem;
     height: 2.6rem;
@@ -14766,6 +14779,11 @@ input.range-slider__amount {
     fill: #50cff6; }
   .offices__checkbox-content svg.red {
     fill: #ff7152; }
+  .low-vision .offices__checkbox-content {
+    border: 1px solid transparent; }
+    @media only screen and (max-width: 680px) {
+      .low-vision .offices__checkbox-content {
+        font-size: 1.6rem; } }
   @media only screen and (max-width: 680px) {
     .offices__checkbox-content {
       font-size: 1.4rem;
@@ -14773,9 +14791,14 @@ input.range-slider__amount {
 
 .offices__checkbox:hover .offices__checkbox-input:not(:checked) ~ .offices__checkbox-content {
   color: var(--primary-color); }
+  .low-vision .offices__checkbox:hover .offices__checkbox-input:not(:checked) ~ .offices__checkbox-content {
+    color: black; }
 
 .offices__checkbox-input:checked ~ .offices__checkbox-content {
   background-color: #ecf3dc; }
+  .low-vision .offices__checkbox-input:checked ~ .offices__checkbox-content {
+    background-color: #fff;
+    border-color: black; }
 
 .offices__filters-small-checkbox {
   margin-right: 2.5rem; }
@@ -14879,6 +14902,9 @@ input.range-slider__amount {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   margin-right: 12rem; }
+  .low-vision .offices__list-view-search-form {
+    background-color: #fff;
+    border: 1px solid black; }
   @media only screen and (max-width: 680px) {
     .offices__list-view-search-form {
       margin: 0;
@@ -14898,6 +14924,8 @@ input.range-slider__amount {
     width: 2rem;
     height: 2rem;
     fill: var(--primary-color); }
+  .low-vision .offices__list-view-search-submit-btn svg {
+    fill: black; }
 
 .offices__list-view-search-input {
   width: 50%;
@@ -14924,6 +14952,12 @@ input.range-slider__amount {
   line-height: 120%;
   color: #949494;
   text-transform: uppercase; }
+  .low-vision .offices__list-view-feature {
+    color: black;
+    font-size: 1.8rem; }
+    @media only screen and (max-width: 680px) {
+      .low-vision .offices__list-view-feature {
+        font-size: 1.6rem; } }
   @media only screen and (max-width: 680px) {
     .offices__list-view-feature {
       display: none; } }
@@ -14950,6 +14984,9 @@ input.range-slider__amount {
   background: #f7f7f7;
   border-radius: 1rem;
   margin-bottom: 1rem; }
+  .low-vision .offices__list-view-accordion {
+    background-color: #fff;
+    border: 1px solid black; }
   .offices__list-view-accordion.hidden {
     display: none; }
   @media only screen and (max-width: 680px) {
@@ -15026,6 +15063,10 @@ input.range-slider__amount {
   .offices__list-view-accordion.active .offices__list-view-accordion-arrow {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg); }
+  .low-vision .offices__list-view-accordion-arrow {
+    background-color: black; }
+    .low-vision .offices__list-view-accordion-arrow svg {
+      fill: white; }
   @media only screen and (max-width: 680px) {
     .offices__list-view-accordion-arrow {
       width: 3rem;
@@ -15040,6 +15081,11 @@ input.range-slider__amount {
   margin-bottom: 0.5rem;
   margin-top: 0.3rem;
   cursor: pointer; }
+  .low-vision .offices__list-view-accordion-address-name {
+    color: black; }
+    @media only screen and (max-width: 680px) {
+      .low-vision .offices__list-view-accordion-address-name {
+        font-size: 1.8rem; } }
   @media only screen and (max-width: 680px) {
     .offices__list-view-accordion-address-name {
       font-size: 1.6rem;
@@ -15086,6 +15132,12 @@ input.range-slider__amount {
     background-image: linear-gradient(to right, var(--primary-color) 0%, var(--primary-color) 50%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%); }
   .office__list-view-accordion-show-on-map:link, .office__list-view-accordion-show-on-map:visited {
     color: var(--primary-color); }
+  .low-vision .office__list-view-accordion-show-on-map {
+    color: black !important;
+    text-decoration: underline;
+    font-size: 1.8rem; }
+    .low-vision .office__list-view-accordion-show-on-map::after {
+      display: none; }
   @media only screen and (max-width: 680px) {
     .office__list-view-accordion-show-on-map {
       margin-bottom: 1rem; } }
@@ -15131,12 +15183,20 @@ input.range-slider__amount {
       color: #949494;
       font-weight: 400;
       padding-bottom: 0.4rem; }
+      .low-vision .offices__currency table thead th {
+        color: black;
+        font-size: 1.6rem;
+        padding-right: 1rem; }
     .offices__currency table tbody th {
       font-size: 1.8rem;
       line-height: 1.2;
       color: #949494;
       text-transform: uppercase;
       font-weight: 400; }
+      .low-vision .offices__currency table tbody th {
+        color: black;
+        font-weight: 500;
+        padding-right: 1rem; }
       @media only screen and (max-width: 680px) {
         .offices__currency table tbody th {
           font-size: 1.6rem; } }
@@ -15144,6 +15204,8 @@ input.range-slider__amount {
       font-size: 1.8rem;
       line-height: 150%;
       color: #000000; }
+      .low-vision .offices__currency table tbody td {
+        padding-right: 1rem; }
 
 .offices__features {
   display: -webkit-box;
@@ -15177,6 +15239,15 @@ input.range-slider__amount {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start; }
+  @media only screen and (max-width: 680px) {
+    .low-vision .offices__bankomat-options-items {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: initial;
+          -ms-flex-align: initial;
+              align-items: initial; } }
 
 .offices__bankomat-options-item {
   -ms-flex-negative: 0;
@@ -15184,6 +15255,10 @@ input.range-slider__amount {
   margin-right: 6.5rem; }
   .offices__bankomat-options-item:last-child {
     margin-right: 0; }
+  .low-vision .offices__bankomat-options-item {
+    margin-bottom: 3rem; }
+    .low-vision .offices__bankomat-options-item:last-child {
+      margin-bottom: 0; }
   @media only screen and (max-width: 680px) {
     .offices__bankomat-options-item {
       margin-right: 3rem; } }
@@ -15212,6 +15287,13 @@ input.range-slider__amount {
         height: 2.6rem;
         line-height: 1.2;
         margin-top: 0.2rem; } }
+  .low-vision .offices__bankomat-options-item-heading {
+    color: black;
+    font-size: 1.6rem;
+    line-height: 1.2;
+    margin-bottom: 1rem; }
+    .low-vision .offices__bankomat-options-item-heading svg {
+      fill: black; }
 
 .offices__bankomat-options-currencies {
   display: -webkit-box;
@@ -15251,6 +15333,22 @@ input.range-slider__amount {
     .offices__bankomat-options-currency-item svg.icon-usd {
       width: 1.8rem;
       height: 1.8rem; }
+  .low-vision .offices__bankomat-options-currency-item {
+    background-color: white;
+    width: 3.4rem;
+    height: 3.4rem; }
+    @media only screen and (max-width: 680px) {
+      .low-vision .offices__bankomat-options-currency-item {
+        width: 2.4rem;
+        height: 2.4rem; } }
+    .low-vision .offices__bankomat-options-currency-item svg {
+      fill: black;
+      width: 2rem;
+      height: 2rem; }
+      @media only screen and (max-width: 680px) {
+        .low-vision .offices__bankomat-options-currency-item svg {
+          width: 1.8rem;
+          height: 1.8rem; } }
   @media only screen and (max-width: 680px) {
     .offices__bankomat-options-currency-item {
       width: 2.4rem;
@@ -15423,6 +15521,12 @@ input.range-slider__amount {
       .offices__city-search svg {
         width: 1.8rem;
         height: 1.8rem; } }
+  .low-vision .offices__city-search {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    border: 1px solid black; }
+    .low-vision .offices__city-search svg {
+      fill: black; }
   .offices__city-search > ymaps {
     width: 100% !important;
     left: 0 !important;
@@ -15501,6 +15605,10 @@ input.range-slider__amount {
   color: black;
   font-size: 1.6rem;
   line-height: 1.7; }
+  .low-vision .offices__balloon-inner {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    border: 1px solid black; }
   @media only screen and (max-width: 680px) {
     .offices__balloon-inner {
       width: 100%;
@@ -15576,6 +15684,10 @@ input.range-slider__amount {
     fill: #8a8a8a;
     -webkit-transition: fill 0.2s;
     transition: fill 0.2s; }
+    .low-vision .offices__balloon-close svg {
+      fill: black;
+      width: 1.8rem;
+      height: 1.8rem; }
   .offices__balloon-close:hover svg {
     fill: black; }
   @media only screen and (max-width: 680px) {
@@ -15604,6 +15716,9 @@ input.range-slider__amount {
      object-position: center;
   font-family: 'object-fit: contain; object-position: center;';
   margin-right: 2rem; }
+  .low-vision .offices__balloon-features-icon {
+    -webkit-filter: grayscale(100%) brightness(0);
+            filter: grayscale(100%) brightness(0); }
   .offices__balloon-features-icon:last-child {
     margin-right: 0; }
 
@@ -15620,11 +15735,17 @@ input.range-slider__amount {
   display: inline-block;
   vertical-align: middle;
   margin-left: 0.6rem; }
+  .low-vision .offices__no-fee {
+    background-color: black;
+    color: white; }
   .offices__no-fee:hover .offices__features-item-dropdown {
     opacity: 1;
     visibility: visible;
     -webkit-transition: all 0.3s;
     transition: all 0.3s; }
+
+.low-vision .offices__filters-regimes svg {
+  fill: black; }
 
 .modal {
   position: fixed;
