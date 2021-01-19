@@ -36,7 +36,20 @@
     }
 
 }
-.additional-info__accordion-btn {
+
+.additional-info__inner-accordion {
+    margin-top: 2rem;
+    &:first-child {
+        margin-top: 0;
+    }
+
+    @include breakpoint(mobile) {
+        padding-left: 4rem;
+    }
+}
+
+.additional-info__accordion-btn,
+.additional-info__inner-accordion-btn {
     display: flex;
     align-items: center;
     font-size: 2rem;
@@ -56,7 +69,8 @@
     }
 }
 
-.additional-info__accordion-btn-arrow {
+.additional-info__accordion-btn-arrow,
+.additional-info__inner-accordion-btn-arrow {
     width: 3.7rem;
     height: 3.7rem;
     flex-shrink: 0;
@@ -80,9 +94,7 @@
         }
     }
 
-    .additional-info__accordion.active & {
-        transform: rotate(540deg);
-    }
+  
 
     @include breakpoint(mobile) {
         width: 3rem;
@@ -96,14 +108,31 @@
     }
 }
 
-.additional-info__accordion-content {
+
+.additional-info__accordion-btn-arrow {
+    .additional-info__accordion.active & {
+        transform: rotate(540deg);
+    }
+}
+
+.additional-info__inner-accordion-btn-arrow {
+    .additional-info__inner-accordion.active & {
+        transform: rotate(540deg);
+    }
+}
+
+
+
+.additional-info__accordion-content,
+.additional-info__inner-accordion-content {
     overflow: hidden;
     max-height: 0;
     transition: max-height .3s;
     margin-top: .25rem;
 }
 
-.additional-info__accordion-content-inner {
+.additional-info__accordion-content-inner,
+.additional-info__inner-accordion-content-inner {
     padding: 3.6rem;
     padding-left: 5.5rem;
     padding-right: 5.5rem;

@@ -11293,7 +11293,16 @@ input.range-slider__amount {
     .additional-info__accordion {
       padding: 1rem; } }
 
-.additional-info__accordion-btn {
+.additional-info__inner-accordion {
+  margin-top: 2rem; }
+  .additional-info__inner-accordion:first-child {
+    margin-top: 0; }
+  @media only screen and (max-width: 680px) {
+    .additional-info__inner-accordion {
+      padding-left: 4rem; } }
+
+.additional-info__accordion-btn,
+.additional-info__inner-accordion-btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -11302,15 +11311,20 @@ input.range-slider__amount {
           align-items: center;
   font-size: 2rem;
   line-height: 146%; }
-  .additional-info__accordion-btn:link, .additional-info__accordion-btn:visited {
+  .additional-info__accordion-btn:link, .additional-info__accordion-btn:visited,
+  .additional-info__inner-accordion-btn:link,
+  .additional-info__inner-accordion-btn:visited {
     color: var(--secondary-color); }
-  .low-vision .additional-info__accordion-btn {
+  .low-vision .additional-info__accordion-btn, .low-vision
+  .additional-info__inner-accordion-btn {
     color: black !important; }
   @media only screen and (max-width: 680px) {
-    .additional-info__accordion-btn {
+    .additional-info__accordion-btn,
+    .additional-info__inner-accordion-btn {
       font-size: 1.6rem; } }
 
-.additional-info__accordion-btn-arrow {
+.additional-info__accordion-btn-arrow,
+.additional-info__inner-accordion-btn-arrow {
   width: 3.7rem;
   height: 3.7rem;
   -ms-flex-negative: 0;
@@ -11335,41 +11349,53 @@ input.range-slider__amount {
   transition: -webkit-transform .2s;
   transition: transform .2s;
   transition: transform .2s, -webkit-transform .2s; }
-  .additional-info__accordion-btn-arrow svg {
+  .additional-info__accordion-btn-arrow svg,
+  .additional-info__inner-accordion-btn-arrow svg {
     fill: var(--secondary-color);
     width: 1.4rem;
     height: 0.9rem;
     -ms-flex-negative: 0;
         flex-shrink: 0;
     margin-top: 0.1em; }
-    .low-vision .additional-info__accordion-btn-arrow svg {
+    .low-vision .additional-info__accordion-btn-arrow svg, .low-vision
+    .additional-info__inner-accordion-btn-arrow svg {
       fill: black !important; }
-  .additional-info__accordion.active .additional-info__accordion-btn-arrow {
-    -webkit-transform: rotate(540deg);
-            transform: rotate(540deg); }
   @media only screen and (max-width: 680px) {
-    .additional-info__accordion-btn-arrow {
+    .additional-info__accordion-btn-arrow,
+    .additional-info__inner-accordion-btn-arrow {
       width: 3rem;
       height: 3rem;
       margin-right: 1.5rem; }
-      .additional-info__accordion-btn-arrow svg {
+      .additional-info__accordion-btn-arrow svg,
+      .additional-info__inner-accordion-btn-arrow svg {
         width: 1.2rem;
         height: 1.2rem;
         margin: 0; } }
 
-.additional-info__accordion-content {
+.additional-info__accordion.active .additional-info__accordion-btn-arrow {
+  -webkit-transform: rotate(540deg);
+          transform: rotate(540deg); }
+
+.additional-info__inner-accordion.active .additional-info__inner-accordion-btn-arrow {
+  -webkit-transform: rotate(540deg);
+          transform: rotate(540deg); }
+
+.additional-info__accordion-content,
+.additional-info__inner-accordion-content {
   overflow: hidden;
   max-height: 0;
   -webkit-transition: max-height .3s;
   transition: max-height .3s;
   margin-top: .25rem; }
 
-.additional-info__accordion-content-inner {
+.additional-info__accordion-content-inner,
+.additional-info__inner-accordion-content-inner {
   padding: 3.6rem;
   padding-left: 5.5rem;
   padding-right: 5.5rem; }
   @media only screen and (max-width: 680px) {
-    .additional-info__accordion-content-inner {
+    .additional-info__accordion-content-inner,
+    .additional-info__inner-accordion-content-inner {
       padding: 2rem 0; } }
 
 .additional-info__docs-list {

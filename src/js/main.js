@@ -36,6 +36,7 @@ import currencyTabs from './currencyTabs';
 import mobileSubmenu from './mobileSubmenu';
 import lowVision from './lowVision';
 import codeInput from './codeInput';
+import innerAccordions from './inner-accordions';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -61,7 +62,6 @@ document.addEventListener('DOMContentLoaded', function() {
     fileUpload();
     codeInput();
     
-
     console.log('Тест работы')
 
     barba.init({
@@ -134,6 +134,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     aboutBankAnimations.init();
                     accordions(Array.from(document.querySelectorAll('.js-accordion'))).init();
                     accordions(Array.from(document.querySelectorAll('.js-mobile-nav-accordion'))).init();
+                    innerAccordions(Array.from(document.querySelectorAll('.js-additional-info-inner-accordion'))).init();
+
                     currencyTabs.init();
                     mobileSubmenu.init();
                     console.log('Тест работы 6')
