@@ -13368,6 +13368,9 @@ input.range-slider__amount {
     height: 1rem;
     position: absolute;
     background: linear-gradient(238.6deg, #9546aa 14.49%, #d98bed 129.54%); }
+    .low-vision .catalogs__offer::after {
+      -webkit-filter: grayscale(100%);
+              filter: grayscale(100%); }
     @media only screen and (max-width: 680px) {
       .catalogs__offer::after {
         height: 0.5rem; } }
@@ -13478,6 +13481,9 @@ input.range-slider__amount {
   .no-touch .catalogs__offer-form-submit:hover,
   .touch .catalogs__offer-form-submit:active {
     background-color: var(--primary-color-hover); }
+  .low-vision .catalogs__offer-form-submit {
+    background-color: #000 !important;
+    color: white !important; }
   @media only screen and (max-width: 680px) {
     .catalogs__offer-form-submit {
       padding: 1.4rem 1.5rem;

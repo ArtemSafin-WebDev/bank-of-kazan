@@ -394,6 +394,11 @@
         position: absolute;
         background: linear-gradient(238.6deg, #9546aa 14.49%, #d98bed 129.54%);
 
+
+        .low-vision & {
+            filter: grayscale(100%);
+        }
+
         @include breakpoint(mobile) {
             height: 0.5rem;
         }
@@ -493,6 +498,8 @@
     border-radius: 1rem;
     margin-top: 2.2rem;
     transition: background-color 0.2s;
+
+    
     &:link,
     &:visited {
         color: white;
@@ -501,6 +508,11 @@
     .no-touch &:hover,
     .touch &:active {
         background-color: var(--primary-color-hover);
+    }
+
+    .low-vision & {
+        background-color: #000 !important;
+        color: white !important;
     }
 
     @include breakpoint(mobile) {
