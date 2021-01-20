@@ -1872,6 +1872,12 @@
     margin-top: 1rem;
     margin-bottom: 2rem;
     position: relative;
+    align-self: flex-start;
+    color: white;
+    &:link,
+    &:visited {
+        color: white;
+    }
     @include breakpoint(mobile) {
         margin-top: 4rem;
         margin-bottom: 0;
