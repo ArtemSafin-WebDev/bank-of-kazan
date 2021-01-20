@@ -163,6 +163,10 @@
     padding: 4.2rem;
     border-radius: 1rem;
     margin-bottom: 6.4rem;
+
+    .low-vision & {
+        border-color: black;
+    }
     @include breakpoint(mobile) {
         padding: 2.5rem;
         margin-bottom: 3rem;

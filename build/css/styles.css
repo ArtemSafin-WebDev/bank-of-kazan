@@ -13121,6 +13121,8 @@ input.range-slider__amount {
   padding: 4.2rem;
   border-radius: 1rem;
   margin-bottom: 6.4rem; }
+  .low-vision .catalog__filters {
+    border-color: black; }
   @media only screen and (max-width: 680px) {
     .catalog__filters {
       padding: 2.5rem;
