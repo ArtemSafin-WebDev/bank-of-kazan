@@ -58,11 +58,17 @@ export default function fileUpload() {
         const handleFilesCount = () => {
             if (addedFiles > 0) {
                 dropzone.setAttribute('data-upload-text', `Выбрано файлов: ${addedFiles} из ${fileLabels.length}`);
-                action.classList.add('hidden');
+                if (action) {
+                    action.classList.add('hidden');
+                }
+              
                 filesList.classList.add('shown');
             } else {
                 dropzone.setAttribute('data-upload-text', dropzoneInitialText);
-                action.classList.remove('hidden');
+                if (action) {
+                    action.classList.remove('hidden');
+                }
+              
                 filesList.classList.remove('shown');
             }
 

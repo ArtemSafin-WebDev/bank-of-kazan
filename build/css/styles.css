@@ -16214,6 +16214,20 @@ input.range-slider__amount {
   overflow: hidden;
   -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
           box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05); }
+  .application__form--new-callback {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    border-radius: 0;
+    border: none;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    overflow: visible;
+    max-width: 100rem;
+    margin-bottom: 7rem; }
+    @media only screen and (max-width: 680px) {
+      .application__form--new-callback {
+        margin-bottom: 4rem; } }
   .low-vision .application__form {
     -webkit-box-shadow: none;
             box-shadow: none;
@@ -16329,6 +16343,8 @@ input.range-slider__amount {
 .appliaction__form-label-text {
   width: 37rem;
   padding-right: 2rem; }
+  .application__form--new-callback .appliaction__form-label-text {
+    width: 25.4rem; }
   @media only screen and (max-width: 680px) {
     .appliaction__form-label-text {
       padding: 0;
@@ -16340,6 +16356,8 @@ input.range-slider__amount {
       -ms-flex-positive: 1;
           flex-grow: 1;
   position: relative; }
+  .application__form-input-wrapper--short {
+    max-width: 36rem; }
   @media only screen and (max-width: 680px) {
     .application__form-input-wrapper {
       padding: 0;
@@ -17976,6 +17994,142 @@ input.range-slider__amount {
       font-size: 1.2rem;
       margin: 0;
       margin-top: 0.5rem; } }
+
+.application__policy-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start; }
+  @media only screen and (max-width: 680px) {
+    .application__policy-row {
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -webkit-box-align: initial;
+          -ms-flex-align: initial;
+              align-items: initial; }
+      .application__policy-row .application__form-submit {
+        display: block;
+        margin-top: 2rem;
+        margin-left: auto; } }
+
+.application__form-inner-tabs-nav--standalone {
+  margin-bottom: 0; }
+  .application__form-inner-tabs-nav--standalone .application__form-inner-tabs-checkbox {
+    margin-top: 0.7rem;
+    margin-bottom: 0; }
+  @media only screen and (max-width: 680px) {
+    .application__form-inner-tabs-nav--standalone {
+      margin-bottom: -1rem; } }
+
+.application__form-label--centered {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  @media only screen and (max-width: 680px) {
+    .application__form-label--centered {
+      -webkit-box-align: initial;
+          -ms-flex-align: initial;
+              align-items: initial; } }
+  .application__form-label--centered .appliaction__form-label-text {
+    margin: 0; }
+    @media only screen and (max-width: 680px) {
+      .application__form-label--centered .appliaction__form-label-text {
+        margin-bottom: 1rem; }
+        .application__form-label--centered .appliaction__form-label-text br {
+          display: none; } }
+  .application__form-label--centered .application__form-inner-tabs-checkbox {
+    margin: 0; }
+
+textarea.application__form-input {
+  resize: none;
+  display: block;
+  width: 100%;
+  height: 13rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem; }
+  @media only screen and (max-width: 680px) {
+    textarea.application__form-input {
+      padding-top: 1rem;
+      padding-bottom: 1rem; } }
+
+.application__form-file-upload-dropzone--short {
+  border-radius: 0.4rem;
+  min-height: 14.5rem;
+  padding: 3rem; }
+  @media only screen and (max-width: 680px) {
+    .application__form-file-upload-dropzone--short {
+      padding: 1.8rem;
+      min-height: 12rem; } }
+
+.application__form-textarea-wrapper {
+  position: relative;
+  margin-bottom: 2rem; }
+
+.application__form-textarea-wrapper ~ .application__form-file-upload {
+  margin-bottom: 0; }
+
+.application__form-file-upload-message-choose-file--with-shadow {
+  -webkit-box-shadow: 0px 0.4rem 2rem rgba(0, 0, 0, 0.08);
+          box-shadow: 0px 0.4rem 2rem rgba(0, 0, 0, 0.08); }
+
+.application__form-file-upload-message--short {
+  margin: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  @media only screen and (max-width: 680px) {
+    .application__form-file-upload-message--short {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: initial;
+          -ms-flex-align: initial;
+              align-items: initial;
+      -webkit-box-pack: initial;
+          -ms-flex-pack: initial;
+              justify-content: initial; } }
+  .application__form-file-upload-message--short .application__form-file-upload-message-choose-file {
+    margin-bottom: 0;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    margin: 0;
+    margin-left: 2rem; }
+    @media only screen and (max-width: 680px) {
+      .application__form-file-upload-message--short .application__form-file-upload-message-choose-file {
+        margin: 0;
+        margin-top: 1.5rem;
+        -ms-flex-item-align: start;
+            align-self: flex-start; } }
+  .application__form-file-upload-message--short .application__form-file-upload-message-format {
+    text-align: left;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.4rem;
+    color: #717171; }
+
+.application__form-file-upload-message-format-heading {
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 141%;
+  margin-bottom: 1rem;
+  color: black; }
+  .application__form-file-upload-message-format-heading.hidden {
+    display: none; }
 
 .advantages {
   margin-bottom: 9rem; }
@@ -22225,3 +22379,13 @@ input.range-slider__amount {
       padding: 2rem;
       font-size: 1.4rem;
       line-height: 1.2; } }
+
+.new-callback__heading {
+  font-weight: 500;
+  font-size: 5.4rem;
+  line-height: 120%;
+  margin-bottom: 5rem; }
+  @media only screen and (max-width: 680px) {
+    .new-callback__heading {
+      font-size: 2.8rem;
+      margin-bottom: 1rem; } }
