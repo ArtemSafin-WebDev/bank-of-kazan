@@ -6897,6 +6897,10 @@ input.range-slider__amount {
   color: white; }
   .navigation__currency:link, .navigation__currency:visited {
     color: white; }
+  .low-vision .navigation__currency {
+    color: black; }
+    .low-vision .navigation__currency:link, .low-vision .navigation__currency:visited {
+      color: black; }
   @media only screen and (max-width: 680px) {
     .navigation__currency {
       margin-top: 4rem;
@@ -17383,7 +17387,21 @@ input.range-slider__amount {
 .application__form-data-block-heading {
   font-weight: 500;
   font-size: 2rem;
-  line-height: 130%; }
+  line-height: 130%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  position: relative; }
+  .application__form-data-block-heading .show-more-info {
+    position: absolute;
+    right: 0;
+    top: .5rem; }
+    @media only screen and (max-width: 680px) {
+      .application__form-data-block-heading .show-more-info {
+        position: static; } }
   @supports (display: grid) {
     .application__form-data-block-heading {
       padding-top: 1.9rem; } }
@@ -21725,8 +21743,7 @@ textarea.application__form-input {
     border: 1px solid black;
     -webkit-box-shadow: none;
             box-shadow: none;
-    color: black;
-    width: 35rem; }
+    color: black; }
   @media only screen and (max-width: 680px) {
     .cookies {
       right: 1rem;
@@ -21740,8 +21757,6 @@ textarea.application__form-input {
   left: 100%;
   top: 0;
   margin-left: 0.8rem; }
-  .low-vision .cookies__close-btn {
-    margin-left: 0.6rem; }
   @media only screen and (max-width: 680px) {
     .cookies__close-btn {
       right: 1.6rem;
@@ -21755,8 +21770,6 @@ textarea.application__form-input {
     width: 1.4rem;
     height: 1.4rem; }
     .low-vision .cookies__close-btn svg {
-      width: 2rem;
-      height: 2rem;
       fill: black !important; }
   .cookies__close-btn:hover svg {
     fill: var(--primary-color-hover); }
@@ -21787,6 +21800,8 @@ textarea.application__form-input {
         flex-shrink: 0;
     display: block;
     fill: var(--primary-color); }
+  .low-vision .cookies__warning svg {
+    fill: black; }
   @media only screen and (max-width: 680px) {
     .cookies__warning {
       display: none; } }

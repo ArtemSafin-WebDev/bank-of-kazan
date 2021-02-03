@@ -1878,6 +1878,14 @@
     &:visited {
         color: white;
     }
+
+    .low-vision & {
+        color: black;
+        &:link,
+        &:visited {
+            color: black;
+        }
+    }
     @include breakpoint(mobile) {
         margin-top: 4rem;
         margin-bottom: 0;

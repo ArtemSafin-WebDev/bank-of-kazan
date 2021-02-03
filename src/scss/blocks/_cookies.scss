@@ -20,7 +20,7 @@
         border: 1px solid black;
         box-shadow: none;
         color: black;
-        width: 35rem;
+        
     }
 
     @include breakpoint(mobile) {
@@ -38,9 +38,7 @@
     top: 0;
     margin-left: 0.8rem;
 
-    .low-vision & {
-        margin-left: 0.6rem;
-    }
+   
 
 
     @include breakpoint(mobile) {
@@ -57,8 +55,7 @@
         height: 1.4rem;
 
         .low-vision & {
-            width: 2rem;
-            height: 2rem;
+            
             fill: black !important;
         }
     }
@@ -91,6 +88,16 @@
         flex-shrink: 0;
         display: block;
         fill: var(--primary-color);
+
+
+      
+    }
+
+    .low-vision & {
+        svg {
+            fill: black;
+        }
+       
     }
 
     @include breakpoint(mobile) {

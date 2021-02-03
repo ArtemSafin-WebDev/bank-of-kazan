@@ -1182,7 +1182,18 @@
     font-weight: 500;
     font-size: 2rem;
     line-height: 130%;
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    .show-more-info {
+        position: absolute;
+        right: 0;
+        top: .5rem;
 
+        @include breakpoint(mobile) {
+            position: static;
+        }
+    }
     @supports (display: grid) {
         padding-top: 1.9rem;
     }
