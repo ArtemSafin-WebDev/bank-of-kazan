@@ -37,6 +37,8 @@ import mobileSubmenu from './mobileSubmenu';
 import lowVision from './lowVision';
 import codeInput from './codeInput';
 import innerAccordions from './inner-accordions';
+import applicationRemake from './applicationRemake';
+import enterCode from './enterCode';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -140,6 +142,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     mobileSubmenu.init();
                     console.log('Тест работы 6')
                     document.body.classList.remove('category-toggles-off');
+
+                    applicationRemake();
+
+                    enterCode();
 
                     if (window.initBackendScripts && typeof window.initBackendScripts === 'function') {
                         window.initBackendScripts();

@@ -399,3 +399,122 @@
         </div>
     </div>
 </div>
+
+<div class="modal js-modal" id="application-register">
+    <div class="modal__inner modal__inner--application-register">
+        <button class="modal__close-btn js-close-modal">
+            <svg width="22" height="22" aria-hidden="true" class="icon-modal-close">
+                <use xlink:href="#modal-close"></use>
+            </svg>
+        </button>
+        <div class="modal__content-wrapper ">
+            <div class="modal__application-register">
+                <h3 class="modal__application-register-heading">
+                    Выберите способ подачи заявки
+                </h3>
+                <div class="modal__application-register-text">
+                    <p>
+                        Автоматическое заполнение заявки по данным госуслуг сэкномит ваше время и повысит шанс одобрения кредита
+                    </p>
+                </div>
+                <div class="modal__application-register-btns">
+                    <a href="#" class="modal__application-register-gos">
+                        <img src="img/goslogo.svg" alt="" class="modal__application-register-gos-logo" />
+                        Войти через госулуги
+                    </a>
+                    <a href="#" class="modal__application-register-nogos">
+                        Продолжить без госуслуг
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal js-modal" id="application-code">
+    <div class="modal__inner modal__inner--application-code">
+        <button class="modal__close-btn js-close-modal">
+            <svg width="22" height="22" aria-hidden="true" class="icon-modal-close">
+                <use xlink:href="#modal-close"></use>
+            </svg>
+        </button>
+        <div class="modal__content-wrapper ">
+            <div class="modal__application-code">
+                <h3 class="modal__application-code-heading">
+                    Код подтверждения
+                </h3>
+                <form action="/" method="POST" class="modal__application-code-form js-application-code-form">
+                    <div class="modal__application-code-form-row js-enter-code">
+                        <div class="modal__application-code-form-col">
+                            <input type="tel" class="modal__application-code-form-input" />
+                        </div>
+                        <div class="modal__application-code-form-col">
+                            <input type="tel" class="modal__application-code-form-input" />
+                        </div>
+                        <div class="modal__application-code-form-col">
+                            <input type="tel" class="modal__application-code-form-input" />
+                        </div>
+                        <div class="modal__application-code-form-col">
+                            <input type="tel" class="modal__application-code-form-input" />
+                        </div>
+                        <div class="modal__application-code-form-col">
+                            <input type="tel" class="modal__application-code-form-input" />
+                        </div>
+                        <div class="modal__application-code-form-col">
+                            <input type="tel" class="modal__application-code-form-input" />
+                        </div>
+                    </div>
+                    <div class="modal__application-code-form-message">
+                        Мы отправили код на номер +7 987 654 32 10
+                    </div>
+                    <a href="#" class="modal__application-code-form-resend-link">
+                        <svg width="22" height="22" aria-hidden="true" class="icon-resend">
+                            <use xlink:href="#resend"></use>
+                        </svg>
+                        Отправить повторно
+                    </a>
+                    <div class="modal__application-code-form-text">
+                        Вводя код, я подтверждаю, что ознакомлен и подписываю соглашение о порядке использоания электронной подписии согласен на обработку персональных данных
+                    </div>
+                    <div class="modal__application-code-form-btns">
+                        <button type="submit" class="modal__application-code-form-btn-submit">Отправить</button>
+                        <a href="#" class="modal__application-code-form-btn-close js-go-back-from-code">
+                            Вернутся назад
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal js-modal" id="application-success">
+    <div class="modal__inner modal__inner--success">
+        <button class="modal__close-btn js-close-modal">
+            <svg width="22" height="22" aria-hidden="true" class="icon-modal-close">
+                <use xlink:href="#modal-close"></use>
+            </svg>
+        </button>
+        <div class="modal__content-wrapper modal__content-wrapper--success">
+            <div class="modal__success">
+                <div class="modal__success-image-container">
+                    <img src="img/modal-success.jpg" alt="" class="modal__success-image">
+                </div>
+                <div class="modal__success-content">
+                    <svg width="22" height="22" aria-hidden="true" class="icon-success-checkmark">
+                        <use xlink:href="#success-checkmark"></use>
+                    </svg>
+                    <h3 class="modal__success-heading">
+                        Спасибо, заявка отправлена!
+                    </h3>
+                    <div class="modal__success-text">
+                        <p>
+                            В ближайшее время мы с вами свяжемся!
+                        </p>
+                    </div>
+                    <a href="#" class="modal__success-btn">
+                        Вернутся на главную
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

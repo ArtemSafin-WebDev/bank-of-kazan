@@ -78,6 +78,63 @@
                         })
                     }
 
+                    var applicationRemake = document.querySelector('.js-application-remake');
+
+                    if (applicationRemake) {
+                        var nextBtn = applicationRemake.querySelector('.js-form-next');
+                        var prevBtn = applicationRemake.querySelector('.js-form-prev');
+                        var step = 0;
+                        var registerGos = document.querySelector('.modal__application-register-gos')
+                        var goBack = document.querySelector('.js-go-back-from-code')
+                        var codeForm = document.querySelector('.js-application-code-form')
+
+                        nextBtn.addEventListener('click', function(event) {
+                            event.preventDefault();
+                            var validationResult = $(applicationRemake)
+                                .parsley()
+                                .validate({ group: 'firststep' });
+                            if (validationResult) {
+                                window.openModal('#application-register');
+                            }
+                        })
+
+                        prevBtn.addEventListener('click', function(event) {
+                            event.preventDefault();
+                            window.applicationRemakeAPI.setStep(0);
+                        })
+
+                        registerGos.addEventListener('click', function(event) {
+                            event.preventDefault();
+                            window.applicationRemakeAPI.setStep(1);
+                            var modal = document.querySelector('#application-register')
+
+                            window.closeModal(modal);
+
+                        })
+
+                        applicationRemake.addEventListener('submit', function(event) {
+                            event.preventDefault();
+                            if ($(applicationRemake).parsley().isValid()) {
+                                window.openModal('#application-code');
+                            }
+                        })
+
+                        goBack.addEventListener('click', function(event) {
+                            event.preventDefault();
+                            var modal = document.querySelector('#application-code')
+                            window.closeModal(modal);
+                        })
+
+                        codeForm.addEventListener('submit', function(event) {
+                            event.preventDefault();
+                            var modal = document.querySelector('#application-code')
+                            window.closeModal(modal);
+                            window.openModal('#application-success');
+                        })
+                    }
+
+
+
                     var newApplicationForm = document.querySelector('.js-new-application-form');
 
 
