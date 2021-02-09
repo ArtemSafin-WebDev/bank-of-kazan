@@ -178,7 +178,7 @@
                                     <h4 class="application__form-data-block-heading">
                                         Паспортные данные
 
-                                        <div class="show-more-info">
+                                        <!-- <div class="show-more-info">
                                             <svg width="14" height="14" aria-hidden="true" class="icon-info">
                                                 <use xlink:href="#info"></use>
                                             </svg>
@@ -189,7 +189,7 @@
                                                     </p>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> -->
                                     </h4>
                                 </div>
                                 <div class="application__form-data-block-right-col">
@@ -213,7 +213,6 @@
                                                     data-parsley-trigger="change"
                                                     data-parsley-group="secondstep"
                                                     required
-                                                  
                                                     placeholder="Имя"
                                                 />
                                                 <label for="firstname" class="application__form-data-block-label">
@@ -330,6 +329,72 @@
                                                     Код подразделения
                                                 </label>
                                             </div>
+                                        </div>
+                                    </div>
+                                    <div class="application__form-data-block-row">
+                                        <div class="application__form-data-block-col application__form-data-block-col--half">
+                                            <div class="application__form-data-block-input-wrapper">
+                                                <input
+                                                    type="tel"
+                                                    id="birth-date"
+                                                    class="application__form-data-block-input"
+                                                    data-date-mask
+                                                    data-affect-progress
+                                                    data-parsley-trigger="change"
+                                                    data-parsley-group="secondstep"
+                                                    required
+                                                    data-parsley-date
+                                                    placeholder="01.01.2020"
+                                                />
+                                                <label for="birth-date" class="application__form-data-block-label">
+                                                    Дата рождения
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="application__form-data-block-row">
+                                        <div class="application__form-data-block-col">
+                                            <div class="application__form-data-block-input-wrapper">
+                                                <input type="text" id="origin" class="application__form-data-block-input" data-affect-progress data-parsley-trigger="change" data-parsley-group="secondstep" required placeholder="г. Казань" />
+                                                <label for="origin" class="application__form-data-block-label">
+                                                    Место рождения
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="application__form-data-block-row">
+                                        <div class="application__form-data-block-col">
+                                            <div class="application__form-data-block-input-wrapper">
+                                                <input
+                                                    type="text"
+                                                    id="registration-address"
+                                                    class="application__form-data-block-input"
+                                                    data-affect-progress
+                                                    data-parsley-trigger="change"
+                                                    data-parsley-group="secondstep"
+                                                    required
+                                                    placeholder="Россия, Республика Татарстан, город Казань"
+                                                />
+                                                <label for="registration-address" class="application__form-data-block-label">
+                                                    Адрес регистрации
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="application__form-data-block-row">
+                                        <div class="application__form-data-block-col">
+                                            <label class="application__form-data-checkbox">
+                                                <input type="checkbox" class="application__form-data-checkbox-input" name="address-matches" />
+                                                <span class="application__form-data-checkbox-mark">
+                                                    <svg width="10" height="10" aria-hidden="true" class="icon-checkmark">
+                                                        <use xlink:href="#checkmark"></use>
+                                                    </svg>
+                                                </span>
+                                                <span class="application__form-data-checkbox-text">
+                                                    Фактический адрес совпадает с адресом регистрации
+                                                </span>
+                                            </label>
                                         </div>
                                     </div>
                                 </div>
