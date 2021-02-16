@@ -7,9 +7,7 @@ export default function applicationRemake() {
     if (element) {
         let activeStep = 0;
         const pagination = element.querySelector('.application__form-steps-numbers');
-        const tabsContainer = element.querySelector('.application__form-inner-tabs-items');
-        const tabCheckboxes = Array.from(element.querySelectorAll('.application__form-inner-tabs-checkbox-input'));
-        const tabItems = tabsContainer ? Array.from(tabsContainer.children) : [];
+      
         const stepsContainer = element.querySelector('.application__form-steps-layers');
 
         const stepsItems = Array.from(stepsContainer.children);
@@ -17,6 +15,10 @@ export default function applicationRemake() {
         const stepsTotal = stepsItems.length;
 
         function setTab(index) {
+            const tabCheckboxes = Array.from(element.querySelectorAll('.application__form-inner-tabs-checkbox-input'));
+            const tabsContainer = element.querySelector('.application__form-inner-tabs-items');
+     
+            const tabItems = tabsContainer ? Array.from(tabsContainer.children) : [];
             const heightBefore = parseFloat(window.getComputedStyle(tabsContainer).getPropertyValue('height'));
 
             gsap.set(tabsContainer, {
@@ -41,16 +43,27 @@ export default function applicationRemake() {
             );
         }
 
-        if (tabItems.length >= 2) {
-            setTab(0)
+       
+
+        function initializeTabs() {
+            const tabCheckboxes = Array.from(element.querySelectorAll('.application__form-inner-tabs-checkbox-input'));
+            const tabsContainer = element.querySelector('.application__form-inner-tabs-items');
+            const tabItems = tabsContainer ? Array.from(tabsContainer.children) : [];
+            tabCheckboxes.forEach((box, boxIndex) => {
+                box.addEventListener('change', event => {
+                    event.preventDefault();
+                    setTab(boxIndex);
+                });
+            });
+
+            if (tabItems.length >= 2) {
+                setTab(0)
+            }
         }
 
-        tabCheckboxes.forEach((box, boxIndex) => {
-            box.addEventListener('change', event => {
-                event.preventDefault();
-                setTab(boxIndex);
-            });
-        });
+        initializeTabs();
+
+      
 
         function updatePagination(index) {
             pagination.innerHTML = `Шаг ${index + 1} из ${stepsTotal}`;
@@ -90,6 +103,7 @@ export default function applicationRemake() {
         window.applicationRemakeAPI = {};
         window.applicationRemakeAPI.setStep = setStep;
         window.applicationRemakeAPI.setTab = setTab;
+        window.applicationRemakeAPI.initializeTabs = initializeTabs;
 
         Array.from(element.querySelectorAll('[data-passport-series-mask]')).forEach(item => {
             const im = new Inputmask({
