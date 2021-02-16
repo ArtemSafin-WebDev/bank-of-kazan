@@ -4,9 +4,35 @@ import customParseFormat from 'dayjs/plugin/customParseFormat';
 
 dayjs.extend(customParseFormat)
 
+
+window.Parsley.addValidator('requiredIfChecked', {
+    requirementType: 'string',
+    validateString: function(value, requirement) {
+        console.log('Validating', value)
+
+        const checkbox = document.querySelector(requirement);
+
+        if (!checkbox) {
+            return false;
+        }
+
+        if (checkbox.checked && !value.trim()) {
+            return false;
+        }
+
+        return true;
+    },
+    messages: {
+        en: 'Required field',
+        ru: 'Обязательное поле'
+    },
+    priority: 33
+});
+
 window.Parsley.addValidator('phone', {
     requirementType: 'string',
     validateString: function(value) {
+        if (value.trim() === '') return true;
         return /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/.test(value);
     },
     messages: {
@@ -17,7 +43,7 @@ window.Parsley.addValidator('phone', {
 window.Parsley.addValidator('passportseries', {
     requirementType: 'string',
     validateString: function(value) {
-        
+        if (value.trim() === '') return true;
         return /^[0-9]{4}$/.test(value);
     },
     messages: {
@@ -28,6 +54,7 @@ window.Parsley.addValidator('passportseries', {
 window.Parsley.addValidator('passportnumber', {
     requirementType: 'string',
     validateString: function(value) {
+        if (value.trim() === '') return true;
         return /^[0-9]{6}$/.test(value);
     },
     messages: {
@@ -38,6 +65,7 @@ window.Parsley.addValidator('passportnumber', {
 window.Parsley.addValidator('department', {
     requirementType: 'string',
     validateString: function(value) {
+        if (value.trim() === '') return true;
         return /^[0-9]{3}\-[0-9]{3}$/.test(value);
     },
     messages: {
@@ -48,6 +76,7 @@ window.Parsley.addValidator('department', {
 window.Parsley.addValidator('snils', {
     requirementType: 'string',
     validateString: function(value) {
+        if (value.trim() === '') return true;
         const newValue = value.toString().replace(/\s/g, '');
         console.log('Validating new snils value', newValue)
         
@@ -56,11 +85,13 @@ window.Parsley.addValidator('snils', {
     messages: {
         en: 'Enter correct SNILS number',
         ru: 'Введите правильно номер СНИЛС'
-    }
+    },
+    priority: 5
 });
 window.Parsley.addValidator('date', {
     requirementType: 'string',
     validateString: function(value) {
+        if (value.trim() === '') return true;
         console.log('Validating date', {
             value,
             valid: dayjs(value, 'DD.MM.YYYY', true).isValid()
@@ -72,6 +103,9 @@ window.Parsley.addValidator('date', {
         ru: 'Введите правильно дату'
     }
 });
+
+
+
 
 Parsley.addMessages('ru', {
     defaultMessage: 'Некорректное значение.',
