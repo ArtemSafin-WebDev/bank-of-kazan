@@ -1945,3 +1945,62 @@ textarea.application__form-input {
         display: none;
     }
 }
+
+
+.application__form-btns-row {
+    display: flex;
+    @include breakpoint(mobile) {
+        flex-direction: column;
+
+        &--special {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+    }
+}
+
+.application__form-btns-left-col {
+    width: 31rem;
+    padding-right: 2rem;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        padding: 0;
+       
+        display: contents;
+    }
+}
+
+.application__form-btns-right-col {
+    width: 30%;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .parsley-errors-list {
+        display: none;
+    }
+
+    .open-account__privacy-policy-checkbox {
+        flex-basis: auto;
+        width: 30%;
+        flex-grow: 1;
+
+        @include breakpoint(mobile) {
+            width: 100%;
+            order: -1;
+            margin-bottom: 2rem;
+        }
+    }
+
+    @include breakpoint(mobile) {
+        flex-direction: column;
+        width: 100%;
+        flex-grow: 0;
+        align-items: initial;
+        justify-content: initial;
+        display: contents;
+    }
+}

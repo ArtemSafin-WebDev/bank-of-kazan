@@ -1322,13 +1322,13 @@
                         <div class="application__form-inner-tabs">
                             <div class="application__form-inner-tabs-nav">
                                 <label class="application__form-inner-tabs-checkbox">
-                                    <input type="radio" name="mode" value="manual" class="application__form-inner-tabs-checkbox-input" checked id="manualmode"/>
+                                    <input type="radio" name="mode" value="manual" class="application__form-inner-tabs-checkbox-input" checked id="manualmode" />
                                     <span class="application__form-inner-tabs-checkbox-text">
                                         Заполните данные вручную
                                     </span>
                                 </label>
                                 <label class="application__form-inner-tabs-checkbox">
-                                    <input type="radio" name="mode" value="automatic" class="application__form-inner-tabs-checkbox-input"/>
+                                    <input type="radio" name="mode" value="automatic" class="application__form-inner-tabs-checkbox-input" />
                                     <span class="application__form-inner-tabs-checkbox-text">
                                         или загрузите сканы документов
                                         <svg width="10" height="10" aria-hidden="true" class="icon-clip">
@@ -1715,18 +1715,36 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="application__form-btns-row">
-                            <button type="button" class="application__form-back-btn js-form-prev">
-                                <span class="application__form-back-btn-content">
-                                    <svg width="9" height="14" aria-hidden="true" class="icon-arrow-left">
-                                        <use xlink:href="#arrow-left" />
-                                    </svg>
-                                    Назад
-                                </span>
-                            </button>
-                            <button type="submit" class="application__form-submit">
-                                Оформить заявку
-                            </button>
+                        <div class="application__form-btns-row application__form-btns-row--special">
+                            <div class="application__form-btns-left-col">
+                                <button type="button" class="application__form-back-btn js-form-prev">
+                                    <span class="application__form-back-btn-content">
+                                        <svg width="9" height="14" aria-hidden="true" class="icon-arrow-left">
+                                            <use xlink:href="#arrow-left" />
+                                        </svg>
+                                        Назад
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="application__form-btns-right-col">
+                                <label class="open-account__privacy-policy-checkbox">
+                                    <input type="checkbox" name="policy" class="open-account__privacy-policy-checkbox-input" checked="" data-parsley-trigger="change" data-parsley-group="firststep" required="" data-parsley-multiple="policy" />
+                                    <span class="open-account__privacy-policy-checkbox-mark">
+                                        <svg width="16" height="16" aria-hidden="true" class="icon-checkmark">
+                                            <use xlink:href="#checkmark"></use>
+                                        </svg>
+                                    </span>
+                                    <span class="open-account__privacy-policy-checkbox-text">
+                                        Нажимая кнопку "Отправить", я соглашаюсь с условиями
+                                        <a href="#">
+                                            оформления заявки на потребительский кредит
+                                        </a>
+                                    </span>
+                                </label>
+                                <button type="submit" class="application__form-submit">
+                                    Оформить заявку
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
