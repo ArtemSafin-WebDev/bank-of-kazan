@@ -55,6 +55,11 @@ export default function newApplicationForm() {
             im.mask(item);
         });
 
+        Array.from(element.querySelectorAll('[data-inn-mask]')).forEach(item => {
+            const im = new Inputmask({ mask: '999 999 999 999', placeholder: ' ', showMaskOnHover: false, showMaskOnFocus: false });
+            im.mask(item);
+        });
+
         $(form)
             .parsley()
             .on('field:validated', function() {
