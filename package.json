@@ -40,7 +40,7 @@
     "scrollmagic-plugin-gsap": "^1.0.4",
     "select2": "^4.0.13",
     "smoothscroll-polyfill": "^0.4.4",
-    "swiper": "~5.2.1"
+    "swiper": "~6.5.1"
   },
   "devDependencies": {
     "@babel/core": "^7.4.5",
